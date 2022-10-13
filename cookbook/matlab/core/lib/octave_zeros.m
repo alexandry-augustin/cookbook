@@ -1,0 +1,1 @@
+%zeros(n)=zeros(n,n) or zeros(m,n)

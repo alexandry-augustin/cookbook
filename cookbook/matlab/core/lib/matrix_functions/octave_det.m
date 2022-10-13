@@ -1,0 +1,2 @@
+%determinant
+%det(A)

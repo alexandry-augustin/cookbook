@@ -1,0 +1,2 @@
+%natural logarithm
+%log(x)

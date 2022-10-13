@@ -1,0 +1,13 @@
+*~
+*.asv               # matlab auto-save files
+*.class             # java class files
+.ipynb_checkpoints  # jupyter notebook auto-save files
+*.pyc               # compiled python files
+*.pdf
+bin/
+makefile
+Makefile
+*.so
+*.o
+*.exe
+*.zip

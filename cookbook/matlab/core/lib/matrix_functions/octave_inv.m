@@ -1,0 +1,2 @@
+%inverse matrix
+%inv(x)

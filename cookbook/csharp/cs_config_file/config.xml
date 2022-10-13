@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<appSettings>
+		<keyword key="n1" value="1"/>
+		<keyword key="n2" value="10"/>
+		<keyword key="n3" value="1"/>
+	</appSettings>
+</configuration>

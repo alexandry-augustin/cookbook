@@ -1,0 +1,5 @@
+%set graphics object propertiesset(H,Name,Value)
+%set(H,NameArray,ValueArray)
+%set(H,S)
+%s = set(H)
+%values = set(H,Name)

@@ -1,0 +1,2 @@
+%covariance matrix
+%cov(x)

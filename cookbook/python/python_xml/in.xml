@@ -1,0 +1,10 @@
+<root>
+	<section1>
+		<value1>50</value1>
+		<value2>text</value2> 
+	</section1>
+	<section2>
+		<value3>50</value3>
+		<value4>text</value4> 
+	</section2>
+</root>
