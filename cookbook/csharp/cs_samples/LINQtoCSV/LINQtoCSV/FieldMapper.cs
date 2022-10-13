@@ -224,7 +224,7 @@ namespace LINQtoCSV
             }
         }
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// FieldMapper
         /// 
         /// <summary>
@@ -252,7 +252,7 @@ namespace LINQtoCSV
                 writingFile && !fileDescription.FirstLineHasColumnNames);
         }
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// WriteNames
         /// 
         /// <summary>
@@ -280,7 +280,7 @@ namespace LINQtoCSV
         }
 
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// WriteObject
         /// 
         public void WriteObject(T obj, ref List<string> row)
@@ -337,7 +337,7 @@ namespace LINQtoCSV
         }
     }
 
-    /// ///////////////////////////////////////////////////////////////////////
+    /// 
     // To do reading, the object needs to create an object of type T
     // to read the data into. This requires the restriction T : new()
     // However, for writing, you don't want to impose that restriction.
@@ -347,7 +347,7 @@ namespace LINQtoCSV
     //
     internal class FieldMapper_Reading<T> : FieldMapper<T> where T : new()
     {
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// FieldMapper
         /// 
         /// <summary>
@@ -363,7 +363,7 @@ namespace LINQtoCSV
         }
 
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// ReadNames
         /// 
         /// <summary>
@@ -404,7 +404,7 @@ namespace LINQtoCSV
             }
         }
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// ReadObject
         /// 
         /// <summary>

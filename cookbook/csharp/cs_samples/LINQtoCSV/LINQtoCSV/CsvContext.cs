@@ -10,7 +10,7 @@ namespace LINQtoCSV
     /// </summary>
     public class CsvContext
     {
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// Read
         /// 
         /// <summary>
@@ -59,7 +59,7 @@ namespace LINQtoCSV
             return ReadData<T>(null, stream, fileDescription);
         }
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// ReadData
         /// <summary>
         /// 
@@ -214,7 +214,7 @@ namespace LINQtoCSV
             }
         }
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// Write
         /// 
         public void Write<T>(
@@ -281,7 +281,7 @@ namespace LINQtoCSV
             }
         }
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// CsvContext
         /// 
         /// <summary>

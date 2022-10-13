@@ -30,7 +30,7 @@ namespace LINQtoCSV
         }
     }
 
-    /// ///////////////////////////////////////////////////////////////////////
+    /// 
     /// Exceptions not related to the input file.
 
     /// <summary>
@@ -133,7 +133,7 @@ namespace LINQtoCSV
         }
     }
 
-    /// ///////////////////////////////////////////////////////////////////////
+    /// 
     /// Exceptions related to reading column names from file
 
     /// <summary>
@@ -174,7 +174,7 @@ namespace LINQtoCSV
         }
     }
 
-    /// ///////////////////////////////////////////////////////////////////////
+    /// 
     /// Exceptions related to reading data from file
 
     /// <summary>

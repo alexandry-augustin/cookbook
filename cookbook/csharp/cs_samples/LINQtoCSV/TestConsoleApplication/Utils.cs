@@ -10,7 +10,7 @@ namespace TestConsoleApplication
 {
     class Utils
     {
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// OutputException
         /// 
         public static void OutputException(Exception e)
@@ -38,7 +38,7 @@ namespace TestConsoleApplication
             }
         }
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// OutputException
         /// 
         public static void OutputData<T>(IEnumerable<T> dataRows, string title)

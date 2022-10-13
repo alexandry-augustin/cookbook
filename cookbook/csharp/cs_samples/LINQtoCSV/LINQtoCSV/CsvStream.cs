@@ -21,7 +21,7 @@ namespace LINQtoCSV
         // Current line number in the file. Only used when reading a file, not when writing a file.
         private int m_lineNbr;
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// CsvStream
         /// 
         public CsvStream(TextReader inStream, TextWriter outStream, char SeparatorChar)
@@ -33,7 +33,7 @@ namespace LINQtoCSV
             m_lineNbr = 1;
         }
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// WriteRow
         /// 
         public void WriteRow(List<string> row, bool quoteAllFields)
@@ -69,7 +69,7 @@ namespace LINQtoCSV
         }
 
 
-        /// ///////////////////////////////////////////////////////////////////////
+        /// 
         /// ReadRow
         /// 
         /// <summary>

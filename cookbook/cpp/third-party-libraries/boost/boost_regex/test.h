@@ -1,0 +1,4 @@
+namespace test
+{
+	int f();
+}

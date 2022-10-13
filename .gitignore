@@ -1,8 +1,13 @@
+# vim backup file
 *~
-*.asv               # matlab auto-save files
-*.class             # java class files
-.ipynb_checkpoints  # jupyter notebook auto-save files
-*.pyc               # compiled python files
+# matlab auto-save files
+*.asv
+# java class files
+*.class
+# jupyter notebook auto-save files
+.ipynb_checkpoints
+# compiled python files
+*.pyc               
 *.pdf
 bin/
 makefile
