@@ -1,11 +1,13 @@
 This repository is my personal library of useful snippets, code
-examples, and programs in various programming languages.
+examples, and programs I have built over the years in various
+programming languages.
 
 Motivation
 ==========
 
-[Coding cookbooks](https://github.com/DevDungeon/Cookbook) is my
-preferred way of learning new programming languages and libraries.
+[Coding cookbooks](https://github.com/DevDungeon/Cookbook) are my
+preferred way of learning new programming languages, libraries, and
+frameworks.
 
 > A cookbook in the programming context is collection of tiny programs
 > that each demonstrate a particular programming concept. The Cookbook
@@ -15,7 +17,7 @@ preferred way of learning new programming languages and libraries.
 >
 > —  [John "NanoDano" Leon](https://github.com/DevDungeon/Cookbook)
 
-I frequently use this repository for quick-reference and as building
+I frequently use this repository for quick reference and as building
 blocks for bigger projects.
 
 License
