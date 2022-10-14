@@ -167,5 +167,6 @@ int main()
 		notify=boost::bind(notify_, &signal, _1);
 		notify(10);
 	}
+
 	return 0;
 }
