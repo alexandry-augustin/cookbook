@@ -12,6 +12,7 @@ template <typename T, int TN=0>
 class base_00
 {
 	int _n;
+
 public:
 	base_00(): _n(TN) { }
 	int& n() { return _n; }
@@ -73,5 +74,6 @@ int main()
 	}
 	{
 	}
+
 	return 0;
 }
