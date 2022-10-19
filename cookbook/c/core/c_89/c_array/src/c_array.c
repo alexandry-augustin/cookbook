@@ -11,18 +11,21 @@ void f_00(int a[10], int b[], int* c)
 void f_01(int** a)
 {
 }
+
 void f_02(int a[2][2])
 {
 }
+
 void f_03(int a[][2])
 {
 }
-//void f_04(int a[][]) { } //nok
+
+//void f_04(int a[][]) { } // nok
 
 int main()
 {
 	{
-		int a[3]; //no need to allocate memory
+		int a[3]; // no need to allocate memory
 		a[0]=1;
 	}
 	{
@@ -35,7 +38,7 @@ int main()
 		//int a[3]={1, 1, 1};
 		int* p=a;
 
-		//a=p; //nok
+		//a=p; // nok
 	}
 	{
 		int a[3]={1, 1, 1};
