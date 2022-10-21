@@ -18,6 +18,7 @@ def f_safe(a=None):
 	return a
 
 if __name__=="__main__":
+    
 	f_unsafe()
 	assert(f_unsafe()==[0, 0])
 

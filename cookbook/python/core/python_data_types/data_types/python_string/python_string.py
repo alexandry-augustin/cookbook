@@ -1,5 +1,5 @@
-#strings are immutable
-#"" and '' are interchangeable
+# strings are immutable
+# "" and '' are interchangeable
 #----------------------------------------------------------
 import math
 #----------------------------------------------------------
@@ -163,6 +163,15 @@ def string_builder():
 
 	assert(str_builder=="abc123")
 #----------------------------------------------------------
+def misc():
+
+	#print "n="+5 #nok
+	str_00="n="+'5'
+	assert(str_00=="n=5")
+
+	n_00="12345"
+	assert(len(n_00)==5)
+#----------------------------------------------------------
 if __name__ == '__main__':
 	convertion()
 	substring()
@@ -175,3 +184,4 @@ if __name__ == '__main__':
 	join()
 	string_builder()
 	case()
+	misc()
