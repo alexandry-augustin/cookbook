@@ -1,0 +1,1 @@
+matplotlib.style.use('ggplot')
