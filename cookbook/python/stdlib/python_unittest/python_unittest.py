@@ -16,7 +16,7 @@ class TestCase_00(unittest.TestCase):
 #	def test_01(self):
 #		raise RuntimeError('error_00') #ERROR
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
 #	unittest.main()
 

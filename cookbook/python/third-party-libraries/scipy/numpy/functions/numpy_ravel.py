@@ -14,7 +14,7 @@
 
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	#order = C F A K (default=C)
 	a=np.array([[1, 2], [3, 4]])
 	assert(np.array_equal(a.ravel(), [1,2,3,4])) #row first

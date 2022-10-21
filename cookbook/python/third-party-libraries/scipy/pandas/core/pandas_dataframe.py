@@ -12,7 +12,7 @@ def from_dictionary():
 		{"City":"London", "inhabitants":8630000}]
 	data=pd.DataFrame(dic)
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	data=pd.read_csv("../datasets/cities.csv", sep=";")
 	#--------------------------------------------------
 	# get fields' header

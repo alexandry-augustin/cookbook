@@ -32,5 +32,5 @@ class _GetchWindows:
         import msvcrt
         return msvcrt.getch()
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	pass

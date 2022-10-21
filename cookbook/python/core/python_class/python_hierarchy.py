@@ -25,7 +25,7 @@ class base_04(base_03):
         def __str__(self):
 		return super(base_04, self).__str__()+' base_04'
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	#s=base_01(5)
 	#print(s)
 	#print(s.get())

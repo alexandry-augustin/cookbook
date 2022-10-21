@@ -56,7 +56,7 @@ def misc_test():
 	assert(hasattr(b, 'n'))
 	assert(not hasattr(b, 'm'))
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	misc_test()
 	dir_test()
 	id_test()

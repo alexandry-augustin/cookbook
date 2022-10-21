@@ -1,6 +1,6 @@
 import re
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	regex=re.compile("\.py")
 	assert(regex.search("asdasd.py"))
 

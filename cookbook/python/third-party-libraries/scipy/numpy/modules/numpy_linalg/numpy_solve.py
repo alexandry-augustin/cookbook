@@ -7,7 +7,7 @@
 #----------------------------------------------------------
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	#x such that a*x=y
 	a=np.array([[3,1], [1,2]])
 	y=np.array([9,8])

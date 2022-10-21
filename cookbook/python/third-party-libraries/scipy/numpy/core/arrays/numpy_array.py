@@ -1,12 +1,7 @@
-# same as list but with the same type
-#http://sebastianraschka.com/Articles/2014_matlab_vs_numpy.html
-#numpy does not support jagged arrays natively
-#----------------------------------------------------------
-import pdb, sys
 import numpy as np
 
-if __name__=='__main__':
-	#--------------------------------------------------
+if __name__ == '__main__':
+
 	#empty array
 	a=np.empty([2, 2]) #given shape without initialising entries
 	assert(a.shape==(2,2))
@@ -40,7 +35,7 @@ if __name__=='__main__':
 	#operators
 	a=np.array([0,1])
 	b=np.array([1,1])
-	assert(np.array_equal(a+b,np.array([1,2])))
+	assert(np.array_equal(a+b, np.array([1,2])))
 
 	#multiplication/dot product	
 	a=np.array([[0,1],[1,1]])
@@ -50,7 +45,7 @@ if __name__=='__main__':
 	#--------------------------------------------------
 	#fill
 	a=np.array(range(3))
-	a.fill(0) #cf np.ones(3), np.zeros(3)
+	a.fill(0)
 	assert(np.array_equal(a, np.array([0, 0, 0])))
 	#--------------------------------------------------
 	#deep copy
@@ -68,20 +63,6 @@ if __name__=='__main__':
 	b=a.T
 	assert(np.array_equal(b, np.array([0, 1, 2])))
 	#--------------------------------------------------
-	#concatenate
-	u=np.array([1,2])
-	v=np.array([3,4,5,6])
-	w=np.array([7,8,9])
-	#print type(np.concatenate((u, v, w)))
-	#assert(np.array_equal(a, np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]))
-	#--------------------------------------------------
-	#ignore item for index i
-	a=np.array([0, 1, 2])
-	i=1
-	print a[i+1:]
-	a=np.concatenate([a[:i], a[i+1:]])
-	assert(np.array_equal(a, np.array([0, 2])))
-	#--------------------------------------------------
 	#to list
 	a=np.array([[1,2,3],[4,5,6]])
 	l=a.tolist()
@@ -90,7 +71,6 @@ if __name__=='__main__':
 	#to/from string
 	a=np.array([[1,2,3],[4,5,6]])
 	s=a.tostring()
-	np.fromstring(s)
 	#--------------------------------------------------
 	#squeeze
 	#a=???
@@ -113,53 +93,14 @@ if __name__=='__main__':
 	assert(np.array_equal(b,c))  # test if same shape and same elements values
 	assert(np.array_equiv(b,c))  # test if broadcastable shape and same elements values
 	assert(np.allclose(b,c)) # test if same shape and elements have close enough values
-	#--------------------------------------------------
-	#arrange: array-valued version of the built-in Python range()
-	a=np.arange(0., 2., 0.5) #matlab: 0:.5:(2-.5)
-	assert(np.array_equal(a, np.array([0.,.5,1.,1.5])))
-
-	a=np.arange(2,4) #matlab 2:(4-1)
-	assert(np.array_equal(a, np.array([2, 3])))
-
-	a=np.arange(2) #matlab 0:(2-1)
-	assert(np.array_equal(a, np.array([0, 1])))
-	#--------------------------------------------------
-	#linspace
-	a=np.linspace(-2,2,3) #return 3 evenly spaced numbers over [-2; 2]
-	assert(np.array_equal(a, np.array([-2.,0,2.])))
 	#---------------------------------------------------------
 	a=np.array([[1,2],[3,4]], float)
 	assert(np.array_equal(a, np.array([[1.,2.],[3.,4.]])))
-	#--------------------------------------------------
-	#dot product
-	#1D arrays: inner product of vectors (without complex conjugation)
-	#2D arrays: equivalent to matrix multiplication
-	#ND arrays: TODO
-	a=np.array([1, 2, 3], float)
-	b=np.array([0, 1, 1], float)
-	assert(np.dot(a, b)==5)
 	#--------------------------------------------------
 	#exponentiation
 	a=np.array([2,4])
 	a=a**2 #elementwise operation
 	assert(np.array_equal(a, np.array([4,16])))
-	#--------------------------------------------------
-	#column/slice notation
-	a=np.array([0,1,2])
-	assert(np.array_equal(a[0:1], [0]))
-	assert(np.array_equal(a[0:2], [0, 1]))
-	assert(np.array_equal(a[1:-1], [1]))
-
-	a=np.array([[1,2,3],[4,5,6]])
-	assert(np.array_equal(a[:,1], [2,5]))
-	assert(np.array_equal(a[1,:], [4,5,6]))
-	print a[:,:]
-	
-	a=np.array([[1,2,3],[4,5,6]])
-	assert(np.array_equal(a[a.shape[0]-1,:],np.array([4,5,6]))) #last row
-	b=a[a.shape[0]-1,:]
-	b[2]=9 #modifies a
-	assert(np.array_equal(a[a.shape[0]-1,:],np.array([4,5,9])))
 	#--------------------------------------------------
 	a=np.array([1])
 	a[0]+=1
@@ -175,32 +116,17 @@ if __name__=='__main__':
 	a[1]=np.array([3,4])
 	a[2]=np.array([6,7,8])
 
-	print a[2]
-	#--------------------------------------------------
-	a=np.zeros(3, dtype=np.ndarray)
-	a[0]=np.array([0,1,2])
-	a[1]=np.array([3,4,5])
-	a[2]=np.array([6,7,8])
-	assert(a[0][1]==1)
-
-	b=np.ones((3,3))
-	c=a+b
-#	assert(c[0][1]==2)
-	print c[0][1]
-	#--------------------------------------------------
-	a=np.empty(1, float)
-	print a.dtype #float64
+	# print(a[2])
 	#--------------------------------------------------
 	#Structured arrays
 	#http://docs.scipy.org/doc/numpy/user/basics.rec.html
 	#http://people.rit.edu/blbgse/pythonNotes/numpy.html
 	#--------------------------------------------------
 	a=np.zeros(10*3*3).reshape(10,3,3)
-	print a
+	# print(a)
 	#--------------------------------------------------
 	#delete()
 	a=np.arange(5,10)
 	#print np.delete(a, 2) #remove item at index 2 (value 7)
 	a=np.delete(a, np.where(a==7))#remove item with value 7
 	assert(np.array_equal(a, np.array([5,6,8,9])))
-

@@ -1,6 +1,6 @@
 #immutable list
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	t=()
 	t=tuple()
 	assert(len(t)==0)

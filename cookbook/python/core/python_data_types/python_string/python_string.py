@@ -163,7 +163,7 @@ def string_builder():
 
 	assert(str_builder=="abc123")
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	convertion()
 	substring()
 	misc()

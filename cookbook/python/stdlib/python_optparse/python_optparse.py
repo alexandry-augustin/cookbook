@@ -2,7 +2,7 @@
 # replaced by argparse
 from optparse import OptionParser
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	parser=OptionParser(usage="usage: %prog [otions]")
 	parser.add_option("-f", "--file", dest="filename",
         help="write report to FILE", metavar="FILE")

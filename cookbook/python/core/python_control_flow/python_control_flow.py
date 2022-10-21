@@ -4,7 +4,7 @@ def switch(x):  #switch_case emulation
 		'b': 2,
 	}.get(x, 9)    # 9 is default if x not found
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	i=0
 	while i<10:
 		if i==0:

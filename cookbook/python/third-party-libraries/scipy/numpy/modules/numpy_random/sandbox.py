@@ -1,6 +1,6 @@
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	np.random.seed(293423)
 
 	#uniform distribution on [0.0, 1.0) 

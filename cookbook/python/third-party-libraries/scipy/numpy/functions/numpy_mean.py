@@ -1,6 +1,6 @@
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	a=np.array([2, 1, 9])
 	assert(np.mean(a)==4)
 	assert(a.mean()==4)

@@ -3,7 +3,8 @@
 """
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
+
 	#addition
 	a=np.array([0,1,2])
 	assert(a.shape==(3,))
@@ -18,5 +19,5 @@ if __name__=='__main__':
 	a=a-a.mean(0)
 
 	a=np.array([0,1,2]).reshape(-1,1)
-	print a+a.T
-	print a.T+a
+	print(a+a.T)
+	print(a.T+a)

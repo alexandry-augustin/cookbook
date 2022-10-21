@@ -22,7 +22,7 @@ def ternary_test():
 def xor_test():
 	15^10
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
 #assert( is )
 #assert( is not )

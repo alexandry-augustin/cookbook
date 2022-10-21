@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	nb_samples=1000
 	data = pd.Series(np.random.normal(size=nb_samples))
 

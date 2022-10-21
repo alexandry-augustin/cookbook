@@ -6,7 +6,7 @@
 
 # see python_codes
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
 	print u'\u0420\u043e\u0441\u0441\u0438\u044f' #Unicode string literal 
 	print "Россия" # assums a default encoding of the Unicode character, namely ASCII.

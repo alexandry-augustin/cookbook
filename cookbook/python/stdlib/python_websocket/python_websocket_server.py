@@ -2,7 +2,7 @@
 
 import socket
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	port=4025
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) #reuse port

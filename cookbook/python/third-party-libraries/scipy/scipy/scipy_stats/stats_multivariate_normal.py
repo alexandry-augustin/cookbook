@@ -2,7 +2,7 @@ import numpy as np
 from scipy.stats import multivariate_normal
 import matplotlib.pyplot as plt
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
     x, y=np.mgrid[-1.0:1.0:30j, -1.0:1.0:30j]
     # Need an (N, 2) array of (x, y) pairs.

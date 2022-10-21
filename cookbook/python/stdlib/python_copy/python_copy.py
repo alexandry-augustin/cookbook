@@ -23,6 +23,6 @@ def deepcopy_test():
 	assert(a==[[4,5],[2,3]])
 	assert(b==[[0,1],[2,3]])
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	copy_test()
 	deepcopy_test()

@@ -1,7 +1,7 @@
 import numpy as np
 from scipy import stats
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
 	mode=stats.mode([1,2,3,1,2,1,1,1,3,2,2,1])
 	#mode[0] sorted most freq values

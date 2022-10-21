@@ -1,4 +1,4 @@
-if __name__=='__main__':
+if __name__ == '__main__':
 	s=set()
 	s.add(0)
 	s.add(1)

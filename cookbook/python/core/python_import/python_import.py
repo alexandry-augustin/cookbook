@@ -12,7 +12,7 @@ def other():
 	help(bases)
 	print(dir(__builtin__))
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	f_00()
 	b_00=bases.base_00(9)
 	b_01=somedir.base.base_01(9)

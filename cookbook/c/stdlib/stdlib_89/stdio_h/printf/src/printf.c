@@ -32,5 +32,9 @@ int main()
 	{
 		printf("%06d\n", 1000);
 	}
+    {
+        printf("%s", "test0");
+    }
+
 	return 0;
 }

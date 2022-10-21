@@ -5,6 +5,6 @@ import threading
 class base_00(threading.Thread):
 	pass
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
 	b=base_00()

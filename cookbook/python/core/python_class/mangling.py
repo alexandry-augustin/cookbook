@@ -15,7 +15,7 @@ class base_00:
 	def f_00(self):
 		return b_00.__var_02==9
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	b_00=base_00(9)  
 
 	#public

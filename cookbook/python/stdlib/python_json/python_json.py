@@ -9,7 +9,7 @@ class base_00():
 	def set(self, n):
 		self.__n=n
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	#str='{"one": "1", "two": 2, "three": [1, 2]}'
 	#or
 	str='{\

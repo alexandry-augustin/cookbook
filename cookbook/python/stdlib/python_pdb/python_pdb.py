@@ -13,7 +13,7 @@ import pdb
 # w: where
 # clear:
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	a = "aaa"
 	pdb.set_trace()
 	b = "bbb"

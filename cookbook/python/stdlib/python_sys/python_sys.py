@@ -1,6 +1,6 @@
 import sys
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	print(sys.version)
 	print sys.version_info 
 	#if sys.version_info < (2, 4):

@@ -21,7 +21,7 @@ class base_04(object):
 def f_00(obj):
 	return obj.f()
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	l=[base_01(), base_02()]
 
 	assert(l[0].f()==1)

@@ -1,6 +1,6 @@
 import random
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
 	random.seed(0)
 

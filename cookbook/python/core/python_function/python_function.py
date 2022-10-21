@@ -44,7 +44,7 @@ def exec_f(f, *args):
 def add(x,y):
 	return x+y
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	assert(f_00()==None)
 	assert(f_01(s=5)==5)
 	assert(f_04()==0)

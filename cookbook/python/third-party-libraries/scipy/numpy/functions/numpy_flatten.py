@@ -3,7 +3,7 @@
 """
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	a=np.array([[1, 2], [3, 4]])
 	assert(np.array_equal(a.flatten(), np.array([1,2,3,4]))) #row first
 	assert(np.array_equal(a.flatten("F"), [1,3,2,4])) #col first. matlab a(:)

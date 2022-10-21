@@ -1,6 +1,6 @@
 import numpy as np
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 #	data=np.genfromtxt('data.csv', delimiter=';', skip_header=0,
 #		     skip_footer=0, names=['x', 'y'])
 

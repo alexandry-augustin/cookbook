@@ -12,5 +12,5 @@ def test_00():
 	data=soc.recv(1024)
 	print('[RX]', data)
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	test_00()

@@ -1,4 +1,4 @@
-if __name__=='__main__':
+if __name__ == '__main__':
 #	seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 #	print list(enumerate(seasons))
 #	print list(enumerate(seasons, start=1))

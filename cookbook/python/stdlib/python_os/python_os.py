@@ -166,7 +166,7 @@ def dir_tree_rm():
     assert(not os.path.exists('foo'))
     assert(not os.path.exists('foo/bar'))
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 #   print(find('..', re.compile('\.py$')))
 #   print(find('..', re.compile('^base\.py$')))
     for path in find('..', re.compile('^base\.py$')):

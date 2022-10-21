@@ -1,6 +1,6 @@
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	#correlation matrix
 	#[[x1, x2, ...], [y1, y2, ...], [z1, z2, ...], ...]
 	#c[i,j] gives the correlation coefficient for the ith and jth variables

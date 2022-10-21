@@ -2,7 +2,7 @@ import numpy as np
 import numpy.random
 import matplotlib.pyplot as plt
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	x = np.random.randn(8873)
 	y = np.random.randn(8873)
 

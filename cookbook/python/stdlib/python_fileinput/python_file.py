@@ -20,7 +20,7 @@ def prepend_(filename, l):
 	for line in reversed(l):
 		line_prepender(filename, line)
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	file_object=open('file', 'w')	#create the file, if file exists, truncates it
 	file_object.write('a\n');
 	file_object.close()

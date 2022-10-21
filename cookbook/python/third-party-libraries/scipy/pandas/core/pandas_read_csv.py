@@ -1,6 +1,6 @@
 import pandas as pd
 
-if __name__=='__main__':
+if __name__ == '__main__':
 #	headers = ['name', 'title', 'department', 'salary']
 #	chicago = pd.read_csv('./datasets/city-of-chicago-salaries.csv',
 #			header=False,

@@ -5,7 +5,7 @@ class base_00(object):
 		self.n += x
 		return self.n
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	b=base_00(0)
 	assert(b.n==0)
 	b(1)

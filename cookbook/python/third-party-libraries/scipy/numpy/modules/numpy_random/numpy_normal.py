@@ -5,7 +5,7 @@
 
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	x=np.random.normal(loc=0, scale=np.sqrt(1), size=2)
 	print x
 

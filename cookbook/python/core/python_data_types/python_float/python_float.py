@@ -12,7 +12,7 @@ def roundint(x, base=5):
 	"""
 	return int(base * round(float(x)/base))
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	f=float('-inf')
 	f=float('inf')
 	f=float('nan')

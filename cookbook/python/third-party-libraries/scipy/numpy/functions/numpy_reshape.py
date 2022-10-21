@@ -1,7 +1,7 @@
 #----------------------------------------------------------
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	a=np.arange(6)
 	b=a.reshape((2,3))
 	c=a.reshape(2,3)

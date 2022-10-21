@@ -2,7 +2,7 @@
 # != same as 'is not' (same as '<>' deprecated)
 # <, <=, >, >=
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	n=True
 	m=False
 	assert(n and m==False)

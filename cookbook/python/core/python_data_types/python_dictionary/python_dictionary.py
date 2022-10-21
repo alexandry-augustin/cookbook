@@ -134,6 +134,6 @@ def misc():
     assert(get_from_path(d, 'a/b')==10)
     print('Finished')
 
-if __name__=='__main__':
+if __name__ == '__main__':
     merge()
     misc()

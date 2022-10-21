@@ -17,5 +17,5 @@ def main():
 	print format(n, '02x') #02: at least 2 digits x:lower-case hex
 	print '%02x' % n
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	main()

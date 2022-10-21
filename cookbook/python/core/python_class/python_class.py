@@ -50,7 +50,7 @@ class base_06(base_05):
 		super(base_06, self).__init__() #super().__init__ never called automatically
 		print("[base_06::__init__]")
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	b=base_00(5)
 	b.n=5
 	

@@ -1,6 +1,6 @@
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	a=np.array([2, 2])
 	assert(np.prod(a)==4)
 

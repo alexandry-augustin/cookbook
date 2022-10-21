@@ -2,7 +2,7 @@ class base_00(object):
 	def __init__(self, n=0):
 		self.n=n
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	#empty list
 	l=list()
 	assert(len(l)==0)

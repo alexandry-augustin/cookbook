@@ -6,7 +6,7 @@ def bincount_(a, minlength):
 		ret[a[i]]+=1
 	return ret
 #--------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	a=np.array([0, 1, 1, 3, 2, 1, 7])
 
 	b=np.bincount(a)

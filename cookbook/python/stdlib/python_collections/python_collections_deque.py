@@ -1,6 +1,6 @@
 from collections import deque
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	d=deque()
 	d.append(0)
 	d.append(1)

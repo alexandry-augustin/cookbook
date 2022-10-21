@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	#as multinomial prior
 	alpha=np.ones(3)
 	p=np.random.dirichlet(alpha, 1).ravel()

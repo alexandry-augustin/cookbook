@@ -1,6 +1,6 @@
 import numpy as np
 
-if __name__=='__main__':
+if __name__ == '__main__':
 	x1=np.array([1,2,3,4])
 	x2=[-9,-8,-7]
 	X1,X2=np.meshgrid(x1,x2)

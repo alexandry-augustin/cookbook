@@ -2,7 +2,7 @@ import xml.dom.minidom
 #----------------------------------------------------------
 # xml need a single root element
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	dom=xml.dom.minidom.parse("in.xml")
 #	print dom.toxml()
 

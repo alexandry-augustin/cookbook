@@ -1,4 +1,4 @@
-if __name__=='__main__':
+if __name__ == '__main__':
 	assert(zip([1,2,3],[4,5,6])==[(1, 4), (2, 5), (3, 6)]) #For Python 2.x
 	assert(list(zip([1,2,3],[4,5,6]))==[(1, 4), (2, 5), (3, 6)]) #For Python 3.x
 

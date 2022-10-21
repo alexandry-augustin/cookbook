@@ -1,6 +1,6 @@
 import itertools
 #----------------------------------------------------------
-if __name__=='__main__':
+if __name__ == '__main__':
 	#Cartesian product
 	l=[[1,2,3],['a','b'],[4,5]]
 #	for element in itertools.product(*somelists):
