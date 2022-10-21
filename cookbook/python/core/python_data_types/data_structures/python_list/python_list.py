@@ -7,9 +7,9 @@ if __name__ == '__main__':
     l=list()
     assert(len(l)==0)
     l=[]
-    #l[4]=4 #error
+    #l[4]=4 # nok
     assert(len(l)==0)
-    l=[[] for i in range(2)] #multidimentional array
+    l=[[] for i in range(2)] # multidimentional array
     #--------------------------------------------------
     # pre-allocation
     l=10*[0]
@@ -207,7 +207,7 @@ if __name__ == '__main__':
     #map
     l=[[0, 4], [1, 8], [2, 6]]
     assert(list(map(max, l)) == [4, 8, 6])
-    assert([max(i) for i in l]==[4, 8, 6])
+    assert([max(i) for i in l] == [4, 8, 6])
     #--------------------------------------------------
     #substract 2 arrays
     l=[0, 4]
@@ -237,7 +237,7 @@ if __name__ == '__main__':
     #search and replace
     l=['a','b','b']
     l=['c' if x=='b' else x for x in l]
-    print(l)
+    assert(l == ['a', 'c', 'c'])
     #--------------------------------------------------
     #list from set
     s=set([0,1])
