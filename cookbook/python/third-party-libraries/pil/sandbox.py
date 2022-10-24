@@ -10,9 +10,19 @@ if __name__ == '__main__':
     img.show()
     # img.save("out.jpg")
 
-    # from array
-    data = (np.eye(200)*255).astype('uint8') # sample array
-    im = Image.fromarray(data) # monochromatic image
-    imrgb = im.convert('RGB') # color image
+    # from array (monochromatic)
+    colour = 255
+    data = np.eye(200)*colour
+    data = data.astype('uint8')
+    img = Image.fromarray(data)
+    img = img.convert('RGB')
 
-    imrgb.show()
+    img.show()
+
+    # from array (RGB)
+    # colour = np.array([125, 255, 0])
+    # data = np.eye(200) # TODO
+    # data = data.astype('uint8')
+    # img = Image.fromarray(data)
+
+    # img.show()

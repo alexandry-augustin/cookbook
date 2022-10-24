@@ -25,7 +25,7 @@ void f_03(int a[][2])
 int main()
 {
 	{
-		int a[3]; // no need to allocate memory
+		int a[3]; // no need to allocate memory manually
 		a[0]=1;
 	}
 	{
@@ -88,5 +88,6 @@ int main()
 		p_00+=1;
 		assert((p_00-p_01)==1); //must be of same type (int*)
 	}
+    
 	return 0;
 }

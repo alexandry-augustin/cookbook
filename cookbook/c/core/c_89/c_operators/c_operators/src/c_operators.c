@@ -35,6 +35,14 @@ void test_comma_operator()
 	}
 }
 
+void ternary_operator()
+{
+    int i = 5;
+    int j = 10;
+    int min = (i < j) ? i : j;
+    assert(min==i);
+}
+
 int main()
 {
 	{
@@ -57,6 +65,8 @@ int main()
 		assert(m==2);
 	}
 	test_comma_operator();
+    ternary_operator();
+
 	return 0;
 }
 //Sequence Points
