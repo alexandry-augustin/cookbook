@@ -3,7 +3,6 @@ title: Python
 author: 
 date: 
 url: 
-
 ---
 
 # Usage

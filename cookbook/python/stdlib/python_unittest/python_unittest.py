@@ -1,18 +1,29 @@
 import unittest
 
 class TestCase_00(unittest.TestCase):
+
 	def setUp(self):
+
 		assert(self.shortDescription()==None)
 		self.fixture=range(1, 10)
+
 	def tearDown(self):
+
 		del self.fixture
+
 	def test_00(self):
-		self.assertEqual(1, 1)
+        """
+            member function must start with 'test'
+        """
+
+		self.assertEqual(1+1, 2)
 		self.assertTrue(True)
 		self.assertFalse(False)
 
 		self.failUnless(True)
 		self.failIf(False)
+        self.assertIs(None, None)
+        
 #	def test_01(self):
 #		raise RuntimeError('error_00') #ERROR
 
