@@ -16,6 +16,7 @@ function ls(fullpath)
         console.log(file);
         
         const stat = fs.lstatSync(path.join(fullpath, file));
+        stat.isFile();
         stat.isDirectory();
 	}
 }

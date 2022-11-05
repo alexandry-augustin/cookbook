@@ -1,0 +1,16 @@
+[
+    { 
+        "name": "Sara",
+        "age": 23,
+        "gender": "Female",
+        "department": "History",
+        "car": "Honda"
+    }, 
+    { 
+        "name": "Bob",
+        "age": 22,
+        "gender": "Male",
+        "department": "Maths",
+        "car": "BMW"
+    }
+]

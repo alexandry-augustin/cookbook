@@ -1,5 +1,4 @@
 // Arrays
-// Arrays are special kinds of objects.
 
 function sort_me_out()
 {

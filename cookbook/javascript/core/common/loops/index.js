@@ -10,16 +10,16 @@ if(require.main === module)
 
     const numbers = [45, 4, 9, 16, 25];
     let txt = "";
-    for(let x in numbers)
+    for(let e in numbers)
     {
-      txt += numbers[x];
+      txt += numbers[e];
     }
 
     const person = {fname:"John", lname:"Doe", age:25};
     let text = "";
-    for(let x in person)
+    for(let e in person)
     {
-      text += person[x];
+      text += person[e];
     }
 
     var words = ['word1', 'word2', 'word3'];
@@ -29,8 +29,8 @@ if(require.main === module)
     });
 
     var words = ['word1', 'word2', 'word3'];
-    for(const w of words)
+    for(const e of words)
     {
-        console.log(w);
+        console.log(e);
     }
 }
