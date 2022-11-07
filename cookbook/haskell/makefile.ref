@@ -1,0 +1,8 @@
+PROGRAM=bin/out
+
+main: src/main.hs
+	ghc src/main.hs -o $(PROGRAM)
+run:
+	$(PROGRAM)
+clean:
+	rm src/*.hi src/*.o $(PROGRAM)
