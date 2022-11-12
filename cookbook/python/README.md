@@ -8,10 +8,14 @@ url:
 # Usage
 
 ```
-python -c cmd
-
-python -W ignore filename.py # ignores warnings
+python [flags] filename.py
 ```
+
+# Flags
+
+- `-c cmd`: 
+
+- `-W ignore`: ignores warnings
 
 # REPL
 

@@ -1,8 +1,29 @@
-// Dictionary
+var f = function()
+{
+  // do something
+}; 
 
 if(require.main === module)
 {
-	var d = { first:"abc", second:123 }
+    // let dict = new Object();
+    // or
+	let dict = { first:"abc",
+                 "second":123,
+                 1: "number",
+                 fct: f
+               };
 
-	console.log(d)
+    dict["one"] = 1;
+    dict[1] = "one";
+    dict["age"] = 18;
+    dict.first = "alex";
+
+	console.log(dict);
+
+    for(var key in dict)
+    {
+      var value = dict[key];
+
+      // do something
+    }
 }
