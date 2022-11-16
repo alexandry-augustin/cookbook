@@ -1,24 +1,20 @@
 // https://javascript.info/date
 
-if(require.main === module)
+function create()
 {
     let now;
     let date;
 
     now = new Date();
-    console.log(now);
     
     // current timestamp
     now = Date.now(); 
     now = new Date().getTime();
-    console.log(now);
 
     let milliseconds = 100;
     date = new Date(milliseconds); // milliseconds passed after Jan 1st of 1970 UTC+0
-    console.log(date);
     
     date = new Date("2017-01-26");
-    console.log(date);
     
     let year = 2017;
     let month = 0; // 0 (Jan), 11 (Dec)
@@ -28,11 +24,15 @@ if(require.main === module)
     let seconds = 0;
     let ms = 0;
     date = new Date(year, month, day, hours, minutes, seconds, ms);
-    console.log(date);
     // if hours/minutes/seconds/ms is absent, they are assumed to be equal 0.
     date = new Date(year, month, day);
-    console.log(date);
     
+    epoc = Date.parse('2012-01-26T13:51:50.417-07:00'); // parses the string in the given format and returns the timestamp
+    date = new Date(epoc)
+}
+
+function getters(date)
+{
     // All the methods above return the components relative to the local time zone.
     // Get the day of week, from 0 (Sunday) to 6 (Saturday). The first day is always Sunday, in some countries that’s not so, but can’t be changed. 
     console.log(date.getFullYear(), 
@@ -55,7 +55,10 @@ if(require.main === module)
     
     // difference between UTC and the local time zone, in minutes:
     console.log(date.getTimezoneOffset());
+}
 
+function setters(date)
+{
     // date.setFullYear(year, [month], [date])
     // date.setMonth(month, [date])
     // date.setDate(date)
@@ -64,9 +67,10 @@ if(require.main === module)
     // date.setSeconds(sec, [ms])
     // date.setMilliseconds(ms)
     // date.setTime(milliseconds) //  sets the whole date by milliseconds since 01.01.1970 UTC
+}
 
-    epoc = Date.parse('2012-01-26T13:51:50.417-07:00'); // parses the string in the given format and returns the timestamp
-    date = new Date(epoc)
+function to_string(date)
+{
     console.log(date);
 
     console.log(date.toLocaleDateString("en-UK"));
@@ -79,4 +83,12 @@ if(require.main === module)
     
     date = new Date("30 July 2010 15:05 UTC");
     console.log(date.toISOString());
+}
+
+if(require.main === module)
+{
+    create();
+    getters(new Date());
+    setters(new Date());
+    to_string(new Date());
 }
