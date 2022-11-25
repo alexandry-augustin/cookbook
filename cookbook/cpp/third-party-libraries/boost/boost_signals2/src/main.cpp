@@ -1,26 +1,38 @@
 #include <iostream>
+#include <string>
 #include <boost/signals2.hpp>
 
-struct HelloWorld
+struct base
 {
 	void operator()() const
 	{
-		std::cout << "Hello, World!" << std::endl;
+		this->print("Hello World");
 	}
+
+    void print(const std::string& msg) const
+    {
+		std::cout << msg << std::endl;
+    }
 };
 
 int main()
 {
 	{
-		// Signal with no arguments and a void return value
 		boost::signals2::signal<void ()> sig;
 
-		// Connect a HelloWorld slot
-		HelloWorld hello;
-		sig.connect(hello);
+		base b;
+		sig.connect(b);
 
-		// Call all of the slots
 		sig();
+	}
+	{
+		boost::signals2::signal<void (const std::string&)> sig;
+
+		base b;
+		sig.connect(boost::bind(&base::print, b, boost::placeholders::_1));
+
+		sig("Hello");
+		sig("World");
 	}
 
 	return 0;

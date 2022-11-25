@@ -14,13 +14,13 @@ function sort_me_out()
 
 	a[0] = "opn"
 
-	console.log(a[0])
+	console.assert(a[0] == "opn");
 
 	a.sort()
 	
 	for(i = 0; i < a.length; i++)
 	{
-		console.log(a[i])
+		a[i];
 	}
 
 	a.push(0) // insert new element
@@ -30,28 +30,27 @@ function sort_me_out()
 	a instanceof Array;
 }
 
+function print(a)
+{
+    for(e in a)
+        console.log(' ' + e);
+}
+
 if(require.main === module)
 {
-    let a = [1, 'b'];
+    let a = [ 1, 'b' ];
 
     a[0] = 5;
     a[5] = 'alex';
 
-    console.log(a);
+    // console.log(a);
     console.assert(a.length==6);
-
 
     let b=new Array();
     //if(!myArray[0])
     //	myFunction();
 
-    function f(a)
-    {
-        for(e in a)
-            console.log(' ' + e);
-    }
-
-    f(a);
+    // print(a);
     
     sort_me_out();
 }

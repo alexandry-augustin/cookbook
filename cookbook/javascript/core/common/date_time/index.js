@@ -1,5 +1,29 @@
 // https://javascript.info/date
 
+/**
+ * new Date("dateString") is browser-dependent and discouraged, so we'll write
+ * a simple parse function (which does no error checking)
+ *
+ * https://stackoverflow.com/questions/542938/how-to-calculate-number-of-days-between-two-dates
+ */
+function parse_date(str)
+{
+    let ymd = str.split('-');
+    return new Date(ymd[0], ymd[1] - 1, ymd[2]);
+}
+
+/**
+ * Take the difference between the dates and divide by milliseconds per day.
+ * Round to nearest whole number to deal with DST.
+ *
+ * https://stackoverflow.com/questions/542938/how-to-calculate-number-of-days-between-two-dates
+ */
+function date_diff(from, to)
+{        
+    return Math.round((to - from) / (1000 * 60 * 60 * 24));
+}
+
+alert(datediff(parseDate(first.value), parseDate(second.value)));
 function create()
 {
     let now;
@@ -90,5 +114,5 @@ if(require.main === module)
     create();
     getters(new Date());
     setters(new Date());
-    to_string(new Date());
+    to_string(new Date("2017-01-26"));
 }

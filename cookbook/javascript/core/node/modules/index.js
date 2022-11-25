@@ -1,5 +1,5 @@
-var maths = require('./maths.js');
-var print = require('./utils.js');
+var maths = require('./modules/maths.js');
+var print = require('./modules/utils.js');
 
 if(require.main === module)
 {

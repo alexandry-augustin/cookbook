@@ -1,7 +1,7 @@
 { 
-    "name": "Sara",
-    "age": 23,
-    "gender": "Female",
-    "department": "History",
-    "car": "Honda"
+    "name": "Alex",
+    "age": 18,
+    "gender": "Male",
+    "department": "CS",
+    "car": "Peugeot"
 }

@@ -5,12 +5,15 @@ class Point
       this.x = x;
       this.y = y;
     }
+
     static name = "my_point";
     static n = 0;
+
     get sum()
     {
         return this.calc_sum();
     }
+
     calc_sum()
     {
         return this.x + this.y;
@@ -19,15 +22,21 @@ class Point
   
 if(require.main === module)
 {
-    console.log(Point.name);
-
-    let point = new Point(1, 2);
-    let sum = point.sum;
-    console.log(sum);
-
-    for(i = 0; i < 5; i++)
     {
-        Point.n++;
+        // static members
+
+        console.assert(Point.name == "my_point");
+
+        console.assert(Point.n == 0);
+        for(i = 0; i < 5; i++)
+        {
+            Point.n++;
+        }
+        console.assert(Point.n == 5);
     }
-    console.log(Point.n);
+    {
+        let point = new Point(1, 2);
+
+        console.assert(point.sum == 3);
+    }
 }

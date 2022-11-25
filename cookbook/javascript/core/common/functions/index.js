@@ -1,8 +1,16 @@
+function add_one(n)
+{
+    return n+1
+}
+
+function named_properties({ param_00, param_01 })
+{
+    return [ param_00, param_01 ];
+}
 //---------------------------------------------------------
-// primitive data types are passed by value
-// arrays and objects are passed by reference
-// can't pass primitive data types by reference (use global variables, class wrapper, return value))
-//---------------------------------------------------------
+// * primitive data types are passed by value
+// * arrays and objects are passed by reference
+// * can't pass primitive data types by reference (use global variables, class wrapper, return value))
 //---------------------------------------------------------
 function f_00()
 {
@@ -33,6 +41,14 @@ function f_04(arg_00)
 //---------------------------------------------------------
 if(require.main === module)
 {
+    {
+	    console.assert(add_one(5)==6);
+    }
+    {
+        let ret = named_properties({ param_01: 123, param_00: "abc" });
+        console.assert(ret[0] == "abc");
+        console.assert(ret[1] == 123);
+    }
     {
         console.assert(f_00()==undefined);
     }

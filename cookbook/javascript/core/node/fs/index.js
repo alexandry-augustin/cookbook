@@ -1,7 +1,10 @@
-var fs = require('fs');
+let fs = require('fs');
 const path = require('path');
 
-var handle_error = function(err, result)
+let outdir = path.join('.', 'out');
+let indir = path.join('.', 'in');
+
+let handle_error = function(err, result)
 {
     if(err)
         console.error(err);
@@ -21,49 +24,58 @@ function ls(fullpath)
 	}
 }
 
-function sync()
+function load_json(filename)
 {
-    var data = fs.readFileSync('./data.txt', 'utf8');
 
-    console.log(data);
-
-    fs.writeFileSync('./out/sync.txt', data);
-
-    fs.unlink('./out/sync.txt', handle_error) // delete the file
-
-    fs.mkdirSync('./out/dir');
-
-    fs.rmdirSync('./out/dir');
-    
 }
 
-function async_()
+function save_json(filename)
 {
-    fs.readFile('./data.txt', 'utf8', 
-            function(err, data)
-            {
-                console.log(data);
 
-                fs.writeFile('./out/async.txt', data, handle_error);
-            });
+}
 
+function read_file(filename)
+{
+    let data = fs.readFileSync(filename, 'utf8');
 
-    fs.mkdir('./out/dir',
-            function()
-            {
-                console.log('directory create');
-            });
+    return data
+}
 
-    // fs.rmdir('./out/dir');
+function read_file_async(path, callback)
+{
+    fs.readFile(path, 'utf8', callback);
+}
+
+function write_file(filename, data)
+{
+    fs.writeFileSync(filename, data);
+}
+
+function delete_file(path)
+{
+    fs.unlink(path, handle_error);
+}
+
+function mkdir(path)
+{
+    if(fs.existsSync(path))
+        return;
     
-    //fs.rename();
-    
+    fs.mkdirSync(path);
+}
+
+function rmdir(path)
+{
+    if(!fs.existsSync(path))
+        return;
+
+    fs.rmdirSync(path);
 }
 
 function stream_and_pipe()
 {
-   var read_stream  = fs.createReadStream(__dirname + '/data.txt', 'utf8'); 
-   var write_stream = fs.createWriteStream(__dirname + '/out/out.txt'); 
+   let read_stream  = fs.createReadStream(__dirname + '/data.txt', 'utf8'); 
+   let write_stream = fs.createWriteStream(__dirname + '/out/out.txt'); 
 
     read_stream.on('data',
             function(chunk)
@@ -77,9 +89,45 @@ function stream_and_pipe()
 
 if(require.main === module)
 {
-	ls(__dirname);
-    //sync();
-    //async_();
-    //streaming();
-    //stream_and_pipe();
+    {
+	    ls(__dirname);
+    }
+    {
+        let data = read_file(path.join(indir, 'lorem_ipsum.txt'));
+        mkdir(outdir);
+        let filename = 'sync.txt';
+        let filepath = path.join(outdir, filename);
+        write_file(filepath, data);
+        delete_file(filepath);
+        rmdir(outdir);
+    }
+    {
+        // mkdir(outdir);
+        // let filename = 'lorem_ipsum.txt';
+        // let filepath = path.join(outdir, filename);
+        
+        // let callback = function(err, data)
+        // {
+        //     console.log(data);
+    
+        //     // fs.writeFile('./out/async.txt', data, handle_error);
+        // }
+        // read_file_async(filepath, callback);
+    
+
+        
+        // fs.mkdir('./out/dir',
+        //         function()
+        //         {
+        //             console.log('directory create');
+        //         });
+    
+        // fs.rmdir('./out/dir');
+        
+        //fs.rename();
+        
+    }
+    {
+        // stream_and_pipe();
+    }
 }
