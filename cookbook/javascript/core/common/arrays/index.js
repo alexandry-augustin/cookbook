@@ -34,6 +34,8 @@ function print(a)
 {
     for(e in a)
         console.log(' ' + e);
+
+    console.log(a.join('|'));
 }
 
 if(require.main === module)
@@ -52,5 +54,9 @@ if(require.main === module)
 
     // print(a);
     
+    {
+        const a = [ "Banana", "Orange", "Apple", "Mango" ];
+        console.assert(a.includes("Mango"));
+    }
     sort_me_out();
 }

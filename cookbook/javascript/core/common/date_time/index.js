@@ -23,13 +23,14 @@ function date_diff(from, to)
     return Math.round((to - from) / (1000 * 60 * 60 * 24));
 }
 
-alert(datediff(parseDate(first.value), parseDate(second.value)));
 function create()
 {
     let now;
     let date;
 
     now = new Date();
+
+    now = new Date(Date.now()).toISOString();
     
     // current timestamp
     now = Date.now(); 
@@ -74,7 +75,7 @@ function getters(date)
                 date.getUTCHours(), 
                 date.getUTCDay());
 
-    // timestamp for the date – a number of milliseconds passed from the January 1st of 1970 UTC+0.                
+    // timestamp for the date -- a number of milliseconds passed from the January 1st of 1970 UTC+0.                
     console.log(date.getTime());
     
     // difference between UTC and the local time zone, in minutes:
@@ -115,4 +116,10 @@ if(require.main === module)
     getters(new Date());
     setters(new Date());
     to_string(new Date("2017-01-26"));
+
+    let diff = date_diff(parse_date('2022-01'), parse_date('2021-01'))
+    //console.log(diff);
+    
+    console.log(new Date("2017-01-26").getFullYear());
+    console.log(new Date("2017-07-26").getMonth()+1);
 }

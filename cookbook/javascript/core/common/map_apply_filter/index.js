@@ -2,10 +2,10 @@ function map()
 {
     {
         let persons = [
-          { id: 20, name: 'Alice' },
-          { id: 24, name: 'Bob' },
-          { id: 56, name: 'Alex' },
-          { id: 88, name: 'Tom' }
+          { age: 20, name: 'Alice' },
+          { age: 24, name: 'Bob' },
+          { age: 56, name: 'Alex' },
+          { age: 88, name: 'Tom' }
         ];
 
         // let a = [];
@@ -14,10 +14,24 @@ function map()
         // });
 
         let a = persons.map(function (person) {
-          return person.id
+          return person.age;
         });
 
         console.log(a);
+    }
+    {
+        let persons = [
+          { age: 20, name: 'Alice' },
+          { age: 24, name: 'Bob' },
+          { age: 56, name: 'Alex' },
+          { age: 88, name: 'Tom' }
+        ];
+
+        let str = persons.map(function (person) {
+            return `${person.name} has ${person.age}`;
+        }).join(", ");
+
+        console.log(str);
     }
 }
 

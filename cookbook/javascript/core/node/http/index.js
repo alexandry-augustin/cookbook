@@ -75,5 +75,6 @@ if(require.main === module)
     //server = serve_html();
     //server = serve_json();
 
-    run_server(server, 3000);
+    let port = 3000;
+    run_server(server, port);
 }
