@@ -1,4 +1,0 @@
-namespace test
-{
-	int f();
-}
