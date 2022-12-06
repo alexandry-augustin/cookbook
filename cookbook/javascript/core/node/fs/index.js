@@ -1,4 +1,4 @@
-let fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 let outdir = path.join('.', 'out');
@@ -61,7 +61,7 @@ function mkdir(path)
     if(fs.existsSync(path))
         return;
     
-    fs.mkdirSync(path);
+    fs.mkdirSync(path, { recursive: true });
 }
 
 function rmdir(path)

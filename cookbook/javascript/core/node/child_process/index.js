@@ -1,9 +1,7 @@
 const { exec, spawn } = require("child_process");
 
-if(require.main == module)
+function exec_test()
 {
-    // exec()
-
 	exec("ls -la", 
 		(error, stdout, stderr) => 
 		{
@@ -19,12 +17,17 @@ if(require.main == module)
 			}
 			console.log(`stdout: ${stdout}`);
 		});
+}
 
+function spawn_test()
+{
     // spawn(): executes a command in a new process
 
     const ls = spawn("ls", ["-la"]);
+}
 
-    // event listeners
+function event_listeners_test()
+{
     ls.stdout.on("data", data => {
         console.log(`stdout: ${data}`);
     });
@@ -40,4 +43,11 @@ if(require.main == module)
     ls.on("close", code => {
         console.log(`child process exited with code ${code}`);
     });
+}
+
+if(require.main == module)
+{
+    exec_test();
+    spawn_test();
+    // event_listeners_test();
 }
