@@ -36,7 +36,7 @@ public:
 int main()
 {
 	{
-		base b;
+		base b; // calls default constructor
 		std::cout<<b.str()<<std::endl;
 
 		sub s;

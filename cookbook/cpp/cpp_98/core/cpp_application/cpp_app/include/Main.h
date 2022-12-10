@@ -4,10 +4,10 @@
 class Main
 {
 public:
-	Main();
-	~Main();
+    Main();
+    ~Main();
 
-	int main(int argc, char* argv[]);
+    int main(int argc, char* argv[]);
 };
 
 #endif

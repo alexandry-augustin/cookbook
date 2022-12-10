@@ -3,11 +3,12 @@
 #include <vector>
 #include <algorithm>
 
-//http://stackoverflow.com/questions/11514688/passing-const-pointer-by-reference
+// http://stackoverflow.com/questions/11514688/passing-const-pointer-by-reference
 
 void fct_unsafe(const int*& n)
 {
 }
+
 void fct_safe(int* const& n)
 {
 }
@@ -17,21 +18,28 @@ class Base
 	std::vector<int> _v;
 	int _a[5];
 	int* _ptr;
+    
 public:
 	Base():
 		_v(5),
 		_ptr(new int(0))
 	{
 	}
+
 	void set(int i, int n) const
 	{
-	//	_v[i]=n; //fails
-//		_a[i]=n; //fails
+        // Constant member functions are not allowed to 
+        // change member variables
+
+		// _v[i]=n; //fails
+        // _a[i]=n; //fails
 	}
+
 	int* get() const
 	{
 		return _ptr;
 	}
+
 	void do_() const
 	{
 		std::find(_v.begin(), _v.end(), 5);
@@ -42,6 +50,7 @@ public:
 class base
 {
 	int _n;
+
 public:
 	const int& n() const { return _n; }
 	int& n() { return _n; }
@@ -102,5 +111,6 @@ int main()
 		b.n()=5;
 		assert(b.n()==5);
 	}
+
 	return 0;
 }
