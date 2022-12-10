@@ -50,10 +50,11 @@ if(require.main === module)
         console.assert(ret[1] == 123);
     }
     {
-        console.assert(f_00()==undefined);
+        // a function returns 'undefined' by default
+        console.assert(f_00() == undefined);
     }
     {
-        console.assert(f_01("abc")==undefined);
+        console.assert(f_01("abc") == undefined);
     }
     {
         console.assert(f_02("abc")=="abc");

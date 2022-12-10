@@ -10,8 +10,6 @@
 *.pyc               
 *.pdf
 bin/
-makefile
-Makefile
 *.so
 *.o
 *.exe

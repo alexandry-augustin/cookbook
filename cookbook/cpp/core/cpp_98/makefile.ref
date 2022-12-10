@@ -1,0 +1,21 @@
+PROGRAM			= a.out
+DEST			= bin/
+CXXSOURCES		= $(wildcard src/*.cpp)
+CXXOBJECTS		= $(CXXSOURCES:%.cpp=%.o)
+CXXHEADERS		= $(wildcard include/*.h)
+CXXFLAGS		+= -g
+CXXFLAGS		+= -Wall
+CXXFLAGS		+= -Iinclude/
+CXXFLAGS		+= -I/usr/local/include/
+CXXFLAGS		+= -Wl,-rpath=/usr/local/lib/
+CXXFLAGS		+= -Wl,-rpath=lib/
+CXXFLAGS		+= -L/usr/local/lib/
+LIBS_FLAGS		+= -ldl
+
+$(PROGRAM): $(CXXOBJECTS)
+	$(CXX) $(CXXFLAGS) $^ $(LIBS_FLAGS) -o $(DEST)$(PROGRAM)
+run:
+	./$(DEST)$(PROGRAM)
+clean:
+	$(RM) $(DEST)$(PROGRAM)
+	$(RM) $(CXXOBJECTS)
