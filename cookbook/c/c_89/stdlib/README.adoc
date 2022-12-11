@@ -1,0 +1,163 @@
+= StdLib 89
+
+== Catalogue
+
+// [cols="4*<"]
+|===
+|Header |Desc. |Content| Std.
+
+|`<assert.h>`
+|Contains the assert macro, used to assist with detecting logical errors and other types of bug in debugging versions of a program.
+|
+|
+
+|`<complex.h>`
+|A set of functions for manipulating complex numbers.
+|
+|C99
+
+|`<ctype.h>`
+|Defines set of functions used to classify characters by their types or to convert between upper and lower case in a way that is independent of the used character set (typically ASCII or one of its extensions, although implementations utilizing EBCDIC are also known).
+|
+|
+
+|`<errno.h>`
+|For testing error codes reported by library functions.
+|
+|
+
+|`<fenv.h>`
+|Defines a set of functions for controlling floating-point environment.
+|
+|C99
+
+|`<float.h>`
+|Defines macro constants specifying the implementation-specific properties of the floating-point library.
+|
+|
+
+|`<inttypes.h>`
+|Defines exact width integer types.
+|
+|C99
+
+|`<iso646.h>`
+|Defines several macros that implement alternative ways to express several standard tokens. For programming in ISO 646 variant character sets.
+|
+|NA1
+
+|`<limits.h>`
+|Defines macro constants specifying the implementation-specific properties of the integer types.
+|
+|
+
+|`<locale.h>`
+|Defines localization functions.
+|
+|
+
+|`<math.h>`
+|Defines common mathematical functions.
+|`pow`, `sqrt`, `acos`, `M`, `PI`
+|
+
+|`<setjmp.h>`
+|Declares the macros setjmp and longjmp, which are used for non-local exits.
+|
+|
+
+|`<signal.h>`
+|Defines signal handling functions.
+|
+|
+
+|`<stdalign.h>`
+|For querying and specifying the alignment of objects.
+|
+|C11
+
+|`<stdarg.h>`
+|For accessing a varying number of arguments passed to functions.
+|
+|
+
+|`<stdatomic.h>`
+|For atomic operations on data shared between threads.
+|
+|C11
+
+|`<stdbool.h>`
+|Defines a boolean data type.
+|
+|C99
+
+|`<stddef.h>`
+|Defines several useful types and macros.
+|
+|
+
+|`<stdint.h>`
+|Defines exact width integer types.
+|
+|C99
+
+|`<stdio.h>`
+|Defines core input and output functions
+|`printf`, `sprintf`, `fopen`, `gets`, `puts`
+|
+
+|`<stdlib.h>`
+|Defines numeric conversion functions, pseudo-random numbers generation functions, memory allocation, process control functions
+|`malloc`, `rand`, `atoi`, `NULL`, `EXIT_SUCCESS`, `EXIT_FAILURE`
+|
+
+|`<stdnoreturn.h>`
+|For specifying non-returning functions.
+|
+|C11
+
+|`<string.h>`
+|Defines string handling functions.
+a|
+* `strdup`: 
+* `strcat`: concatenate two strings
+** `strncat`: concatenate one string with part of another
+* `strchr`: string scanning operation
+** `strrchr`: string scanning operation
+* `strcmp`: compare two strings
+** `strncmp`: compare parts of two strings
+* `strcpy`: copy a string
+** `strncpy`: copy part of a string
+* `strlen`: get string length
+|
+
+|`<tgmath.h>`
+|Defines type-generic mathematical functions.
+|
+|C99
+
+|`<threads.h>`
+|Defines functions for managing multiple Threads as well as mutexes and condition variables.
+|
+|C11
+
+|`<time.h>`
+|Defines date and time handling functions
+|`time`
+|
+
+|`<uchar.h>`
+|Types and functions for manipulating Unicode characters.
+|
+|C11
+
+|`<wchar.h>`
+|Defines wide string handling functions.
+|
+|NA1
+
+|`<wctype.h>`
+|Defines set of functions used to classify wide characters by their types or to convert between upper and lower case
+|
+|NA1
+|===
