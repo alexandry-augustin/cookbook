@@ -35,5 +35,6 @@ int main()
     {
         int (*a)[20] = new int[5][20];
     }
+    
 	return 0;
 }

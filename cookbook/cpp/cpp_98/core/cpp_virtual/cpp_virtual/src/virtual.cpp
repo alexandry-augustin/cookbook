@@ -67,5 +67,6 @@ int main(int argc, char* argv[])
 	{
 		//base_00 b;
 	}
+    
 	return 0;
 }

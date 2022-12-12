@@ -38,5 +38,6 @@ int main()
 		std::cout<<p<<std::endl; //test
 		std::cout<<*p<<std::endl; //t
 	}
+    
 	return 0;
 }

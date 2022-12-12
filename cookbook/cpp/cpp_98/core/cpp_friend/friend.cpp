@@ -6,35 +6,35 @@ using namespace std;
 class A
 {
 public:
-	A(){};
-	friend void global(A &a);
-	friend void B::member(A &a);
+    A(){};
+    friend void global(A &a);
+    friend void B::member(A &a);
 private:
-	int x;
+    int x;
 };
 
 class B
 {
 public:
-	B(){};
-	void member(A &a){a.x=10;}
+    B(){};
+    void member(A &a){a.x=10;}
 };
 
 void global(A &a)
 {
-	a.x=5;
+    a.x=5;
 }*/
 
 
 class X
 {
 protected:
-	int m;
+    int m;
 };
 
 class a
 {
-	friend class X;
+    friend class X;
 };
 
 class b
@@ -44,28 +44,28 @@ class b
 template<typename T>
 class t
 {
-	T m_n;
+    T m_n;
 
-	template<typename T>
-	friend T fct(const t<T>& u);
+    template<typename T>
+    friend T fct(const t<T>& u);
 
 public:
-	t(int n): m_n(n) { }
+    t(int n): m_n(n) { }
 };
 template<typename T>
 T fct(const t<T>& u) { return u.m_n; }
 
 void main()
 {
-	/*A a;
-	global(a);
+    /*A a;
+    global(a);
 
-	B b;
-	b.member(a);*/
+    B b;
+    b.member(a);*/
 
-	/*b _b;
-	_b.m;*/
+    /*b _b;
+    _b.m;*/
 
-	t<int> u(5);
-	cout<<fct(u)<<endl;
+    t<int> u(5);
+    cout<<fct(u)<<endl;
 }

@@ -2,7 +2,8 @@
 #include <cassert>
 #include "cpp_static.h"
 
-// all static members of all the classes are initialized before main() - the order is unpredictable.
+// all static members of all the classes are initialised before main() 
+// -- the order is unpredictable.
 
 /*static*/ int base::m_x=0;
 
@@ -51,5 +52,6 @@ int main()
 		assert(b_01.f_00()==8);
 		assert(b_01.f_00()==9);
 	}
+    
 	return 0;
 }
