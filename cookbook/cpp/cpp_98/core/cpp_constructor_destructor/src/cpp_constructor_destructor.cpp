@@ -1,17 +1,5 @@
 #include <iostream>
 
-// According to the C++ standard, the copy constructor for base must have one of the following signatures:
-//  base(const base& other);
-//  base(base& other);
-//  base(volatile const base& other);
-//  base(volatile base& other);
-// 
-// Note that none of the following constructors, despite the fact that they could do the same thing as a copy constructor, are not copy constructors:
-//  base(base* other);
-//  base(const base* other);
-//
-//  base(base other); //infinite loop
-
 struct Base
 {
     int a;

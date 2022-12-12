@@ -1,1 +1,39 @@
 = Core C++
+
+== {cpp}98
+
+[comment]
+--
+=== Copy Constructor
+
+According to the C++ standard, the copy constructor for base must have one of the following signatures:
+
+* `base(const base& other);`
+* `base(base& other);`
+* `base(volatile const base& other);`
+* `base(volatile base& other);`
+
+Note that none of the following constructors, despite the fact that they could do the same thing as a copy constructor, are not copy constructors:
+* `base(base* other);`
+* `base(const base* other);`
+
+* `base(base other);` //infinite loop
+--
+
+[comment]
+--
+overloading: same function name
+overriding: same function signature (=> inheritance)
+--
+
+=== `volatile`
+
+"The volatile specifier is a hint to a compiler that an object may change its value in ways not specified by the language so that aggressive optimizations must be avoided."
+-- Bjarne Stroustrup, 3rd edition
+
+"the use of volatile accomplishes nothing but to prevent the compiler from making useful and desirable optimizations, providing no help whatsoever in making code 'thread safe"
+-- David Butenhof, comp.programming.threads posting, July 3, 1997, according to the Google archive
+
+
+
+== {cpp}11

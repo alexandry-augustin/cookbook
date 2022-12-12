@@ -1,10 +1,12 @@
 = Core {cpp} & STL Cookbook
 :author: Alexandry Augustin
-:sectnums:
+// :sectnums:
 :toc: left
 :cpp: C++
 
 // This repository contains my personal implementations of the core {cpp} syntax and standard template library (STL). 
+
+== {cpp} Standards
 
 .{cpp} Revision History.
 |===
