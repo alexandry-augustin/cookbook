@@ -1,0 +1,359 @@
+= Standard Template Library (STL)
+
+image:./res/stl/uml_diagram.png[]
+
+== STL 98
+
+=== Algorithms
+
+Non-modifying sequence operations:
+
+for_each:: Apply function to range
+find:: Find value in range
+find_if:: Find element in range
+find_end:: Find last subsequence in range
+find_first_of:: Find element from set in range
+adjacent_find:: Find equal adjacent elements in range
+count:: Count appearances of value in range
+count_if:: Return number of elements in range satisfying condition
+mismatch:: Return first position where two ranges differ
+equal:: Test whether the elements in two ranges are equal
+search:: Find subsequence in range
+search_n:: Find succession of equal values in range
+
+Modifying sequence operations:
+
+copy:: Copy range of elements
+copy_backward:: Copy range of elements backwards
+swap:: Exchange values of two objects
+swap_ranges:: Exchange values of two ranges
+iter_swap:: Exchange values of objects pointed by two iterators
+transform:: Apply function to range
+replace:: Replace value in range
+replace_if:: Replace values in range
+replace_copy:: Copy range replacing value
+replace_copy_if:: Copy range replacing value
+fill:: Fill range with value
+fill_n:: Fill sequence with value
+generate:: Generate values for range with function
+generate_n:: Generate values for sequence with function
+remove:: Remove value from range
+remove_if:: Remove elements from range
+remove_copy:: Copy range removing value
+remove_copy_if:: Copy range removing values
+unique:: Remove consecutive duplicates in range
+unique_copy:: Copy range removing duplicates
+reverse:: Reverse range
+reverse_copy:: Copy range reversed
+rotate:: Rotate elements in range
+rotate_copy:: Copy rotated range
+random_shuffle:: Rearrange elements in range randomly
+partition:: Partition range in two
+stable_partition:: Partition range in two - stable ordering
+
+Sorting:
+
+sort:: Sort elements in range
+stable_sort:: Sort elements preserving order of equivalents
+partial_sort:: Partially Sort elements in range
+partial_sort_copy:: Copy and partially sort range
+nth_element:: Sort element in range
+
+Binary search (operating on sorted ranges):
+
+lower_bound:: Return iterator to lower bound
+upper_bound:: Return iterator to upper bound
+equal_range:: Get subrange of equal elements
+binary_search:: Test if value exists in sorted array
+
+Merge (operating on sorted ranges):
+
+merge:: Merge sorted ranges
+inplace_merge:: Merge consecutive sorted ranges
+includes:: Test whether sorted range includes another sorted range
+set_union:: Union of two sorted ranges
+set_intersection:: Intersection of two sorted ranges
+set_difference:: Difference of two sorted ranges
+set_symmetric_difference:: Symmetric difference of two sorted ranges
+
+Heap:
+
+push_heap:: Push element into heap range
+pop_heap:: Pop element from heap range
+make_heap:: Make heap from range
+sort_heap:: Sort elements of heap
+
+Min/max:
+
+min:: Return the lesser of two arguments
+max:: Return the greater of two arguments
+min_element:: Return smallest element in range
+max_element:: Return largest element in range
+lexicographical_compare:: Lexicographical less-than comparison
+next_permutation:: Transform range to next permutation
+prev_permutation:: Transform range to previous permutation
+
+=== Containers
+
+std::pair:: {empty}
+std::vector:: {empty}
+std::list:: {empty}
+std::deque:: {empty}
+
+Adaptors:
+
+std::queue:: {empty}
+std::priority_queue:: {empty}
+std::stack:: {empty}
+
+Associative:
+
+std::set:: red-black tree
+std::multiset:: {empty}
+std::map:: red-black tree
+std::multimap:: {empty}
+
+std::bitset:: {empty}
+std::valarray:: {empty}
+
+std::string:: {empty}
+std::tuple:: {empty}
+
+=== Iterators
+
+
+=== Other
+
+
+=== Streams
+
+....
+iostream
+    streambuf
+        rdbuf()
+        ostream::tellp istream::tellg ostream::seekp istream::seekg (not part of std::streambuf)
+        width()
+    flush()
+
+    format flags: std::ios_base::fmtflags (bitmask type)
+        setf()/unsetf()/flags()
+
+    format accessors:
+        width()/precision()/fill()
+
+    state flags:
+        goodbit good()              (= eofbit && failbit && badbit)
+        eofbit  eof()               (end of stream reached)
+        failbit fail()/operator!()/operator*()  (an operation has failed)
+        badbit  bad()               (loss of integrity: memory shortage, ...)
+        clear()/setstate()/rdstate()
+
+    exception flags: (1 for each state flag)
+        exception(ios_base::badbit | ios_base::failbit)
+
+    gcount()    number of character extracted from previous operation
+
+    unformatted i/o:
+        get()       read a single character
+        read()      read a specified number of characters
+        getline()   read until '\n'
+
+        put()       write a single character
+        write()     write a specified number of characters
+==========================================================
+std::getline() ???
+==========================================================
+<ios>
+<istream>
+<ostream>
+<streambuf>
+<iosfwd> 
+
+<iostream>
+<fstream>
+<sstream>
+<iomanip> 
+    setw()
+
+
+streambuf filebuf stringbuf
+streambuf==dequeue?
+cannot directly make random access random reads or writes in a stream.
+you can seek to a position in a stream and perform a read at that point.
+
+get / put pointers
+seekg() / seekp()
+tellg() / tellp()
+
+seekg(0); seekg(0, ios::beg);   //sets the get pointer to the beginning.
+seekg(5, ios::beg);     //sets the get pointer to 5 chars forward of the beginning.
+tellp(); tellg()        //returns the current value of the put/get pointer
+seekp(-10, ios::end);       //sets the put pointer to 10 chars before the end
+seekp(1, ios::cur);     //proceeds to next char
+==========================================================
+seekg(): for reading
+seekp(): for writting
+
+std::streampos tellg();
+std::streampos tellp();
+
+istream& seekg(streampos position);
+istream& seekg(streamoff offset, ios_base::seekdir direction);
+    ios_base::beg (offset from the beginning of the stream's buffer)
+    ios_base::cur (offset from the current position in the stream's buffer)
+    ios_base::end (offset from the end of the stream's buffer)
+==========================================================
+ios (typedef basic_ios<char> ios):
+    rdbuf()
+    tie()
+    imbue()
+    copyfmt()
+    narrow()
+    widen()
+    clear()
+    fill()
+    flags()
+    precision()
+    rdstate()
+    setf()
+    unsetf()
+    width()
+    good()
+    eof()
+    bad()
+    fail()
+    exceptions()
+    operator!()
+    operator void*()
+    setstate()
+    manipulator:
+        resetiosflags()
+        setiosflags()
+        setprecision()
+        setbase()
+        setfill()
+        setw()
+istream:
+    gcount()
+    get()
+    getline()
+    ignore()
+    peek()
+    putback()
+    read()
+    readsome()
+    seekg()
+    sync()
+    tellg()
+    unget()
+    manipulator:
+        ws
+ostream:
+    flush()
+    put()
+    write()
+    tellp()
+    seekp()
+    manipulator:
+        endl()
+        ends()
+        flush()
+ifstream:
+    rdbuf()
+    is_open()
+    open()
+    close()
+ofstream:
+    rdbuf()
+    is_open()
+    open()
+    close()
+fstream:
+    rdbuf()
+    is_open()
+    open()
+    close()
+istringstream:
+    rdbuf()
+    str()
+ostringstream:
+    rdbuf()
+    str()
+stringstream:
+    rdbuf()
+    str()
+....
+
+==== Manipulators
+
+....
+manipulators:
+Independent flags (switch on):
+	std::boolalpha		Alphanumerical bool values (function)
+	std::showbase		Show numerical base prefixes (function)
+	std::showpoint		Show decimal point (function)
+	std::showpos		Show positive signs (function)
+	std::skipws		Skip whitespaces (function)
+	std::unitbuf		Flush buffer after insertions (function)
+	std::uppercase		Generate upper-case letters (function)
+Independent flags (switch off):
+	std::noboolalpha	No alphanumerical bool values (function)
+	std::noshowbase		Do not show numerical base prefixes (function)
+	std::noshowpoint	Do not show decimal point (function)
+	std::noshowpos		Do not show positive signs (function)
+	std::noskipws		Do not skip whitespaces (function)
+	std::nounitbuf		Do not force flushes after insertions (function)
+	std::nouppercase	Do not generate upper case letters (function)
+basefield:
+	std::dec		Use decimal base (function)
+	std::hex		Use hexadecimal base (function)
+	std::oct		Use octal base (function)
+floatfield:
+	std::fixed		Use fixed floating-point notation (function)
+	std::scientific		Use scientific floating-point notation (function)
+adjustfield
+	std::internal		Adjust field by inserting characters at an internal position (function)
+	std::left		Adjust output to the left (function)
+	std::right		Adjust output to the right (function)
+
+boolalpha   // cout.setf(ios_base::boolalpha)
+noboolalpha // cout.unsetf(ios_base::boolalpha)
+
+showbase    // cout.setf(ios_base::showbase)
+noshowbase  // cout.unsetf(ios_base::showbase)
+
+showpoint   // cout.setf(ios_base::showpoint)
+noshowpoint // cout.unsetf(ios_base::showpoint)
+
+showpos     // cout.setf(ios_base::showpos)
+noshowpos   // cout.unsetf(ios_base::showpos)
+
+skipws      // cout.setf(ios_base::skipws)
+noskipws    // cout.unsetf(ios_base::skipws)
+
+uppercase   // cout.setf(ios_base::uppercase)
+nouppercase // cout.unsetf(ios_base::uppercase)
+
+left        // cout.setf(ios_base::left, ios_base::basefield)
+right       // cout.setf(ios_base::right, ios_base::basefield)
+internal    // cout.setf(ios_base::internal, ios_base::basefield)
+
+dec         // cout.setf(ios_base::dec, ios_base::basefield)
+hex         // cout.setf(ios_base::hex, ios_base::basefield)
+oct         // cout.setf(ios_base::oct, ios_base::basefield)
+
+fixed       // cout.setf(ios_base::fixed, ios_base::floatfield)
+scientific  // cout.setf(ios_base::scientific, ios_base::floatfield)
+
+endl        // put '\n' and flush
+ends        // put '\0'
+flush       // flush stream
+ws          // eat whitespace
+
+resetiosflags(fmtflags f) // Clear flags
+setiosflags(fmtflags f)   // Set flags
+setbase(int base)         // integer base
+setfill(int ch)           // Fill padding with ch
+setprecision(int n)       // n digits of floating point precision
+setw(int n)               // next field width is length n
+....

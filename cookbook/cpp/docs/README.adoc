@@ -1,0 +1,38 @@
+= Core C++ & STL Cookbook
+:author: Alexandry Augustin
+:sectnums:
+:toc: left
+
+// This repository contains my personal implementations of the core C++ syntax and standard template library (STL). 
+
+.C++ Revision History.
+|===
+|Year |Informal Name |Remarks
+
+|1998
+|C++98
+|
+
+|2003
+|C++03
+|
+
+|2011
+|C++11, C++0x
+|
+
+|2014
+|C++14, C++1y
+|
+
+|2017
+|C++17, C++1z
+|
+
+|2020
+|C++20, C++2a
+|
+|===
+
+include::./sections/core.adoc[leveloffset=+1]
+include::./sections/stl.adoc[leveloffset=+1]
