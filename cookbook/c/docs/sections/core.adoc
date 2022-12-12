@@ -1,0 +1,74 @@
+= Core C
+
+== C89
+
+`auto`:: {empty}
+`break`:: {empty}
+`case`:: {empty}
+`char`:: {empty}
+`const`:: {empty}
+`continue`:: {empty}
+`default`:: {empty}
+`do`:: {empty}
+`double`:: {empty}
+`else`:: {empty}
+`enum`:: {empty}
+`extern`:: {empty}
+`float`:: {empty}
+`for`:: {empty}
+`goto`:: {empty}
+`if`:: {empty}
+`int`:: {empty}
+`long`:: {empty}
+`register`:: {empty}
+`return`:: {empty}
+`short`:: {empty}
+`signed`:: {empty}
+`sizeof`:: {empty}
+`static`:: {empty}
+`struct`:: {empty}
+`switch`:: {empty}
+`typedef`:: {empty}
+`union`:: {empty}
+`unsigned`:: {empty}
+`void`:: {empty}
+`volatile`:: {empty}
+`while`:: {empty}
+
+== C99
+
+`_Bool`:: {empty}
+`_Complex`:: {empty}
+`_Imaginary`:: {empty}
+`inline`:: {empty}
+`restrict`:: {empty}
+
+== C11
+
+`_Alignas`:: {empty}
+`_Alignof`:: {empty}
+`_Atomic`:: {empty}
+`_Generic`:: {empty}
+`_Noreturn`:: {empty}
+`_Static_assert`:: {empty}
+`_Thread_local`:: {empty}
+
+== Operators
+
+arithmetic:: `+`, `-`, `*`, `/`, `%`
+assignment:: `=`
+augmented assignment:: `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`
+bitwise logic:: `~`, `&`, `|`, `^`
+bitwise shifts:: `<<`, `>>`
+boolean logic:: `!`, `&&`, `||`
+conditional evaluation:: `? ::`
+equality testing:: `==`, `!=`
+calling functions:: `( )`
+increment and decrement:: `++`, `--`
+member selection:: `.`, `->`
+object size:: `sizeof`
+order relations:: `<`, `<=`, `>`, `>=`
+reference and dereference:: `&`, `*`, `[ ]`
+sequencing:: `,`
+subexpression grouping:: `( )`
+type conversion:: `(*typename*)`

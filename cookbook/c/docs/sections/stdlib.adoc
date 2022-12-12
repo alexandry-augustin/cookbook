@@ -1,6 +1,6 @@
-= StdLib 89
+= Standard Library
 
-== Catalogue
+== StdLib 89
 
 // [cols="4*<"]
 |===

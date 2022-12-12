@@ -357,3 +357,16 @@ setfill(int ch)           // Fill padding with ch
 setprecision(int n)       // n digits of floating point precision
 setw(int n)               // next field width is length n
 ....
+
+== STL 11
+
+=== Containers
+
+std::array:: {empty}
+std::forward_list:: {empty}
+std::tuple:: {empty}
+
+std::unordered_set:: {empty}
+std::unordered_multiset:: {empty}
+std::unordered_map:: {empty}
+std::unordered_multimap:: {empty}

@@ -1,36 +1,38 @@
-= Core C++ & STL Cookbook
+= Core {cpp} & STL Cookbook
 :author: Alexandry Augustin
 :sectnums:
 :toc: left
+:cpp: C++
 
-// This repository contains my personal implementations of the core C++ syntax and standard template library (STL). 
+// This repository contains my personal implementations of the core {cpp} syntax and standard template library (STL). 
 
-.C++ Revision History.
+.{cpp} Revision History.
 |===
 |Year |Informal Name |Remarks
 
 |1998
-|C++98
+|`{cpp}98`
 |
 
 |2003
-|C++03
-|
+|`{cpp}03`
+|Primarily a bug fix release for the implementers to ensure greater consistency and portability.
+Includes only one new language feature (value initialisation).
 
 |2011
-|C++11, C++0x
+|`{cpp}11`, `{cpp}0x`
 |
 
 |2014
-|C++14, C++1y
+|`{cpp}14`, `{cpp}1y`
 |
 
 |2017
-|C++17, C++1z
+|`{cpp}17`, `{cpp}1z`
 |
 
 |2020
-|C++20, C++2a
+|`{cpp}20`, `{cpp}2a`
 |
 |===
 

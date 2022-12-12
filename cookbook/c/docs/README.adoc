@@ -1,0 +1,45 @@
+= Core C & Standard Library Cookbook
+:author: Alexandry Augustin
+:sectnums:
+:toc: left
+
+> "C was originally developed at Bell Labs by [Dennis] Ritchie between 1972 and 1973 to construct utilities running on Unix." -- https://en.wikipedia.org/wiki/C_(programming_language)#K&R_C
+
+== C Standards
+
+.C Revision History.
+|===
+|Year |Informal Name |Remarks
+
+|1978
+|`K&R C` (`C78`)
+|
+
+|1989/1990
+|`ANSI C` and `ISO C` (`C89`/`C90`)
+|
+
+|1999
+|`C99`
+|
+
+|2011
+|`C11`
+|
+
+|2017
+|`C17`
+|
+
+|TBD
+| 
+|
+|===
+
+include::./sections/core.adoc[leveloffset=+1]
+include::./sections/stdlib.adoc[leveloffset=+1]
+
+== References
+
+1. Ritchie, Dennis M., Stephen C. Johnson, M. E. Lesk, and B. W. Kernighan. "The C programming language." *Bell Sys. Tech. J* 57, no. 6 (1978): 1991-2019.
+2. 
