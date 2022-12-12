@@ -1,6 +1,6 @@
-= Standard Library
+= Standard Library (libc)
 
-== StdLib 89
+== Libc 89
 
 // [cols="4*<"]
 |===
