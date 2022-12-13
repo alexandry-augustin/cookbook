@@ -37,6 +37,7 @@
 |===
 
 include::./sections/core.adoc[leveloffset=+1]
+
 include::./sections/libc.adoc[leveloffset=+1]
 
 == References

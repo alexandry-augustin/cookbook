@@ -34,6 +34,19 @@ overriding: same function signature (=> inheritance)
 "the use of volatile accomplishes nothing but to prevent the compiler from making useful and desirable optimizations, providing no help whatsoever in making code 'thread safe"
 -- David Butenhof, comp.programming.threads posting, July 3, 1997, according to the Google archive
 
+=== `static`
 
+// ==== Visibility
+
+// [quote,https://en.wikipedia.org/wiki/Static_(keyword)]
+// ____
+// A variable declared as static at the top level of a source file (outside any function definitions) is only visible throughout that file
+
+//  [...]
+
+// Similarly, a static function -- a function declared as static at the top level of a source file (outside any class definitions) -- is only visible throughout that file
+// ____
+
+// ==== Static Variable
 
 == {cpp}11

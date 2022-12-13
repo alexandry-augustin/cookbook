@@ -39,4 +39,5 @@ Includes only one new language feature (value initialisation).
 |===
 
 include::./sections/core.adoc[leveloffset=+1]
+
 include::./sections/stl.adoc[leveloffset=+1]
