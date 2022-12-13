@@ -120,6 +120,7 @@
 |
 |Defines string handling functions.
 a|
+* `memcpy`: copy a string (`strcpy` stops at NULL (`'\0'`), `memcpy` does not)
 * `strdup`: 
 * `strcat`: concatenate two strings
 ** `strncat`: concatenate one string with part of another

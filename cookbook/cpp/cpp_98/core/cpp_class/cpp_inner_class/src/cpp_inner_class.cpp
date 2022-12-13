@@ -1,72 +1,77 @@
 #include <cassert>
 
-class base_10 { };
+class A { };
 
-class base_00
+// Member functions of the enclosing class have no special access
+// to members of a nested class
+class B
 {
-	//Member functions of the enclosing class have no special access to members of a nested class
-private:
-	int _n_00;
-	class base_02 { };
+    int _n_00;
+    class C { }; // inner class
+
 protected:
-	int _n_01;
-	class base_03: public base_10 { };
+    int _n_01;
+    class D: public A { }; // inner class
+
 public:
-	int n_02;
+    int n_02;
 
-	class base_01
-	{
-	//Member functions of a nested class have no special access privileges to members of their enclosing classes.
-	private:
-		int _n_00;
-	protected:
-		int _n_01;
-	public: 
-		int n_02;
+    // Member functions of a nested class have no special access 
+    // privileges to members of their enclosing classes.
+    class E
+    {
+        int _n_00;
 
-		void f_00()
-		{
-			base_02 b;
-		}
-	};
+    protected:
+        int _n_01;
+
+    public: 
+        int n_02;
+
+        void f_00()
+        {
+            C c;
+        }
+    };
 };
 
 //https://publib.boulder.ibm.com/infocenter/lnxpcomp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8l.doc%2Flanguage%2Fref%2Fcplr061.htm
-class A
-{
-	int x;
-	class B { };
-	class C
-	{
-		// The compiler cannot allow the following
-		// declaration because A::B is private:
-		//   B b;
+// class A
+// {
+//     int x;
+//     class B { };
+//     class C
+//     {
+//         // The compiler cannot allow the following
+//         // declaration because A::B is private:
+//         B b;
 
-		int y;
-		void f(A* p, int i)
-		{
-			// The compiler cannot allow the following
-			// statement because A::x is private:
-			//   p->x = i;
+//         int y;
+//         void f(A* p, int i)
+//         {
+//             // The compiler cannot allow the following
+//             // statement because A::x is private:
+//             //   p->x = i;
 
-		}
-	};
-	void g(C* p)
-	{
-		// The compiler cannot allow the following
-		// statement because C::y is private:
-		//   int z = p->y;
-	}
-};
+//         }
+//     };
+//     void g(C* p)
+//     {
+//         // The compiler cannot allow the following
+//         // statement because C::y is private:
+//         //   int z = p->y;
+//     }
+// };
 
 int main()
 {
-	{
-		base_00 b_00;
-		base_00::base_01 b_01;
+    {
+        B b;
+        B::E i;
 
-		b_01.n_02=5;
-		assert(b_01.n_02==5);
-	}
-	return 0;
+        i.n_02 = 5;
+        assert(i.n_02 == 5);
+    }
+    
+    return 0;
 }

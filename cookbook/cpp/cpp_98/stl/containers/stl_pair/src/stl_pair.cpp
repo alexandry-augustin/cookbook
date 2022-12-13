@@ -1,21 +1,29 @@
-#include <iostream>
-#include <utility>
-#include <string>
+#include <cassert>
+#include <utility> // for std::pair()
 
 int main()
 {
-	std::pair<std::string, double> product1("product1", 3.25);
+    {
+        std::pair<int, int> p(3, 5);
 
-	std::pair<std::string, double> product2;
-	product2.first = "product2";
-	product2.second = 0.99;
+        assert(p.first == 3);
+        assert(p.second == 5);
+    }
+    {
+        std::pair<int, int> p;
+        p.first = 3;
+        p.second = 5;
 
-	std::pair<std::string, double> product3;
-	product3=std::make_pair("product3", 20.0);
+        assert(p.first == 3);
+        assert(p.second == 5);
+    }
+    {
+        std::pair<int, int> p;
+        p=std::make_pair(3, 5);
 
-	//cout << "The price of " << product1.first << " is $" << product1.second << endl;
-	//cout << "The price of " << product2.first << " is $" << product2.second << endl;
-	//cout << "The price of " << product3.first << " is $" << product3.second << endl;
+        assert(p.first == 3);
+        assert(p.second == 5);
+    }
 
-	return 0;
+    return 0;
 }

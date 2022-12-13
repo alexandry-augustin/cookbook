@@ -2,27 +2,32 @@
 
 class base
 {
-	int _n;
+    int m_n;
+
 public:
-	base(int n=0): _n(n) { }
-	base& add()
-	{
-		++_n;
-		return (*this);
-	}
-	int get() const { return _n; }
+
+    base(int n=0): m_n(n) { }
+    
+    base& add()
+    {
+        ++m_n;
+        return (*this);
+    }
+
+    int get() const { return m_n; }
 };
 
 int main(int argc, char* argv[])
 {
-	{
-		base b(0);
-		b.add().add();
-		assert(b.get()==2);
-	}
-	{
-		base b(0);
-		assert(b.add().add().get()==2);
-	}
-	return 0;
+    {
+        base b;
+        b.add().add();
+        assert(b.get() == 2);
+    }
+    {
+        base b;
+        assert(b.add().add().get() == 2);
+    }
+    
+    return 0;
 }
