@@ -1,0 +1,8 @@
+= Forms
+
+`<form>`:
+
+* `action`: 
+* `method`: 
+** `"POST"`:
+** `"GET"`: appends data to url via query string

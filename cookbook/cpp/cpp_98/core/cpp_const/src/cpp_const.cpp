@@ -1,7 +1,7 @@
 #include <cassert>
 #include <vector>
 #include <algorithm>
-#include <functional>   // std::greater, std::bind2nd
+#include <functional> // std::greater, std::bind2nd
 #include <iostream>
 
 // http://stackoverflow.com/questions/11514688/passing-const-pointer-by-reference

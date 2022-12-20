@@ -10,18 +10,19 @@ let handle_error = function(err, result)
         console.error(err);
 }
 
-function ls(fullpath)
+function ls(path_)
 {
-	const files = fs.readdirSync(fullpath);
+	const files = fs.readdirSync(path_);
 
-	for(const file of files)
-	{
-        console.log(file);
+    files.forEach(file => {
+        const fullpath = path.join(path_, file);
+
+        console.log(fullpath);
         
-        const stat = fs.lstatSync(path.join(fullpath, file));
+        const stat = fs.lstatSync(fullpath);
         stat.isFile();
         stat.isDirectory();
-	}
+    });
 }
 
 function load_json(filename)

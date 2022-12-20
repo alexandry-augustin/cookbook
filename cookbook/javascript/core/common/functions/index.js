@@ -3,9 +3,9 @@ function add_one(n)
     return n+1
 }
 
-function named_properties({ param_00, param_01 })
+function named_properties({ lhs, rhs })
 {
-    return [ param_00, param_01 ];
+    return lhs + rhs;
 }
 //---------------------------------------------------------
 // * primitive data types are passed by value
@@ -45,9 +45,8 @@ if(require.main === module)
 	    console.assert(add_one(5)==6);
     }
     {
-        let ret = named_properties({ param_01: 123, param_00: "abc" });
-        console.assert(ret[0] == "abc");
-        console.assert(ret[1] == 123);
+        let ret = named_properties({ lhs: 5, rhs: 3 });
+        console.assert(ret === 8);
     }
     {
         // a function returns 'undefined' by default
