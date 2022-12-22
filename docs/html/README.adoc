@@ -1,4 +1,5 @@
 = HTML
+:toc: left
 
 https://www.javatpoint.com/html-tags
 

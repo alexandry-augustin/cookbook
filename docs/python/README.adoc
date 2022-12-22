@@ -1,0 +1,24 @@
+= Python
+
+== Usage
+
+[listing,bash]
+....
+python [flags] filename.py
+....
+
+== Flags
+
+* `-c cmd`: 
+
+* `-W ignore`: ignores warnings
+
+== REPL
+
+[listing,bash]
+....
+python -i filename.py
+....
+
+
+

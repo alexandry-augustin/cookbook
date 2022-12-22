@@ -1,0 +1,33 @@
+= GNU Octave
+:wiki-url: https://en.wikipedia.org/wiki/GNU_Octave
+:website-url: https://octave.org/
+:repo-url: https://hg.savannah.gnu.org/hgweb/octave
+
+{wiki-url}[wiki] {website-url}[website] {repo-url}[repo]
+
+== Installation
+
+[listing,bash]
+....
+sudo dnf install octave
+....
+
+== Usage
+
+[listing,bash]
+....
+octave [options] file.m
+....
+
+=== Flags
+
+* `--persist filename.m`: 
+* `--force-gui`: (since v3.8.2) Go to interactive mode after `--eval` or reading from a file named on the command line. 
+
+== REPL
+
+[listing,matlab]
+....
+help exp
+run file.m	type "file"
+....
