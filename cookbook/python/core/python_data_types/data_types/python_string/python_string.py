@@ -121,6 +121,8 @@ def formating():
 	print "Username {0} (last login: {1})".format('luispedro', 'yesterday')
 	print "Username {} (last login: {})".format('luispedro', 'yesterday')
 	#--------------------------------------------------
+    name = 'pedro'
+    print(f'Username {name}')
 #----------------------------------------------------------
 def redefinition():
 	str="abc"
@@ -173,6 +175,10 @@ def misc():
 	assert(len(n_00)==5)
 #----------------------------------------------------------
 if __name__ == '__main__':
+
+    n = 5
+    assert(f'{n}' == str(n))
+
 	convertion()
 	substring()
 	misc()

@@ -1,0 +1,76 @@
+<!-- Passing the Form Object as a Parameter -->
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Form with JavaScript Example</title>
+    </head>
+
+    <body>
+        <form>
+            <!-- name="Example Form" -->
+            <!-- action="javascript:handleClick()" -->
+            <!-- onsubmit="onSubmit(this.form)" -->
+            
+            <fieldset>
+                <legend>HTML Form with JS Example</legend>
+
+                <div>
+                    <label for="input_text_id">Name: </label>
+                    <input type="text"
+                        id="name_id"
+                        placeholder="John"
+                        name="name"
+                        onChange="onNameChanged(this)" />
+                </div>
+
+                <div>
+                    <label for="">Sex: </label>
+                    <input type="radio"
+                        name="sex"
+                        id="male_id" 
+                        checked />
+                    <input type="radio"
+                        name="sex"
+                        id="female_id" />
+                </div>
+            </fieldset>
+
+            <!--
+                Prevent HTML button not reload the page:
+                https://stackoverflow.com/questions/1878264/how-do-i-make-an-html-button-not-reload-the-page
+
+                "just specify the button type as 'button'.
+                If you don't specify the button type, the browser will automatically set it to 'reset' or 'submit' which causes the page to reload.
+
+                <button type='button'>submit</button>
+            -->
+
+            <button type="reset">Reset</button>
+            <!-- <button type="submit">Submit</button> -->
+            <button 
+                type='button' 
+                onclick="onSubmit(this.form)">Submit</button>
+            <!-- <input 
+                type="button" 
+                name="process" 
+                value="Submit" 
+                onClick="onSubmit(this.form)"> -->
+
+        </form>
+        <script>
+            function onSubmit(form) {
+                for(let i=0; i<form.sex.length; i++) {
+                   console.log(form.sex[i]);
+                }
+                console.log('Current Name:', form.name.value);
+            }
+            function onNameChanged(name) {
+                console.log('Current Name: ', name.value);
+            }
+        </script>
+    </body>
+
+</html>

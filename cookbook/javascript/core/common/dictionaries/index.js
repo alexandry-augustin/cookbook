@@ -18,7 +18,7 @@ if(require.main === module)
     dict["age"] = 18;
     dict.first = "alex";
 
-	console.log(dict);
+	// console.log(dict);
 
     for(var key in dict)
     {
@@ -26,4 +26,13 @@ if(require.main === module)
 
       // do something
     }
+
+    Object.entries(dict).forEach(([k,v]) => {
+       // console.log(k, v);
+    });
+
+    let keys = Object.entries(dict).map(([k,v]) => k);
+    let values = Object.entries(dict).map(([k,v]) => v);
+
+    console.log(keys, values); 
 }

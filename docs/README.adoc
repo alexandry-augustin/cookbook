@@ -3,6 +3,8 @@
 // :sectnums:
 // :toc: preamble
 
+// Recipes
+
 This repository is my personal library of useful code snippets, examples, and programs I have built over the years in various programming languages.
 
 == Motivation

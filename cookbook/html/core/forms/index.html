@@ -8,7 +8,12 @@
 
     <body>
 
-        <form action="results.html" method="GET">
+        <!-- <form> -->
+        <form 
+            action="results.html"
+            method="GET">
+        <!-- <form 
+            onsubmit="handleClick(this.form)"> -->
             
             <fieldset>
                 <legend>Form Example</legend>
@@ -17,7 +22,9 @@
                     <label for="input_text_id">input (string): </label>
                     <input type="text"
                         id="input_text_id"
-                        value="default value" />
+                        value="default value" 
+                        placeholder="placeholder"
+                        disabled />
                 </div>
 
                 <div>
@@ -85,6 +92,52 @@
                         id="input_radio_1" />
                 </div>
 
+                <fieldset>
+                    <legend>input (radio):</legend>
+                
+                    <div>
+                      <input 
+                        type="radio" 
+                        id="first" 
+                        name="group_id"
+                        value="first"
+                        checked>
+                      <label for="first">First</label>
+                    </div>
+                
+                    <div>
+                      <input 
+                        type="radio" 
+                        id="second" 
+                        name="group_id"
+                        value="second">
+                      <label for="second">Second</label>
+                    </div>
+                </fieldset>
+
+                <label for="ice-cream-choice">DataList:</label>
+                <input list="ice-cream-flavors" 
+                    id="ice-cream-choice" 
+                    name="ice-cream-choice">
+                <datalist id="ice-cream-flavors">
+                    <option value="Chocolate">
+                    <option value="Coconut">
+                    <option value="Mint">
+                    <option value="Strawberry">
+                    <option value="Vanilla">
+                </datalist>
+
+                <div>
+                    <label for="slider_id">input (slider): </label>
+                    <input id="slider_id"
+                        type="range" 
+                        name="slider" 
+                        class="form-range" 
+                        min="-100" 
+                        max="100" 
+                        id="customRange2">
+                </div>
+
                 <div>
                     <label for="">select: </label>
                     <select>
@@ -107,7 +160,6 @@
                         rows="3"
                         cols="80">Default Text</textarea>
                 </div>
-
             </fieldset>
 
             <button type="reset">Reset</button>
@@ -115,7 +167,6 @@
             <!-- <button onclick="alert('Submitted!')">Submit</button> -->
 
         </form>
-    
     </body>
 
 </html>

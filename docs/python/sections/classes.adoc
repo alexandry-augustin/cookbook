@@ -1,0 +1,4 @@
+= Classes
+
+TODO: `class Base:` vs `class Base(object):`
+https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object
