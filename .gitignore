@@ -14,3 +14,4 @@ bin/
 *.o
 *.exe
 *.zip
+*.code-workspace

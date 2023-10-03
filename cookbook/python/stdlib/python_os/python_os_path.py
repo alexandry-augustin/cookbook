@@ -1,6 +1,7 @@
 import os
-#----------------------------------------------------------
+
 if __name__ == '__main__':
+
 	print(__file__)
 	path=os.path.realpath(__file__)
 	print(path)

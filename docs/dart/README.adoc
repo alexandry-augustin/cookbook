@@ -1,0 +1,85 @@
+= Dart
+:url-website: https://dart.dev/
+
+`.dart`
+
+[source,dart]
+....
+void main() {
+  print("Hello, World!");
+}
+....
+
+== Assert
+
+// https://dart.dev/language/error-handling#assert
+
+[source,dart]
+....
+assert(<condition>, <optionalMessage>);
+....
+
+[source,bash]
+....
+dart --enable-asserts FILENAME
+....
+
+== Exceptions
+
+// https://dart.dev/language/error-handling
+
+[source,dart]
+....
+
+....
+
+== static / const / final
+
+== Datatypes
+
+https://dart.dev/language/built-in-types
+
+`var`
+
+....
+Numbers: int, double
+Strings: String
+Booleans: bool
+
+
+
+Runes (often replaced by the characters API): Runes
+Symbols: Symbol
+The value null: Null
+....
+
+== Collections
+
+....
+Records: (value1, value2)
+Lists (also known as arrays): List
+Sets: Set
+Maps: Map
+....
+
+....
+List<int> l = [0, 1, 2];
+....
+
+== Loops
+
+....
+for (int i = 0; i < 5; i++) {
+    print('${i + 1}');
+}
+....
+
+== Interpreter
+
+[source,bash]
+....
+dart --version
+
+dart FILENAME
+dart run FILENAME
+....

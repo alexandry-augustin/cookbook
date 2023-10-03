@@ -64,7 +64,7 @@ def create_table(conn, create_table_sql):
 
 if __name__ == '__main__':
     # create a database connection
-    db = "test.db"
+    db = "db.sqlite"
     conn = create_connection(db)
 
     # create tables

@@ -127,11 +127,12 @@ def app_filter():
 
 if __name__ == '__main__': 
 
-    print((logging.DEBUG, 
-    logging.INFO, 
-    logging.WARNING, 
-    logging.ERROR, 
-    logging.CRITICAL))
+    print((
+        logging.DEBUG, 
+        logging.INFO, 
+        logging.WARNING, 
+        logging.ERROR, 
+        logging.CRITICAL))
 
     print(logging.NOTSET)
 
@@ -139,3 +140,7 @@ if __name__ == '__main__':
     custom_logger()
     logger_adapter()
     app_filter()
+
+    # print all loggers (except root)
+    loggers = [logging.getLogger(name) for name in logging.root.manager.loggerDict]
+    print(loggers)

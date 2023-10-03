@@ -20,7 +20,7 @@ class base_00():
         # json.dumps()
 
 
-def pretty_print(text):
+def pprint(text):
 
     ret = json.loads(text)
     ret = json.dumps(ret, indent=4, sort_keys=True, separators=(',', ': '))
@@ -39,7 +39,7 @@ def load_test():
     }'
 
     try:
-        json_00=json.loads(str)
+        json_00 = json.loads(str)
     except ValueError as e:
         print(e)
         sys.exit(1)
@@ -57,8 +57,20 @@ def load_test():
     "two": 2
 }"""
 
+def test_array_float():
+
+    array_str = '["-13.2","14.2"]'
+    try:
+        array=json.loads(array_str)
+    except ValueError as e:
+        print(e)
+        sys.exit(1)
+    assert(array == [ '-13.2', '14.2' ])
+    array = [ float(e) for e in array ]
+
 if __name__ == '__main__':
 
     # load_test()
+    test_array_float()
 
-    print(pretty_print('{"three": [1, 2], "two": 2, "one": "1"}'))
+    print(pprint('{"three": [1, 2], "two": 2, "one": "1"}'))

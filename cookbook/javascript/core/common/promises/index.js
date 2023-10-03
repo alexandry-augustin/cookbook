@@ -40,9 +40,9 @@ if(require.main === module)
         // promise.all()
 
         const a = [
-            new Promise ((resolve, reject) => { resolve('ID 0'); }), 
-            new Promise ((resolve, reject) => { resolve('ID 1'); }), 
-            new Promise ((resolve, reject) => { resolve('ID 2'); })
+            new Promise((resolve, reject) => { resolve('ID 0'); }), 
+            new Promise((resolve, reject) => { resolve('ID 1'); }), 
+            new Promise((resolve, reject) => { resolve('ID 2'); })
         ];
 
         Promise.all(a).then((msgs) => {
@@ -53,9 +53,9 @@ if(require.main === module)
         // Promise.race()
 
         const a = [
-            new Promise ((resolve, reject) => { resolve('ID 0'); }), 
-            new Promise ((resolve, reject) => { resolve('ID 1'); }), 
-            new Promise ((resolve, reject) => { resolve('ID 2'); })
+            new Promise((resolve, reject) => { resolve('ID 0'); }), 
+            new Promise((resolve, reject) => { resolve('ID 1'); }), 
+            new Promise((resolve, reject) => { resolve('ID 2'); })
         ];
 
         Promise.race(a).then((msg) => {

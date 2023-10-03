@@ -10,7 +10,6 @@ url:
 # Installation
 
 ```bash
-sudo apt-get install nodejs
 sudo dnf install nodejs
 ```
 
