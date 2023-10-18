@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTMX Sandbox</title>
+	</head>
+
+	<body>
+		<div 
+			hx-get="https://dummyjson.com/products/1">
+			Click Me!
+		</div>
+
+		<button hx-get="https://dummyjson.com/products/1">
+			Click Me!
+			<img 
+				class="htmx-indicator" 
+				src="spinner.gif" 
+				alt="spinner"
+				style="width:15px;">
+		</button>
+
+		<div 
+			hx-get="https://dummyjson.com/products/1" 
+			hx-trigger="mouseenter once">
+			[hover here]
+		</div>
+
+		<!-- <input type="text" name="q"
+			hx-get="/trigger_delay"
+			hx-trigger="keyup changed delay:500ms"
+			hx-target="#search-results"
+			placeholder="Search..."
+		>
+		<div id="search-results"></div> -->
+
+		<button hx-post="/foo" hx-target="#result">
+			Count Up
+		</button>
+		<output id="result"></output>
+		
+		<script src="https://demo.htmx.org"></script>
+        <script 
+			src="https://unpkg.com/htmx.org@1.9.6" 
+			integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" 
+			crossorigin="anonymous"></script>
+	</body>
+</html> 
