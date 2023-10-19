@@ -1,5 +1,8 @@
 = Cascading Style Sheets (CSS)
 
+.Box Model
+image::./res/css-box-model.png[]
+
 [source,css]
 ----
 /* comment */
