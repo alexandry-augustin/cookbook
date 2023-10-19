@@ -1,7 +1,16 @@
 = Boostrap 5
+// :stylesheet: bootstrap.min.css
 :url-website: https://getbootstrap.com/
 :url-github: https://github.com/twbs/bootstrap
 :url-examples: https://getbootstrap.com/docs/5.0/examples/
+
+++++
+<link rel="stylesheet" href="bootstrap.min.css">
+++++
+
+{url-website}[[website\]]
+{url-github}[[github\]]
+{url-examples}[[examples\]]
 
 https://stackoverflow.com/questions/42252443/vertical-align-center-in-bootstrap-4
 
@@ -10,6 +19,12 @@ https://startbootstrap.com/
 https://suyashlakhotia.com/blog/2017/05/04/bootstrap-cards.html
 
 https://suyashlakhotia.com/BootstrapCards/
+
+++++
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+++++
 
 == Installation
 

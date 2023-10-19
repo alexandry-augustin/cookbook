@@ -1,0 +1,25 @@
+= Syntactically Awesome Style Sheets (SASS)
+:url-website: https://sass-lang.com/
+:url-repo: https://github.com/sass/sass
+
+{url-website}[[website\]] 
+{url-repo}[[github\]]
+
+== Installation
+
+[source,bash]
+----
+sudo apt-get install sass
+npm install -g sass
+----
+
+== Compile
+
+compile entire directory "scss" into "css"
+
+[source,bash]
+----
+sass --update scss:css
+--style compressed
+--no-source-map # do not create the .map file
+----

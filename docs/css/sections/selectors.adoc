@@ -1,0 +1,251 @@
+= Selectors
+
+== Element
+
+e.g. `div`, `h1`, `strong`, `header`
+
+`*` to select all elements on the page
+
+[source,css]
+----
+h1
+{
+    property: value;
+    property: value;
+}
+----
+
+[source,html]
+----
+<h1>
+    ...
+</h1>
+----
+
+== Class
+
+[source,css]
+----
+.class-name-1
+{
+    property: value;
+    property: value;
+}
+----
+
+[source,html]
+----
+<h1 class="class-name-1 class-name-2 ">
+    ...
+</h1>
+----
+
+== ID
+
+[source,css]
+----
+#id-name
+{
+    property: value;
+    property: value;
+}
+----
+
+[source,html]
+----
+<h1 id="id-name">
+    ...
+</h1>
+----
+
+== Combination 1: `,`
+
+[source,css]
+----
+selector-1, selector-2
+{
+	property: value;
+}
+----
+
+=== Example 1
+
+avoid duplication
+
+[source,css]
+----
+.div, .p
+{
+	property: value;
+}
+
+/* same as */
+
+.div
+{
+	property: value;
+}
+
+.p
+{
+	property: value;
+}
+----
+
+== Combination 2: `.`
+
+[source,css]
+----
+.selector-1.selector-2
+----
+
+=== Example 1
+
+Select all `<h1>` elements of class `class-name`:
+
+[source,css]
+----
+h1.class-name
+{
+    property: value;
+    property: value;
+}
+----
+
+[source,html]
+----
+<h1 class="class-name">
+    ...
+</h1>
+----
+
+=== Example 2
+
+Select the element with id `id-name` and both the classes `class-name-1` and `class-name-2`:
+
+[source,css]
+----
+#id-name.class-name-1.class-name-2
+{
+    property: value;
+    property: value;
+}
+----
+
+[source,html]
+----
+<h1 id="id-name" class="class-name-1 class-name-2">
+    ...
+</h1>
+----
+
+== Combination 3: `[space] `
+
+[source,css]
+----
+selector-1 selector-2
+{
+	property: value;
+}
+----
+
+=== Example 1
+
+Select all `<p>` elements within a `<div>` parent element:
+
+[source,css]
+----
+.div .p
+{
+	property: value;
+}
+----
+
+[source,html]
+----
+<div>
+    <p></p> <!-- included -->
+
+    <h1>
+    	<p></p> <!-- included -->
+    </h1>
+
+    <div>
+    	<p></p> <!-- included -->
+    </div>
+</div>
+----
+
+== Combination 4: `>` (greater-than)
+
+____
+"it selects only those elements which are  direct children of a parent. It looks only one level down the markup  structure and not further deep down. Elements which are not the direct  child of the specified parent is not selected."  -- https://www.geeksforgeeks.org/what-is-greater-than-sign-selector-in-css/
+____
+
+[source,css]
+----
+selector-1 > selector-2
+{
+	property: value;
+}
+----
+
+=== Example 1
+
+Select all `<p>` elements within a `<div>` direct parent element:
+
+[source,css]
+----
+.div .p
+{
+	property: value;
+}
+----
+
+[source,html]
+----
+<div>
+    <p></p> <!-- included -->
+
+    <h1>
+    	<p></p> <!-- NOT included -->
+    </h1>
+
+    <div>
+    	<p></p> <!-- included -->
+    </div>
+</div>
+----
+
+== Attribute Selectors
+
+https://css-tricks.com/attribute-selectors/
+
+[source,css]
+----
+[rel=external] { }/*exact match*/
+[rel*=external] { }/**/
+[rel^=external] { }/**/
+[rel$=external] { }/**/
+[rel~=external] { }/**/
+[rel|=external] { }/**/
+[title=one][rel^=external] { }/*multiple matches*/
+----
+
+=== Example 1
+
+select it based on that `rel` attribute as well
+
+[source,html]
+----
+<h2 id="title" class="magic" rel="friend">David Walsh</h2>
+----
+
+[source,css]
+----
+h2[rel="friend"]
+{
+}
+----
+
+== *::before, *::after
