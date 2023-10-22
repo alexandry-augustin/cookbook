@@ -1,10 +1,11 @@
 """
 	http://pandas.pydata.org/pandas-docs/stable/comparison_with_sql.html
 """
-#----------------------------------------------------------
+
 import pandas as pd
-#----------------------------------------------------------
+
 if __name__ == '__main__':
+
 	url = 'https://raw.github.com/pydata/pandas/master/pandas/tests/data/tips.csv'
 	tips = pd.read_csv(url)
 	#--------------------------------------------------
