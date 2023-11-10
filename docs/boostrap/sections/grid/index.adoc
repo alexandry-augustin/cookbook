@@ -1,0 +1,100 @@
+= Grid
+
+|===
+| | Extra small <576px | Small ≥576px | Medium ≥768px | Large ≥992px | X-Large≥1200px | XX-Large ≥1400px
+
+| `.container`
+| 100%
+| 540px
+| 720px
+| 960px
+| 1140px
+| 1320px
+
+| `.container-sm`
+| 100%
+| 540px
+| 720px
+| 960px
+| 1140px
+| 1320px
+
+| `.container-md`
+| 100%
+| 100%
+| 720px
+| 960px
+| 1140px
+| 1320px
+
+| `.container-lg`
+| 100%
+| 100%
+| 100%
+| 960px
+| 1140px
+| 1320px
+
+| `.container-xl`
+| 100%
+| 100%
+| 100%
+| 100%
+| 1140px
+| 1320px
+
+| `.container-xxl`
+| 100%
+| 100%
+| 100%
+| 100%
+| 100%
+| 1320px
+
+| `.container-fluid`
+| 100%
+| 100%
+| 100%
+| 100%
+| 100%
+| 100%
+|===
+
+> "Rows are wrappers for columns." -- https://getbootstrap.com/docs/5.1/layout/grid/
+
+....
+container
+container-[breakpoint]
+container-fluid
+....
+
+....
+row-[breakpoint]-[size]
+row-[breakpoint]-auto
+
+col-[breakpoint]-[size]
+col-[breakpoint]-auto
+
+row-cols-[breakpoint]-[size]
+....
+
+`size`::
+from 1 to 12
+
+++++
+<div class="container">
+  <div class="row">
+    <div class="col border">
+      Column
+    </div>
+    <div class="col border">
+      Column
+    </div>
+    <div class="col border">
+      Column
+    </div>
+  </div>
+</div>
+++++
+
+include::./gutter.adoc[leveloffset=+1]

@@ -1,0 +1,29 @@
+= Breakpoints
+
+|===
+| Class | Breakpoint | Dimensions
+
+| _None_
+| X-Small
+| <576px
+
+| `sm`
+| Small
+| ≥576px
+
+| `md`
+| Medium
+| ≥768px
+
+| `lg`
+| Large
+| ≥992px
+
+| `xl`
+| Extra large
+| ≥1200px
+
+| `xxl`
+| Extra extra large (new)
+| ≥1400px
+|===

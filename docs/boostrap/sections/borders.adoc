@@ -1,0 +1,11 @@
+= Borders
+
+....
+border-[border]
+....
+
+`border`::
+* `top`: {empty}
+* `end`: {empty}
+* `bottom`: {empty}
+* `start`: {empty}

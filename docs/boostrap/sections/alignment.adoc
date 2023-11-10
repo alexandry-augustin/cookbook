@@ -1,0 +1,10 @@
+= Alignment
+
+....
+text-[alignment]
+....
+
+`alignment`::
+* `center`: {empty}
+* `start`: {empty}
+* `end`: {empty}
