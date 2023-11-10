@@ -30,6 +30,10 @@ include::./sections/borders.adoc[leveloffset=+1]
 
 include::./sections/grid/index.adoc[leveloffset=+1]
 
+include::./sections/table/index.adoc[leveloffset=+1]
+
+include::./sections/cards/index.adoc[leveloffset=+1]
+
 include::./sections/margin-padding.adoc[leveloffset=+1]
 
 include::./sections/display.adoc[leveloffset=+1]

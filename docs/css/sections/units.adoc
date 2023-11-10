@@ -1,0 +1,58 @@
+= Units
+
+> "CSS doesn't have a default unit. Omitting unit is syntax error.
+>
+> /* WRONG */
+> div.x {width:400}
+>
+> you have to write:
+>
+> div.x {width:400px}
+>
+> But if it is 0, then no unit is necessary." -- http://xahlee.info/js/css_default_unit.html
+
+> And a width with <img … width=“100” /> in HTML.
+
+In this case it is an error to add a `px` unit. Length values in HTML attributes are automatically in pixels, unless you add a `%` character at the end.
+
+https://www.w3schools.com/cssref/css_units.asp
+
+== Absolute
+
+`px`: pixels
+
+`cm`: centimeters
+
+`mm`: millimeters
+
+`in`: inches
+
+`pt`: points
+
+`pc`: picas
+
+== Relative
+
+`%`: Relative to the parent element
+
+
+
+`rem` : Relative to font-size of the root element
+
+`em`:  Relative to the font-size of the element (2em means 2 times the size of the current font)
+
+
+
+`vw`: Relative to 1% of the width of the viewport
+
+`vh`: Relative to 1% of the height of the viewport
+
+`vmin`: Relative to 1% of viewport's smaller dimension
+
+`vmax`: Relative to 1% of viewport's larger dimension
+
+
+
+`ex`: Relative to the x-height of the current font (rarely used)
+
+`ch`: Relative to the width of the number 0 (zero) in any given font

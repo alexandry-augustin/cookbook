@@ -1,0 +1,35 @@
+= Properties
+
+== `!important`
+
+
+== `outline` vs `border`
+
+
+
+`block`, `inline`, `inline-block`
+
+== Position
+
+- `static` (default): align elements top to bottom 
+- `relative`: same as `static` with additional `right`, `left`, `top`, `bottom` properties
+- `absolute`: 
+
+
+
+- `fixed`:
+- `sticky`: switch between `relative` and `fixed`
+
+=== Relative
+
+- `right`
+- `left`
+- `top`
+- `bottom`
+
+== `text-align``
+
+[source,css]
+----
+text-align: left;
+----

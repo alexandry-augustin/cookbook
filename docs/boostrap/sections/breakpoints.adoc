@@ -1,7 +1,7 @@
 = Breakpoints
 
 |===
-| Class | Breakpoint | Dimensions
+| Class | Breakpoint | Width
 
 | _None_
 | X-Small

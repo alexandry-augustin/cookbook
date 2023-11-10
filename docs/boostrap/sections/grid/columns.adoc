@@ -1,0 +1,27 @@
+= Columns
+
+....
+col-[breakpoint]-[size]
+col-[breakpoint]-auto
+....
+
+== Offset
+
+....
+offset-[breakpoint]-[size]
+....
+
+Example:
+
+++++
+  <div class="container">
+    <div class="row">
+      <div class="col-4 border">
+        Column 1
+      </div>
+      <div class="col-4 offset-4 border">
+        Column 2
+      </div>
+    </div>
+  </div>
+++++

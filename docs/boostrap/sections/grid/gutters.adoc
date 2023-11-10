@@ -1,0 +1,11 @@
+= Gutters
+:url-docs: https://getbootstrap.com/docs/5.0/layout/gutters/
+
+....
+g[axis]-value
+....
+
+`axis`::
+
+* `x`: horizontal gutters
+* `y`: vertical gutters
