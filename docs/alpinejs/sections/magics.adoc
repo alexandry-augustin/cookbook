@@ -1,0 +1,20 @@
+= Magics
+
+`$el`:: {empty}
+
+`$refs`:: {empty}
+
+`$store`:: {empty}
+
+`$watch`:: {empty}
+
+`$dispatch`:: {empty}
+
+`$nextTick`:: {empty}
+
+`$root`:: {empty}
+
+`$data`:: {empty}
+
+`$id`:: {empty}
+

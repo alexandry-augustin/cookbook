@@ -1,71 +1,14 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="style.css">
 		<title>Alpine.js</title>
 	</head>
 
 	<body>
+        
     	<h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
     	
-    	<!-- Counter -->
-        <div x-data="{ count: 0 }">
-            <button x-on:click="count++">+</button>
-            <span x-text="count"></span>
-            <button x-on:click="count--">-</button>
-        </div>
-        
-        <!-- toggle -->
-        <div x-data="{ open: false }">
-            <button @click="open = ! open">Toggle</button>
-         
-            <div x-show="open" @click.outside="open = false">Contents...</div>
-        </div>
-    	
-    	<!-- Filtered Search -->
-    	<div
-            x-data="{
-                search: '',
-         
-                items: ['foo', 'bar', 'baz'],
-         
-                get filteredItems() {
-                    return this.items.filter(
-                        i => i.startsWith(this.search)
-                    )
-                }
-            }">
-            <input x-model="search" placeholder="Search...">
-         
-            <ul>
-                <template x-for="item in filteredItems" :key="item">
-                    <li x-text="item"></li>
-                </template>
-            </ul>
-        </div>
-        
-        <!-- For Loop -->
-        <ul x-data="{ colors: ['Red', 'Orange', 'Yellow'] }">
-            <template x-for="color in colors">
-                <li x-text="color"></li>
-            </template>
-        </ul>
-        
-        <div x-data="{ value: 50 }">
-            <label>Value: <span x-text="value"></span></label>
-            <div>
-                <button x-on:click="value+=10">+</button>
-                <input 
-                    x-model="value"
-                    type="range" 
-                    step="1" 
-                    min="0" 
-                    max="100" 
-                    style="width: 100%" />
-                <button x-on:click="value-=10">-</button>
-            <div>
-        </div>
-    	
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+	<script type='text/javascript' charset='utf-8' src='alpinejs.3.13.2.cdn.min.js'></script>
 	</body>
 </html> 

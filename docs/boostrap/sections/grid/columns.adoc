@@ -5,6 +5,9 @@ col-[breakpoint]-[size]
 col-[breakpoint]-auto
 ....
 
+NOTE: `col` with no `size` attributed is not restricted to the 12 columns system. 
+The widths simply fill the remaining space and wrap when the content is too big.
+
 == Offset
 
 ....

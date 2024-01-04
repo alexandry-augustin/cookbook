@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Alpine.js Select</title>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	</head>
+
+	<body>
+        
+        <div x-data="{ my_option: 'not selected' }">
+            <select x-model="my_option">
+                <option value="">-</option>
+                <option value="1">First</option>
+                <option value="2">Second</option>
+                <option value="3">Third</option>
+            </select>
+            <span x-text="my_option"></span>
+        </div>
+
+        <div x-data="{ my_option:'not selected' }">
+            <select @change="my_option = $event.target.value">
+                <option x-bind:value="">-</option>
+                <option x-bind:value="1">First</option>
+                <option x-bind:value="2">Second</option>
+                <option x-bind:value="3">Third</option>
+            </select>
+            <span x-text="my_option"></span>
+        </div>
+
+        <!-- <script type='text/javascript' charset='utf-8' src='alpinejs.3.13.2.cdn.min.js'></script> -->
+	</body>
+</html> 

@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Alpine.js Toggle</title>
+	</head>
+
+	<body>
+        
+        <div x-data="{ open: false }">
+            <button @click="open = ! open">Toggle</button>
+         
+            <div x-show="open" @click.outside="open = false">Contents...</div>
+        </div>
+    	
+	<script type='text/javascript' charset='utf-8' src='alpinejs.3.13.2.cdn.min.js'></script>
+	</body>
+</html> 

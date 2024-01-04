@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Alpine.js Range</title>
+	</head>
+
+	<body>
+        
+        <div x-data="{ value: 50 }">
+            <label>Value: <span x-text="value"></span></label>
+            <div>
+                <button x-on:click="value+=10">+</button>
+                <input 
+                    x-model="value"
+                    type="range" 
+                    step="1" 
+                    min="0" 
+                    max="100" 
+                    style="width: 100%" />
+                <button x-on:click="value-=10">-</button>
+            <div>
+        </div>
+    	
+	<script type='text/javascript' charset='utf-8' src='alpinejs.3.13.2.cdn.min.js'></script>
+	</body>
+</html> 

@@ -5,26 +5,6 @@
 	</head>
 
 	<body>
-		<div 
-			hx-get="https://dummyjson.com/products/1">
-			Click Me!
-		</div>
-
-		<button hx-get="https://dummyjson.com/products/1">
-			Click Me!
-			<img 
-				class="htmx-indicator" 
-				src="spinner.gif" 
-				alt="spinner"
-				style="width:15px;">
-		</button>
-
-		<div 
-			style="border:1px solid black;"
-			hx-get="https://dummyjson.com/products/1" 
-			hx-trigger="mouseenter once">
-			[hover here]
-		</div>
 
 		<!-- <input type="text" name="q"
 			hx-get="/trigger_delay"
@@ -34,12 +14,12 @@
 		>
 		<div id="search-results"></div> -->
 
-		<button hx-post="/foo" hx-target="#result">
+		<!-- <button hx-post="/foo" hx-target="#result">
 			Count Up
 		</button>
-		<output id="result"></output>
+		<output id="result"></output> -->
 		
-		<script src="https://demo.htmx.org"></script>
+		<!-- <script src="https://demo.htmx.org"></script> -->
         <script 
 			src="https://unpkg.com/htmx.org@1.9.6" 
 			integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" 

@@ -1,0 +1,71 @@
+= Directives
+
+// https://www.wittyprogramming.dev/articles/introduction-to-alpinejs/
+
+`x-on`:: {empty}
+`x-modelable`:: {empty}
+`x-transition`:: {empty}
+`x-effect`:: {empty}
+`x-ignore`:: {empty}
+`x-ref`:: {empty}
+`x-cloak`:: {empty}
+`x-teleport`:: {empty}
+`x-id`:: {empty}
+
+== Initialisation
+
+`x-data`:: {empty}
+`x-init`:: {empty}
+
+== Binding
+
+`x-model`:: Two-way binding
+`x-bind`:: One-way binding
+`x-text`:: One-way binding to the element's `innerText`
+`x-html`:: One-way binding to the element's `innerHTML`
+
+== Toggle Display
+
+`x-show`:: Toggles the display:none element's style depending on the expression's outcome
+`x-if`:: Completely removes the element from the DOM but has two significant constraints
+
+[NOTE]
+====
+[quote,https://www.wittyprogramming.dev/articles/introduction-to-alpinejs/]
+____
+Because the Alpine uses the real DOM and not a virtual, the first constraint is that the x-if attribute must be applied on a `<template></template>` tag. Consequently, the second constraint is that the `<template></template>` must have a single element root. The equivalent of the above x-show example using the x-if attribute is:
+
+[source,html]
+----
+<template x-if="login">
+    <div x-text="`welcome ${username}`"></div>
+</template>
+----
+____
+====
+
+== Loops
+
+`x-for`:: {empty}
+
+[source,html]
+----
+<template x-for="item in items" :key="item">
+    <div x-text="item"></div>
+</template>
+----
+
+[source,html]
+----
+<template x-for="item in items">
+    <div>
+        <template x-for="subItem in item.subItems">
+            <div x-text="subItem"></div>
+        </template>
+    </div>
+</template>
+----
+
+== Events
+
+`x-on:event` (or the alternative syntax `@:event`):: {empty}
