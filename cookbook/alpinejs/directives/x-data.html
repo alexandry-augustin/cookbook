@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>x-data</title>
+
+		<script type='text/javascript'>
+			function getData() {
+				return {
+				  message: 'Hello Alpine.js',
+				  output: '',
+				  showMessage() {
+					this.output = this.message;
+				  }
+				};
+			  }
+		</script>
+	</head>
+
+	<body>
+        
+		<div x-data="getData()">
+			<button @click="showMessage()">Reveal</button>
+			<div x-text="output"></div>
+		</div>
+
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>		
+	</body>
+</html> 

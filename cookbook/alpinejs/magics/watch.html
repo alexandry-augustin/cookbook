@@ -7,19 +7,42 @@
 
 	<body>
 
+		<h1>Initialisation</h1>
+
 		<div x-data="{ 
 			message: '', 
-			output: '', 
+			output_from_data: '', 
+			output_from_init: '', 
 
+			// automatically called
 			init() {
 				this.$watch('message', (value) => {
-					this.output = this.message;
+					this.output_from_data = this.message;
 				});
 			}
-		}">
+		}"
+		x-init="$watch('message', (value) => output_from_init = message)">
+		
+            <input type="text" x-model="message">
+
+			<div>Output from:</div>
+			<ul>
+				<li>x-data: <span x-text="output_from_data"></span></li>
+				<li>x-init: <span x-text="output_from_init"></span></li>
+			</ul>
+        </div>
+
+		<h1>Getting the Previous Value</h1>
+
+		<div 
+			x-data="{ 
+				message: '', 
+				output: ''
+			}"
+			x-init="$watch('message', (value, prev) => output = prev)">
             <input type="text" x-model="message">
          
-            <span x-text="output">
+            <div x-text="output"></div>
         </div>
     	
 		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
