@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>x-ref</title>
+	</head>
+
+	<body>
+
+		<div x-data>
+			<div x-ref="my_ref">Hello 👋🏾</div>
+			<button x-on:click="$refs.my_ref.innerText='Updated 👍🏾'">Update</button>
+			<button @click="$refs.my_ref.remove()">Delete</button>
+		</div>
+	
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
+	</body>
+</html> 

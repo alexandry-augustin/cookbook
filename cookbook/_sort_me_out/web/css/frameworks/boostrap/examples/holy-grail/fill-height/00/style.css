@@ -1,0 +1,8 @@
+html,body {
+  height: 100%;
+}
+
+.full-height { display: flex; flex-direction: column; height: 100%; }
+.fill-height { flex-grow: 1; width: 100%; }
+.doborder { border: 1px solid; border-color: #ddd; border-radius: 4px; }
+.controlsdiv { display: table; width: 100%; }

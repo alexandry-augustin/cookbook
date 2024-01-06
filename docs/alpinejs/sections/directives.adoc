@@ -2,12 +2,9 @@
 
 // https://www.wittyprogramming.dev/articles/introduction-to-alpinejs/
 
-`x-on`:: {empty}
 `x-modelable`:: {empty}
-`x-transition`:: {empty}
-`x-effect`:: {empty}
+`x-effect`:: (similar to `useEffect()` in React).
 `x-ignore`:: {empty}
-`x-ref`:: {empty}
 `x-cloak`:: {empty}
 `x-teleport`:: {empty}
 `x-id`:: {empty}
@@ -19,15 +16,18 @@
 
 == Binding
 
+Dynamically set HTML attributes on an element.
+
 `x-model`:: Two-way binding
-`x-bind`:: One-way binding
+`x-bind[:attribute_name]`:: One-way binding
 `x-text`:: One-way binding to the element's `innerText`
 `x-html`:: One-way binding to the element's `innerHTML`
 
 == Toggle Display
 
-`x-show`:: Toggles the display:none element's style depending on the expression's outcome
+`x-show`:: Toggles the `display:none` element's style depending on the expression's outcome
 `x-if`:: Completely removes the element from the DOM but has two significant constraints
+`x-transition`:: {empty}
 
 [NOTE]
 ====
@@ -68,4 +68,14 @@ ____
 
 == Events
 
-`x-on:event` (or the alternative syntax `@:event`):: {empty}
+`x-on:event`:: {empty}
+
+NOTE: `@` is a shorthand syntax `x-on:` (e.g. `@click` instead of `x-on:click`).
+
+== Accessor
+
+> "`x-ref` in combination with `$refs` is a useful utility for easily accessing DOM elements directly. 
+It's most useful as a replacement for APIs like `getElementById` and `querySelector`."
+-- https://www.alpinejs.dev/directives/ref
+
+`x-ref`:: {empty}

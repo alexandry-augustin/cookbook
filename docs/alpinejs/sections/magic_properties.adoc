@@ -1,4 +1,4 @@
-= Magics
+= Magic Properties
 
 `$el`:: {empty}
 

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Alpine.js</title>
+	</head>
+
+	<body>
+        
+    	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Alpine.js Fetch</title>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	</head>
+
+	<body>
+        
+        <div 
+			x-data="{
+				pokemon: null,
+			
+				getPokemon() {
+					fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+						.then((response) => response.json())
+						.then((data) => {
+							this.pokemon = data;
+							console.log(data);
+						});
+				}
+			}" 
+			x-init="getPokemon()">
+            <p x-text="pokemon.abilities[0].ability.name"></p>
+            <p x-text="pokemon.abilities[1].ability.name"></p>
+        </div>
+
+        <!-- <script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script> -->
+	</body>
+</html>
