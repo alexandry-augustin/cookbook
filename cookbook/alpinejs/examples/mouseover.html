@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Alpine.js Mouseover</title>
+	</head>
+
+	<body>
+        
+    	<div x-data="{open: false}">
+			<span @mouseover="open = true">HoverMe</span>
+			<div x-show="open" @mouseout="open = false">Content</div>
+		</div>
+
+    	<div x-data="{
+			hovered: false, 
+			message: 'HoverMe'
+		}">
+			<span @mouseover.away="message='Content'" x-text="message"></span>
+		</div>
+
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
+	</body>
+</html> 

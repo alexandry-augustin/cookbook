@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>x-effect</title>
+		<!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+	</head>
+
+	<body>
+
+		<div x-data="{ 
+			message: '',
+			output: '', 
+		}"
+		x-effect="output=message;">
+            <input type="text" x-model="message">
+			<div x-text="output"></div>
+        </div>
+    	
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
+	</body>
+</html> 

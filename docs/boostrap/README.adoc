@@ -28,9 +28,15 @@ include::./sections/breakpoints.adoc[leveloffset=+1]
 
 include::./sections/borders.adoc[leveloffset=+1]
 
+include::./sections/flex/index.adoc[leveloffset=+1]
+
 include::./sections/grid/index.adoc[leveloffset=+1]
 
 include::./sections/table/index.adoc[leveloffset=+1]
+
+include::./sections/sizing.adoc[leveloffset=+1]
+
+include::./sections/colours.adoc[leveloffset=+1]
 
 include::./sections/cards/index.adoc[leveloffset=+1]
 

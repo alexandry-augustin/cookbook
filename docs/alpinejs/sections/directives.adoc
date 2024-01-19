@@ -26,9 +26,7 @@ Dynamically set HTML attributes on an element.
 == Toggle Display
 
 `x-show`:: Toggles the `display:none` element's style depending on the expression's outcome
-`x-if`:: Completely removes the element from the DOM but has two significant constraints
-`x-transition`:: {empty}
-
+`x-if`:: Completely removes the element from the DOM but has two significant constraints +
 [NOTE]
 ====
 [quote,https://www.wittyprogramming.dev/articles/introduction-to-alpinejs/]
@@ -43,10 +41,13 @@ Because the Alpine uses the real DOM and not a virtual, the first constraint is 
 ----
 ____
 ====
+`x-transition`:: {empty}
 
 == Loops
 
-`x-for`:: {empty}
+`x-for`:: {empty} +
+NOTE: `x-for` MUST be declared on a `<template>` element.
+That `<template>` element MUST contain only one root element.
 
 [source,html]
 ----

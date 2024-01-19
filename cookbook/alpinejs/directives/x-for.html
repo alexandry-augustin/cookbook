@@ -5,12 +5,32 @@
 	</head>
 
 	<body>
+
+		<h1>Iterating a Range</h1>
+
+		<div x-data>
+			<template x-for="i in 3">
+				<div x-text="i"></div>
+			</template>
+		</div>
+
+		<h1>Without Values</h1>
         
-        <ul x-data="{ colors: ['Red', 'Orange', 'Yellow'] }">
+        <div x-data="{ colors: ['Red', 'Orange'] }">
             <template x-for="color in colors">
-                <li x-text="color"></li>
+                <div x-text="color"></div>
             </template>
-        </ul>
+        </div>
+
+		<h1>With Values</h1>
+
+		<div x-data="{ user: { name: 'Peter', age: 10 } }">
+			<template x-for="(value, index) in user">
+				<div>
+					<span x-text="index"></span>: <span x-text="value"></span>
+				</div>
+			</template>
+		</div>
     	
 	<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
 	</body>

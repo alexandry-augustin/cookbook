@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>x-init</title>
+	</head>
+
+	<body>
+
+		<h1>x-init</h1>
+        
+    	<div x-data="{ 
+				message: 'initial'
+			}"
+			x-init="message='overridden'">
+			<div x-text="message"></div>
+		</div>
+
+		<h1>init() method</h1>
+
+		<div x-data="{ 
+			message: 'initial', 
+
+			// automatically called
+			init() {
+				this.message = 'overridden';
+			}
+		}">
+		<div x-text="message"></div>
+
+		<h1>Combined</h1>
+
+		<p>When <b>x-init</b> and <b>init()</b> are both used, <b>init()</b> is first executed, then <b>x-init</b> is executed.</p>
+
+		<div x-data="{ 
+				message: 'initial', 
+
+				// automatically called
+				init() {
+					this.message = 'overridden';
+				}
+			}"
+			x-init="message+=' again'">
+			<div x-text="message"></div>
+
+	</div>
+    	
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
+	</body>
+</html> 

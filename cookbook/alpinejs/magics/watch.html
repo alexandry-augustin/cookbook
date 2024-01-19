@@ -39,7 +39,11 @@
 				message: '', 
 				output: ''
 			}"
-			x-init="$watch('message', (value, prev) => output = prev)">
+			x-init="$watch('message', (value, prev) => {
+				console.log(prev, value);
+
+				output = prev;
+			})">
             <input type="text" x-model="message">
          
             <div x-text="output"></div>

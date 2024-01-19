@@ -1,0 +1,27 @@
+= Flex
+:url-doc: https://getbootstrap.com/docs/5.0/utilities/flex/
+
+
+Enable flex behaviour:
+
+[source,html]
+----
+<div class="d-flex p-2">Content</div>
+----
+
+NOTE: Direct children elements are flex items.
+
+Responsive variations: 
+
+`.d-flex`:: {empty}
+`.d-inline-flex`:: {empty}
+`.d-sm-flex`:: {empty}
+`.d-sm-inline-flex`:: {empty}
+`.d-md-flex`:: {empty}
+`.d-md-inline-flex`:: {empty}
+`.d-lg-flex`:: {empty}
+`.d-lg-inline-flex`:: {empty}
+`.d-xl-flex`:: {empty}
+`.d-xl-inline-flex`:: {empty}
+`.d-xxl-flex`:: {empty}
+`.d-xxl-inline-flex`:: {empty}
