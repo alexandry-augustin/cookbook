@@ -1,5 +1,6 @@
 = htmx
 :toc: left
+:toclevels: 8
 :url-website: https://htmx.org/
 :url-docs: https://htmx.org/docs/
 :url-repo: https://github.com/bigskysoftware/htmx
@@ -36,73 +37,4 @@ Download https://unpkg.com/htmx.org/dist/htmx.min.js[htmx.min.js]
 npm install htmx.org
 ----
 
-== Requests
-
-`hx-get`:: Issues a GET request to the given URL
-`hx-post`:: Issues a POST request to the given URL
-`hx-put`:: Issues a PUT request to the given URL
-`hx-patch`:: Issues a PATCH request to the given URL
-`hx-delete`:: Issues a DELETE request to the given URL
-
-Each of these attributes takes a URL
-
-=== Example
-
-When a user clicks on this `div`, a PUT request is issued to the URL `/messages` and the response is loaded into the `div`.
-
-[source,html]
-----
-<div hx-get="/messages">
-    Click Me!
-</div>
-----
-
-== Triggers
-
-By default, requests are triggered by the "natural" event of an element:
-
-* `input`, `textarea` & `select` are triggered on the `change` event
-* `form` is triggered on the `submit` event
-* everything else is triggered by the `click` event
-
-If you want different behaviour you can use the `hx-trigger` attribute to specify which event will cause the request.
-
-=== Example
-
-[source,html]
-----
-<div 
-    hx-get="/mouse_entered" 
-    hx-trigger="mouseenter">
-    [Hover Mouse Here]
-</div>
-----
-
-`mouseenter`:: {empty}
-
-=== Trigger Modifiers
-
-Multiple triggers can be specified in the `hx-trigger` attribute, separated by commas.
-
-[source,html]
-----
-<div 
-    hx-get="/mouse_entered" 
-    hx-trigger="mouseenter once">
-    [Hover Mouse Here]
-</div>
-----
-
-`once`:: only issue a request once
-`changed`:: only issue a request if the value of the element has changed
-`delay:<time interval>`:: wait the given amount of time (e.g. `1s`) before issuing the request.  If the event triggers again, the countdown is reset.
-`throttle:<time interval>`:: wait the given amount of time (e.g. `1s`) before issuing the request.  Unlike `delay` if a new event occurs before the time limit is hit the event will be discarded, so the request will trigger at the end of the time period.
-`from:<CSS Selector>`:: listen for the event on a different element.  This can be used for things like keyboard shortcuts.
-
-== Targets
-
-`hx-target`:: {empty}
-
-== Boosting
-
-`hx-boost`:: {empty}
+include::./sections/directives/index.adoc[leveloffset=+1]

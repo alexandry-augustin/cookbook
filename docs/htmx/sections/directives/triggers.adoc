@@ -1,0 +1,81 @@
+= Triggers
+
+[comment]
+--
+By default, requests are triggered by the "natural" event of an element:
+
+* `input`, `textarea` & `select` are triggered on the `change` event
+* `form` is triggered on the `submit` event
+* everything else is triggered by the `click` event
+
+If you want different behaviour you can use the `hx-trigger` attribute to specify which event will cause the request.
+--
+
+`mouseenter`:: {empty}
+`change`:: (default for `<input>`, `<textarea>` and `<select>` elements)
+`submit`:: (default for `<form>` element)
+`click`:: {empty}
+
+== Examples
+
+[source,html]
+----
+<div 
+    hx-get="/mouse_entered" 
+    hx-trigger="mouseenter">
+    [Hover Mouse Here]
+</div>
+----
+
+== Multiple Triggers
+
+Multiple triggers can be specified in the `hx-trigger` attribute, separated by commas.
+
+=== Example
+
+[source,html]
+----
+<div hx-get="/news" hx-trigger="load, click delay:1s"></div>
+----
+
+This example will load `/news` immediately on page load, and then again with a delay of one second after each click.
+
+== Trigger Modifiers
+
+`once`:: only issue a request once
+`changed`:: only issue a request if the value of the element has changed
+`delay:<time interval>`:: wait the given amount of time (e.g. `1s`) before issuing the request.  If the event triggers again, the countdown is reset.
+`throttle:<time interval>`:: wait the given amount of time (e.g. `1s`) before issuing the request.  Unlike `delay` if a new event occurs before the time limit is hit the event will be discarded, so the request will trigger at the end of the time period.
+`from:<CSS Selector>`:: listen for the event on a different element.  This can be used for things like keyboard shortcuts.
+
+== Examples
+
+[source,html]
+----
+<div 
+    hx-get="/mouse_entered" 
+    hx-trigger="mouseenter once">
+    [Hover Mouse Here]
+</div>
+----
+
+[source,html]
+----            
+<input hx-trigger="change, click from:#btn" ... >
+<button type="button" id="btn"></button>
+----
+
+== Trigger Filters
+
+https://htmx.org/docs/#trigger-filters
+
+=== Examples
+
+[source,html]
+----
+<div hx-get="/clicked" hx-trigger="click[ctrlKey]">
+    Control Click Me
+</div>
+----
+
+Triggers only on a Control-Click of the element.

@@ -1,0 +1,20 @@
+= Requests
+
+`hx-get`:: Issues a GET request to the given URL
+`hx-post`:: Issues a POST request to the given URL
+`hx-put`:: Issues a PUT request to the given URL
+`hx-patch`:: Issues a PATCH request to the given URL
+`hx-delete`:: Issues a DELETE request to the given URL
+
+NOTE: Each of these attributes takes an URL.
+
+== Example
+
+[source,html]
+----
+<div hx-get="/messages">
+    Click Me!
+</div>
+----
+
+When a user clicks on this `div`, a GET request is issued to the URL `/messages` and the response is loaded into the `div`.

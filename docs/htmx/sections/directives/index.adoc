@@ -1,0 +1,24 @@
+= Directives
+
+include::./requests.adoc[leveloffset=+1]
+
+include::./triggers.adoc[leveloffset=+1]
+
+== Targets
+
+`hx-target`:: (the default target is the element that the `hx-get` is defined on)
+
+`hx-swap`::
+`innerHTML`::: Replace the inner HTML of the target element.
+`outerHTML`::: Replace the entire target element with the response.
+`beforebegin`::: Insert the response before the target element.
+`afterbegin`::: Insert the response before the first child of the target element.
+`beforeend`::: Insert the response after the last child of the target element.
+`afterend`::: Insert the response after the target element.
+`delete`::: Delete the target element regardless of the response.
+`none`::: Does not append the content from the response.
+
+
+== Boosting
+
+`hx-boost`:: {empty}
