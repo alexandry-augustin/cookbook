@@ -11,6 +11,30 @@ By default, requests are triggered by the "natural" event of an element:
 If you want different behaviour you can use the `hx-trigger` attribute to specify which event will cause the request.
 --
 
+[comment]
+--
+> "Consider a scenario where you want to update content based on the selected option in a dropdown, but the dropdown and the content are not in the same HTML element." -- https://medium.com/@thewilltejeda/unlocking-interactivity-with-htmxs-trigger-attribute-c892be020ba7
+
+[source,html]
+----
+<select id="options">
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <!-- other options -->
+</select>
+
+<div 
+  hx-get="/get-content"
+  hx-trigger="change from:#options"
+  hx-include="#options"    
+  hx-target="#content">
+</div>
+
+<div id="content"></div>
+----
+
+--
+
 `mouseenter`:: {empty}
 `change`:: (default for `<input>`, `<textarea>` and `<select>` elements)
 `submit`:: (default for `<form>` element)

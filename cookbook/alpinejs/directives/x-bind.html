@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>x-bind</title>
+        <style>
+            .red-text {
+                color: red;
+            }
+            </style>
+	</head>
+
+	<body>
+        
+        <h3>Bind to Class</h3>
+
+        <div x-data="{ open: false }">
+			<button x-on:click="open=!open">Toggle</button>
+		 
+			<!-- <span x-text="open"></span> -->
+			<span :class="open ? '' : 'red-text'">
+				Contents
+            </span>
+		</div>
+
+        <div x-data="{ flag: true }">		 
+			<span @mouseover="flag=!flag" @mouseout="flag=!flag" :class="flag ? '' : 'red-text'">
+				HoverMe
+            </span>
+		</div>
+
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>		
+	</body>
+</html> 

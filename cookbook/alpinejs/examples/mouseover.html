@@ -6,17 +6,21 @@
 
 	<body>
         
-    	<div x-data="{open: false}">
+		<h3>@mouseover and @mouseout</h3>
+    	
+		<div x-data="{open: false}">
 			<span @mouseover="open = true">HoverMe</span>
 			<div x-show="open" @mouseout="open = false">Content</div>
 		</div>
 
+		<h3>[FIXME] @mouseover.away</h3>
+<!-- 
     	<div x-data="{
 			hovered: false, 
 			message: 'HoverMe'
 		}">
 			<span @mouseover.away="message='Content'" x-text="message"></span>
-		</div>
+		</div> -->
 
 		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
 	</body>
