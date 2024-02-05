@@ -1,4 +1,5 @@
 = Boostrap 5
+:toc: left
 // :stylesheet: bootstrap.min.css
 :url-website: https://getbootstrap.com/
 :url-docs: https://getbootstrap.com/docs/
