@@ -23,6 +23,6 @@
 </html>
 ----
 
-include::./sections/core/index.adoc[leveloffset=+1]
-
 include::./sections/pyodide.adoc[leveloffset=+1]
+
+include::./sections/core/index.adoc[leveloffset=+1]

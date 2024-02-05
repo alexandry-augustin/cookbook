@@ -1,12 +1,4 @@
-== Core
-
-== `<py-script>`
-
-DEPRECATED
-
-== `<mpy-script>`
-
-DEPRECATED
+= Core
 
 == `<script>`
 
@@ -17,19 +9,45 @@ DEPRECATED
     <!-- ... -->
 
     <body>
-        <script 
-            type="TYPE" 
-            src="url/to/script.py" 
-            target="#target-id"
-            terminal>
-        </script>
+        <script type="TYPE" ...></script>
     </body>
 </html>
 ----
 
-`type`:: Python implementation
+`type`:: {empty}
 `py`::: CPython
 `mpy`::: MicroPython
+`py-editor`::: CPython REPL
+`mpy-editor`::: MicroPython REPL
+
+[source,html,title=""]
+----
+<script 
+    type="py" 
+    src="url/to/script.py" 
+    config="url/to/config.toml" 
+    target="#target-id"
+    terminal
+    worker
+    async>
+</script>
+----
+
+[source,html,title="py-editor"]
+----
+<script 
+    type="py-editor" 
+    env="env_name">
+</script>
+----
+
+== `<py-script>`
+
+DEPRECATED
+
+== `<mpy-script>`
+
+DEPRECATED
 
 == `<py-config>`
 
@@ -39,3 +57,9 @@ DEPRECATED
     package = ['package_name']
 </py-config>
 ----
+
+== `<py-repl>`
+
+DEPRECATED
+
+NOTE: Replaced by `py-editor`.
