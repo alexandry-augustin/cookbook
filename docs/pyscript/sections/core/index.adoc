@@ -1,0 +1,41 @@
+== Core
+
+== `<py-script>`
+
+DEPRECATED
+
+== `<mpy-script>`
+
+DEPRECATED
+
+== `<script>`
+
+[source,html]
+----
+<html>
+    
+    <!-- ... -->
+
+    <body>
+        <script 
+            type="TYPE" 
+            src="url/to/script.py" 
+            target="#target-id"
+            terminal>
+        </script>
+    </body>
+</html>
+----
+
+`type`:: Python implementation
+`py`::: CPython
+`mpy`::: MicroPython
+
+== `<py-config>`
+
+[source,html]
+----
+<py-config>
+    package = ['package_name']
+</py-config>
+----

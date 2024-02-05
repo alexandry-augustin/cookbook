@@ -1,9 +1,7 @@
 = Implementations
 
-== CPython
+include::./cpython.adoc[leveloffset=+1]
 
-Reference
+include::./pypy.adoc[leveloffset=+1]
 
-== PyPy
-
-JIT
+include::./micropython.adoc[leveloffset=+1]

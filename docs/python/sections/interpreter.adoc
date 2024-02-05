@@ -1,0 +1,18 @@
+= Interpreter
+
+[listing,bash]
+....
+python [flags] filename.py
+....
+
+== Flags
+
+`-c cmd`:: {empty}
+`-W ignore`:: ignores warnings
+
+== REPL
+
+[listing,bash]
+....
+python -i filename.py
+....

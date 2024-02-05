@@ -1,25 +1,8 @@
 = Python
+:toc: left
 
-== Usage
+include::./sections/interpreter.adoc[leveloffset=+1]
 
-[listing,bash]
-....
-python [flags] filename.py
-....
-
-== Flags
-
-* `-c cmd`: 
-
-* `-W ignore`: ignores warnings
-
-== REPL
-
-[listing,bash]
-....
-python -i filename.py
-....
-
-include::./sections/annotations.adoc[leveloffset=+1]
+include::./sections/core/index.adoc[leveloffset=+1]
 
 include::./sections/implementations/index.adoc[leveloffset=+1]

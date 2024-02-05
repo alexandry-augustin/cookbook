@@ -1,0 +1,8 @@
+= MicroPython
+:url-website: https://micropython.org/
+:url-wiki: https://en.wikipedia.org/wiki/MicroPython
+:url-repo: https://github.com/micropython/micropython
+
+{url-website}[[website\]]
+{url-wiki}[[wiki\]]
+{url-repo}[[repo\]]

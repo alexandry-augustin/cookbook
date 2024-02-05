@@ -1,0 +1,5 @@
+= Core
+
+include::./classes.adoc[leveloffset=+1]
+
+include::./annotations.adoc[leveloffset=+1]
