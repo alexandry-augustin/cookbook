@@ -7,3 +7,5 @@ include::./triggers.adoc[leveloffset=+1]
 include::./targets.adoc[leveloffset=+1]
 
 include::./boosting.adoc[leveloffset=+1]
+
+include::./out-of-band-responses.adoc[leveloffset=+1]
