@@ -14,27 +14,60 @@
     crossorigin="anonymous">
   <link 
     rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
   <main>
 
-    <div class="container-fluid fixed-top px-0">
-      <nav class="d-flex justify-content-start align-items-center pt-3 bg-dark text-light">
-          <div class="h4"><a class="nav-link active" href="#"><i class="bi bi-list"></i></a></div>
+    <!-- Top NavBar -->
+    <div class="container-fluid fixed-top px-0 shadow-lg">
+      <nav class="d-flex justify-content-start align-items-center pb-3 bg-dark text-light">
+          <div class="h4">
+            <!-- <a 
+              class="nav-link active" 
+              href="#" >
+                <i class="bi bi-list"></i>
+            </a> -->
+            <button 
+              class="btn btn-link" 
+              type="button" 
+              data-bs-toggle="offcanvas" 
+              data-bs-target="#offcanvasExample" 
+              aria-controls="offcanvasExample">
+                <i class="bi bi-list"></i>
+            </button>
+            <span>AppName</span>
+          </div>
       </nav>
     </div>
+    
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Title</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>Content</div>
+      </div>
+    </div>
 
+    <!-- Main Content -->
+    <div>
+      <div class="pt-5">Content</div>
+      <button class="btn btn-dark rounded-circle"><i class="bi bi-plus-lg"></i></button>
+  </div>
 
-
-
-
-    <div class="container-fluid fixed-bottom px-0">
+    <!-- Bottom NavBar -->
+    <div class="container-fluid fixed-bottom px-0 shadow-lg">
       <nav class="d-flex justify-content-around align-items-center pt-3 bg-dark text-light">
-          <div class="h4"><a class="nav-link active" href="#"><i class="bi bi-house-door"></i></a></div>
-          <div class="h4"><a class="nav-link" href="#"><i class="bi bi-arrow-clockwise"></i></a></div>
+          <div class="h4"><a class="nav-link active" href="#"><i class="bi bi-house-door-fill"></i></a></div>
+          <div class="h4"><a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a></div>
+          <div class="h4"><a class="nav-link" href="#"><i class="bi bi-gear-fill"></i></a></div>
+          <div class="h4"><a class="nav-link" href="#"><i class="bi bi-chat-dots-fill"></i></a></div>
+          <div class="h4"><a class="nav-link" href="#"><i class="bi bi-bookmarks-fill"></i></a></div>
       </nav>
     </div>
 
