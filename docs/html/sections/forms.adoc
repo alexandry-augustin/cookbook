@@ -35,6 +35,12 @@ NOTE: If the action attribute is omitted, the action is set to the current page.
 "The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes."
 -- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
 
+* `id`: 
+* `name`: Submitted with the form as part of a name/value pair. Only form elements with a name attribute will have their values passed when submitting a form.
+* `value`: default value
+* `placeholder`: hint
+* `required`: 
+* `min`, `max`: 
 * `type`: 
 ** `"checkbox"`: 
 ** `"color"`: 
@@ -53,13 +59,6 @@ NOTE: If the action attribute is omitted, the action is set to the current page.
 ** `"time"`: 
 ** `"url"`: 
 ** `"week"`: 
-* `name`: 
-* `id`: 
-* `name`: Submitted with the form as part of a name/value pair. Only form elements with a name attribute will have their values passed when submitting a form.
-* `value`: default value
-* `placeholder`: hint
-* `required`: 
-* `min`, `max`: 
 
 === `<textarea>`
 

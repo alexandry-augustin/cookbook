@@ -1,0 +1,34 @@
+<!-- https://htmx.org/examples/inline-validation/ -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTMX Form Validation</title>
+	</head>
+
+	<body>
+
+		<h3>Signup Form</h3>
+		<form hx-post="http://127.0.0.1:8000/form">
+		  <div hx-target="this" hx-swap="outerHTML">
+			<label>Email Address</label>
+			<input name="email" hx-post="http://127.0.0.1:8000/form/email" hx-indicator="#ind">
+			<img id="ind" src="/img/bars.svg" class="htmx-indicator"/>
+		  </div>
+		  <div class="form-group">
+			<label>First Name</label>
+			<input type="text" class="form-control" name="firstName">
+		  </div>
+		  <div class="form-group">
+			<label>Last Name</label>
+			<input type="text" class="form-control" name="lastName">
+		  </div>
+		  <button class="btn btn-default">Submit</button>
+		</form>
+
+        <script 
+			src="https://unpkg.com/htmx.org@1.9.6" 
+			integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" 
+			crossorigin="anonymous"></script>
+	</body>
+</html> 

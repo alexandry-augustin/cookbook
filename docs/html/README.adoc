@@ -5,56 +5,15 @@ https://www.javatpoint.com/html-tags
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
-* `<div>`: 
-* `<span>`: 
+[source,html]
+----
+<tag_name attribute_name= ></tag_name>
+----
 
-== Semantic Elements
+include::./sections/tags.adoc[leveloffset=+1]
 
-> "A semantic Web allows data to be shared and reused across applications, enterprises, and communities." -- W3C
+include::./sections/attributes.adoc[leveloffset=+1]
 
-Examples:
-
-* non-semantic elements: `<div>` or `<span>`
-* semantic elements: `<form>`, `<table>`, or `<article>`
-
-image:./res/semantic_elts.png[]
-
-* `<article>`
-
-* `<aside>`
-
-* `<details>`
-
-* `<figcaption>`
-
-* `<figure>`
-
-* `<footer>`
-
-* `<header>`
-
-* `<main>`
-
-* `<mark>`
-
-* `<nav>`
-
-* `<section>`
-
-* `<summary>`
-
-* `<time>`
-
-== Tags
-
-.Tags
-[%header,separator=,,cols="<m,<m,<,<"]
-,===
-include::./res/tags.csv[]
-,===
-
-== HTML5 Entity Names
-
-https://www.w3schools.com/charsets/ref_html_entities_r.asp
+include::./sections/entity_names.adoc[leveloffset=+1]
 
 include::./sections/forms.adoc[leveloffset=+1]
