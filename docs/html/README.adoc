@@ -1,14 +1,10 @@
 = HTML
 :toc: left
 
-https://www.javatpoint.com/html-tags
+.Examplar HTML Element
+image::./res/element.svg[width=350]
 
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-
-[source,html]
-----
-<tag_name attribute_name= ></tag_name>
-----
+include::./sections/elements.adoc[leveloffset=+1]
 
 include::./sections/tags.adoc[leveloffset=+1]
 

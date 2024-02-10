@@ -1,37 +1,4 @@
 = Tags
 
-`<div>`:: {empty}
-`<span>`:: {empty}
-
-== Semantic Elements
-
-> "A semantic Web allows data to be shared and reused across applications, enterprises, and communities." -- W3C
-
-Examples:
-
-non-semantic elements:: `<div>` or `<span>`
-semantic elements:: `<form>`, `<table>`, or `<article>`
-
-image:./res/semantic_elts.png[]
-
-`<article>`:: {empty}
-`<aside>`:: {empty}
-`<details>`:: {empty}
-`<figcaption>`:: {empty}
-`<figure>`:: {empty}
-`<footer>`:: {empty}
-`<header>`:: {empty}
-`<main>`:: {empty}
-`<mark>`:: {empty}
-`<nav>`:: {empty}
-`<section>`:: {empty}
-`<summary>`:: {empty}
-`<time>`:: {empty}
-
-== Tags
-
-.Tags
-[%header,separator=,,cols="<m,<m,<,<"]
-,===
-include::../res/tags.csv[]
-,===
+> "Tags are used to delimit the start and end of elements in the markup."
+-- https://en.wikipedia.org/wiki/HTML_element
