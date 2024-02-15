@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Alpine.js</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" 
+    		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	</head>
+
+	<body>
+		<div>
+			<div x-data="
+				{
+					rating: 0,
+					hoverRating: 0,
+					ratings: [
+						{ 
+							'amount': 1, 
+							'label':'Terrible'
+						}, 
+						{
+							'amount': 2, 
+							'label':'Bad'
+						}, 
+						{
+							'amount': 3, 
+							'label':'Okay'
+						}, 
+						{
+							'amount': 4, 
+							'label':'Good'
+						}, 
+						{
+							'amount': 5, 
+							'label':'Great'
+						}
+					],
+					rate(amount) {
+						if (this.rating == amount) 
+							this.rating = 0;
+						else 
+							this.rating = amount;
+					},
+					currentLabel() {
+						let r = this.rating;
+						if (this.hoverRating != this.rating) 
+							r = this.hoverRating;
+						let i = this.ratings.findIndex(e => e.amount == r);
+						if (i >=0) 
+							return this.ratings[i].label;
+						else 
+							return '';
+					}
+				}">
+				<div>
+					<template 
+						x-for="(star, index) in ratings" 
+						:key="index">
+						<button 
+							@click="rate(star.amount)" 
+							@mouseover="hoverRating = star.amount" 
+							@mouseleave="hoverRating = rating"
+							aria-hidden="true"
+							:title="star.label"
+							class="rounded-sm text-gray-400 fill-current focus:outline-none focus:shadow-outline p-1 w-12 m-0 cursor-pointer"
+							:class="{'text-gray-600': hoverRating >= star.amount, 'text-yellow-400': rating >= star.amount && hoverRating >= star.amount}">
+							<i class="bi bi-star-fill"></i>
+						</button>
+					</template>
+				</div>
+
+				<div>
+					<template x-if="rating || hoverRating">
+							<p x-text="currentLabel()"></p>
+					</template>
+					<template x-if="!rating && !hoverRating">
+							<p>Please Rate!</p>
+					</template>
+				</div>
+			
+			</div>
+		</div>
+		
+		<script type='text/javascript' charset='utf-8' src='../../alpinejs.3.13.2.cdn.min.js'></script>
+	</body>
+</html> 
