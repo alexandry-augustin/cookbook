@@ -11,3 +11,5 @@
 `afterend`::: Insert the response after the target element
 `delete`::: Delete the target element regardless of the response
 `none`::: Does not append the content from the response
+
+`hx-preserve`:: Keep an element unchanged during HTML replacement

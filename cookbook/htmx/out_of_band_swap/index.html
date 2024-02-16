@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Out of Band Swap</title>
+	</head>
+
+	<body>
+		
+		<button 
+			style="margin-bottom: 100px;"
+			hx-get="http://127.0.0.1:8000/hx_swap_oob" 
+			hx-trigger="click">Update</button>
+
+		<div id="element-one" style="border-style: dotted; margin-bottom: 100px;">Element One</div>
+		<div id="element-two" style="border-style: dashed;">Element Two</div>
+		
+        <script 
+			src="https://unpkg.com/htmx.org@1.9.6" 
+			integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" 
+			crossorigin="anonymous"></script>
+	</body>
+</html> 

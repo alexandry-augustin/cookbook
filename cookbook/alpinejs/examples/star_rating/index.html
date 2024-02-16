@@ -69,7 +69,7 @@
 							@mouseleave="hoverRating = rating"
 							aria-hidden="true"
 							:title="star.label"
-							class="bg-gray-100 rounded-sm text-gray-400 fill-current focus:outline-none focus:shadow-outline p-1 w-6 m-0 cursor-pointer"
+							class="text-gray-400 w-6"
 							:class="
 							{
 								'text-gray-600': hoverRating >= star.amount, 
@@ -85,7 +85,7 @@
 						<span x-text="currentLabel()"></span>
 					</template>
 					<template x-if="!rating && !hoverRating">
-						<span>Not Rated</span>
+						<span hidden>Not Rated</span>
 					</template>
 				</span>
 			
