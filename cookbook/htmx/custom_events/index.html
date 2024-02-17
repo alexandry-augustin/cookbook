@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Custom Events</title>
+	</head>
+
+	<!-- <body onload="htmx.trigger(htmx.find('body'), 'my_event')"> -->
+	<body>
+		
+		<button 
+			style="margin-bottom: 100px;"
+			hx-get="http://127.0.0.1:8000/trigger_custom_event" 
+			hx-trigger="click"
+			hx-swap="outerHTML">Notify</button>
+
+		<div 
+			style="border-style: dotted; margin-bottom: 100px;" 
+			hx-get="http://127.0.0.1:8000/update_element_one"
+			hx-trigger="my_event from:body"
+			hx-swap="innerHTML">Element One</div>
+		<div 
+			style="border-style: dashed;" 
+			hx-get="http://127.0.0.1:8000/update_element_two"
+			hx-trigger="my_event from:body"
+			hx-swap="innerHTML">Element Two</div>
+
+		<script type="text/javascript">
+
+			// document.body.onload = function() {
+			// 	htmx.trigger(htmx.find('body'), 'my_event')
+			// };
+
+			document.body.addEventListener("my_event", function(e) {
+				alert("Event triggered");
+				// alert(e.detail.value);
+			})
+		</script>
+		
+        <script 
+			src="https://unpkg.com/htmx.org@1.9.6" 
+			integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" 
+			crossorigin="anonymous"></script>
+	</body>
+</html> 
