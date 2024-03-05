@@ -1,0 +1,13 @@
+= Svelte
+:toc: left
+:url-website: https://svelte.dev/
+:url-wiki: https://en.wikipedia.org/wiki/Svelte
+:url-repo: https://github.com/sveltejs/svelte
+
+{url-website}[[website\]]
+{url-wiki}[[wiki\]]
+{url-repo}[[repo\]]
+
+include::./sections/sveltekit.adoc[leveloffset=+1]
+
+include::./sections/elderjs.adoc[leveloffset=+1]

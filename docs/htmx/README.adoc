@@ -9,6 +9,11 @@
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
 
+Alternatives:
+
+* https://unpoly.com/[Unpoly]
+* https://hotwired.dev/[Hotwire]
+
 == Installation
 
 == CDN

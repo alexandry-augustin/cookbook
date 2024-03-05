@@ -4,21 +4,38 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Alpine.js</title>
-		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="stylesheet" 
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
 			crossorigin="anonymous">
 		<link rel="stylesheet" 
     		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+		<style>
+			.star-button {
+				border: none;
+				background: none;
+				padding: 6px;
+			}
+			.star-colour-empty {
+				color: #9CA3AF;
+				}
+
+			.star-colour-hover {
+				color: #4B5563;
+				}
+
+			.star-colour-fill {
+				color: #FACC15;
+				}
+		</style>
 	</head>
 
 	<body>
 		<div>
 			<div x-data="
 				{
-					rating: 0,
-					hoverRating: 0,
+					rating: 3,
+					hoverRating: 3,
 					ratings: [
 						{ 
 							'amount': 1, 
@@ -69,11 +86,11 @@
 							@mouseleave="hoverRating = rating"
 							aria-hidden="true"
 							:title="star.label"
-							class="text-gray-400 w-6"
+							class="star-button star-colour-empty"
 							:class="
 							{
-								'text-gray-600': hoverRating >= star.amount, 
-								'text-yellow-400': rating >= star.amount && hoverRating >= star.amount
+								'star-colour-hover': hoverRating >= star.amount, 
+								'star-colour-fill': rating >= star.amount && hoverRating >= star.amount
 							}">
 							<i class="bi bi-star-fill"></i>
 						</button>

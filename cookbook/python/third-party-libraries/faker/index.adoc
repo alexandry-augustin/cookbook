@@ -1,0 +1,43 @@
+= Faker
+:url-docs: https://faker.readthedocs.io/en/master/
+
+{url-docs}[[docs\]]
+
+== Installation
+
+[source,bash]
+----
+python -m pip install Faker
+----
+
+== Standard Providers
+
+[source,python]
+----
+faker.providers
+faker.providers.address
+faker.providers.automotive
+faker.providers.bank
+faker.providers.barcode
+faker.providers.color
+faker.providers.company
+faker.providers.credit_card
+faker.providers.currency
+faker.providers.date_time
+faker.providers.emoji
+faker.providers.file
+faker.providers.geo
+faker.providers.internet
+faker.providers.isbn
+faker.providers.job
+faker.providers.lorem
+faker.providers.misc
+faker.providers.passport
+faker.providers.person
+faker.providers.phone_number
+faker.providers.profile
+faker.providers.python
+faker.providers.sbn
+faker.providers.ssn
+faker.providers.user_agent
+----

@@ -1,6 +1,7 @@
 = Syntactically Awesome Style Sheets (SASS)
 :url-website: https://sass-lang.com/
 :url-repo: https://github.com/sass/sass
+:url-dart-sass: https://sass-lang.com/dart-sass/
 
 {url-website}[[website\]] 
 {url-repo}[[github\]]
@@ -10,12 +11,46 @@
 [source,bash]
 ----
 sudo apt-get install sass
+sudo dnf install rubygem-sass
 npm install -g sass
 ----
 
+[source,bash]
+----
+sudo dnf install sassc
+----
+
+== Usage
+
+`-i`, `--interactive`:: Run an interactive SassScript shell.
+
+....
+>> $color: #F9D4C1
+#f9d4c1
+>> darken($color, 3%)
+#f8cab3
+>> lighten(#123, 60%)
+#99bbdd
+>> 2px + 2px
+4px
+>> change-color(#ff0000, $alpha: 0.5)
+rgba(255, 0, 0, 0.5)
+>> append-selector("p, div, span", ".bar")
+'append-selector("p, div, span", ".bar")'
+....
+
+`-I PATH`, `--load-path PATH`:: Specify a Sass import path.
+
 == Compile
 
-compile entire directory "scss" into "css"
+Compile single file:
+
+[source,bash]
+----
+sass filename.scss
+----
+
+Compile entire directory `scss` into `css`:
 
 [source,bash]
 ----

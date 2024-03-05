@@ -1,6 +1,7 @@
 = Tailwindcss
 :toc: left
 :url-website: https://tailwindcss.com/
+:url-docs: 
 :url-repo: https://github.com/tailwindlabs/tailwindcss
 
 

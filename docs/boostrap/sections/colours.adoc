@@ -1,2 +1,6 @@
 = Colours
-:url-doc: https://getbootstrap.com/docs/5.0/utilities/colors/
+:url-docs: https://getbootstrap.com/docs/5.0/utilities/colors/
+
+{url-docs}[docs]
+
+https://getbootstrap.com/docs/5.0/customize/color/

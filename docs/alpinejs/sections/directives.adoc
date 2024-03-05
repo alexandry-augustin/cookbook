@@ -18,10 +18,13 @@
 
 Dynamically set HTML attributes on an element.
 
-`x-model`:: Two-way binding
+* One-way: 
 `x-bind[:attribute_name]`:: One-way binding
 `x-text`:: One-way binding to the element's `innerText`
 `x-html`:: One-way binding to the element's `innerHTML`
+
+* Two-way: 
+`x-model`:: Two-way binding
 
 == Toggle Display
 
