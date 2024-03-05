@@ -2,9 +2,10 @@
 
 == Component Libraries
 
-* Boostrap
+* Bootstrap
 * Foundation
 * Bulma
+* Material Design Lite
 
 == Utility Libraries
 
@@ -12,5 +13,6 @@
 
 == Others
 
+* MUI
 * Materialize
 * Pure.css

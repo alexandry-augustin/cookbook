@@ -1,0 +1,6 @@
+= Pure
+:url-website: https://purecss.io/
+:url-repo: https://github.com/pure-css/pure/
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
