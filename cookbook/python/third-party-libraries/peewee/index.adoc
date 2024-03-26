@@ -1,0 +1,7 @@
+= Peewee
+:url-docs: http://docs.peewee-orm.com/en/latest/
+:url-repo: https://github.com/coleifer/peewee
+
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+

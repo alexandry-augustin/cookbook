@@ -1,5 +1,7 @@
 import time
 
+# ---
+
 def timer(func):
     def wrapper():
 
@@ -13,6 +15,8 @@ def timer(func):
 @timer
 def run():
     time.sleep(2)
+
+# ---
 
 def f(func):
     def wrapper(*args, **kwargs):
@@ -28,6 +32,8 @@ def f(func):
 @f
 def add(x, y):
     return x + y
+
+# ---
 
 if __name__ == '__main__':
 

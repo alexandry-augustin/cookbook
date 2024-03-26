@@ -1,28 +1,41 @@
 import csv
-#----------------------------------------------------------
-def f_00():
-	"""
-		read
-	"""
-	with open('input.csv', 'rb') as csvfile:
-		reader=csv.reader(csvfile, delimiter=',', quotechar='|')
-		for row in reader: #row is always of type string
-#			print ', '.join(row)
-			print row
-#----------------------------------------------------------
-def f_01():
-	"""
-		read
-	"""
-	with open('input.csv', 'rb') as csvfile:
-		reader=csv.reader(csvfile, delimiter=',', quotechar='|')
-		#next(reader, None) #skip header
-		row=reader.next()
-		print row
-		row=reader.next()
-		print row
+
+def read_00():
+
+	with open('input.csv', 'r') as csvfile:
+
+		reader = csv.reader(csvfile, delimiter=',', quotechar='|')
+
+		for row in reader: 
+			# `row` is always of type string
+
+#			print(', '.join(row))
+			print(row)
+
+def read_01():
+
+	with open('input.csv', 'r') as csvfile:
+
+		reader = csv.reader(csvfile, delimiter=',', quotechar='|')
+
+		# For python 2.x, use reader.next() instead of next(reader)
+		header = next(reader, None)
+		print(header)
+		row = next(reader)
+		print(row)
+		row = next(reader)
+		print(row)
 		for row in reader:
-			print row
-#----------------------------------------------------------
+			print(row)
+
+def write():
+
+	with open('output.csv', 'w') as csvfile:
+
+		writer = csv.writer(csvfile, delimiter=';', quotechar='|')
+
+		writer.writerow(['First row', 'Foo', 'Bar', 'Baz'])
+		writer.writerow(['Second row', 'A', 'B', 'C', '"Testing"', 'Here\'s a quote'])
+
 if __name__ == '__main__':
-	f_00()
+	write()
