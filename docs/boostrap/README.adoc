@@ -35,6 +35,8 @@ include::./sections/grid/index.adoc[leveloffset=+1]
 
 include::./sections/table/index.adoc[leveloffset=+1]
 
+include::./sections/font_size.adoc[leveloffset=+1]
+
 include::./sections/sizing.adoc[leveloffset=+1]
 
 include::./sections/colours.adoc[leveloffset=+1]

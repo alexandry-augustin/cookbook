@@ -20,6 +20,7 @@ strings()
 
 	var='abc'	
 	echo $var	
+	echo "${var}_${var}"
 
 	#concatenation
 	a="one"

@@ -27,7 +27,7 @@
 - `top`
 - `bottom`
 
-== `text-align``
+== `text-align`
 
 [source,css]
 ----
