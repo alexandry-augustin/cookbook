@@ -3,11 +3,13 @@ import calendar
 import datetime
 
 def epoch():
-	print int(time.time()) #current epoch time
-	print time.strftime('%d.%m.%Y %H:%M:%S', time.localtime(1347517370))
-	print int(time.mktime(time.strptime('29.08.2011 11:05:02', '%d.%m.%Y %H:%M:%S')))
+
+	print(int(time.time())) #current epoch time
+	print(time.strftime('%d.%m.%Y %H:%M:%S', time.localtime(1347517370)))
+	print(int(time.mktime(time.strptime('29.08.2011 11:05:02', '%d.%m.%Y %H:%M:%S'))))
 
 def misc():
+
 	time.time() #Number of ticks since 12:00am, January 1, 1970 (epoch)
 	time.localtime(time.time())
 	time.asctime(time.localtime(time.time()))
@@ -37,5 +39,6 @@ def misc():
 	print('waking')
 
 if __name__=='__main__':
+	
 	misc()
 	epoch()

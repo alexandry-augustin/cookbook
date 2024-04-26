@@ -10,7 +10,38 @@
 python -m pip install Faker
 ----
 
-== Standard Providers
+== Usage
+
+[source,python]
+----
+from faker import Faker
+
+fake = Faker()
+    
+fake.name()
+fake.address()
+----
+
+== Providers
+
+[quote,https://faker.readthedocs.io/en/master/]
+____
+Each of the generator properties (like `name`, `address`, and `lorem`) are called “fake”. 
+A faker generator has many of them, packaged in “providers”.
+____
+
+[source,python]
+----
+from faker import Faker
+from faker.providers import internet
+
+fake = Faker()
+fake.add_provider(internet)
+
+fake.ipv4_private()
+----
+
+=== Standard Providers
 
 [source,python]
 ----
