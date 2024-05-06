@@ -1,0 +1,9 @@
+= `http.serve`
+
+[source,bash]
+----
+python3 -m http.server [--cgi] [-d|--directory DIRECTORY] [-b|--bind ADDRESS] [PORT] 
+----
+
+`--cgi`:: run as CGI server
+ADDRESS:: Default `0.0.0.0`
