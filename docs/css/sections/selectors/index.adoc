@@ -1,0 +1,94 @@
+= Selectors
+
+== Element
+
+E.g. `div`, `h1`, `strong`, `header`, `*` (all elements)
+
+[source,css]
+----
+element-name
+{
+    property: value;
+    property: value;
+}
+----
+
+[source,html]
+----
+<element-name>
+    ...
+</element-name>
+----
+
+== Class
+
+[source,css]
+----
+.class-name-1
+{
+    property: value;
+    property: value;
+}
+----
+
+[source,html]
+----
+<h1 class="class-name-1 class-name-2">
+    ...
+</h1>
+----
+
+== ID
+
+[source,css]
+----
+#id-name
+{
+    property: value;
+    property: value;
+}
+----
+
+[source,html]
+----
+<h1 id="id-name">
+    ...
+</h1>
+----
+
+== Attribute Selectors
+
+https://css-tricks.com/attribute-selectors/
+
+[source,css]
+----
+[rel=external] { }/*exact match*/
+[rel*=external] { }/**/
+[rel^=external] { }/**/
+[rel$=external] { }/**/
+[rel~=external] { }/**/
+[rel|=external] { }/**/
+[title=one][rel^=external] { }/*multiple matches*/
+----
+
+=== Example 1
+
+Select based on `rel` attribute as well
+
+[source,html]
+----
+<h2 id="title" class="magic" rel="friend">John Doe</h2>
+----
+
+[source,css]
+----
+h2[rel="friend"]
+{
+}
+----
+
+include::./combinators.adoc[leveloffset=+1]
+
+include::./pseudo-classes.adoc[leveloffset=+1]
+
+== `*::before`, `*::after`

@@ -1,0 +1,21 @@
+= Pseudo-classes
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+[quote,https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes]
+____
+Note: In contrast to pseudo-classes, pseudo-elements can be used to style a specific part of an element.
+____
+
+[source,css]
+----
+*:pseudo-classes {
+  ...
+}
+----
+
+
+`:not()`
+`:hover`
+`:visited`
+`:checked`

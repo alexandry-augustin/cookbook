@@ -1,0 +1,132 @@
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	max-width: 450px;
+}
+
+section {
+	padding: 20px;
+	box-sizing: border-box;
+	padding: 0 20px;
+}
+
+p.range {
+	width: 100%;
+	position: relative;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	height: 35px;
+	padding: 0;
+	width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	box-sizing: content-box;
+	border: 12px solid #a6d8ef;
+	height: 8px;
+	width: 8px;
+	border-radius: 18px;
+	background-color: #5082e0;
+	cursor: ew-resize;
+	margin-top: -14px;
+	opacity: .7;
+}
+
+input[type=range]::-moz-range-thumb {
+	border: 12px solid #a6d8ef;
+	height: 8px;
+	width: 8px;
+	border-radius: 18px;
+	background-color: #5082e0;
+	cursor: ew-resize;
+	margin-top: -14px;
+	opacity: .7;
+
+}
+
+input[type=range]::-ms-thumb {
+	display: inline-block;
+	border: 12px solid #a6d8ef;
+	height: 8px;
+	width: 8px;
+	border-radius: 18px;
+	background-color: #5082e0;
+	cursor: ew-resize;
+	margin-top: 5px; /* note: different margin-top for IE */
+}
+
+
+input[type=range]::-webkit-slider-runnable-track {
+	height: 3px;
+	border-color: transparent;
+	color: transparent;
+	background-color: #cccccc;	
+}
+
+input[type=range]::-moz-range-track {
+	height: 3px;
+	background-color: #cccccc;	
+}
+
+input[type=range]::-ms-track {
+	border-color: transparent;
+	color: transparent;
+	height: 3px;
+	background-color: #cccccc;	
+}
+
+input[type=range]::-ms-fill-lower {
+	background-color: #5082e0;	
+
+}
+
+input[type=range]::-moz-range-progress {
+	background-color: #5082e0;	
+}
+
+input[type=range]::-ms-tooltip {
+	display: none;
+}
+
+p.range {
+	margin-top: 25px;
+}
+
+p.range output {
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+p.range span {
+	width: 100%;
+	display: block;
+	height: 20px;
+	position: relative;
+}
+
+p.range span:before {
+	content: attr(data-min);
+}
+
+p.range span:after {
+	position: absolute;
+	right: 0;
+	content: attr(data-max);
+}
+
+#teller span {
+	font-size: 80%;
+}
+

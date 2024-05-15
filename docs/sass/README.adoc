@@ -22,6 +22,34 @@ sudo dnf install sassc
 
 == Usage
 
+[source,bash]
+----
+sass [options] [INPUT] [OUTPUT]
+----
+
+== Compile
+
+Compile single file:
+
+[source,bash]
+----
+sass filename.scss
+----
+
+Compile entire directory `scss` into `css`:
+
+[source,bash]
+----
+sass --update scss:css
+    --style compressed
+    --no-source-map # do not create the .map file
+    --sourcemap=none
+----
+
+`-I PATH`, `--load-path PATH`:: Specify a Sass import path.
+
+== Interactive Shell
+
 `-i`, `--interactive`:: Run an interactive SassScript shell.
 
 ....
@@ -38,23 +66,3 @@ rgba(255, 0, 0, 0.5)
 >> append-selector("p, div, span", ".bar")
 'append-selector("p, div, span", ".bar")'
 ....
-
-`-I PATH`, `--load-path PATH`:: Specify a Sass import path.
-
-== Compile
-
-Compile single file:
-
-[source,bash]
-----
-sass filename.scss
-----
-
-Compile entire directory `scss` into `css`:
-
-[source,bash]
-----
-sass --update scss:css
---style compressed
---no-source-map # do not create the .map file
-----

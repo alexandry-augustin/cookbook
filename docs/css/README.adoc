@@ -1,5 +1,28 @@
 = Cascading Style Sheets (CSS)
 
+== Include
+
+[source,html]
+----
+ <!DOCTYPE html>
+<html>
+  <head>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+      // ...
+    </style>
+  </head>
+
+  <body>
+    <!-- Inline CSS -->
+    <div style="">Lorem Ipsum</div>
+  </body>
+</html> 
+----
+
 include::./sections/box-model/index.adoc[leveloffset=+1]
 
 [source,css]
@@ -47,7 +70,7 @@ ____
 
 include::./sections/media_queries.adoc[leveloffset=+1]
 
-include::./sections/selectors.adoc[leveloffset=+1]
+include::./sections/selectors/index.adoc[leveloffset=+1]
 
 include::./sections/display.adoc[leveloffset=+1]
 

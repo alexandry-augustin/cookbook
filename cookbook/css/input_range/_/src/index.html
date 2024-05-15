@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Multiple slider example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="sliders.css">
+    <script src="sliders.js"></script>
+</head>
+
+<body>
+
+    <a href="https://www.quirksmode.org/sliders/sliders.html">source</a>
+
+    <section data-type="slider-group" data-question-id="7">
+
+        <p class="vraag">Please divide 100 million among these budget items</p>
+
+        <div data-total="100">
+
+            <p>Healthcare</p>
+
+            <p class="range"><input type="range" min="0" max="100" value="25" step="1" name="groep1" id="test2">
+                <output></output>
+                <span data-min="0" data-max="100"></span>
+            </p>
+
+            <p>Immigration</p>
+
+            <p class="range"><input type="range" min="0" max="100" value="50" step="1" name="groep2" id="test3">
+                <output></output>
+                <span data-min="0" data-max="100"></span>
+            </p>
+
+            <p>Defense</p>
+
+            <p class="range"><input type="range" min="0" max="100" value="0" step="1" name="groep3" id="test4">
+                <output></output>
+                <span data-min="0" data-max="100"></span>
+            </p>
+
+        </div>
+
+    </section>
+
+    <p>Created for <a href="http://pvdapp.nl">PvdApp</a>. (They paid for this research, so they deserve a link.)</p>
+
+</body>
+
+</html>
