@@ -15,7 +15,19 @@ ____
 ----
 
 
-`:not()`
-`:hover`
-`:visited`
-`:checked`
+== `:not()`
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/:not?ref=serpapi
+
+[source,css]
+----
+:not(<complex-selector-list>) {
+  /* ... */
+}
+----
+
+== `:hover`
+
+== `:visited`
+
+== `:checked`

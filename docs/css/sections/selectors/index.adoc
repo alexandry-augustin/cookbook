@@ -1,6 +1,8 @@
 = Selectors
 
-== Element
+https://www.w3.org/TR/CSS2/selector.html
+
+== Element Selectors
 
 E.g. `div`, `h1`, `strong`, `header`, `*` (all elements)
 
@@ -20,7 +22,7 @@ element-name
 </element-name>
 ----
 
-== Class
+== Class Selectors
 
 [source,css]
 ----
@@ -38,7 +40,7 @@ element-name
 </h1>
 ----
 
-== ID
+== ID Selectors
 
 [source,css]
 ----
@@ -56,39 +58,59 @@ element-name
 </h1>
 ----
 
+[NOTE]
+====
+Note that syntactically (but not specificity-wise), this is equivalent to the following attribute selector:
+
+[source,css]
+----
+[id=id_value] { style properties }
+----
+====
+
+
 == Attribute Selectors
 
 https://css-tricks.com/attribute-selectors/
 
+....
+[attr operator "value" case]
+....
+
+case: 
+
+`s`:: matching capitalization
+`i`:: case-insensitive
+
 [source,css]
 ----
-[rel=external] { }/*exact match*/
-[rel*=external] { }/**/
-[rel^=external] { }/**/
-[rel$=external] { }/**/
-[rel~=external] { }/**/
-[rel|=external] { }/**/
-[title=one][rel^=external] { }/*multiple matches*/
+[attrib] {} /* elements with an `attrib` attribute */
+[attrib="value"] { } /* exact match */
+[attrib*="value"] { } /* containing */
+[attrib^="value"] { } /* */
+[attrib$="value" i] { } /* ending with, case-insensitive */
+[attrib~="value"] { } /**/
+[attrib|="value"] { } /**/
+
+[attrib=value][attrib^=value] { } /*multiple matches*/
 ----
 
 === Example 1
 
-Select based on `rel` attribute as well
+Select `h2` elements with an attribute `rel` equal to `friend`: 
+
+[source,css]
+----
+h2[rel="friend"] { /*...*/ }
+----
 
 [source,html]
 ----
 <h2 id="title" class="magic" rel="friend">John Doe</h2>
 ----
 
-[source,css]
-----
-h2[rel="friend"]
-{
-}
-----
-
 include::./combinators.adoc[leveloffset=+1]
 
 include::./pseudo-classes.adoc[leveloffset=+1]
 
-== `*::before`, `*::after`
+include::./pseudo-elements.adoc[leveloffset=+1]
