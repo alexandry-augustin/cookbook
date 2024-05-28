@@ -1,0 +1,46 @@
+<!-- https://alpinejs.dev/magics/data -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$data</title>
+</head>
+<body>
+
+	<h1>Component -> JS</h1>
+
+	<div x-data="{ category: 'Person' }">
+		<div x-data="{ name: 'Alex' }">
+			<button @click="showData($data)">Show x-data</button>
+		</div>
+	</div>
+	 
+	<script>
+		function showData(data) {
+			alert('x-data: ' + data.category + ', ' + data.name)
+		}
+	</script>
+
+	<h1>JS -> Component</h1>
+
+	<script>
+		window.toggleModalBox = function(){
+			data = Alpine.evaluate(document.getElementById('modalBox'), '$data');
+			data.open ^= true;
+		}
+	</script>
+	<button onclick="toggleModalBox()">Toggle</button>
+    <div id="modalBox" x-data="{open: false}">
+        <div>
+            <div x-show="open" id="modal">
+                Content
+            </div>
+        </div>
+    </div>
+
+	<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
+</body>
+</html>
