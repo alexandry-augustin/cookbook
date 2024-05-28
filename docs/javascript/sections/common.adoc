@@ -1,0 +1,10 @@
+= Comments
+
+[source,javascript]
+----
+/*
+   comment
+*/
+
+// comment
+----

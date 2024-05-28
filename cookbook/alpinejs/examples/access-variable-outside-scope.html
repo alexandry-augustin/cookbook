@@ -1,0 +1,40 @@
+<!-- https://alpinejs.in/access-alpinejs-variable-outside-scope -->
+<!-- https://github.com/alpinejs/alpine/discussions/2375 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Data variables Outside Scope</title>
+</head>
+<body>
+
+    <div 
+        id="modalBox" 
+        x-data="{open: false}" 
+        @keydown.escape="open=false">
+        <div>
+            <button @click="open=!open">Toggle (Inside Scope)</button>
+
+            <div x-show="open" id="modal">
+                Content 
+                <!-- <br><button @click="open=false">Close Me</button> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.toggleModalBox = function(){
+            // document.getElementById('modalBox').__x.$data.open ^= true; // for Alpinejs v2
+            //._x_dataStack[0].open ^= true; // for Alpinejs v3
+            Alpine.evaluate(document.getElementById('modalBox'), '$data').open ^= true;
+        }
+    </script>
+    <button onclick="toggleModalBox()">Toggle (Outside Scope)</button>
+
+	<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
+
+</body>
+</html>

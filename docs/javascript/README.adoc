@@ -77,3 +77,7 @@ https://en.wikipedia.org/wiki/ECMAScript
 == CommonJS
 
 https://en.wikipedia.org/wiki/CommonJS
+
+include::./sections/common.adoc[leveloffset=+1]
+
+include::./sections/browser.adoc[leveloffset=+1]

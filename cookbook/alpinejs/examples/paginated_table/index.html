@@ -1,0 +1,55 @@
+<!-- Example from https://www.raymondcamden.com/2022/05/02/building-table-sorting-and-pagination-in-alpinejs -->
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Alpine.js</title>
+	<style>
+	td, th {
+		padding: 5px;
+	}
+
+	th {
+		cursor: pointer;
+	}
+	</style>
+</head>
+
+<body>
+
+	<div x-data="catData">
+		<table id="catTable">
+			<thead>
+				<tr>
+					<th @click="sort('name')">Name</th>
+					<th @click="sort('age')">Age</th>
+					<th @click="sort('breed')">Breed</th>
+					<th @click="sort('gender')">Gender</th>
+				</tr>
+			</thead>
+			<tbody>
+				<template x-if="!cats">
+					<tr>
+						<td colspan="4"><i>Loading...</i></td>
+					</tr>
+				</template>
+				<template x-for="cat in pagedCats" :key="cat.id">
+					<tr>
+						<td x-text="cat.name"></td>
+						<td x-text="cat.age"></td>
+						<td x-text="cat.breed"></td>
+						<td x-text="cat.gender"></td>
+					</tr>
+				</template>
+			</tbody>
+		</table>
+		<button @click="previousPage">Previous</button> <button @click="nextPage">Next</button>
+	</div>
+
+	<script type='text/javascript' charset='utf-8' src='script.js'></script>
+	<script type='text/javascript' charset='utf-8' src='../../alpinejs.3.13.2.cdn.min.js'></script>
+	
+</body>
+
+</html>

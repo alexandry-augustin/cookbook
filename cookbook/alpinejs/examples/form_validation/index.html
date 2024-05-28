@@ -1,0 +1,42 @@
+<!-- Example from https://www.raymondcamden.com/2022/05/02/building-table-sorting-and-pagination-in-alpinejs -->
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Alpine.js</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div>[<a href="https://css-tricks.com/lightweight-form-validation-with-alpine-js-and-iodine-js/">source</a>]</div>
+
+	<form action="" x-data="form" @focusout="change" @input="change" @submit="submit">
+		<h1>Register</h1>
+	  
+		<label for="username">Username</label>
+		<input name="username" id="username" type="text" x-bind:class="{'invalid':username.errorMessage}" data-rules='["required"]' data-server-errors='[]'>
+		<p class="error-message" x-show="username.errorMessage" x-text="username.errorMessage" x-transition:enter></p>
+	  
+		<label for="email">Email</label>
+		<input name="email" type="email" id="email" x-bind:class="{'invalid':email.errorMessage}" data-rules='["required","email"]' data-server-errors='[]'>
+		<p class="error-message" x-show="email.errorMessage" x-text="email.errorMessage" x-transition:enter></p>
+	  
+		<label for="password">Password</label>
+		<input name="password" type="password" id="password" x-bind:class="{'invalid':password.errorMessage}" data-rules='["required","minLength:8"]' data-server-errors='[]'>
+		<p class="error-message" x-show="password.errorMessage" x-text="password.errorMessage" x-transition:enter></p>
+	  
+		<label for="passwordConf">Confirm Password</label>
+		<input name="passwordConf" type="password" id="passwordConf" x-bind:class="{'invalid': passwordConf.errorMessage}" data-rules='["required","minLength:8","matchingPassword"]' data-server-errors='[]'>
+		<p class="error-message" x-show="passwordConf.errorMessage" x-text="passwordConf.errorMessage" x-transition:enter></p>
+	  
+		<input type="submit">
+	  </form>
+
+	<script type='text/javascript' charset='utf-8' src='script.js'></script>
+	<script type='text/javascript' charset='utf-8' src='../../alpinejs.3.13.2.cdn.min.js'></script>
+	
+</body>
+
+</html>
