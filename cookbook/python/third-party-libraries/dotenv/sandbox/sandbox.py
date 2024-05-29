@@ -15,7 +15,7 @@ def test_00():
     assert(ACCESS_TOKEN == "ABC123")
 
 def test_01():
-    config = dotenv_values(".env")
+    config = dotenv_values('.env')
     assert(config['ACCESS_TOKEN'] == "ABC123")
 
 if __name__ == '__main__':
