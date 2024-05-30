@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Synchronise Inputs</title>
+		<script>
+				function setData() {
+					let original = document.getElementById('original')
+					let repeat = document.getElementById('repeat')
+
+					repeat.value = original.value
+				}
+		</script>
+	</head>
+
+	<body>
+		<a href="https://stackoverflow.com/questions/53544073/how-can-i-synchronize-input-html-field-at-all-times-without-using-a-button-keys">[source]</a>
+
+		<div><span>Original: </span><input id="original" type="text" onKeyUp="setData()" /></div>
+		<div><span>Repeat: </span><input id="repeat" type="text" /></div> 
+	</body>
+</html> 
