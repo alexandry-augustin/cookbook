@@ -1,0 +1,27 @@
+= Petite
+:url-repo: https://github.com/vuejs/petite-vue
+
+{url-repo}[[repo\]]
+
+== Examples
+
+=== Counter
+
+[source,html]
+----
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://unpkg.com/petite-vue" defer init></script>
+		<title>Counter</title>
+	</head>
+
+	<body>
+
+		<div v-scope="{ count: 0 }">
+		  {{ count }}
+		  <button @click="count++">inc</button>
+		</div>
+	</body>
+</html>
+----

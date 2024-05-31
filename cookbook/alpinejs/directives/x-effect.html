@@ -8,11 +8,15 @@
 	<body>
 
 		<div x-data="{ 
-			message: '',
-			output: '', 
+			name: 'name',
+			value: 0, 
+			output: null, 
 		}"
-		x-effect="output=message;">
-            <input type="text" x-model="message">
+		x-effect="output=`${name} = ${value}`;">
+            <div>
+				<input type="text" x-model="name">
+				<input type="number" x-model="value">
+			</div>
 			<div x-text="output"></div>
         </div>
     	

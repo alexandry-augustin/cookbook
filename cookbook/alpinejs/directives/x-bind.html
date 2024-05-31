@@ -28,6 +28,17 @@
             </span>
 		</div>
 
+		<h3>Bind to 'placeholder' attribute</h3>
+
+		<div x-data="{ value: '' }">
+			<div>
+				<input type="text" x-model="value" placeholder="Type your placeholder...">
+			</div>
+			<div>
+				<input type="text" x-bind:placeholder="value">
+			</div>
+		</div>
+
 		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>		
 	</body>
 </html> 

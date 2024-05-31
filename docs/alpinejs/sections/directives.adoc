@@ -3,7 +3,9 @@
 // https://www.wittyprogramming.dev/articles/introduction-to-alpinejs/
 
 `x-modelable`:: {empty}
-`x-effect`:: (similar to `useEffect()` in React).
+`x-effect`:: (similar to `useEffect()` in React). (See also `$watch` magic command)
+* The code will be run right away AND when data changes.
+* No knowledge of the previous value
 `x-ignore`:: {empty}
 `x-cloak`:: {empty}
 `x-teleport`:: {empty}

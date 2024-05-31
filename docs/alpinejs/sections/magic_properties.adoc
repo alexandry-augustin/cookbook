@@ -1,20 +1,14 @@
 = Magic Properties
 
 `$el`:: {empty}
-
 `$refs`:: {empty}
-
 `$store`:: {empty}
-
-`$watch`:: {empty}
-
+`$watch`:: (See also `x-effect` directive)
+* Is lazy, i.e. it won't run until the first data change.
+* The callback provided receives both the new value AND the old one.
 `$dispatch`:: {empty}
-
 `$nextTick`:: {empty}
-
 `$root`:: {empty}
-
 `$data`:: {empty}
-
 `$id`:: {empty}
 
