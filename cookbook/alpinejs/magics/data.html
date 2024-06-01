@@ -12,15 +12,15 @@
 
 	<h1>Component -> JS</h1>
 
-	<div x-data="{ category: 'Person' }">
-		<div x-data="{ name: 'Alex' }">
+	<div x-data="{ val_0: 'abc' }">
+		<div x-data="{ val_1: '123' }">
 			<button @click="showData($data)">Show x-data</button>
 		</div>
 	</div>
 	 
 	<script>
 		function showData(data) {
-			alert('x-data: ' + data.category + ', ' + data.name)
+			alert(`x-data: { ${data.val_0}, ${data.val_1} }`)
 		}
 	</script>
 
@@ -28,7 +28,7 @@
 
 	<script>
 		window.toggleModalBox = function(){
-			data = Alpine.evaluate(document.getElementById('modalBox'), '$data');
+			let data = Alpine.evaluate(document.getElementById('modalBox'), '$data');
 			data.open ^= true;
 		}
 	</script>

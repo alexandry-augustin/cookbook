@@ -26,7 +26,7 @@
     </div>
 
     <script>
-        window.toggleModalBox = function(){
+        window.toggleModalBox = function() {
             // document.getElementById('modalBox').__x.$data.open ^= true; // for Alpinejs v2
             //._x_dataStack[0].open ^= true; // for Alpinejs v3
             Alpine.evaluate(document.getElementById('modalBox'), '$data').open ^= true;
