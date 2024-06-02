@@ -9,5 +9,3 @@
 {url-github}[[github\]]
 
 include::./sections/core/index.adoc[leveloffset=+1]
-
-include::./sections/petite/index.adoc[leveloffset=+1]

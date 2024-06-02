@@ -13,14 +13,16 @@
 	<h1>Component -> JS</h1>
 
 	<div x-data="{ val_0: 'abc' }">
-		<div x-data="{ val_1: '123' }">
+		<div x-data="{ val_1: '789' }"></div>
+		<div x-data="{ val_2: '123' }">
 			<button @click="showData($data)">Show x-data</button>
 		</div>
 	</div>
 	 
 	<script>
 		function showData(data) {
-			alert(`x-data: { ${data.val_0}, ${data.val_1} }`)
+			// val_1 is 'undefined' as it is out of scope
+			alert(`x-data: { ${data.val_0}, ${data.val_1}, ${data.val_2} }`)
 		}
 	</script>
 

@@ -6,6 +6,9 @@
             .red-text {
                 color: red;
             }
+			.bold-text {
+				font-weight: bold;
+			}
             </style>
 	</head>
 
@@ -13,31 +16,38 @@
         
         <h3>Bind to Class</h3>
 
-        <div x-data="{ open: false }">
-			<button x-on:click="open=!open">Toggle</button>
-		 
-			<!-- <span x-text="open"></span> -->
-			<span :class="open ? '' : 'red-text'">
-				Contents
-            </span>
-		</div>
+			<h5>Example 1</h5>
 
-        <div x-data="{ flag: true }">		 
-			<span @mouseover="flag=!flag" @mouseout="flag=!flag" :class="flag ? '' : 'red-text'">
-				HoverMe
-            </span>
-		</div>
+				<div x-data="{ open: false }">
+					<button x-on:click="open=!open">Toggle</button>
+				
+					<!-- <span x-text="open"></span> -->
+					<span class="bold-text"
+						x-bind:class="open ? '' : 'red-text'">
+						Contents
+					</span>
+				</div>
+
+			<h5>Example 2</h5>
+
+				<div x-data="{ flag: true }">		 
+					<span x-on:mouseover="flag=!flag" 
+						x-on:mouseout="flag=!flag" 
+						x-bind:class="flag ? '' : 'red-text'">
+						HoverMe
+					</span>
+				</div>
 
 		<h3>Bind to 'placeholder' attribute</h3>
 
-		<div x-data="{ value: '' }">
-			<div>
-				<input type="text" x-model="value" placeholder="Type your placeholder...">
+			<div x-data="{ value: '' }">
+				<div>
+					<input type="text" x-model="value" placeholder="Type your placeholder...">
+				</div>
+				<div>
+					<input type="text" x-bind:placeholder="value">
+				</div>
 			</div>
-			<div>
-				<input type="text" x-bind:placeholder="value">
-			</div>
-		</div>
 
 		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>		
 	</body>

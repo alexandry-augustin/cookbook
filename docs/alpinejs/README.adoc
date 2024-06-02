@@ -21,11 +21,11 @@ Developed by Caleb Porzio.
 
 The `x-data` directive is what defines a component and activate Alpine.js.
 
-For example, the example below won't work if `x-data=""` is omitted:  
+For example, the example below won't work if `x-data` is omitted:  
 
 [source,html]
 ----
-<div x-data=""> 
+<div x-data> 
     <button @click="alert('Test')">Show</button>
 </div>
 ----

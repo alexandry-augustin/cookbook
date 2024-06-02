@@ -1,0 +1,17 @@
+= Standalone (Global Build)
+
+https://vuejs.org/guide/quick-start.html#using-the-global-build[Global Build]
+
+[quote,https://github.com/vuejs/petite-vue?tab=readme-ov-file#comparison-with-standard-vue]
+____
+Standard Vue can be used with or without a build step. 
+____
+
+== Installation
+
+[source,html]
+----
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+----
+
+include::./examples/index.adoc[leveloffset=+1]

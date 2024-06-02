@@ -1,0 +1,8 @@
+= Single-Page Application (SPA)
+
+== Installation
+
+[source,bash]
+----
+npm create vue@latest
+----

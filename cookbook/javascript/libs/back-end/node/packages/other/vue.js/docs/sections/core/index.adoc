@@ -1,20 +1,9 @@
 = Core
 
-[quote,https://github.com/vuejs/petite-vue?tab=readme-ov-file#comparison-with-standard-vue]
-____
-Standard Vue can be used with or without a build step. 
-____
+https://vuejs.org/guide/extras/ways-of-using-vue.html[Ways of Using Vue]
 
-== Installation
+include::./spa/index.adoc[leveloffset=+1]
 
-[source,bash]
-----
-npm create vue@latest
-----
+include::./standalone/index.adoc[leveloffset=+1]
 
-=== CDN
-
-[source,html]
-----
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-----
+include::./petite/index.adoc[leveloffset=+1]

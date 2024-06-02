@@ -1,0 +1,47 @@
+= Examples
+
+== Text Binding
+
+[source,html]
+----
+<div id="app">
+    <input type="text" v-model="message">
+    <div>{{ message }}</div>
+</div>
+
+<script>
+    const { createApp, ref } = Vue
+
+    createApp({
+        setup() {
+            const message = ref('')
+            return {
+                message
+            }
+        }
+    }).mount('#app')
+</script>
+----
+
+== Counter
+
+[source,html]
+----
+<div id="app">
+    <button @click="count--">-</button>
+    {{ count }}
+    <button @click="count++">+</button>
+</div>
+
+<script>
+    const { createApp, ref } = Vue
+
+    createApp({
+        setup() {
+            return {
+                count: ref(0)
+            }
+        }
+    }).mount('#app')
+</script>
+----
