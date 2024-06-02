@@ -1,8 +1,6 @@
 = Globals
 
 `Alpine.data()`:: {empty}
-
 `Alpine.store()`:: {empty}
-
 `Alpine.bind()`:: {empty}
 

@@ -1,0 +1,24 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>x-target</title>
+</head>
+
+<body>
+
+	<ul id="comments">
+		<li>Comment #1</li>
+	</ul>
+	<form x-init x-target="comments" method="post" action="http://127.0.0.1:8000/comment">
+		<input aria-label="Comment text" name="text" required />
+		<button>Submit</button>
+	</form>
+
+	<!-- <script defer src="https://cdn.jsdelivr.net/npm/@imacrayon/alpine-ajax@0.6.0/dist/cdn.min.js"></script> -->
+	<!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js"></script> -->
+	<script type='text/javascript' charset='utf-8' src='../../alpine-ajax.0.6.0.cdn.min.js'></script>
+	<script type='text/javascript' charset='utf-8' src='../../alpinejs.3.11.1.cdn.min.js'></script>
+</body>
+
+</html>
