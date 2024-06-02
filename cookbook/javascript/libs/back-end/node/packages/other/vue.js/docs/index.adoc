@@ -8,4 +8,9 @@
 {url-website}[[website\]] 
 {url-github}[[github\]]
 
+[quote,https://thecodebytes.com/is-vue-js-a-framework-or-library/]
+____
+Vue is considered a framework. It includes an entire suite of tools, such as routers, state management, testing suites, and everything you need to build a complete web app. [These features are very similar to what Angular provides.] However, these tools are compartmentalized and you can strip Vue down to simply being the core library [, similar to React].
+____
+
 include::./sections/core/index.adoc[leveloffset=+1]

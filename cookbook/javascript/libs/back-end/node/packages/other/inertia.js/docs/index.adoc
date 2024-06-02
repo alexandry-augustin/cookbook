@@ -1,0 +1,7 @@
+= Inertia
+:toc: left
+:url-website: https://inertiajs.com/
+:url-repo: https://github.com/inertiajs/inertia
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]

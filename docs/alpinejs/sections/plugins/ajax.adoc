@@ -1,6 +1,8 @@
 = Alpine AJAX
 :url-website: https://alpine-ajax.js.org/
+:url-docs: https://alpine-ajax.js.org/reference/
 :url-repo: https://github.com/imacrayon/alpine-ajax
 
 {url-website}[[website\]]
+{url-docs}[[docs\]]
 {url-repo}[[repo\]]
