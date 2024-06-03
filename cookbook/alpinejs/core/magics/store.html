@@ -7,21 +7,52 @@
     <title>$store</title>
 </head>
 <body>
+
+	<h1>Single-value Store</h1>
+
 	<script>
 		document.addEventListener('alpine:init', () => {
-			Alpine.store('show', false)
+			Alpine.store('show', false);
 		})
 	</script>
 
-	<button x-data @click="$store.show = ! $store.show">Toggle</button>
+	<button x-data @click="$store.show = !$store.show">Toggle</button>
+	<button x-data @click="$store.show = true">Show</button>
  	
 	<div x-data>
 		<div x-show="$store.show">
 			<div>Contents...</div>
-			<button x-on:click="$store.show = ! $store.show">Hide</button>
+			<button x-on:click="$store.show = false">Hide</button>
 		</div>
 	</div>
 	
+	<h1>Object Store</h1>
+
+	<script>
+		document.addEventListener('alpine:init', () => {
+			Alpine.store('display', {
+
+				show: null,
+
+				init() {
+					this.show = false;
+				},
+	
+				toggle() {
+					this.show = !this.show;
+				}
+			});
+		})
+	</script>
+
+	<button x-data @click="$store.display.toggle()">Toggle</button>
+ 	
+	<div x-data>
+		<div x-show="$store.display.show">
+			<div>Contents...</div>
+		</div>
+	</div>
+
 	<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
 </body>
 </html>

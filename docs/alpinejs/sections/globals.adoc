@@ -4,3 +4,16 @@
 `Alpine.store()`:: {empty}
 `Alpine.bind()`:: {empty}
 
+`Alpine.evaluate()`:: {empty}
+
+[source,javascript]
+----
+Alpine.evaluate(document.getElementById('my_elt'), '$data').my_var;
+----
+
+`Alpine.store()`:: {empty}
+
+[source,javascript]
+----
+Alpine.store('my_obj').my_fct();
+----
