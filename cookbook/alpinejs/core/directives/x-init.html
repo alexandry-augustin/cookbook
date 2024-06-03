@@ -25,7 +25,8 @@
 				this.message = 'overridden';
 			}
 		}">
-		<div x-text="message"></div>
+			<div x-text="message"></div>
+		</div>
 
 		<h1>Combined</h1>
 
@@ -41,8 +42,18 @@
 			}"
 			x-init="message+=' again'">
 			<div x-text="message"></div>
+		</div>
 
-	</div>
+		<h1>Multiple Variables</h1>
+
+		<div x-data="{ 
+			message: 'initial', 
+			date: '01/01/1970'
+		}"
+		x-init="message='overridden'; date='01/01/2000'">
+			<div x-text="message"></div>
+			<div x-text="date"></div>
+		</div>
     	
 		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
 	</body>

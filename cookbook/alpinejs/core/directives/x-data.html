@@ -2,26 +2,32 @@
 	<head>
 		<meta charset="utf-8">
 		<title>x-data</title>
+	</head>
 
+	<body>
+
+		<h1>Example 1</h1>
+
+		<div>Defining the x-data from external javascript</div>
+        
 		<script type='text/javascript'>
 			function getData() {
 				return {
-				  message: 'Hello Alpine.js',
+				  message: 'Content...',
 				  output: '',
-				  showMessage() {
+				  display() {
 					this.output = this.message;
 				  }
 				};
 			  }
 		</script>
-	</head>
 
-	<body>
-        
 		<div x-data="getData()">
-			<button @click="showMessage()">Reveal</button>
+			<button @click="display()">Show</button>
 			<div x-text="output"></div>
 		</div>
+
+		<!-- <h1>Example 2</h1> -->
 
 		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>		
 	</body>
