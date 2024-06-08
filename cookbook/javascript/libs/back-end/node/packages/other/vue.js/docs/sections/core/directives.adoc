@@ -1,0 +1,12 @@
+= Directives
+
+`v-model`:: {empty}
+`v-model.lazy`::: {empty}
+
+[quote,https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/]
+____
+`v-if` will completely unmount the element, while `v-show` will merely toggle the visibility of it. 
+____
+
+`v-if`:: {empty}
+`v-show`:: {empty}

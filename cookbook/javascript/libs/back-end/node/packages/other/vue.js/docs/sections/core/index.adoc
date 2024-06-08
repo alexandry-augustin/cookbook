@@ -2,6 +2,8 @@
 
 https://vuejs.org/guide/extras/ways-of-using-vue.html[Ways of Using Vue]
 
+include::./directives.adoc[leveloffset=+1]
+
 include::./spa/index.adoc[leveloffset=+1]
 
 include::./standalone/index.adoc[leveloffset=+1]

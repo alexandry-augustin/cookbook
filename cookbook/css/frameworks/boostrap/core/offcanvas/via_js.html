@@ -9,45 +9,44 @@
 
 <body>
 
-  <button class="btn btn-primary" type="button" onclick="showOffCanvas()">Toggle</button>
+  <button class="btn btn-primary" type="button" onclick="showOffCanvas()">Show</button>
+  <button class="btn btn-primary" type="button" onclick="hideOffCanvas()">Hide</button>
+  <button class="btn btn-primary" type="button" onclick="toggleOffCanvas()">Toggle</button>
 
-  <div class="offcanvas offcanvas-start" 
+  <div class="offcanvas offcanvas-end" 
     data-bs-scroll="true" 
     data-bs-backdrop="false" 
     tabindex="-1"
     id="myOffcanvas" 
     aria-labelledby="myOffcanvasLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="myOffcanvasLabel">Colored with scrolling</h5>
+      <h5 class="offcanvas-title" id="myOffcanvasLabel">Title</h5>
       <button type="button" 
         class="btn-close text-reset" 
         data-bs-dismiss="offcanvas" 
         aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <p>Try scrolling the rest of the page to see this option in action.</p>
+      <p>Body</p>
     </div>
   </div>
 
   <script>
-  function showOffCanvas() {
     let offcanvas = document.getElementById('myOffcanvas');
     let bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
-    bsOffcanvas.show();
-    console.log('myOffcanvas open');
-  }
-  function hideOffCanvas() {
-    let offcanvas = document.getElementById('myOffcanvas');
-    let bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
-    bsOffcanvas.hide();
-    console.log('myOffcanvas closed');
-  }
-  function toggleOffCanvas() {
-    let offcanvas = document.getElementById('myOffcanvas');
-    let bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
-    bsOffcanvas.toggle();
-    console.log('myOffcanvas toggled');
-  }
+
+    function showOffCanvas() {
+      bsOffcanvas.show();
+      console.log('offcanvas open');
+    }
+    function hideOffCanvas() {
+      bsOffcanvas.hide();
+      console.log('offcanvas closed');
+    }
+    function toggleOffCanvas() {
+      bsOffcanvas.toggle();
+      console.log('offcanvas toggled');
+    }
   </script>
 
 </body>

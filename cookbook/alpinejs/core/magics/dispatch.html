@@ -1,0 +1,60 @@
+<!-- https://alpinejs.dev/magics/dispatch -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>$dispatch</title>
+</head>
+
+<body>
+
+	<h1>Basic</h1>
+
+	<div>Without arguments</div>
+
+	<div x-data>
+		<button x-on:click="$dispatch('my-event:toggle')">Toggle</button>
+	</div>
+	<div x-data="{ show: false }">
+		<div x-show="show" x-on:my-event:toggle.window="show = !show">
+			<div>Content...</div>
+		</div>
+	</div>
+
+	<div x-data x-on:my-event:no-args="alert('Content...')">
+		<button x-on:click="$dispatch('my-event:no-args')">Dispatch</button>
+	</div>
+
+	<div>With arguments</div>
+
+	<div x-data x-on:my-event:args="alert(`${$event.detail.my_var1}${$event.detail.my_var2}`)">
+		<button x-on:click="$dispatch('my-event:args', { my_var1: 'Content', my_var2: '...' })">Dispatch</button>
+	</div>
+
+	<h1>Dispatching to Other Components</h1>
+
+	<div x-data="{ my_data: 'init_value' }" x-on:my-event:other-components.window="my_data=$event.detail">
+		<div x-text="my_data"></div>
+	</div>
+
+	<div x-data>
+		<button x-on:click="$dispatch('my-event:other-components', 'new_value')">Dispatch</button>
+	</div>
+
+	<h1>Dispatching to x-model</h1>
+
+	<div x-data="{ title: 'init_value' }">
+		<span x-model="title">
+			<div x-text="title"></div>
+			<button x-on:click="$dispatch('input', 'new_value')">Dispatch</button>
+		</span>
+	</div>
+
+	<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
+</body>
+
+</html>

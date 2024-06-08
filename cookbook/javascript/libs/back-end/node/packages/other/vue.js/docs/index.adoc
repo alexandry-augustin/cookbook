@@ -1,5 +1,6 @@
 = Vue.js
 :toc: left
+:toclevels: 8
 :url-wiki: https://en.wikipedia.org/wiki/Vue.js
 :url-website: https://vuejs.org/
 :url-github: https://github.com/vuejs/core

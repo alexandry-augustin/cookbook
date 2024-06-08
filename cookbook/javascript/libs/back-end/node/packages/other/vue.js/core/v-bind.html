@@ -1,0 +1,39 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<style>
+		.red {
+			color: red;
+		}
+	</style>
+	<title>v-bind</title>
+</head>
+
+<body>
+
+	<div id="app">
+		<button v-on:click="active = !active" 
+			v-bind:aria-pressed="active ? 'true' : 'false'">Toggle</button>
+		<div v-bind:class="{ red: active }">Content...</div>
+	</div>
+
+	<script>
+		const { createApp, ref } = Vue
+	
+		createApp({
+			setup() {
+				const active = ref(false)
+				return {
+					active
+				}
+			}
+		}).mount('#app')
+	</script>
+
+	<!-- <script type='text/javascript' charset='utf-8' src='script.js'></script> -->
+</body>
+
+</html>

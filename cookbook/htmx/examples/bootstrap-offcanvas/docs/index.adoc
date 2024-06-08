@@ -1,0 +1,177 @@
+= How to Load Content into a Bootstrap Offcanvas Component with HTMX and Save State as a Hash in the URL
+:author: Marcus Obst
+:date: 2023-03-25
+:tags: js,htmx,bootstrap,alpineJS
+:url: https://marcus-obst.de/blog/htmx-bootstrap-5-offcanvas
+
+To open a https://getbootstrap.com/docs/5.3/components/offcanvas/[Bootstrap Offcanvas Component] and load some HTML fragment with HTMX, the first thing I tried was the following:
+
+* Equip the canvas (or modal) opener with the HTMX attributes
+* call it a day
+
+----
+<a class="btn btn-light"
+    href="/sidebar"
+    hx-get="/sidebar"
+    hx-select=".bookmark-list"
+    hx-target=".offcanvas-body"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvas">
+    Open Sidebar
+</a>
+
+<div
+     id="offcanvas"
+     class="offcanvas offcanvas-start">
+    <div class="offcanvas-body">
+        Loading...
+    </div>
+</div>
+----
+
+This approach is completely decoupled; the click event triggers both  the Bootstrap behavior and the HTMX ajax call. Both are unaware of one  another.
+
+If the canvas fails to open, the Ajax request may succeed, but the result cannot be viewed.
+
+Back to the drawing board!
+
+== Connecting the behavior of HTMX and Bootstrap JS
+
+The first thought is to use HTMX and listen for the 'htmx:load' event, then call https://getbootstrap.com/docs/5.3/components/offcanvas/#methods[`.show()`] to open the Offcanvas component. That would necessitate some UI to  indicate that the loading is complete before the canvas appears.
+
+Or the other way around, listen to `show.bs.offcanvas` and then trigger `htmx.ajax()` to pull in the server-rendered HTML. This is better because it shows, something is happening right away.
+
+== Saving open state in the URL
+
+That previous approach makes the button or link responsible for opening the canvas (or modal)?
+
+If I navigate to `/sidebar#offcanvas` I want the sidebar  to be open on page load with the HTMX ajax request triggered. The  problem with this approach is, the button is the single source of truth  that holds the URL that's getting loaded by HTMX via `hx-get` (or `href`).
+
+I could go and `htmx.find('a[href="/sidebar"]').href` and  then use that in the Ajax request. Or I trigger a click on the button,  that triggers the behavior. But that seems weird and too tightly  coupled.
+
+----
+document.addEventListener('DOMContentLoaded', function () {
+
+    const el = '#offcanvas';
+    let bookmarksOffcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(el);
+
+    if(location.hash === '#offcanvas'){
+        // open the sidebar
+        bookmarksOffcanvasInstance.show();
+        // find the button and make an
+        // ajax call via
+        htmx.ajax('GET', htmx.find('a[href="/sidebar"]').href, {/* target etc */})
+
+        // -- OR --
+
+        htmx.trigger('a[href="/sidebar"]', "click");
+    }
+});
+----
+
+== Make the Offcanvas component the single source of truth
+
+There is another way I found by watching a videolink:about:reader?url=https%3A%2F%2Fmarcus-obst.de%2Fblog%2Fhtmx-bootstrap-5-offcanvas#fn:1[1] about doing something similar with AlpineJS and an open issue with HTMXlink:about:reader?url=https%3A%2F%2Fmarcus-obst.de%2Fblog%2Fhtmx-bootstrap-5-offcanvas#fn:2[2] that brought me to the following solution:
+
+\1. The button or link to open the sidebar is only responsible for that
+
+----
+<a class="btn btn-light"
+    href="/sidebar"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvas">
+    Open Sidebar
+</a>
+----
+
+\2. Tie the HTMX logic to the canvas itself and trigger a HTMX custom event
+
+----
+<div
+     id="offcanvas"
+     class="offcanvas offcanvas-start"
+     hx-get="/sidebar"
+     hx-select=".sidebar"
+     hx-target=".offcanvas-body"
+     hx-trigger="filter-event">
+    <div class="offcanvas-body">
+        Loading...
+    </div>
+</div>
+</div>
+
+<script>
+const el = document.getElementById("offcanvas");
+
+// after the canvas was opened, trigger the hx-get with
+// the custom event and add the url with the state of the canvas
+// into the history
+el.addEventListener('shown.bs.offcanvas', event => {
+    htmx.trigger(event.target, "filter-event");
+    history.pushState(null, null, '#' + event.target.id);
+})
+
+// on hiding the sidebar, remove the hash
+el.addEventListener('hide.bs.offcanvas', event => {
+    history.pushState("", document.title, window.location.pathname);
+})</script>
+----
+
+https://codepen.io/localhorst/pen/RwYvWyE[[codepen\]]
+
+Now, all the information for the Ajax request is associated with the  offcanvas component, and it does not matter what triggers the opening of the sidebar; everything is contained in a single location.
+
+My initial thought probably stems from my synchronous consideration  of requests. A click alters the appearance of another element *after* a page reload.
+
+With JavaScript's asynchronous nature, this behavior is out the window.
+
+== Bonus: Offcanvas activated by AlpineJS that triggers HTMX custom event
+
+I adopted the whole script for the AlpineJS inline JavaScript style and here it is:
+
+----
+<a class="btn btn-light" href="#offcanvas">
+    Open Sidebar
+</a>
+<div
+    id="offcanvas"
+    class="offcanvas offcanvas-start"
+
+    x-data
+    x-init="()=>{
+        const oc = new bootstrap.Offcanvas('#offcanvas');
+        if(location.hash === '#offcanvas') oc.show();
+    }"
+    @hashchange.window="if(location.hash === '#offcanvas') { bootstrap.Offcanvas.getOrCreateInstance(location.hash).show() }"
+    @shown-bs-offcanvas.dot="
+        htmx.trigger($event.target, 'filter-event');
+        history.pushState(null, null, '#' + $event.target.id);"
+    @hide-bs-offcanvas.dot="history.pushState('', document.title, window.location.pathname);"
+
+    hx-get="/sidebar"
+    hx-select=".sidebar"
+    hx-target=".offcanvas-body"
+    hx-trigger="filter-event">
+
+        <div class="offcanvas-body">
+            Loading...
+        </div>
+</div>
+
+<template url="/sidebar" delay="1500">
+    <h2>Sidebar Headline only visible when /sidebar is directly requested</h2>
+  <div class="sidebar">
+        Sidebar
+    </div>
+</template>
+----
+
+A working Codepen can be found under https://codepen.io/localhorst/pen/RwYvWyE (log in, switch to debug mode to see that URL hash change).
+
+What I like about this approach is, it's very compact. Everything is  in one place. No snippets here and bits there. You look at the markup of that component and that's all there is. At least for this demo. At the  same time, it's ugly, hard to format and as complexity grows you'll end  up putting stuff in a dedicated script block or so.
+
+I don't know if there is any need to add AlpineJS in the mix as a third abstraction of code.
+
+It's a matter of style and maintenance I guess. But now I know how to listen for events from Bootstrap components (https://alpinejs.dev/directives/on#dot[see the `.dot` modifier]) in AlpineJS.
+
+If you have correction or thoughts about it, please let me know. I  don't claim, that's the way to do it. I just made it work that way.

@@ -1,14 +1,42 @@
 = Magic Properties
 
-`$el`:: {empty}
-`$refs`:: {empty}
-`$store`:: {empty}
-`$watch`:: (See also `x-effect` directive)
+== `$el`
+
+== `$refs`
+
+== `$store`
+
+== `$watch`
+
+(See also `x-effect` directive)
+
 * Is lazy, i.e. it won't run until the first data change.
 * The callback provided receives both the new value AND the old one.
-`$dispatch`:: {empty}
-`$nextTick`:: {empty}
-`$root`:: {empty}
-`$data`:: {empty}
-`$id`:: {empty}
+
+== `$dispatch`
+
+https://codewithhugo.com/alpinejs-component-communication-event-bus/[[article\]]
+
+[quote,https://codewithhugo.com/alpinejs-component-communication-event-bus/]
+____
+It's quite common for developers who discover the “window as event bus” pattern to want to use a name that's camelCased like `eventName`.
+
+Unfortunately, that won't work, since Alpine.js event listeners are registered using HTML attributes and HTML attributes are case insensitive. If we register `x-on:eventName`, as far as HTML is concerned it's `x-on:eventname`. When we `$dispatch('eventName')`, we'll have a mismatch, since we're listening for `eventname` but triggering `eventName`.
+
+I therefore recommend using a dash-cased name like `event-name`.
+____
+
+[quote,https://codewithhugo.com/alpinejs-component-communication-event-bus/]
+____
+Another convention that comes in useful is to namespace your event using `:`. [...]
+Namespacing is useful to avoid event name collisions. 
+____
+
+== `$nextTick`
+
+== `$root`
+
+== `$data`
+
+== `$id`
 
