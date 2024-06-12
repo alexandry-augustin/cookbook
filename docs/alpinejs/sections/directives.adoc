@@ -2,32 +2,61 @@
 
 // https://www.wittyprogramming.dev/articles/introduction-to-alpinejs/
 
-`x-modelable`:: {empty}
-`x-effect`:: (similar to `useEffect()` in React). (See also `$watch` magic command)
+== `x-modelable`
+
+== `x-effect`
+
+Similar to `useEffect()` in React.
+
+NOTE: See also `$watch` magic command
+
 * The code will be run right away AND when data changes.
 * No knowledge of the previous value
-`x-ignore`:: {empty}
-`x-cloak`:: {empty}
-`x-teleport`:: {empty}
-`x-id`:: {empty}
+
+== `x-ignore`
+
+== `x-cloak`
+
+== `x-teleport`
+
+== `x-id`
 
 == Initialisation
 
-`x-data`:: {empty}
-`x-init`:: {empty}
+=== `x-data`
+
+=== `x-init`
 
 == Binding
 
-`x-bind:attribute_name` or `:attribute_name`:: [One-way]
+=== `x-bind:attribute_name` or `:attribute_name`
+
+\[One-way]
+
 //NOTE: `:` is a shorthand syntax `x-bind:` (e.g. `:placeholder` is equivalent to `x-bind:placeholder`).
-`x-text`:: [One-way] to the element's `innerText`
-`x-html`:: [One-way] to the element's `innerHTML`
-`x-model`:: [Two-way]
+
+=== `x-text`
+
+\[One-way] to the element's `innerText`
+
+=== `x-html`
+
+\[One-way] to the element's `innerHTML`
+
+=== `x-model`
+
+\[Two-way]
 
 == Toggle Display
 
-`x-show`:: Toggles the `display:none` element's style depending on the expression's outcome
-`x-if`:: Completely removes the element from the DOM but has two significant constraints +
+=== `x-show`
+
+Toggles the `display:none` element's style depending on the expression's outcome
+
+=== `x-if`
+
+Completely removes the element from the DOM but has two significant constraints +
+
 [NOTE]
 ====
 [quote,https://www.wittyprogramming.dev/articles/introduction-to-alpinejs/]
@@ -42,11 +71,13 @@ Because the Alpine uses the real DOM and not a virtual, the first constraint is 
 ----
 ____
 ====
-`x-transition`:: {empty}
+
+=== `x-transition`
 
 == Loops
 
-`x-for`:: {empty} +
+=== `x-for`
+
 NOTE: `x-for` MUST be declared on a `<template>` element.
 That `<template>` element MUST contain only one root element.
 
@@ -70,7 +101,8 @@ That `<template>` element MUST contain only one root element.
 
 == Events
 
-`x-on:event_name` or `@event_name`:: {empty}
+=== `x-on:event_name` or `@event_name`
+
 //NOTE: `@` is a shorthand syntax `x-on:` (e.g. `@click` is equivalent to `x-on:click`).
 
 === Custom Events
@@ -85,4 +117,4 @@ ____
 It's most useful as a replacement for APIs like `getElementById` and `querySelector`."
 ____
 
-`x-ref`:: {empty}
+=== `x-ref`

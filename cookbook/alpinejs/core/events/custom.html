@@ -10,20 +10,20 @@
         
 			<p>`open-me` is a custom even inside of the component</p>
 
-			<div x-data="{ open: false }" @open-me="open=true">
-				<div @click="$dispatch('open-me')">Open Me</div>
-				<div x-show="open">I've been opened</div>
+			<div x-data="{ open: false }" x-on:open-me="open=true">
+				<button x-on:click="$dispatch('open-me')">Open</button>
+				<div x-show="open">Content...</div>
 			</div>
 
 		<h2>Custom Event Outside of Component</h2>
 
 			<p>Use `.window` at the end of the event to call a custom event from outside of our component by exposing it to the global window.</p>
 
-			<div x-data="{ open: false }" @open-me.window="open=true">
-				<div @click="$dispatch('open-me')">Open Me</div>
-				<div x-show="open">I've been opened</div>
+			<button x-data x-on:click="$dispatch('open-me')">Open</button>
+
+			<div x-data="{ open: false }" x-on:open-me.window="open=true">
+				<div x-show="open">Content...</div>
 			</div>
-			<button x-data @click="$dispatch('open-me')">Open</button>
 
 		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>		
 	</body>
