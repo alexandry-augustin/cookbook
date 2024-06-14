@@ -3,7 +3,7 @@
 // :stylesheet: bootstrap.min.css
 :url-website: https://getbootstrap.com/
 :url-docs: https://getbootstrap.com/docs/
-:url-github: https://github.com/twbs/bootstrap
+:url-repo: https://github.com/twbs/bootstrap
 :url-examples: https://getbootstrap.com/docs/5.0/examples/
 
 ++++
@@ -12,7 +12,7 @@
 
 {url-website}[[website\]]
 {url-docs}[[docs\]]
-{url-github}[[github\]]
+{url-repo}[[repo\]]
 {url-examples}[[examples\]]
 
 https://stackoverflow.com/questions/42252443/vertical-align-center-in-bootstrap-4

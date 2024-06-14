@@ -1,8 +1,19 @@
 = Tailwindcss
 :toc: left
 :url-website: https://tailwindcss.com/
-:url-docs: 
+// :url-docs: 
 :url-repo: https://github.com/tailwindlabs/tailwindcss
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+Popular Third-Party Addons or Libraries:
+
+https://tailwindui.com/[Tailwind UI]:: A collection of professionally designed, pre-built components using Tailwind CSS.
+Headless UI:: A set of completely unstyled, fully accessible UI components designed to integrate beautifully with Tailwind CSS.
+DaisyUI:: A plugin that adds component classes to Tailwind CSS.
+
+PurgeCSS:: {empty}
 
 == Font Size
 

@@ -35,6 +35,10 @@
     let offcanvas = document.getElementById('myOffcanvas');
     let bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
 
+    function statusOffCanvas() {
+			console.log(`offcanvas is ${bsOffcanvas._isShown}`);
+			return bsOffcanvas._isShown;
+		}
     function showOffCanvas() {
       bsOffcanvas.show();
       console.log('offcanvas open');

@@ -13,3 +13,5 @@ include::./sections/attributes.adoc[leveloffset=+1]
 include::./sections/entity_names.adoc[leveloffset=+1]
 
 include::./sections/forms.adoc[leveloffset=+1]
+
+include::./sections/accessibility.adoc[leveloffset=+1]
