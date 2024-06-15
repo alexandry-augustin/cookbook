@@ -1,0 +1,11 @@
+= Troubleshooting
+
+== Uncaught ReferenceError: Alpine is not defined
+
+https://github.com/alpinejs/alpine/discussions/2828
+
+[source,javascript]
+----
+document.addEventListener('alpine:init', () => {
+}
+----

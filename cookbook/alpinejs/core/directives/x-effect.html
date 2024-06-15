@@ -7,6 +7,8 @@
 
 	<body>
 
+		<h1>Example 1</h1>
+
 		<div x-data="{ 
 			name: 'name',
 			value: 0, 
@@ -18,6 +20,14 @@
 				<input type="number" x-model="value">
 			</div>
 			<div x-text="output"></div>
+        </div>
+
+		<h1>Example 2</h1>
+
+		<div x-data="{ show: false }"
+			x-effect="if(show) { toggle(); } function toggle() { alert('Content...'); }">
+			<div x-text="show"></div>
+			<button x-on:click="show = !show" >Toggle</button>
         </div>
     	
 		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>

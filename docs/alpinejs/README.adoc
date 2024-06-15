@@ -37,3 +37,5 @@ include::./sections/magic_properties.adoc[leveloffset=+1]
 include::./sections/globals.adoc[leveloffset=+1]
 
 include::./sections/plugins/index.adoc[leveloffset=+1]
+
+include::./sections/troubleshooting.adoc[leveloffset=+1]

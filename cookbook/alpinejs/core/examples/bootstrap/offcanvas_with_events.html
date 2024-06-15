@@ -27,11 +27,12 @@
 	<div x-data="{ show: false }"
 		x-on:offcanvas-toggle.window="show = !show"
 		x-effect="show?bsOffcanvas.show():bsOffcanvas.hide()">
+		
 		<div x-text="show"></div>
-		<div class="offcanvas offcanvas-end" 
-			tabindex="-1" 
-			id="offcanvas" 
-			aria-labelledby="offcanvasLabel">
+
+		<div id="offcanvas" 
+			class="offcanvas offcanvas-end" 
+			tabindex="-1" >
 			<div class="offcanvas-header">
 				<h5 class="offcanvas-title" id="offcanvasLabel">Title</h5>
 				<button type="button" 
@@ -41,6 +42,7 @@
 			</div>
 			<div class="offcanvas-body">Body</div>
 		</div>
+
 	</div>
 
 	<script>

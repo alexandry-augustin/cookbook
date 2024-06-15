@@ -1,0 +1,79 @@
+<!-- https://medium.com/@wearethreebears/a-comparison-of-a-simple-app-in-vue-js-and-alpine-js-2a8c57f8b0e3 -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Alpine.js TODOs</title>
+	</head>
+
+	<body>
+
+		<div id="app" x-data="todos()">
+			
+			<form @submit.prevent="addNewTask()">
+				<input type="text" x-model="task" placeholder="Task"/>
+				<button type="submit">Add</button>
+			</form>
+
+			<ul style="list-style-type: none;">
+				<template x-for="todo in todos" :key="todo.id">
+					<li :class="{ 'is-complete': todo.isComplete === true }">
+						<input type="checkbox" x-model="todo.isComplete" />
+						<span x-text="todo.task"></span>
+						<button @click="removeTask(todo.id)">Delete</button>
+					</li>
+				</template>
+			</ul>
+
+		</div>
+
+		<script>
+			function todos() {
+				return {
+					
+					/* data */
+
+					increment: 3,
+					task: '',
+					todos: [
+						{
+							id: 1,
+							task: 'Task 1',
+							isComplete: true
+						},
+						{
+							id: 2,
+							task: 'Task 2',
+							isComplete: false
+						}
+					],
+
+					/* methods */
+
+					addNewTask() {            
+						
+						// Return if empty            
+						if (this.task.trim() === '') 
+							return;            
+						
+						// Add new todo            
+						this.todos.push({                
+							id: this.increment++,                
+							task: this.task,                
+							isComplete: false            
+						});
+
+						// clear task
+						this.task = '';        
+					},        
+					removeTask(todoToRemove) {            
+						this.todos = this.todos.filter(todo => todo.id != todoToRemove);        
+					}
+				}
+			}
+		</script>
+    	
+		<!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
+	</body>
+</html> 
