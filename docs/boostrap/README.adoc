@@ -49,6 +49,8 @@ include::./sections/display.adoc[leveloffset=+1]
 
 include::./sections/alignment.adoc[leveloffset=+1]
 
+include::./sections/js.adoc[leveloffset=+1]
+
 // Component and Helpers:
 
 // * Alerts

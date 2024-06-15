@@ -6,7 +6,7 @@
 
 == `x-effect`
 
-Similar to `useEffect()` in React.
+NOTE: Similar to `useEffect()` in React.
 
 NOTE: See also `$watch` magic command
 

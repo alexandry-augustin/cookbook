@@ -1,0 +1,8 @@
+= JavaScript
+
+[quote,https://www.sitepoint.com/bootstrap-5-new-features-examples/#changeindataattributes]
+____
+Bootstrap 5 has changed the naming of the data attributes that are generally used by its components that use JavaScript as part of their functionality. 
+Previously, most components that relied on some JavaScript functionalities would have data attributes starting with `data-`. [...]
+In Bootstrap 5, data attributes for these components now start with `data-bs-`
+____
