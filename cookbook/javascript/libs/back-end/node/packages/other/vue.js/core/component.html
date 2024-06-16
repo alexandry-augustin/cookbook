@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<style>
+		.red {
+			color: red;
+		}
+	</style>
+	<title>Components</title>
+</head>
+
+<body>
+
+	<div id="app">
+		<counter counter-name="one"></counter>
+		<counter counter-name="two"></counter>
+	</div>
+
+	<script>
+		let app = Vue.createApp();
+
+		app.component('counter', {
+			props: [ 'counterName' ], 
+			data: function () {
+				return {
+					count: 0
+				}
+			},
+			template: `
+			<div>
+				{{ counterName }}: 
+				<button v-on:click="count--">-</button> 
+				{{ count }} 
+				<button v-on:click="count++">+</button>
+			</div>`
+		});
+
+		app.mount('#app');
+	</script>
+
+	<!-- <script type='text/javascript' charset='utf-8' src='script.js'></script> -->
+</body>
+
+</html>

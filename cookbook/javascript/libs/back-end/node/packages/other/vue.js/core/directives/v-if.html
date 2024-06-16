@@ -4,25 +4,24 @@
 	<meta charset="utf-8">
 	<!-- <link rel="stylesheet" href="style.css"> -->
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-	<title>v-model</title>
+	<title>v-if</title>
 </head>
 
 <body>
 
 	<div id="app">
-		<input type="text" 
-			v-model="message">
-		<div>{{ message }}</div>
+		<button @click="show = !show" :aria-expanded="show ? 'true' : 'false'">Toggle</button>
+		<div v-if="show">Content...</div>
 	</div>
 	
 	<script>
-		const { createApp, ref } = Vue
+		// const { createApp, ref } = Vue;
 	
-		createApp({
+		Vue.createApp({
 			setup() {
-				const message = ref('')
+				const show = Vue.ref(false)
 				return {
-					message
+					show
 				}
 			}
 		}).mount('#app')

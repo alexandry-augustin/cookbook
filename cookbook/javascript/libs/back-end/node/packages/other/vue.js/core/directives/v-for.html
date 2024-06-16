@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<title>v-show</title>
+</head>
+
+<body>
+
+	<div id="app">
+		<ul>
+			<li v-for="(item, idx) in items" :key="idx">
+				[{{ idx }}] {{ item }}
+			</li>
+		</ul>
+	</div>
+	
+	<script>	
+		Vue.createApp({
+			data() {
+				return {
+					items: [ 'Item 0', 'Item 1', 'Item 2' ]
+				};
+			}
+		}).mount('#app')
+	</script>
+
+	<!-- <script type='text/javascript' charset='utf-8' src='script.js'></script> -->
+</body>
+
+</html>

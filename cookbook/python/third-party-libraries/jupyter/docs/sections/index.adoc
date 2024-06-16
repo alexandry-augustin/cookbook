@@ -1,0 +1,17 @@
+= JupyterLab
+
+== Installation
+
+[source,bash]
+----
+python -m pip install jupyterlab
+----
+
+== Usage
+
+Launch JupyterLab with:
+
+[source,bash]
+----
+jupyter lab
+----

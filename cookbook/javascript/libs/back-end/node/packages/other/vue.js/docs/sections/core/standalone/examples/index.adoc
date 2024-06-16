@@ -1,5 +1,24 @@
 = Examples
 
+== Templating
+
+[source,html]
+----
+<div id="app">
+    <div>{{ message }}</div>
+</div>
+
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                message: 'Content...'
+            };
+        }
+    }).mount('#app')
+</script>
+----
+
 == Text Binding
 
 [source,html]
@@ -10,11 +29,11 @@
 </div>
 
 <script>
-    const { createApp, ref } = Vue
+    // const { createApp, ref } = Vue;
 
-    createApp({
+    Vue.createApp({
         setup() {
-            const message = ref('')
+            const message = Vue.ref('')
             return {
                 message
             }
@@ -34,12 +53,12 @@
 </div>
 
 <script>
-    const { createApp, ref } = Vue
+    // const { createApp, ref } = Vue;
 
-    createApp({
+    Vue.createApp({
         setup() {
             return {
-                count: ref(0)
+                count: Vue.ref(0)
             }
         }
     }).mount('#app')

@@ -21,11 +21,11 @@
 	</div>
 
 	<script>
-		const { createApp, ref } = Vue
+		// const { createApp, ref } = Vue;
 	
-		createApp({
+		Vue.createApp({
 			setup() {
-				const active = ref(false)
+				const active = Vue.ref(false)
 				return {
 					active
 				}

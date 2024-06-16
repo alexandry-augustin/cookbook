@@ -15,11 +15,11 @@
 	</div>
 	
 	<script>
-		const { createApp, ref } = Vue
+		// const { createApp, ref } = Vue;
 	
-		createApp({
+		Vue.createApp({
 			setup() {
-				const show = ref(false)
+				const show = Vue.ref(false)
 				return {
 					show
 				}

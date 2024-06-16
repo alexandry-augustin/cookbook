@@ -1,0 +1,48 @@
+= Jupyter
+:toc: left
+:toclevels: 8
+:url-website: https://jupyter.org/
+:url-repo: https://github.com/jupyter
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+include::./sections/index.adoc[leveloffset=+1]
+
+== Jupyter Notebook
+
+The classic Jupyter Notebook
+
+=== Installation
+
+[source,bash]
+----
+python -m pip install notebook
+----
+
+=== Usage
+
+[source,bash]
+----
+jupyter notebook
+----
+
+== Voilà
+
+https://github.com/voila-dashboards/voila
+
+Voilà turns Jupyter notebooks into standalone web applications 
+
+=== Installation
+
+[source,bash]
+----
+python -m pip install voila
+----
+
+=== Usage
+
+[source,bash]
+----
+voila
+----
