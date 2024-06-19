@@ -79,3 +79,5 @@ include::./sections/units.adoc[leveloffset=+1]
 include::./sections/defaults.adoc[leveloffset=+1]
 
 include::./sections/properties.adoc[leveloffset=+1]
+
+include::./sections/background.adoc[leveloffset=+1]

@@ -1,5 +1,7 @@
 window.dataTable = function () {
   return {
+
+    headers: [], 
     items: [],
     view: 5,
     searchInput: '',
@@ -18,10 +20,19 @@ window.dataTable = function () {
       field: 'name',
       rule: 'asc'
     },
+
     initData() {
-      this.items = data.sort(this.compareOnKey('name', 'asc'))
-      this.showPages()
+
+      this.items = data.sort(this.compareOnKey('name', 'asc'));
+
+      // Get headers
+      let headers = data.map(e => Object.keys(e));
+      headers = headers.flat();
+      this.headers = [...new Set(headers)];
+
+      this.showPages();
     },
+
     compareOnKey(key, rule) {
       return function(a, b) { 
         if (key === 'name' || key === 'job' || key === 'email' || key === 'country') {
@@ -51,15 +62,18 @@ window.dataTable = function () {
         }
       }
     },
+
     checkView(index) {
       return index > this.pagination.to || index < this.pagination.from ? false : true
     },
+
     checkPage(item) {
       if (item <= this.currentPage + 5) {
         return true
       }
       return false
     },
+
     search(value) {
       if (value.length > 1) {
         const options = {
@@ -77,11 +91,13 @@ window.dataTable = function () {
       this.changePage(1)
       this.showPages()
     },
+
     sort(field, rule) {
       this.items = this.items.sort(this.compareOnKey(field, rule))
       this.sorted.field = field
       this.sorted.rule = rule
     },
+
     changePage(page) {
       if (page >= 1 && page <= this.pagination.lastPage) {
         this.currentPage = page
@@ -101,6 +117,7 @@ window.dataTable = function () {
         this.showPages()
       }
     },
+
     showPages() {
       const pages = []
       let from = this.pagination.currentPage - Math.ceil(this.offset / 2)
@@ -117,10 +134,12 @@ window.dataTable = function () {
       }
       this.pages = pages
     },
+
     changeView() {
       this.changePage(1)
       this.showPages()
     },
+
     isEmpty() {
       return this.pagination.total ? false : true
     }

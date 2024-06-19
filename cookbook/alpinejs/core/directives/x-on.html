@@ -1,16 +1,52 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<style>
+			.grey-box {
+				padding: 100px 0;
+				width: 400px;
+				text-align: center;
+				background: #ddd;
+				margin: 20px;
+				display: inline-block;
+			}
+			.green-box {
+				padding: 100px 0;
+				width: 400px;
+				text-align: center;
+				background: #3c783c;
+				margin: 20px;
+				display: inline-block;
+			}
+		</style>
 		<title>x-on</title>
 	</head>
 
 	<body>
         
+		<h1>Example 1</h1>
+
         <div x-data="{ count: 0 }">
             <span x-text="count"></span>
             <button x-on:click="count++">+</button>
         </div>
     	
+		<h1>Example 2</h1>
+
+		<div x-data="{ triggered: false }" 
+			x-on:mouseover="triggered=true"
+			x-bind:class="triggered?'green-box':'grey-box'">mouseover</div>
+		<div x-data="{ triggered: false }"  
+			x-on:mouseleave="triggered=true"
+			x-bind:class="triggered?'green-box':'grey-box'">mouseleave</div>
+		<div x-data="{ triggered: false }"  
+			x-on:dblclick="triggered=true"
+			x-bind:class="triggered?'green-box':'grey-box'">double click</div>
+		<div class="grey-box"
+			x-data="{ x: 0, y: 0 }" 
+			x-on:mousemove="x=$event.offsetx;y=$event.offsety;"
+			>FIXME mousemove (<span x-text="x"></span>, <span x-text="y"></span>)</div>
+
 		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
 	</body>
 </html> 

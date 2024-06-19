@@ -4,13 +4,13 @@
 :toc: left
 :url: https://medium.com/@wearethreebears/a-comparison-of-a-simple-app-in-vue-js-and-alpine-js-2a8c57f8b0e3
 
-Vue.js is one of the most  popular Javascript frameworks in the world right now, originally  released in 2014 and with version 3 just around the corner that's  unlikely to change any time soon.
+Vue.js is one of the most popular Javascript frameworks in the world right now, originally released in 2014 and with version 3 just around the corner that's unlikely to change any time soon.
 
-So why yet another javascript framework, why Alpine? Well, unlike most  modern javascript frameworks, Alpine requires absolutely no build, you  simply include the library and away you go, all features included. It's  also super lightweight, at the time of writing, Alpine is just 4.3kb  (v.1.9.3). However, probably the most attractive things about Alpine for me is its syntax, if you already know Vue, you basically know Alpine,  making it perfect for Vue developers to turn to for projects where Vue  is simply overkill and without the headache of learning something  completely alien. Creator https://calebporzio.com/[Caleb Porzio] (Creator of https://laravel-livewire.com/[Laravel Livewire]) has kept much of the syntax in line with Vue, for example: _v-for_ becomes _x-for, v-show_ becomes _x-show etc,_ he's even included the shortener syntax for _x-on,_ so _x-on:click=`"`" can become_ @click=`"`" if you prefer. All 13 directives can be found here: https://github.com/alpinejs/alpine#learn.
+So why yet another javascript framework, why Alpine? Well, unlike most modern javascript frameworks, Alpine requires absolutely no build, you simply include the library and away you go, all features included. It's also super lightweight, at the time of writing, Alpine is just 4.3kb (v.1.9.3). However, probably the most attractive things about Alpine for me is its syntax, if you already know Vue, you basically know Alpine, making it perfect for Vue developers to turn to for projects where Vue is simply overkill and without the headache of learning something completely alien. Creator https://calebporzio.com/[Caleb Porzio] (Creator of https://laravel-livewire.com/[Laravel Livewire]) has kept much of the syntax in line with Vue, for example: _v-for_ becomes _x-for, v-show_ becomes _x-show etc,_ he's even included the shortener syntax for _x-on,_ so _x-on:click=`"`" can become_ @click=`"`" if you prefer. All 13 directives can be found here: https://github.com/alpinejs/alpine#learn.
 
 (For those wondering why Alpine uses _x-_ instead of _a-_, before deciding on a name, Alpine was known as "`project-x`", a nod to it's past.)
 
-The simple app I want to look at is a simple todo example. "`WWWHHHYYYYY?  WHY ANOTHER TODO EXAMPLE?`" I hear you asking... Well it displays lot's of  basic concepts so...
+The simple app I want to look at is a simple todo example. "`WWWHHHYYYYY? WHY ANOTHER TODO EXAMPLE?`" I hear you asking... Well it displays lot's of basic concepts so...
 
 == Getting started with Vue
 
@@ -45,7 +45,7 @@ npm run serve
 
 == Getting started with Alpine
 
-Alpine doesn't currently have a command line interface but is super easy to  use via CDN -- Create a new html file and add the following line before  the closing body tag:
+Alpine doesn't currently have a command line interface but is super easy to use via CDN -- Create a new html file and add the following line before the closing body tag:
 
 [source,html]
 ----
@@ -95,9 +95,13 @@ We're creating a todo app, so we need a few key features:
 
 The templates for both Vue and Alpine incredibly similar, although there are some minor changes so let's go through them:
 
-* The most obvious change is the use of the +++<template>+++tag, the template tag was an element introduced in HTML 5 that holds code but does not display it. In Vue files, we use +++<template>+++tags to wrap our template code. In Alpine we do not need to do this, as the it can be written in plain HTML files. Instead the +++<template>+++tag in Alpine, because it doesn't have a virtual DOM, is for smart functionality like for loops and if statements.+++</template>++++++</template>++++++</template>+++
-* Unlike Vue, in Alpine we need to find attach our data to our element  ourselves, we can see this on our parent #app element which uses the _x-data_ directive. In our example we've bound the function _todos()_, which will hold all of our data and methods.
-* The only other change we had to make was swapping out *v-** for *x-**
+* The most obvious change is the use of the `<template>` tag, the template tag was an element introduced in HTML 5 that holds code but does not display it. 
+In Vue files, we use `<template>` tags to wrap our template code. 
+In Alpine we do not need to do this, as the it can be written in plain HTML files. 
+Instead the `<template>` tag in Alpine, because it doesn't have a virtual DOM, is for smart functionality like for loops and if statements.
+* Unlike Vue, in Alpine we need to find attach our data to our element ourselves, we can see this on our parent `#app` element which uses the `x-data` directive. 
+In our example we've bound the function `todos()`, which will hold all of our data and methods.
+* The only other change we had to make was swapping out `v-\*` for `x-\*`
 
 == Our data in Vue:
 
@@ -151,7 +155,8 @@ function todos() {
 }
 ----
 
-Like in our templates, there are very few discrepancies the data mark up in Vue and Alpine. _/**/_ has been used in the above examples to represent where more code will sit.  In both examples we use a function to return an object which holds our  data, in Vue we use:
+Like in our templates, there are very few discrepancies the data mark up in Vue and Alpine. _/**/_ has been used in the above examples to represent where more code will sit.
+In both examples we use a function to return an object which holds our data, in Vue we use:
 
 [source,javascript]
 ----
@@ -195,6 +200,7 @@ Here there are no changes at all to the methods themselves, just where they  sit
 
 == Conclusion:
 
-In conclusion, if you're a Vue developer but find yourself using Vue in  situations where its completely overkill or you want to demo some simple functionality, quickly, with no build then Alpine is perfect. As the  examples above illustrate, the learning curve of Alpine for a Vue  developer is almost nothing. If you're not a Vue developer but want to  move away from jQuery or writing custom Vanilla JS for simple  functionality, I think Alpine is certainly worth a try, with no build  necessary, it's quick and easy to get up and running.
+In conclusion, if you're a Vue developer but find yourself using Vue in situations where its completely overkill or you want to demo some simple functionality, quickly, with no build then Alpine is perfect. As the examples above illustrate, the learning curve of Alpine for a Vue developer is almost nothing. 
+If you're not a Vue developer but want to move away from jQuery or writing custom Vanilla JS for simple functionality, I think Alpine is certainly worth a try, with no build necessary, it's quick and easy to get up and running.
 
-While Vue is still my JavaScript framework of choice in many cases, I think  it's important that it has its place. Personally, I believe Alpine will  be a very welcome addition in the front end development world.
+While Vue is still my JavaScript framework of choice in many cases, I think it's important that it has its place. Personally, I believe Alpine will be a very welcome addition in the front end development world.

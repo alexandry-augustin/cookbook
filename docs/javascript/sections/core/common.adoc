@@ -1,4 +1,6 @@
-= Comments
+= Common
+
+== Comments
 
 [source,javascript]
 ----

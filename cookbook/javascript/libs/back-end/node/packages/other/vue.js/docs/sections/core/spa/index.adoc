@@ -5,4 +5,10 @@
 [source,bash]
 ----
 npm create vue@latest
+
+cd prj_name
+npm install
+npm run dev
 ----
+
+NOTE: Make sure your current working directory is the one where you intend to create a project. 

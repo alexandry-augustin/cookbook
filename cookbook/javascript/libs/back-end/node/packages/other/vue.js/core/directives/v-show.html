@@ -10,7 +10,11 @@
 <body>
 
 	<div id="app">
-		<button @click="show = !show" :aria-expanded="show ? 'true' : 'false'">Toggle</button>
+		<button 
+			@click="show = !show" 
+			:aria-expanded="show ? 'true' : 'false'">
+			Toggle
+		</button>
 		<div v-show="show">Content...</div>
 	</div>
 	

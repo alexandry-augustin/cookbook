@@ -1,0 +1,15 @@
+= State Management
+
+== Vuex
+
+https://en.m.wikipedia.org/wiki/Vuex
+
+https://vuex.vuejs.org/
+
+In maintenance mode
+
+Inpsired by React Flux
+
+== Pinia
+
+https://pinia.vuejs.org/

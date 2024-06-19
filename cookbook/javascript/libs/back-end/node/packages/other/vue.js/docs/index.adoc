@@ -15,3 +15,32 @@ Vue is considered a framework. It includes an entire suite of tools, such as rou
 ____
 
 include::./sections/core/index.adoc[leveloffset=+1]
+
+[source,javascript]
+----
+<script>
+    const app = new Vue({ 
+        data: {}, 
+        methods: { }, 
+        computed: { }
+    })
+</script>
+----
+
+Composition API
+
+[source,javascript]
+----
+<script>
+    const app = new Vue({ 
+        setup() { }
+    })
+</script>
+----
+
+[source,javascript]
+----
+<script setup>
+
+</script>
+----

@@ -6,10 +6,13 @@
 	<meta charset="utf-8">
 	<title>Paginated Table</title>
 	<style>
-	td, th {
-		padding: 5px;
+	table {
+		width: 100%;
 	}
-
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
 	th {
 		cursor: pointer;
 	}
@@ -19,13 +22,14 @@
 <body>
 
 	<div id="table" x-data="data">
+
+		<!-- Table -->
 		<table>
 			<thead>
 				<tr>
-					<th @click="sort('name')">Name</th>
-					<th @click="sort('age')">Age</th>
-					<th @click="sort('breed')">Breed</th>
-					<th @click="sort('gender')">Gender</th>
+					<template x-for="(header, key) in headers">
+						<th @click="sort(header)" x-text="header"></th>
+					</template>
 				</tr>
 			</thead>
 			<tbody>
@@ -45,6 +49,7 @@
 			</tbody>
 		</table>
 
+		<!-- Pagination -->
 		<button @click="previousPage">Previous</button>
 		<span x-text="curPage"></span>
 		<button @click="nextPage">Next</button>

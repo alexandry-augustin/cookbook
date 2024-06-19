@@ -2,15 +2,15 @@
 
 function sort_me_out()
 {
-	var a = new Array();
+	let a = new Array();
 	// or
-	var a = [];
+	let a = [];
 
-	var a = new Array(3); // array of 3 undefined elements
+	let a = new Array(3); // array of 3 undefined elements
 
-	var a = ["abc", 123, "def"];
+	let a = ["abc", 123, "def"];
 
-	var a = new Array("abc", 123, "def");
+	let a = new Array("abc", 123, "def");
 
 	a[0] = "opn"
 
@@ -55,7 +55,11 @@ if(require.main === module)
     // print(a);
     
     {
-        const a = [ "Banana", "Orange", "Apple", "Mango" ];
+        const a = [ 
+            "Banana", 
+            "Orange", 
+            "Apple", 
+            "Mango" ];
         console.assert(a.includes("Mango"));
     }
     sort_me_out();

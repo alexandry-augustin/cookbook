@@ -10,24 +10,32 @@
 
 		<div x-data>
 			<template x-for="i in 3">
-				<div x-text="i"></div>
+				<span x-text="i"></span>
 			</template>
 		</div>
 
 		<h1>Without Values</h1>
         
         <div x-data="{ colors: ['Red', 'Orange'] }">
-            <template x-for="color in colors">
+            
+			<template x-for="color in colors">
                 <div x-text="color"></div>
+            </template>
+
+			<template x-for="(color, idx) in colors">
+                <div>
+					<span x-text="idx"></span>: 
+					<span x-text="color"></span>
+				</div>
             </template>
         </div>
 
 		<h1>With Values</h1>
 
 		<div x-data="{ user: { name: 'Peter', age: 10 } }">
-			<template x-for="(value, index) in user">
+			<template x-for="(value, key) in user">
 				<div>
-					<span x-text="index"></span>: <span x-text="value"></span>
+					<span x-text="key"></span>: <span x-text="value"></span>
 				</div>
 			</template>
 		</div>

@@ -1,7 +1,7 @@
 = JavaScript
 :toc: left
 
-image::./res/js.png[]
+image::./res/js.png[width=200]
 
 * developed by Netscape
 * was called LiveScript
@@ -13,9 +13,11 @@ image::./res/js.png[]
 
 == OpenJS Foundation 
 
+https://en.wikipedia.org/wiki/OpenJS_Foundation
+
 * was founded in 2019 from a merger of JS Foundation and Node.js Foundation.
 * made up of 29 open source JavaScript projects (e.g. Appium, Dojo, jQuery, and Node.js, and webpack).
-* Founding members included Google, Microsoft, IBM, PayPal, GoDaddy, and Joyent.
+* founding members included Google, Microsoft, IBM, PayPal, GoDaddy, and Joyent.
 
 == Databases
 
@@ -24,20 +26,9 @@ image::./res/js.png[]
 * Cookies
 * Web SQL Database (deprecated)
 
-== Full Stack JavaScript
+== Standards
 
-Front end: AngularJS, React, VueJS, Knockout.js, Backbone.js.
-
-Back end:  Node.js, Express.js, Meteor, Sails.js, Koa, restify, Keystone.js.
-
-Database: MongoDB, MySQL, PostgreSQL, Apache CouchDB, or Apache Cassandra. 
-
-* MongoDB, Express, Angular, Node.js (MEAN)
-
-* MongoDB, Express, React, Node.js (MERN)
-* MongoDB, Express, VueJS, Node.js (MEVN)
-
-== ECMAScript
+=== ECMAScript
 
 https://en.wikipedia.org/wiki/ECMAScript
 
@@ -74,10 +65,8 @@ https://en.wikipedia.org/wiki/ECMAScript
 |ECMAScript 2022
 |===
 
-== CommonJS
+=== CommonJS
 
 https://en.wikipedia.org/wiki/CommonJS
 
-include::./sections/common.adoc[leveloffset=+1]
-
-include::./sections/browser.adoc[leveloffset=+1]
+include::./sections/core/index.adoc[leveloffset=+1]

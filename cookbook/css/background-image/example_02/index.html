@@ -1,0 +1,55 @@
+<!-- https://stackoverflow.com/questions/56424201/how-to-set-an-anchor-point-for-css-img-cover -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- <link rel="stylesheet" href="style.css"> -->
+		<style>
+		.container {
+			display: inline-block;
+			background-image: url("200x200.jpg");
+			background-size: cover;
+			background-position: calc(131 / 200 * 100%) calc(66 / 200 * 100%);
+			transition: all 1s ease-in-out;
+		}
+
+		img {
+			-o-object-fit: cover;
+				object-fit: cover;
+			-o-object-position: calc(131 / 200 * 100%) calc(66 / 200 * 100%);
+				object-position: calc(131 / 200 * 100%) calc(66 / 200 * 100%);
+			transition: all 1s ease-in-out;
+		}
+
+		.animate[data-property=width] {
+			width: 5px !important;
+		}
+		.animate[data-property=height] {
+			height: 5px !important;
+		}
+		</style>
+		<script>
+		document.addEventListener('click', e => {
+			if (e.target.nodeName.toLowerCase() == 'button') {
+				document.getElementById(e.target.dataset.id).classList.toggle('animate')
+			}
+		})
+		</script>
+		<title>Background Image</title>
+	</head>
+
+	<body>
+		<span id="container-1" data-property="width" class="container" style="width:200px; height:100px"></span>
+		<span id="container-2" data-property="height" class="container" style="width:100px; height:200px"></span>
+
+		<img id="image-1" data-property="width" src="200x200.jpg" alt="" style="width:200px; height:100px">
+		<img id="image-2" data-property="height" src="200x200.jpg" alt="" style="width:100px; height:200px">
+
+		<br>
+
+		<button data-id="container-1">Animate</button>
+		<button data-id="container-2">Animate</button>
+		<button data-id="image-1">Animate</button>
+		<button data-id="image-2">Animate</button>
+	</body>
+</html> 

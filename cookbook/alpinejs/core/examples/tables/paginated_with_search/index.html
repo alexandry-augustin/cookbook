@@ -7,6 +7,15 @@
   <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js' defer></script>
   <script src='https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js' defer></script>
   <script src="./script.js"></script>
+  <style>
+    table {
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
   <title>DataTable</title>
 </head>
 
@@ -17,7 +26,9 @@
         initData();
         $watch('searchInput', value => { search(value) })" >
 
+        <!-- Toolbar -->
         <div>
+
             <span>Show</span>
             <select x-model="view" @change="changeView()">
               <option value="5">5</option>
@@ -26,11 +37,33 @@
               <option value="50">50</option>
               <option value="100">100</option>
             </select>
+            
             <input x-model="searchInput" type="text" placeholder="Search...">
+            
+            <span>
+              <span>Page </span>
+              <span x-text="currentPage"></span>
+              <span> / </span>
+              <span x-text="pagination.lastPage"></span>
+            </span>
+
         </div>
 
+        <!-- Table -->
         <table>
           <thead>
+
+            <template x-for="(header, key) in headers">
+              <th>
+                <span x-text="header"></span>
+                <a @click="sort(header, 'asc')" 
+                  style="cursor: pointer;">^</a>
+                <a @click="sort(header, 'desc')"
+                  style="cursor: pointer;">v</a>
+              </th>
+            </template>
+
+            <!--
             <th>
                 <span>Name</span>
                 <a @click="sort('name', 'asc')" 
@@ -66,6 +99,7 @@
                 <a @click="sort('country', 'desc')"
                   style="cursor: pointer;">v</a>
             </th>
+            -->
           </thead>
           <tbody>
             <template x-for="(item, index) in items" :key="index">
@@ -121,13 +155,6 @@
             <span>Last</span>
           </div>
 
-        </div>
-
-        <div>
-          <span>Page </span>
-          <span x-text="currentPage"></span>
-          <span> / </span>
-          <span x-text="pagination.lastPage"></span>
         </div>
 
       </div>

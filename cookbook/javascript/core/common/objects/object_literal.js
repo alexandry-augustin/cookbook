@@ -11,4 +11,10 @@ if(require.main === module)
     person['exist'] = false
 
     console.log(person);
+
+    const keys = Object.keys(person);
+    const values = Object.values(person);
+
+    console.log(keys);
+    console.log(values);
 }

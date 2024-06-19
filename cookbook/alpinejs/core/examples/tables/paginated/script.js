@@ -1,23 +1,36 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('data', () => ({
+
       items: null,
       sortCol: null,
       sortAsc: false,
       pageSize: 4,
       curPage: 1,
+      headers: [], 
+
       async init() {
+
         let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
-        // Add an ID value
         let data = await resp.json();
+
+        // Get headers
+        let headers = data.map(e => Object.keys(e));
+        headers = headers.flat();
+        this.headers = [...new Set(headers)];
+
+        // Add an ID value
         data.forEach((d,i) => d.id = i);
         this.items = data;
       },
+
       nextPage() {
         if((this.curPage * this.pageSize) < this.items.length) this.curPage++;
       },
+
       previousPage() {
         if(this.curPage > 1) this.curPage--;
       },
+
       sort(col) {
         if(this.sortCol === col) this.sortAsc = !this.sortAsc;
         this.sortCol = col;
@@ -27,6 +40,7 @@ document.addEventListener('alpine:init', () => {
           return 0;
         });
       },
+
       get pagedItems() {
         if(this.items) {
           return this.items.filter((row, index) => {
@@ -36,5 +50,6 @@ document.addEventListener('alpine:init', () => {
           })
         } else return [];
       }
+
     }))
   });
