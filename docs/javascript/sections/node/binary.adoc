@@ -1,6 +1,9 @@
 = Binary
+:url-wiki: https://en.wikipedia.org/wiki/Node.js 
+:url-github: https://github.com/nodejs/node
 
-https://en.wikipedia.org/wiki/Node.js[[wiki\]] https://github.com/nodejs/node[[github\]]
+{url-wiki}[[wiki\]] 
+{url-github}[[github\]]
 
 == Installation
 

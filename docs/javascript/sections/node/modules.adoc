@@ -1,46 +1,45 @@
----
-title: Modules
-author: 
-date: 
-url: 
----
+= Modules
 
-# Exporting Single Function
+==  Exporting Single Function
 
 Module
 
-```javascript
+[source,javascript]
+----
 function function_name() {...}
 module.exports = function_name;
-```
+----
 
 Import
 
-```javascript
+[source,javascript]
+----
 const function_name = require('<relative path>/module_name');
 function_name();
-```
+----
 
-# Exporting Multiple Functions
+==  Exporting Multiple Functions
 
 Module
 
-```javascript
+[source,javascript]
+----
 //function definitions
 function function_name1() {...}
 function function_name2() {...}
 
 module.exports.function_name1 = function_name1;
 module.exports.function_name2 = function_name2;
-```
+----
 
 Import:
 
-```javascript
+[source,javascript]
+----
 const module_name = require('<relative path>/module_name');
 
 //call imported function 
 module_name.function_name1();
 module_name.function_name2();
-```
+----
 

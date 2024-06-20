@@ -63,63 +63,20 @@
                   style="cursor: pointer;">v</a>
               </th>
             </template>
-
-            <!--
-            <th>
-                <span>Name</span>
-                <a @click="sort('name', 'asc')" 
-                  style="cursor: pointer;">^</a>
-                <a @click="sort('name', 'desc')"
-                  style="cursor: pointer;">v</a>
-            </th>
-            <th>
-                <span>Job</span>
-                <a @click="sort('job', 'asc')" 
-                  style="cursor: pointer;">^</a>
-                <a @click="sort('job', 'desc')"
-                  style="cursor: pointer;">v</a>
-            </th>
-            <th>
-                <span>Email</span>
-                <a @click="sort('email', 'asc')" 
-                  style="cursor: pointer;">^</a>
-                <a @click="sort('email', 'desc')"
-                  style="cursor: pointer;">v</a>
-            </th>
-            <th>
-                <span>Year</span>
-                <a @click="sort('year', 'asc')" 
-                  style="cursor: pointer;">^</a>
-                <a @click="sort('year', 'desc')"
-                  style="cursor: pointer;">v</a>
-            </th>
-            <th>
-                <span>Country</span>
-                <a @click="sort('country', 'asc')" 
-                  style="cursor: pointer;">^</a>
-                <a @click="sort('country', 'desc')"
-                  style="cursor: pointer;">v</a>
-            </th>
-            -->
+          
           </thead>
+          
           <tbody>
+
             <template x-for="(item, index) in items" :key="index">
               <tr x-show="checkView(index + 1)">
-                <td>
-                  <span x-text="item.name"></span>
-                </td>
-                <td>
-                  <span x-text="item.job"></span>
-                </td>
-                <td>
-                  <span x-text="item.email"></span>
-                </td>
-                <td>
-                  <span x-text="item.year"></span>
-                </td>
-                <td>
-                  <span x-text="item.country"></span>
-                </td>
+                
+                <template x-for="(header, key) in headers">
+                  <td>
+                    <span x-text="item[header]"></span>
+                  </td>
+                </template>
+
               </tr>
             </template>
 

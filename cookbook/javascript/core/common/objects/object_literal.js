@@ -1,5 +1,7 @@
 // object literal
 
+let assert = require('assert');
+
 if(require.main === module)
 {
     let person = {
@@ -7,10 +9,12 @@ if(require.main === module)
         exist: true
     };
 
-    person.name = 'rob';
-    person['exist'] = false
+    assert(person.name === person['name']);
 
-    console.log(person);
+    person.name = 'rob';
+    assert(person.name === 'rob');
+    person['exist'] = false;
+    assert(person.exist === false);
 
     const keys = Object.keys(person);
     const values = Object.values(person);

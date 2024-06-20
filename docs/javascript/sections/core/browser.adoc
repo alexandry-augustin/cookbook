@@ -66,3 +66,7 @@ ____
 | https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap[`NamedNodeMap`]
 | A `namedNodeMap` is like an array, but the items are  accessed by name or index, though this latter case is merely a  convenience for enumeration, as they are in no particular order in the  list. A `namedNodeMap` has an `item()` method for this purpose, and you can also add and remove items from a `namedNodeMap`.
 |===
+
+== Events
+
+https://www.w3schools.com/jsref/event_onclick.asp
