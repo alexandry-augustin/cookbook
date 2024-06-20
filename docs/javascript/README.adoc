@@ -70,3 +70,5 @@ https://en.wikipedia.org/wiki/ECMAScript
 https://en.wikipedia.org/wiki/CommonJS
 
 include::./sections/core/index.adoc[leveloffset=+1]
+
+include::./sections/node/index.adoc[leveloffset=+1]
