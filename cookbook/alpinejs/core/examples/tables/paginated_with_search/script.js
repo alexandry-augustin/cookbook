@@ -1,12 +1,21 @@
 window.dataTable = function () {
+
   return {
 
     headers: [], 
     items: [],
-    view: 5,
+
     searchInput: '',
+    searchFields: [
+      'name', 
+      'job'
+    ],
+    
+    view: 5,
+
     pages: [],
     offset: 5,
+    currentPage: 1,
     pagination: {
       total: data.length,
       lastPage: Math.ceil(data.length / 5),
@@ -15,7 +24,7 @@ window.dataTable = function () {
       from: 1,
       to: 1 * 5
     },
-    currentPage: 1,
+
     sorted: {
       field: 'name',
       rule: 'asc'
@@ -34,42 +43,26 @@ window.dataTable = function () {
     },
 
     compareOnKey(key, rule) {
+
       return function(a, b) { 
         
         if(key === 'name' || key === 'job' || key === 'email' || key === 'country') {
           
-          let comparison = 0;
           const fieldA = a[key].toUpperCase()
           const fieldB = b[key].toUpperCase()
 
-          if(rule === 'asc') {
-            if(fieldA > fieldB) {
-              comparison = 1;
-            } else if(fieldA < fieldB) {
-              comparison = -1;
-            }
-          } 
-          else {
-            if(fieldA < fieldB) {
-              comparison = 1;
-            } else if(fieldA > fieldB) {
-              comparison = -1;
-            }
-          }
-          return comparison;
+          if(rule === 'asc')
+            return fieldA > fieldB ? 1 : -1;
+          else
+            return fieldA < fieldB ? 1 : -1;
         } 
-        else {
-          if(rule === 'asc') {
-            return a.year - b.year;
-          } 
-          else {
-            return b.year - a.year;
-          }
-        }
+        else
+          return rule === 'asc' ? a.year - b.year : b.year - a.year;
       }
     },
 
     checkView(index) {
+
       return index > this.pagination.to || index < this.pagination.from ? false : true
     },
 
@@ -87,10 +80,7 @@ window.dataTable = function () {
 
         const options = {
           shouldSort: true,
-          keys: [
-            'name', 
-            'job'
-          ],
+          keys: this.searchFields,
           threshold: 0
         }                
         const fuse = new Fuse(data, options);
@@ -106,6 +96,7 @@ window.dataTable = function () {
     },
 
     sort(field, rule) {
+
       // console.log(`${field}, ${rule}`);
       this.items = this.items.sort(this.compareOnKey(field, rule));
       this.sorted.field = field;
@@ -113,7 +104,9 @@ window.dataTable = function () {
     },
 
     changePage(page) {
+
       if(page >= 1 && page <= this.pagination.lastPage) {
+        
         this.currentPage = page;
         const total = this.items.length;
         const lastPage = Math.ceil(total / this.view) || 1;
@@ -132,6 +125,7 @@ window.dataTable = function () {
     },
 
     showPages() {
+
       const pages = [];
       let from = this.pagination.currentPage - Math.ceil(this.offset / 2);
       if(from < 1)
@@ -147,11 +141,13 @@ window.dataTable = function () {
     },
 
     changeView() {
-      this.changePage(1)
-      this.showPages()
+
+      this.changePage(1);
+      this.showPages();
     },
 
     isEmpty() {
+      
       return this.pagination.total ? false : true;
     }
   }

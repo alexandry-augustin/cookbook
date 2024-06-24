@@ -56,7 +56,7 @@
 
             <template x-for="(header, key) in headers">
               <th>
-                <span x-text="header"></span>
+                <span @click="" x-text="header"></span>
                 <a @click="sort(header, 'asc')" 
                   style="cursor: pointer;">^</a>
                 <a @click="sort(header, 'desc')"
@@ -70,13 +70,11 @@
 
             <template x-for="(item, index) in items" :key="index">
               <tr x-show="checkView(index + 1)">
-                
                 <template x-for="(header, key) in headers">
                   <td>
                     <span x-text="item[header]"></span>
                   </td>
                 </template>
-
               </tr>
             </template>
 

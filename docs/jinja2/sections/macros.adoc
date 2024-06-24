@@ -1,0 +1,14 @@
+= Macros
+
+[source,html,title="macro.html"]
+----
+{% macro fct(var1) %}
+<div>{{ var1 }}</div>
+{% endmacro %}
+----
+
+[source,html,title="index.html"]
+----
+{% from "parth/to/macro.html" import fct %}
+{{ fct('value') }}
+----

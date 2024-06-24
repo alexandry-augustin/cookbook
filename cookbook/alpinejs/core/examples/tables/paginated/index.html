@@ -33,19 +33,23 @@
 				</tr>
 			</thead>
 			<tbody>
+
+				<template x-for="item in pagedItems" :key="item.id">
+					<tr>
+						<template x-for="(header, key) in headers">
+							<td>
+							  <span x-text="item[header]"></span>
+							</td>
+						</template>
+					</tr>
+				</template>
+
 				<template x-if="!items">
 					<tr>
 						<td colspan="4"><i>Loading...</i></td>
 					</tr>
 				</template>
-				<template x-for="item in pagedItems" :key="item.id">
-					<tr>
-						<td x-text="item.name"></td>
-						<td x-text="item.age"></td>
-						<td x-text="item.breed"></td>
-						<td x-text="item.gender"></td>
-					</tr>
-				</template>
+
 			</tbody>
 		</table>
 
@@ -55,6 +59,7 @@
 		<button @click="nextPage">Next</button>
 	</div>
 
+	<script type='text/javascript' charset='utf-8' src="data/cats.js"></script>
 	<script type='text/javascript' charset='utf-8' src='script.js'></script>
 	<script type='text/javascript' charset='utf-8' src='../../../alpinejs.3.13.2.cdn.min.js'></script>
 	

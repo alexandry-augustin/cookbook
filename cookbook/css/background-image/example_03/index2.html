@@ -1,0 +1,40 @@
+<!-- https://www.geeksforgeeks.org/how-to-blur-background-image-using-css/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Blurred Background Image</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+      
+        .background {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("pattern.png");
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1;
+        }
+      
+        .text-container {
+            text-align: center;
+        }
+    </style>
+</head>
+  
+<body>
+
+    <div class="background"></div>
+    <div class="text-container">
+        <h1 style="color:green">Lorem Ipsum</h1>
+        <h3>Lorem Ipsum</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+
+</body>
+</html>

@@ -21,4 +21,10 @@ if(require.main === module)
 
     console.log(keys);
     console.log(values);
+
+    // rename a key
+    // https://stackoverflow.com/questions/4647817/javascript-object-rename-key
+    person['firstname'] = person['name'];
+    delete person['name'];
+    console.log(Object.keys(person));
 }
