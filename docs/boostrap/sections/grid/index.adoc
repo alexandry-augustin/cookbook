@@ -15,6 +15,16 @@ ____
 `size`::
 from 1 to 12
 
+[source,html,title="index.html"]
+----
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <!-- ... -->
+    </div>
+</div>
+----
+
 include::./container.adoc[leveloffset=+1]
 
 include::./rows.adoc[leveloffset=+1]
@@ -24,5 +34,3 @@ include::./columns.adoc[leveloffset=+1]
 include::./row-cols.adoc[leveloffset=+1]
 
 include::./gutters.adoc[leveloffset=+1]
-
-include::./examples.adoc[leveloffset=+1]

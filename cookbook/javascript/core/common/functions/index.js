@@ -1,6 +1,6 @@
 function add_one(n)
 {
-    return n+1
+    return n+1;
 }
 
 function named_properties({ lhs, rhs })
@@ -82,7 +82,7 @@ if(require.main === module)
     {
         console.assert(f_02("abc")=="abc");
         //lambda function:
-        let g_02=function(arg_00) { return arg_00; }
+        let g_02 = function(arg_00) { return arg_00; }
         console.assert(g_02(5)==5);
     }
     {

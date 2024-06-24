@@ -3,21 +3,3 @@
 ....
 row-cols-[breakpoint]-[size]
 ....
-
-Example
-
-++++
-<div class="container">
-  <div class="row row-cols-4">
-    <div class="col border">
-      Column 1
-    </div>
-    <div class="col border">
-      Column 2
-    </div>
-    <div class="col border">
-      Column 33
-    </div>
-  </div>
-</div>
-++++

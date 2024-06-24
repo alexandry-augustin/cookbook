@@ -62,16 +62,11 @@ window.dataTable = function () {
     },
 
     checkView(index) {
-
-      return index > this.pagination.to || index < this.pagination.from ? false : true
+      return index > this.pagination.to || index < this.pagination.from ? false : true;
     },
 
     checkPage(item) {
-
-      if(item <= this.currentPage + 5)
-        return true;
-
-      return false;
+      return item <= (this.currentPage + 5);
     },
 
     search(value) {
@@ -141,13 +136,11 @@ window.dataTable = function () {
     },
 
     changeView() {
-
       this.changePage(1);
       this.showPages();
     },
 
     isEmpty() {
-      
       return this.pagination.total ? false : true;
     }
   }

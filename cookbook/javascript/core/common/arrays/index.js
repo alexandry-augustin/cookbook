@@ -1,22 +1,31 @@
 // Arrays
 
+function init()
+{
+    {
+        let a = new Array();
+    }
+    {
+	    let a = [];
+    }
+    {
+        let a = new Array(3); // array of 3 undefined elements
+    }
+    {
+	    let a = ["abc", 123, "def"];
+    }
+    {
+	    let a = new Array("abc", 123, "def");
+    }
+}
+
 function sort_me_out()
 {
-	let a = new Array();
-	// or
-	let a = [];
-
-	let a = new Array(3); // array of 3 undefined elements
-
-	let a = ["abc", 123, "def"];
-
-	let a = new Array("abc", 123, "def");
+    let a = ["abc", 123, "def"];
 
 	a[0] = "opn"
 
 	console.assert(a[0] == "opn");
-
-	a.sort()
 	
 	for(i = 0; i < a.length; i++)
 	{
@@ -28,6 +37,55 @@ function sort_me_out()
 	Array.isArray(a);
 	//or
 	a instanceof Array;
+}
+
+function sorting() {
+    /* 
+    The sort() method of Array instances sorts the elements of an 
+    array in place and returns the reference to the same array, now sorted. 
+    The default sort order is ascending, built upon converting the elements 
+    into strings, then comparing their sequences of UTF-16 code units values.
+    
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    */
+    {
+        let a = [0, 2, -1];
+        
+        a.sort();
+        
+        console.assert(a[0] == -1);
+        console.assert(a[1] == 0);
+        console.assert(a[2] == 2);
+    }
+    {
+        let a = [0, 2, -1];
+
+        let compareFunction = (a, b) => { return a - b; }
+        a.sort(compareFunction);
+        
+        console.assert(a[0] == -1);
+        console.assert(a[1] == 0);
+        console.assert(a[2] == 2);
+    }
+    {
+        let a = [0, 2, -1, "h", "b"];
+
+        let compareFunction = (a, b) => { return a - b; }
+        a.sort(compareFunction);
+        
+        //console.log(a);
+        // console.assert(a[0] == -1);
+        // console.assert(a[1] == 0);
+        // console.assert(a[2] == 2);
+    }
+    {
+        let a = ["aa", "aA", "Aa"];
+        a.sort();
+        
+        console.assert(a[0] == 'Aa');
+        console.assert(a[1] == 'aA');
+        console.assert(a[2] == 'aa');
+    }
 }
 
 function print(a)
@@ -59,8 +117,12 @@ if(require.main === module)
             "Banana", 
             "Orange", 
             "Apple", 
-            "Mango" ];
+            "Mango" 
+        ];
         console.assert(a.includes("Mango"));
     }
+
+    init();
+    sorting();
     sort_me_out();
 }
