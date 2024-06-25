@@ -150,11 +150,11 @@
   <p>Nested</p>
 
   <div class="d-flex justify-content-center p-2 bg-secondary" style="height: 200px;">
-      <div class="d-flex flex-column align-self-center flex-fill">
-        <div class="p-2 text-center bg-info">Flex inner 1</div>
-        <div class="p-2 text-center bg-warning">Flex inner 2</div>
-        <div class="p-2 text-center bg-primary">Flex inner 3</div>
-      </div>
+    <div class="d-flex flex-column align-self-center flex-fill">
+      <div class="p-2 text-center bg-info">Flex inner 1</div>
+      <div class="p-2 text-center bg-warning">Flex inner 2</div>
+      <div class="p-2 text-center bg-primary">Flex inner 3</div>
+    </div>
   </div>
 
   <div class="h1">Justify Content</div>
@@ -297,16 +297,85 @@
 
   <div class="h1">Wrap</div>
 
-  flex-nowrap: browser default
-  flex-wrap: wrap
-  flex-wrap-reverse: reverse wrap
+  <div class="h2">Horizontal</div>
 
-  flex[-sm|md|lg|xl|xxl]-[nowrap|wrap|wrap-reverse]
+  <p>flex[-sm|md|lg|xl|xxl]-[nowrap|wrap|wrap-reverse]</p>
 
-  <div class="d-flex flex-wrap">
+  <p>flex-nowrap (browser default)</p>
+
+  <div class="d-flex flex-nowrap bg-secondary" style="max-width: 200px;">
     <div class="p-2 bg-info">Flex item 1</div>
     <div class="p-2 bg-warning">Flex item 2</div>
     <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+
+  <p>flex-wrap</p>
+
+  <div class="d-flex flex-wrap bg-secondary" style="max-width: 200px;">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+
+  <p>flex-wrap-reverse</p>
+
+  <div class="d-flex flex-wrap-reverse bg-secondary" style="max-width: 200px;">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+
+  <!--
+  <div class="h2">Vertical</div>
+
+  <div class="d-flex flex-column flex-wrap bg-secondary" style="max-height: 400px;">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+  -->
+
+  <h1>Nesting</h1>
+
+  <div class="d-flex bg-secondary">
+    <div class="p-2 bg-danger flex-fill">
+
+      <div class="d-flex flex-column">
+        <div class="p-2 bg-info flex-fill" style="height: 200px;">Flex inner 1</div>
+        <div class="p-2 bg-warning flex-fill">Flex inner 2</div>
+      </div>
+    </div>
+    <div class="p-2 bg-danger flex-fill">
+      <div class="d-flex flex-column">
+        <div class="p-2 bg-info flex-fill">Flex inner 1</div>
+        <div class="p-2 bg-warning flex-fill">Flex inner 2</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-2"></div>
+
+  <div class="d-flex justify-content-center p-2 bg-secondary" style="height: 400px;">
+    <div class="d-flex flex-column align-self-center flex-fill">
+      <div class="p-2 text-center bg-info">
+        <div class="d-flex">
+          <div class="p-2 bg-info flex-fill">Flex inner 1</div>
+          <div class="p-2 bg-warning flex-fill">Flex inner 2</div>
+        </div>
+      </div>
+      <div class="p-2 text-center bg-warning">
+        <div class="d-flex">
+          <div class="p-2 bg-info flex-fill" style="height: 100px;">Flex inner 1</div>
+          <div class="p-2 bg-warning flex-fill">Flex inner 2</div>
+        </div>
+      </div>
+      <div class="p-2 text-center bg-primary">
+        <div class="d-flex">
+          <div class="p-2 bg-info flex-fill">Flex inner 1</div>
+          <div class="p-2 bg-warning flex-fill">Flex inner 2</div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </body>

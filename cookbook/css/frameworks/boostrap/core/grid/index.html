@@ -58,6 +58,27 @@
     </div>
   </div>
 
+  <h1>Nested</h1>
+
+  <p>row</p>
+
+  <div class="container-fluid bg-secondary">
+    <div class="row">
+
+      <div class="col border bg-success">Column 2</div>
+
+      <div class="col border">
+        <div class="row p-2 bg-danger">
+          <div class="col border bg-info">Inner Col 1</div>
+          <div class="col border bg-warning">Inner Col 2</div>
+          <div class="col border bg-primary">Inner Col 2</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
   <h1>offset</h1>
 
   <div class="container-fluid bg-secondary">
@@ -67,13 +88,68 @@
     </div>
   </div>
 
-  <h1>row-cols</h1>
+  <h1>justify-content</h1>
+
+  <p>justify-content-start</p>
 
   <div class="container-fluid bg-secondary">
-    <div class="row row-cols-4">
+    <div class="row justify-content-start">
+      <div class="col-3 border bg-info">Column 1</div>
+      <div class="col-3 border bg-warning">Column 2</div>
+      <div class="col-3 border bg-primary">Column 3</div>
+    </div>
+  </div>
+
+  <p>justify-content-end</p>
+
+  <div class="container-fluid bg-secondary">
+    <div class="row justify-content-end">
+      <div class="col-3 border bg-info">Column 1</div>
+      <div class="col-3 border bg-warning">Column 2</div>
+      <div class="col-3 border bg-primary">Column 3</div>
+    </div>
+  </div>
+
+  <p>justify-content-center</p>
+
+  <div class="container-fluid bg-secondary">
+    <div class="row justify-content-center">
+      <div class="col-3 border bg-info">Column 1</div>
+      <div class="col-3 border bg-warning">Column 2</div>
+      <div class="col-3 border bg-primary">Column 3</div>
+    </div>
+  </div>
+
+  <p>justify-content-between</p>
+
+  <div class="container-fluid bg-secondary">
+    <div class="row justify-content-between">
+      <div class="col-3 border bg-info">Column 1</div>
+      <div class="col-3 border bg-warning">Column 2</div>
+      <div class="col-3 border bg-primary">Column 3</div>
+    </div>
+  </div>
+
+  <h1>row-cols</h1>
+
+  <!--
+  <div class="container-fluid bg-secondary">
+    <div class="row row-cols-3">
       <div class="col border bg-info">Column 1</div>
       <div class="col border bg-warning">Column 2</div>
       <div class="col border bg-primary">Column 3</div>
+    </div>
+  </div>
+  -->
+
+  <p>Two columns grid (i.e. all rows of size two)</p>
+
+  <div class="container-fluid bg-secondary">
+    <div class="row row-cols-2">
+      <div class="col border bg-info">Column 1</div>
+      <div class="col border bg-warning">Column 2</div>
+      <div class="col border bg-primary">Column 3</div>
+      <div class="col border bg-success">Column 4</div>
     </div>
   </div>
 

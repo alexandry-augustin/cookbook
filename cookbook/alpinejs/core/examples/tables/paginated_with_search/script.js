@@ -32,6 +32,9 @@ window.dataTable = function () {
 
     initData() {
 
+      // https://stackoverflow.com/questions/2802341/natural-sort-of-alphanumerical-strings-in-javascript
+      // this.collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+
       this.items = data.sort(this.compareOnKey('name', 'asc'));
 
       // Get headers
@@ -45,11 +48,26 @@ window.dataTable = function () {
     compareOnKey(key, rule) {
 
       return function(a, b) { 
+
+        // FIXME localeCompare() fail if fieldA is of type 'numeric'
+        const fieldA = String(a[key]);
+        const fieldB = String(b[key]);
+        
+        if(rule === 'asc')
+          return fieldA.localeCompare(fieldB, undefined, { numeric: true, sensitivity: 'base' });
+        else
+          return fieldB.localeCompare(fieldA, undefined, { numeric: true, sensitivity: 'base' });
+      }
+    },
+
+    /*compareOnKeyBkp(key, rule) {
+
+      return function(a, b) { 
         
         if(key === 'name' || key === 'job' || key === 'email' || key === 'country') {
           
-          const fieldA = a[key].toUpperCase()
-          const fieldB = b[key].toUpperCase()
+          const fieldA = a[key].toUpperCase();
+          const fieldB = b[key].toUpperCase();
 
           if(rule === 'asc')
             return fieldA > fieldB ? 1 : -1;
@@ -59,7 +77,7 @@ window.dataTable = function () {
         else
           return rule === 'asc' ? a.year - b.year : b.year - a.year;
       }
-    },
+    },*/
 
     checkView(index) {
       return index > this.pagination.to || index < this.pagination.from ? false : true;
