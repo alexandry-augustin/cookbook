@@ -44,3 +44,5 @@ Composition API
 
 </script>
 ----
+
+include::./sections/third-party/index.adoc[leveloffset=+1]

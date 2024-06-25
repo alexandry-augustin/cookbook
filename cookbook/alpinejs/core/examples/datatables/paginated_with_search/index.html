@@ -1,0 +1,119 @@
+<!-- https://codepen.io/tommyia/pen/GRoJMey -->
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js' defer></script>
+  <script src='https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js' defer></script>
+  <script src="./data.js"></script>
+  <script src="./script.js"></script>
+  <style>
+    table {
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+  <title>DataTable</title>
+</head>
+
+<body>
+  
+  <div x-data="dataTable()"
+    x-init="
+    initData();
+    $watch('searchInput', value => { search(value) })" >
+
+    <!-- Toolbar -->
+    <div>
+
+        <span>Show</span>
+        <select x-model="view" @change="changeView()">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        
+        <input x-model="searchInput" type="text" placeholder="Search...">
+        
+        <span>
+          <span>Page </span>
+          <span x-text="currentPage"></span>
+          <span> / </span>
+          <span x-text="pagination.lastPage"></span>
+        </span>
+
+    </div>
+
+    <!-- Table -->
+    <table>
+      <thead>
+
+        <template x-for="(header, key) in headers">
+          <th>
+            <span @click="" x-text="header"></span>
+            <a @click="sort(header, 'asc')" 
+              style="cursor: pointer;">^</a>
+            <a @click="sort(header, 'desc')"
+              style="cursor: pointer;">v</a>
+          </th>
+        </template>
+      
+      </thead>
+      
+      <tbody>
+
+        <template x-for="(item, index) in items" :key="index">
+          <tr x-show="checkView(index + 1)">
+            <template x-for="(header, key) in headers">
+              <td>
+                <span x-text="item[header]"></span>
+              </td>
+            </template>
+          </tr>
+        </template>
+
+        <tr x-show="isEmpty()">
+          <td colspan="5">No matching records found.</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div style="display: flex;">
+
+      <div style="cursor: pointer;" @click.prevent="changePage(1)">
+        <span>First</span>
+      </div>
+      
+      <div style="cursor: pointer;" @click="changePage(currentPage - 1)">
+        <span><</span>
+      </div>
+      
+      <template x-for="item in pages">
+        <div @click="changePage(item)" 
+          style="cursor: pointer;" >
+          <span x-text="item"></span>
+        </div>
+      </template>
+
+      <div style="cursor: pointer;" @click="changePage(currentPage + 1)">
+        <span>></span>
+      </div>
+      
+      <div style="cursor: pointer;" @click.prevent="changePage(pagination.lastPage)">
+        <span>Last</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
