@@ -7,23 +7,25 @@ const fs = require('fs');
 if(require.main === module)
 {
     {
-        let student_data = fs.readFileSync('data.json');
-        let student = JSON.parse(student_data);
+        let data_json = fs.readFileSync('./data/object.json');
+        let data = JSON.parse(data_json);
         
-        console.log(student);
+        // console.log(data);
     }
     {
-        let students_data = fs.readFileSync('array.json');
-        let students = JSON.parse(students_data);
+        let data_json = fs.readFileSync('./data/array.json');
+        let data = JSON.parse(data_json);
 
-        // for(let e in students)
+        // console.log(data);
+
+        // for(let item in data)
         // {
-        //     console.log(e);
+        //     console.log(item);
         // }
-        for(let i = 0; i < students.length; i++)
+        for(let i=0; i<data.length; i++)
         {
-            let student = students[i];
-            console.log(student);
+            let item = data[i];
+            console.log(item);
         }
     }
 }

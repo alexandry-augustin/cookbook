@@ -2,6 +2,13 @@ window.dataTable = function () {
 
   return {
 
+    fields: [
+      "name", 
+      "email", 
+      "jobs", 
+      "country", 
+      "year"
+    ], // null to include all fields
     headers: [], 
     items: [],
 

@@ -14,4 +14,21 @@ ____
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 ----
 
+== Components
+
+[source,html]
+----
+<template>
+    <!-- ... -->
+</template>
+
+<style>
+    /* ... */
+</style>
+
+<script>
+    // ...
+</script>
+----
+
 include::./examples/index.adoc[leveloffset=+1]

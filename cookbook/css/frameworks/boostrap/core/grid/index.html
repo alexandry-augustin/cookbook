@@ -69,7 +69,7 @@
 
       <div class="col border">
         <div class="row p-2 bg-danger">
-          <div class="col border bg-info">Inner Col 1</div>
+          <div class="col border bg-">Inner Col 1</div>
           <div class="col border bg-warning">Inner Col 2</div>
           <div class="col border bg-primary">Inner Col 2</div>
         </div>
@@ -85,6 +85,43 @@
     <div class="row">
       <div class="col-4 border bg-info">Column 1</div>
       <div class="col-4 offset-4 border bg-warning">Column 2</div>
+    </div>
+  </div>
+
+  <h1>Gutters</h1>
+
+  <p>Horizontal</p>
+
+  <div class="container-fluid bg-secondary">
+    <div class="row gx-5">
+      <div class="col">
+        <div class="border bg-info">Column 1</div>
+      </div>
+      <div class="col">
+        <div class="border bg-warning">Column 2</div>
+      </div>
+      <div class="col">
+        <div class="border bg-primary">Column 3</div>
+      </div>
+    </div>
+  </div>
+
+  <p>Vertical</p>
+
+  <div class="container overflow-hidden">
+    <div class="row gy-5">
+      <div class="col-6">
+        <div class="p-3 border bg-light">Column 1</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Column 2</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Column 3</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Column 4</div>
+      </div>
     </div>
   </div>
 
@@ -167,6 +204,7 @@
 
   <h1>Breakpoints</h1>
   
+  <p>col-md</p>
   <p>size < breakpoint: stacked vertically</p>
   <p>size > breakpoint: table</p>
 
@@ -174,6 +212,37 @@
     <div class="row">
       <div class="col-md border bg-success">Column 1</div>
       <div class="col-md border bg-warning">Column 2</div>
+    </div>
+  </div>
+
+  <p>With reordering</p>
+
+  <div class="container-fluid bg-secondary">
+    <div class="row">
+      <div class="col-md order-md-last border bg-success">Column 1</div>
+      <div class="col-md order-md-first border bg-warning">Column 2</div>
+    </div>
+  </div>
+
+  <h1>Ordering</h1>
+
+  <p>order-[1-12]</p>
+
+  <div class="container-fluid bg-secondary">
+    <div class="row">
+      <div class="col border bg-success">Column 1  (unordered)</div>
+      <div class="col order-12 border bg-warning">Column 2 (order-12)</div>
+      <div class="col order-1 border bg-primary">Column 3 (order-1)</div>
+    </div>
+  </div>
+
+  <p>order-[first-last]</p>
+
+  <div class="container-fluid bg-secondary">
+    <div class="row">
+      <div class="col order-last border bg-success">Column 1 (order-last)</div>
+      <div class="col border bg-warning">Column 2 (unordered)</div>
+      <div class="col order-first border bg-primary">Column 3 (order-first)</div>
     </div>
   </div>
 
