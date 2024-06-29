@@ -1,0 +1,10 @@
+div{
+    width: 135px;
+    display: inline-block
+  }
+  input{
+    width: 120px
+  }
+  .valid{background: rgba(50,205,50, .3)}
+  .invalid{background: rgba(255,0,0, .3)}
+  
