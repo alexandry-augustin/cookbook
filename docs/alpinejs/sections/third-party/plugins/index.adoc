@@ -1,3 +1,5 @@
 = Plugins
 
 include::./ajax.adoc[leveloffset=+1]
+
+include::./spruce.adoc[leveloffset=+1]
