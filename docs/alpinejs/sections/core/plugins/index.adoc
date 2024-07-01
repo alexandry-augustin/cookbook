@@ -2,11 +2,10 @@
 
 Mask:: {empty}
 Intersect:: {empty}
-Persist:: {empty}
 Focus:: {empty}
 Collapse:: {empty}
 Anchor:: {empty}
 Morph:: {empty}
 Sort:: {empty}
 
-include::./ajax.adoc[leveloffset=+1]
+include::./persist.adoc[leveloffset=+1]

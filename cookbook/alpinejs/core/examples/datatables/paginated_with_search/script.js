@@ -104,6 +104,10 @@ window.dataTable = function () {
       this.sorted.rule = rule;
     },
 
+    toggleSort() {
+      alert('YO');
+    }, 
+
     changePage(page) {
 
       if(page >= 1 && page <= this.pagination.lastPage) {

@@ -1,0 +1,35 @@
+= Core
+
+Developed by Caleb Porzio.
+
+== Installation
+
+=== CDN
+
+[source,html]
+----
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+----
+
+== Components
+
+The `x-data` directive is what defines a component and activate Alpine.js.
+
+For example, the example below won't work if `x-data` is omitted:  
+
+[source,html]
+----
+<div x-data> 
+    <button @click="alert('Test')">Show</button>
+</div>
+----
+
+include::./directives.adoc[leveloffset=+1]
+
+include::./magic_properties.adoc[leveloffset=+1]
+
+include::./globals.adoc[leveloffset=+1]
+
+include::./plugins/index.adoc[leveloffset=+1]
+
+include::./troubleshooting.adoc[leveloffset=+1]

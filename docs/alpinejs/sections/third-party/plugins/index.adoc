@@ -1,0 +1,3 @@
+= Plugins
+
+include::./ajax.adoc[leveloffset=+1]

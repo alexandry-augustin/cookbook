@@ -59,7 +59,9 @@
 
         <template x-for="(header, key) in headers">
           <th>
-            <span @click="" x-text="header"></span>
+            <span @click="toggleSort()"
+              x-text="header" 
+              style="cursor: pointer;"></span>
             <a @click="sort(header, 'asc')" 
               style="cursor: pointer;">^</a>
             <a @click="sort(header, 'desc')"
