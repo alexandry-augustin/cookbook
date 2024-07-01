@@ -15,7 +15,14 @@
     class="btn btn-primary" 
     data-bs-toggle="modal" 
     data-bs-target="#exampleModal">
-    Open
+    Open (BS)
+  </button>
+
+  <button 
+    type="button" 
+    class="btn btn-primary"
+    onClick="myModal.show();">
+    Open (JS)
   </button>
 
   <!-- Modal -->
@@ -53,10 +60,10 @@
       backdrop: true, 
       keyboard: true, 
       focus: true, 
-    })
-    myModal.show();
-    //myModal.hide();
-    //myModal.toggle();
+    });
+    // myModal.show();
+    // myModal.hide();
+    // myModal.toggle();
   </script>
 
 </body>
