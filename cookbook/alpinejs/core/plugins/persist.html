@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		<title>Persist</title>
+	</head>
+
+	<body>
+
+		<a href="https://alpinejs.dev/plugins/persist#magic-persist">[docs]</a>
+		<h1>With Primitive</h1>
+        
+		<div x-data="{ count: $persist(0) }">
+			<button x-on:click="count--">-</button>
+			<span x-text="count"></span>
+			<button x-on:click="count++">+</button>
+		</div>
+
+		<h1>Custom Key</h1>
+
+		<div x-data="{ count: $persist(0).as('other-count') }">
+			<button x-on:click="count--">-</button>
+			<span x-text="count"></span>
+			<button x-on:click="count++">+</button>
+		</div>
+
+		<h1>clear the data once the user close the tab.</h1>
+
+		<div x-data="{ count: $persist(0).using(sessionStorage) }">
+			<button x-on:click="count--">-</button>
+			<span x-text="count"></span>
+			<button x-on:click="count++">+</button>
+		</div>
+
+	</body>
+</html> 

@@ -7,5 +7,7 @@
 
 [quote,https://github.com/ryangjchandler/spruce]
 ____
-With the release of Alpine 3.x, Spruce has been replaced with a first-party $store helper, as well as Alpine.store. This package will continue to support Alpine 2.x, but only with security releases. I want thank everyone who has used and supported this packages development over the last couple of years, it really does mean a lot. ❤️
+With the release of Alpine `3.x`, Spruce has been replaced with a first-party `$store` helper, as well as `Alpine.store`. 
+This package will continue to support Alpine `2.x`, but only with security releases. 
+I want thank everyone who has used and supported this packages development over the last couple of years, it really does mean a lot. ❤️
 ____

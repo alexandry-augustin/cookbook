@@ -1,4 +1,37 @@
 = Persist
+:url-docs: https://alpinejs.dev/plugins/persist#magic-persist
+
+{url-docs}[[docs\]]
 
 $persiste()
 Local storage
+
+> "The primary API for using this plugin is the magic `$persist` method."
+-- https://alpinejs.dev/plugins/persist#magic-persist
+
+> "Alpine store the value in localStorage."
+-- https://alpinejs.dev/plugins/persist#magic-persist
+
+[quote,https://alpinejs.dev/plugins/persist#magic-persist]
+____
+when a page is reloaded, Alpine will check localStorage (using the name of the property as the key) for a value. 
+If it finds one, it will set the property value from localStorage immediately.
+____
+
+[quote,https://alpinejs.dev/plugins/persist#magic-persist]
+____
+`$persist` works with primitive values as well as with arrays and objects. 
+However, it is worth noting that localStorage must be cleared when the type of the variable changes.
+Given the previous example, if we change count to a value of $persist({ value: 0 }), then localStorage must be cleared or the variable 'count' renamed.
+____
+
+[quote,https://alpinejs.dev/plugins/persist#magic-persist]
+____
+By default, data is saved to localStorage, it does not have an expiration time and it's kept even when the page is closed.
+____
+
+[quote,https://alpinejs.dev/plugins/persist#magic-persist]
+____
+`Alpine.$persist` is exposed globally so it can be used outside of `x-data` contexts. 
+This is useful to persist data from other sources such as `Alpine.store`.
+____
