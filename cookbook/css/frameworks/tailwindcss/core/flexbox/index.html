@@ -2,23 +2,19 @@
 	<head>
 		<meta charset="utf-8">
 		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				corePlugins: {
+					preflight: false,
+				}
+			}
+		</script>
 		<title>Tailwindcss Flexbox</title>
 	</head>
 
 	<body>
 
-		<div class="flex bg-gray-400">
-			<div class="bg-yellow-100">Flex item 1</div>
-			<div class="bg-red-100">Flex item 2</div>
-			<div class="bg-green-100">Flex item 3</div>
-		</div>
-
-
-		<div class="">Direction</div>
-
-		<div class="">Horizontal</div>
-
-		<div class="">Vertical</div>
+		<h1>Flex Container</h1>
 
 		<div class="flex bg-gray-400">
 			<div class="bg-yellow-100">Flex item 1</div>
@@ -26,9 +22,47 @@
 			<div class="bg-green-100">Flex item 3</div>
 		</div>
 
-		<div class="">Justify Content</div>
+		<h1 class="">Direction</h1>
 
-		<div>justify-start</div>
+		<h5 class="">Horizontal</h5>
+
+		<code>flex-row</code>
+
+		<div class="flex flex-row bg-gray-400">
+			<div class="bg-yellow-100">Flex item 1</div>
+			<div class="bg-red-100">Flex item 2</div>
+			<div class="bg-green-100">Flex item 3</div>
+		</div>
+
+		<code>flex-row-reverse</code>
+
+		<div class="flex flex-row-reverse bg-gray-400">
+			<div class="bg-yellow-100">Flex item 1</div>
+			<div class="bg-red-100">Flex item 2</div>
+			<div class="bg-green-100">Flex item 3</div>
+		</div>
+
+		<h5 class="">Vertical</h5>
+
+		<code>flex-col</code>
+
+		<div class="flex flex-col bg-gray-400">
+			<div class="bg-yellow-100">Flex item 1</div>
+			<div class="bg-red-100">Flex item 2</div>
+			<div class="bg-green-100">Flex item 3</div>
+		</div>
+
+		<code>flex-col-reverse</code>
+
+		<div class="flex flex-col-reverse bg-gray-400">
+			<div class="bg-yellow-100">Flex item 1</div>
+			<div class="bg-red-100">Flex item 2</div>
+			<div class="bg-green-100">Flex item 3</div>
+		</div>
+
+		<h1 class="">Justify Content</h1>
+
+		<code>justify-start</code>
 
 		<div class="flex justify-start bg-gray-400">
 			<div class="bg-yellow-100">Flex item 1</div>
@@ -36,7 +70,7 @@
 			<div class="bg-green-100">Flex item 3</div>
 		</div>
 
-		<div>justify-end</div>
+		<code>justify-end</code>
 
 		<div class="flex justify-end bg-gray-400">
 			<div class="bg-yellow-100">Flex item 1</div>
@@ -44,7 +78,7 @@
 			<div class="bg-green-100">Flex item 3</div>
 		</div>
 
-		<div>justify-center</div>
+		<code>justify-center</code>
 
 		<div class="flex justify-center bg-gray-400">
 			<div class="bg-yellow-100">Flex item 1</div>
@@ -52,7 +86,7 @@
 			<div class="bg-green-100">Flex item 3</div>
 		</div>
 
-		<div>justify-evenly</div>
+		<code>justify-evenly</code>
 
 		<div class="flex justify-evenly bg-gray-400">
 			<div class="bg-yellow-100">Flex item 1</div>
@@ -60,7 +94,7 @@
 			<div class="bg-green-100">Flex item 3</div>
 		</div>
 
-		<div>justify-around</div>
+		<code>justify-around</code>
 
 		<div class="flex justify-around bg-gray-400">
 			<div class="bg-yellow-100">Flex item 1</div>
@@ -68,7 +102,7 @@
 			<div class="bg-green-100">Flex item 3</div>
 		</div>
 
-		<div>justify-between</div>
+		<code>justify-between</code>
 
 		<div class="flex justify-between bg-gray-400">
 			<div class="bg-yellow-100">Flex item 1</div>
@@ -76,9 +110,9 @@
 			<div class="bg-green-100">Flex item 3</div>
 		</div>
 
-		<div class="">Align Items</div>
+		<h1 class="">Align Items</h1>
 
-		<div>items-start</div>
+		<code>items-start</code>
 
 		<div class="flex bg-gray-400 h-10 items-start">
 			<div class="bg-yellow-100 h-5">Flex item 1</div>
@@ -86,7 +120,7 @@
 			<div class="bg-green-100 h-5">Flex item 3</div>
 		</div>
 
-		<div>items-end</div>
+		<code>items-end</code>
 
 		<div class="flex bg-gray-400 h-10 items-end">
 			<div class="bg-yellow-100 h-5">Flex item 1</div>
@@ -94,7 +128,7 @@
 			<div class="bg-green-100 h-5">Flex item 3</div>
 		</div>
 
-		<div>items-center</div>
+		<code>items-center</code>
 
 		<div class="flex bg-gray-400 h-10 items-center">
 			<div class="bg-yellow-100 h-5">Flex item 1</div>

@@ -83,11 +83,10 @@ window.dataTable = function () {
           shouldSort: true,
           keys: this.searchFields,
           threshold: 0
-        }                
+        }
         const fuse = new Fuse(data, options);
         this.items = fuse.search(value).map(elem => elem.item);
-      } 
-      else
+      } else
         this.items = data;
 
       // console.log(this.items.length);
@@ -100,12 +99,13 @@ window.dataTable = function () {
 
       // console.log(`${field}, ${rule}`);
       this.items = this.items.sort(this.compareOnKey(field, rule));
+
       this.sorted.field = field;
       this.sorted.rule = rule;
     },
 
-    toggleSort() {
-      alert('YO');
+    toggleSort(field) {
+      this.sort(field, this.sorted.rule == 'asc' ? 'desc' : 'asc');
     }, 
 
     changePage(page) {

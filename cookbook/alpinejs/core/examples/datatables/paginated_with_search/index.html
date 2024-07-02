@@ -40,6 +40,7 @@
           <option value="25">25</option>
           <option value="50">50</option>
           <option value="100">100</option>
+          {# <option value="-1">All</option> #}
         </select>
         
         <input x-model="searchInput" type="text" placeholder="Search...">
@@ -59,7 +60,7 @@
 
         <template x-for="(header, key) in headers">
           <th>
-            <span @click="toggleSort()"
+            <span @click="toggleSort(header)"
               x-text="header" 
               style="cursor: pointer;"></span>
             <a @click="sort(header, 'asc')" 

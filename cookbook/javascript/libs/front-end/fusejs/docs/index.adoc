@@ -1,0 +1,8 @@
+= Fuse.js
+:url-website: https://www.fusejs.io/
+// :url-docs: 
+:url-repo: https://github.com/krisk/fuse
+
+{url-website}[[website\]]
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]

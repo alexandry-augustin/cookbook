@@ -9,12 +9,24 @@
 			.bold-text {
 				font-weight: bold;
 			}
-            </style>
+		</style>
 	</head>
 
 	<body>
+
+		<h3>Binding to Style</h3>
         
-        <h3>Bind to Class</h3>
+		<div x-data="{ open: false }">
+			<button x-on:click="open=!open">Toggle</button>
+		
+			<!-- <span x-text="open"></span> -->
+			<span style="font-weight: bold;"
+				x-bind:style="{ 'color': open ? '' : 'red' }">
+				Contents
+			</span>
+		</div>
+
+        <h3>Binding to Class</h3>
 
 			<h5>Example 1</h5>
 
@@ -38,7 +50,7 @@
 					</span>
 				</div>
 
-		<h3>Bind to 'placeholder' attribute</h3>
+		<h3>Binding to 'placeholder' attribute</h3>
 
 			<div x-data="{ value: '' }">
 				<div>

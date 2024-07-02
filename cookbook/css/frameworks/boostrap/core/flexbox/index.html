@@ -15,9 +15,9 @@
 
   <a href="https://mdbootstrap.com/docs/standard/layout/flexbox/">Ref 3</a>
 
-  <div class="h1">Containers</div>
+  <h1>Flex Container</h1>
 
-  <div class="h5">Default</div>
+  <h5>Default</h5>
 
   <div class="d-flex p-2 bg-secondary">d-flex container</div>
 
@@ -35,9 +35,15 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="h5">Inline</div>
+  <h5>Inline</h5>
 
   <div class="d-inline-flex p-2 bg-secondary">inline-flex container</div>
+
+  <div class="p-2"></div>
+
+  <div class="d-inline-flex p-2 bg-secondary text-white">
+    <div class="p-2 bg-info">Flex item 1</div>  
+  </div>
 
   <div class="p-2"></div>
 
@@ -47,20 +53,9 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="h5">Nested</div>
-
-  <div class="d-flex">
-    <div class="p-2 bg-success flex-fill">Flex Outer 1</div>
-    <div class="p-2 bg-danger flex-fill">
-      <div class="d-flex">
-        <div class="p-2 bg-info flex-fill">Flex inner 1</div>
-        <div class="p-2 bg-warning flex-fill">Flex inner 2</div>
-        <div class="p-2 bg-primary flex-fill">Flex inner 3</div>
-      </div>
-    </div>
-  </div>
-
   <h1>Gaps</h1>
+
+  <code>gap-3</code>
 
   <div class="d-flex gap-3 bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -72,17 +67,19 @@
 
   <!-- <div>"In Bootstrap 5, There is an option to use gap." -- <a href="https://stackoverflow.com/questions/64204395/how-to-make-space-between-items-using-d-flex">https://stackoverflow.com/questions/64204395/how-to-make-space-between-items-using-d-flex</a></div> -->
 
+  <code>style="gap: 20px"</code>
+
   <div class="d-flex bg-secondary" style="gap: 20px">
     <div class="p-2 bg-info">Flex item 1</div>
     <div class="p-2 bg-warning">Flex item 2</div>
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="h1">Direction</div>
+  <h1>Direction</h1>
 
-  <div class="h5">Horizontal</div>
+  <h5>Horizontal</h5>
 
-  <p>flex-row</p>
+  <code>flex-row</code>
 
   <div class="d-flex flex-row bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -90,7 +87,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <p>flex-row-reverse</p>
+  <code>flex-row-reverse</code>
 
   <div class="d-flex flex-row-reverse bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -98,9 +95,9 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="h5">Vertical</div>
+  <h5>Vertical</h5>
 
-  <p>flex-column</p>
+  <code>flex-column</code>
 
   <div class="d-flex flex-column">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -116,7 +113,7 @@
     </ul>
   </div>-->
 
-  <p>flex-column-reverse</p>
+  <code>flex-column-reverse</code>
 
   <div class="d-flex flex-column-reverse">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -125,7 +122,7 @@
   </div>
 
   <!--
-  <p>align-items-center</p>
+  <code>align-items-center</code>
 
   <div class="d-flex flex-column align-items-center bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -134,9 +131,9 @@
   </div>
   -->
 
-  <div class="h5">Both</div>
-
   <!--
+  <h5>Both</h5>
+  
   <div class="bg-secondary" style="height: 150px;">
       <div class="d-flex flex-column justify-content-center" style="height: 100%;">
         <div class="mx-auto p-2 bg-info">Flex item 1</div>
@@ -147,19 +144,9 @@
   <div class="p-2"></div>
   -->
 
-  <p>Nested</p>
+  <h1>Justify Content</h1>
 
-  <div class="d-flex justify-content-center p-2 bg-secondary" style="height: 200px;">
-    <div class="d-flex flex-column align-self-center flex-fill">
-      <div class="p-2 text-center bg-info">Flex inner 1</div>
-      <div class="p-2 text-center bg-warning">Flex inner 2</div>
-      <div class="p-2 text-center bg-primary">Flex inner 3</div>
-    </div>
-  </div>
-
-  <div class="h1">Justify Content</div>
-
-  <div class="p-2">justify-content-start</div>
+  <code>justify-content-start</code>
 
   <div class="d-flex justify-content-start bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -167,7 +154,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="p-2">justify-content-end</div>
+  <code>justify-content-end</code>
 
   <div class="d-flex justify-content-end bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -175,7 +162,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="p-2">justify-content-center</div>
+  <code>justify-content-center</code>
 
   <div class="d-flex justify-content-center bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -183,7 +170,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="p-2">justify-content-around</div>
+  <code>justify-content-around</code>
 
   <div class="d-flex justify-content-around bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -191,7 +178,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="p-2">justify-content-between</div>
+  <code>justify-content-between</code>
 
   <div class="d-flex justify-content-between bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -199,11 +186,11 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="h1">Align Items</div>
+  <h1>Align Items</h1>
   
   <p>Changes the alignment of on the vertical axis.</p>
 
-  <div class="p-2">align-items-start</div>
+  <code>align-items-start</code>
 
   <div 
     class="d-flex bg-secondary align-items-start" 
@@ -213,7 +200,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="p-2">align-items-end</div>
+  <code>align-items-end</code>
 
   <div 
     class="d-flex bg-secondary align-items-end" 
@@ -223,7 +210,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="p-2">align-items-center</div>
+  <code>align-items-center</code>
 
   <div 
     class="d-flex bg-secondary align-items-center" 
@@ -233,7 +220,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
   
-  <div class="p-2">align-items-baseline</div>
+  <code>align-items-baseline</code>
 
   <div 
     class="d-flex bg-secondary align-items-baseline" 
@@ -243,7 +230,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="p-2">align-items-stretch</div>
+  <code>align-items-stretch</code>
 
   <div 
     class="d-flex bg-secondary align-items-stretch" 
@@ -253,9 +240,9 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="h1">Fill / Equal Widths</div>
+  <h1>Fill / Equal Widths</h1>
 
-  <p>flex-fill</p>
+  <code>flex-fill</code>
 
   <div class="d-flex">
     <div class="p-2 bg-info flex-fill">Flex item 1</div>
@@ -263,9 +250,9 @@
     <div class="p-2 bg-primary flex-fill">Flex item 3</div>
   </div>
 
-  <div class="h1">Grow</div>
+  <h1>Grow</h1>
 
-  <p>flex-grow-1</p>
+  <code>flex-grow-1</code>
 
   <div class="d-flex">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -279,13 +266,13 @@
     <div class="p-2 bg-warning flex-grow-1">Flex item 2</div>
   </div>
 
-  <div class="h1">Shrink</div>
+  <h1>Shrink</h1>
 
   ...
 
-  <div class="h1">Auto Margins</div>
+  <h1>Auto Margins</h1>
 
-  <p>me-auto</p>
+  <code>me-auto</code>
 
   <div class="d-flex bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -295,7 +282,7 @@
 
   <div class="p-2"></div>
 
-  <p>ms-auto</p>
+  <code>ms-auto</code>
   
   <div class="d-flex bg-secondary">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -303,13 +290,13 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <div class="h1">Wrap</div>
+  <h1>Wrap</h1>
 
-  <div class="h2">Horizontal</div>
+  <h2>Horizontal</h2>
 
-  <p>flex[-sm|md|lg|xl|xxl]-[nowrap|wrap|wrap-reverse]</p>
+  <code>flex[-sm|md|lg|xl|xxl]-[nowrap|wrap|wrap-reverse]</code>
 
-  <p>flex-nowrap (browser default)</p>
+  <p><code>flex-nowrap</code> (browser default)</code>
 
   <div class="d-flex flex-nowrap bg-secondary" style="max-width: 200px;">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -317,7 +304,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <p>flex-wrap</p>
+  <code>flex-wrap</code>
 
   <div class="d-flex flex-wrap bg-secondary" style="max-width: 200px;">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -325,7 +312,7 @@
     <div class="p-2 bg-primary">Flex item 3</div>
   </div>
 
-  <p>flex-wrap-reverse</p>
+  <code>flex-wrap-reverse</code>
 
   <div class="d-flex flex-wrap-reverse bg-secondary" style="max-width: 200px;">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -334,7 +321,7 @@
   </div>
 
   <!--
-  <div class="h2">Vertical</div>
+  <h2>Vertical</h2>
 
   <div class="d-flex flex-column flex-wrap bg-secondary" style="max-height: 400px;">
     <div class="p-2 bg-info">Flex item 1</div>
@@ -344,6 +331,30 @@
   -->
 
   <h1>Nesting</h1>
+
+  <div class="d-flex">
+    <div class="p-2 bg-success flex-fill">Flex Outer 1</div>
+    <div class="p-2 bg-danger flex-fill">
+      <div class="d-flex">
+        <div class="p-2 bg-info flex-fill">Flex inner 1</div>
+        <div class="p-2 bg-warning flex-fill">Flex inner 2</div>
+        <div class="p-2 bg-primary flex-fill">Flex inner 3</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="p-2"></div>
+
+  <div class="d-flex justify-content-center p-2 bg-secondary" style="height: 200px;">
+    <div class="d-flex flex-column align-self-center flex-fill">
+      <div class="p-2 text-center bg-info">Flex inner 1</div>
+      <div class="p-2 text-center bg-warning">Flex inner 2</div>
+      <div class="p-2 text-center bg-primary">Flex inner 3</div>
+    </div>
+  </div>
+
+  <div class="p-2"></div>
 
   <div class="d-flex bg-secondary">
     <div class="p-2 bg-danger flex-fill">
@@ -388,7 +399,7 @@
 
   <h1>Breakpoints</h1>
 
-  <p>d-md-flex</p>
+  <code>d-md-flex</code>
   <p>size < breakpoint: stacked vertically</p>
   <p>size > breakpoint: flex</p>
 
