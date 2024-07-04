@@ -9,7 +9,7 @@
 				}
 			}
 		</script>
-		<title>Tailwindcss Flexbox</title>
+		<title>Tailwindcss Flex</title>
 	</head>
 
 	<body>
@@ -17,6 +17,16 @@
 		<h1>Flex Container</h1>
 
 		<div class="flex bg-gray-400">
+			<div class="bg-yellow-100">Flex item 1</div>
+			<div class="bg-red-100">Flex item 2</div>
+			<div class="bg-green-100">Flex item 3</div>
+		</div>
+
+		<h1>Gaps</h1>
+
+  		<code>gap-3</code>
+
+		  <div class="flex gap-3 bg-gray-400">
 			<div class="bg-yellow-100">Flex item 1</div>
 			<div class="bg-red-100">Flex item 2</div>
 			<div class="bg-green-100">Flex item 3</div>
@@ -134,6 +144,41 @@
 			<div class="bg-yellow-100 h-5">Flex item 1</div>
 			<div class="bg-red-100 h-5">Flex item 2</div>
 			<div class="bg-green-100 h-5">Flex item 3</div>
+		</div>
+
+		<h1>Grow</h1>
+
+		<code>flex-grow</code>
+	  
+		<div class="flex">
+		  <div class="bg-yellow-100 flex-grow">Flex item 1</div>
+		  <div class="bg-red-100 flex-grow">Flex item 2</div>
+		  <div class="bg-green-100 flex-grow">Flex item 3</div>
+		</div>
+
+		<code>flex-grow</code>
+
+		<div class="flex">
+		  <div class="bg-yellow-100">Flex item 1</div>
+		  <div class="bg-red-100 flex-grow">Flex item 2</div>
+		</div>
+
+		<code>flex-grow</code>
+
+		<div class="flex">
+		  <div class="bg-yellow-100 flex-grow">Flex item 1</div>
+		  <div class="bg-red-100">Flex item 2</div>
+		</div>
+
+		<h1>Breakpoints</h1>
+
+		<code>md:flex</code>
+		<p>size < breakpoint: stacked vertically</p>
+		<p>size > breakpoint: flex</p>
+	  
+		<div class="flex-none md:flex">
+		  <div class="bg-yellow-100 flex-grow">Flex item 1</div>
+		  <div class="bg-red-100 flex-grow">Flex item 2</div>
 		</div>
 
 	</body>
