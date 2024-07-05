@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<title>Vue.js TODOs</title>
+</head>
+
+<body>
+
+	<div id="app">
+			
+		<form @submit.prevent="addNewTask()">
+			<input type="text" v-model="task" placeholder="Task"/>
+			<button type="submit">Add</button>
+		</form>
+
+		<ul style="list-style-type: none;">
+			<template v-for="todo in todos" :key="todo.id">
+				<li :class="{ 'is-complete': todo.isComplete === true }">
+					<input type="checkbox" v-model="todo.isComplete" />
+					<span>{{ todo.task }}</span>
+					<button @click="removeTask(todo.id)">Delete</button>
+				</li>
+			</template>
+		</ul>
+
+	</div>
+	
+	<script>
+		Vue.createApp({
+			setup() {
+
+				let increment = Vue.ref(3);
+				let task = Vue.ref('');
+				let todos = Vue.ref([
+					{
+						id: 1,
+						task: 'Task 1',
+						isComplete: true
+					},
+					{
+						id: 2,
+						task: 'Task 2',
+						isComplete: false
+					}
+				]);
+
+				function addNewTask() {            
+					
+					// Return if empty            
+					if (this.task.trim() === '') 
+						return;            
+					
+					// Add new todo            
+					this.todos.push({                
+						id: this.increment++,                
+						task: this.task,                
+						isComplete: false            
+					});
+
+					// clear task
+					this.task = '';        
+				}
+				
+				function removeTask(todoToRemove) {            
+					this.todos = this.todos.filter(todo => todo.id != todoToRemove);        
+				}
+
+				return {
+					increment, task, todos, 
+					addNewTask, removeTask
+				}
+			}
+		}).mount('#app')
+	</script>
+
+</body>
+
+</html>
