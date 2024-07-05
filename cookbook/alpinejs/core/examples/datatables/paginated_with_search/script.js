@@ -2,15 +2,15 @@ window.dataTable = function () {
 
   return {
 
-    fields: [
-      "name", 
-      "email", 
-      "jobs", 
-      "country", 
-      "year"
+    includeFields: [
+      'name', 
+      'email', 
+      'job', 
+      'country', 
+      'year'
     ], // null to include all fields
-    headers: [], 
-    items: [],
+    headers: null, 
+    items: null,
 
     searchInput: '',
     searchFields: [
@@ -42,12 +42,13 @@ window.dataTable = function () {
       // https://stackoverflow.com/questions/2802341/natural-sort-of-alphanumerical-strings-in-javascript
       // this.collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
 
-      this.items = data.sort(this.compareOnKey(this.sorted.field, this.sorted.rule));
-
       // Get headers
       let headers = data.map(e => Object.keys(e));
       headers = headers.flat();
+      headers = headers.filter(x => this.includeFields.includes(x));
       this.headers = [...new Set(headers)];
+
+      this.items = data.sort(this.compareOnKey(this.sorted.field, this.sorted.rule));
 
       this.showPages();
     },
