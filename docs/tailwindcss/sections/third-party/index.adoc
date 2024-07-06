@@ -1,9 +1,24 @@
 = Third-party
 
-Popular Third-Party Addons or Libraries:
-
-https://tailwindui.com/[Tailwind UI]:: A collection of professionally designed, pre-built components using Tailwind CSS.
-Headless UI:: A set of completely unstyled, fully accessible UI components designed to integrate beautifully with Tailwind CSS.
-DaisyUI:: A plugin that adds component classes to Tailwind CSS.
-
 PurgeCSS:: {empty}
+
+== Component Libraries
+
+=== Tailwind UI (Tailwind Labs)
+
+License: Commercial
+
+https://tailwindui.com/[[website\]]
+
+include::./daisyui.adoc[leveloffset=+2]
+
+// === Headless UI (Tailwind Labs)
+// 
+// License: MIT
+// 
+// https://headlessui.com/[[website\]]
+// https://github.com/tailwindlabs/headlessui[[repo\]]
+
+// Radix Primitives
+// React Aria
+// Ark UI.
