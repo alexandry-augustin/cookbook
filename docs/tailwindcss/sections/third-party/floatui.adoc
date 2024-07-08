@@ -1,0 +1,9 @@
+= Float UI
+:url-website: https://floatui.com/
+:url-repo: https://github.com/MarsX-dev/floatui
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+License: Float UI licensing model
+

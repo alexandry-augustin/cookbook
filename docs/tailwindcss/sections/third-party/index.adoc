@@ -12,6 +12,8 @@ https://tailwindui.com/[[website\]]
 
 include::./daisyui.adoc[leveloffset=+2]
 
+include::./floatui.adoc[leveloffset=+2]
+
 // === Headless UI (Tailwind Labs)
 // 
 // License: MIT
