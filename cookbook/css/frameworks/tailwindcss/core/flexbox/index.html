@@ -14,6 +14,8 @@
 
 	<body>
 
+		https://tailwindcss.com/docs/flex
+
 		<h1>Flex Container</h1>
 
 		<div class="flex bg-gray-400">
@@ -26,7 +28,17 @@
 
   		<code>gap-3</code>
 
-		  <div class="flex gap-3 bg-gray-400">
+		<div class="flex gap-3 bg-gray-400">
+			<div class="bg-yellow-100">Flex item 1</div>
+			<div class="bg-red-100">Flex item 2</div>
+			<div class="bg-green-100">Flex item 3</div>
+		</div>
+
+		<div class="py-3"></div>
+
+		<code>gap-3</code>
+
+		<div class="flex flex-col gap-3 bg-gray-400">
 			<div class="bg-yellow-100">Flex item 1</div>
 			<div class="bg-red-100">Flex item 2</div>
 			<div class="bg-green-100">Flex item 3</div>
@@ -145,7 +157,7 @@
 			<div class="bg-red-100 h-5">Flex item 2</div>
 			<div class="bg-green-100 h-5">Flex item 3</div>
 		</div>
-
+		
 		<h1>Grow</h1>
 
 		<code>flex-grow</code>
@@ -186,7 +198,7 @@
 		<div class="p-2"></div>
 
 		<div class="flex items-center bg-gray-400" style="height: 200px;">
-		  <div class="flex flex-col items-center flex-grow">
+		  <div class="flex flex-col items-center">
 			<div class="bg-yellow-100">Flex inner 1</div>
 			<div class="bg-red-100">Flex inner 2</div>
 			<div class="bg-green-100">Flex inner 3</div>

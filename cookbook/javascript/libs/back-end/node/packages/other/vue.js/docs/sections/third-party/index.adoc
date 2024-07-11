@@ -1,3 +1,5 @@
 = Third-party
 
 https://vuetifyjs.com/en/
+
+include::./ssg.adoc[leveloffset=+1]

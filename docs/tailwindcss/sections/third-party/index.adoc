@@ -14,6 +14,12 @@ include::./daisyui.adoc[leveloffset=+2]
 
 include::./floatui.adoc[leveloffset=+2]
 
+== Flowbite
+
+https://github.com/themesberg/flowbite
+
+https://flowbite.com/
+
 // === Headless UI (Tailwind Labs)
 // 
 // License: MIT

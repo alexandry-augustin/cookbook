@@ -1,0 +1,80 @@
+<!-- https://tailwindcomponents.com/component/accordion-with-tailwindcss -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .accordion-content {
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Accordion -->
+    <div class="flex flex-col gap-3 bg-gray-300">
+
+        <!-- Item 1 -->
+        <div class="transition hover:bg-indigo-50">
+            <!-- header -->
+            <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                <i class="fas fa-plus"></i>
+                <h3>Header 1</h3>
+            </div>
+            <!-- Content -->
+            <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                <p class="leading-6 font-light pl-9 text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+                <button class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9">Learn more</button>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="transition hover:bg-indigo-50">
+            <!-- header -->
+            <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                <i class="fas fa-plus"></i>
+                <h3>Header 2</h3>
+            </div>
+            <!-- Content -->
+            <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                <p class="leading-6 font-light pl-9 text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+                <button class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9">Learn more</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const accordionHeader = document.querySelectorAll(".accordion-header");
+        accordionHeader.forEach((header) => {
+            header.addEventListener("click", function () {
+                const accordionContent = header.parentElement.querySelector(".accordion-content");
+                let accordionMaxHeight = accordionContent.style.maxHeight;
+
+                if (accordionMaxHeight == "0px" || accordionMaxHeight.length == 0) {
+                    accordionContent.style.maxHeight = `${accordionContent.scrollHeight + 32}px`;
+                    header.querySelector(".fas").classList.remove("fa-plus");
+                    header.querySelector(".fas").classList.add("fa-minus");
+                    header.parentElement.classList.add("bg-indigo-50");
+                } else {
+                    accordionContent.style.maxHeight = `0px`;
+                    header.querySelector(".fas").classList.add("fa-plus");
+                    header.querySelector(".fas").classList.remove("fa-minus");
+                    header.parentElement.classList.remove("bg-indigo-50");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				corePlugins: {
+					preflight: false,
+				}
+			}
+		</script>
+		<title>Tailwindcss Centering</title>
+	</head>
+
+	<body>
+
+		<h1>Using Flex</h1>
+
+		<div class="flex bg-gray-400 h-20 justify-center items-center">
+			<div class="bg-yellow-100">Content...</div>
+		</div>
+
+		<h1>Using Margin</h1>
+		
+		<div class="max-w-md mx-auto h-20 text-center bg-gray-400">
+			<div class="bg-yellow-100">Content...</div>
+		</div>
+
+	</body>
+</html> 

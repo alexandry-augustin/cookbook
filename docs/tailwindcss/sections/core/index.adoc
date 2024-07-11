@@ -1,3 +1,5 @@
 = Core
 
 include::./font.adoc[leveloffset=+1]
+
+include::./plugins.adoc[leveloffset=+1]
