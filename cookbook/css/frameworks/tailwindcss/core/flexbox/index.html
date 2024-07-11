@@ -185,24 +185,42 @@
 		<h1>Nesting</h1>			
 
 		<div class="flex bg-gray-400">
-			<div class="bg-red-200 flex-grow">Flex Outer 1</div>
-			<div class="bg-blue-100 flex-grow">
+			<div class="p-2 bg-red-200 flex-grow">Flex Outer 1</div>
+			<div class="p-2 bg-blue-100 flex-grow">
 				<div class="flex">
-					<div class="flex-grow bg-yellow-100">Flex inner 1</div>
-					<div class="flex-grow bg-red-100">Flex inner 2</div>
-					<div class="flex-grow bg-green-100">Flex inner 3</div>
+					<div class="p-2 flex-grow bg-yellow-100">Flex inner 1</div>
+					<div class="p-2 flex-grow bg-red-100">Flex inner 2</div>
+					<div class="p-2 flex-grow bg-green-100">Flex inner 3</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="p-2"></div>
 
-		<div class="flex items-center bg-gray-400" style="height: 200px;">
+		<div class="flex items-center bg-gray-400 h-52">
 		  <div class="flex flex-col items-center">
 			<div class="bg-yellow-100">Flex inner 1</div>
 			<div class="bg-red-100">Flex inner 2</div>
 			<div class="bg-green-100">Flex inner 3</div>
 		  </div>
+		</div>
+
+		<div class="p-2"></div>
+
+		<div class="flex bg-gray-400">
+			<div class="p-2 bg-red-500 flex-grow">
+		
+				<div class="flex flex-col">
+					<div class="p-2 bg-yellow-100 flex-grow h-20">Flex inner 1</div>
+					<div class="p-2 bg-red-100 flex-grow">Flex inner 2</div>
+				</div>
+			</div>
+			<div class="p-2 bg-red-500 flex-grow">
+				<div class="flex flex-col">
+					<div class="p-2 bg-yellow-100 flex-grow">Flex inner 1</div>
+					<div class="p-2 bg-red-100 flex-grow">Flex inner 2</div>
+				</div>
+			</div>
 		</div>
 
 		<h1>Breakpoints</h1>
