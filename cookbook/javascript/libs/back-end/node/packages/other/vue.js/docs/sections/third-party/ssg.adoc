@@ -7,3 +7,5 @@
 
 > "If we compare VuePress with Nuxt.js, we can see that Nuxt.js can almost do everything that VuePress is capable of."
 -- https://blog.bitsrc.io/best-static-site-generators-for-vue-js-e273d52ea208
+
+include::./nuxt/index.adoc[leveloffset=+1]

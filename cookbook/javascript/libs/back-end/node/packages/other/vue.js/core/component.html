@@ -2,7 +2,6 @@
 
 <head>
 	<meta charset="utf-8">
-	<!-- <link rel="stylesheet" href="style.css"> -->
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<title>Vue.js Components</title>
 </head>
@@ -15,9 +14,7 @@
 	</div>
 
 	<script>
-		let app = Vue.createApp();
-
-		app.component('counter', {
+		Vue.createApp().component('counter', {
 			props: [ 'counterName' ], 
 			data: function () {
 				return {
@@ -31,12 +28,8 @@
 				{{ count }} 
 				<button v-on:click="count++">+</button>
 			</div>`
-		});
-
-		app.mount('#app');
+		}).mount('#app');
 	</script>
-
-	<!-- <script type='text/javascript' charset='utf-8' src='script.js'></script> -->
 </body>
 
 </html>

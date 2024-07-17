@@ -1,0 +1,47 @@
+= Project Scaffolding
+
+== Vue CLI (deprecated)
+
+https://cli.vuejs.org/#getting-started
+
+based on webpack
+
+[source,bash]
+----
+npx @vue/cli create
+----
+
+
+== Create Vue
+
+https://github.com/vuejs/create-vue[[repo\]]
+
+`create-vue`
+
+based on Vite
+
+[source,bash]
+----
+npm create vue@latest
+----
+
+NOTE: Will create a new directory named after the project.
+
+[source,bash]
+----
+npm install
+----
+
+Compile and hot-reload for development
+
+[source,bash]
+----
+npm run dev
+----
+
+Compile and minify for production
+
+[source,bash]
+----
+npm run build
+----
