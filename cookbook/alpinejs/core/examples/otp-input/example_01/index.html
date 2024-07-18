@@ -1,0 +1,57 @@
+<!-- https://codepen.io/KevinBatdorf/pen/Vweprqg -->
+ 
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pin number / OTP module with AlpineJS and TailwindCSS</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<div
+  x-data="pinHandler()"
+  x-init="$nextTick(() => { $refs[0].focus() })"
+  class="flex items-start justify-center min-h-screen w-full bg-white p-16 pt-64">
+  <div class="relative p-10 pb-8 bg-indigo-500 mx-auto max-w-md rounded-lg shadow-2xl z-50">
+    <label
+      for="enter-pin"
+      class="block text-3xl mb-2 text-white font-extrabold text-center">Enter PIN</label>
+    <form
+      id="enter-pin"
+      class="flex flex-row flex-wrap justify-center space-x-4"
+      @submit.prevent="handleSubmit()"
+      @paste.prevent="handlePaste($event)">
+      <template x-for="(input, index) in Array.from({ length: length })" :key="index">
+          <input
+            @input.prevent="handleInput($event.target)"
+            @keydown.backspace="$event.target.value || focusPreviousRef($event.target.getAttribute('x-ref'))"
+            autocomplete="off"
+            :aria-label="`Pin ${index + 1}`"
+            data-lpignore="true"
+            :x-ref="index"
+            class="w-12 mb-4 rounded border border-gray-200 p-3 text-center appearance-none"
+            type="text"
+            maxlength="1">
+      </template>
+    </form>
+  </div>
+
+  <p class="absolute bottom-0" x-text="`value: ${value}`"></p>
+</div>
+
+
+<!-- Dev tools -->
+<div
+	id="alpine-devtools"
+	x-data="devtools()"
+	x-show="alpines.length"
+	x-init="start()">
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js'></script>
+<script src='https://codepen.io/KevinBatdorf/pen/GRoEozp/236afb4466871b6444ce7f1ceebaf89c.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
