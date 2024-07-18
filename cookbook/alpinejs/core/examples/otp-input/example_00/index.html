@@ -10,13 +10,12 @@ https://www.therajesh.dev/blog/how-to-create-otp-input-using-alpinejs-and-tailwi
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Alpine.js OTP Input</title>
-        <!-- Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
-        <!-- Alpine.js -->
-        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer ></script>
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     </head>
 
     <body>
+
         <div class="py-6 px-6 w-80 border mx-auto text-center my-6">
             <form action="#" x-data="otpForm()" method="POST">
                 <div class="flex justify-between" x-ref="otpInputContainer">
@@ -27,14 +26,14 @@ https://www.therajesh.dev/blog/how-to-create-otp-input-using-alpinejs-and-tailwi
                         class="otpInput border border-gray-500 w-10 h-10 text-center"
                         x-on:input="handleInput($event, index)"
                         x-on:paste="handlePaste($event)"
-                        x-on:keydown.backspace="$event.target.value || handleBackspace($event, index)"
-                    />
+                        x-on:keydown.backspace="$event.target.value || handleBackspace($event, index)" />
                   </template>
                 </div>
                 <input type="hidden" name="otp" x-model="value">
                 <button type="submit" class="btn-primary mx-auto block bg-gray-500 w-full p-2 mt-2 text-white">Sumbit</button>
             </form>
         </div>
+
         <script>
             function otpForm() {
                 return {
@@ -76,5 +75,6 @@ https://www.therajesh.dev/blog/how-to-create-otp-input-using-alpinejs-and-tailwi
                 };
             }
         </script>
+
     </body>
 </html>

@@ -1,5 +1,6 @@
 = Alpine.js
 :toc: left
+:toclevels: 8
 :url-website: https://alpinejs.dev/
 :url-docs: https://alpinejs.dev/start-here
 :url-repo: https://github.com/alpinejs/alpine

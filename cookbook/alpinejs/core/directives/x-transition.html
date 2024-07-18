@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>x-transition</title>
+	</head>
+
+	<body>
+
+		<p>By default, <code>x-transition</code> applies both a scale and opacity transition to achieve a "fade" effect.</p>
+
+		<div x-data="{ open: false }">
+			<button @click="open = ! open">Toggle</button>
+		 
+			<div x-show="open" x-transition>
+				<div>x-transition</div>
+			</div>
+
+			<div x-show="open" 
+				x-transition:enter.duration.500ms
+				x-transition:leave.duration.400ms
+				x-transition.delay.500ms>
+				<div style="border-width: 1px">
+					<div>x-transition:enter.duration.500ms</div>
+					<div>x-transition:leave.duration.400ms</div>
+					<div>x-transition.delay.50ms</div>
+				</div>
+			</div>
+
+			<div x-show="open" x-transition.opacity>
+				<div style="border-width: 1px">
+					<div>only opacity</div>
+				</div>
+			</div>
+
+			<div x-show="open" x-transition.scale>
+				<div style="border-width: 1px">
+					<div>only scale</div>
+				</div>
+			</div>
+
+			<div x-show="open" x-transition.scale.10>
+				<div style="border-width: 1px">
+					<div>only scale (scale by 10%)</div>
+				</div>
+			</div>
+
+			<div x-show="open"
+				x-transition.scale.origin.top
+				x-transition:enter.scale.80
+				x-transition:leave.scale.90>
+				<div style="border-width: 1px">
+					<div>only scale (scale from 80% to 90% from top)</div>
+				</div>
+			</div>
+
+		</div>
+	
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>
+	</body>
+</html> 

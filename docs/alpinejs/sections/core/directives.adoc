@@ -10,7 +10,7 @@ NOTE: Similar to `useEffect()` in React.
 
 NOTE: See also `$watch` magic command
 
-* The code will be run right away AND when data changes.
+* The code will be run right away **AND** when data changes.
 * No knowledge of the previous value
 
 == `x-ignore`

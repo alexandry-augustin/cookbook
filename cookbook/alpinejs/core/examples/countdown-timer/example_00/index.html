@@ -1,0 +1,38 @@
+<!-- https://codepen.io/harsh/pen/KKdEVPV -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Alpine.js Countdown Timer</title>
+</head>
+
+<body>
+
+  <script type='text/javascript' charset='utf-8' src='../../../alpinejs.3.13.2.cdn.min.js'></script>
+  <script  src="./script.js"></script>
+
+  <!-- <div x-data="timer(new Date().setDate(new Date().getDate() + 1))" x-init="init();"> -->
+  <div 
+    id="counter"
+    x-data="timer(Date.now() + 5*1000)" 
+    x-init="init();">
+
+    <div>Expiry: <span x-text="expiry"></span></div>
+    <div>
+      Countdown: 
+      <span x-text="time().days"></span>:
+      <span x-text="time().hours"></span>:
+      <span x-text="time().minutes"></span>:
+      <span x-text="time().seconds"></span>
+    </div>
+    <div>Remaining: <span x-text="remaining"></span></div>
+    <template x-if="remaining == 0">
+      <div>Time's Up!</div>
+    </template>
+  </div>
+
+</body>
+
+</html>
