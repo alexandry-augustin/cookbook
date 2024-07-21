@@ -20,6 +20,19 @@
 			<button x-on:click="count++">+</button>
 		</div>
 
+		<div x-data="counter()">
+			<button x-on:click="count--">-</button>
+			<span x-text="count"></span>
+			<button x-on:click="count++">+</button>
+		</div>
+		<script>
+			function counter() {
+        		return {
+            		count: Alpine.$persist(0).as('count')
+				}
+			}
+		</script>
+
 		<h1>Custom Local Storage Key</h1>
 
 		<div x-data="{ count: $persist(0).as('other-count') }">
