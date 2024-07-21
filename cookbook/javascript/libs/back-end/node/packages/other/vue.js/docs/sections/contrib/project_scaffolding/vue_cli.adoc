@@ -1,0 +1,10 @@
+= Vue CLI (deprecated)
+
+https://cli.vuejs.org/#getting-started
+
+based on webpack
+
+[source,bash]
+----
+npx @vue/cli create
+----

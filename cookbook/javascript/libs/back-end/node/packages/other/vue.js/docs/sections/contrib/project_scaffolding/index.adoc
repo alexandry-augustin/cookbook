@@ -1,0 +1,18 @@
+= Project Scaffolding
+
+include::./vue_cli.adoc[leveloffset=+1]
+
+include::./create_vue.adoc[leveloffset=+1]
+
+== Vite
+
+https://vitejs.dev/guide/
+
+[source,bash]
+----
+npm init vite-app PRJ_NAME
+
+cd PRJ_NAME
+npm install (or `yarn`)
+npm run dev (or `yarn dev`)
+----

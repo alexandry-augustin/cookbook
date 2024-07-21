@@ -20,33 +20,6 @@ ____
 
 include::./sections/core/index.adoc[leveloffset=+1]
 
-[source,javascript]
-----
-<script>
-    const app = new Vue({ 
-        data: {}, 
-        methods: { }, 
-        computed: { }
-    })
-</script>
-----
-
-Composition API
-
-[source,javascript]
-----
-<script>
-    const app = new Vue({ 
-        setup() { }
-    })
-</script>
-----
-
-[source,javascript]
-----
-<script setup>
-
-</script>
-----
+include::./sections/contrib/index.adoc[leveloffset=+1]
 
 include::./sections/third-party/index.adoc[leveloffset=+1]

@@ -1,20 +1,7 @@
-= Project Scaffolding
+= Create Vue
+:url-repo: https://github.com/vuejs/create-vue
 
-== Vue CLI (deprecated)
-
-https://cli.vuejs.org/#getting-started
-
-based on webpack
-
-[source,bash]
-----
-npx @vue/cli create
-----
-
-
-== Create Vue
-
-https://github.com/vuejs/create-vue[[repo\]]
+{url-repo}[[repo\]]
 
 `create-vue`
 
@@ -23,9 +10,17 @@ based on Vite
 [source,bash]
 ----
 npm create vue@latest
+or
+npm init vue@3
+
+cd prj_name
+npm install
+npm run dev
 ----
 
 NOTE: Will create a new directory named after the project.
+
+NOTE: Make sure your current working directory is the one where you intend to create a project. 
 
 [source,bash]
 ----

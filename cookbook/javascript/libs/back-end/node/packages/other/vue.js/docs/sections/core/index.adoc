@@ -2,14 +2,10 @@
 
 https://vuejs.org/guide/extras/ways-of-using-vue.html[Ways of Using Vue]
 
+include::./api/index.adoc[leveloffset=+1]
+
 include::./directives.adoc[leveloffset=+1]
-
-include::./state_management.adoc[leveloffset=+1]
-
-include::./spa/index.adoc[leveloffset=+1]
 
 include::./standalone/index.adoc[leveloffset=+1]
 
 include::./petite/index.adoc[leveloffset=+1]
-
-include::./project_scaffolding.adoc[leveloffset=+1]
