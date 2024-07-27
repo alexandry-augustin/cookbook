@@ -1,0 +1,31 @@
+= Composition API
+
+NOTE: `this.` is not available in the `setup()` function. 
+
+[source,javascript]
+----
+<script>
+    const app = new Vue({ 
+        name: 'myName', 
+        setup() { 
+          let myVar = 0;
+
+          const myFct = () => {
+
+          }
+
+          return {
+            myVar, 
+            myFct, 
+          }
+        }
+    })
+</script>
+----
+
+[source,javascript]
+----
+<script setup>
+
+</script>
+----

@@ -6,7 +6,7 @@
 
 	<body>
 
-		<h2>Custom Event Inside of Component</h2>
+		<h2>Dispatch from Inside Component</h2>
         
 			<p>`open-me` is a custom even inside of the component</p>
 
@@ -15,9 +15,9 @@
 				<div x-show="open">Content...</div>
 			</div>
 
-		<h2>Custom Event Outside of Component</h2>
+		<h2>Dispatch from Outside Component</h2>
 
-			<p>Use `.window` at the end of the event to call a custom event from outside of our component by exposing it to the global window.</p>
+			<p>Use `.window` at the end of the event to trigger a custom event from outside of our component by exposing it to the global window.</p>
 
 			<button x-data x-on:click="$dispatch('open-me')">Open</button>
 

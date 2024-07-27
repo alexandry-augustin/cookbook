@@ -1,0 +1,95 @@
+= Slots
+
+== Single Slot
+
+[source,title="components/MyComponent.vue"]
+----
+<script>
+    export default {
+        name: 'MyComponent', 
+    }
+</script>
+
+<template>
+    <div>
+        <slot>Default content...</slot>
+    </div>
+</template>
+----
+
+[source,title="App.vue"]
+----
+<script>
+  import MyComponent from './components/MyComponent.vue';
+
+  export default {
+    name: 'App',
+    components: {
+      MyComponent, 
+    },
+  }
+</script>
+
+<template>
+  <MyComponent />
+  <MyComponent></MyComponent>
+  <MyComponent><h1>Content...</h1></MyComponent>
+</template>
+----
+
+== Multiple Slots
+
+[source,title="components/MyComponent.vue"]
+----
+<script>
+    export default {
+        name: 'MyComponent', 
+    }
+</script>
+
+<template>
+    <div>
+        <span>
+            <span><slot name="first-slot">NULL</slot></span>
+            <span> - </span>
+            <span><slot>NULL</slot></span>
+            <span> - </span>
+            <span><slot name="last-slot">NULL</slot></span>
+        </span>
+    </div>
+</template>
+----
+
+[source,title="App.vue"]
+----
+<script>
+  import MyComponent from './components/MyComponent.vue';
+
+  export default {
+    name: 'App',
+    components: {
+      MyComponent, 
+    },
+  }
+</script>
+
+<template>
+  <MyComponent>
+    <template v-slot:first-slot>First</template>
+    <template v-slot:default>Default</template>
+    <template v-slot:last-slot>Last</template>
+  </MyComponent>
+</template>
+----
+
+== Slot Props
+
+[source,title="components/MyComponent.vue"]
+----
+
+----
+
+[source,title="App.vue"]
+----
+
+----

@@ -1,0 +1,47 @@
+= Components
+
+[source,title="components/MyComponent.vue"]
+----
+<script>
+    export default {
+        name: 'MyComponent'
+    }
+</script>
+
+<script setup>
+</script>
+
+<template>
+    Content...
+</template>
+
+<style scoped>
+    /* ... */
+</style>
+----
+
+[source,title="App.vue"]
+----
+<script>
+  import MyComponent from './components/MyComponent.vue';
+
+  export default {
+    name: 'App',
+    components: {
+      MyComponent, 
+    }
+  }
+</script>
+
+<template>
+  <MyComponent />
+</template>
+
+<style scoped>
+    /* ... */
+</style>
+----
+
+include::./props.adoc[leveloffset=+1]
+
+include::./slots.adoc[leveloffset=+1]

@@ -31,6 +31,7 @@
     <template x-if="remaining == 0">
       <div>Time's Up!</div>
     </template>
+    <button x-on:click="reset(Date.now() + 5*1000)">Reset</button>
   </div>
 
 </body>

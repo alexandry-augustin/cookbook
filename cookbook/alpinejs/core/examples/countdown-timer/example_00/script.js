@@ -4,19 +4,31 @@ function timer(expiry) {
     
     expiry: expiry,
     remaining: null,
+    _interval: null, 
 
     init() {
       this.setRemaining();
       // call setRemaining() every second
-      setInterval(() => {
+      this._interval = setInterval(() => {
           this.setRemaining();
       }, 1000);
     },
+
+    reset(expiry) {
+      clearInterval(this._interval);
+
+      this.expiry = expiry;
+      this.remaining = null;
+      this._interval = null; 
+      this.init();
+    }, 
 
     setRemaining() {
       const diff = this.expiry - new Date().getTime();
       if(diff >= 0)
         this.remaining =  parseInt(diff / 1000);
+      else
+        clearInterval(this._interval);
     },
 
     days() {
@@ -58,5 +70,6 @@ function timer(expiry) {
         seconds:this.format(this.seconds().value),
       }
     },
+    
   }
 }

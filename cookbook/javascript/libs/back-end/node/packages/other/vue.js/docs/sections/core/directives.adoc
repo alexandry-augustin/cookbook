@@ -10,4 +10,5 @@ ____
 
 `v-if`:: {empty}
 `v-else`:: {empty}
+`v-else-if`:: {empty}
 `v-show`:: {empty}

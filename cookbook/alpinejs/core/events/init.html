@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Init Event</title>
+		<script src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js" defer></script>
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js' defer></script>
+	</head>
+
+	<body>
+
+		<div x-data="setup()">
+            <span x-text="count"></span>
+            <button x-on:click="onClick">+</button>
+        </div>
+
+		<script>
+			function setup() {
+				return {
+				  count: Alpine.$persist(5), 
+				  onClick() {
+					this.count += 1;
+				  }, 
+				  init() {
+					console.log('Component initialised');
+				}
+				};
+			  }
+
+			document.addEventListener('alpine:init', () => {
+				console.log('Alpine initialised');
+			});
+
+			window.addEventListener('load', (event) => {
+				console.log('Page fully loaded');
+			});
+
+			document.addEventListener("DOMContentLoaded", (event) => {
+				console.log('DOMContentLoaded');
+			});
+		</script>		
+	</body>
+</html> 

@@ -8,10 +8,10 @@
 
 		<h1>Example 1</h1>
 
-		<div>Defining the x-data from external javascript</div>
+		<div>Defining the <code>x-data</code> from external javascript</div>
         
 		<script type='text/javascript'>
-			function getData() {
+			function setup() {
 				return {
 				  message: 'Content...',
 				  output: '',
@@ -22,7 +22,7 @@
 			  }
 		</script>
 
-		<div x-data="getData()">
+		<div x-data="setup()">
 			<button @click="display()">Show</button>
 			<div x-text="output"></div>
 		</div>
