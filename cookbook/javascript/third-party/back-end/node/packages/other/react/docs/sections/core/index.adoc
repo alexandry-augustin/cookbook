@@ -1,0 +1,11 @@
+= Core
+
+include::./create-react-app.adoc[leveloffset=+1]
+
+include::./react.adoc[leveloffset=+1]
+
+include::./react-dom.adoc[leveloffset=+1]
+
+include::./hooks.adoc[leveloffset=+1]
+
+include::./jsx.adoc[leveloffset=+1]

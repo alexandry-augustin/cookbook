@@ -1,0 +1,15 @@
+= Adding Bootstrap
+
+https://create-react-app.dev/docs/adding-bootstrap/
+
+[source,bash]
+....
+npm install bootstrap@5.1.3 --save-dev
+npm install @popperjs/core
+....
+
+[source,js,title="src/index.js"]
+....
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+....

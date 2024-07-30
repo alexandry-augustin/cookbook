@@ -1,0 +1,8 @@
+= `react`
+
+== Installation
+
+[source,bash]
+....
+npm install react
+....

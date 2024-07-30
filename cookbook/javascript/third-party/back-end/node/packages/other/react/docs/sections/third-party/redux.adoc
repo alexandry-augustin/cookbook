@@ -1,0 +1,10 @@
+= Redux
+:url-website: https://react-redux.js.org/
+:url-github: https://github.com/reduxjs/react-redux
+
+== Installation
+
+[source,bash]
+----
+npm install react-redux
+----

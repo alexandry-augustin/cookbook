@@ -1,5 +1,57 @@
 = Core
 
+== Installation
+
+== CDN
+
+[source,html]
+----
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+----
+
+== Node
+
+[source,bash]
+----
+pnpm install -D tailwindcss postcss autoprefixer
+pnpx tailwindcss init -p
+----
+
+== Create Vue
+
+Install tailwindcss and its peer dependencies, then generate your `tailwind.config.js` and `postcss.config.js` files.
+
+[source,bash]
+----
+pnpm install -D tailwindcss postcss autoprefixer
+pnpx tailwindcss init -p
+----
+
+Add the paths to all of your template files in your `tailwind.config.js` file.
+
+[source,javascript,title="tailwind.config.js"]
+----
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+  ],
+  // ...
+}
+----
+
+Add the `@tailwind` directives for each of Tailwind's layers to your `./src/assets/main.css` file.
+
+[source,javascript,title="main.css"]
+----
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+----
+
 include::./font.adoc[leveloffset=+1]
 
 include::./plugins.adoc[leveloffset=+1]

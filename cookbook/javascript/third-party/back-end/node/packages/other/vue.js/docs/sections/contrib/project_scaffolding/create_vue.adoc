@@ -22,6 +22,18 @@ NOTE: Will create a new directory named after the project.
 
 NOTE: Make sure your current working directory is the one where you intend to create a project. 
 
+....
+✔ Project name: … vue-project
+✔ Add TypeScript? … No / Yes
+✔ Add JSX Support? … No / Yes
+✔ Add Vue Router for Single Page Application development? … No / Yes
+✔ Add Pinia for state management? … No / Yes
+✔ Add Vitest for Unit Testing? … No / Yes
+✔ Add an End-to-End Testing Solution? › No
+✔ Add ESLint for code quality? … No / Yes
+✔ Add Vue DevTools 7 extension for debugging? (experimental) … No / Yes
+....
+
 [source,bash]
 ----
 npm install

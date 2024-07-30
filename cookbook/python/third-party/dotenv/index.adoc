@@ -22,7 +22,7 @@ ____
 The syntax of `.env` files supported by python-dotenv is similar to that of Bash
 ____
 
-.Example
+..env.example
 ....
 DOMAIN=example.org
 ADMIN_EMAIL=admin@${DOMAIN}
@@ -37,9 +37,11 @@ By default, `load_dotenv` doesn't override existing environment variables and lo
 
 To configure the development environment, add a `.env` in the root directory of your project:
 
+....
 .
 ├── .env
 └── foo.py
+....
 ____
 
 [source,python]

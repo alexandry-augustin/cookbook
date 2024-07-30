@@ -1,0 +1,24 @@
+= Vue Router
+:url-website: https://router.vuejs.org/
+:url-repo: https://github.com/vuejs/router
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+=== CDN
+
+[source,html]
+----
+<script src="https://unpkg.com/vue-router@4"></script>
+----
+
+=== Node
+
+[source,bash]
+----
+pnpm install vue-router@4
+----
+
+include::./example.adoc[leveloffset=+1]

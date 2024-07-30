@@ -1,0 +1,7 @@
+= TanStack
+:toc: left
+:toclevels: 8
+
+include::./sections/query.adoc[leveloffset=+1]
+
+include::./sections/table.adoc[leveloffset=+1]

@@ -1,0 +1,18 @@
+= Typography
+:url-repo: https://github.com/tailwindlabs/tailwindcss-typography
+
+{url-repo}[[repo\]]
+
+https://tailwindcss-typography.vercel.app
+
+`class="prose lg:prose-lg"`
+
+[source,html]
+----
+<article class="prose">
+  <h1>...</h1>
+  <p>...</p>
+  <p>...</p>
+  <!-- ... -->
+</article>
+----

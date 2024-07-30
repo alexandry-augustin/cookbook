@@ -1,0 +1,8 @@
+= Table
+:url-website: https://tanstack.com/table/latest
+:url-repo: https://github.com/tanstack/table
+:url-docs: https://tanstack.com/table/latest/docs/introduction
+
+{url-github}[[github\]]
+{url-website}[[website\]]
+{url-docs}[[docs\]]

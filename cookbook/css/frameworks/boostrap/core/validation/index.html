@@ -13,7 +13,7 @@
 
 <body>
 
-  <p>is-valid</p>
+  <p><code>is-valid</code></p>
 
   <div class="col-md-4">
     <label for="validation-success" class="form-label text-success">Label</label>
@@ -22,7 +22,7 @@
     <div class="invalid-feedback">Validation error!</div>
   </div>
 
-  <p>is-invalid</p>
+  <p><code>is-invalid</code></p>
 
   <div class="col-md-4">
     <label for="validation-error" class="form-label text-danger">Label</label>
@@ -33,7 +33,7 @@
 
   <h1>Tooltips</h1>
 
-  <p>is-valid</p>
+  <p><code>is-valid</code></p>
 
   <div class="col-md-4 position-relative">
     <label for="validation-success" class="form-label text-success">Label</label>
@@ -42,13 +42,33 @@
     <div class="invalid-tooltip">Validation error!</div>
   </div>
 
-  <p>is-invalid</p>
+  <p><code>is-invalid</code></p>
 
   <div class="col-md-4 position-relative">
     <label for="validation-error" class="form-label text-danger">Label</label>
     <input type="text" class="form-control is-invalid" id="validation-error" required>
     <div class="valid-tooltip">Validation success!</div>
     <div class="invalid-tooltip">Validation error!</div>
+  </div>
+
+  <h1>Disable Validation Icons</h1>
+
+  https://stackoverflow.com/questions/54622846/remove-bootstraps-validation-icons
+
+  <!--
+  <style>
+    .was-validated .custom-select:valid {
+      background-image: none;
+    }
+
+    .was-validated .custom-select:invalid {
+      background-image: none;
+    }
+  </style>
+  -->
+
+  <div class="col-md-4">
+    <input type="text" class="form-control is-valid" style="background-image: none;" id="validation-success" required>
   </div>
 
 </body>
