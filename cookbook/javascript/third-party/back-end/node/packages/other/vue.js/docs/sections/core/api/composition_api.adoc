@@ -11,7 +11,7 @@ NOTE: `this.` is not available in the `setup()` function.
           let myVar = 0;
 
           const myFct = () => {
-
+            // ...
           }
 
           return {
@@ -23,9 +23,31 @@ NOTE: `this.` is not available in the `setup()` function.
 </script>
 ----
 
+https://vuejs.org/api/sfc-script-setup.html
+
 [source,javascript]
 ----
 <script setup>
+import { ref } from 'vue'
 
+const count = ref(0)
+let myVar = 0;
+
+const myFct = () => {
+  // ...
+}
 </script>
 ----
+
+[quote,https://vuejs.org/api/sfc-script-setup.html]
+____
+The code inside is compiled as the content of the component's `setup()` function. 
+This means that unlike normal `<script>`, which only executes once when the component is first imported, code inside `<script setup>` will **execute every time an instance of the component is created**.
+____
+
+[quote,https://vuejs.org/api/sfc-script-setup.html]
+____
+any top-level bindings (including variables, function declarations, and imports) declared inside `<script setup>` are directly usable in the template
+____
+
+NOTE: Reactive state needs to be explicitly created using `ref()`.

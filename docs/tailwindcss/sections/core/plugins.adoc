@@ -4,3 +4,59 @@
 ----
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 ----
+
+== Forms
+
+[source,html]
+----
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+----
+
+== aspect-ratio
+
+[source,html]
+----
+<script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
+----
+
+== line-clamp
+
+[source,html]
+----
+<script src="https://cdn.tailwindcss.com?plugins=line-clamp"></script>
+----
+
+== container-queries
+
+[source,html]
+----
+<script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+----
+
+== Typography
+
+https://github.com/tailwindlabs/tailwindcss-typography
+
+[source,html]
+----
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+----
+
+[source,bash]
+----
+pnpm install -D @tailwindcss/typography
+----
+
+[source,javascript]
+----
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    // ...
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    // ...
+  ],
+}
+----

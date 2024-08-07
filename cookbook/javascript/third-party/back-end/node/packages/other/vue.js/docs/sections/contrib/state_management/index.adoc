@@ -10,6 +10,4 @@ In maintenance mode
 
 Inpsired by React Flux
 
-== Pinia
-
-https://pinia.vuejs.org/
+include::./pinia/index.adoc[leveloffset=+1]

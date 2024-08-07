@@ -1,0 +1,28 @@
+= Pinia
+:url-website: https://pinia.vuejs.org/
+
+{url-website}[[website\]]
+
+== Installation
+
+[source,bash]
+----
+npm install pinia
+----
+
+[source,javascript,title="main.js"]
+----
+import './assets/main.css'
+
+import { createApp } from 'vue'
+import { createPinia } from 'pinia' // <--- New
+import App from './App.vue'
+
+const pinia = createPinia() // <--- New
+const app = createApp(App)
+
+app.use(pinia) // <--- New
+app.mount('#app')
+----
+
+include::./examples.adoc[leveloffset=+1]

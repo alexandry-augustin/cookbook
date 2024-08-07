@@ -1,0 +1,6 @@
+= VuePress
+:url-website: https://vuepress.vuejs.org/
+:url-repo: https://github.com/vuepress/core
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]

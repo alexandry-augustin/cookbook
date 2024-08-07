@@ -1,0 +1,22 @@
+= Dynamic Component
+
+NOTE: FIXME
+
+[source,vue]
+----
+<script setup>
+import { ref } from 'vue'
+
+import ComponentA from './ComponentA.vue'
+import ComponentB from './ComponentB.vue'
+
+let activeComponent = ref('ComponentA'); 
+</script>
+
+<template>
+    <button @click="activeComponent = 'ComponentA'">ComponentA</button> 
+    <button @click="activeComponent = 'ComponentB'">ComponentB</button> 
+
+    <component :is="activeComponent"></component>
+</template>
+----

@@ -1,18 +1,31 @@
 = Props
 
+// [source,title="components/MyComponent.vue"]
+// ----
+// <script>
+//     export default {
+//         name: 'MyComponent', 
+//         props: [ 
+//             'myProp', 
+//             'myProp2', 
+//         ]
+//     }
+// </script>
+// 
+// <template>
+//     <div>{{ myProp }} {{ myProp2 }}</div>
+// </template>
+// ----
+
 [source,title="components/MyComponent.vue"]
 ----
-<script>
-    export default {
-        name: 'MyComponent', 
-        props: [ 
-            'myProp', 
-            'myProp2', 
-        ]
-    }
-</script>
-
 <script setup>
+const props = defineProps([ 'myProp', 'myProp2' ]);
+
+console.log(props.myProp)
+
+// props are readonly!
+// props.myProp = ''
 </script>
 
 <template>
@@ -20,22 +33,33 @@
 </template>
 ----
 
+// [source,title="App.vue"]
+// ----
+// <script>
+//   import MyComponent from './components/MyComponent.vue';
+// 
+//   export default {
+//     name: 'App',
+//     components: {
+//       MyComponent, 
+//     },
+//     data() {
+//       return {
+//         value: "More content..."
+//       }
+//     }
+//   }
+// </script>
+// 
+// <template>
+//   <MyComponent my-prop="Content..." :my-prop-2="value"/>
+//   <MyComponent myProp="Content..." :myProp2="value"/>
+// </template>
+// ----
+
 [source,title="App.vue"]
 ----
-<script>
-  import MyComponent from './components/MyComponent.vue';
-
-  export default {
-    name: 'App',
-    components: {
-      MyComponent, 
-    },
-    data() {
-      return {
-        value: "More content..."
-      }
-    }
-  }
+<script setup>
 </script>
 
 <template>

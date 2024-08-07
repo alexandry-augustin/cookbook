@@ -1,0 +1,40 @@
+= Examples
+
+[source,javascript,title="src/stores/counter.js"]
+----
+import { ref, computed } from 'vue'
+import { defineStore } from 'pinia'
+
+export const useCounterStore = defineStore('counter', () => {
+  const count = ref(0);
+  const doubleCount = computed(() => count.value * 2);
+  function sub(n) {
+    count.value -= n;
+  }
+  function add(n) {
+    count.value += n;
+  }
+
+  return { count, doubleCount, sub, add }
+})
+----
+
+[source,vue,title="src/components/Counter.vue"]
+----
+<script setup>
+  import { useCounterStore } from '@/stores/counter'
+
+  const counter = useCounterStore()
+
+  counter.count++;
+  // counter.$patch({ count: counter.count + 1 });
+</script>
+
+<template>
+  <button @click="counter.count--">-</button>
+  <button v-on:click="counter.sub(1)">sub</button> 
+  {{ counter.count }}
+  <button @click="counter.count++">+</button>
+  <button v-on:click="counter.add(1)">add</button> 
+</template>
+----

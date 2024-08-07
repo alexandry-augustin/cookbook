@@ -1,7 +1,6 @@
 = Plugins
 
 Mask:: {empty}
-Intersect:: {empty}
 Focus:: {empty}
 Collapse:: {empty}
 Anchor:: {empty}
@@ -9,3 +8,5 @@ Morph:: {empty}
 Sort:: {empty}
 
 include::./persist.adoc[leveloffset=+1]
+
+include::./intersect.adoc[leveloffset=+1]

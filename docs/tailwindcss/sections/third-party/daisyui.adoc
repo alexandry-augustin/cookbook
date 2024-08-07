@@ -35,6 +35,37 @@ ____
 Some daisyUI components rely on JavaScript for interactivity (e.g., dropdowns, modals, etc.).
 ____
 
+== Installation
+
+=== Using NPM
+
+[source,bash]
+----
+npm i -D daisyui@latest
+
+pnpm add -D daisyui@latest
+----
+
+[source,javascript,title="tailwind.config.js"]
+----
+module.exports = {
+  // ...
+  plugins: [
+    // ...
+    require('daisyui'),
+    // ...
+  ],
+}
+----
+
+=== Using CDN
+
+[source,html]
+----
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+----
+
 == Components
 
 * Accordion

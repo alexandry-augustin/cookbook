@@ -7,6 +7,8 @@
 
 based on Vite
 
+Default port: `5173`
+
 [source,bash]
 ----
 npm create vue@latest
@@ -43,7 +45,7 @@ Compile and hot-reload for development
 
 [source,bash]
 ----
-npm run dev
+npm run dev [--host "0.0.0.0"]
 ----
 
 Compile and minify for production

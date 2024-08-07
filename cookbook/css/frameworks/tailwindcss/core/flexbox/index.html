@@ -142,6 +142,14 @@
 			<div class="bg-green-100 h-5">Flex item 3</div>
 		</div>
 
+		<code>items-center</code>
+
+		<div class="flex bg-gray-400 h-10 items-center">
+			<div class="bg-yellow-100 h-5">Flex item 1</div>
+			<div class="bg-red-100 h-5">Flex item 2</div>
+			<div class="bg-green-100 h-5">Flex item 3</div>
+		</div>
+
 		<code>items-end</code>
 
 		<div class="flex bg-gray-400 h-10 items-end">
@@ -150,12 +158,17 @@
 			<div class="bg-green-100 h-5">Flex item 3</div>
 		</div>
 
-		<code>items-center</code>
+		<h1>Align Self</h1>
 
-		<div class="flex bg-gray-400 h-10 items-center">
-			<div class="bg-yellow-100 h-5">Flex item 1</div>
-			<div class="bg-red-100 h-5">Flex item 2</div>
-			<div class="bg-green-100 h-5">Flex item 3</div>
+		https://tailwindcss.com/docs/align-self
+
+		<div class="flex gap-3 bg-gray-400 h-10">
+			<div class="self-start bg-yellow-100 h-5"><code>self-start</code></div>
+			<div class="self-center bg-red-100 h-5"><code>self-center</code></div>
+			<div class="self-end bg-green-100 h-5"><code>self-end</code></div>
+			<div class="self-auto bg-green-100 h-5"><code>self-auto</code></div>
+			<div class="self-stretch bg-green-100 h-5"><code>self-stretch</code></div>
+			<div class="self-baseline bg-green-100 h-5"><code>self-baseline</code></div>
 		</div>
 
 		<h1>Basis</h1>
@@ -270,6 +283,15 @@
 			<div class="min-w-96 bg-yellow-100">Flex item 1</div>
 			<div class="min-w-96 bg-red-100">Flex item 2</div>
 			<div class="min-w-96 bg-green-100">Flex item 3</div>
+		</div>
+
+		<h1>Order</h1>
+
+		<div class="flex bg-gray-400">
+			<div class="bg-yellow-100 order-last">Item 1 (<code>order-last</code>)</div>
+			<div class="bg-red-100">Item 2</div>
+			<div class="bg-red-100 order-[2]">Item 3 (<code>order-[3]</code>) FIXME</div>
+			<div class="bg-green-100 order-first">Item 4 (<code>order-first</code>)</div>
 		</div>
 
 	</body>

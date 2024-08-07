@@ -1,0 +1,53 @@
+= Layouts
+
+https://markus.oberlehner.net/blog/dynamic-vue-layout-components/
+
+https://itnext.io/anyway-heres-how-to-create-a-multiple-layout-system-with-vue-and-vue-router-b379baa91a05
+
+https://stackoverflow.com/questions/69048657/dynamic-layout-in-vue-3-with-vite
+
+....
+src/
+├── ...
+├── layouts
+│   ├── ...
+│   └── DefaultLayout.vue
+├── ...
+└── views
+    ├── ...
+    └── HomeView.vue
+....
+
+== Static Layout
+
+[source,javascript,title="DefaultLayout.vue"]
+----
+<script setup>
+import Nav from '../components/Nav.vue'
+import Footer from '../components/Footer.vue'
+</script>
+
+<template>
+    <Nav></Nav>
+    <slot></slot>
+    <Footer></Footer>
+</template>
+----
+
+[source,javascript,title="HomeView.vue"]
+----
+<script setup>
+import DefaultLayout from '../layouts/DefaultLayout.vue'
+import MyComponent from '../components/MyComponent.vue'
+</script>
+
+<template>
+    <DefaultLayout>
+        <template v-slot:default>
+            <MyComponent></MyComponent>
+        </template>
+    </DefaultLayout>
+</template>
+----
+
+== Dynamic Layout

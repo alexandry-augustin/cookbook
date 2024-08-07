@@ -1,0 +1,3 @@
+= Intersect
+
+https://stackoverflow.com/questions/73856874/scrollspy-using-alpinejs-and-intersect-plugin

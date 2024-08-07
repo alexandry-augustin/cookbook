@@ -2,4 +2,4 @@
 
 https://vuetifyjs.com/en/
 
-include::./ssg.adoc[leveloffset=+1]
+include::./ssg/index.adoc[leveloffset=+1]

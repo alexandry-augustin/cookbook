@@ -64,3 +64,18 @@
     }).mount('#app')
 </script>
 ----
+
+[source,vue,title="Counter.vue"]
+----
+<script setup>
+    import { ref } from 'vue'
+    
+    let count = ref(0)
+</script>
+
+<template>
+    <button @click="count--">-</button>
+    {{ count }}
+    <button @click="count++">+</button>
+</template>
+----
