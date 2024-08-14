@@ -11,7 +11,8 @@
     <body>
 
         <div class="py-6 px-6 w-80 border mx-auto text-center my-6">
-            <form action="#" x-data="otpForm()" method="POST">
+            <!-- <form action="#" x-data="otpForm()" method="POST"> -->
+            <div x-data="otpForm()">
                 <div class="flex justify-between" x-ref="otpInputContainer">
                   <template x-for="(input, index) in length" :key="index">
                     <input
@@ -25,7 +26,9 @@
                 </div>
                 <input type="hidden" name="otp" x-model="value">
                 <button type="submit" class="btn-primary mx-auto block bg-gray-500 w-full p-2 mt-2 text-white">Sumbit</button>
-            </form>
+                <button @click="clear" class="btn-primary mx-auto block bg-gray-500 w-full p-2 mt-2 text-white">Reset</button>
+            <!-- </form> -->
+            </div>
         </div>
 
         <script src="./script.js"></script>

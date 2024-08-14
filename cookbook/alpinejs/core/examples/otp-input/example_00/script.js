@@ -8,6 +8,14 @@ function otpForm() {
             return this.$refs.otpInputContainer.querySelectorAll('.otpInput');
         },
 
+        clear() {
+            for(let i = 0; i < this.length; i++) {
+                if (this.inputs[i]) {
+                    this.inputs[i].value = '';
+                }
+            }
+        }, 
+
         handleInput(e, index) {
             const inputValues = [...this.inputs].map(input => input.value);
             this.value = inputValues.join('');

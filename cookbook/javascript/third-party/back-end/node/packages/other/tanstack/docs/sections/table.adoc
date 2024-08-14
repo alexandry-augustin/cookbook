@@ -3,6 +3,25 @@
 :url-repo: https://github.com/tanstack/table
 :url-docs: https://tanstack.com/table/latest/docs/introduction
 
-{url-github}[[github\]]
+{url-repo}[[repo\]]
 {url-website}[[website\]]
 {url-docs}[[docs\]]
+
+NOTE: Formerly known as React Table. 
+
+NOTE: See https://tanstack.com/virtual/latest[TanStack Virtual] for infinite scrolling -- https://github.com/TanStack/table/discussions/3995
+
+== Installation
+
+[source,bash]
+----
+npm install @tanstack/vue-table
+
+# npm install @tanstack/react-table
+# npm install @tanstack/solid-table
+# npm install @tanstack/svelte-table
+# npm install @tanstack/qwik-table
+# npm install @tanstack/angular-table
+# npm install @tanstack/lit-table
+# npm install @tanstack/table-core
+----

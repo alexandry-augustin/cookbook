@@ -1,13 +1,13 @@
 = Query
-:url-github: https://github.com/TanStack/query
+:url-repo: https://github.com/TanStack/query
 :url-website: https://tanstack.com/query/latest
 :url-docs: https://tanstack.com/query/latest/docs/framework/react/overview
 
-{url-github}[[github\]]
+{url-repo}[[repo\]]
 {url-website}[[website\]]
 {url-docs}[[docs\]]
 
-NOTE: Formerly knwon as React Query.
+NOTE: Formerly known as React Query.
 
 == Installation
 
