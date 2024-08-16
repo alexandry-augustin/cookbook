@@ -6,18 +6,33 @@
 
 	<body>
 
-		<h2>Dispatch from Inside Component</h2>
+		See <code>alpinejs/core/magics</code>.
+
+		<h2>Dispatch Custom Event from Inside Component</h2>
         
-			<p>`open-me` is a custom even inside of the component</p>
+			<p>Send an <code>open-me</code> custom event from within the component</p>
 
 			<div x-data="{ open: false }" x-on:open-me="open=true">
 				<button x-on:click="$dispatch('open-me')">Open</button>
 				<div x-show="open">Content...</div>
 			</div>
 
-		<h2>Dispatch from Outside Component</h2>
+			<p>Using <code>sendEvent()</code></p>
 
-			<p>Use `.window` at the end of the event to trigger a custom event from outside of our component by exposing it to the global window.</p>
+			<div x-data="{ 
+					open: false,
+				
+					sendEvent() {
+						this.$dispatch('open-me');
+					}
+				}" x-on:open-me="open=true">
+					<button x-on:click="sendEvent">Open</button>
+					<div x-show="open">Content...</div>
+				</div>
+
+		<h2>Dispatch Custom Event from Outside Component</h2>
+
+			<p>Use <code>.window</code> at the end of the event to trigger a custom event from outside the component by exposing it to the global window.</p>
 
 			<button x-data x-on:click="$dispatch('open-me')">Open</button>
 

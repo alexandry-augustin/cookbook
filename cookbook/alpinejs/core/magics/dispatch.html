@@ -12,6 +12,8 @@
 
 <body>
 
+	See <code>alpinejs/core/events</code>.
+
 	<h1>Basic</h1>
 
 	<div>Without arguments</div>
@@ -45,7 +47,7 @@
 		<button x-on:click="$dispatch('my-event:other-components', 'new_value')">Dispatch</button>
 	</div>
 
-	<h1>Dispatching to x-model</h1>
+	<h1>Dispatching to <code>x-model</code></h1>
 
 	<div x-data="{ title: 'init_value' }">
 		<span x-model="title">

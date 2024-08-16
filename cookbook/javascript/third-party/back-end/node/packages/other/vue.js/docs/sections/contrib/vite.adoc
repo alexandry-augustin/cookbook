@@ -1,0 +1,12 @@
+= Vite
+
+== Aliases
+
+`@` path alias to map to the project `src` directory in `vite.config.js`.
+
+E.g. 
+
+[source,javascript]
+----
+import MyComponent from '@/components/MyComponent.vue';
+----

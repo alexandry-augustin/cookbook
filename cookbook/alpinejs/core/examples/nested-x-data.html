@@ -1,0 +1,33 @@
+<!-- https://alpinejs.in/access-alpinejs-variable-outside-scope -->
+<!-- https://github.com/alpinejs/alpine/discussions/2375 -->
+<!-- https://alpinejs.dev/magics/data -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js' defer></script>
+    <title>Nested x-data</title>
+</head>
+<body>
+    https://alpinejs.dev/essentials/state#nesting-data
+
+    <div x-data="{ 
+        msg: 'outer', 
+        
+        n: 0, 
+        setN(val) {
+            this.n = val;
+        }
+    }">
+        <div x-data="{ 
+            msg: 'inner'
+        }">
+            <div x-text="msg"></div>
+            <div><span x-text="n"></span><button @click="setN(n+1)">+</button></div>
+        </div>
+    </div>
+</body>
+</html>

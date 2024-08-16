@@ -5,19 +5,15 @@
 
 <head>
   <meta charset="UTF-8">
+  <script type='text/javascript' charset='utf-8' src='../../../alpinejs.3.13.2.cdn.min.js'></script>
+  <script src="./script.js"></script>
   <title>Alpine.js Countdown Timer</title>
 </head>
 
 <body>
 
-  <script type='text/javascript' charset='utf-8' src='../../../alpinejs.3.13.2.cdn.min.js'></script>
-  <script  src="./script.js"></script>
-
   <!-- <div x-data="timer(new Date().setDate(new Date().getDate() + 1))" x-init="init();"> -->
-  <div 
-    id="counter"
-    x-data="timer(Date.now() + 5*1000)" 
-    x-init="init();">
+  <div x-data="timer(Date.now() + 5*1000)">
 
     <div>Expiry: <span x-text="expiry"></span></div>
     <div>
