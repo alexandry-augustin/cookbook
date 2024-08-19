@@ -1,0 +1,50 @@
+= Query
+:url-repo: https://github.com/TanStack/query
+:url-website: https://tanstack.com/query/latest
+:url-docs: https://tanstack.com/query/latest/docs/framework/react/overview
+
+{url-repo}[[repo\]]
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+
+NOTE: Formerly known as React/Vue Query.
+
+== Installation
+
+[source,bash]
+----
+pnpm install @tanstack/react-query
+
+pnpm add @tanstack/vue-query
+----
+
+[source,javascript,title="index.js"]
+----
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <BrowserRouter>
+            <QueryClientProvider client={queryClient}>
+                <App />
+                {/* <ReactQueryDevtools position="bottom-right"/> */}
+            </QueryClientProvider>
+        </BrowserRouter>
+    </React.StrictMode>
+);
+----
+
+[source,javascript,title="main.js"]
+----
+import { VueQueryPlugin } from '@tanstack/vue-query'
+
+app.use(VueQueryPlugin)
+----
+
+include::./hooks/index.adoc[leveloffset=+1]
+
+include::./devtools.adoc[leveloffset=+1]

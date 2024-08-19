@@ -2,6 +2,6 @@
 :toc: left
 :toclevels: 8
 
-include::./sections/query.adoc[leveloffset=+1]
+include::./sections/query/index.adoc[leveloffset=+1]
 
-include::./sections/table.adoc[leveloffset=+1]
+include::./sections/table/index.adoc[leveloffset=+1]

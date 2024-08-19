@@ -1,14 +1,16 @@
 = Dynamic Component
 
+https://v3.ru.vuejs.org/guide/component-dynamic-async.html
+
 NOTE: FIXME
 
 [source,vue]
 ----
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-import ComponentA from './ComponentA.vue'
-import ComponentB from './ComponentB.vue'
+import ComponentA from '@/components/ComponentA.vue'
+import ComponentB from '@/components/ComponentB.vue'
 
 let activeComponent = ref('ComponentA'); 
 </script>

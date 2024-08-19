@@ -1,0 +1,14 @@
+= `useMutation`
+
+[quote,https://tanstack.com/query/latest/docs/framework/vue/guides/queries]
+____
+If your method modifies data on the server, we recommend using Mutations instead.
+____
+
+[source,javascript]
+----
+import { useMutation } from "@tanstack/react-query";
+
+function MyComponent() {
+}
+----

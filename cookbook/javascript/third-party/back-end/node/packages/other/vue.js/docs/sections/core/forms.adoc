@@ -1,0 +1,13 @@
+= Forms
+
+[source,vue]
+----
+<script setup>
+function onSubmit() {
+    console.log('submitted');
+}
+</script>
+
+<form @submit.prevent="onSubmit">
+</form>
+----
