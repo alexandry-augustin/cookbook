@@ -70,6 +70,8 @@ ____
 
 == Object Oriented CSS (OOCSS)
 
+include::./sections/table.adoc[leveloffset=+1]
+
 include::./sections/media_queries.adoc[leveloffset=+1]
 
 include::./sections/selectors/index.adoc[leveloffset=+1]

@@ -22,9 +22,9 @@ export const useCounterStore = defineStore('counter', () => {
 [source,vue,title="src/components/Counter.vue"]
 ----
 <script setup>
-  import { useCounterStore } from '@/stores/counter'
+  import { useCounterStore } from '@/stores/counter';
 
-  const counter = useCounterStore()
+  const counter = useCounterStore();
 
   counter.count++;
   // counter.$patch({ count: counter.count + 1 });

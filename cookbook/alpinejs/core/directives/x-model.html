@@ -7,10 +7,95 @@
 
 	<body>
 
+		https://alpinejs.dev/directives/model
+
+		<h1>Input Text</h1>
+
         <div x-data="{ message: '' }">
             <input type="text" x-model="message">
+			<button @click="message='changed'">Set</button>
             <div x-text="message"></div>
         </div>
-        
+
+		<h1>Input Checkbox</h1>
+
+		<div>Single Checkboxes</div>
+
+		<div x-data="{ show: true }">
+			<input type="checkbox" x-model="show">
+			<label for="checkbox" x-text="show"></label>
+		</div>
+
+		<div>Multiple Checkboxes</div>
+
+		<div x-data="{ colors: [] }">
+			<input type="checkbox" value="red" x-model="colors">
+			<input type="checkbox" value="orange" x-model="colors">
+			<input type="checkbox" value="yellow" x-model="colors">
+			<span x-text="colors"></span>
+		</div>
+
+		<h1>Input Radio</h1>
+
+		<div x-data="{ answer: null }">
+			<input type="radio" value="yes" x-model="answer">
+			<input type="radio" value="no" x-model="answer">
+			<span x-text="answer"></span>
+        </div>
+
+		<h1>Select</h1>
+
+		<div>Single select</div>
+
+		<div x-data="{ color: null }">
+			<select x-model="color">
+				<option>Red</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+			<span x-text="color"></span>
+		</div>
+
+		<div>Single select with placeholder</div>
+
+		<div x-data="{ color: null }">
+			<select x-model="color">
+				<option value="" disabled>Select A Color</option>
+				<option>Red</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+			<span x-text="color"></span>
+		</div>
+
+		<div>Multiple select</div>
+
+		<div x-data="{ color: null }">
+			<select x-model="color" multiple>
+				<option>Red</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+			<span x-text="color"></span>
+		</div>
+
+		<div>Dynamically populated Select Options</div>
+
+		<div x-data="{ color: null }">
+			<select x-model="color">
+				<template x-for="color in ['Red', 'Orange', 'Yellow']">
+					<option x-text="color"></option>
+				</template>
+			</select>
+			<span x-text="color"></span>
+		</div>
+
+		<h1>Inputs Range</h1>
+
+		<div x-data="{ value: 0.5 }">
+			<input type="range" x-model="value" min="0" max="1" step="0.1">
+			<span x-text="value"></span>
+		</div>
+
 	</body>
 </html> 

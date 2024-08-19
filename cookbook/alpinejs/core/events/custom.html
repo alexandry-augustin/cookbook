@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js' defer></script>
 		<title>Custom Events</title>
 	</head>
 
@@ -17,7 +18,7 @@
 				<div x-show="open">Content...</div>
 			</div>
 
-			<p>Using <code>sendEvent()</code></p>
+			<p>From javascript</p>
 
 			<div x-data="{ 
 					open: false,
@@ -34,12 +35,10 @@
 
 			<p>Use <code>.window</code> at the end of the event to trigger a custom event from outside the component by exposing it to the global window.</p>
 
-			<button x-data x-on:click="$dispatch('open-me')">Open</button>
+			<button x-data x-on:click="$dispatch('my-namespace:open-me')">Open</button>
 
-			<div x-data="{ open: false }" x-on:open-me.window="open=true">
+			<div x-data="{ open: false }" x-on:my-namespace:open-me.window="open=true">
 				<div x-show="open">Content...</div>
-			</div>
-
-		<script type='text/javascript' charset='utf-8' src='../alpinejs.3.13.2.cdn.min.js'></script>		
+			</div>	
 	</body>
 </html> 

@@ -4,6 +4,8 @@ https://vuejs.org/guide/extras/ways-of-using-vue.html[Ways of Using Vue]
 
 include::./components/index.adoc[leveloffset=+1]
 
+include::./composable/index.adoc[leveloffset=+1]
+
 include::./layouts/index.adoc[leveloffset=+1]
 
 include::./api/index.adoc[leveloffset=+1]
