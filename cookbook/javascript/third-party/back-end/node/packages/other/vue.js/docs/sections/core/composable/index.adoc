@@ -1,3 +1,7 @@
 = Composable
 
 https://vuejs.org/guide/reusability/composables.html
+
+[source,javascript,title="composables/useXXX.js"]
+----
+----

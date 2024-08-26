@@ -7,6 +7,10 @@
 {url-website}[[website\]]
 {url-docs}[[docs\]]
 
+https://blog.logrocket.com/react-table-complete-guide/[[tutorial\]]
+
+https://stackoverflow.com/questions/77073704/render-components-in-cell-using-tanstack-tables-with-vue3
+
 NOTE: Formerly known as React Table. 
 
 NOTE: See https://tanstack.com/virtual/latest[TanStack Virtual] for infinite scrolling -- https://github.com/TanStack/table/discussions/3995
@@ -15,13 +19,13 @@ NOTE: See https://tanstack.com/virtual/latest[TanStack Virtual] for infinite scr
 
 [source,bash]
 ----
-npm install @tanstack/vue-table
+pnpm install @tanstack/vue-table
 
-# npm install @tanstack/react-table
-# npm install @tanstack/solid-table
-# npm install @tanstack/svelte-table
-# npm install @tanstack/qwik-table
-# npm install @tanstack/angular-table
-# npm install @tanstack/lit-table
-# npm install @tanstack/table-core
+# pnpm install @tanstack/react-table
+# pnpm install @tanstack/solid-table
+# pnpm install @tanstack/svelte-table
+# pnpm install @tanstack/qwik-table
+# pnpm install @tanstack/angular-table
+# pnpm install @tanstack/lit-table
+# pnpm install @tanstack/table-core
 ----

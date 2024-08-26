@@ -1,0 +1,44 @@
+= Installation
+
+[source,bash]
+----
+pnpm install @tanstack/react-query
+
+pnpm install @tanstack/vue-query
+
+# pnpm install axios
+----
+
+[source,javascript,title="index.js"]
+----
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <BrowserRouter>
+            <QueryClientProvider client={queryClient}>
+                <App />
+                {/* <ReactQueryDevtools position="bottom-right"/> */}
+            </QueryClientProvider>
+        </BrowserRouter>
+    </React.StrictMode>
+);
+----
+
+[source,javascript,title="main.js"]
+----
+import { createApp } from 'vue'
+import { VueQueryPlugin } from '@tanstack/vue-query'
+
+import App from './App.vue'
+
+const app = createApp(App)
+
+app.use(VueQueryPlugin)
+
+app.mount('#app')
+----

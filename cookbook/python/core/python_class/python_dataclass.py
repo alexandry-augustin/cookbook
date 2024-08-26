@@ -1,13 +1,19 @@
 from dataclasses import dataclass
+from dataclasses import field
 
 @dataclass
 class Point:
     x: int
     y: int
-    z: int = 0
+    z: int = 0 # Default value
+
+    # https://stackoverflow.com/questions/53632152/why-cant-dataclasses-have-mutable-defaults-in-their-class-attributes-declaratio
+    # data: list = [] # ValueError: mutable default <class 'list'> for field a is not allowed: use default_factory
+    data: list = field(default_factory=list)
 
 if __name__ == '__main__':
     
     p = Point(1, y=2)
     assert(p.x == 1)
     assert(p.z == 0)
+    assert(p.data == [])

@@ -8,8 +8,50 @@
 
 <body>
 
-	https://flowbite.com/docs/components/tables/
+	<!-- https://stackoverflow.com/questions/73263512/how-to-make-a-word-wrapper-inside-a-table -->
+	<!-- https://stackblitz.com/edit/react-ewzbi6?file=src%2FApp.js -->
 	
+	<div class="py-5 ">
+		<div class="overflow-x-auto">
+		  <table class="w-full max-w-4xl mx-auto overflow-hidden bg-white divide-y divide-gray-300 rounded-lg">
+			<thead class="bg-gray-900">
+			  <tr class="text-left text-white">
+				<th class="px-6 py-4 text-lg font-semibold "> n ° </th>
+				<th class="px-3 py-4 text-lg font-semibold "> Song </th>
+				<th class="px-3 py-4 text-lg font-semibold text-center ">
+				  Best Singers
+				</th>
+				<th class="px-6 py-4 text-lg font-semibold text-center"> </th>
+			  </tr>
+			</thead>
+			<tbody class="divide-y divide-gray-200">
+			  <tr class="max-w-xs break-words">
+				<td class="px-6 py-4">
+				  <div class="flex items-center space-x-3">
+					<p>1</p>
+				  </div>
+				</td>
+				<td style="max-width: 100px" class="px-3 py-4 break-all">
+				  <p class="break-all">
+					Vivin la vida loca dsadasdasdasd dasdddddddd saddasdasdad
+				  </p>
+				</td>
+				<td class="px-3 py-4 text-center">
+				  <p class="text-blue-600 visited:text-purple-600 hover:text-blue-800 hover:underline">
+					Donkey
+				  </p>
+				</td>
+				<td class="px-3 py-4 text-center">
+				  <p class="text-blue-600 visited:text-purple-600 hover:text-blue-800 hover:underline">
+					Ricky Martin
+				  </p>
+				</td>
+			  </tr>
+			</tbody>
+		  </table>
+		</div>
+	  </div>
+
 </body>
 
 </html>

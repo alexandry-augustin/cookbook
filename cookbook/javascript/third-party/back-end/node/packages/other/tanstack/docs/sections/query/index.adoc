@@ -9,42 +9,61 @@
 
 NOTE: Formerly known as React/Vue Query.
 
-== Installation
+include::./installation.adoc[leveloffset=+1]
 
-[source,bash]
+== Usage
+
+[source,javascript,title="composables/useMyQuery.js"]
 ----
-pnpm install @tanstack/react-query
+import { useQuery } from "@tanstack/vue-query";
 
-pnpm add @tanstack/vue-query
-----
-
-[source,javascript,title="index.js"]
-----
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-const queryClient = new QueryClient();
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <QueryClientProvider client={queryClient}>
-                <App />
-                {/* <ReactQueryDevtools position="bottom-right"/> */}
-            </QueryClientProvider>
-        </BrowserRouter>
-    </React.StrictMode>
-);
+export default () => {
+  return useQuery({
+    queryKey: [ ... ],
+    queryFn:  () => axios.call("get", "https://url"), 
+    select: (response) => response.data // extract data from Axios response
+  });
+};
 ----
 
-[source,javascript,title="main.js"]
+[source,javascript,title="App.vue"]
 ----
-import { VueQueryPlugin } from '@tanstack/vue-query'
+<script setup>
+import useMyQuery from "./composables/useMyQuery";
 
-app.use(VueQueryPlugin)
+const { data } = useMyQuery();
+</script>
+
+<template>
+  <img v-if="data" :src="data.message" />
+</template>
 ----
+
+[quote,https://www.vuemastery.com/blog/advanced-data-fetching-in-vue-w-tanstack-query/#a-vue-query-demo]
+____
+The useQuery function takes an object configuration param, which has several properties we can set. 
+Two of the most important ones are `queryKey` and `queryFn`.
+
+The queryKey allows us to set the “key”, an array that defines the query. 
+Any values that you put in this array will help us identify this query. [...]
+
+The array can also contain numbers, booleans, and even other arrays and objects. 
+You can even pass down reactive Vue ref and computed values [...]
+
+The second property, `queryFn` is a function that makes an API call, and returns a Promise. 
+We will use Axios, which itself returns a Promise and will make the network call for us.
+
+This is the function that Tanstack Query will call to make the network request every time it needs to fetch new data.
+
+Finally, we'll add one more param, `select`. 
+Axios wraps the response of network calls in an object containing a `data` property.
+
+Normally you would check for `response.data` when using the response from an Axios call. 
+In this case, I want my composition function to return the data only, without the clutter of information from the request (you may actually want to return the whole thing in other scenarios), so I'm going to use the `select` property to tell Tanstack Query what part of the response data I want it to return to the user of this composable.
+____
 
 include::./hooks/index.adoc[leveloffset=+1]
+
+include::./examples.adoc[leveloffset=+1]
 
 include::./devtools.adoc[leveloffset=+1]

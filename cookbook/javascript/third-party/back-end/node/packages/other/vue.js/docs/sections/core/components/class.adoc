@@ -1,0 +1,18 @@
+= `class`
+
+https://stackoverflow.com/questions/59722649/how-to-add-class-from-content-of-a-variable-in-vue-js
+
+dynamically importing class name
+
+---
+<script setup>
+let active = false;
+let colour = 'red';
+</script>
+
+<template>
+    <div :class="{
+        [colour]: active
+    }"></div>
+</template>
+---
