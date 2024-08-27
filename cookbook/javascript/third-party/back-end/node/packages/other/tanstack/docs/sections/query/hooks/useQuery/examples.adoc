@@ -117,16 +117,16 @@ const { isLoading, isError, data, error, fetchStatus } = useQuery({
 
 https://www.vuemastery.com/blog/advanced-data-fetching-in-vue-w-tanstack-query/#a-vue-query-demo
 
-[source,vue,title="composables/useUserQuery.vue"]
+[source,javascript,title="composables/useMyQuery.vue"]
 ----
 import axios from 'axios';
 import { useQuery } from "@tanstack/vue-query";
 
 export default () => {
-  return useQuery({
+  return useMyQuery({
     queryKey: [ 'myQuery' ],
     queryFn: () => axios.call('get', url), 
-    select: (response) => response.data
+    select: (response) => response.data // extract data from Axios response
   });
 };
 ----
@@ -134,8 +134,9 @@ export default () => {
 [source,vue,title="App.vue"]
 ----
 <script setup>
-import useUserQuery from '@/composables/useUserQuery';
-const { isLoading, isError, data, error, fetchStatus } = useUserQuery();
+import useUserQuery from '@/composables/useMyQuery';
+
+const { isLoading, isError, data, error, fetchStatus } = useMyQuery();
 </script>
 
 <template>
