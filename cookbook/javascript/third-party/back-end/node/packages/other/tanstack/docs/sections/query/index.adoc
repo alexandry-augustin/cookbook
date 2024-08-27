@@ -64,6 +64,4 @@ ____
 
 include::./hooks/index.adoc[leveloffset=+1]
 
-include::./examples.adoc[leveloffset=+1]
-
 include::./devtools.adoc[leveloffset=+1]

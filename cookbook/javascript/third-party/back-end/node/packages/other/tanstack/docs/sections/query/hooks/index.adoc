@@ -15,7 +15,7 @@
 
 include::./useQueryClient.adoc[leveloffset=+1]
 
-include::./useQuery.adoc[leveloffset=+1]
+include::./useQuery/index.adoc[leveloffset=+1]
 
 include::./useMutation.adoc[leveloffset=+1]
 

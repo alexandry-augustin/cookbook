@@ -1,0 +1,55 @@
+= `useQuery`
+
+[source,javascript]
+----
+const result = useQuery({ param1, param2, ... })
+----
+
+== Parameters
+
+`queryKey`:: {empty}
+`queryFn`:: {empty}
+`select`:: {empty}
+`keepPreviousData`:: {empty}
+
+== Return Properties
+
+The `result` object contains the following: 
+
+`isPreviousData`:: {empty}
+
+`isLoading`:: (bool) Same as `status === 'loading'`.
+
+`isError`:: (bool) Same as `status === 'error'`.
+
+`isSuccess`:: (bool) Same as `status === 'success'`.
+
+`status`:: (string) Gives information about the data: Do we have any or not?
+`'loading'`::: {empty}
+`'error'`::: {empty}
+`'success'`::: {empty}
+
+`fetchStatus`:: (string) Gives information about the `queryFn`: Is it running or not?
+`'fetching'`::: The query is currently fetching.
+`'paused'`::: The query wanted to fetch, but it is paused. See https://tanstack.com/query/v4/docs/framework/vue/guides/network-mode[Network Mode] guide.
+`'idle'`::: The query is not doing anything at the moment.
+
+`data`:: (object) {empty}
+
+`error`:: (object) {empty}
+
+== States
+
+A query can only be in one of the following states at any given moment:
+
+Loading:: The query has no data yet.
+Error:: The query encountered an error and the error is available via the `error` property.
+Success:: The query was successful and the data is available via the `data` property.
+
+A query in Success status will usually have fetchStatus set to `idle`, but it could also be in `fetching` if a background refetch is happening.
+
+A query that mounts and has no data will usually be in Loading status and have fetchStatus set to `fetching`, but it could also be `paused` if there is no network connection.
+
+A query can be in Loading state without actually fetching data.
+
+include::./examples.adoc[leveloffset=+1]
