@@ -1,0 +1,6 @@
+= Tocbot
+:url-website: https://tscanlin.github.io/tocbot/
+:url-repo: https://github.com/tscanlin/tocbot
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]

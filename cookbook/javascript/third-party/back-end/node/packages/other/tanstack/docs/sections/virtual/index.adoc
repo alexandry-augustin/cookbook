@@ -1,0 +1,17 @@
+= Virtual
+:url-website: https://tanstack.com/virtual/latest
+:url-docs: https://tanstack.com/virtual/latest/docs/introduction
+:url-repo: https://github.com/tanstack/virtual
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[source,bash]
+----
+pnpm install @tanstack/react-virtual
+pnpm install @tanstack/vue-virtual
+npm install @tanstack/virtual-core # Virtual Core (no framework)
+----

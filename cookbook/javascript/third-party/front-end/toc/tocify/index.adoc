@@ -1,0 +1,6 @@
+= Tocify
+:url-website: http://gregfranko.com/jquery.tocify.js/
+:url-repo: https://github.com/gfranko/jquery.tocify.js
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]

@@ -9,3 +9,5 @@ include::./ssg/index.adoc[leveloffset=+1]
 * Vue Native [DEPRECATED] https://vue-native.io/[[website\]]
 * Ionic Vue https://github.com/ionic-team/ionic-framework[[repo\]]
 * Nativescript Vue
+
+include::./vueuse/index.adoc[leveloffset=+1]

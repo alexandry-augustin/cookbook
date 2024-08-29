@@ -29,3 +29,28 @@ pnpm install @tanstack/vue-table
 # pnpm install @tanstack/lit-table
 # pnpm install @tanstack/table-core
 ----
+
+== Hooks
+
+[source,bash]
+----
+import { useTable, useSortBy, useFilters, useExpanded, usePagination } from 'react-table';
+----
+
+=== `useTable`
+
+=== `useSortBy`
+
+=== `useFilters`
+
+=== `useExpanded`
+
+=== `usePagination`
+
+== Vue Table
+
+https://tanstack.com/table/latest/docs/framework/vue/vue-table
+
+=== `useVueTable`
+
+=== `FlexRender`
