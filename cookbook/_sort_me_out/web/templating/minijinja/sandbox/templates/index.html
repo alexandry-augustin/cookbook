@@ -1,0 +1,11 @@
+{% extends "base" %}
+
+{% block content %}
+	  {{ var1 }}
+	  
+	  {{ data.str }}
+	  
+	  {% for e in data.list %}
+	    {{ e }}
+	  {% endfor %}
+{% endblock %}

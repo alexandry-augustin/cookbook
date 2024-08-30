@@ -1,0 +1,8 @@
+= Mako
+:url-website: https://www.makotemplates.org/
+:url-repo: https://github.com/sqlalchemy/mako
+:url-docs: https://docs.makotemplates.org/en/latest/
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+{url-docs}[[docs\]]

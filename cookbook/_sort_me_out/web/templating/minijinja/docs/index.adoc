@@ -1,0 +1,15 @@
+= MiniJinja
+:url-pypi: https://pypi.org/project/minijinja/
+:url-repo: https://github.com/mitsuhiko/minijinja
+:url-docs: https://docs.rs/minijinja/latest/minijinja/
+
+{url-pypi}[[pypi\]]
+{url-repo}[[repo\]]
+{url-docs}[[docs\]]
+
+== Installation
+
+[source,bash]
+----
+python -m pip install minijinja
+----
