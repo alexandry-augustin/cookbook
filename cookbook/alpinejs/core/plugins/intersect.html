@@ -11,17 +11,25 @@
 		https://alpinejs.dev/plugins/intersect
 
 		<div x-data="{ shown: false }" 
-			x-intersect="shown=true">
+			x-intersect="shown=true"
+			style="background-color: #ff00000F; min-height: 400px">
 			<div x-show="shown">
-				I'm in the viewport!
+				Visible
+			</div>
+			<div x-show="!shown">
+				Not visible
 			</div>
 		</div>
 
 		<div x-data="{ shown: false }" 
 			x-intersect:enter="shown=true"
-			x-intersect:leave.full="shown=false">
+			x-intersect:leave.full="shown=false"
+			style="background-color: #0000ff10; min-height: 400px">
 		<div x-show="shown">
-			I'm in the viewport!
+			Visible
+		</div>
+		<div x-show="!shown">
+			Not visible
 		</div>
 	</div>
 

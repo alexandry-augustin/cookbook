@@ -32,8 +32,16 @@
 
 <template>
   <MyComponent />
+    <!-- or -->
   <MyComponent></MyComponent>
-  <MyComponent><h1>Content...</h1></MyComponent>
+  <!-- or -->
+  <MyComponent>
+    <h1>Content...</h1>
+  </MyComponent>
+  <!-- or -->
+  <MyComponent>
+    <template v-slot:default>
+  </MyComponent>
 </template>
 ----
 

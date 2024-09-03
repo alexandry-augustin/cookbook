@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script 
+			src="https://unpkg.com/htmx.org@1.9.6" 
+			integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" 
+			crossorigin="anonymous"
+			defer></script>
+		<script>
+			window.addEventListener('load', function () {
+				htmx.logAll();
+				
+				// Note that this only works from the console, you cannot embed it in a script tag on your page.
+				// monitorEvents(htmx.find("#btn"));
+			});
+		</script>
+		<title>HTMX Debugging</title>
+	</head>
+
+	<body>
+
+		<div>https://htmx.org/docs/#debugging</div>
+
+		<button id="btn" hx-get="http://127.0.0.1:8000/wait">
+			Click Me!
+		</button>
+	</body>
+</html> 

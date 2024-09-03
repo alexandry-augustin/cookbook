@@ -18,8 +18,8 @@ src
 [source,javascript,title="main.js"]
 ----
 import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import App from '@/App.vue'
+import router from '@/router'
 
 const app = createApp(App)
 
@@ -31,7 +31,7 @@ app.mount('#app')
 [source,javascript,title="router/index.js"]
 ----
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
 
 const routes = [
     {
@@ -45,7 +45,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (About.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import('../views/LoginView.vue')
+        component: () => import('@/views/LoginView.vue')
     }
 ]
 
@@ -77,7 +77,7 @@ export default router
 [source,javascript,title="views/LoginView.js"]
 ----
 <script setup>
-import Login from '../components/login.vue'
+import Login from '@/components/login.vue'
 </script>
 
 <template>
@@ -88,7 +88,7 @@ import Login from '../components/login.vue'
 [source,javascript,title="views/LoginView.js"]
 ----
 <script setup>
-import Home from '../components/home.vue'
+import Home from '@/components/home.vue'
 </script>
 
 <template>

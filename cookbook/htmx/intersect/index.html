@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTMX Revealed/Intersect</title>
+	</head>
+
+	<body>
+
+		<code>https://htmx.org/attributes/hx-trigger/</code>
+		<ul>
+			<li><p><code>revealed</code> - triggered when an element is scrolled into the viewport (also useful for lazy-loading). If you are using <code>overflow</code> in css like <code>overflow-y: scroll</code> you should use <code>intersect once</code> instead of <code>revealed</code>.</p>
+			</li>
+			<li><p><code>intersect</code> - fires once when an element first intersects the viewport.  This supports two additional options:</p>
+			<ul>
+			<li><code>root:&lt;selector&gt;</code> - a CSS selector of the root element for intersection</li>
+			<li><code>threshold:&lt;float&gt;</code> - a floating point number between 0.0 and 1.0, indicating what amount of intersection to fire the event on</li>
+			
+			</ul>
+			</li>
+		</ul>
+
+		<!--
+		* `revealed` - triggered when an element is scrolled into the viewport (also useful for lazy-loading). If you are using `overflow` in css like `overflow-y: scroll` you should use `intersect once` instead of `revealed`.
+		* `intersect` - fires once when an element first intersects the viewport.  This supports two additional options:
+		** `root:<selector>` - a CSS selector of the root element for intersection
+		** `threshold:<float>` - a floating point number between 0.0 and 1.0, indicating what amount of intersection to fire the event on
+		-->
+		
+		<p>Scroll down to reveal</p>
+
+		<div 
+			hx-get="http://127.0.0.1:8000/fake"
+			hx-trigger="revealed"
+			style="background-color: #ff00000F; min-height: 400px;  margin-top: 1000px;">
+		</div>
+		
+		<div 
+			hx-get="http://127.0.0.1:8000/fake"
+			hx-trigger="revealed"
+			hx-vals='{ "id": 5 }'
+			style="background-color: #00ff000F; min-height: 400px;  margin-top: 0px;">
+		</div>
+
+		<script src="https://unpkg.com/htmx.org@1.1.0"></script>
+        <script 
+			src="https://unpkg.com/htmx.org@1.9.6" 
+			integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" 
+			crossorigin="anonymous"></script>
+	</body>
+</html> 
