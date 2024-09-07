@@ -1,6 +1,6 @@
 import fileinput
 
-#http://stackoverflow.com/questions/5914627/append-line-to-beginning-of-a-file
+# http://stackoverflow.com/questions/5914627/append-line-to-beginning-of-a-file
 
 def line_prepender(filename, line):
 	with open(filename,'r+') as f:

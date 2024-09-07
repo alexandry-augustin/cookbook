@@ -23,6 +23,8 @@ include::./daisyui.adoc[leveloffset=+2]
 
 include::./floatui.adoc[leveloffset=+2]
 
+include::./shadcn/index.adoc[leveloffset=+2]
+
 == Flowbite
 
 https://github.com/themesberg/flowbite

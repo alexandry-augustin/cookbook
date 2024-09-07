@@ -5,11 +5,12 @@
 import os
 
 if __name__ == '__main__':
+
     print(__file__)
     print(os.path.realpath(__file__))
 
-    f=open("file_00.txt", "w")
-    f.write("hello world in the new file\n")
+    f=open('file_00.txt', 'w')
+    f.write('hello world in the new file\n')
     f.close()
 
     with open('file_00.txt', 'a') as file:
@@ -17,7 +18,7 @@ if __name__ == '__main__':
 
     #--------------------------------------
 
-    f=open("file_00.txt", "r")
+    f=open('file_00.txt', 'r')
     print(f.read()) #read entire file in a single string
     print(f.read().splitlines())
     print(f.readlines()) #return an array of strings (with \n included)

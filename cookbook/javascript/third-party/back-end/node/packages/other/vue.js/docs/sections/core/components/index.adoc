@@ -49,3 +49,5 @@ include::./slots.adoc[leveloffset=+1]
 include::./dynamic_component.adoc[leveloffset=+1]
 
 include::./class.adoc[leveloffset=+1]
+
+include::./custom_events.adoc[leveloffset=+1]

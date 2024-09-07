@@ -1,0 +1,6 @@
+= shadcn-vue
+:url-website: https://www.shadcn-vue.com/
+:url-repo: https://github.com/radix-vue/shadcn-vue
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]

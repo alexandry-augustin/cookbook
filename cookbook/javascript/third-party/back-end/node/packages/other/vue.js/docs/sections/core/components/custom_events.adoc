@@ -1,0 +1,28 @@
+= Custom Events
+
+https://vuejs.org/guide/components/events.html
+
+[source,vue,title="ChildComponent.vue"]
+----
+<script setup>
+</script>
+
+<template>
+    <button @click="$emit('myEventName')">Send</button>
+</template>
+----
+
+[source,vue,title="ParentComponent.vue"]
+----
+<script setup>
+import ChildComponent from '@/components/ChildComponent';
+
+const f = () => {
+   alert('test');
+}
+</script>
+
+<template>
+    <ChildComponent @my-event-name="f"></ChildComponent>
+</template>
+----

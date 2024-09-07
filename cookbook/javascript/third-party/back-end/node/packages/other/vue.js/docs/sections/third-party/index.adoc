@@ -2,12 +2,33 @@
 
 https://vuetifyjs.com/en/
 
+== `vee-validate`
+
+https://github.com/logaretm/vee-validate/[[repo\]]
+https://vee-validate.logaretm.com/[[website\]]
+
+For synchronous, asynchronous, field-level, or form-level validation.
+
+== `mosha-vue-toastify`
+
+https://github.com/szboynono/mosha-vue-toastify[[repo\]]
+https://www.npmjs.com/package/mosha-vue-toastify[[npm\]]
+
+For displaying alerts
+
+== `zod`
+
+https://zod.dev/[[website\]]
+https://github.com/colinhacks/zod[[repo\]]
+
+A schema declaration and validation library
+
 include::./ssg/index.adoc[leveloffset=+1]
 
 == Mobile Apps
 
 * Vue Native [DEPRECATED] https://vue-native.io/[[website\]]
-* Ionic Vue https://github.com/ionic-team/ionic-framework[[repo\]]
-* Nativescript Vue
+* Ionic
+* Nativescript
 
 include::./vueuse/index.adoc[leveloffset=+1]

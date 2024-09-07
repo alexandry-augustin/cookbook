@@ -1,0 +1,6 @@
+= shadcn/ui
+:url-website: https://github.com/shadcn-ui/ui
+:url-repo: https://ui.shadcn.com/
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]

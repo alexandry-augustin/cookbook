@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<!-- load demo environment -->
+		<!-- <script src="https://demo.htmx.org"></script> -->
+		<script src="./htmx.demo.js"></script>
+		
+		<title>HTMX Demo</title>
+	</head>
+
+	<body>
+
+		<div>https://htmx.org/docs/#creating-demos</div>
+
+		<!-- post to /foo -->
+		<button hx-post="/foo" hx-target="#result">
+			Add
+		</button>
+		<output id="result">N/A</output>
+
+		<!-- respond to /foo with some dynamic content in a template tag -->
+		<script>
+			globalN = 0;
+		</script>
+		<template url="/foo" delay="500"> <!-- note the url and delay attributes -->
+			${globalN++}
+		</template>
+
+	</body>
+</html> 
