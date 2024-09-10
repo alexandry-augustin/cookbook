@@ -1,3 +1,0 @@
-= Third-party
-
-include::./expo/index.adoc[leveloffset=+1]
