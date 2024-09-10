@@ -1,4 +1,5 @@
 = DaisyUI
+:toc: left
 :url-website: https://daisyui.com/
 :url-repo: https://github.com/saadeghi/daisyui
 

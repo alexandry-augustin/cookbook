@@ -23,6 +23,8 @@ https://github.com/colinhacks/zod[[repo\]]
 
 A schema declaration and validation library
 
+include::./typescript.adoc[leveloffset=+1]
+
 include::./ssg/index.adoc[leveloffset=+1]
 
 == Mobile Apps

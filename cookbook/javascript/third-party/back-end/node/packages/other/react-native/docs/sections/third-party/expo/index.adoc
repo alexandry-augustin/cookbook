@@ -1,0 +1,16 @@
+= Expo
+:url-website: https://expo.dev/
+:url-repo: https://github.com/expo/expo 
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[source,bash]
+----
+npx create-expo-app prj_name
+----
+
+
+

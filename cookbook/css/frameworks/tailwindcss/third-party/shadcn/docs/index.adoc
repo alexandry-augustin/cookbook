@@ -1,0 +1,6 @@
+= shadcn/ui
+:toc: left
+
+include::./sections/shadcn.adoc[leveloffset=+1]
+
+include::./sections/shadcn-vue.adoc[leveloffset=+1]

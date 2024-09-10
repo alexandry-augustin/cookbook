@@ -19,11 +19,11 @@ License: Commercial
 
 https://tailwindui.com/[[website\]]
 
-include::./daisyui.adoc[leveloffset=+2]
+// include::./daisyui.adoc[leveloffset=+2]
 
 include::./floatui.adoc[leveloffset=+2]
 
-include::./shadcn/index.adoc[leveloffset=+2]
+// include::./shadcn/index.adoc[leveloffset=+2]
 
 == Flowbite
 

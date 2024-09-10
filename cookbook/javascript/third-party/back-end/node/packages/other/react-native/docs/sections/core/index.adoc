@@ -1,0 +1,11 @@
+= Core
+
+== Installation
+
+[source,bash]
+----
+npm install react-native-webview
+npm install react-native-cli
+----
+
+== Usage

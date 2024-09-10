@@ -1,0 +1,9 @@
+= React Native
+:toc: left
+:url-wiki: https://en.wikipedia.org/wiki/React_Native
+:url-website: https://reactnative.dev/
+:url-github: https://github.com/facebook/react-native
+
+include::./sections/core/index.adoc[leveloffset=+1]
+
+include::./sections/third-party/index.adoc[leveloffset=+1]
