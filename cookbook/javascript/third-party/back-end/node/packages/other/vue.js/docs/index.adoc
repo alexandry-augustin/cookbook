@@ -3,13 +3,11 @@
 :toclevels: 8
 :url-wiki: https://en.wikipedia.org/wiki/Vue.js
 :url-website: https://vuejs.org/
-:url-github: https://github.com/vuejs/core
+:url-repo: https://github.com/vuejs/core
 
 {url-wiki}[[wiki\]]
 {url-website}[[website\]] 
-{url-github}[[github\]]
-
-Vue: Vapor Mode
+{url-repo}[[repo\]]
 
 Nuxt
 

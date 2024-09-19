@@ -12,7 +12,7 @@ include::./layouts/index.adoc[leveloffset=+1]
 
 include::./api/index.adoc[leveloffset=+1]
 
-include::./directives.adoc[leveloffset=+1]
+include::./directives/index.adoc[leveloffset=+1]
 
 include::./standalone/index.adoc[leveloffset=+1]
 

@@ -1,0 +1,6 @@
+= `QueryClient`
+
+[source,javascript]
+----
+import { QueryClient, VueQueryPlugin, VueQueryPluginOptions } from '@tanstack/vue-query'
+----

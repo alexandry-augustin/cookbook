@@ -1,0 +1,12 @@
+= `v-for`
+
+[source,html]
+----
+<template v-for="i in 5" :key="page">
+
+</template>
+
+<li v-for="(value, key) in myObject">
+  {{ key }}: {{ value }}
+</li>
+----

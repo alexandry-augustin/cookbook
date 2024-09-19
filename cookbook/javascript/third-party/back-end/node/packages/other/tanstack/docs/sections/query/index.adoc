@@ -7,9 +7,16 @@
 {url-website}[[website\]]
 {url-docs}[[docs\]]
 
+https://vue-query.vercel.app/#/[[vue-query docs\]]
+https://github.com/DamianOsipiuk/vue-query[[vue-query repo (deprecated)\]]
+
 NOTE: Formerly known as React/Vue Query.
 
 include::./installation.adoc[leveloffset=+1]
+
+include::./queryclient.adoc[leveloffset=+1]
+
+include::./VueQueryPluginOptions.adoc[leveloffset=+1]
 
 include::./hooks/index.adoc[leveloffset=+1]
 

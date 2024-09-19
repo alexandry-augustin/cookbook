@@ -1,7 +1,10 @@
 = Faker
+:toc: left
 :url-docs: https://faker.readthedocs.io/en/master/
+:url-repo: https://github.com/joke2k/faker/tree/master
 
 {url-docs}[[docs\]]
+{url-repo}[[repo\]]
 
 == Installation
 
@@ -18,8 +21,13 @@ from faker import Faker
 
 fake = Faker()
     
-fake.name()
 fake.address()
+fake.email()
+
+fake.user_name()
+fake.name()
+fake.first_name()
+fake.last_name()
 ----
 
 == Providers
