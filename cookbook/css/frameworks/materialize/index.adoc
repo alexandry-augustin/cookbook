@@ -1,6 +1,0 @@
-= Materialize
-:url-website: https://materializecss.com/
-:url-repo: https://github.com/dogfalo/materialize
-
-{url-website}[[website\]]
-{url-repo}[[repo\]]

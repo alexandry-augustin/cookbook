@@ -1,3 +1,0 @@
-= Plugins
-
-include::./typography.adoc[leveloffset=+1]

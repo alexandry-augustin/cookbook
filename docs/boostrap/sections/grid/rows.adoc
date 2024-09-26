@@ -1,8 +1,0 @@
-= Rows
-
-> "Rows are wrappers for columns." -- https://getbootstrap.com/docs/5.1/layout/grid/
-
-....
-row-[breakpoint]-[size]
-row-[breakpoint]-auto
-....

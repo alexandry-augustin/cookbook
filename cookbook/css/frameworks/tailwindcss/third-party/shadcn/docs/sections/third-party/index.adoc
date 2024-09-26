@@ -1,7 +1,0 @@
-= Third-party
-
-== `shadcn-ui-sidebar`
-
-https://github.com/salimi-my/shadcn-ui-sidebar[[repo\]]
-https://shadcn-ui-sidebar.salimi.my[[website\]]
-https://shadcn-ui-sidebar.salimi.my/account[[demo\]]

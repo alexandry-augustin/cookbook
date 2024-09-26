@@ -1,6 +1,0 @@
-= MUI 
-:url-docs: https://www.muicss.com/
-:url-repo: https://github.com/muicss/mui
-
-{url-docs}[[docs\]]
-{url-repo}[[repo\]]

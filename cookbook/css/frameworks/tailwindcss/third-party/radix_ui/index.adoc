@@ -1,7 +1,0 @@
-= Radix UI
-:toc: left
-:url-website: https://www.radix-ui.com/
-:url-repo: https://github.com/radix-ui/primitives
-
-{url-website}[[website\]]
-{url-repo}[[repo\]]

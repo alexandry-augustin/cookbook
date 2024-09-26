@@ -1,9 +1,0 @@
-= Tachyons
-:toc: left
-:url-website: https://tachyons.io/
-:url-repo: https://github.com/tachyons-css/tachyons/
-
-{url-website}[[website\]]
-{url-repo}[[repo\]]
-
-https://tachyons.io/components/articles/title-highlight-header-cover/index.html[[example]]
