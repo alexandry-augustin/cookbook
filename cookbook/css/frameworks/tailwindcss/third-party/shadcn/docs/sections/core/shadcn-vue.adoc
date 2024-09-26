@@ -24,13 +24,14 @@ pnpm install -D tailwindcss postcss autoprefixer
 (pnpx tailwindcss init -p) ???
 ----
 
+Install ... to use `path` without error:
 
 [source,bash]
 ----
 pnpm i -D @types/node
 ----
 
-[source,javascript]
+[source,javascript,title="vite.config.ts"]
 ----
 import path from 'node:path'
 

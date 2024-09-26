@@ -69,6 +69,8 @@ module.exports = {
 
 == Components
 
+https://daisyui.com/components/[[docs\]]
+
 * Accordion
 * Alert
 * Artboard

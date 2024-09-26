@@ -2,8 +2,6 @@
 :toc: left
 :toclevels: 8
 
-include::./sections/shadcn.adoc[leveloffset=+1]
+include::./sections/core/index.adoc[leveloffset=+1]
 
-include::./sections/shadcn-vue.adoc[leveloffset=+1]
-
-include::./sections/components/index.adoc[leveloffset=+1]
+include::./sections/third-party/index.adoc[leveloffset=+1]

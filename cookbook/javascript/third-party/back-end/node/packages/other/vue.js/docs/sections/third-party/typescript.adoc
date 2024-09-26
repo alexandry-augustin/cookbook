@@ -1,5 +1,7 @@
 = TypeScript
 
+https://vuejs.org/guide/typescript/overview.html
+
 [source,typescript,title="env.d.ts"]
 ----
 /// <reference types="vite/client" />
@@ -59,4 +61,53 @@
     "types": ["node"]
   }
 }
+----
+
+== Add to Exisiting Project 
+
+https://stackoverflow.com/questions/63724523/how-to-add-typescript-to-vue-3-and-vite-project
+
+----
+pnpm install typescript
+----
+
+[source,json,title="tsconfig.json"]
+----
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "isolatedModules": true,
+    "noEmit": true
+  }
+}
+----
+
+NOTE: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html[What is a tsconfig.json]
+
+[source,typescript,title="src/shims-vue.d.ts"]
+----
+declare module "*.vue" {
+  import { defineComponent } from "vue";
+  const Component: ReturnType<typeof defineComponent>;
+  export default Component;
+}
+----
+
+NOTE: The `shims-vue.d.ts` file helps your IDE to understand what a file ending in `.vue` is.
+
+Rename `.js` files to `.ts` in the `src` folder, and modify the `index.html` from: 
+
+[source,typescript,title="index.html"]
+----
+<script type="module" src="/src/main.js"></script> 
+----
+
+to
+
+[source,typescript,title="src/index.html"]
+----
+<script type="module" src="/src/main.ts"></script> 
 ----

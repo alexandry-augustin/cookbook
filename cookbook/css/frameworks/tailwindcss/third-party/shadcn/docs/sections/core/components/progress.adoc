@@ -1,0 +1,17 @@
+= Progress
+
+[source,bash]
+----
+pnpx shadcn-vue@latest add progress
+----
+
+[source,vue,title="src/components/MyComponent.vue"]
+----
+<script setup lang="ts">
+import { Progress } from '@/components/ui/progress'
+</script>
+
+<template>
+  <Progress :model-value="33" />
+</template>
+----
