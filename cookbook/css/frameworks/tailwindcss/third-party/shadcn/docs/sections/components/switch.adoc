@@ -1,0 +1,10 @@
+= Switch
+
+[source,bash]
+----
+pnpx shadcn-vue@latest add 
+----
+
+[source,vue,title="src/components/MyComponent.vue"]
+----
+----

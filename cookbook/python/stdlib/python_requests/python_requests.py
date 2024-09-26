@@ -10,29 +10,54 @@ def pretty_print(text):
 
     return ret
 
-def post_00():
+def post_00(
+        url, 
+        data, 
+        headers=None):
 
-#    url = 'https://www.w3schools.com/python/demopage.php'
-#    data = {'somekey': 'somevalue'}
+    resp = requests.post(
+        url, 
+        headers=headers, 
+        data=data)
 
-    url = "http://bugs.python.org"
-    payload = {'number': 12524, 'type': 'issue', 'action': 'show'}
+    return resp
 
-    resp = requests.post(url, data=payload)
+def get_00(url):
 
-    print(resp.text[:600])
-    print(resp.status_code, resp.reason)
+    resp = requests.get(url)
 
-
-    payload = {'some': 'data'}
-    resp = requests.post(url, data=json.dumps(payload))
-
-def get_00():
-
-    resp = requests.get('https://api.github.com/events')
-    print(pretty_print(resp.text))
+    return resp
 
 if __name__ == '__main__':
 
-    get_00()
-    post_00()
+    # headers = { 
+    #     'Content-type': 'application/json', 
+    #     'Accept': 'application/json'
+    # }
+
+    resp = get_00(url='https://api.github.com/events')
+
+    # resp = post_00(
+    #     url='https://www.w3schools.com/python/demopage.php', 
+    #     data={
+    #         'somekey': 'somevalue'
+    #         })
+    # resp = post_00(
+    #     url='http://bugs.python.org', 
+    #     data={
+    #         'number': 12524, 
+    #         'type': 'issue', 
+    #         'action': 'show'
+    #         })
+    # resp = post_00(
+    #     url='http://bugs.python.org', 
+    #     data=json.dumps({
+    #         'some': 'data'
+    #         }))
+    
+    # print(resp.text[:600])
+    # print(pretty_print(resp.text))
+    # print(resp.json())
+    print(resp.status_code, resp.reason)
+    print(resp.headers['content-type'])
+    print(resp.encoding)

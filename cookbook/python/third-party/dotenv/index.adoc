@@ -15,11 +15,11 @@ conda install python-dotenv
 
 == Usage
 
-=== `.env` Syntax
+=== `.env` File Syntax
 
 [quote,https://github.com/theskumar/python-dotenv/blob/main/README.md]
 ____
-The syntax of `.env` files supported by python-dotenv is similar to that of Bash
+The syntax of `.env` files supported by `python-dotenv` is similar to that of Bash
 ____
 
 ..env.example
@@ -46,17 +46,23 @@ ____
 
 [source,python]
 ----
+import os
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
-----
+dotenv_file = BASE_DIR / '.env'
 
+if os.path.isfile(dotenv_file):
+    load_dotenv(dotenv_file)
+
+os.environ['MY_KEY']
+----
 
 === `dotenv_values`
 
 [quote,https://github.com/theskumar/python-dotenv/blob/main/README.md]
 ____
-The function `dotenv_values` works more or less the same way as load_dotenv, except it doesn't touch the environment, it just returns a `dict` with the values parsed from the `.env` file.
+The function `dotenv_values` works more or less the same way as `load_dotenv`, except it doesn't touch the environment, it just returns a `dict` with the values parsed from the `.env` file.
 ____
 
 [source,python]
@@ -66,20 +72,4 @@ from dotenv import dotenv_values
 config = dotenv_values('.env')
 
 config['MY_KEY']
-----
-
-=== `load_dotenv`
-
-[source,python]
-----
-import os
-from pathlib import Path
-import dotenv
-
-dotenv_file = BASE_DIR / '.env'
-
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
-
-os.environ['MY_KEY'],
 ----
