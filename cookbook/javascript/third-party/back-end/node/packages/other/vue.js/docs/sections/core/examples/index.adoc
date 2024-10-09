@@ -1,0 +1,52 @@
+= Examples
+
+== WindowSize
+
+https://www.webmound.com/get-screen-size-check-resize-vue/[[ref\]]
+
+[source,'vue']
+----
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const windowWidth = ref(window.innerWidth)
+const windowHeight = ref(window.innerHeight)
+
+const handleResize = () => {
+    windowWidth.value = window.innerWidth
+    windowHeight.value = window.innerHeight
+}
+
+onMounted(() => {
+    window.addEventListener('resize', handleResize)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('resize', handleResize)
+})
+</script>
+
+<template>
+    <div>
+        <p>Window Width: {{ windowWidth }}</p>
+        <p>Window Height: {{ windowHeight }}</p>
+    </div>
+</template>
+----
+
+[source,'vue']
+----
+<script setup>
+import { ref } from 'vue';
+
+const screenWidth = ref(screen.width)
+const screenHeight = ref(screen.height)
+</script>
+
+<template>
+    <div>
+        <p>Screen Width: {{ screenWidth }}</p>
+        <p>Screen Height: {{ screenHeight }}</p>
+    </div>
+</template>
+----

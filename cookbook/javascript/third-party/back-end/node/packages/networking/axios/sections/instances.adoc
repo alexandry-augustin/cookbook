@@ -1,0 +1,64 @@
+= Instances
+
+https://axios-http.com/docs/instance
+
+[source,javascript]
+----
+const config = {
+  baseURL: 'https://some-domain.com/api/',
+  timeout: 1000,
+  headers: {'X-Custom-Header': 'foobar'}
+};
+
+const instance = axios.create(config);
+----
+
+== Methods
+
+The available instance methods are listed below. 
+The specified config will be merged with the instance config.
+
+[source,javascript]
+----
+instance.request(config)
+----
+
+[source,javascript]
+----
+instance.get(url[, config])
+----
+
+[source,javascript]
+----
+instance.delete(url[, config])
+----
+
+[source,javascript]
+----
+instance.head(url[, config])
+----
+
+[source,javascript]
+----
+instance.options(url[, config])
+----
+
+[source,javascript]
+----
+instance.post(url[, data[, config]])
+----
+
+[source,javascript]
+----
+instance.put(url[, data[, config]])
+----
+
+[source,javascript]
+----
+instance.patch(url[, data[, config]])
+----
+
+[source,javascript]
+----
+instance.getUri([config])
+----

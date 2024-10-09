@@ -11,13 +11,13 @@ Default port: `5173`
 
 [source,bash]
 ----
-npm create vue@latest
+pnpm create vue@latest
 or
-npm init vue@3
+pnpm init vue@3
 
 cd prj_name
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ----
 
 NOTE: Will create a new directory named after the project.

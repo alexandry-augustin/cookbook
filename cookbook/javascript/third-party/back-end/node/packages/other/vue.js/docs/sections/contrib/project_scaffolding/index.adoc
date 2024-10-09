@@ -10,9 +10,9 @@ https://vitejs.dev/guide/
 
 [source,bash]
 ----
-npm init vite-app PRJ_NAME
+pnpm init vite-app PRJ_NAME
 
 cd PRJ_NAME
-npm install (or `yarn`)
-npm run dev (or `yarn dev`)
+pnpm install (or `yarn`)
+pnpm run dev (or `yarn dev`)
 ----

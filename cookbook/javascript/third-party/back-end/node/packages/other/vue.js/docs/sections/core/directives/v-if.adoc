@@ -1,5 +1,15 @@
 = `v-if`
 
-`v-else`
-
-`v-else-if`
+[source,html]
+----
+<div v-if="...">
+    <!-- ... -->
+</div>
+<div v-else-if="...">
+  <!-- ... -->
+</div>
+<!-- ... -->
+<div v-else>
+  <!-- ... -->
+</div>
+----

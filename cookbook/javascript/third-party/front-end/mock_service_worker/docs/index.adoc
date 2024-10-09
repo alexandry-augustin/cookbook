@@ -1,0 +1,18 @@
+= Mock Service Worker (MSW)
+:toc: left
+:url-website: https://mswjs.io/
+:url-repo: https://github.com/mswjs/msw
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+https://www.vuemastery.com/blog/mock-service-worker-api-mocking-for-vuejs-development-testing/#setting-up-msw[[tutorial\]]
+
+== Installation
+
+[source,bash]
+----
+pnpm install msw
+----
+
+== Usage

@@ -1,0 +1,90 @@
+= Mock Axios (`moxios`)
+:toc: left
+:url-repo: https://github.com/axios/moxios
+
+{url-repo}[[repo\]]
+
+https://stackoverflow.com/questions/46179297/mocking-axios-calls-using-moxios-in-order-to-test-api-calls
+
+== Installation
+
+[source,bash]
+----
+pnpm install moxios --save-dev
+----
+
+== Usage
+
+[source,bash]
+----
+import moxios from 'moxios';
+----
+
+=== `stubRequest`
+
+[source,bash]
+----
+moxios.stubRequest(URL, {
+    status: ... , 
+    response: ...
+});
+----
+
+`URL`:: what is going to be intercepted (string (which will need to be a full URL), or a Regular Expression).
+
+response config object:: the main keys we use are `status` and `response`. 
+`status` will be the status in the `axios` fetch response and `response` will be the `data` in the `axios` fetch response.
+
+// [source,https://codewithhugo.com/testing-an-express-app-with-supertest-moxios-and-jest/]
+// ____
+// The `stubRequest` method should be passed 2 parameters:
+// 
+// * The first is what is going to be intercepted, this can be a string (which will need to be a full URL), or a Regular Expression.
+// * The second parameter is a response config object, the main keys we use are `status` and `response`. 
+// `status` will be the status in the `axios` fetch response and `response` will be the `data` in the `axios` fetch response.
+// ____
+
+== Examples
+
+[source,javascript]
+----
+import axios from 'axios';
+import moxios from 'moxios';
+
+const config ={
+    method: 'get',
+    baseURL: 'http://localhost'
+}
+
+let instance = axios.create(config)
+
+moxios.install(instance);
+
+// Match against an exact URL value
+moxios.stubRequest('/say/hello', {
+    status: 200,
+    responseText: 'hello'
+})
+
+// Alternatively URL can be a RegExp
+moxios.stubRequest(/say.*/, {
+    status: 200,
+    responseText: 'anything'
+})
+
+instance.get('/say/hello')
+    .then((response) => {
+        console.log(response.data);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+    .finally(() => {
+    });
+
+moxios.wait(() => {
+   console.log('done')
+});
+
+moxios.uninstall(instance);
+----

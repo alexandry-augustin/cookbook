@@ -6,5 +6,5 @@ based on webpack
 
 [source,bash]
 ----
-npx @vue/cli create
+pnpx @vue/cli create
 ----

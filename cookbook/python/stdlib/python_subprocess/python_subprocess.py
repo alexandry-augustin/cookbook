@@ -31,6 +31,10 @@ output = subprocess.check_output(['ls','/usr'])
 output = subprocess.check_output(['echo', '-n', 'ok'])
 assert(output == b'ok')
 
+# try:
+#     subprocess.check_output(...)
+# except subprocess.CalledProcessError as e:
+#     print(e.output)
 
 
 
@@ -42,8 +46,8 @@ cmd=[]
 cmd.append('echo 3')
 cmd.append('ls /non/existing/path/')
 for i,c in enumerate(cmd):
-    args=shlex.split(c)
-    proc=subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    args = shlex.split(c)
+    proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     proc.wait()
     out, err = proc.communicate()
     print('{}: cmd: {}'.format(i, c))

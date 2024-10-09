@@ -17,3 +17,5 @@ include::./directives/index.adoc[leveloffset=+1]
 include::./standalone/index.adoc[leveloffset=+1]
 
 include::./petite/index.adoc[leveloffset=+1]
+
+include::./examples/index.adoc[leveloffset=+1]

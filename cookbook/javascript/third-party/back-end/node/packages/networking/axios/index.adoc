@@ -1,0 +1,41 @@
+= axios
+:toc: left
+:toclevels: 8
+:url-website: https://axios-http.com/
+:url-repo: https://github.com/axios/axios
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[source,bash]
+----
+pnpm install axios
+----
+
+[source,html]
+----
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+----
+
+or
+
+[source,html]
+----
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+----
+
+// == Usage
+// 
+// [source,javascript]
+// ----
+// import axios from 'axios';
+// // const axios = require('axios');
+// ----
+
+include::./sections/examples.adoc[leveloffset=+1]
+
+include::./sections/config.adoc[leveloffset=+1]
+
+include::./sections/instances.adoc[leveloffset=+1]

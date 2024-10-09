@@ -1,0 +1,141 @@
+= Examples
+
+== `GET` Requests
+
+https://axios-http.com/docs/example
+
+Make a request for a user with a given ID
+
+[source,javascript]
+----
+axios.get('/user?ID=12345')
+  .then((response) => {
+    // handle success
+  })
+  .catch((error) => {
+    // handle error
+  })
+  .finally(() {
+    // always executed
+  });
+----
+
+Or
+
+[source,javascript]
+----
+axios.get('/user', {
+    params: {
+      ID: 12345
+    }
+  })
+  .then((response) => {
+    // handle success
+  })
+  .catch((error) => {
+    // handle error
+  })
+  .finally(() {
+    // always executed
+  });  
+----
+
+Add the `async` keyword to your outer function/method to use async/await
+
+[source,javascript]
+----
+async function getUser() {
+  try {
+    const response = await axios.get('/user?ID=12345');
+  } catch (error) {
+    // handle error
+  }
+}
+----
+
+== `POST` Requests
+
+https://axios-http.com/docs/post_example
+
+=== JSON
+
+[source,javascript]
+----
+axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then((response) => {
+    // handle success
+  })
+  .catch((error) => {
+    // handle error
+  });
+----
+
+Performing multiple concurrent requests
+
+[source,javascript]
+----
+function getUserAccount() {
+  return axios.get('/user/12345');
+}
+
+function getUserPermissions() {
+  return axios.get('/user/12345/permissions');
+}
+
+const [acct, perm] = await Promise.all([getUserAccount(), getUserPermissions()]);
+
+// OR
+
+Promise.all([getUserAccount(), getUserPermissions()])
+  .then(function ([acct, perm]) {
+    // ...
+  });
+----
+
+Post an HTML form as JSON
+
+[source,javascript]
+----
+const {data} = await axios.post('/user', document.querySelector('#my-form'), {
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
+----
+
+=== Forms
+
+* Multipart (`multipart/form-data`)
+
+[source,javascript]
+----
+const {data} = await axios.post('https://httpbin.org/post', {
+    firstName: 'Fred',
+    lastName: 'Flintstone',
+    orders: [1, 2, 3],
+    photo: document.querySelector('#fileInput').files
+  }, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  }
+)
+----
+
+* URL encoded form (`application/x-www-form-urlencoded`)
+
+[source,javascript]
+----
+const {data} = await axios.post('https://httpbin.org/post', {
+    firstName: 'Fred',
+    lastName: 'Flintstone',
+    orders: [1, 2, 3]
+  }, {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+})
+----
