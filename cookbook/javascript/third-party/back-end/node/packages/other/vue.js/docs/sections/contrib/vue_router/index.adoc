@@ -1,4 +1,5 @@
 = Vue Router
+:toc: left
 :url-website: https://router.vuejs.org/
 :url-repo: https://github.com/vuejs/router
 
@@ -21,4 +22,71 @@
 pnpm install vue-router@4
 ----
 
+== Setup
+
+
+....
+src
+├── ...
+├── router
+│   └── index.js
+├── views
+│   └── ...
+└── main.js
+....
+
+
+[source,javascript,title="main.js"]
+----
+import { createApp } from 'vue';
+import App from '@/App.vue';
+import router from '@/router'; // <!-- New
+
+const app = createApp(App);
+
+app.use(router); // <!-- New
+
+app.mount('#app');
+----
+
+[source,javascript,title="App.js"]
+----
+<script setup>
+</script>
+
+<template>
+    <RouterView />
+</template>
+----
+
+[source,javascript,title="router/index.js"]
+----
+import { createRouter, createWebHistory } from 'vue-router';
+
+const routes = [
+    // ...
+]
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes
+})
+
+export default router
+----
+
+== `RouterLink`
+
+include::./route_variable.adoc[leveloffset=+1]
+
 include::./example.adoc[leveloffset=+1]
+
+include::./static_routes.adoc[leveloffset=+1]
+
+include::./dynamic_routes.adoc[leveloffset=+1]
+
+include::./nested_routes.adoc[leveloffset=+1]
+
+include::./redirection.adoc[leveloffset=+1]
+
+include::./scroll_behaviour.adoc[leveloffset=+1]

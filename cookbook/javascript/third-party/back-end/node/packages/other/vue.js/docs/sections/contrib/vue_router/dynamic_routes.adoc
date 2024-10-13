@@ -1,0 +1,101 @@
+= Dynamic Routes
+
+[quote,https://enterprisevue.dev/blog/exploring-dynamic-routes-in-vue/]
+____
+Dynamic routes are defined using a colon (`:`) to indicate a dynamic segment in the URL path.
+____
+
+[source,javascript,title="router/index.js"]
+----
+import MyView from '@/views/MyView.vue';
+
+const routes = [
+    {
+        path: '/path/to/my_view/:id',
+        name: 'My View',
+        component: MyView
+    },
+]
+
+// ...
+----
+
+[source,javascript,title="views/MyView.js"]
+----
+<script setup>
+import { useRoute } from 'vue-router';
+const route = useRoute();
+</script>
+
+<template>
+    <div>
+        <strong>/path/to/my_view/{{ route.params.id }}</strong>
+        <div>Or</div>
+        <strong>/path/to/my_view/{{ $route.params.id }}</strong>
+    </div>
+</template>
+----
+
+[quote,https://enterprisevue.dev/blog/exploring-dynamic-routes-in-vue/]
+____
+the `:id` segment is a dynamic segment that will match any value in the URL path after `/path/to/my_view/`. When a user navigates to a URL that matches this route, the [`MyView`] component will be rendered with the `id` parameter as a prop.
+____
+
+[quote,https://router.vuejs.org/guide/essentials/dynamic-matching.html]
+____
+You can have multiple params in the same route, and they will map to corresponding fields on `route.params`. 
+Examples:
+
+|===
+| pattern | matched path | route.params
+
+| /users/:username
+| /users/eduardo
+| `{ username: 'eduardo' }`
+
+| /users/:username/posts/:postId
+| /users/eduardo/posts/123
+| `{ username: 'eduardo', postId: '123' }`
+|===
+____
+
+[quote,https://router.vuejs.org/guide/essentials/dynamic-matching.html]
+____
+In addition to `route.params`, the `route` object also exposes other useful information such as `route.query` (if there is a query in the URL), `route.hash`, etc. 
+You can check out the full details in the https://router.vuejs.org/api/#RouteLocationNormalized[API Reference].
+____
+
+== Friendly URLs
+
+https://stackoverflow.com/questions/27343034/where-to-add-the-id-in-a-url
+
+=== Example 1
+
+....
+https://stackoverflow.com/questions/27343034/seo-friendly-url-where-to-add-the-id
+....
+
+----
+  {
+    path: '/path/to/my-view/:id/:slug',
+    // ...
+  },
+----
+
+=== Example 2
+
+https://stackoverflow.com/questions/47463470/vue-js-dynamic-route-matching-of-slug-with-number
+
+....
+http://example.com/post/21
+http://example.com/post/product-title-51
+http://example.com/post/another-product-title-137
+http://example.com/post/another-product-45-title-with-number-288-anywhere-178
+....
+
+----
+  {
+    path: '/post/(.*-)?:id(\\d+)'
+    // ...
+  },
+----

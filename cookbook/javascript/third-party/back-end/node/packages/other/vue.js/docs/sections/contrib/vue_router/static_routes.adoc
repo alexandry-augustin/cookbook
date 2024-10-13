@@ -1,0 +1,16 @@
+= Static Routes
+
+[source,javascript,title="router/index.js"]
+----
+import MyView from '@/views/MyView.vue';
+
+const routes = [
+    {
+        path: '/path/to/my_view',
+        name: 'My View',
+        component: MyView
+    },
+]
+
+// ...
+----

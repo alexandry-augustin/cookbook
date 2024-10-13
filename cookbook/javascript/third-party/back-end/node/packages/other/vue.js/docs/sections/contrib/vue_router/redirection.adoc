@@ -1,0 +1,14 @@
+= Redirection
+
+[source,javascript,title="router/index.js"]
+----
+const routes = [
+    {
+        // /search/postName -> /search?q=postName
+        path: '/search/:postName',
+        redirect: to => {
+            return { path: '/search', query: { q: to.params.postName } }
+        },
+    }
+]
+----

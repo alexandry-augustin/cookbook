@@ -1,4 +1,6 @@
 = Query
+:toc: left
+:toclevels: 8
 :url-repo: https://github.com/TanStack/query
 :url-website: https://tanstack.com/query/latest
 :url-docs: https://tanstack.com/query/latest/docs/framework/react/overview
@@ -12,12 +14,16 @@ https://github.com/DamianOsipiuk/vue-query[[vue-query repo (deprecated)\]]
 
 NOTE: Formerly known as React/Vue Query.
 
-include::./installation.adoc[leveloffset=+1]
+include::./sections/installation.adoc[leveloffset=+1]
 
-include::./queryclient.adoc[leveloffset=+1]
+include::./sections/queryclient.adoc[leveloffset=+1]
 
-include::./VueQueryPluginOptions.adoc[leveloffset=+1]
+include::./sections/dependent_queries.adoc[leveloffset=+1]
 
-include::./hooks/index.adoc[leveloffset=+1]
+include::./sections/parallel_queries.adoc[leveloffset=+1]
 
-include::./devtools.adoc[leveloffset=+1]
+include::./sections/VueQueryPluginOptions.adoc[leveloffset=+1]
+
+include::./sections/hooks/index.adoc[leveloffset=+1]
+
+include::./sections/devtools.adoc[leveloffset=+1]

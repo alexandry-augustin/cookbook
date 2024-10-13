@@ -1,4 +1,6 @@
 = Table
+:toc: left
+:toclevels: 8
 :url-website: https://tanstack.com/table/latest
 :url-repo: https://github.com/tanstack/table
 :url-docs: https://tanstack.com/table/latest/docs/introduction

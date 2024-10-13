@@ -1,0 +1,5 @@
+= `$route`
+
+`fullPath`:: {empty}
+`params`:: {empty}
+`id`::: {empty}

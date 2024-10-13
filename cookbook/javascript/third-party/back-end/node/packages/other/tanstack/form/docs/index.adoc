@@ -1,4 +1,6 @@
 = Form
+:toc: left
+:toclevels: 8
 :url-website: https://tanstack.com/form/latest
 :url-docs: https://tanstack.com/form/latest/docs/overview
 :url-repo: https://github.com/tanstack/form

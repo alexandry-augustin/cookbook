@@ -1,4 +1,6 @@
 = Virtual
+:toc: left
+:toclevels: 8
 :url-website: https://tanstack.com/virtual/latest
 :url-docs: https://tanstack.com/virtual/latest/docs/introduction
 :url-repo: https://github.com/tanstack/virtual

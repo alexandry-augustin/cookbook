@@ -1,11 +1,3 @@
 = TanStack
 :toc: left
 :toclevels: 8
-
-include::./sections/query/index.adoc[leveloffset=+1]
-
-include::./sections/table/index.adoc[leveloffset=+1]
-
-include::./sections/virtual/index.adoc[leveloffset=+1]
-
-include::./sections/form/index.adoc[leveloffset=+1]

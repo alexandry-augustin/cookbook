@@ -1,0 +1,23 @@
+= Nested Routes
+
+[source,javascript,title="router/index.js"]
+----
+import MyViewLevel0 from '@/views/MyViewLevel0.vue';
+import MyViewLevel1 from '@/views/MyViewLevel1.vue';
+
+const routes = [
+    {
+        path: '/path/to/my_view/lvl_0',
+        name: 'My View Level 0',
+        component: MyViewLevel0,
+        children: [
+                {
+                    path: 'lvl_1',
+                    component: MyViewLevel1,
+                }
+        ]
+    }
+]
+
+// ...
+----

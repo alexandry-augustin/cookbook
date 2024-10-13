@@ -1,0 +1,36 @@
+= `VueQueryPluginOptions`
+
+[source,javascript]
+----
+import { QueryClient, VueQueryPlugin, VueQueryPluginOptions } from '@tanstack/vue-query'
+import { createApp } from 'vue'
+import App from './App.vue'
+
+const myClient = new QueryClient();
+const vueQueryPluginOptions: VueQueryPluginOptions = {
+  queryClient: myClient,
+};
+
+createApp(App)
+.use(VueQueryPlugin, vueQueryPluginOptions)
+.mount('#app')
+----
+
+[quote,https://medium.com/@bsalwiczek/why-to-use-tanstack-query-in-vue-106f60863582]
+____
+All queries will be now attached to this client. 
+To get the query client in the component we use `useQueryClient()`.
+____
+
+[quote,https://medium.com/@bsalwiczek/why-to-use-tanstack-query-in-vue-106f60863582]
+____
+Now we can simply invalidate the cache by calling `refetchQueries()` function on `queryClient`.
+____
+
+[source,javascript]
+----
+import { useQueryClient} from '@tanstack/vue-query'
+
+const queryClient = useQueryClient()
+await queryClient.refetchQueries({ queryKey: ['myquery'] })
+----
