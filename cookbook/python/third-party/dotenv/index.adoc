@@ -13,9 +13,7 @@ python -m pip install python-dotenv
 conda install python-dotenv
 ----
 
-== Usage
-
-=== `.env` File Syntax
+== `.env` File Syntax
 
 [quote,https://github.com/theskumar/python-dotenv/blob/main/README.md]
 ____
@@ -29,7 +27,7 @@ ADMIN_EMAIL=admin@${DOMAIN}
 ROOT_URL=${DOMAIN}/app
 ....
 
-=== `load_dotenv`
+== `load_dotenv`
 
 [quote,https://github.com/theskumar/python-dotenv/blob/main/README.md]
 ____
@@ -40,11 +38,11 @@ To configure the development environment, add a `.env` in the root directory of 
 ....
 .
 ├── .env
-└── foo.py
+└── main.py
 ....
 ____
 
-[source,python]
+[source,python,title="main.py"]
 ----
 import os
 from pathlib import Path
@@ -55,21 +53,48 @@ dotenv_file = BASE_DIR / '.env'
 if os.path.isfile(dotenv_file):
     load_dotenv(dotenv_file)
 
-os.environ['MY_KEY']
+if 'MY_KEY' in os.environ:
+    # Do something with os.environ['MY_KEY']
+else:
+    # Do something with else
+
+# Or
+
+try:
+    os.environ['MY_KEY']
+except KeyError:
+    # Do something with else
+
+# Or
+
+# Returns None if it doesn't exist. 
+# The optional second argument can specify an alternate default.
+os.getenv('MY_KEY') 
 ----
 
-=== `dotenv_values`
+== `dotenv_values`
+
+....
+.
+├── .env
+└── main.py
+....
 
 [quote,https://github.com/theskumar/python-dotenv/blob/main/README.md]
 ____
 The function `dotenv_values` works more or less the same way as `load_dotenv`, except it doesn't touch the environment, it just returns a `dict` with the values parsed from the `.env` file.
 ____
 
-[source,python]
+[source,python,title="main.py"]
 ----
 from dotenv import dotenv_values
 
 config = dotenv_values('.env')
 
-config['MY_KEY']
+if 'MY_KEY' in config:
+    # Do something with config['MY_KEY']
+else:
+    # Do something else
 ----
+
+NOTE: If the file `.env` does not exists, an empty `OrderedDict()` will be return. 

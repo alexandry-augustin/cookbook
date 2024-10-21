@@ -26,48 +26,7 @@ https://en.wikipedia.org/wiki/OpenJS_Foundation
 * Cookies
 * Web SQL Database (deprecated)
 
-== Standards
-
-=== ECMAScript
-
-https://en.wikipedia.org/wiki/ECMAScript
-
-[cols=2*<]
-|===
-|4th Edition
-|abandoned
-
-|5th Edition
-|ECMAScript 2009
-
-|6th Edition
-|ECMAScript 2015
-
-|7th Edition
-|ECMAScript 2016
-
-|8th Edition
-|ECMAScript 2017
-
-|9th Edition
-|ECMAScript 2018
-
-|10th Edition
-|ECMAScript 2019
-
-|11th Edition
-|ECMAScript 2020
-
-|12th Edition
-|ECMAScript 2021
-
-|13th Edition
-|ECMAScript 2022
-|===
-
-=== CommonJS
-
-https://en.wikipedia.org/wiki/CommonJS
+include::./sections/standards.adoc[leveloffset=+1]
 
 include::./sections/core/index.adoc[leveloffset=+1]
 

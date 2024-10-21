@@ -7,42 +7,8 @@
 {url-website}[[website\]]
 {url-repo}[[repo\]]
 
-include::./sections/index.adoc[leveloffset=+1]
+include::./sections/jupyter_lab.adoc[leveloffset=+1]
 
-== Jupyter Notebook
+include::./sections/jupyter_notebook.adoc[leveloffset=+1]
 
-The classic Jupyter Notebook
-
-=== Installation
-
-[source,bash]
-----
-python -m pip install notebook
-----
-
-=== Usage
-
-[source,bash]
-----
-jupyter notebook
-----
-
-== Voilà
-
-https://github.com/voila-dashboards/voila
-
-Voilà turns Jupyter notebooks into standalone web applications 
-
-=== Installation
-
-[source,bash]
-----
-python -m pip install voila
-----
-
-=== Usage
-
-[source,bash]
-----
-voila
-----
+include::./sections/voila.adoc[leveloffset=+1]

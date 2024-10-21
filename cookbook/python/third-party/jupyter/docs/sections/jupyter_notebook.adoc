@@ -1,0 +1,22 @@
+= Jupyter Notebook
+
+The classic Jupyter Notebook
+
+== Installation
+
+[source,bash]
+----
+python -m pip install notebook
+----
+
+== Usage
+
+[source,bash]
+----
+jupyter notebook
+----
+
+[source,bash]
+----
+jupyter notebook --help
+----
