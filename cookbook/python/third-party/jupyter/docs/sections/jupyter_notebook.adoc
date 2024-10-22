@@ -23,3 +23,16 @@ jupyter notebook
 ----
 jupyter notebook --help
 ----
+
+== Shortcuts
+
+`dd`:: delete cell(s)
+`c`:: copy cell
+`x`:: cut cell
+`v`:: paste cell below
+
+`a`:: insert cell above
+`b`:: insert cell below
+
+`y`:: change cell to `code`
+`m`:: change cell to `markdown`
