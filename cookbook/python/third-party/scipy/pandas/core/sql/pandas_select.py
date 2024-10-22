@@ -12,7 +12,7 @@ if __name__ == '__main__':
 #	SELECT *
 #	FROM tips
 #	LIMIT 5;
-	print tips.head()
+	print(tips.head())
 	#--------------------------------------------------
 #	SELECT total_bill, tip, smoker, time
 #	FROM tips
@@ -40,5 +40,5 @@ if __name__ == '__main__':
 #	SELECT sex, count(*)
 #	FROM tips
 #	GROUP BY sex;
-	print tips.groupby('sex').size()
-	print tips.groupby('sex')['total_bill'].count()
+	print(tips.groupby('sex').size())
+	print(tips.groupby('sex')['total_bill'].count())

@@ -1,4 +1,7 @@
 = Jupyter Notebook
+:url-docs: https://jupyter-notebook.readthedocs.io/en/latest/
+
+{url-docs}[[docs\]]
 
 The classic Jupyter Notebook
 

@@ -1,0 +1,43 @@
+= Group By
+
+https://towardsdatascience.com/pandas-transform-more-than-meets-the-eye-928542b40b56
+
+https://stackoverflow.com/questions/27517425/apply-vs-transform-on-a-group-object/47143056#47143056  
+ 
+There are two major differences between the `transform()` and `apply()` of the `groupby()` methods.
+
+* `apply()` implicitly passes all the columns for each group as a `DataFrame` to the custom function, while `transform()` passes each column for each group as a `Series` to the custom function
+* The custom function passed to `apply()` can return a scalar, or a `Series` or `DataFrame` (or numpy array or even list). 
+The custom function passed to `transform` must return a sequence (a one dimensional `Series`, `array` or `list`) the same length as the group.
+
+So, `transform()` works on just one `Series` at a time and `apply()` works on the entire `DataFrame` at once.
+
+So, `transform()` is only allowed to work with a single `Series` at a time. 
+It is impossible for it to act on two columns at the same time. 
+
+`count`:: Number of non-null observations
+`sum`:: Sum of values
+`mean`:: Mean of values
+`mad`:: Mean absolute deviation
+`median`:: Arithmetic median of values
+`min`:: Minimum
+`max`:: Maximum
+`mode`:: Mode
+`abs`:: Absolute Value
+`prod`:: Product of values
+`std`:: Unbiased standard deviation
+`var`:: Unbiased variance
+`sem`:: Unbiased standard error of the mean
+`skew`:: Unbiased skewness (3rd moment)
+`kurt`:: Unbiased kurtosis (4th moment)
+`quantile`:: Sample quantile (value at %)
+`cumsum`:: Cumulative sum
+`cumprod`:: Cumulative product
+`cummax`:: Cumulative maximum
+`cummin`:: Cumulative minimum
+
+== `apply()`
+
+== `agg()`
+
+== `transform()`

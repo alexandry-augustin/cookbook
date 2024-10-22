@@ -1,0 +1,27 @@
+= `nbconvert`
+:url-docs: https://nbconvert.readthedocs.io/en/latest/
+:url-pypi: https://pypi.org/project/nbconvert/
+:url-repo: https://github.com/jupyter/nbconvert
+
+{url-docs}[[docs\]]
+{url-pypi}[[pypi\]]
+{url-repo}[[repo\]]
+
+[source,bash]
+----
+jupyter nbconvert --to FORMAT notebook.ipynb
+----
+
+`--to FORMAT`:: {empty}
+
+`html`::: {empty}
+`latex`::: Latex export
+`pdf`::: Generates a PDF via latex
+`webpdf`::: Generates a PDF by first rendering to HTML, rendering the HTML Chromium headless, and exporting to PDF.
+`slides`::: Reveal.js HTML slideshow
+`markdown`::: Markdown
+`asciidoc`::: Ascii output. Images are output as .png files in a folder.
+`rst`::: reStructuredText
+`script`::: Executable script
+
+`--output-dir path/to/dir`:: (`path/to/dir` will be created if it doesn't exists)

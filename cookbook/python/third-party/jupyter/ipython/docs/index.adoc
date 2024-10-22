@@ -1,0 +1,117 @@
+= iPython
+:toc: left
+:url-wiki: https://en.wikipedia.org/wiki/IPython
+:url-website: https://ipython.org/
+:url-repo: https://github.com/ipython
+
+{url-wiki}[[wiki\]]
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+[quote,https://ipython.org/]
+____
+As of IPython 4.0, the language-agnostic parts of the project: the notebook format, message protocol, qtconsole, notebook web application, etc. have moved to new projects under the name Jupyter. 
+IPython itself is focused on interactive Python, part of which is providing a Python kernel for Jupyter.
+____
+
+== Installation
+
+[source,bash]
+----
+python -m pip install ipython
+
+apt-get install ipython
+apt-get install ipython-notebook
+----
+
+[source,bash]
+----
+ipython --version
+----
+
+== qt console
+
+[source,bash]
+----
+apt-get install ipython-qtconsole
+----
+
+[source,bash]
+----
+ipython qtconsole
+ipython qtconsole --colors=linux
+----
+
+....
+!bash_cmd
+....
+
+== Variables
+
+....
+who: list variables
+whos: 
+psearch
+store
+reset: delete variables
+....
+
+== Cell Magic
+....
+%% 
+....
+
+== Magic Commands
+
+....
+%run filename
+%run -t : timing execution
+%run -d	: pdb debugger 
+%run -p : profiler
+%edit filename
+%pdb: will automatically start the debugger on any uncaught exception
+%cat filename
+....
+
+....
+%pylab
+....
+
+== Configuration
+
+....
+ipython profile create
+ipython locate profile
+~/.ipython
+....
+
+== set GUI editor
+
+....
+ipython profile create
+in ~/.ipython/profile_default/ipython_qtconsole_config.py
+c.IPythonWidget.editor = 'gvim'     (/!\ careful with indentation)
+c.ZMQInteractiveShell.colors = 'Linux'
+....
+
+[source,bash]
+----
+ipython --pylab
+----
+
+== Bookmark
+
+....
+bookmark mydir #bookmark current dir
+cd mydir
+-l: list
+....
+
+== Remote Notebook Server
+
+....
+on the server: jupyter notebook --no-browser --port=8888
+on client: ssh -N -f -L localhost:8889:localhost:8888 remote_user@remote_host
+    -f ssh as background process
+in client browser: use localhost:8889
+....

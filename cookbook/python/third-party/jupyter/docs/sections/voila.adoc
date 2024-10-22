@@ -1,8 +1,11 @@
 = Voilà
+:url-repo: https://github.com/voila-dashboards/voila
+:url-docs: https://voila.readthedocs.io/en/stable/
 
-https://github.com/voila-dashboards/voila
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
 
-Voilà turns Jupyter notebooks into standalone web applications 
+Turns Jupyter notebooks into standalone web applications 
 
 == Installation
 

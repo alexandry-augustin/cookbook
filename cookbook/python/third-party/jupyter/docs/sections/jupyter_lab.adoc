@@ -1,4 +1,9 @@
 = JupyterLab
+// :url-docs: 
+:url-repo: https://github.com/jupyterlab/jupyterlab
+
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]
 
 == Installation
 

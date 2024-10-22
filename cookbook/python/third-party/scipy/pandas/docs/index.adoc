@@ -17,6 +17,12 @@
 python -m pip install pandas
 ----
 
+include::./sections/series.adoc[leveloffset=+1]
+
+include::./sections/dataframe.adoc[leveloffset=+1]
+
+== Split, Apply, Combine
+
 image::./res/groupby_apply.png[]
 
 image::./res/groupby_filter.png[]
@@ -24,3 +30,5 @@ image::./res/groupby_filter.png[]
 image::./res/groupby_transform.png[]
 
 image::./res/split_apply_combine.png[]
+
+include::./sections/groupby/index.adoc[leveloffset=+1]
