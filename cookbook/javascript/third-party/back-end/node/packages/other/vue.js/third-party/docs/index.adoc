@@ -1,4 +1,6 @@
 = Third-party
+:toc: left
+:toclevels: 8
 
 https://vuetifyjs.com/en/
 
@@ -23,9 +25,9 @@ https://github.com/colinhacks/zod[[repo\]]
 
 A schema declaration and validation library
 
-include::./typescript.adoc[leveloffset=+1]
+include::./sections/typescript.adoc[leveloffset=+1]
 
-include::./ssg/index.adoc[leveloffset=+1]
+include::./sections/ssg/index.adoc[leveloffset=+1]
 
 == Mobile Apps
 
@@ -33,6 +35,6 @@ include::./ssg/index.adoc[leveloffset=+1]
 * Ionic
 * Nativescript
 
-include::./vueuse/index.adoc[leveloffset=+1]
+include::./sections/vueuse/index.adoc[leveloffset=+1]
 
-include::./vapor/index.adoc[leveloffset=+1]
+include::./sections/vapor/index.adoc[leveloffset=+1]

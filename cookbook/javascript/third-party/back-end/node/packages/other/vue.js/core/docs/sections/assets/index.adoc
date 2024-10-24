@@ -1,0 +1,6 @@
+= Assets
+
+[source,python]
+----
+<img src="@/assets/images/filename.png"/>
+----

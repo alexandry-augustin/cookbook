@@ -1,9 +1,0 @@
-= Contrib
-
-include::./vite.adoc[leveloffset=+1]
-
-include::./state_management/index.adoc[leveloffset=+1]
-
-include::./vue_router/index.adoc[leveloffset=+1]
-
-include::./project_scaffolding/index.adoc[leveloffset=+1]

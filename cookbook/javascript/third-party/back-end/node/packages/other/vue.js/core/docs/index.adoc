@@ -1,0 +1,41 @@
+= Vue Core
+:toc: left
+:toclevels: 8
+:url-wiki: https://en.wikipedia.org/wiki/Vue.js
+:url-website: https://vuejs.org/
+:url-repo: https://github.com/vuejs/core
+
+{url-wiki}[[wiki\]]
+{url-website}[[website\]] 
+{url-repo}[[repo\]]
+
+https://vuejs.org/guide/extras/ways-of-using-vue.html[Ways of Using Vue]
+
+[quote,https://thecodebytes.com/is-vue-js-a-framework-or-library/]
+____
+Vue is considered a framework. 
+It includes an entire suite of tools, such as routers, state management, testing suites, and everything you need to build a complete web app. [These features are very similar to what Angular provides.] 
+However, these tools are compartmentalized and you can strip Vue down to simply being the core library [, similar to React].
+____
+
+include::./sections/vs_alpinejs.adoc[leveloffset=+1]
+
+include::./sections/forms.adoc[leveloffset=+1]
+
+include::./sections/components/index.adoc[leveloffset=+1]
+
+include::./sections/composable/index.adoc[leveloffset=+1]
+
+include::./sections/assets/index.adoc[leveloffset=+1]
+
+include::./sections/layouts/index.adoc[leveloffset=+1]
+
+include::./sections/api/index.adoc[leveloffset=+1]
+
+include::./sections/directives/index.adoc[leveloffset=+1]
+
+include::./sections/standalone/index.adoc[leveloffset=+1]
+
+include::./sections/petite/index.adoc[leveloffset=+1]
+
+include::./sections/examples/index.adoc[leveloffset=+1]
