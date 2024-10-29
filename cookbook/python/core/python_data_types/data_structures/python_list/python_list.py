@@ -1,7 +1,7 @@
 class base_00(object):
     def __init__(self, n=0):
         self.n=n
-#----------------------------------------------------------
+
 if __name__ == '__main__':
 
     #empty list
@@ -33,44 +33,17 @@ if __name__ == '__main__':
     l[1], l[0] = l[0], l[1]
     assert(l==[1, 0])
     #--------------------------------------------------
-    #list comprehensions
-    #[expression(i) for i in old_list if filter(i)]
-    #
-    # { w | w \in V and p(w) }
-    # [w for w in V if p(w)]
-    #
-    l=[0 for i in range(3)]
-    assert(l==[0, 0, 0])
-
-    l=[i**2 for i in range(3)]
-    l=[(lambda x: x*x)(i) for i in range(3)]
-    assert(l==[0, 1, 4])
-
-    l=[i for i in range(7) if i%2==0]
-    assert(l==[0, 2, 4, 6])
-
-    l=[[j for j in range(3)] for i in range(2)]
-    assert(l==[[0, 1, 2], [0, 1, 2]])
-
-    l=[[i+j for i in range(2)] for j in range(2)]
-    assert(l==[[0, 1], [1, 2]])
-
-    #'unzip' array
-    a=[(1,3),(5,4)]
-    l=[i for sub in a for i in sub]
-    assert(l==[1, 3, 5, 4])
-    #--------------------------------------------------
     l=[1, 2]
     l.insert(2, 3)
     l.insert(0, 0)
     assert(l==[0, 1, 2, 3])
     #--------------------------------------------------
-    #delete item for given index
+    # delete item for given index
     l=[0, 1, 2]
     del l[1]
     assert(l==[0, 2])
     #--------------------------------------------------
-    #ignore item for index
+    # ignore item for index
     l=[0, 1, 2]
     i=1
     l=l[:i]+l[i+1:]

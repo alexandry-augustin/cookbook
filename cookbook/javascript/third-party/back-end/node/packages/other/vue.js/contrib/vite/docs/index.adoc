@@ -1,0 +1,44 @@
+= Vite
+:toc: left
+:toclevels: 8
+
+== Aliases
+
+`@` path alias to map to the project `src` directory in `vite.config.js`.
+
+E.g. 
+
+[source,javascript]
+----
+import MyComponent from '@/components/MyComponent.vue';
+----
+
+== Environment Variables
+
+[quote,https://jasonwatmore.com/post/2022/05/28/vue-3-vite-access-environment-variables-from-dotenv-env]
+____
+Vue 3 apps built with Vite support dotenv environment variables out of the box, so all you need to do is add a `.env` file to the root folder of your Vue project.
+____
+
+[quote,https://jasonwatmore.com/post/2022/05/28/vue-3-vite-access-environment-variables-from-dotenv-env]
+____
+to access environment variables from the client app they must be prefixed with VITE_. Otherwise they will only be accessible on the server side.
+____
+
+[source,javascript]
+----
+
+<script setup>
+const myVar = import.meta.env.VITE_MY_VAR;
+</script>
+
+<template>
+    {{ myVar }}
+</template>
+----
+
+----
+VITE_MY_VAR='MY_VALUE'
+----
+
+

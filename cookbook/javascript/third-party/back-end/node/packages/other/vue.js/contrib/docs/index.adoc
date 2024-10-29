@@ -2,8 +2,6 @@
 :toc: left
 :toclevels: 8
 
-include::./sections/vite.adoc[leveloffset=+1]
-
 include::./sections/state_management/index.adoc[leveloffset=+1]
 
 include::./sections/vue_router/index.adoc[leveloffset=+1]
