@@ -1,4 +1,4 @@
-= Query
+= Tanstack: Query
 :toc: left
 :toclevels: 8
 :url-repo: https://github.com/TanStack/query

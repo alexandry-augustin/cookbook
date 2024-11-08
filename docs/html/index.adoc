@@ -14,4 +14,6 @@ include::./sections/entity_names.adoc[leveloffset=+1]
 
 include::./sections/forms.adoc[leveloffset=+1]
 
+include::./sections/iframe.adoc[leveloffset=+1]
+
 include::./sections/accessibility.adoc[leveloffset=+1]

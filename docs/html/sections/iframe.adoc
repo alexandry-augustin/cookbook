@@ -1,0 +1,75 @@
+= iFrame
+
+https://blog.logrocket.com/ultimate-guide-iframes/
+
+Short for "inline frame".
+
+[source,html]
+----
+<iframe
+
+  src="https://google.com/"    <!-- Sets the address of the document to embed --> 
+
+  srcdoc="<p>Some html</p>"    <!-- Sets the HTML content of the page to show --> 
+
+  height="100px"               <!-- Sets the iframe height in pixels -->
+
+  width="100px"                <!-- Sets the iframe width in pixels -->
+
+  name="my-iframe"             <!-- Sets the name of the iframe (mainly used to reference the element in JavaScript -->
+
+  allow="fullscreen"           <!-- Sets the feature policy for the iframe. -->
+
+  referrerpolicy="no-referrer" <!-- Sets the referrer to send when fetching the iframe content -->
+
+  sandbox="allow-same-origin"  <!-- Sets the restrictions of the iframe (more on this below) -->
+
+  loading="lazy"               <!-- Specifies when the browser should load the iframe -->
+
+></iframe>
+----
+
+[source,html]
+----
+<iframe 
+    src="iframe.html" 
+    height="200" 
+    width="300" 
+    style="border:none;" 
+    ...
+    title="Iframe Example">
+</iframe>
+----
+
+[quote,https://www.w3schools.com/html/html_iframe.asp]
+____
+By default, an iframe has a border around it. 
+____
+
+Attributes not supported in HTML5: `align`, `frameborder`, `longdesc`, `marginheight`, `marginwidth`, and `scrolling`.
+
+== `srcdoc`
+
+[quote,https://www.w3schools.com/html/html_iframe.asp]
+____
+Instead of a website URL, we can send HTML directly to the iframe, which will be displayed instead of another website. 
+____
+
+[source,html]
+----
+<iframe srcdoc="<h1>...</h1>"></iframe>
+----
+
+== Fallback
+
+[quote,https://blog.logrocket.com/ultimate-guide-iframes/]
+____
+If a browser does not support an iframe, it will display the content between the opening `<iframe>` tag and closing `</iframe>` tag.
+____
+
+[source,html]
+----
+<iframe>
+  <p>Your browser does not support iframes.</p>
+</iframe>
+----

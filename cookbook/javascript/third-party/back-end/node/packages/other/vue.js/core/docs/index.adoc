@@ -20,7 +20,7 @@ ____
 
 include::./sections/vs_alpinejs.adoc[leveloffset=+1]
 
-include::./sections/forms.adoc[leveloffset=+1]
+include::./sections/forms/index.adoc[leveloffset=+1]
 
 include::./sections/components/index.adoc[leveloffset=+1]
 

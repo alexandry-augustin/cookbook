@@ -27,7 +27,7 @@ ADMIN_EMAIL=admin@${DOMAIN}
 ROOT_URL=${DOMAIN}/app
 ....
 
-== `load_dotenv`
+== `load_dotenv()`
 
 [quote,https://github.com/theskumar/python-dotenv/blob/main/README.md]
 ____
@@ -72,7 +72,7 @@ except KeyError:
 os.getenv('MY_KEY') 
 ----
 
-== `dotenv_values`
+== `dotenv_values()`
 
 ....
 .

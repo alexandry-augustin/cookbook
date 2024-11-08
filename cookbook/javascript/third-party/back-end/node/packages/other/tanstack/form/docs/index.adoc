@@ -1,4 +1,4 @@
-= Form
+= Tanstack: Form
 :toc: left
 :toclevels: 8
 :url-website: https://tanstack.com/form/latest
@@ -18,6 +18,46 @@ ____
 
 [source,bash]
 ----
-pnpm i @tanstack/react-form
 pnpm add @tanstack/vue-form
+pnpm i @tanstack/react-form
+----
+
+== Usage
+
+[source,vue]
+----
+<script setup>
+import { useForm } from '@tanstack/vue-form';
+
+const form = useForm({
+  defaultValues: {
+    username: '',
+  },
+  onSubmit: async ({ value }) => {
+    // Do something with form data
+    console.log(value);
+  },
+});
+</script>
+
+<template>
+    <form @submit="(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        form.handleSubmit()
+        }">
+        <div>
+            <form.Field name="username">
+                <template v-slot="{ field }">
+                <input
+                    :name="field.name"
+                    :value="field.state.value"
+                    @blur="field.handleBlur"
+                    @input="(e) => field.handleChange(e.target.value)"/>
+                </template>
+            </form.Field>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</template>
 ----
