@@ -1,4 +1,4 @@
-= Vue Core
+= Vue: Core
 :toc: left
 :toclevels: 8
 :url-wiki: https://en.wikipedia.org/wiki/Vue.js

@@ -1,0 +1,21 @@
+= jquery
+:toc: left
+:url-website: https://jquery.com/
+:url-github: https://github.com/jquery/jquery
+
+{url-website}[[website\]]
+{url-github}[[github\]]
+
+== DOM Selection
+
+[source,javascript]
+----
+$('.someclass')
+
+// equivalent vanilla javascript
+document.querySelector('.someclass')
+document.querySelectorAll('.someclass li')
+----
+
+== DOM Manipulation
+
