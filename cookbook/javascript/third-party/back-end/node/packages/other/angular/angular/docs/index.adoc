@@ -1,0 +1,22 @@
+= Angular
+:toc: left
+:url-website: https://angular.io/
+:url-github: https://github.com/angular/angular
+
+{url-website}[[website]]
+{url-github}[[github]]
+
+== Installation
+
+[source,bash]
+----
+npm install -g @angular/cli
+----
+
+== Usage
+
+[source,bash]
+----
+ng new project_name
+ng serve
+----

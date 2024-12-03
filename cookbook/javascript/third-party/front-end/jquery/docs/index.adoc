@@ -6,16 +6,27 @@
 {url-website}[[website\]]
 {url-github}[[github\]]
 
-== DOM Selection
+....
+$.ajax() == Fetch API 
+$(selector) == .querySelector()
+....
 
 [source,javascript]
 ----
-$('.someclass')
-
-// equivalent vanilla javascript
-document.querySelector('.someclass')
-document.querySelectorAll('.someclass li')
+$(document).ready(function() {
+// jQuery app
+});
 ----
 
-== DOM Manipulation
+Or using shortcut
 
+[source,javascript]
+----
+$(function() {
+// jQuery app
+});
+----
+
+include::./sections/dom/index.adoc[leveloffset=+1]
+
+include::./sections/ajax/index.adoc[leveloffset=+1]

@@ -1,0 +1,8 @@
+= Angular
+:toc: left
+
+[quote,https://www.makeuseof.com/react-vs-angular-popular/]
+____
+Companies that use Angular include Nike, UpWork, Forbes, HBO, Sony, and  Google. Popular apps built using Angular include PayPal, Upwork,  Microsoft Office Home, and Overleaf. Several Google products, including Google Voice and Gmail, also use the framework.
+____
+

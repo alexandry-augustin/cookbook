@@ -1,0 +1,27 @@
+= Lifecycle Hooks
+
+https://vuejs.org/guide/essentials/lifecycle.html[[docs\]]
+
+image::../../res/lifecycle-hooks.png[]
+
+== `onMounted()`
+
+[quote,https://vuejs.org/guide/essentials/lifecycle.html]
+____
+run [...] after the component has finished the initial rendering and created the DOM nodes
+____
+
+[source,vue]
+----
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  // ...
+})
+</script>
+----
+
+== `onUpdated`
+
+== `onUnmounted`

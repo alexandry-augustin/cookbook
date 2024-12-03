@@ -11,6 +11,9 @@ def lsf(path):
 
 if __name__ == '__main__':
 
+    path = Path('/')
+    path = path / 'tmp'
+
     # path/stem.suffix[es]
 
     # path = Path('/', 'tmp')

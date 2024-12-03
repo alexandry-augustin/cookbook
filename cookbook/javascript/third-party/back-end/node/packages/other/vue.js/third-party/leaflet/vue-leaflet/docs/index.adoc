@@ -1,0 +1,14 @@
+= `vue-leaflet`
+:toc: left
+:url-repo: https://github.com/vue-leaflet/vue-leaflet
+
+{url-repo}[[repo\]]
+
+== Installation
+
+[source,bash]
+----
+pnpm install -D @vue-leaflet/vue-leaflet leaflet
+----
+
+== Usage

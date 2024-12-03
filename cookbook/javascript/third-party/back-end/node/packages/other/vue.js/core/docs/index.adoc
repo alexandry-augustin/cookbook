@@ -26,6 +26,8 @@ include::./sections/components/index.adoc[leveloffset=+1]
 
 include::./sections/composable/index.adoc[leveloffset=+1]
 
+include::./sections/lifecycle_hooks/index.adoc[leveloffset=+1]
+
 include::./sections/assets/index.adoc[leveloffset=+1]
 
 include::./sections/layouts/index.adoc[leveloffset=+1]

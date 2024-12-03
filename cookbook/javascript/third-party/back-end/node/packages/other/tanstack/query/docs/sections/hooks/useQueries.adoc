@@ -1,0 +1,37 @@
+= `useQueries`
+
+https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries[[ref\]]
+
+[source,javascript]
+----
+const param = [
+    { 
+        param1, 
+        param2, 
+        // ... 
+    },
+    { 
+        param1, 
+        param2, 
+        // ... 
+    },
+];
+
+const results = useQueries({
+  queries: [
+    param[0],
+    param[1]
+  ],
+});
+----
+
+[quote,https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries]
+____
+The `useQueries` hook returns an array with all the query results. 
+The order returned is the same as the input order.
+____
+
+== Parameters
+
+`queries`:: array of query option objects identical to the `useQuery` hook (excluding the `queryClient` option because it can be passed in on the top level).
+`combine`:: combine `data` (or other Query information) from the results into a single value.

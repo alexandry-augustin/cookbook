@@ -1,0 +1,11 @@
+= Angular.js
+:toc: left
+:url-website: https://angularjs.org/
+:url-github: https://github.com/angular/angular.js
+
+{url-website}[[website]]
+{url-github}[[github]]
+
+== Showcase
+
+* https://www.madewithangular.com/sites/grafana

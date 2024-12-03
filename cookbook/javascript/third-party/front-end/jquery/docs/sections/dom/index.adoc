@@ -1,0 +1,46 @@
+= DOM 
+
+== Selection
+
+[source,javascript]
+----
+$('.someclass')
+----
+
+Equivalent vanilla javascript
+
+[source,javascript]
+----
+document.querySelector('.someclass')
+document.querySelectorAll('.someclass li')
+----
+
+== Manipulation
+
+== `val()`
+
+[quote,https://www.w3schools.com/jquery/html_val.asp]
+____
+The `val()` method returns or sets the value attribute of the selected elements.
+____
+
+[source,javascript]
+----
+$("button").click(function(){
+  $("input:text").val("Glenn Quagmire");
+});
+----
+
+== `change()`
+
+[quote,https://www.w3schools.com/jquery/event_change.asp]
+____
+The change event occurs when the value of an element has been changed (only works on `<input>`, `<textarea>` and `<select>` elements).
+____
+
+[source,javascript]
+----
+$("input").change(function(){
+  alert("The text has been changed.");
+});
+----

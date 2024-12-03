@@ -1,0 +1,6 @@
+= `fs`
+
+[source,bash]
+----
+node -e "fs.writeFileSync('package.json', '{}')"
+----
