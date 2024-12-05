@@ -1,4 +1,6 @@
-= Standalone (Global Build)
+= Vue: Standalone (Global Build)
+:toc: left
+:toclevels: 8
 
 https://vuejs.org/guide/quick-start.html#using-the-global-build[Global Build]
 
@@ -31,4 +33,4 @@ ____
 </script>
 ----
 
-include::./examples/index.adoc[leveloffset=+1]
+include::./sections/examples/index.adoc[leveloffset=+1]

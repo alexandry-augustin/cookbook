@@ -1,6 +1,11 @@
 = Vite
 :toc: left
 :toclevels: 8
+:url-website: https://vite.dev/
+:url-repo: https://github.com/vitejs/vite
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
 
 == Aliases
 

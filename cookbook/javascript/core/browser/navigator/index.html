@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>navigator</title>
+		<script>
+			function showPosition(position)
+			{
+				console.log("Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude);
+			}
+			function handleError(error)
+			{
+				// E.g. GeolocationPositionError { code: 1, message: "User denied geolocation prompt" }
+				console.log(error);
+			}
+
+			if("geolocation" in navigator)
+			// if(navigator.geolocation)
+			{
+				/* geolocation is available */
+				// navigator.geolocation.getCurrentPosition(showPosition);
+				navigator.geolocation.getCurrentPosition(
+					// callback that takes a GeolocationPosition object
+					showPosition, 
+					// [optional] callback that takes a GeolocationPositionError object
+					handleError, 
+					{
+						timeout: 3000, /* in ms */
+					});
+			}
+			else
+			{
+				/* geolocation IS NOT available */
+				console.log("Geolocation is not supported by this browser.");
+			}
+		</script>
+	</head>
+
+	<body>
+        <!-- <script type='text/javascript' charset='utf-8' src='script.js'></script> -->
+	</body>
+</html> 

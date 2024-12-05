@@ -1,4 +1,6 @@
-= Petite
+= Vue: Petite
+:toc: left
+:toclevels: 8
 :url-repo: https://github.com/vuejs/petite-vue
 
 {url-repo}[[repo\]]

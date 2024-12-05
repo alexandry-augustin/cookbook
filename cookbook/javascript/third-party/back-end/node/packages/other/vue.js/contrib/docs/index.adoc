@@ -1,9 +1,9 @@
-= Vue Contrib
+= Vue: Contrib
 :toc: left
 :toclevels: 8
+
+include::./sections/project_scaffolding/index.adoc[leveloffset=+1]
 
 include::./sections/state_management/index.adoc[leveloffset=+1]
 
 include::./sections/vue_router/index.adoc[leveloffset=+1]
-
-include::./sections/project_scaffolding/index.adoc[leveloffset=+1]

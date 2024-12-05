@@ -1,0 +1,13 @@
+= `navigator`
+
+[quote,https://stackoverflow.com/questions/77301527/geolocationpositionerror-position-acquisition-timed-out]
+____
+I'm getting GeolocationPositionError {code: 3, message: "Position acquisition timed out"} error on Firefox after accepting localization. [...]
+
+Make sure the webpage is protected (https). (Localization doesn't work on http)
+
+Try both options of page reload:
+
+* kbd:[Ctrl+Shift+R]
+* kbd:[Ctrl+F5]
+____
