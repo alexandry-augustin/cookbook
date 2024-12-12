@@ -1,0 +1,109 @@
+= Tanstack: Query (React)
+:toc: left
+:toclevels: 8
+
+== Installation
+
+[source,bash]
+----
+pnpm install @tanstack/react-query
+----
+
+[source,javascript,title="index.js"]
+----
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <BrowserRouter>
+            <QueryClientProvider client={queryClient}>
+                <App />
+                {/* <ReactQueryDevtools position="bottom-right"/> */}
+            </QueryClientProvider>
+        </BrowserRouter>
+    </React.StrictMode>
+);
+----
+
+== Hooks
+
+=== `useQuery`
+
+==== Examples
+
+===== Using `axios`
+
+[source,javascript]
+----
+import { useQuery } from "@tanstack/react-query";
+
+function MyComponent() {
+
+   const myQuery = useQuery({
+        queryKey: [ 'myQuery' ], 
+        queryFn: () => {
+            return axios.get(url);
+        }
+    });
+    if(myQuery.isLoading) {
+        return <h1>Loading...</h1>;
+    }
+    if(myQuery.isError) {
+        return <pre>{JSON.stringify(myQuery.error.message)}</pre>;
+    }
+    // {JSON.stringify(myQuery.data)}
+}
+----
+
+==== Pagination
+
+[source,javascript,title=""]
+----
+import { useQuery } from "@tanstack/react-query";
+
+function MyComponent() {
+
+    const [page, setPage] = useState(1);
+
+    const myQuery = useQuery({
+        queryKey: [ 'myQuery', page ], 
+        queryFn: () => {
+            let url = `url?page=${page}`;
+            return axios.get(url);
+        }, 
+        keepPreviousData: true
+    });
+    console.log(myQuery.data);
+    console.log(myQuery.data.hasMore); // is this part of TanStack ?
+}
+----
+
+=== `useMutation`
+
+[source,javascript]
+----
+import { useMutation } from "@tanstack/react-query";
+
+function MyComponent() {
+}
+----
+
+== Devtools
+
+=== Installation
+
+[source,bash]
+----
+pnpm install @tanstack/react-query-devtools
+----
+
+[source,javascript,title="index.js"]
+----
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+<ReactQueryDevtools position="bottom-right"/>
+----

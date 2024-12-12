@@ -1,0 +1,59 @@
+= `useQuery`
+
+https://tanstack.com/query/v4/docs/framework/react/reference/useQuery[[ref\]]
+
+// [quote,https://www.vuemastery.com/blog/advanced-data-fetching-in-vue-w-tanstack-query/#a-vue-query-demo]
+// ____
+// The `useQuery` function takes an object configuration param, which has several properties we can set. 
+// Two of the most important ones are `queryKey` and `queryFn`.
+// 
+// The `queryKey` allows us to set the “key”, an array that defines the query. 
+// Any values that you put in this array will help us identify this query. [...]
+// 
+// The array can also contain numbers, booleans, and even other arrays and objects. 
+// You can even pass down reactive Vue ref and computed values [...]
+// 
+// The second property, `queryFn` is a function that makes an API call, and returns a Promise. 
+// We will use Axios, which itself returns a Promise and will make the network call for us.
+// 
+// This is the function that Tanstack Query will call to make the network request every time it needs to fetch new data.
+// 
+// Finally, we'll add one more param, `select`. 
+// Axios wraps the response of network calls in an object containing a `data` property.
+// 
+// Normally you would check for `response.data` when using the response from an Axios call. 
+// In this case, I want my composition function to return the data only, without the clutter of information from the request (you may actually want to return the whole thing in other scenarios), so I'm going to use the `select` property to tell Tanstack Query what part of the response data I want it to return to the user of this composable.
+// ____
+
+[source,javascript]
+----
+let param = { 
+    param1, 
+    param2, 
+    // ... 
+};
+
+const result = useQuery(param);
+----
+
+include::./parameters.adoc[leveloffset=+1]
+
+include::./return_properties.adoc[leveloffset=+1]
+
+== States
+
+A query can only be in one of the following states at any given moment:
+
+Loading:: The query has no data yet.
+Error:: The query encountered an error and the error is available via the `error` property.
+Success:: The query was successful and the data is available via the `data` property.
+
+A query in *Success* status will usually have *fetchStatus* set to `idle`, but it could also be in `fetching` if a background refetch is happening.
+
+A query that mounts and has no data will usually be in Loading status and have *fetchStatus* set to `fetching`, but it could also be `paused` if there is no network connection.
+
+A query can be in *Loading* state without actually fetching data.
+
+include::./examples.adoc[leveloffset=+1]
+
+include::./pagination.adoc[leveloffset=+1]

@@ -1,0 +1,6 @@
+= Pagination
+
+[source,javascript]
+----
+
+----

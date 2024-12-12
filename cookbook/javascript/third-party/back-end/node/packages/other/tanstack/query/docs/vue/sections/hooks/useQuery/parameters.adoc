@@ -1,0 +1,105 @@
+= Parameters
+
+[quote,https://www.vuemastery.com/blog/advanced-data-fetching-in-vue-w-tanstack-query/#a-vue-query-demo]
+____
+Two of the most important ones are `queryKey` and `queryFn`.
+____
+
+== `queryKey`
+
+[quote,https://www.vuemastery.com/blog/advanced-data-fetching-in-vue-w-tanstack-query/#a-vue-query-demo]
+____
+allows us to set the “key”, an array that defines the query. 
+Any values that you put in this array will help us identify this query. [...]
+
+The array can also contain numbers, booleans, and even other arrays and objects. 
+You can even pass down reactive Vue ref and computed values [...]
+____
+
+== `queryFn`
+
+[quote,https://www.vuemastery.com/blog/advanced-data-fetching-in-vue-w-tanstack-query/#a-vue-query-demo]
+____
+function that makes an API call, and returns a Promise. 
+We will use Axios, which itself returns a Promise and will make the network call for us.
+
+This is the function that Tanstack Query will call to make the network request every time it needs to fetch new data.
+____
+
+== `cacheTime`
+
+
+== `enabled`
+
+
+== `networkMode`
+
+
+== `initialData`
+
+
+== `initialDataUpdatedAt`
+
+
+== `keepPreviousData`
+
+
+== `meta`
+
+
+== `notifyOnChangeProps`
+
+
+== `onError`
+
+
+== `onSettled`
+
+
+== `onSuccess`
+
+
+== `placeholderData`
+
+
+== `queryKeyHashFn`
+
+
+== `refetchInterval`
+
+
+== `refetchIntervalInBackground`
+
+
+== `refetchOnMount`
+
+
+== `refetchOnReconnect`
+
+
+== `refetchOnWindowFocus`
+
+
+== `retry`
+
+
+== `retryOnMount`
+
+
+== `retryDelay`
+
+
+== `select`
+
+
+== `staleTime`
+
+
+== `structuralSharing`
+
+
+== `suspense`
+
+
+== `useErrorBoundary`
+

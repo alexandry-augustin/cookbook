@@ -1,38 +1,35 @@
 = Examples
 
-== Pagination
+== Using Local Data
 
 [source,javascript]
 ----
-import { useQuery } from "@tanstack/react-query";
+<script setup>
+import { ref } from 'vue';
 
-function MyComponent() {
+import { useQuery } from '@tanstack/vue-query';
 
-    const [page, setPage] = useState(1);
-
-    const myQuery = useQuery({
-        queryKey: [ 'myQuery', page ], 
-        queryFn: () => {
-            let url = `url?page=${page}`;
-            return axios.get(url);
-        }, 
-        keepPreviousData: true
-    });
-    console.log(myQuery.data);
-    console.log(myQuery.data.hasMore); // is this part of TanStack ?
+function fetchData() {
+    return { msg: "Hello World!" }
 }
-----
 
-== Basic 1
+const result = ref(useQuery({ 
+    queryKey: [ 'myQuery' ], 
+    queryFn: fetchData 
+}));
+</script>
 
-[source,javascript]
-----
-import { useQuery } from '@tanstack/vue-query'
-
-const result = useQuery({ 
-    queryKey: ['todos'], 
-    queryFn: fetchTodoList 
-});
+<template>    
+    <div v-if="result.isLoading">
+        Loading...
+        <div v-if="result.fetchStatus"> {{ fetchStatus }}</div>
+    </div>
+    <div v-else-if="result.isError">Error: {{ error.message }}</div>
+    <!-- We can assume by this point that `isSuccess === true` -->
+    <div v-else-if="result.data">
+        {{ result.data }}
+    </div>
+</template>
 ----
 
 [source,vue,title="App.vue"]
@@ -63,29 +60,7 @@ const { isLoading, isError, data, error, fetchStatus } = useQuery({
 </template>
 ----
 
-== Basic 2
-
-[source,javascript]
-----
-import { useQuery } from "@tanstack/react-query";
-
-function MyComponent() {
-
-   const myQuery = useQuery({
-        queryKey: [ 'myQuery' ], 
-        queryFn: () => {
-            return axios.get(url);
-        }
-    });
-    if(myQuery.isLoading) {
-        return <h1>Loading...</h1>;
-    }
-    if(myQuery.isError) {
-        return <pre>{JSON.stringify(myQuery.error.message)}</pre>;
-    }
-    // {JSON.stringify(myQuery.data)}
-}
-----
+== Using `axios`
 
 [source,vue,title="App.vue"]
 ----

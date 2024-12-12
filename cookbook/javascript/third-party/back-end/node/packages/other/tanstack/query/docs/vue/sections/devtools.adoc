@@ -7,16 +7,7 @@
 
 [source,bash]
 ----
-pnpm install @tanstack/react-query-devtools
-
 pnpm add @tanstack/vue-query-devtools
-----
-
-[source,javascript,title="index.js"]
-----
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
-<ReactQueryDevtools position="bottom-right"/>
 ----
 
 [source,javascript,title="App.vue"]

@@ -1,4 +1,4 @@
-= Tanstack: Query
+= Tanstack: Query (Vue)
 :toc: left
 :toclevels: 8
 :url-repo: https://github.com/TanStack/query
@@ -21,6 +21,8 @@ include::./sections/queryclient.adoc[leveloffset=+1]
 include::./sections/dependent_queries.adoc[leveloffset=+1]
 
 include::./sections/parallel_queries.adoc[leveloffset=+1]
+
+include::./sections/VueQueryPlugin.adoc[leveloffset=+1]
 
 include::./sections/VueQueryPluginOptions.adoc[leveloffset=+1]
 
