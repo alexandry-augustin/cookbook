@@ -77,6 +77,20 @@ export default router
 
 == `RouterLink`
 
+[source,vue]
+----
+<RouterLink to="/url/">url</RouterLink>
+----
+
+For dynamic routing:
+
+https://stackoverflow.com/questions/55449363/how-to-give-dynamic-url-in-router-link-in-vuejs
+
+[source,vue]
+----
+<router-link :to="'/url/' + id">
+----
+
 include::./route_variable.adoc[leveloffset=+1]
 
 include::./example.adoc[leveloffset=+1]

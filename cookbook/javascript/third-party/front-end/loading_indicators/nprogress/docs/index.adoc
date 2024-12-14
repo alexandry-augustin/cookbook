@@ -1,0 +1,81 @@
+= `nprogress`
+:toc: left
+:url-website: https://ricostacruz.com/nprogress/
+:url-repo: https://github.com/rstacruz/nprogress
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[source,bash]
+----
+pnpm install --save nprogress
+----
+
+[source,html]
+----
+<link rel="stylesheet" href="nprogress.css">
+<script type='text/javascript' charset='utf-8' src='nprogress.js'></script>
+----
+
+=== CDN
+
+[source,html]
+----
+https://unpkg.com/nprogress@0.2.0/nprogress.js
+https://unpkg.com/nprogress@0.2.0/nprogress.css
+----
+
+// == Usage
+
+== `.start()`
+
+[source,javascript]
+----
+NProgress.start();
+----
+
+== `.done()`
+
+[source,javascript]
+----
+NProgress.done();
+----
+
+Force-done: By passing `true` it will show the progress bar even if it's not being shown. 
+By default `.done()` will not do anything if `.start()` isn't called.
+
+[source,javascript]
+----
+NProgress.done(true);
+----
+
+== `.set()`
+
+[source,javascript]
+----
+NProgress.set(0.0);     // Sorta same as .start()
+NProgress.set(0.4);
+NProgress.set(1.0);     // Sorta same as .done()
+----
+
+== `.inc()`
+
+Increments it with a random amount
+
+NOTE: This will never get to 100%.
+
+[source,javascript]
+----
+NProgress.inc();
+----
+
+Increment by a specific value
+
+This will get the current status value and adds 0.2 until status is 0.994
+
+[source,javascript]
+----
+NProgress.inc(0.2);
+----

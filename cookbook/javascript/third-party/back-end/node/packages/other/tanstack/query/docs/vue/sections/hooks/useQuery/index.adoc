@@ -57,3 +57,5 @@ A query can be in *Loading* state without actually fetching data.
 include::./examples.adoc[leveloffset=+1]
 
 include::./pagination.adoc[leveloffset=+1]
+
+include::./infinite_scrolling.adoc[leveloffset=+1]
