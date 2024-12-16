@@ -1,0 +1,48 @@
+= Stats
+
+== `dataUpdatedAt`
+
+(`number`) The timestamp for when the query most recently returned the status as `success`.
+
+== `errorUpdateCount`
+
+(`number`) The sum of all errors.
+
+== `errorUpdatedAt`
+
+(`number`) The timestamp for when the query most recently returned the status as `error`.
+
+== `failureCount`
+
+(`number`)
+
+The failure count for the query
+
+NOTE: Incremented every time the query fails.
+
+NOTE: Reset to `0` when the query succeeds.
+
+== `failureReason`
+
+(`null` | `TError`)
+
+The failure reason for the query retry.
+
+NOTE: Reset to `null` when the query succeeds.
+
+== `refetch`
+
+A function to manually refetch the query.
+
+[NOTE]
+====
+If the query errors, the error will only be logged. If you want an error to be thrown, pass the `throwOnError: true` option `cancelRefetch?: boolean`
+
+* Defaults to `true`
+** Per default, a currently running request will be cancelled before a new request is made
+* When set to `false`, no refetch will be made if there is already a request running.
+====
+
+== `remove`
+
+A function to remove the query from the cache.

@@ -36,23 +36,11 @@ let param = {
 const result = useQuery(param);
 ----
 
+include::./states.adoc[leveloffset=+1]
+
 include::./parameters.adoc[leveloffset=+1]
 
-include::./return_properties.adoc[leveloffset=+1]
-
-== States
-
-A query can only be in one of the following states at any given moment:
-
-Loading:: The query has no data yet.
-Error:: The query encountered an error and the error is available via the `error` property.
-Success:: The query was successful and the data is available via the `data` property.
-
-A query in *Success* status will usually have *fetchStatus* set to `idle`, but it could also be in `fetching` if a background refetch is happening.
-
-A query that mounts and has no data will usually be in Loading status and have *fetchStatus* set to `fetching`, but it could also be `paused` if there is no network connection.
-
-A query can be in *Loading* state without actually fetching data.
+include::./return_properties/index.adoc[leveloffset=+1]
 
 include::./examples.adoc[leveloffset=+1]
 

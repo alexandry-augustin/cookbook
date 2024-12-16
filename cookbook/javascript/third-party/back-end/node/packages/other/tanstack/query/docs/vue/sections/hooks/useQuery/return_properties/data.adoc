@@ -1,0 +1,11 @@
+= Data
+
+== `data`
+
+(`object`)
+
+== `error`
+
+(`object`)
+
+`error.message`:: {empty}
