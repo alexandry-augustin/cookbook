@@ -1,6 +1,6 @@
 = Composable
 
-https://vuejs.org/guide/reusability/composables.html
+https://vuejs.org/guide/reusability/composables.html[[docs\]]
 
 [source,javascript,title="composables/useXXX.js"]
 ----

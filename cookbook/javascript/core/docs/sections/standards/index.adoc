@@ -1,0 +1,5 @@
+= Standards
+
+include::./ECMAScript.adoc[leveloffset=+1]
+
+include::./CommonJS.adoc[leveloffset=+1]

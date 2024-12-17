@@ -1,0 +1,15 @@
+= Node
+:toc: left
+
+== Installation
+
+[source,bash]
+----
+sudo dnf install nodejs
+----
+
+include::./sections/javascript.adoc[leveloffset=+1]
+
+include::./sections/binary.adoc[leveloffset=+1]
+
+include::./sections/modules.adoc[leveloffset=+1]

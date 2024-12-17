@@ -1,5 +1,6 @@
 = JavaScript
 :toc: left
+:toclevels: 8
 
 image::./res/js.png[width=200]
 
@@ -13,7 +14,7 @@ image::./res/js.png[width=200]
 
 == OpenJS Foundation 
 
-https://en.wikipedia.org/wiki/OpenJS_Foundation
+https://en.wikipedia.org/wiki/OpenJS_Foundation[[wiki\]]
 
 * was founded in 2019 from a merger of JS Foundation and Node.js Foundation.
 * made up of 29 open source JavaScript projects (e.g. Appium, Dojo, jQuery, and Node.js, and webpack).
@@ -26,8 +27,8 @@ https://en.wikipedia.org/wiki/OpenJS_Foundation
 * Cookies
 * Web SQL Database (deprecated)
 
-include::./sections/standards.adoc[leveloffset=+1]
+include::./sections/standards/index.adoc[leveloffset=+1]
 
-include::./sections/core/index.adoc[leveloffset=+1]
+include::./sections/common.adoc[leveloffset=+1]
 
-include::./sections/node/index.adoc[leveloffset=+1]
+include::./sections/browser.adoc[leveloffset=+1]

@@ -1,0 +1,5 @@
+= Start
+:toc: left
+:url-docs: https://tanstack.com/start/latest 
+
+{url-docs}[[docs\]]
