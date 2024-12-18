@@ -1,0 +1,63 @@
+= Infinite Scrolling
+
+[source,javascript,title="composables/MyComponent.vue"]
+----
+import axios from 'axios';
+
+import { useInfiniteQuery } from "@tanstack/vue-query";
+
+function useMyQuery() {
+
+    return useInfiniteQuery({
+      queryKey: [ "myquery" ],
+
+      getNextPageParam: (lastPage) => {
+          return lastPage.cursor;
+      },
+
+      queryFn: async ({ pageParam = 1 }) => {
+        const response = await axios.get(`url/?page=${pageParam}&results=10`);
+        const data = response.data;
+      
+        // sent the cursor/page value and the results
+        // set max to 3 pages of data
+        return {
+          pageData: data?.results || [],
+          cursor: pageParam === 3 ? undefined : pageParam + 1,
+        };
+      }, 
+      
+  });
+}
+
+export { useMyQuery }
+----
+
+[source,javascript,title="components/MyComponent.vue"]
+----
+<script lang="ts" setup>
+import { ref } from "vue";
+
+import { usePeopleInfiniteQuery } from '../composables/useMyQuery';
+
+let myQuery = ref(useMyQuery())
+
+const nextPage = () => {
+  peopleInfiniteQuery.value.fetchNextPage();
+};
+</script>
+
+<template>
+  <h1 v-if="myQuery.isLoading"><ion-loading /></h1>
+  <ion-button @click="nextPage" :disabled="myQuery.isFetching" v-if="myQuery.hasNextPage">
+    {{ myQuery.isFetching ? "Loading..." : "Load More Data" }}
+  </ion-button>
+  <ion-list>
+    <div v-for="(page, index) in myQuery.data?.pages" :key="index">
+      <ion-item v-for="item in page.pageData" :key="item.login.uuid">
+        <ion-label>{{ item.email }}</ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+</template>
+----

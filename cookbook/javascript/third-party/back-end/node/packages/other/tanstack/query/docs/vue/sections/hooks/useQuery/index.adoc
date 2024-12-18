@@ -45,5 +45,3 @@ include::./return_properties/index.adoc[leveloffset=+1]
 include::./examples.adoc[leveloffset=+1]
 
 include::./pagination.adoc[leveloffset=+1]
-
-include::./infinite_scrolling.adoc[leveloffset=+1]

@@ -18,13 +18,20 @@ ____
 
 == `queryFn`
 
-[quote,https://www.vuemastery.com/blog/advanced-data-fetching-in-vue-w-tanstack-query/#a-vue-query-demo]
+[quote,https://tanstack.com/query/v4/docs/framework/react/guides/query-functions]
 ____
-function that makes an API call, and returns a Promise. 
-We will use Axios, which itself returns a Promise and will make the network call for us.
+A query function can be literally any function that returns a promise. 
+____
 
-This is the function that Tanstack Query will call to make the network request every time it needs to fetch new data.
-____
+// [quote,https://www.vuemastery.com/blog/advanced-data-fetching-in-vue-w-tanstack-query/#a-vue-query-demo]
+// ____
+// function that makes an API call, and returns a promise. 
+// // We will use Axios, which itself returns a Promise and will make the network call for us.
+// 
+// This is the function that Tanstack Query will call to make the network request every time it needs to fetch new data.
+// ____
+
+NOTE: Axios returns a promise.
 
 == `cacheTime`
 

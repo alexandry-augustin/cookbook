@@ -1,4 +1,4 @@
-= axios
+= Axios
 :toc: left
 :toclevels: 8
 :url-website: https://axios-http.com/

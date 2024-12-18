@@ -19,6 +19,6 @@ include::./useQuery/index.adoc[leveloffset=+1]
 
 include::./useQueries.adoc[leveloffset=+1]
 
-include::./useInfiniteQuery.adoc[leveloffset=+1]
+include::./useInfiniteQuery/index.adoc[leveloffset=+1]
 
 include::./useMutation.adoc[leveloffset=+1]
