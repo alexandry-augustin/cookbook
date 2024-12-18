@@ -39,6 +39,10 @@ https://24ways.org/2014/javascript-modules-the-es6-way/
 
 == node
 
+....
+SyntaxError: Cannot use import statement outside a module
+....
+
 https://stackoverflow.com/questions/62488898/node-js-syntaxerror-cannot-use-import-statement-outside-a-module
 
 [source,bash]

@@ -27,6 +27,8 @@ https://tanstack.com/query/v4/docs/framework/react/reference/useQuery[[ref\]]
 
 [source,javascript]
 ----
+import { useQuery } from "@tanstack/vue-query";
+
 let param = { 
     param1, 
     param2, 

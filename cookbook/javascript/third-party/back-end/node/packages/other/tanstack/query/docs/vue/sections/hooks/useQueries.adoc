@@ -2,33 +2,106 @@
 
 https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries[[ref\]]
 
-[source,javascript]
-----
-const param = [
-    { 
-        param1, 
-        param2, 
-        // ... 
-    },
-    { 
-        param1, 
-        param2, 
-        // ... 
-    },
-];
-
-const results = useQueries({
-  queries: [
-    param[0],
-    param[1]
-  ],
-});
-----
-
+[NOTE]
+====
 [quote,https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries]
 ____
 The `useQueries` hook returns an array with all the query results. 
 The order returned is the same as the input order.
+____
+====
+
+[IMPORTANT]
+====
+[quote,https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries]
+____
+`useQueries` return an array of query results.
+____
+====
+
+[source,javascript]
+----
+import axios from 'axios';
+import { useQueries } from "@tanstack/vue-query";
+
+let params = {
+  
+  queries: ids.map((id) => ({
+    queryKey: [ 'user', id ],
+    queryFn: () => {
+      return axios.get(`url/user/${id}`);
+    }, 
+    select: (response) => response.data, 
+    staleTime: Infinity,
+  })), 
+
+  combine: (results) => {
+    return {
+      data: results.map((result) => result.data),
+      pending: results.some((result) => result.isPending),
+    }
+  },
+};
+
+const results = useQueries(params);
+----
+
+// [source,javascript]
+// ----
+// import { useQueries } from "@tanstack/vue-query";
+// 
+// const param = [
+//     { 
+//         param1, 
+//         param2, 
+//         // ... 
+//     },
+//     { 
+//         param1, 
+//         param2, 
+//         // ... 
+//     },
+// ];
+// 
+// const results = useQueries({
+//   queries: [
+//     param[0],
+//     param[1]
+//   ],
+// });
+// ----
+
+== Combine
+
+[quote,https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries]
+____
+If you want to combine `data` (or other Query information) from the results into a single value, you can use the `combine` option. 
+The result will be structurally shared to be as referentially stable as possible.
+____
+
+[source,javascript]
+----
+import { useQueries } from "@tanstack/vue-query";
+
+let params = {
+  
+  queries: // ...
+
+  combine: (results) => {
+    return {
+      data: results.map((result) => result.data),
+      pending: results.some((result) => result.isPending),
+    }
+  },
+};
+
+const results = useQueries(params);
+----
+
+[quote,https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries]
+____
+In the above example, `combinedQueries` will be an object with a `data` and a `pending` property. 
+Note that all other properties of the Query results will be lost.
 ____
 
 == Parameters

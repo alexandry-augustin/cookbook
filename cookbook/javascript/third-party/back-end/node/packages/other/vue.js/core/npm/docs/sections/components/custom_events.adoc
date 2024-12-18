@@ -1,6 +1,6 @@
 = Custom Events
 
-https://vuejs.org/guide/components/events.html
+https://vuejs.org/guide/components/events.html[[docs\]]
 
 [source,vue,title="ChildComponent.vue"]
 ----

@@ -1,0 +1,63 @@
+= Faker
+:toc: left
+:url-website: https://fakerjs.dev/
+:url-repo: https://github.com/faker-js/faker
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[source,bash]
+----
+pnpm install @faker-js/faker --save-dev
+----
+
+== Usage
+
+[source,javascript,title="index.js"]
+----
+import { faker } from '@faker-js/faker';
+
+const randomName = faker.person.fullName();
+const randomEmail = faker.internet.email();
+----
+
+== Localisation
+
+[source,javascript,title="index.js"]
+----
+import { fakerFR as faker } from '@faker-js/faker';
+----
+
+`fakerDE`, `fakerFR`, ...
+
+== Modules
+
+=== Airline
+=== Animal
+=== Book
+=== Color
+=== Commerce
+=== Company
+=== Database
+=== Datatype
+=== Date
+=== Finance
+=== Food
+=== Git
+=== Hacker
+=== Helpers
+=== Image
+=== Internet
+=== `location`
+=== Lorem
+=== Music
+=== Number
+=== Person
+=== Phone
+=== Science
+=== String
+=== System
+=== Vehicle
+=== Word

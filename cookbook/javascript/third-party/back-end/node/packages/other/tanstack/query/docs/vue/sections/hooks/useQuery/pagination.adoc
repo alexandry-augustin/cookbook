@@ -1,5 +1,9 @@
 = Pagination
 
+NOTE: Check this and delete:
+https://freedium.cfd/https://medium.com/@m.rybczonek/creating-a-reusable-pagination-component-in-vue-69a6b6b30d71
+https://medium.com/@m.rybczonek/creating-a-reusable-pagination-component-in-vue-69a6b6b30d71[[source\]]
+
 [source,javascript,title="composables/MyComponent.vue"]
 ----
 import axios from 'axios';

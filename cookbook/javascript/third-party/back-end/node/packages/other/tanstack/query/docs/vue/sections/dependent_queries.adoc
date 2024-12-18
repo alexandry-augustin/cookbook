@@ -1,3 +1,5 @@
 = Dependent Queries
 
 https://tanstack.com/query/latest/docs/framework/react/guides/dependent-queries[[ref\]]
+https://vue-query-next-gen.vercel.app/guide/dependent-queries.html[[ref\]]
+
