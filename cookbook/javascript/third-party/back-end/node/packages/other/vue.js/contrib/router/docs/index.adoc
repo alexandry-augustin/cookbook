@@ -91,16 +91,18 @@ https://stackoverflow.com/questions/55449363/how-to-give-dynamic-url-in-router-l
 <router-link :to="'/url/' + id">
 ----
 
-include::./route_variable.adoc[leveloffset=+1]
+include::./sections/route_variable.adoc[leveloffset=+1]
 
-include::./example.adoc[leveloffset=+1]
+include::./sections/example.adoc[leveloffset=+1]
 
-include::./static_routes.adoc[leveloffset=+1]
+include::./sections/static_routes.adoc[leveloffset=+1]
 
-include::./dynamic_routes.adoc[leveloffset=+1]
+include::./sections/dynamic_routes.adoc[leveloffset=+1]
 
-include::./nested_routes.adoc[leveloffset=+1]
+include::./sections/nested_routes.adoc[leveloffset=+1]
 
-include::./redirection.adoc[leveloffset=+1]
+include::./sections/redirection.adoc[leveloffset=+1]
 
-include::./scroll_behaviour.adoc[leveloffset=+1]
+include::./sections/scroll_behaviour.adoc[leveloffset=+1]
+
+include::./sections/faq.adoc[leveloffset=+1]

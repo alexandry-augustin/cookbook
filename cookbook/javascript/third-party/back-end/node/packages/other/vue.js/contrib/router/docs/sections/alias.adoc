@@ -1,0 +1,13 @@
+= Alias
+
+[source,javascript,title="router/index.js"]
+----
+const routes = [
+    {
+    path: '/blogs',
+    name: 'Blogs',
+    component: Blogs,
+    alias: '/posts'
+    }
+]
+----

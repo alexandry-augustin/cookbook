@@ -1,0 +1,22 @@
+= Scroll Behaviour
+
+https://router.vuejs.org/guide/advanced/scroll-behavior.html[[docs\]]
+
+https://thewebdev.info/2020/05/30/changing-scroll-behavior-with-vue-router/
+
+[source,javascript,title="router/index.js"]
+----
+const scrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition;
+  } else {
+    return { x: 0, y: 0 };
+  }
+};
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes: [...],
+  scrollBehavior
+})
+----

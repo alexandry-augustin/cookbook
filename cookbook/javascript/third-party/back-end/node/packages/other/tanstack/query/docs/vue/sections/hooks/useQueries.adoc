@@ -2,6 +2,10 @@
 
 https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries[[ref\]]
 
+https://github.com/TanStack/query/discussions/3777[Loading state for useQueries? #3777]
+
+https://github.com/TanStack/query/discussions/2004[useQueries manual aggregation #2004]
+
 [NOTE]
 ====
 [quote,https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries]
@@ -21,8 +25,11 @@ ____
 
 [source,javascript]
 ----
+<script setup>
 import axios from 'axios';
 import { useQueries } from "@tanstack/vue-query";
+
+let ids = [1, 2, 4];
 
 let params = {
   
@@ -33,17 +40,18 @@ let params = {
     }, 
     select: (response) => response.data, 
     staleTime: Infinity,
-  })), 
+  }))
 
-  combine: (results) => {
-    return {
-      data: results.map((result) => result.data),
-      pending: results.some((result) => result.isPending),
-    }
-  },
 };
 
 const results = useQueries(params);
+</script>
+
+<template>
+  <div v-if="results[0].isSuccess">
+    // results[0].data ...
+  </div>
+</template>
 ----
 
 // [source,javascript]
@@ -81,6 +89,7 @@ ____
 
 [source,javascript]
 ----
+<script setup>
 import { useQueries } from "@tanstack/vue-query";
 
 let params = {
@@ -96,6 +105,13 @@ let params = {
 };
 
 const results = useQueries(params);
+</script>
+
+<template>
+  <div v-if="!results.pending">
+    {{ results.data }}
+  </div>
+</template>
 ----
 
 [quote,https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries]
