@@ -1,3 +1,0 @@
-= Parallel Queries
-
-https://tanstack.com/query/latest/docs/framework/react/guides/parallel-queries[[ref\]]

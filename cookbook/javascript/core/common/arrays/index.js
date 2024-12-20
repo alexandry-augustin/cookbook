@@ -19,6 +19,15 @@ function init()
     }
 }
 
+function range()
+{
+    // https://stackoverflow.com/questions/3895478/does-javascript-have-a-method-like-range-to-generate-a-range-within-the-supp
+    let start = 5;
+    let length = 3;
+    let a = Array(length).fill(start).map((x, y) => x + y);
+    // console.log(a);
+}
+
 function sort_me_out()
 {
     let a = ["abc", 123, "def"];
@@ -123,6 +132,7 @@ if(require.main === module)
     }
 
     init();
+    range();
     sorting();
     sort_me_out();
 }
