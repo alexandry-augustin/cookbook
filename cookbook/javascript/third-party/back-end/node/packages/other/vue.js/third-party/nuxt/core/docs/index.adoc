@@ -1,0 +1,64 @@
+= Nuxt: Core
+:toc: left
+:url-wiki: https://en.wikipedia.org/wiki/Nuxt.js
+:url-website: https://nuxt.com/
+:url-repo: https://github.com/nuxt/nuxt
+:url-docs: https://nuxt.com/docs/getting-started/introduction
+
+{url-wiki}[[wiki\]]
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+{url-docs}[[docs\]]
+
+[,https://www.reddit.com/r/Nuxt/comments/10hqc20/nuxt_works_without_nodejs_why/]
+____
+Nuxt needs Node to compile, but once compiled you only need Node if your site uses SSR or server routes
+
+Use `nuxt build` with `ssr: false` for SPA, or `nuxt generate` for SSG.
+____
+
+== Installation
+
+[,bash]
+----
+pnpx nuxi@latest init PROJECT_NAME
+----
+
+IMPORTANT: Will fail using fish shell -> use bash.
+
+== Usage
+
+Development Server: 
+
+[,bash]
+----
+pnpm run dev
+----
+
+Build the application for production:
+
+[,bash]
+----
+pnpm build
+----
+
+Locally preview production build:
+
+[,bash]
+----
+pnpm preview
+----
+
+Pre-renders every route of the application and stores the result in plain HTML files.
+
+[,bash]
+----
+pnpx nuxi generate [ROOTDIR] [--cwd=<directory>] [--logLevel=<silent|info|verbose>] [--preset] [--dotenv] [--envName]
+----
+
+include::./sections/nuxt.config.ts.adoc[leveloffset=+1]
+
+include::./sections/layouts.adoc[leveloffset=+1]
+
+include::./sections/api/index.adoc[leveloffset=+1]
+

@@ -27,8 +27,6 @@ A schema declaration and validation library
 
 include::./sections/typescript.adoc[leveloffset=+1]
 
-include::./sections/ssg/index.adoc[leveloffset=+1]
-
 == Mobile Apps
 
 * Vue Native [DEPRECATED] https://vue-native.io/[[website\]]

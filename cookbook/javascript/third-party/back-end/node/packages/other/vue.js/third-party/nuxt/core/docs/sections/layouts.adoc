@@ -1,0 +1,23 @@
+= Layouts
+
+....
+./
+├── ...
+├── layouts/
+│   ├── ...
+│   ├── custom.vue
+│   └── default.vue
+├── pages/
+│   ├── ...
+│   └── index.vue
+├── ...
+....
+
+[,vue,title="pages/index.vue"]
+----
+<script setup lang="ts">
+definePageMeta({
+  layout: 'custom'
+});
+</script>
+----
