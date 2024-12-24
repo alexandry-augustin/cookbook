@@ -1,5 +1,7 @@
 = Layouts
 
+https://nuxt.com/docs/guide/directory-structure/layouts[[docs\]]
+
 ....
 ./
 ├── ...
@@ -13,6 +15,26 @@
 ├── ...
 ....
 
+[,vue,title="layouts/FILENAME.vue"]
+----
+<template>
+  <div>
+    <!-- ... -->
+    <slot />
+    <!-- ... -->
+  </div>
+</template>
+----
+
+== Default Layout
+
+[,https://nuxt.com/docs/guide/directory-structure/layouts]
+____
+If no layout is specified, `layouts/default.vue` will be used.
+____
+
+== Set Specific Layout
+
 [,vue,title="pages/index.vue"]
 ----
 <script setup lang="ts">
@@ -20,4 +42,60 @@ definePageMeta({
   layout: 'custom'
 });
 </script>
+----
+
+== Override Default Layout
+
+[,vue,title="pages/index.vue"]
+----
+<script setup lang="ts">
+const layout = "custom";
+</script>
+
+<template>
+  <NuxtLayout :name="layout">
+    <NuxtPage />
+  </NuxtLayout>
+</template>
+----
+
+Or
+
+[,vue,title="pages/index.vue"]
+----
+<script setup lang="ts">
+definePageMeta({
+  layout: false,
+})
+</script>
+
+<template>
+  <div>
+    <NuxtLayout name="custom">
+      <template #header> Some header template content. </template>
+
+      The rest of the page
+    </NuxtLayout>
+  </div>
+</template>
+----
+
+== Change Layout Dynamically
+
+[,vue,title="pages/index.vue"]
+----
+<script setup lang="ts">
+function enableCustomLayout () {
+  setPageLayout('custom')
+}
+definePageMeta({
+  layout: false,
+});
+</script>
+
+<template>
+  <div>
+    <button @click="enableCustomLayout">Set layout</button>
+  </div>
+</template>
 ----

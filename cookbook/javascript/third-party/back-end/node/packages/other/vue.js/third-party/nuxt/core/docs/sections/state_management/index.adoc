@@ -1,0 +1,4 @@
+= State Management
+:url-docs: https://nuxt.com/docs/getting-started/state-management
+
+{url-docs}[[docs\]]

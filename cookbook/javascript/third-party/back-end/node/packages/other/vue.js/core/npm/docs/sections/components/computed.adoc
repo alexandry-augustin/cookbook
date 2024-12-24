@@ -1,0 +1,3 @@
+= Computed
+
+https://vuejs.org/guide/essentials/computed.html[[docs\]]

@@ -1,0 +1,28 @@
+= Assets
+
+https://nuxt.com/docs/getting-started/assets[[docs\]]
+
+....
+./
+├── ...
+├── assets/
+│   ├── ...
+│   ├── images/
+│   │   └── example.jpg
+├── pages/
+│   ├── ...
+│   └── index.vue
+├── ...
+....
+
+[,https://nuxt.com/docs/getting-started/assets]
+____
+you can reference a file located in the `assets/` directory by using the `~/assets/` path.
+____
+
+[,vue,title="pages/index.vue"]
+----
+<template>
+    <img src="~/assets/images/example.jpg" />
+</template>
+----

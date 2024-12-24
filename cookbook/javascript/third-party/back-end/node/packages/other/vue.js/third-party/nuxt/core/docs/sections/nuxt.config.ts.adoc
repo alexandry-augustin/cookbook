@@ -1,1 +1,15 @@
 = `nuxt.config.ts`
+
+https://nuxtseo.com/docs/site-config/guides/setting-site-config[[guide\]]
+
+[source,json,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'My Site', 
+      // ...
+    }
+  }, 
+})
+----

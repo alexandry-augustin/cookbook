@@ -1,0 +1,19 @@
+= Composables
+:url-docs: https://nuxt.com/docs/guide/directory-structure/composables
+
+....
+./
+├── ...
+├── composables/
+│   ├── ...
+│   └── useFct.ts
+└── ...
+....
+
+// composables/use-foo.ts or composables/useFoo.ts
+[,javascript,title="composables/useFoo.ts"]
+----
+export default function () {
+  return useState('foo', () => 'bar')
+}
+----

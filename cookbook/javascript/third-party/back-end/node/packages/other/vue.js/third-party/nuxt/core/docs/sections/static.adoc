@@ -1,0 +1,23 @@
+= Static
+
+https://nuxt.com/docs/getting-started/assets[[docs\]]
+
+....
+./
+├── ...
+├── public/
+│   ├── ...
+│   ├── images/
+│   │   └── example.jpg
+├── pages/
+│   ├── ...
+│   └── index.vue
+├── ...
+....
+
+[,vue,title="pages/index.vue"]
+----
+<template>
+    <img src="/images/example.jpg" />
+</template>
+----

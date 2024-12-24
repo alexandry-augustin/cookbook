@@ -1,7 +1,9 @@
 = Modules
 :url-website: https://nuxt.com/modules
+:url-repo: https://github.com/nuxt-modules
 
 {url-website}[[website\]]
+{url-repo}[[repo\]]
 
 == Tailwindcss
 
@@ -122,6 +124,106 @@ pnpm install @nuxtjs/color-mode
 
 https://nuxt.com/modules/leaflet[[website\]]
 
+=== Installation
+
+[,bash]
+----
+pnpx nuxi@latest module add @nuxtjs/leaflet
+----
+
+=== Usage
+
+----
+<script setup>
+import { ref } from 'vue';
+
+const zoom = ref(6);
+</script>
+
+<template>
+    <div style="height:100vh; width:100vw">
+      <LMap
+        ref="map"
+        :zoom="zoom"
+        :center="[47.21322, -1.559482]"
+        :use-global-leaflet="false">
+        <LTileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution="&amp;copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
+          layer-type="base"
+          name="OpenStreetMap" />
+      </LMap>
+    </div>
+</template>
+----
+
 == vue-query
 
 https://nuxt.com/modules/vue-query[[website\]]
+
+== Nuxt Device
+
+https://nuxt.com/modules/device#change-a-layout-dynamically[[docs\]]
+https://github.com/nuxt-modules/device[[repo\]]
+
+https://stackoverflow.com/questions/76130173/nuxt-3-change-layout-when-on-mobile
+
+[,bash]
+----
+pnpx nuxi@latest module add device
+----
+
+[,vue]
+----
+<script setup>
+const { isMobile } = useDevice()
+</script>
+
+<template>
+  <div v-if="$device.isDesktop">
+      <!-- ... -->
+  </div>
+  <div v-else-if="$device.isTablet">
+      <!-- ... -->
+  </div>
+  <div v-else>
+      <!-- ... -->
+  </div>
+</template>
+----
+
+[,vue]
+----
+<template>
+  <div>
+    <NuxtLayout :name="$device.isMobile ? 'mobile' : 'default'">
+      <!-- ... -->
+    </NuxtLayout>
+  </div>
+</template>
+
+<script setup>
+definePageMeta({
+  layout: false
+})
+</script>
+----
+
+`$device.isDesktop`:: {empty}
+`$device.isMobile`:: {empty}
+`$device.isTablet`:: {empty}
+`$device.isMobileOrTablet`:: {empty}
+`$device.isDesktopOrTablet`:: {empty}
+`$device.isIos`:: {empty}
+`$device.isWindows`:: {empty}
+`$device.isMacOS`:: {empty}
+`$device.isApple`:: {empty}
+`$device.isAndroid`:: {empty}
+`$device.isFirefox`:: {empty}
+`$device.isEdge`:: {empty}
+`$device.isChrome`:: {empty}
+`$device.isSafari`:: {empty}
+`$device.isSamsung`:: {empty}
+`$device.isCrawler`:: {empty}
+
+`$device.userAgent`:: {empty}

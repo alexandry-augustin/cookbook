@@ -1,0 +1,14 @@
+= Route Middleware
+
+https://nuxt.com/docs/guide/directory-structure/middleware[[docs\]]
+
+For code to run before navigating to a particular route.
+
+[,https://nuxt.com/docs/guide/directory-structure/middleware]
+____
+There are three kinds of route middleware:
+
+. Anonymous (or inline) route middleware are defined directly within the page.
+. Named route middleware, placed in the `middleware/` and automatically loaded via asynchronous import when used on a page.
+. Global route middleware, placed in the `middleware/` with a `.global` suffix and is run on every route change.
+____

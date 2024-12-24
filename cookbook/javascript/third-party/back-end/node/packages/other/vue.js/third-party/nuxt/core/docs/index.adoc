@@ -42,6 +42,8 @@ Build the application for production:
 pnpm build
 ----
 
+NOTE: Will create the `./dist/` directory.
+
 Locally preview production build:
 
 [,bash]
@@ -56,9 +58,37 @@ Pre-renders every route of the application and stores the result in plain HTML f
 pnpx nuxi generate [ROOTDIR] [--cwd=<directory>] [--logLevel=<silent|info|verbose>] [--preset] [--dotenv] [--envName]
 ----
 
+== Naming Conventions
+
+https://stackoverflow.com/questions/70199343/what-is-the-case-convention-of-nuxt-js-file-and-folder-naming
+
+[,https://zean.be/articles/vue-nuxtjs/]
+____
+The https://nuxtjs.org/[nuxtjs.org] website itself is a NuxtJS project and its source code can be found https://github.com/nuxt/nuxtjs.org[here]. 
+Some conventions that I have observed and are following are:
+
+* use kebab-case for everything in the `pages` folder
+* use kebab-case for folders under the `components` folder but use PascalCase for all component names
+* use kebab-case everywhere else
+____
+
 include::./sections/nuxt.config.ts.adoc[leveloffset=+1]
 
+include::./sections/favicon.adoc[leveloffset=+1]
+
 include::./sections/layouts.adoc[leveloffset=+1]
+
+include::./sections/composables.adoc[leveloffset=+1]
+
+include::./sections/routing.adoc[leveloffset=+1]
+
+include::./sections/static.adoc[leveloffset=+1]
+
+include::./sections/assets.adoc[leveloffset=+1]
+
+include::./sections/middleware/index.adoc[leveloffset=+1]
+
+include::./sections/state_management/index.adoc[leveloffset=+1]
 
 include::./sections/api/index.adoc[leveloffset=+1]
 
