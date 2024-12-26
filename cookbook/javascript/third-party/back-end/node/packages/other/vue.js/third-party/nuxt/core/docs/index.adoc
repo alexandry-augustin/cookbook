@@ -1,5 +1,6 @@
 = Nuxt: Core
 :toc: left
+:toclevels: 8
 :url-wiki: https://en.wikipedia.org/wiki/Nuxt.js
 :url-website: https://nuxt.com/
 :url-repo: https://github.com/nuxt/nuxt

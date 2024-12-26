@@ -1,0 +1,20 @@
+= vue-query
+:url-website: https://nuxt.com/modules/vue-query
+
+{url-website}[[website\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install @hebilicious/vue-query-nuxt @tanstack/vue-query 
+----
+
+[,json,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  modules: [
+    "@hebilicious/vue-query-nuxt"
+  ]
+})
+----

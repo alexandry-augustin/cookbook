@@ -1,0 +1,94 @@
+= Route Middleware
+
+[,https://medium.com/@llama_/understanding-nuxt-3s-route-middlewares-c314e48eb508]
+____
+route middlewares [...] allow you to perform operations before switching from one route to another. 
+These route middlewares are commonly use to ensure that the user is authenticated before accessing certain routes [navigation guards] or to perform cookie-based authentication checks.
+____
+
+[,https://masteringnuxt.com/blog/how-to-create-navigation-guards-in-nuxt-with-definenuxtroutemiddleware]
+____
+In web development, navigation guards allow you to control access to certain routes. These guards are especially useful for:
+
+* Protecting routes that require authentication.
+* Redirecting users based on their roles.
+* Running specific logic before navigating to a page (like fetching data).
+____
+
+> "Route middleware are navigation guards that receive the current route and the next route as arguments."
+-- https://nuxt.com/docs/guide/directory-structure/middleware
+
+[,https://www.the-koi.com/projects/nuxt3-middlewares-everything-you-need-to-know/]
+____
+The most popular use case is the authentication guard
+____
+
+== Types
+
+There are three types of route middlewares:
+
+Global middleware:: 
+* executed before routing to any page
+* executed in alphabetical order
+* placed in the `middleware/`
+* with suffix `.global`
+Named middleware:: 
+* automatically loaded via asynchronous import when used on a page
+* placed in the `middleware/` 
+Inline middleware:: 
+* defined directly within the page
+
+== Examples
+
+....
+./
+├── middleware/
+│   ├── 01.name.global.ts
+│   ├── 02.name.global.ts
+│   └── name.js
+├── pages/
+│   └── index.vue
+├── ...
+....
+
+[,vue,title="middleware/my-middleware.ts"]
+----
+export default defineNuxtRouteMiddleware((to, from) => {
+  if (to.params.id === '1') {
+    return abortNavigation()
+  }
+  
+  // Avoid infinite redirect loop
+  if (to.path !== '/') {
+    return navigateTo('/')
+  }
+})
+----
+
+[middlewares/my-middleware.ts]
+----
+export default defineNuxtRouteMiddleware((to, from) => {
+    // If the user has no Administrator privileges, the user will be logged out, and will be redirect to the login page to login again. 
+    if(isAdmin() === false) {
+            logout();
+
+        return navigateTo('/login')
+    }
+
+    // If the user has the rights, we do nothing, which implicitly means we redirect to the wished page.
+})
+----
+
+[,vue, title="pages/index.vue"]
+----
+<script setup lang="ts">
+definePageMeta({
+  middleware: [
+    function (to, from) {
+      // ...
+    },
+    'auth',
+  ],
+});
+</script>
+----

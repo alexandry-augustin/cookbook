@@ -1,0 +1,16 @@
+= Modules
+:url-website: https://nuxt.com/modules
+:url-repo: https://github.com/nuxt-modules
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+include::./tailwindcss.adoc[leveloffset=+1]
+
+include::./shadcn.adoc[leveloffset=+1]
+
+include::./leaflet.adoc[leveloffset=+1]
+
+include::./vue-query.adoc[leveloffset=+1]
+
+include::./nuxt-device.adoc[leveloffset=+1]

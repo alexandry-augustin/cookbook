@@ -1,14 +1,17 @@
-= Route Middleware
+= Middleware
+:url-docs: https://nuxt.com/docs/guide/directory-structure/middleware
 
-https://nuxt.com/docs/guide/directory-structure/middleware[[docs\]]
+{url-docs}[[docs\]]
 
-For code to run before navigating to a particular route.
-
-[,https://nuxt.com/docs/guide/directory-structure/middleware]
+[,https://www.the-koi.com/projects/nuxt3-middlewares-everything-you-need-to-know/]
 ____
-There are three kinds of route middleware:
+Within nuxt there are two types of middlewares. 
 
-. Anonymous (or inline) route middleware are defined directly within the page.
-. Named route middleware, placed in the `middleware/` and automatically loaded via asynchronous import when used on a page.
-. Global route middleware, placed in the `middleware/` with a `.global` suffix and is run on every route change.
+The *route middleware* executed in the *vue* part of your application.
+
+The normal middleware executed in the *nitro* part of the application.
 ____
+
+include::./route-middleware.adoc[leveloffset=+1]
+
+include::./middleware.adoc[leveloffset=+1]
