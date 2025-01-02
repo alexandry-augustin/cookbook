@@ -23,28 +23,54 @@ ____
 The most popular use case is the authentication guard
 ____
 
-== Types
+There are three types of route middlewares
 
-There are three types of route middlewares:
+== Inline Middleware
 
-Global middleware:: 
-* executed before routing to any page
-* executed in alphabetical order
-* placed in the `middleware/`
-* with suffix `.global`
-Named middleware:: 
-* automatically loaded via asynchronous import when used on a page
-* placed in the `middleware/` 
-Inline middleware:: 
 * defined directly within the page
 
-== Examples
+....
+./
+├── pages/
+│   └── index.vue
+├── ...
+....
+
+[,vue, title="pages/index.vue"]
+----
+<script setup lang="ts">
+definePageMeta({
+  middleware: [
+    function (to, from) {
+      // ...
+    },
+    'my-middleware',
+  ],
+});
+</script>
+----
+
+[,vue, title="pages/index.vue"]
+----
+<script setup lang="ts">
+definePageMeta({
+  middleware: 
+    function (to, from) {
+      // ...
+    },
+});
+</script>
+----
+
+== Named Middleware
+
+* automatically loaded via asynchronous import when used on a page
+* placed in the `middleware/` 
 
 ....
 ./
 ├── middleware/
-│   ├── 01.name.global.ts
-│   ├── 02.name.global.ts
+│   ├── ...
 │   └── name.js
 ├── pages/
 │   └── index.vue
@@ -79,16 +105,21 @@ export default defineNuxtRouteMiddleware((to, from) => {
 })
 ----
 
-[,vue, title="pages/index.vue"]
-----
-<script setup lang="ts">
-definePageMeta({
-  middleware: [
-    function (to, from) {
-      // ...
-    },
-    'auth',
-  ],
-});
-</script>
-----
+
+== Global Middleware
+
+* executed before routing to any page
+* executed in alphabetical order
+* placed in the `middleware/`
+* with suffix `.global`
+
+....
+./
+├── middleware/
+│   ├── 01.name.global.ts
+│   ├── 02.name.global.ts
+│   └── ...
+├── pages/
+│   └── index.vue
+├── ...
+....

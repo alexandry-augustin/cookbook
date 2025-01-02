@@ -93,3 +93,4 @@ include::./sections/state_management/index.adoc[leveloffset=+1]
 
 include::./sections/api/index.adoc[leveloffset=+1]
 
+include::./sections/cookies.adoc[leveloffset=+1]

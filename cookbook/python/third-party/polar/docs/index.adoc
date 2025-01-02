@@ -1,0 +1,8 @@
+= Polars
+:toc: left
+:url-website: https://pola.rs/
+:url-repo: https://github.com/pola-rs/polars
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+

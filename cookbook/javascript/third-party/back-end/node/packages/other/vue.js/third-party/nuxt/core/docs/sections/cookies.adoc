@@ -1,0 +1,24 @@
+= Cookies
+:url-docs: https://nuxt.com/docs/api/composables/use-cookie
+
+{url-docs}[[docs\]]
+
+== `useCookie`
+
+NOTE: The cookie will be created if it doesn't already exists.
+
+[,vue]
+----
+<script setup>
+const param = useCookie('param');
+
+param.value = {
+    name: 'name',
+    value: 'value'
+}
+</script>
+
+<template>
+    <div v-if="param">{{ param.name }}</div>
+</template>
+----

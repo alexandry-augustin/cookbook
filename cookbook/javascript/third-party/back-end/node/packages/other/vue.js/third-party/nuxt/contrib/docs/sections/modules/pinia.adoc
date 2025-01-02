@@ -1,0 +1,11 @@
+= Pinia
+
+https://nuxt.com/modules/pinia[[website\]]
+
+== Installation
+
+[,bash]
+----
+pnpx nuxi@latest module add pinia
+# npm install pinia @pinia/nuxt
+----
