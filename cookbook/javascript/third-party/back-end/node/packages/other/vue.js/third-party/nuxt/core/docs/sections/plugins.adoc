@@ -1,0 +1,69 @@
+= Plugins
+:url-docs: https://nuxt.com/docs/guide/directory-structure/plugins
+
+{url-docs}[[docs\]]
+
+....
+./
+├── plugins/
+│   ├── filename.ts
+│   ├── ...
+│   └── subdir/
+│       ├── file1.vue
+│       └── file2.ts
+├── pages/
+│   └── index.vue
+├── ...
+....
+
+By default only `filename.ts` is registered.
+Edit `nuxt.config.ts` to add plugins in subdirectories
+
+[,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  plugins: [
+    '~/plugins/subdir/file1',
+    '~/plugins/subdir/file2'
+  ]
+})
+----
+
+[,title="filename.ts"]
+----
+export default defineNuxtPlugin(nuxtApp => {
+  // ...
+})
+----
+
+== Helper on the `NuxtApp` Instance
+
+[,title="filename.ts"]
+----
+export default defineNuxtPlugin(() => {
+  return {
+    provide: {
+      myFct: (msg: string) => `${msg}`
+    }
+  }
+})
+----
+
+[,title="components/index.vue"]
+----
+<script setup lang="ts">
+const { $myFct } = useNuxtApp();
+$myFct('test');
+</script>
+----
+
+Or
+
+[,title="components/index.vue"]
+----
+<template>
+  <div>
+    {{ $myFct('test') }}
+  </div>
+</template>
+----

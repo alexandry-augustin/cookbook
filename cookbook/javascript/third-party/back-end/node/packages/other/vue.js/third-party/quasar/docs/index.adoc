@@ -1,0 +1,19 @@
+= Quasar Framework
+:toc: left
+:toclevels: 8
+:url-website: https://quasar.dev/
+:url-repo: https://github.com/quasarframework/quasar
+:url-wiki: https://en.m.wikipedia.org/wiki/Quasar_Framework
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+
+[,https://www.reddit.com/r/vuejs/comments/18lk7vu/comment/kdzvip0/?utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button]
+____
+Nuxt and Quasar aren't really designed for the same use cases. 
+Nuxt is more appropriate for projects that are more "website" than "webapp" like Quasar is.
+
+You could use Nuxt to build an app, but you'll be fighting some of the design decisions of Nuxt in the process, and have to roll a lot of your own solutions to flesh out Nuxt into an application framework. 
+It sounds like that's kind of what you were running into.
+____

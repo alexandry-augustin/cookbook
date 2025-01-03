@@ -23,6 +23,9 @@ ____
 [,bash]
 ----
 pnpx nuxi@latest init PROJECT_NAME
+
+mkdir pages components composables middleware
+mv app.vue pages/index.vue
 ----
 
 IMPORTANT: Will fail using fish shell -> use bash.
@@ -94,3 +97,5 @@ include::./sections/state_management/index.adoc[leveloffset=+1]
 include::./sections/api/index.adoc[leveloffset=+1]
 
 include::./sections/cookies.adoc[leveloffset=+1]
+
+include::./sections/plugins.adoc[leveloffset=+1]

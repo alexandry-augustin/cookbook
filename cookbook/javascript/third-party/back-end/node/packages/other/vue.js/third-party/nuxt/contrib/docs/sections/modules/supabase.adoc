@@ -1,0 +1,4 @@
+= Supabase
+:url-website: https://nuxt.com/modules/supabase
+
+{url-website}[[website\]]
