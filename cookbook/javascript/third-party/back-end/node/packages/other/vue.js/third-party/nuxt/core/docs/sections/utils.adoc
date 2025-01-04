@@ -1,0 +1,17 @@
+= Utils
+
+....
+./
+├── ...
+├── utils/
+│   ├── 
+│   └── ...
+└── ...
+....
+
+For helper functions and other utilities.
+
+[,https://nuxt.com/docs/guide/concepts/auto-imports#directory-based-auto-imports]
+____
+Nuxt directly auto-imports files created in [`utils/`]
+____

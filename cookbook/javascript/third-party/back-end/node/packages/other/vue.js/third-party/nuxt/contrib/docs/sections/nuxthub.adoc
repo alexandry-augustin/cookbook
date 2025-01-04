@@ -1,0 +1,4 @@
+= NuxtHub
+:url-website: https://hub.nuxt.com/
+
+{url-website}[[website\]]

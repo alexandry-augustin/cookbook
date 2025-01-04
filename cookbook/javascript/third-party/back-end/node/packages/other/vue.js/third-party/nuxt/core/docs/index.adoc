@@ -11,6 +11,8 @@
 {url-repo}[[repo\]]
 {url-docs}[[docs\]]
 
+Initial release: October 26, 2016
+
 [,https://www.reddit.com/r/Nuxt/comments/10hqc20/nuxt_works_without_nodejs_why/]
 ____
 Nuxt needs Node to compile, but once compiled you only need Node if your site uses SSR or server routes
@@ -76,6 +78,37 @@ Some conventions that I have observed and are following are:
 * use kebab-case everywhere else
 ____
 
+== Directory Structure
+
+....
+./
+├── .nuxt/
+├── .output/
+├── assets/
+├── components/
+├── composables/
+├── content/
+├── layouts/
+├── middleware/
+├── modules/
+├── node_modules/
+├── pages/
+├── plugins/
+├── public/
+├── server/
+├── shared/
+├── utils/
+├── .env
+├── .gitignore
+├── .nuxtignore
+├── app.vue
+├── app.config.ts
+├── error.vue
+├── nuxt.config.ts
+├── package.json
+└── tsconfig.json
+....
+
 include::./sections/nuxt.config.ts.adoc[leveloffset=+1]
 
 include::./sections/favicon.adoc[leveloffset=+1]
@@ -98,4 +131,6 @@ include::./sections/api/index.adoc[leveloffset=+1]
 
 include::./sections/cookies.adoc[leveloffset=+1]
 
-include::./sections/plugins.adoc[leveloffset=+1]
+include::./sections/plugins/index.adoc[leveloffset=+1]
+
+include::./sections/utils.adoc[leveloffset=+1]

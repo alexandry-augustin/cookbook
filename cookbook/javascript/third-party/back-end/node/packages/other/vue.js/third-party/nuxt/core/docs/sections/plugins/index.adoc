@@ -3,12 +3,40 @@
 
 {url-docs}[[docs\]]
 
+== Registration
+
+=== Top Level
+
 ....
 ./
 ├── plugins/
 │   ├── filename.ts
+│   └── ...
+├── pages/
+│   └── index.vue
+├── ...
+....
+
+[,https://nuxt.com/docs/guide/directory-structure/plugins]
+____
+Nuxt automatically reads the files in the `plugins/` directory and loads them at the creation of the Vue application.
+____
+
+[,https://nuxt.com/docs/guide/directory-structure/plugins]
+____
+Only files at the top level of the directory (or index files within any subdirectories) will be auto-registered as plugins.
+____
+
+// `filename.ts` is automatically registered.
+
+=== Sub-directory
+
+....
+./
+├── plugins/
 │   ├── ...
 │   └── subdir/
+│       ├── ...
 │       ├── file1.vue
 │       └── file2.ts
 ├── pages/
@@ -17,7 +45,7 @@
 ....
 
 By default only `filename.ts` is registered.
-Edit `nuxt.config.ts` to add plugins in subdirectories
+Edit `nuxt.config.ts` to add plugins in subdirectories.
 
 [,title="nuxt.config.ts"]
 ----
@@ -29,6 +57,8 @@ export default defineNuxtConfig({
 })
 ----
 
+== Plugin Function
+
 [,title="filename.ts"]
 ----
 export default defineNuxtPlugin(nuxtApp => {
@@ -36,7 +66,17 @@ export default defineNuxtPlugin(nuxtApp => {
 })
 ----
 
+[,https://nuxt.com/docs/guide/directory-structure/plugins]
+____
+The only argument passed to a plugin is `nuxtApp`.
+____
+
 == Helper on the `NuxtApp` Instance
+
+[,https://nuxt.com/docs/guide/directory-structure/plugins]
+____
+we highly recommend using composables instead of providing helpers to avoid polluting the global namespace and keep your main bundle entry small.
+____
 
 [,title="filename.ts"]
 ----
