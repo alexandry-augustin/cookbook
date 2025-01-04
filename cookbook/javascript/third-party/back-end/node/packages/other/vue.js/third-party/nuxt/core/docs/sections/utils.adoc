@@ -1,10 +1,16 @@
 = Utils
+:url-docs: https://nuxt.com/docs/guide/directory-structure/utils
+
+{url-docs}[[docs\]]
 
 ....
 ./
 ├── ...
 ├── utils/
-│   ├── 
+│   ├── index.ts
+│   └── ...
+├── pages/
+│   ├── index.vue
 │   └── ...
 └── ...
 ....
@@ -15,3 +21,21 @@ For helper functions and other utilities.
 ____
 Nuxt directly auto-imports files created in [`utils/`]
 ____
+
+[,typescript,title="utils/index.ts"]
+----
+function myFct() {
+    return ...
+}
+
+export { 
+    myFct 
+}
+----
+
+[,typescript,title="pages/index.vue"]
+----
+<script setup>
+myFct();
+</script>
+----

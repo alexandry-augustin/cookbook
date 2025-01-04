@@ -1,0 +1,29 @@
+= FAQs
+
+== Auto-import from Third-Party Packages
+
+https://nuxt.com/docs/guide/concepts/auto-imports#auto-import-from-third-party-packages
+
+[,https://nuxt.com/docs/guide/concepts/auto-imports]
+____
+You can also auto-import functions exported from custom folders or third-party packages by configuring the imports section of your `nuxt.config` file.
+____
+
+https://www.youtube.com/watch?v=FT2LQJ2NvVI
+
+[source,json,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  // ...
+  imports: {
+    presets: [ {
+      from: 'pkgname',
+      // imports: [ '...' ]
+      imports: [ { 
+          name: 'default',
+          as: '...'
+        } ]
+    } ]
+  }
+})
+----
