@@ -1,4 +1,4 @@
-= React.js
+= React: Core
 :toc: left
 :toclevels: 8
 :url-wiki: https://en.wikipedia.org/wiki/React_(JavaScript_library)
@@ -28,5 +28,3 @@ https://create-react-app.dev/docs/proxying-api-requests-in-development/
 include::./sections/faq.adoc[leveloffset=+1]
 
 include::./sections/core/index.adoc[leveloffset=+1]
-
-include::./sections/third-party/index.adoc[leveloffset=+1]

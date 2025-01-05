@@ -17,6 +17,30 @@ Button as Link https://stackoverflow.com/questions/45638239/enclosing-a-router-l
 
 == ???
 
+[,vue,title="pages/index.vue"]
+----
+<script setup>
+const route = useRoute()
+</script>
+
+<template>
+    {{ route.name }}
+    {{ route.path }}
+</template>
+----
+
+Or
+
+[,vue,title="pages/index.vue"]
+----
+<template>
+    {{ $route.name }}
+    {{ $route.path }}
+</template>
+----
+
+== ???
+
 ....
 ./
 ├── ...
