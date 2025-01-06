@@ -1,0 +1,9 @@
+= Underscore.js
+:toc: left
+:url-wiki: https://en.wikipedia.org/wiki/Underscore.js
+:url-website: https://underscorejs.org/
+:url-repo: https://github.com/jashkenas/underscore
+
+{url-website}[[website\]]
+{url-wiki}[[wiki\]]
+{url-repo}[[repo\]]

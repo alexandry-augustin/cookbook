@@ -7,11 +7,20 @@ https://nuxt.com/modules/tailwindcss[[website\]]
 pnpx nuxi@latest module add tailwindcss
 ----
 
+NOTE: `npx` should update `nuxt.config.{ts,js}` automatically.
+
 [,javascripte,title="nuxt.config.{ts,js}"]
 ----
 export default defineNuxtConfig({
+  // ...
   modules: [
     '@nuxtjs/tailwindcss'
   ]
+  // ...
 })
+----
+
+[,bash]
+----
+pnpx tailwindcss init -p
 ----

@@ -1,0 +1,9 @@
+= Prototype
+:toc: left
+:url-website: http://prototypejs.org/
+:url-wiki: https://en.wikipedia.org/wiki/Prototype_JavaScript_Framework
+:url-repo: https://github.com/prototypejs/prototype
+
+{url-website}[[website\]]
+{url-wiki}[[wiki\]]
+{url-repo}[[repo\]]

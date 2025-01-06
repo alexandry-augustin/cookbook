@@ -1,0 +1,7 @@
+= Deno
+:toc: left
+:url-wiki: https://en.wikipedia.org/wiki/Deno_(software)
+:url-repo: https://github.com/denoland/deno
+
+{url-wiki}[[wiki\]]
+{url-repo}[[repo\]]
