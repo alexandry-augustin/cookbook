@@ -1,0 +1,48 @@
+= Module Bundlers
+:toc: left
+
+https://betterprogramming.pub/javascript-module-bundlers-2a1e9307d057
+
+== Webpack
+
+https://webpack.github.io/[[website\]] 
+https://github.com/webpack/webpack[[github\]]
+
+Most popular
+
+⭐62.9k
+
+== Parcel
+
+https://parceljs.org/[[website\]] 
+https://github.com/parcel-bundler/parcel[[github\]]
+
+⭐42.2k
+
+== RollUp
+
+https://rollupjs.org/[[website\]] 
+https://github.com/rollup/rollup[[github\]]
+
+⭐23.3k
+
+== Snowpack
+
+https://www.snowpack.dev/[[website\]] 
+https://github.com/FredKSchott/snowpack[[github\]]
+
+⭐19.7k
+
+== Browserify
+
+https://browserify.org/[[website\]] 
+https://github.com/browserify/browserify[[github\]]
+
+⭐14.4k
+
+== FuseBox
+
+https://fuse-box.org/[[website\]] 
+https://github.com/fuse-box/fuse-box[[github\]]
+
+⭐4k

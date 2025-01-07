@@ -3,4 +3,6 @@
 
 include::./sections/modules/index.adoc[leveloffset=+1]
 
-include::./sections/nuxthub.adoc[leveloffset=+1]
+include::./sections/services/index.adoc[leveloffset=+1]
+
+include::./sections/content.adoc[leveloffset=+1]

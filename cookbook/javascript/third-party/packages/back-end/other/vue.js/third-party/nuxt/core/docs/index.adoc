@@ -115,6 +115,8 @@ include::./sections/favicon.adoc[leveloffset=+1]
 
 include::./sections/layouts.adoc[leveloffset=+1]
 
+include::./sections/components.adoc[leveloffset=+1]
+
 include::./sections/composables.adoc[leveloffset=+1]
 
 include::./sections/routing.adoc[leveloffset=+1]

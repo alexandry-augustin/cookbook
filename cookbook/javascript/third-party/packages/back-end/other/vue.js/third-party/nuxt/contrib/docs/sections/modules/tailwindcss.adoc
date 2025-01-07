@@ -2,6 +2,8 @@
 
 https://nuxt.com/modules/tailwindcss[[website\]]
 
+== Installation
+
 [,bash]
 ----
 pnpx nuxi@latest module add tailwindcss
@@ -9,7 +11,7 @@ pnpx nuxi@latest module add tailwindcss
 
 NOTE: `npx` should update `nuxt.config.{ts,js}` automatically.
 
-[,javascripte,title="nuxt.config.{ts,js}"]
+[,javascript,title="nuxt.config.{ts,js}"]
 ----
 export default defineNuxtConfig({
   // ...
@@ -23,4 +25,30 @@ export default defineNuxtConfig({
 [,bash]
 ----
 pnpx tailwindcss init -p
+----
+
+== Plugins
+
+=== Typography
+
+[,bash]
+----
+pnpm install @tailwindcss/typography
+----
+
+[,javascript,title="nuxt.config.{ts,js}"]
+----
+import tailwindTypography from '@tailwindcss/typography';
+
+export default defineNuxtConfig({
+  //...
+  tailwindcss: {
+      config: {
+          plugins: [
+            tailwindTypography
+          ],
+      }
+  },
+  //...
+})
 ----

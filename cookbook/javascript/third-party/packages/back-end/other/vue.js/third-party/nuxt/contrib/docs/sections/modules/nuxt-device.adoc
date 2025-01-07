@@ -5,10 +5,14 @@ https://github.com/nuxt-modules/device[[repo\]]
 
 https://stackoverflow.com/questions/76130173/nuxt-3-change-layout-when-on-mobile
 
+== Installation
+
 [,bash]
 ----
 pnpx nuxi@latest module add device
 ----
+
+== Usage
 
 [,vue]
 ----
