@@ -1,0 +1,28 @@
+= FAQs
+
+== Conditional Files/Directories
+
+https://stackoverflow.com/questions/35005098/can-i-make-a-file-optional-based-on-a-variables-value-in-cookiecutter-json[Can I make a file optional based on a variable's value in cookiecutter.json]
+
+https://github.com/cookiecutter/cookiecutter/issues/127[Conditional files / directories #127]
+
+[,https://stackoverflow.com/questions/35005098/can-i-make-a-file-optional-based-on-a-variables-value-in-cookiecutter-json]
+____
+it is not yet implemented [...]
+
+The "least ugly" solution I have come up with is to create the files every time, and clean them up during the post hook (you could also create them during the post hook, but would lose cookiecutter templating advantages)
+____
+
+[,bash,title="post_gen_project.sh"]
+----
+#!/bin/bash
+
+# Remove empty files and empty directories
+find -empty -delete
+
+# Remove empty files
+# find -type f -empty -delete
+
+# Delete all empty directories recursively
+# find -type d -empty -delete
+----
