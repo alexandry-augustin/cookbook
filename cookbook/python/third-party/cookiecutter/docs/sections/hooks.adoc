@@ -27,6 +27,11 @@ touch pre_gen_project.py post_gen_project.py
 
 [,https://cookiecutter.readthedocs.io/en/1.7.2/advanced/hooks.html]
 ____
+For portability, you should use Python scripts [...] for your hooks, as these can be run on any platform. 
+____
+
+[,https://cookiecutter.readthedocs.io/en/1.7.2/advanced/hooks.html]
+____
 When the hook scripts script are run, their current working directory is the root of the generated project [i.e. `/[...]/{{cookiecutter.directory_name}}/`]. 
 This makes it easy for a post-generate hook to find generated files using relative paths.
 ____

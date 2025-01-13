@@ -1,0 +1,24 @@
+= Babel
+:toc: left
+:url-website: https://babeljs.io/
+
+{url-website}[[website\]]
+
+https://ccoenraets.github.io/es6-tutorial/setup-babel/
+
+transcompiler
+
+== Installation
+
+[,bash]
+----
+pnpm install babel-cli babel-core --save-dev
+pnpm install babel-preset-es2015 --save-dev # ECMAScript 2015 preset
+----
+
+== Run
+
+[,bash]
+----
+pnpm run babel
+----

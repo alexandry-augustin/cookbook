@@ -1,0 +1,35 @@
+= TypeScript
+:toc: left
+:toclevels: 8
+:url-website: https://www.typescriptlang.org/
+:url-repo: https://github.com/microsoft/TypeScript
+:url-wiki: https://en.wikipedia.org/wiki/TypeScript
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+
+License: Apache License 2.0
+
+Static type checking with optional type annotations.
+
+== Installation
+
+[source,bash]
+----
+pnpm install typescript
+----
+
+== `tsc`
+
+TypeScript Compiler
+
+Transpile `.ts` files into `.js` files:
+
+[source,bash]
+----
+tsc filename.ts
+----
+
+== `tsconfig.json`
+

@@ -1,0 +1,9 @@
+= CoffeeScript
+:toc: left
+:url-wiki: https://en.wikipedia.org/wiki/CoffeeScript
+:url-website: https://coffeescript.org/
+:url-repo: https://github.com/jashkenas/coffeescript/
+
+{url-wiki}[[wiki\]]
+{url-website}[[website\]]
+{url-repo}[[repo\]]

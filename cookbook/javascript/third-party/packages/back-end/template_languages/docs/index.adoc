@@ -1,0 +1,64 @@
+= Web Template Languages
+:toc: left
+
+https://en.wikipedia.org/wiki/Comparison_of_web_template_engines[[wiki\]]
+
+== WebC
+
+`*.webc`
+
+https://github.com/11ty/webc[[repo\]]
+
+== Go Templates
+
+== Jinja
+
+Language: python
+
+// {}[[website\]]
+// {}[[repo\]]
+
+== Liquid
+
+Language: ruby
+
+https://shopify.github.io/liquid/[[website\]]
+https://github.com/Shopify/liquid[[repo\]]
+
+== LiquidJS
+
+Language: javascript
+
+https://liquidjs.com/[[website\]]
+https://github.com/harttle/liquidjs[[repo\]]
+
+== Handlebars
+
+Language: javascript
+
+https://handlebarsjs.com/[[website\]]
+https://github.com/handlebars-lang/handlebars.js[[repo\]]
+
+== Mustache
+
+https://mustache.github.io/[[website\]]
+https://github.com/mustache/mustache.github.com[[github\]]
+
+== Embedded JavaScript templates (EJS)
+
+Language: javascript
+
+https://ejs.co/[[website\]]
+// {}[[repo\]]
+
+== Pug
+
+Language: javascript
+
+https://pugjs.org/[[website\]]
+https://github.com/pugjs/pug[[repo\]]
+
+[,bash]
+----
+pnpm install pug
+----

@@ -35,10 +35,15 @@ touch cookiecutter.json
 
 mkdir {{cookiecutter.directory_name}}
 cd {{cookiecutter.directory_name}}
-echo "print('{{cookiecutter.content}}')" > {{cookiecutter.file_name}}.py
+touch {{cookiecutter.file_name}}.py
 ----
 
-[,cookiecutter.json]
+[,python,title="{{cookiecutter.file_name}}.py"]
+----
+print('{{cookiecutter.content}}')
+----
+
+[,json,title="cookiecutter.json"]
 ----
 {
     "directory_name": "sandbox",
@@ -52,13 +57,13 @@ echo "print('{{cookiecutter.content}}')" > {{cookiecutter.file_name}}.py
 cookiecutter ./my_cookiecutter_template
 ----
 
+include::./sections/hooks.adoc[leveloffset=+1]
+
 == Git Intergration
 
 [NOTE]
 ====
 Cookiecutter has its own storage area for cookiecutters, which is in your home directory in a subdirectory called `.cookiecutters`
 ====
-
-include::./sections/hooks.adoc[leveloffset=+1]
 
 include::./sections/faq.adoc[leveloffset=+1]
