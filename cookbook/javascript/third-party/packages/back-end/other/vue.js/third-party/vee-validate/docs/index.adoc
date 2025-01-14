@@ -1,0 +1,21 @@
+= VeeValidate
+:toc: left
+:url-website: https://vee-validate.logaretm.com/v4/
+:url-docs: 
+:url-repo: https://github.com/logaretm/vee-validate/
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpm add vee-validate
+----
+
+[,html,title="index.html"]
+----
+<script src="https://unpkg.com/vee-validate"></script>
+----

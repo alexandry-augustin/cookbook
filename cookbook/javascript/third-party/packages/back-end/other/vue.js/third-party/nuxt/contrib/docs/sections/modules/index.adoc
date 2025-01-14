@@ -18,3 +18,5 @@ include::./nuxt-device.adoc[leveloffset=+1]
 include::./pinia.adoc[leveloffset=+1]
 
 include::./supabase.adoc[leveloffset=+1]
+
+include::./vee-validate.adoc[leveloffset=+1]

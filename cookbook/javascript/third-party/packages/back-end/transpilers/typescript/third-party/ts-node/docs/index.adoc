@@ -1,0 +1,16 @@
+= `ts-node`
+:toc: left
+:url-website: https://typestrong.org/ts-node/
+:url-docs: https://typestrong.org/ts-node/docs/
+:url-repo: https://github.com/TypeStrong/ts-node
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install --save-dev ts-node
+----

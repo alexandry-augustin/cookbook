@@ -1,0 +1,22 @@
+= VeeValidate
+:url-website: https://nuxt.com/modules/vee-validate
+
+{url-website}[[website\]]
+
+== Installation
+
+[,bash]
+----
+pnpm add @vee-validate/nuxt
+----
+
+[,javascript,title="nuxt.config.{ts,js}"]
+----
+export default defineNuxtConfig({
+  // ...
+  modules: [
+    //...
+    '@vee-validate/nuxt',
+  ],
+});
+----
