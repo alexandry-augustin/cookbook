@@ -1,0 +1,11 @@
+site:
+  title: {{cookiecutter.site_name_verbose}}
+  start_page: {{cookiecutter.component_name}}::index.adoc
+content:
+  sources:
+  - url: ./
+    branches: HEAD
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
