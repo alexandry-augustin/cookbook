@@ -1,0 +1,75 @@
+= zod
+:url-docs: https://vee-validate.logaretm.com/v4/integrations/zod-schema-validation/
+
+{url-docs}[[docs\]]
+
+== Installation
+
+[,bash]
+----
+pnpm add vee-validate zod @vee-validate/zod
+----
+
+== Example
+
+=== Field-level Validation
+
+[,vue]
+----
+<script setup>
+import * as zod from 'zod';
+import { useField } from 'vee-validate';
+import { toTypedSchema } from '@vee-validate/zod';
+
+const fieldSchema = toTypedSchema(
+  zod.string().min(1, { message: 'Field is required' }).email({ message: 'Must be a valid email' })
+);
+const { value, errorMessage } = useField('email', fieldSchema);
+</script>
+
+<template>
+    <input type="email" v-model="value" placeholder="Email" />
+    <div v-if="errorMessage" class="text-red-600">{{ errorMessage }}</div>
+</template>
+----
+
+=== Form-Level Validation
+
+[,vue]
+----
+<script setup>
+import * as zod from 'zod';
+import { useField, useForm } from 'vee-validate';
+import { toTypedSchema } from '@vee-validate/zod';
+
+const validationSchema = toTypedSchema(
+    zod.object({
+        email: zod.string().min(1, { message: 'This is required' }).email({ message: 'Must be a valid email' }),
+        password: zod.string().min(1, { message: 'This is required' }).min(8, { message: 'Too short' }),
+    })
+);
+
+const { handleSubmit, errors } = useForm({
+    validationSchema,
+});
+
+const { value: email } = useField('email');
+const { value: password } = useField('password');
+
+const onSubmit = handleSubmit(values => {
+    alert(JSON.stringify(values, null, 2));
+});
+</script>
+
+<template>
+    <form @submit="onSubmit">
+        <input name="email" v-model="email" type="email" />
+        <span>{{ errors.email }}</span>
+
+        <input name="password" v-model="password" type="password" />
+        <span>{{ errors.password }}</span>
+
+        <button>Submit</button>
+    </form>
+</template>
+----

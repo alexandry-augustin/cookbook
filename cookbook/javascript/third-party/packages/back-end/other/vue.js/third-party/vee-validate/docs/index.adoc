@@ -1,12 +1,20 @@
 = VeeValidate
 :toc: left
+:toclevels: 8
 :url-website: https://vee-validate.logaretm.com/v4/
-:url-docs: 
+:url-docs: https://vee-validate.logaretm.com/v4/guide/overview/
 :url-repo: https://github.com/logaretm/vee-validate/
 
 {url-website}[[website\]]
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
+
+[,https://vee-validate.logaretm.com/v3/guide/basics.html#validation-provider]
+____
+VeeValidate is a validation framework built specifically for Vue.js and as such it makes some assumptions and enforces "best-practices" for your forms while being versatile and customizable.
+
+VeeValidate is a collection of function-based APIs and Vue components [...]
+____
 
 == Installation
 
@@ -19,3 +27,14 @@ pnpm add vee-validate
 ----
 <script src="https://unpkg.com/vee-validate"></script>
 ----
+
+== Usage
+
+Flavors:
+
+Composition API:: {empty}
+Higher-order components (HOC):: Strictly used within the template
+
+NOTE: Both flavors can be used interchangeably so can be mix and matchas needed.
+
+include::./sections/zod.adoc[leveloffset=+1]

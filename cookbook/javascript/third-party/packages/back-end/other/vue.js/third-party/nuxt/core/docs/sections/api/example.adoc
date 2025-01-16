@@ -1,0 +1,74 @@
+= Example
+
+....
+./
+├── ...
+├── pages/
+│   ├── ...
+│   └── index.vue
+├── server/
+│   ├── ...
+│   └── api/
+│       └── item/
+│           ├── index.ts
+│           └── [id].ts
+└── ...
+....
+
+== Server
+
+[,typescript,title="index.ts"]
+----
+export default defineEventHandler(async event => {
+    return {
+        id: 0
+    }
+
+    // Or
+
+    // return '<h1>Item</div>'
+})
+----
+
+[,vue]
+----
+import data from '~/static/data/items.json';
+
+export default defineEventHandler(async event => {
+    return {
+        data: data
+    }
+})
+----
+
+[,typescript,title="[id].ts"]
+----
+export default defineEventHandler(async event => {
+    const id = getRouterParam(event, 'id');
+
+    return {
+        id: id
+    }
+})
+----
+
+== Client
+
+[,bash]
+----
+http GET http://0.0.0.0:3000/api/item
+http GET http://0.0.0.0:3000/api/item/4
+----
+
+[,vue,title="pages/index.vue"]
+----
+<script setup lang="ts">
+const { data: items } = await useFetch('/api/item');
+const { data: item } = await useFetch('/api/item/4');
+</script>
+
+<template>
+    <pre>{{ items }}</pre>
+    <pre>{{ item }}</pre>
+</template>
+----

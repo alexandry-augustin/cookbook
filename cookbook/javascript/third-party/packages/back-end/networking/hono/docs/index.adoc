@@ -1,0 +1,10 @@
+= Hono
+:toc: left
+:url-website: https://hono.dev/
+:url-docs: https://hono.dev/docs/
+:url-repo: https://github.com/honojs/hono
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
