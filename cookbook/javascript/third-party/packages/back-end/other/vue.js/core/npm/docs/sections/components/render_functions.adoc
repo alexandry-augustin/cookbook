@@ -1,0 +1,68 @@
+= Render Functions (`h()`)
+
+https://vuejs.org/guide/extras/render-function.html[[docs\]]
+
+> `h()` is short for *hyperscript* -- which means "JavaScript that produces HTML (hypertext markup language)"
+-- https://vuejs.org/guide/extras/render-function.html
+
+[,vue]
+----
+// all arguments except the type are optional
+h('div')
+h('div', { id: 'foo' })
+
+// both attributes and properties can be used in props
+// Vue automatically picks the right way to assign it
+h('div', { class: 'bar', innerHTML: 'hello' })
+
+// props modifiers such as `.prop` and `.attr` can be added
+// with `.` and `^` prefixes respectively
+h('div', { '.name': 'some-name', '^width': '100' })
+
+// class and style have the same object / array
+// value support that they have in templates
+h('div', { class: [foo, { bar }], style: { color: 'red' } })
+
+// event listeners should be passed as onXxx
+h('div', { onClick: () => {} })
+
+// children can be a string
+h('div', { id: 'foo' }, 'hello')
+
+// props can be omitted when there are no props
+h('div', 'hello')
+h('div', [h('span', 'hello')])
+
+// children array can contain mixed vnodes and strings
+h('div', ['hello', h('span', 'hello')])
+----
+
+https://stackoverflow.com/questions/49352525/can-you-render-vnodes-in-a-vue-template[Can you render VNodes in a Vue template?]
+
+[,vue,myComponent.vue]
+----
+<script setup lang="ts">
+import { h } from 'vue';
+
+// const myDiv = h('div', 'content');
+// or
+const myDiv = h('div', { style: 'background-color: coral;' }, 'content');
+</script>
+
+<template>
+    <component :is="myDiv"/>
+</template>
+----
+
+[,vue,myComponent.vue]
+----
+<script setup lang="ts">
+import { h } from 'vue';
+
+const elt = 'span';
+</script>
+
+<template>
+    <component :is="h(elt, 'content')"/>
+</template>
+----

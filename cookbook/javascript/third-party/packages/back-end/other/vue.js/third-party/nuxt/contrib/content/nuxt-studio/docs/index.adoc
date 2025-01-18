@@ -1,0 +1,8 @@
+= Nuxt Studio
+:toc: left
+:url-website: https://nuxt.studio/
+:url-docs: https://content.nuxt.com/docs/studio/setup
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+

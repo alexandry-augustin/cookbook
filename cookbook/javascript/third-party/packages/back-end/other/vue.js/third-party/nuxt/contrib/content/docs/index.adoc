@@ -1,7 +1,7 @@
 = Nuxt Content
 :toc: left
 :url-website: https://content.nuxt.com/
-:url-docs: https://content.nuxt.com/get-started/installation
+:url-docs: https://content.nuxt.com/docs/getting-started
 :url-repo: https://github.com/nuxt/content
 
 {url-website}[[website\]]
