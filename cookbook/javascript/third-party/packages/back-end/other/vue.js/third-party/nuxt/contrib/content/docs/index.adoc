@@ -1,0 +1,93 @@
+= Nuxt Content
+:toc: left
+:url-website: https://content.nuxt.com/
+:url-docs: https://content.nuxt.com/get-started/installation
+:url-repo: https://github.com/nuxt/content
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+If Nuxt is already installed: 
+
+[,bash]
+----
+pnpm add @nuxt/content
+----
+
+Create a Nuxt project with Nuxt Content auto installed: 
+
+[,bash]
+----
+pnpx nuxi@latest init PROJECT_NAME -t content
+----
+
+[IMPORTANT]
+====
+https://stackoverflow.com/questions/46384591/node-was-compiled-against-a-different-node-js-version-using-node-module-versio[Node - was compiled against a different Node.js version using NODE_MODULE_VERSION 51]
+
+....
+ERROR  [unhandledRejection] The module '.../better_sqlite3.node'
+was compiled against a different Node.js version using
+NODE_MODULE_VERSION 127. This version of Node.js requires
+NODE_MODULE_VERSION 108. Please try re-compiling or re-installing
+....
+
+----
+rm -r node_modules
+rm pnpm-lock.yaml
+
+pnpm install
+----
+====
+
+== Minimal Project
+
+[,bash]
+----
+pnpx nuxi@latest init PROJECT_NAME
+cd PROJECT_NAME
+rm app.vue
+pnpm add @nuxt/content
+
+touch nuxt.config.ts
+
+mkdir content
+touch content/index.md
+
+mkdir pages
+pages/index.vue
+----
+
+[,typescript,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  modules: ['@nuxt/content']
+})
+----
+
+[,markdown,title="content/index.md"]
+----
+# My First Page
+
+Here is some content.
+----
+
+[,vue,title="pages/index.vue"]
+----
+<script setup lang="ts">
+const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first())
+
+useSeoMeta({
+  title: home.value?.title,
+  description: home.value?.description
+})
+</script>
+
+<template>
+  <ContentRenderer v-if="home" :value="home" />
+  <div v-else>Home not found</div>
+</template>
+----

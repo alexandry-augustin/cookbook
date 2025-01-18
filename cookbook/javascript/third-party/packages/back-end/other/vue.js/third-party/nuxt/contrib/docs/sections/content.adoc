@@ -1,8 +1,0 @@
-= Nuxt Content
-:url-website: https://content.nuxt.com/
-:url-docs: https://content.nuxt.com/get-started/installation
-:url-repo: https://github.com/nuxt/content
-
-{url-website}[[website\]]
-{url-docs}[[docs\]]
-{url-repo}[[repo\]]

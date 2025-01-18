@@ -67,3 +67,10 @@ console.log(props.myProp)
   <MyComponent myProp="Content..." :myProp2="value"/>
 </template>
 ----
+
+== Default Value
+
+[source,title="App.vue"]
+----
+const { flag=false } = defineProps([ 'flag' ]);
+----
