@@ -20,3 +20,5 @@ include::./pinia.adoc[leveloffset=+1]
 include::./supabase.adoc[leveloffset=+1]
 
 include::./vee-validate.adoc[leveloffset=+1]
+
+include::./i18n.adoc[leveloffset=+1]

@@ -1,0 +1,29 @@
+= i18n
+:url-website: https://i18n.nuxtjs.org/
+:url-docs: https://i18n.nuxtjs.org/docs/getting-started
+:url-repo: https://github.com/nuxt-modules/i18n
+
+https://nuxt.com/modules/i18n
+
+== Installation
+
+[,bash]
+----
+pnpx nuxi@latest module add i18n
+----
+
+[,javascript]
+----
+{
+  modules: [
+    '@nuxtjs/i18n',
+  ],
+  i18n: {
+    locales: [
+      { code: 'en', language: 'en-US' },
+      { code: 'fr', language: 'fr-FR' }
+    ],
+    defaultLocale: 'en',
+  }
+}
+----

@@ -3,9 +3,9 @@
 [source,title="components/MyComponent.vue"]
 ----
 <script>
-    export default {
-        name: 'MyComponent'
-    }
+export default {
+    name: 'MyComponent'
+}
 </script>
 
 <script setup>
@@ -23,14 +23,14 @@
 [source,title="App.vue"]
 ----
 <script>
-  import MyComponent from './components/MyComponent.vue';
+import MyComponent from './components/MyComponent.vue';
 
-  export default {
-    name: 'App',
-    components: {
-      MyComponent, 
-    }
+export default {
+  name: 'App',
+  components: {
+    MyComponent, 
   }
+}
 </script>
 
 <template>

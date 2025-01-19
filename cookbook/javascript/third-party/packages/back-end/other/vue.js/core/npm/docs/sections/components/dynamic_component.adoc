@@ -4,13 +4,24 @@ https://v3.ru.vuejs.org/guide/component-dynamic-async.html
 
 NOTE: FIXME
 
+[,vue,myComponent.vue]
+----
+<script setup lang="ts">
+import ComponentA from '@/components/ComponentA.vue';
+</script>
+
+<template>
+    <component :is="ComponentA" />
+</template>
+----
+
 [source,vue]
 ----
 <script setup>
 import { ref } from 'vue';
 
-import ComponentA from '@/components/ComponentA.vue'
-import ComponentB from '@/components/ComponentB.vue'
+import ComponentA from '@/components/ComponentA.vue';
+import ComponentB from '@/components/ComponentB.vue';
 
 let activeComponent = ref('ComponentA'); 
 </script>

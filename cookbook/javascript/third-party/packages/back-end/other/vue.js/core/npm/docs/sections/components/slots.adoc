@@ -1,96 +1,220 @@
 = Slots
 
-== Single Slot
+[NOTE]
+====
+[,https://vuejs.org/guide/components/slots.html#named-slots]
+____
+`v-slot` has a dedicated shorthand `#`, 
+so `<template v-slot:header>` can be shortened to just `<template #header>`. 
+____
+====
+
+== Default Slot
+
+....
+./
+├── components/
+│   └── MyComponent.vue
+├── ...
+└── App.vue
+....
 
 [source,title="components/MyComponent.vue"]
 ----
-<script>
-    export default {
-        name: 'MyComponent', 
-    }
+<script setup>
 </script>
 
 <template>
-    <div>
-        <slot>Default content...</slot>
-    </div>
+  <div>
+    <slot>Default content...</slot>
+  </div>
 </template>
 ----
 
 [source,title="App.vue"]
 ----
-<script>
-  import MyComponent from './components/MyComponent.vue';
-
-  export default {
-    name: 'App',
-    components: {
-      MyComponent, 
-    },
-  }
+<script setup>
+import MyComponent from './components/MyComponent.vue';
 </script>
 
 <template>
   <MyComponent />
-    <!-- or -->
+
+  <!-- or -->
+  
   <MyComponent></MyComponent>
+  
   <!-- or -->
-  <MyComponent>
-    <h1>Content...</h1>
-  </MyComponent>
+  
+  <MyComponent>New content...</MyComponent>
+
   <!-- or -->
+  
   <MyComponent>
-    <template v-slot:default>
+    <template v-slot:default>New content...</template>
   </MyComponent>
 </template>
 ----
 
-== Multiple Slots
+== Named Slot
+
+....
+./
+├── components/
+│   └── MyComponent.vue
+├── ...
+└── App.vue
+....
 
 [source,title="components/MyComponent.vue"]
 ----
-<script>
-    export default {
-        name: 'MyComponent', 
-    }
+<script setup>
 </script>
 
 <template>
-    <div>
-        <span>
-            <span><slot name="first-slot">NULL</slot></span>
-            <span> - </span>
-            <span><slot>NULL</slot></span>
-            <span> - </span>
-            <span><slot name="last-slot">NULL</slot></span>
-        </span>
-    </div>
+  <div>
+    <slot name="my-slot">Default content...</slot>
+  </div>
 </template>
 ----
 
 [source,title="App.vue"]
 ----
-<script>
-  import MyComponent from './components/MyComponent.vue';
-
-  export default {
-    name: 'App',
-    components: {
-      MyComponent, 
-    },
-  }
+<script setup>
+import MyComponent from './components/MyComponent.vue';
 </script>
 
 <template>
   <MyComponent>
-    <template v-slot:first-slot>First</template>
-    <template v-slot:default>Default</template>
-    <template v-slot:last-slot>Last</template>
+    <template v-slot:my-slot>New content...</template>
   </MyComponent>
 </template>
 ----
 
+== Mixing Default and Named Slots
+
+....
+./
+├── components/
+│   └── MyComponent.vue
+├── ...
+└── App.vue
+....
+
+[source,title="components/MyComponent.vue"]
+----
+<script setup>
+</script>
+
+<template>
+  <div>
+    <slot>Default content...</slot>
+    <slot name="my-slot">Default content...</slot>
+  </div>
+</template>
+----
+
+[,https://vuejs.org/guide/components/slots.html]
+____
+When a component accepts both a default slot and named slots, all top-level non-`<template>` nodes are implicitly treated as content for the default slot. 
+____
+
+[source,title="App.vue"]
+----
+<script setup>
+import MyComponent from './components/MyComponent.vue';
+</script>
+
+<template>
+  <MyComponent>
+
+    <!-- implicit default slot -->
+    <span>New content </span>
+    <span>for default slot...</span>
+
+    <template v-slot:my-slot>New content for named slot...</template>
+  </MyComponent>
+</template>
+----
+
+// == Conditional Slots
+// 
+// https://enterprisevue.dev/blog/slots-in-vue-deep-dive/
+// https://vuejs.org/guide/components/slots.html#conditional-slots
+// 
+// Allow the parent component to dynamically select which slot to use based on data or conditions.
+// 
+// [source,title="components/MyComponent.vue"]
+// ----
+// 
+// ----
+// 
+// [source,title="App.vue"]
+// ----
+// 
+// ----
+
+== Dynamic Slot Names
+
+....
+./
+├── components/
+│   └── MyComponent.vue
+├── ...
+└── App.vue
+....
+
+[source,title="components/MyComponent.vue"]
+----
+<script setup>
+</script>
+
+<template>
+  <div>
+    <slot name="my-first-slot">First slot content...</slot>
+    <slot name="my-second-slot">Second slot content...</slot>
+  </div>
+</template>
+----
+
+[source,title="App.vue"]
+----
+<script setup>
+import MyComponent from './components/MyComponent.vue';
+
+const dynamicSlotName = "my-second-slot";
+</script>
+
+<template>
+  <MyComponent>
+    <template v-slot:[dynamicSlotName]>New content...</template>
+  </MyComponent>
+</template>
+----
+
+[NOTE]
+====
+[,https://vuejs.org/guide/components/slots.html#dynamic-slot-names]
+____
+the expression is subject to the https://vuejs.org/guide/essentials/template-syntax#dynamic-argument-syntax-constraints[syntax constraints] of dynamic directive arguments.
+____
+====
+
 == Slot Props
+
+[source,title="components/MyComponent.vue"]
+----
+
+----
+
+[source,title="App.vue"]
+----
+
+----
+
+== Scoped Slots
+
+Allow data to be passed from the child component to the parent component. 
 
 [source,title="components/MyComponent.vue"]
 ----
