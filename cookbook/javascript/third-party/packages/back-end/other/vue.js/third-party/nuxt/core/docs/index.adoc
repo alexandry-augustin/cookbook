@@ -22,17 +22,17 @@ ____
 
 == Installation
 
+IMPORTANT: Will fail using fish shell -> use bash.
+
 [,bash]
 ----
 pnpx nuxi@latest init PROJECT_NAME
 
 rm README.md
-mkdir pages components # composables middleware
+mkdir pages components # layouts composables middleware assets plugins utils
 mv app.vue pages/index.vue
 git add .
 ----
-
-IMPORTANT: Will fail using fish shell -> use bash.
 
 NOTE: Will create the directory `PROJECT_NAME`.
 

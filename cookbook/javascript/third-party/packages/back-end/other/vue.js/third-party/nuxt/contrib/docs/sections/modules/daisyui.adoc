@@ -1,0 +1,4 @@
+= DaisyUI
+:url-docs: https://v5.daisyui.com/docs/install/nuxt/
+
+{url-docs}[[docs\]]

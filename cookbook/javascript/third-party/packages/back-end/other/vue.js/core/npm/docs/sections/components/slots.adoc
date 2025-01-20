@@ -1,5 +1,7 @@
 = Slots
 
+https://vuejs.org/guide/components/slots.html[[docs\]]
+
 [NOTE]
 ====
 [,https://vuejs.org/guide/components/slots.html#named-slots]
@@ -214,14 +216,64 @@ ____
 
 == Scoped Slots
 
-Allow data to be passed from the child component to the parent component. 
+https://vuejs.org/guide/components/slots.html#scoped-slots[[docs\]]
+
+// [,https://vuejs.org/guide/components/slots.html#render-scope]
+// ____
+// Slot content has access to the data scope of the parent component, because it is defined in the parent. 
+// For example:
+// 
+// ----
+// <span>{{ message }}</span>
+// <ChildComponent>
+//   {{ message }}
+// </ChildComponent>
+// ----
+// 
+// Here both `{{ message }}` interpolations will render the same content.
+// ____
+// 
+// [,https://vuejs.org/guide/components/slots.html#scoped-slots]
+// ____
+// slot content does not have access to state in the child component.
+// ____
+// 
+// Allow data to be passed from the child component to the parent component. 
+
+Allow the parent component to access the child component's data. 
 
 [source,title="components/MyComponent.vue"]
 ----
+<script setup lang="ts">
+import { ref } from 'vue';
 
+let msg = ref("Msg from child component");
+let f = () => alert(msg.value);
+</script>
+
+<template>
+    <slot :msg="msg" :fct="f"></slot>
+</template>
 ----
+
+// [source,title="App.vue"]
+// ----
+// <template>
+//   <MyComponent v-slot="data">
+//     {{ data.msg }}
+//     <button @click="data.fct()">Click me</button>
+//   </MyComponent>
+// </template>
+// ----
+// 
+// Or
 
 [source,title="App.vue"]
 ----
-
+<template>
+  <MyComponent v-slot="{ msg, fct }">
+    {{ msg }}
+    <button @click="fct()">Click me</button>
+  </MyComponent>
+</template>
 ----

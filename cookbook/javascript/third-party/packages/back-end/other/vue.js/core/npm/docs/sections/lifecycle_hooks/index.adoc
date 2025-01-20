@@ -14,14 +14,14 @@ ____
 [source,vue]
 ----
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted } from 'vue';
 
 onMounted(() => {
   // ...
-})
+});
 </script>
 ----
 
-== `onUpdated`
+== `onUpdated()`
 
-== `onUnmounted`
+== `onUnmounted()`

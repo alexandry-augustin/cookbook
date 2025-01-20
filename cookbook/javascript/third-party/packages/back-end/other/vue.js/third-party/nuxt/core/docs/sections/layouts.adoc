@@ -99,3 +99,32 @@ definePageMeta({
   </div>
 </template>
 ----
+
+== Layout with Named Slots
+
+https://github.com/nuxt/nuxt/issues/190[support the use of slot in layout files #190]
+
+[,vue,title="layouts/default.vue"]
+----
+<template>
+  <div>
+    <slot name="top" />
+    <!-- ... -->
+    <slot name="bottom" />
+  </div>
+</template>
+----
+
+[,vue,title="pages/index.vue"]
+----
+<template>
+  <NuxtLayout name="custom">
+    <template #top>
+      ...
+    </template>
+    <template #bottom>
+      ...
+    </template>
+  </NuxtLayout>
+</template>
+----

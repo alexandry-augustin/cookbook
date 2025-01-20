@@ -9,6 +9,8 @@ https://www.shadcn-vue.com/docs/installation/nuxt[[website\]]
 pnpm add -D shadcn-nuxt
 ----
 
+NOTE: Editing nuxt.config.ts/js must be done manually.
+
 [,javascript,title="nuxt.config.{ts,js}"]
 ----
 export default defineNuxtConfig({

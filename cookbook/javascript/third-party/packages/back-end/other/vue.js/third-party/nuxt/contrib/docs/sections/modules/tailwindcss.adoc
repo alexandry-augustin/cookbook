@@ -4,6 +4,8 @@ https://nuxt.com/modules/tailwindcss[[website\]]
 
 == Installation
 
+IMPORTANT: Will fail using fish shell -> use bash.
+
 [,bash]
 ----
 pnpx nuxi@latest module add tailwindcss

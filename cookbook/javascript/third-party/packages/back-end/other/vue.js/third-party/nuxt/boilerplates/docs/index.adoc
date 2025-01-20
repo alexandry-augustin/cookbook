@@ -1,0 +1,6 @@
+= Boilerplates
+:toc: left
+
+== Nuxt Starter
+
+https://nuxt.new/[[website\]]

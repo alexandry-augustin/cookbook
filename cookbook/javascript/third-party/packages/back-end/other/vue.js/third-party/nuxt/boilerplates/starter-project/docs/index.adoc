@@ -1,0 +1,126 @@
+= A Starter Recipe for Nuxt
+Alexandry Augustin
+:toc: left
+:toclevels: 8
+
+== Core
+
+[,bash]
+----
+bash
+pnpx nuxi@latest init PROJECT_NAME
+
+cd PROJECT_NAME
+rm README.md
+mkdir pages components # layouts composables middleware assets plugins utils
+mv app.vue pages/index.vue
+----
+
+[,bash,title="build.sh"]
+----
+#!/bin/bash
+
+pnpx nuxi generate
+----
+
+[,bash,title="run.sh"]
+----
+#!/bin/bash
+
+pnpm run dev --host
+----
+
+----
+touch public/favicon.svg
+----
+
+[,javascript,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+    // ...
+  app: {
+    head: {
+      title: 'Site Name',
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/favicon.svg'
+        }
+      ]
+    }
+  }
+})
+----
+
+[,bash]
+----
+git add .
+----
+
+== Tailwind
+
+[,bash]
+----
+bash
+pnpx nuxi@latest module add tailwindcss
+----
+
+[,bash]
+----
+pnpx tailwindcss init -p
+----
+
+== Shadcn
+
+
+[,bash]
+----
+pnpm add -D shadcn-nuxt
+----
+
+NOTE: Editing `nuxt.config.ts/js` must be done manually.
+
+[,javascript,title="nuxt.config.{ts,js}"]
+----
+export default defineNuxtConfig({
+  modules: [
+    'shadcn-nuxt'
+  ],
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui'
+  }
+})
+----
+
+[,bash]
+----
+pnpx shadcn-vue@latest init
+----
+
+[NOTE]
+====
+....
+ERROR  Nuxt module should be a function: @nuxtjs/color-mode   
+....
+
+https://github.com/nuxt/nuxt/issues/29779
+
+[,bash]
+----
+pnpm install @nuxtjs/color-mode
+----
+====
+
+[,bash]
+----
+pnpx shadcn-vue@latest add --all
+----
