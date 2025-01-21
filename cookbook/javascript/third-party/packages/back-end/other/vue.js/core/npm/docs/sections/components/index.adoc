@@ -57,3 +57,5 @@ include::./custom_events.adoc[leveloffset=+1]
 include::./computed.adoc[leveloffset=+1]
 
 include::./render_functions.adoc[leveloffset=+1]
+
+include::./accessing_child_components_data.adoc[leveloffset=+1]

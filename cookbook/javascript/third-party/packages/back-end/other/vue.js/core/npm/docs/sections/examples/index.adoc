@@ -50,3 +50,5 @@ const screenHeight = ref(screen.height)
     </div>
 </template>
 ----
+
+include::./list-filtering.adoc[leveloffset=+1]

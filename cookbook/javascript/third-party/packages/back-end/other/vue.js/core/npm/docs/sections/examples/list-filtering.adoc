@@ -1,0 +1,43 @@
+= List Filtering
+
+// ....
+// .
+// └── src
+//     ├── components/
+//     │   └── ...
+//     ├── ...
+//     └── App.vue
+// ....
+
+[,vue,title="App.vue"]
+----
+<script>
+import { ref } from 'vue';
+
+const data = [
+    {
+        keyName: ...
+    }, 
+    // ...
+];
+
+const filterText = ref('');
+const filteredData = computed(() => {
+    let filter = filterText.value;
+
+    if(!filter.length) 
+        return data;
+
+    return data.filter(item =>
+        item.keyName.toLowerCase().includes(filter.toLowerCase()));
+});
+</script>
+
+<template>
+    <input v-model="filterText"></input>
+    
+    <template v-for="(item, idx) in filteredData" :key="idx">
+        // ...
+    </template>
+</template>
+----

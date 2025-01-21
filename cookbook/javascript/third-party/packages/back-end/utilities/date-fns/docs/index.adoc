@@ -12,23 +12,39 @@
 
 [source,bash]
 ----
-npm install date-fns
+pnpm install date-fns
 ----
 
 == Examples
 
 [source,javascript]
 ----
-import { format, formatDistance, formatRelative, subDays } from 'date-fns';
+import { format } from 'date-fns';
 
-format(date, 'yyyy-MM-dd');
+format(new Date(), 'yyyy-MM-dd');
+//=> 2025-01-21
+----
 
-format(new Date(), "'Today is a' eeee")
+[source,javascript]
+----
+import { format } from 'date-fns';
+
+format(new Date(), "'Today is a' eeee");
 //=> "Today is a Friday"
+----
 
-formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
+[source,javascript]
+----
+import { formatDistance, subDays } from 'date-fns';
+
+let res = formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true });
 //=> "3 days ago"
+----
 
-formatRelative(subDays(new Date(), 3), new Date())
+[source,javascript]
+----
+import { formatRelative, subDays } from 'date-fns';
+
+formatRelative(subDays(new Date(), 3), new Date());
 //=> "last Friday at 7:26 p.m."
 ----
