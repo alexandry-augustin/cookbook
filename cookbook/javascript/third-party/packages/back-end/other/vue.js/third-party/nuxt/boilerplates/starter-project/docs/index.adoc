@@ -124,3 +124,26 @@ pnpm install @nuxtjs/color-mode
 ----
 pnpx shadcn-vue@latest add --all
 ----
+
+== vue-query
+
+[,bash]
+----
+pnpm install @hebilicious/vue-query-nuxt @tanstack/vue-query 
+----
+
+[,json,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  modules: [
+    '@hebilicious/vue-query-nuxt'
+  ]
+})
+----
+
+== axios
+
+[source,bash]
+----
+pnpm install axios
+----

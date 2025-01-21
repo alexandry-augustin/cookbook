@@ -1,0 +1,41 @@
+= Components
+
+[,https://nuxt.com/docs/guide/directory-structure/components]
+____
+By default, only the `~/components` directory is scanned. 
+____
+
+== Add Other Directories
+
+https://nuxt.com/docs/guide/directory-structure/components[[docs\]]
+
+....
+./
+├── ...
+├── components/
+│   └── base/
+│       ├── ...
+│       └── MyComponent.vue
+└── ...
+....
+
+[,javascript,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  components: [
+    '~/components'
+  ]
+})
+----
+
+[,vue,title="pages/index.vue"]
+----
+<template>
+    <BaseMyComponent />
+</template>
+----
+
+[IMPORTANT]
+====
+Must come last if you have overrides you wish to apply to sub-directories of `~/components`.
+====

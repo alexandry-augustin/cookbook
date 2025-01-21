@@ -17,7 +17,7 @@ pnpm install @hebilicious/vue-query-nuxt @tanstack/vue-query
 ----
 export default defineNuxtConfig({
   modules: [
-    "@hebilicious/vue-query-nuxt"
+    '@hebilicious/vue-query-nuxt'
   ]
 })
 ----

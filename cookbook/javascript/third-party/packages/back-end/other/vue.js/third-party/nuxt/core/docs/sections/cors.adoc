@@ -1,0 +1,23 @@
+= CORS
+
+https://www.reddit.com/r/Nuxt/comments/109au1x/how_so_enable_cors_in_nitro/[How to enable cors in nitro?]
+
+https://github.com/nuxt/nuxt/issues/14598[How to resolve CORS issue in v3? #14598]
+
+[,javascript,title="server/middleware/cors.ts"]
+----
+export default defineEventHandler((event) => {
+    setResponseHeaders(event, {
+        "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+        "Access-Control-Allow-Origin": "*",
+        'Access-Control-Allow-Credentials': 'true',
+        "Access-Control-Allow-Headers": '*',
+        "Access-Control-Expose-Headers": '*'
+    })
+    if (event.method === 'OPTIONS') {
+        event.node.res.statusCode = 204
+        event.node.res.statusMessage = "No Content."
+        return 'OK'
+    }
+})
+----
