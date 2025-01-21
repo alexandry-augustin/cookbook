@@ -1,0 +1,25 @@
+= Nuxt: Contrib (Modules)
+:toc: left
+:url-website: https://nuxt.com/modules
+:url-repo: https://github.com/nuxt-modules
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+include::./sections/tailwindcss.adoc[leveloffset=+1]
+
+include::./sections/shadcn.adoc[leveloffset=+1]
+
+include::./sections/leaflet.adoc[leveloffset=+1]
+
+include::./sections/nuxt-device.adoc[leveloffset=+1]
+
+include::./sections/pinia.adoc[leveloffset=+1]
+
+include::./sections/supabase.adoc[leveloffset=+1]
+
+include::./sections/vee-validate.adoc[leveloffset=+1]
+
+include::./sections/i18n.adoc[leveloffset=+1]
+
+include::./sections/daisyui.adoc[leveloffset=+1]

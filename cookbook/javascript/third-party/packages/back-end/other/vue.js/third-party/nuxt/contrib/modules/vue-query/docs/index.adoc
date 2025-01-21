@@ -1,7 +1,10 @@
 = vue-query
+:toc: left
 :url-website: https://nuxt.com/modules/vue-query
 
 {url-website}[[website\]]
+
+https://medium.com/@imanmalekian31/how-to-use-tanstack-vue-query-with-usefetch-in-nuxt-3-9e90da3fcac1[How to use @tanstack/vue-query with useFetch in Nuxt 3]
 
 == Installation
 

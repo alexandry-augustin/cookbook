@@ -1,6 +1,0 @@
-= Nuxt: Contrib
-:toc: left
-
-include::./sections/modules/index.adoc[leveloffset=+1]
-
-include::./sections/services/index.adoc[leveloffset=+1]
