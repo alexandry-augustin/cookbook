@@ -1,0 +1,5 @@
+name: {{cookiecutter.component_name}}
+version: ~
+title: {{cookiecutter.component_name_verbose}}
+nav:
+- modules/ROOT/nav.adoc
