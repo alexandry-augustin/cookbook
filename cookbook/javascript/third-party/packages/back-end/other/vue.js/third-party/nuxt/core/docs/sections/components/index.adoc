@@ -39,3 +39,5 @@ export default defineNuxtConfig({
 ====
 Must come last if you have overrides you wish to apply to sub-directories of `~/components`.
 ====
+
+include::./dynamic_components.adoc[leveloffset=+1]

@@ -1,0 +1,30 @@
+= Dynamic Components
+
+https://nuxt.com/docs/guide/directory-structure/components#dynamic-components[[docs\]]
+
+[,https://nuxt.com/docs/guide/directory-structure/components#dynamic-components]
+____
+If you want to use the Vue `<component :is="someComputedComponent">` syntax, you need to use the `resolveComponent` helper provided by Vue or import the component directly from `#components` and pass it into `is` prop.
+____
+
+[,vue,title="MyComponent.vue"]
+----
+<script setup lang="ts">
+const MyButton = resolveComponent('MyButton')
+</script>
+
+<template>
+  <component :is="clickable ? MyButton : 'div'" />
+</template>
+----
+
+[,vue,title="MyComponent.vue"]
+----
+<script setup lang="ts">
+import { SomeComponent } from '#components';
+</script>
+
+<template>
+  <component :is="SomeComponent" />
+</template>
+----

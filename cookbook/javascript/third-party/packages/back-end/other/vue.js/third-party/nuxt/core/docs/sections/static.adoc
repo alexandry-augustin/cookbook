@@ -2,6 +2,11 @@
 
 https://nuxt.com/docs/getting-started/assets[[docs\]]
 
+[,https://nuxt.com/docs/getting-started/assets]
+____
+The `public/` directory is used as a public server for static assets publicly available at a defined URL of your application.
+____
+
 ....
 ./
 ├── ...

@@ -1,0 +1,7 @@
+= Pages
+
+[,https://nuxt.com/docs/guide/directory-structure/app]
+____
+`pages/` directory is optional.
+If not present, Nuxt won't include vue-router dependency. This is useful when working on a landing page or an application that does not need routing.
+____

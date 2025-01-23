@@ -13,7 +13,7 @@ pnpm add @tanstack/vue-query-devtools
 [source,javascript,title="App.vue"]
 ----
 <script setup>
-import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
+import { VueQueryDevtools } from '@tanstack/vue-query-devtools';
 </script>
 
 <template>

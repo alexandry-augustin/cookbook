@@ -115,9 +115,13 @@ ____
 
 include::./sections/nuxt.config.ts.adoc[leveloffset=+1]
 
+include::./sections/app.vue.adoc[leveloffset=+1]
+
+include::./sections/pages.adoc[leveloffset=+1]
+
 include::./sections/layouts.adoc[leveloffset=+1]
 
-include::./sections/components.adoc[leveloffset=+1]
+include::./sections/components/index.adoc[leveloffset=+1]
 
 include::./sections/composables.adoc[leveloffset=+1]
 
