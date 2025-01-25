@@ -1,0 +1,263 @@
+= Watchers in Vue: 3 Types and Everything You Need to Know
+:author: Hamid Hussain
+:date:
+:toc: left
+:url: https://medium.com/@iamhamid25/watchers-in-vue-3-types-and-everything-you-need-to-know-df18b7e115fa
+
+{url}[[source]]
+
+Vue 3 offers enhanced  reactivity mechanisms, and watchers remain a critical part of managing  side effects when your data changes. In this article, I'll cover *types of watchers*, how they work, and tips for using them effectively in Vue 3.
+
+== What Are Watchers?
+
+Watchers in Vue are used to respond to changes in reactive state. Unlike  computed properties, which calculate and cache values based on reactive  dependencies, watchers are explicitly designed to perform side effects  when data changes, such as:
+
+* Fetching new data.
+* Logging changes.
+* Triggering animations or non-data-driven updates.
+
+== Types of Watchers in vue 3
+
+Vue 3 offers three main types of watchers, each serving a unique purpose:
+
+=== `watch`
+
+The watch function lets you observe specific reactive properties or computed values.
+
+*Example*:
+
+----
+import { ref, watch } from 'vue';
+const count = ref(0);
+watch(count, (newValue, oldValue) => {
+console.log(`Count changed from ${oldValue} to ${newValue}`);
+});
+----
+
+* *Reactive Dependencies*: You can watch refs, reactive objects, or computed values.
+* *Immediate*: You can execute the watcher immediately by enabling the immediate option:
+ watch(count, callback, { immediate: true });
+
+=== `watchEffect`
+
+watchEffect automatically tracks dependencies used in its callback function.
+
+*Example*:
+
+----
+import { ref, watchEffect } from 'vue';
+const count = ref(0);
+const doubled = ref(0);
+watchEffect(() => {
+doubled.value = count.value * 2;
+console.log(`Doubled: ${doubled.value}`);
+});
+----
+
+* *Automatic Dependency Tracking*: Unlike watch, you don't specify dependencies explicitly. Vue determines them dynamically during execution.
+* *Cleaner Syntax*: Ideal for straightforward reactive logic.
+
+=== Multi-Source Watchers
+
+Vue 3 allows you to watch multiple reactive sources in a single watcher.  This is useful when your logic depends on multiple state variables.
+
+*Example*:
+
+----
+const firstName = ref('John');
+const lastName = ref('Doe');
+watch([firstName, lastName], ([newFirstName, newLastName], [oldFirstName, oldLastName]) => {
+console.log(`Name changed from ${oldFirstName} ${oldLastName} to ${newFirstName} ${newLastName}`);
+});
+----
+
+=== watchPostEffect and watchSyncEffect
+
+These specialized effects control when watchers execute relative to DOM updates:
+
+* `watchPostEffect`: Runs after DOM updates.
+* `watchSyncEffect`: Runs synchronously before the DOM update.
+
+These are advanced tools mainly used for fine-grained control in complex scenarios.
+
+----
+import { ref, watchPostEffect, watchSyncEffect } from 'vue';const count = ref(0);
+
+watchPostEffect(() => {
+  console.log('Post effect executed after DOM updates');
+});
+
+watchSyncEffect(() => {
+  console.log('Sync effect executed before DOM updates');
+});
+----
+
+=== Computed Watchers
+
+While not technically a separate type, *computed properties* can be watched for side effects. They are ideal for reacting to derived state.
+
+Example:
+
+----
+import { computed, watch } from 'vue';
+const count = ref(1);
+const doubled = computed(() => count.value * 2);
+watch(doubled, (newVal, oldVal) => {
+console.log(`Doubled value changed from ${oldVal} to ${newVal}`);
+});
+----
+
+== When to Use Which Watcher?
+
+=== `watch`
+
+* *Best For*: Triggering side effects for a specific reactive property.
+* *Why*: Provides explicit control over dependencies, making it ideal for  scenarios where you need to observe a single or specific reactive  source.
+* *Example Use Case*: Fetching API data when a particular reactive property changes.
+
+=== `watchEffect`
+
+* *Best For*: Performing lightweight dependency tracking.
+* *Why*: Automatically determines dependencies without requiring explicit declaration, reducing boilerplate code.
+* *Example Use Case*: Automatically updating state when multiple dependencies change, like dynamically calculating a value.
+
+=== `watchPostEffect`
+
+* *Best For*: Reacting to reactive dependencies in the DOM.
+* *Why*: Ensures side effects are executed only after DOM updates, making it ideal for DOM manipulation tasks.
+* *Example Use Case*: Updating third-party UI libraries after Vue renders changes to the DOM.
+
+=== `watchSyncEffect`
+
+* *Best For*: Reacting immediately and synchronously.
+* *Why*: Runs synchronously before rendering, making it useful for tasks that block rendering or require immediate side effects.
+* *Example Use Case*: Performing critical synchronous operations like logging or temporarily blocking UI updates.
+
+== Differences Between Watch, watchEffect, and watchPostEffect
+
+=== `watch`
+
+* Fine-grained control.
+* Ideal for *reacting to specific data changes*.
+* Requires explicitly defining dependencies.
+
+=== `watchEffect`
+
+* Automatically tracks dependencies.
+* Simpler to use for *side effects that depend on multiple reactive sources*.
+* Triggers immediately upon initialization.
+
+Example:
+
+----
+import { ref, watchEffect } from 'vue';
+const count = ref(0);
+watchEffect(() => {
+console.log(`Count is now: ${count.value}`);
+});
+----
+
+=== `watchPostEffect`
+
+* Similar to watchEffect but executed *after DOM updates*.
+* Useful for post-render logic like manipulating the DOM directly.
+
+== Advanced Watcher Options
+
+Vue 3 provides several options to customize watcher behavior. These options allow you to control *how* and *when* watchers react to changes.
+
+*Deep*:
+
+* Tracks nested changes in objects and arrays.
+* Enabled via { deep: true }.
+
+*Immediate*:
+
+* Executes the callback as soon as the watcher is registered.
+* Enabled via { immediate: true }.
+
+*Flush*:
+
+* Determines when the watcher should run:
+* *pre (default):* Before rendering.
+* *post:* After rendering.
+* *sync:* Runs synchronously.
+
+*Example of flush:*
+
+----
+watch(
+count,
+(newVal) => {
+console.log('Flushed watcher triggered');
+},
+{ flush: 'post' }
+);
+----
+
+== Watching Reactive Objects vs Refs
+
+When using `watch` to observe changes in reactive objects created with `reactive`, you need to provide a getter function to access the desired property or the entire object. For `ref`, you can directly pass the value.
+
+== Watching a Reactive Object
+
+----
+import { reactive, watch } from 'vue';const user = reactive({ name: 'Hamid', age: 25 });
+watch(
+  () => user.name,
+  (newValue, oldValue) => {
+    console.log(`Name changed from ${oldValue} to ${newValue}`);
+  }
+);
+----
+
+== Watching a Ref
+
+----
+import { ref, watch } from 'vue';const count = ref(0);
+watch(count, (newValue, oldValue) => {
+  console.log(`Count changed from ${oldValue} to ${newValue}`);
+});
+----
+
+*Key Takeaway:*
+Always use a getter function when watching specific properties or deeply nested values within a `reactive` object, as `reactive` does not return a single reactive value like `ref` does.
+
+== Cleanup in Watchers
+
+When using `watch` or `watchEffect`, you might need to clean up resources like timers or subscriptions to avoid memory leaks. Vue provides the `onCleanup` hook for this purpose.
+
+----
+import { ref, watch } from 'vue';const count = ref(0);watch(count, (newVal, oldVal, onCleanup) => {
+  const timer = setInterval(() => {
+    console.log(`Count: ${newVal}`);
+  }, 1000);
+  onCleanup(() => {
+    clearInterval(timer);
+    console.log('Timer cleared');
+  });
+});
+----
+
+*Why Use Cleanup?*
+
+* Prevent memory leaks when components unmount.
+* Ensure proper disposal of resources like timers, subscriptions, or event listeners.
+
+== When to Use Watchers
+
+* *API Calls:* Fetch data when a value changes.
+* *Logging:* Debugging or tracking variable changes.
+* *DOM Interaction:* Manually manipulate DOM elements.
+* *Complex Dependencies:* React to changes across multiple state variables.
+
+== Best Practices
+
+. *Avoid Overusing Watchers*: Use computed properties for derived data to keep your logic clean and avoid unnecessary complexity.
+. *Use Deep Watching Sparingly*: Deep watchers can be expensive in terms of performance, especially with large objects.
+. *Cleanup Effects*: If you're watching variables that could be destroyed (e.g., on component unmount), ensure proper cleanup.
+. *Use watchEffect for Simplicity*: If dependencies are implicit, prefer watchEffect to reduce boilerplate.
+
+== Final Thoughts
+
+Watchers in Vue 3 are a powerful tool for side effects and reacting to data  changes. Understanding the different types (watch, watchEffect, and  watchPostEffect) and their options (e.g., deep, immediate, flush) allows you to handle complex reactivity with ease. By following best practices and using watchers strategically, you can ensure your Vue 3  applications remain performant and maintainable.

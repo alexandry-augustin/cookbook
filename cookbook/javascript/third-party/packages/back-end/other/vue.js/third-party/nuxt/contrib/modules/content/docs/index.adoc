@@ -26,7 +26,6 @@ pnpx nuxi@latest init PROJECT_NAME -t content
 
 [IMPORTANT]
 ====
-https://stackoverflow.com/questions/46384591/node-was-compiled-against-a-different-node-js-version-using-node-module-versio[Node - was compiled against a different Node.js version using NODE_MODULE_VERSION 51]
 
 ....
 ERROR  [unhandledRejection] The module '.../better_sqlite3.node'
@@ -35,59 +34,45 @@ NODE_MODULE_VERSION 127. This version of Node.js requires
 NODE_MODULE_VERSION 108. Please try re-compiling or re-installing
 ....
 
+Solution 1: 
+
+https://stackoverflow.com/questions/46384591/node-was-compiled-against-a-different-node-js-version-using-node-module-versio[Node - was compiled against a different Node.js version using NODE_MODULE_VERSION 51]
+
 ----
 rm -r node_modules
 rm pnpm-lock.yaml
 
 pnpm install
 ----
+
+Solution 2:
+
+https://github.com/WiseLibs/better-sqlite3/issues/549[better_sqlite3 was compiled against a different Node.js version #549]
+
+----
+npm rebuild better_sqlite3
+npm rebuild
+----
 ====
 
-== Minimal Project
+include::./sections/minimal-project.adoc[leveloffset=+1]
 
-[,bash]
+include::./sections/markdown-components.adoc[leveloffset=+1]
+
+== Migration v2 -> v3
+
+https://content.nuxt.com/docs/getting-started/migration[[docs\]]
+
+* `queryContent()` is replaced with `queryCollection()`
+
+
+== `useAsyncData()`
+
+[,https://garywoodfine.com/how-to-install-the-nuxt-3-content-module/]
+____
+a wrapper to query our content using the `queryContent` that is provided to us by the Nuxt Content module.
+____
+
 ----
-pnpx nuxi@latest init PROJECT_NAME
-cd PROJECT_NAME
-rm app.vue
-pnpm add @nuxt/content
-
-touch nuxt.config.ts
-
-mkdir content
-touch content/index.md
-
-mkdir pages
-pages/index.vue
-----
-
-[,typescript,title="nuxt.config.ts"]
-----
-export default defineNuxtConfig({
-  modules: ['@nuxt/content']
-})
-----
-
-[,markdown,title="content/index.md"]
-----
-# My First Page
-
-Here is some content.
-----
-
-[,vue,title="pages/index.vue"]
-----
-<script setup lang="ts">
-const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first())
-
-useSeoMeta({
-  title: home.value?.title,
-  description: home.value?.description
-})
-</script>
-
-<template>
-  <ContentRenderer v-if="home" :value="home" />
-  <div v-else>Home not found</div>
-</template>
+const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first());
 ----

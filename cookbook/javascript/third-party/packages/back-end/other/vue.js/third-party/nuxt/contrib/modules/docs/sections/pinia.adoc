@@ -9,3 +9,26 @@ https://nuxt.com/modules/pinia[[website\]]
 pnpx nuxi@latest module add pinia
 # npm install pinia @pinia/nuxt
 ----
+
+== Minimal Example
+
+[source,javascript,title="src/stores/MyStore.js"]
+----
+export const useMyStore = defineStore('myStore', () => {
+  const value = ref(0);
+
+  return { value }
+})
+----
+
+[source,vue,title="src/components/MyComponent.vue"]
+----
+<script setup>
+const myStore = useMyStore();
+</script>
+
+<template>
+  {{ myStore.value }}
+  <button @click="myStore.value = myStore.value + 1">Add</button>
+</template>
+----

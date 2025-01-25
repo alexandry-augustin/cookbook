@@ -121,6 +121,8 @@ include::./sections/pages.adoc[leveloffset=+1]
 
 include::./sections/layouts.adoc[leveloffset=+1]
 
+include::./sections/error-page.adoc[leveloffset=+1]
+
 include::./sections/components/index.adoc[leveloffset=+1]
 
 include::./sections/composables.adoc[leveloffset=+1]

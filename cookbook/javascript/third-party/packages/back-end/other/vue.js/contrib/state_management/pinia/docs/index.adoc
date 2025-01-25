@@ -13,17 +13,17 @@ npm install pinia
 
 [source,javascript,title="main.js"]
 ----
-import './assets/main.css'
+import './assets/main.css';
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia' // <--- New
-import App from './App.vue'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia'; // <--- New
+import App from './App.vue';
 
-const pinia = createPinia() // <--- New
-const app = createApp(App)
+const pinia = createPinia(); // <--- New
+const app = createApp(App);
 
-app.use(pinia) // <--- New
-app.mount('#app')
+app.use(pinia); // <--- New
+app.mount('#app');
 ----
 
 include::./sections/examples.adoc[leveloffset=+1]

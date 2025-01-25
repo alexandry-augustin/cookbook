@@ -128,3 +128,34 @@ https://github.com/nuxt/nuxt/issues/190[support the use of slot in layout files 
   </NuxtLayout>
 </template>
 ----
+
+== Default Redirect
+
+[,vue,title="layouts/default.vue"]
+----
+<template>
+    <NuxtLayout name="with-sidebar">
+        <template v-slot:default>
+            <slot />
+        </template>
+    </NuxtLayout>
+</template>
+----
+
+[,vue,title="layouts/custom.vue"]
+----
+<template>
+  <div>
+    <!-- ... -->
+    <slot />
+    <!-- ... -->
+  </div>
+</template>
+----
+
+[,vue,title="pages/index.vue"]
+----
+<template>
+  <!-- ... -->
+</template>
+----

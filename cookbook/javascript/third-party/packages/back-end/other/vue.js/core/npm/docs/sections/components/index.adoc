@@ -54,8 +54,12 @@ include::./class.adoc[leveloffset=+1]
 
 include::./custom_events.adoc[leveloffset=+1]
 
-include::./computed.adoc[leveloffset=+1]
+include::./computed_properties.adoc[leveloffset=+1]
 
 include::./render_functions.adoc[leveloffset=+1]
 
 include::./accessing_child_components_data.adoc[leveloffset=+1]
+
+include::./accessing_dom_element.adoc[leveloffset=+1]
+
+include::./watchers.adoc[leveloffset=+1]

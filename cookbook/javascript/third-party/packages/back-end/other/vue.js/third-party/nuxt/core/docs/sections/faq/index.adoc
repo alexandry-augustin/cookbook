@@ -1,6 +1,6 @@
 = FAQs
 
-== Auto-import from Third-Party Packages
+== Auto-import from Third-party Packages
 
 https://nuxt.com/docs/guide/concepts/auto-imports#auto-import-from-third-party-packages
 
@@ -26,4 +26,19 @@ export default defineNuxtConfig({
     } ]
   }
 })
+----
+
+== Styling `<body>`
+
+https://stackoverflow.com/questions/67478143/styling-the-body-in-nuxt
+
+[,vue,title="pages/index.vue"]
+----
+<script setup>
+useHead({
+  bodyAttrs: {
+    class: '...'
+  }
+});
+</script>
 ----

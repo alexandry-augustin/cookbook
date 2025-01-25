@@ -240,7 +240,9 @@ https://vuejs.org/guide/components/slots.html#scoped-slots[[docs\]]
 // 
 // Allow data to be passed from the child component to the parent component. 
 
-Allow the parent component to access the child component's data. 
+// Allow the parent component to access the child component's data. 
+Allow a child component to expose its data to its parent component(s).
+
 
 [source,title="components/MyComponent.vue"]
 ----

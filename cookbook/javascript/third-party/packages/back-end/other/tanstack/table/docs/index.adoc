@@ -1,4 +1,4 @@
-= Table
+= Tanstack: Table
 :toc: left
 :toclevels: 8
 :url-website: https://tanstack.com/table/latest

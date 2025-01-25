@@ -3,18 +3,23 @@
 
 {url-docs}[[docs\]]
 
+// [,https://nuxt.com/docs/getting-started/state-management]
+// ____
+// Nuxt is not opinionated about state management, so feel free to choose the right solution for your needs. There are multiple integrations with the most popular state management libraries, including:
+// 
+// Pinia - the official Vue recommendation
+// 
+// Harlem - immutable global state management
+// 
+// XState - state machine approach with tools for visualizing and testing your state logic
+// ____
+
 [,https://nuxt.com/docs/getting-started/state-management]
 ____
-Nuxt is not opinionated about state management, so feel free to choose the right solution for your needs. There are multiple integrations with the most popular state management libraries, including:
-
-Pinia - the official Vue recommendation
-
-Harlem - immutable global state management
-
-XState - state machine approach with tools for visualizing and testing your state logic
+Nuxt provides powerful state management libraries and the `useState` composable to create a reactive and SSR-friendly shared state.
 ____
 
-[,vue]
+[,vue,title="MyComponent.vue"]
 ----
 <script setup lang="ts">
 const counter = useState('counter', () => Math.round(Math.random() * 1000));
@@ -25,7 +30,7 @@ const counter = useState('counter', () => Math.round(Math.random() * 1000));
 </template>
 ----
 
-[,vue]
+[,vue,title="MyComponent.vue"]
 ----
 <script setup lang="ts">
 const counter = useState('counter');

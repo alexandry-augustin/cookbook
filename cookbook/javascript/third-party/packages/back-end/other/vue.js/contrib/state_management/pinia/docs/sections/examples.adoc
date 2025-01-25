@@ -1,5 +1,35 @@
 = Examples
 
+== Minimal
+
+[source,javascript,title="src/stores/MyStore.js"]
+----
+import { ref } from 'vue';
+import { defineStore } from 'pinia';
+
+export const useMyStore = defineStore('myStore', () => {
+  const value = ref(0);
+
+  return { value }
+})
+----
+
+[source,vue,title="src/components/MyComponent.vue"]
+----
+<script setup>
+import { useMyStore } from '@/stores/MyStore';
+
+const myStore = useMyStore();
+</script>
+
+<template>
+  {{ myStore.value }}
+  <button @click="myStore.value = myStore.value + 1">Add</button>
+</template>
+----
+
+== Counter
+
 [source,javascript,title="src/stores/counter.js"]
 ----
 import { ref, computed } from 'vue';
@@ -22,12 +52,12 @@ export const useCounterStore = defineStore('counter', () => {
 [source,vue,title="src/components/Counter.vue"]
 ----
 <script setup>
-  import { useCounterStore } from '@/stores/counter';
+import { useCounterStore } from '@/stores/counter';
 
-  const counter = useCounterStore();
+const counter = useCounterStore();
 
-  counter.count++;
-  // counter.$patch({ count: counter.count + 1 });
+counter.count++;
+// counter.$patch({ count: counter.count + 1 });
 </script>
 
 <template>

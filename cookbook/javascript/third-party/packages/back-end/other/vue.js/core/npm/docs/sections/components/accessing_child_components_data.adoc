@@ -1,0 +1,90 @@
+= Get Child Component Data From Parent
+
+[,https://stackademic.com/blog/vue-3-accessing-child-components-data-from-parent-components-65e6a41f768d]
+____
+There are two ways to share data from child to parent component using composition API with script setup.
+
+* `defineExpose()`
+* Emit Event
+____
+
+== `defineExpose()`
+
+[,vue,title="ChildComponent.vue"]
+____
+<script setup>
+</script>
+
+<template>
+</template>
+____
+
+== Custom Events
+
+https://vuejs.org/guide/components/events.html[[docs\]]
+
+https://stackademic.com/blog/vue-3-accessing-child-components-data-from-parent-components-65e6a41f768d
+
+https://learnvue.co/articles/vue-emit-guide
+
+// defineEmits()
+
+// [,vue,title="ChildComponent.vue"]
+// ----
+// <script setup>  
+// import {ref } from "vue";  
+// const value = ref("");  
+// </script>  
+//   
+// <template>  
+//   <input  
+//       type="text"  
+//       v-model="search"  
+//       @keydown="$emit('someEvent', value)" />
+// </template>  
+// ----
+// 
+// Or
+
+[,vue,title="ChildComponent.vue"]
+----
+<script setup>  
+import {ref } from "vue";  
+</script>  
+  
+<template>  
+  <input  
+      type="text"  
+      @keydown="$emit('someEvent', $event.target.value)" />
+</template>  
+----
+
+// [,vue,title="ParentComponent.vue"]
+// ----
+// <script setup>  
+// import { ref } from "vue";
+// import ChildComponent from "./ChildComponent.vue";
+// 
+// const callback = (value) => {
+//   alert(value);
+// };
+// </script>
+// 
+// <template>
+//   <ChildComponent @some-event="callback" />  
+// </template>
+// ----
+
+[,vue,title="ParentComponent.vue"]
+----
+<script setup>  
+import { ref } from "vue";
+import ChildComponent from "./ChildComponent.vue";
+
+const childText = ref('');
+</script>
+
+<template>
+  <ChildComponent @some-event="(value) => childText=value" />  
+</template>
+----

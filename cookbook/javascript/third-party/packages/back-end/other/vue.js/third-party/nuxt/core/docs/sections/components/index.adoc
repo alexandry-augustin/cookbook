@@ -1,5 +1,10 @@
 = Components
 
+[,bash]
+----
+pnpx nuxi@latest add component ComponentName
+----
+
 [,https://nuxt.com/docs/guide/directory-structure/components]
 ____
 By default, only the `~/components` directory is scanned. 

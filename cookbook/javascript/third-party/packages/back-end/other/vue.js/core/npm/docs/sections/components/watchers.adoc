@@ -1,0 +1,110 @@
+= Watchers
+
+https://vuejs.org/guide/essentials/watchers[[docs\]]
+
+== `watch`
+
+Single reactive sources:
+
+[,vue]
+----
+<script setup>
+import { ref, watch } from 'vue';
+
+const count = ref(0);
+watch(count, (newValue, oldValue) => {
+    console.log(`Count changed from ${oldValue} to ${newValue}`);
+});
+</script>
+
+<template>
+    <button v-on:click="count--">-</button> 
+    {{ count }} 
+    <button v-on:click="count++">+</button>
+</template>
+----
+
+Sync state:
+
+[,vue]
+----
+<script setup>
+import { ref, watch } from 'vue';
+
+const count = ref(0);
+const replicate = ref(0);
+
+watch(count, (newValue, oldValue) => {
+    replicate.value = count.value;
+    console.log(`Count changed from ${oldValue} to ${newValue}`);
+});
+watch(replicate, (newValue, oldValue) => {
+    count.value = replicate.value;
+    console.log(`Replicate changed from ${oldValue} to ${newValue}`);
+});
+</script>
+
+<template>
+    <div>
+        <pre>count: </pre>
+        <button v-on:click="count--">-</button> 
+        {{ count }} 
+        <button v-on:click="count++">+</button>
+    </div>
+    <div>
+        <pre>replicate: </pre> 
+        <button v-on:click="replicate--">-</button> 
+        {{ replicate }} 
+        <button v-on:click="replicate++">+</button>
+    </div>
+</template>
+----
+
+Multiple reactive sources:
+
+[,vue]
+----
+<script setup>
+import { ref, watch } from 'vue';
+
+const firstName = ref('');
+const lastName = ref('');
+
+watch([firstName, lastName], ([newFirstName, newLastName], [oldFirstName, oldLastName]) => {
+    console.log(`Name changed from ${oldFirstName} ${oldLastName} to ${newFirstName} ${newLastName}`);
+});
+</script>
+
+<template>
+    <input v-model="firstName"></input>
+    <input v-model="lastName"></input>
+</template>
+----
+
+== `watchEffect`
+
+watchEffect automatically tracks dependencies used in its callback function.
+
+----
+
+----
+[,vue]
+----
+<script setup>
+import { ref, watchEffect } from 'vue';
+
+const count = ref(0);
+const doubled = ref(0);
+
+watchEffect(() => {
+    doubled.value = count.value * 2;
+    console.log(`Doubled: ${doubled.value}`);
+});
+</script>
+
+<template>
+    <button v-on:click="count--">-</button> 
+    {{ count }} 
+    <button v-on:click="count++">+</button>
+</template>
+----

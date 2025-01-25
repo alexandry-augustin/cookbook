@@ -1,5 +1,10 @@
 = Pages
 
+[,bash]
+----
+pnpx nuxi@latest add page page-name
+----
+
 [,https://nuxt.com/docs/guide/directory-structure/app]
 ____
 `pages/` directory is optional.
