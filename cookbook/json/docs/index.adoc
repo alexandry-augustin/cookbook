@@ -1,0 +1,30 @@
+= JavaScript Object Notation (JSON)
+:toc: left
+// :url-website: 
+// :url-docs: 
+// :url-repo: 
+// :url-wiki: 
+
+// {url-website}[[website\]]
+// {url-docs}[[docs\]]
+// {url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+
+== Data Types
+
+=== Dates and Time
+
+> "JSON Dates are not dates -- they are Strings" 
+-- https://weblog.west-wind.com/posts/2014/jan/06/javascript-json-date-parsing-and-real-dates#json-dates-are-not-dates--they-are-strings
+
+> "JSON itself does not specify how dates should be represented, but JavaScript does. You should use the format emitted by Date's toJSON method [...] ISO 8601" 
+-- https://stackoverflow.com/questions/10286204/what-is-the-right-json-date-format
+
+== Comments
+
+> "The JSON is data only, and if you include a comment, then it will be data too." 
+-- https://stackoverflow.com/questions/244777/can-comments-be-used-in-json
+
+== `.bson`
+
+[B]inary J[SON]

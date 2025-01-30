@@ -1,0 +1,12 @@
+= Rust
+:toc: left
+:url-website: https://www.rust-lang.org/
+:url-docs: https://www.rust-lang.org/learn
+:url-repo: https://github.com/rust-lang/rust
+:url-wiki: https://en.wikipedia.org/wiki/Rust_(programming_language)
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+

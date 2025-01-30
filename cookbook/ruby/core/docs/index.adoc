@@ -17,12 +17,25 @@ Install latest stable CRuby packages including RDoc, Psych, JSON, BigDecimal and
 sudo dnf install ruby
 ----
 
+// [,bash]
+// ----
+// sudo apt-get install ruby-full
+// ----
+
 [,bash]
 ----
 sudo dnf install ruby-devel
 ----
 
 == Usage
+
+[,bash,title="build.sh"]
+----
+#!/usr/bin/ruby -w
+# This is a single line comment.
+
+ruby yourfile.rb
+----
 
 [,bash]
 ----

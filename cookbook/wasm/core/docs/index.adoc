@@ -1,4 +1,5 @@
 =  WebAssembly (Wasm)
+:toc: left
 :url-wiki: https://en.wikipedia.org/wiki/WebAssembly
 :url-website: https://webassembly.org/
 

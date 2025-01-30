@@ -1,4 +1,5 @@
 = Google Apps Script
+:toc: left
 :url-wiki: https://en.wikipedia.org/wiki/Google_Apps_Script
 :url-webpage: https://www.google.com/script/start/
 :url-home: https://script.google.com/home/start?pli=1

@@ -1,0 +1,7 @@
+= Datastar
+:toc: left
+:url-website: https://data-star.dev/guide/getting_started
+:url-repo: https://github.com/delaneyj/datastar/tree/main
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]

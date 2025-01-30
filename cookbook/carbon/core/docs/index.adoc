@@ -1,0 +1,6 @@
+= Carbon
+:toc: left
+:wiki-url: https://en.wikipedia.org/wiki/Carbon_(programming_language)
+:repo-url: https://github.com/carbon-language/carbon-lang
+
+{wiki-url}[wiki] {repo-url}[github]

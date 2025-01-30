@@ -1,0 +1,12 @@
+= Go
+:toc: left
+:url-website: https://go.dev/
+:url-docs: https://go.dev/doc/
+:url-repo: https://github.com/golang/go
+:url-wiki: https://en.wikipedia.org/wiki/Go_(programming_language)
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+

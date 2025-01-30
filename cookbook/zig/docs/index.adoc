@@ -1,0 +1,12 @@
+= Zig
+:toc: left
+:url-website: https://ziglang.org/
+:url-docs: https://ziglang.org/learn/
+:url-repo: https://github.com/ziglang/zig
+:url-wiki: https://en.wikipedia.org/wiki/Zig_(programming_language)
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+

@@ -1,0 +1,12 @@
+= Brainfuck
+:toc: left
+:url-website: https://brainfuck.org/
+// :url-docs: 
+// :url-repo: 
+:url-wiki: https://en.wikipedia.org/wiki/Brainfuck
+
+{url-website}[[website\]]
+// {url-docs}[[docs\]]
+// {url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+

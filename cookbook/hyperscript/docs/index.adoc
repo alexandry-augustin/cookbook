@@ -1,0 +1,12 @@
+= _hyperscript
+:toc: left
+:url-website: https://hyperscript.org/
+:url-docs: https://hyperscript.org/docs/
+:url-repo: https://github.com/bigskysoftware/_hyperscript
+// :url-wiki: 
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+
