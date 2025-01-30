@@ -26,4 +26,21 @@ app.use(pinia); // <--- New
 app.mount('#app');
 ----
 
+== `storeToRefs`
+
+[source,javascript,title="main.js"]
+----
+<script setup>
+  import { storeToRefs } from 'pinia';
+  import { useMyStore } from './stores/MyStore.js';
+
+  const myStore = useMyStore();
+  const { n } = storeToRefs(myStore);
+</script>
+
+<template>
+    {{ n }}
+</template>
+----
+
 include::./sections/examples.adoc[leveloffset=+1]

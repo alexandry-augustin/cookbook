@@ -1,0 +1,12 @@
+= Ember.js
+:toc: left
+:url-website: https://emberjs.com/
+// :url-docs: 
+:url-repo: https://github.com/emberjs/ember.js
+:url-wiki: https://en.m.wikipedia.org/wiki/Ember.js
+
+{url-website}[[website\]]
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+

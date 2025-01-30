@@ -1,0 +1,18 @@
+= Rails
+:toc: left
+:url-website: https://rubyonrails.org/
+:url-docs: https://rubyonrails.org/docs
+:url-repo: https://github.com/rails/rails
+:url-wiki: https://en.wikipedia.org/wiki/Ruby_on_Rails
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+
+== Installation
+
+[,bash]
+----
+gem install rails
+----

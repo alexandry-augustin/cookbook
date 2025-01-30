@@ -1,0 +1,30 @@
+= Ruby
+:toc: left
+:url-website: https://www.ruby-lang.org/en/
+:url-docs: https://www.ruby-lang.org/en/documentation/
+:url-wiki: https://en.wikipedia.org/wiki/Ruby_(programming_language)
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-wiki}[[wiki\]]
+
+== Installation
+
+Install latest stable CRuby packages including RDoc, Psych, JSON, BigDecimal and IO/Console:
+
+[,bash]
+----
+sudo dnf install ruby
+----
+
+[,bash]
+----
+sudo dnf install ruby-devel
+----
+
+== Usage
+
+[,bash]
+----
+ruby filename.rb
+----
