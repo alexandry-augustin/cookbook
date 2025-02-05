@@ -125,6 +125,8 @@ include::./sections/error-page.adoc[leveloffset=+1]
 
 include::./sections/components/index.adoc[leveloffset=+1]
 
+include::./sections/styling/index.adoc[leveloffset=+1]
+
 include::./sections/composables.adoc[leveloffset=+1]
 
 include::./sections/routing.adoc[leveloffset=+1]

@@ -1,0 +1,26 @@
+= browser-sync
+:toc: left
+:url-website: https://browsersync.io/
+:url-docs: 
+:url-repo: https://github.com/Browsersync/browser-sync
+:url-wiki: 
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install browser-sync
+----
+
+== Usage
+
+[,bash]
+----
+browser-sync start --server --files "css/*.css"
+----
+

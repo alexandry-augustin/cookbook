@@ -1,0 +1,11 @@
+= Numbers
+:toc: left
+// :url-website: 
+:url-docs: https://react-spectrum.adobe.com/internationalized/number/index.html
+// :url-repo: 
+
+// {url-website}[[website\]]
+{url-docs}[[docs\]]
+// {url-repo}[[repo\]]
+
+Implements international number formatting and parsing, including support for multiple numbering systems, currencies, percentages, units, and other formatting options.

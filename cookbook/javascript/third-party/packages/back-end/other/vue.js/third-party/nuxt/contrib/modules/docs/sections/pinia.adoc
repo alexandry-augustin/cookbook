@@ -10,6 +10,14 @@ pnpx nuxi@latest module add pinia
 # npm install pinia @pinia/nuxt
 ----
 
+[,javascript,title="nuxt.config.{ts,js}"]
+----
+export default defineNuxtConfig({
+  modules: [
+    '@pinia/nuxt', 
+  ],
+})
+----
 == Minimal Example
 
 [source,javascript,title="src/stores/MyStore.js"]

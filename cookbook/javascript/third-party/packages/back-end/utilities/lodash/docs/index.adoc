@@ -1,0 +1,22 @@
+= Lodash
+:toc: left
+:url-website: https://lodash.com/
+:url-docs: https://lodash.com/docs/4.17.15
+:url-repo: https://github.com/lodash/lodash
+:url-wiki: https://en.wikipedia.org/wiki/Lodash
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+
+> "Lodash is a fork of Underscore.js." 
+-- https://en.wikipedia.org/wiki/Lodash
+
+== Installation
+
+[,bash]
+----
+pnpm install --save lodash
+----
+

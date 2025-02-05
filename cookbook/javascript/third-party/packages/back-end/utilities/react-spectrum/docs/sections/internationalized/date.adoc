@@ -1,0 +1,17 @@
+= Dates and Times
+:toc: left
+// :url-website: 
+// :url-docs: 
+:url-repo: https://github.com/adobe/react-spectrum/tree/main/packages/@internationalized/date
+
+// {url-website}[[website\]]
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+Provides utilities for representing and manipulating dates and times in a locale-aware manner across calendar systems, time zones, and more.
+
+[,bash]
+----
+pnpm install @internationalized/date
+----
+

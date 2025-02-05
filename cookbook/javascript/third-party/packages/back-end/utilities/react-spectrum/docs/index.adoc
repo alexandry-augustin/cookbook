@@ -1,0 +1,13 @@
+= react-spectrum
+:toc: left
+:url-website: https://react-spectrum.adobe.com/
+// :url-docs: 
+:url-repo: https://github.com/adobe/react-spectrum
+// :url-wiki: 
+
+{url-website}[[website\]]
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+
+include::./sections/internationalized/index.adoc[leveloffset=+1]

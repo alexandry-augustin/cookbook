@@ -1,0 +1,16 @@
+= sharp
+:toc: left
+:url-website: https://sharp.pixelplumbing.com/
+// :url-docs: 
+:url-repo: https://github.com/lovell/sharp
+
+{url-website}[[website\]]
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install sharp --save
+----

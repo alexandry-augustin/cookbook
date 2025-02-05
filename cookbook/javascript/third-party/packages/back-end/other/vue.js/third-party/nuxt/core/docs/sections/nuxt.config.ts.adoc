@@ -63,16 +63,3 @@ export default defineNuxtConfig({
 ----
 
 include::./favicon.adoc[leveloffset=+1]
-
-== Server Port
-
-Dev
-
-[,json,title="nuxt.config.ts"]
-----
-export default defineNuxtConfig({
-  devServer: {
-    port: 3000
-  }, 
-})
-----

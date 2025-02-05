@@ -115,6 +115,26 @@ https://github.com/nuxt/nuxt/issues/190[support the use of slot in layout files 
 </template>
 ----
 
+[NOTE]
+====
+Not working with the below ?
+
+[,vue,title="pages/index.vue"]
+----
+<script setup lang="ts">
+definePageMeta({
+  layout: 'other_template'
+});
+</script>
+
+<template>
+  <NuxtLayout name="custom">
+    <!-- ... -->
+  </NuxtLayout>
+</template>
+----
+====
+
 [,vue,title="pages/index.vue"]
 ----
 <template>

@@ -2,7 +2,7 @@
 
 == Using Local Data
 
-[source,javascript]
+[source,vue]
 ----
 <script setup>
 import { ref } from 'vue';

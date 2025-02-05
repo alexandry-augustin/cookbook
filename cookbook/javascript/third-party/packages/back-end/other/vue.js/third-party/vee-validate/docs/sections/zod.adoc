@@ -33,7 +33,7 @@ const { value, errorMessage } = useField('email', fieldSchema);
 </template>
 ----
 
-=== Form-Level Validation
+=== Form-level Validation
 
 [,vue]
 ----

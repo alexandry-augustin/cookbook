@@ -1,0 +1,13 @@
+= Internationalized
+:toc: left
+:url-website: https://react-spectrum.adobe.com/internationalized/index.html
+:url-docs: https://react-spectrum.adobe.com/internationalized/index.html
+// :url-repo: 
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+// {url-repo}[[repo\]]
+
+include::./date.adoc[leveloffset=+1]
+
+include::./numbers.adoc[leveloffset=+1]

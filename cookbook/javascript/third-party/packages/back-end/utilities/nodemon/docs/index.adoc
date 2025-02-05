@@ -1,0 +1,18 @@
+= nodemon
+:toc: left
+// :url-website: 
+// :url-docs: 
+// :url-repo: 
+// :url-wiki: 
+
+// {url-website}[[website\]]
+// {url-docs}[[docs\]]
+// {url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install nodemon 
+----

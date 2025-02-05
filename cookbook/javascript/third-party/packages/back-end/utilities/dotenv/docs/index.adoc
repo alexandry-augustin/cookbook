@@ -1,0 +1,38 @@
+= dotenv
+:toc: left
+:url-repo: https://github.com/motdotla/dotenv
+
+{url-repo}[[repo\]]
+
+== Installation
+
+[source,bash]
+----
+pnpm install --save-dev dotenv
+----
+
+== Usage
+
+[source,javascript]
+----
+import dotenv from 'dotenv';
+----
+
+[source,javascript]
+----
+require('dotenv').config({
+    // path: `${__dirname}/.env` // default
+    // path: `${__dirname}/.env.production`
+    // path: `${__dirname}/.env.development`
+});
+
+if(require.main === module)
+{
+    console.log(process.env.MY_VAR);
+}
+----
+
+[source,title=".env"]
+----
+MY_VAR='MY_VALUE'
+----

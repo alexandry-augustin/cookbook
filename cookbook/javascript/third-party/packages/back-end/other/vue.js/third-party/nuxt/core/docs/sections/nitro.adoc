@@ -4,3 +4,16 @@
 
 {url-website}[[website\]]
 {url-repo}[[repo\]]
+
+== Port
+
+Dev
+
+[,json,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  devServer: {
+    port: 3000
+  }, 
+})
+----
