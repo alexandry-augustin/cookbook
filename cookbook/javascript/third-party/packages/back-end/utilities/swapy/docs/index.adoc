@@ -1,0 +1,10 @@
+= Swapy
+:toc: left
+:url-website: https://swapy.tahazsh.com/
+:url-docs: https://swapy.tahazsh.com/docs/installation/
+:url-repo: https://github.com/TahaSh/swapy
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+

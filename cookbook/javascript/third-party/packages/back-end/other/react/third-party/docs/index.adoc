@@ -12,3 +12,9 @@ include::./sections/react-router-dom.adoc[leveloffset=+1]
 include::./sections/bootstrap.adoc[leveloffset=+1]
 
 include::./sections/redux.adoc[leveloffset=+1]
+
+include::./sections/dnd-kit.adoc[leveloffset=+1]
+
+include::./sections/dockview.adoc[leveloffset=+1]
+
+include::./sections/react-mosaic.adoc[leveloffset=+1]
