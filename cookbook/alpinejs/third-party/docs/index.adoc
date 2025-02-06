@@ -1,3 +1,4 @@
-= Third-party
+= Alpine.js: Third-party
+:toc: left
 
 include::./plugins/index.adoc[leveloffset=+1]

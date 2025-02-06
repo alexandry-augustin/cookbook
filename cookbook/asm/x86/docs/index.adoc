@@ -1,0 +1,11 @@
+= Assembly (x86)
+:toc: left
+
+....
+registers:
+	esp -- or the Stack Pointer register which always points to the “top” of the Stack, and
+	ebp -- or the Base Pointer register which points to the  start (or base) of the current Stack Frame.
+
+x86 Stack grows downwards in memory -- i.e. the “top” of the stack is stored in a lower memory address than the “bottom”.  Consequently, the address stored in ebp is higher than the address in esp, and so local variables within the stack frame have negative offsets from ebp (and would have a positive offset from esp).
+....
+

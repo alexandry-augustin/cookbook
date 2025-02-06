@@ -1,23 +1,26 @@
 = GNU Octave
+:toc: left
 :wiki-url: https://en.wikipedia.org/wiki/GNU_Octave
 :website-url: https://octave.org/
 :repo-url: https://hg.savannah.gnu.org/hgweb/octave
 
-{wiki-url}[wiki] {website-url}[website] {repo-url}[repo]
+{wiki-url}[[wiki\]]
+{website-url}[[website\]]
+{repo-url}[[repo\]]
 
 == Installation
 
-[listing,bash]
-....
+[,bash]
+----
 sudo dnf install octave
-....
+----
 
 == Usage
 
-[listing,bash]
-....
+[,bash]
+----
 octave [options] file.m
-....
+----
 
 === Flags
 
@@ -26,8 +29,8 @@ octave [options] file.m
 
 == REPL
 
-[listing,matlab]
-....
+[,matlab]
+----
 help exp
 run file.m	type "file"
-....
+----

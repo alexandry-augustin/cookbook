@@ -1,0 +1,23 @@
+= Lua
+:toc: left
+
+== Installation
+
+[,bash]
+----
+sudo dnf install lua-devel # needed when using luarocks
+----
+
+== REPL
+
+[,bash]
+----
+lua
+----
+
+== Run
+
+[,bash]
+----
+lua filename.lua
+----

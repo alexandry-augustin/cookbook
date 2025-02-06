@@ -1,0 +1,9 @@
+= Closure
+:toc: left
+
+== Usage
+
+[,bash]
+----
+java -cp clojure.jar clojure.main file.clj
+----
