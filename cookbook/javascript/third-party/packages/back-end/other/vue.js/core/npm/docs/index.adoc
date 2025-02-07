@@ -36,4 +36,6 @@ include::./sections/api/index.adoc[leveloffset=+1]
 
 include::./sections/directives/index.adoc[leveloffset=+1]
 
+include::./sections/ssr/index.adoc[leveloffset=+1]
+
 include::./sections/examples/index.adoc[leveloffset=+1]

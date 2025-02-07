@@ -7,3 +7,6 @@
 {url-website}[[website\]]
 {url-repo}[[repo\]]
 {url-wiki}[[wiki\]]
+
+> "The React Framework for Production" 
+-- https://nextjs.org/

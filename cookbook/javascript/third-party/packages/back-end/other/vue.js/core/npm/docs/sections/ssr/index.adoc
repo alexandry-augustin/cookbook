@@ -1,0 +1,7 @@
+= Server-side Rendering (SSR)
+:toc: left
+:url-docs: https://vuejs.org/guide/scaling-up/ssr.html
+
+{url-docs}[[docs\]]
+
+
