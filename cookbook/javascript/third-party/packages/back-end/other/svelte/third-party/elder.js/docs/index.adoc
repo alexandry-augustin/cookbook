@@ -1,4 +1,5 @@
 = Elder.js
+:toc: left
 :url-repo: https://github.com/Elderjs/elderjs
 
 {url-repo}[[repo\]]

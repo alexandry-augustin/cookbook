@@ -1,6 +1,4 @@
-= Core {cpp} & STL Cookbook
-:author: Alexandry Augustin
-// :sectnums:
+= Core {cpp} & STL
 :toc: left
 :cpp: C++
 

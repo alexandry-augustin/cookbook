@@ -7,7 +7,3 @@
 {url-website}[[website\]]
 {url-wiki}[[wiki\]]
 {url-repo}[[repo\]]
-
-include::./sections/sveltekit.adoc[leveloffset=+1]
-
-include::./sections/elderjs.adoc[leveloffset=+1]

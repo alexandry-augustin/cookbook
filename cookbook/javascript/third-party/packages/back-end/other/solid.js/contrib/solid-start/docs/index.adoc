@@ -1,0 +1,12 @@
+= SolidStart
+:toc: left
+:url-website: https://start.solidjs.com/
+:url-docs: https://docs.solidjs.com/solid-start
+:url-repo: https://github.com/solidjs/solid-start
+// :url-wiki: 
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+
