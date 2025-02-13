@@ -1,0 +1,10 @@
+= Nuxt Icon
+:toc: left
+:url-website: https://nuxt.com/modules/icon
+// :url-docs: 
+:url-repo: https://github.com/nuxt/icon
+
+{url-website}[[website\]]
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]
+

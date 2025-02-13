@@ -1,0 +1,23 @@
+= Hydration Mismatch
+:toc: left
+
+== Examples
+
+https://github.com/nuxt/nuxt/issues/15576[Hydration text content mismatch  #15576]
+
+----
+<script setup lang="ts">
+const randomNumber: number = Math.floor(Math.random() * 1000000000);
+</script>
+
+<template>
+  <p>{{ randomNumber }}</p>
+</template>
+----
+
+[,https://github.com/nuxt/nuxt/issues/15576#issuecomment-1397386251]
+____
+Yes, this is _expected_ because you do not transfer state from server to client. Thus, generation will happen on both sides and create a mismatch.
+
+Instead, create your id's on the server and pass them, e.g. by using `useState`.
+____

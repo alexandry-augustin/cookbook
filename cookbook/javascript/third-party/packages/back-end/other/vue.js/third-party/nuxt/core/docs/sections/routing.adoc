@@ -6,16 +6,28 @@
 [,]
 ----
 <NuxtLink to="/path"></NuxtLink>
+<NuxtLink :to="{ path: '/path', query: { paramName: 'value' } }"></NuxtLink>
 ----
 
 Button as Link https://stackoverflow.com/questions/45638239/enclosing-a-router-link-tag-in-a-button-in-vuejs[[ref\]]: 
 
 [source,html]
 ----
-<button @click="$router.push('about')">Click to Navigate</button>
+<button @click="$router.push('path')"></button>
+<button @click="$router.push('{ path, query: { paramName: 'value' } }')"></button>
 ----
 
 == ???
+
+// "fullPath": "/accounts/?tab=login", 
+// "hash": "", 
+// "query": { "tab": "login" }, 
+// "name": "accounts", 
+// "path": "/accounts/", 
+// "params": {}, 
+// "matched": 
+// "meta"
+// "href"
 
 [,vue,title="pages/index.vue"]
 ----

@@ -1,5 +1,13 @@
 = Route Middleware
 
+[,]
+----
+navigateTo({ 
+  path: '/path',
+  query: { paramName: 'value' },
+});
+----
+
 [,https://medium.com/@llama_/understanding-nuxt-3s-route-middlewares-c314e48eb508]
 ____
 route middlewares [...] allow you to perform operations before switching from one route to another. 

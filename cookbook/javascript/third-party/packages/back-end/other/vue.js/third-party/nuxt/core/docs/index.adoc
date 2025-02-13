@@ -149,6 +149,8 @@ include::./sections/utils.adoc[leveloffset=+1]
 
 include::./sections/nitro.adoc[leveloffset=+1]
 
+include::./sections/ssr.adoc[leveloffset=+1]
+
 include::./sections/api/index.adoc[leveloffset=+1]
 
 include::./sections/cors.adoc[leveloffset=+1]

@@ -1,0 +1,11 @@
+= Server-side Rendering
+:url-docs: https://nuxt.com/docs/guide/concepts/rendering
+
+{url-docs}[[docs\]]
+
+[,javascript,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  ssr: false
+});
+----

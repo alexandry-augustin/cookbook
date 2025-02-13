@@ -1,0 +1,33 @@
+= Code Formatters
+:toc: left
+
+[,https://github.com/life4/awesome-python-code-formatters]
+____
+autopep8:: format Python code to conform to the PEP 8 style guide.
+black:: uncompromising Python code formatter.
+ruff:: fast Rust-powered linter and code formatter, for Python. The formatter is 100% compatible with Black.
+yapf:: yet another Python code formatter from Google.
+____
+
+== autopep8
+
+https://github.com/hhatto/autopep8
+
+== Black
+
+https://github.com/psf/black
+https://black.readthedocs.io/en/stable/
+
+== ruff
+
+https://github.com/astral-sh/ruff
+https://docs.astral.sh/ruff/
+
+== yapf
+
+https://github.com/google/yapf
+
+== PEP 8 Style Guide
+
+
+

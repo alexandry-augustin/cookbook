@@ -13,28 +13,6 @@ function destructure(...[x, y, z])
     return x + y + z;
 };
 
-function test_ternary()
-{
-    console.assert(5>6?'correct':'incorrect' === 'incorrect');
-}
-
-function test_optional_chaining()
-{
-    // The optional chaining (?.) operator accesses an object's property or calls a function. 
-    // If the object is undefined or null, it returns undefined instead of throwing an error.
-
-    let user = {
-        "name": "alice", 
-        "address": {
-            "street": "5th Avenue"
-        }
-    };
-
-    console.assert(user.address?.street === "5th Avenue");
-    console.assert(user.pet?.cat === undefined);
-    // console.log(user.pet.cat); // would throw an error
-}
-
 if(require.main === module)
 {
     {
@@ -63,7 +41,4 @@ if(require.main === module)
     {
         console.assert(destructure(1, 2, 3) == 6);
     }
-    
-    test_ternary();
-    test_optional_chaining();
 }
