@@ -1,0 +1,16 @@
+= ruff
+:toc: left
+// :url-website: 
+:url-docs: https://docs.astral.sh/ruff/
+:url-repo: https://github.com/astral-sh/ruff
+
+// {url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+Language: Rust
+
+* linter and code formatter
+* 100% compatible with Black
+
+== Installation

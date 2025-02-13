@@ -1,0 +1,37 @@
+= Black
+:toc: left
+// :url-website: 
+:url-docs: https://black.readthedocs.io/en/stable/
+:url-repo: https://github.com/psf/black
+
+// {url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+Language: Python
+
+== Installation
+
+[,bash]
+----
+python -m pip install black
+----
+
+== Usage
+
+[,bash]
+----
+black [OPTIONS] SOURCE_FILE_OR_DIRECTORY [SOURCE_FILE_OR_DIRECTORY, ...]
+----
+
+[NOTE]
+====
+Can be run as a package if running it as a script doesn't work:
+
+[,bash]
+----
+python -m black [OPTIONS] SOURCE_FILE_OR_DIRECTORY [SOURCE_FILE_OR_DIRECTORY, ...]
+----
+====
+
+`--diff`:: {empty}
