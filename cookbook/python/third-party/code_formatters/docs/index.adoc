@@ -1,7 +1,0 @@
-= Code Formatters
-:toc: left
-
-== PEP 8 Style Guide
-
-
-

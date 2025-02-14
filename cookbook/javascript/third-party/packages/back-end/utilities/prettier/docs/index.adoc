@@ -1,0 +1,13 @@
+= Prettier
+:toc: left
+:url-website: https://prettier.io/
+:url-docs: https://prettier.io/docs/
+:url-repo: https://github.com/prettier/prettier
+// :url-wiki: 
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+
+Code formatter

@@ -13,4 +13,9 @@ Language: Rust
 * linter and code formatter
 * 100% compatible with Black
 
+https://pragmaticdatadev.substack.com/p/replacing-black-flake8-isort-and
+
+> "Ruff can be used to replace black [for formatting], `isort` [for `import` sorting], `flake8` [for linting], and `mypy` [for type checking]"
+-- https://pragmaticdatadev.substack.com/p/replacing-black-flake8-isort-and
+
 == Installation

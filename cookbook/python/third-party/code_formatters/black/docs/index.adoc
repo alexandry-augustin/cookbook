@@ -10,6 +10,12 @@
 
 Language: Python
 
+> "Black is a PEP 8 compliant opinionated formatter."
+-- https://pypi.org/project/black/
+
+> "Used by [...] Django [...]"
+-- https://pypi.org/project/black/
+
 == Installation
 
 [,bash]

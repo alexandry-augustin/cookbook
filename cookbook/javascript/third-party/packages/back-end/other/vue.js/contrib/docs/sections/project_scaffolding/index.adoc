@@ -6,13 +6,4 @@ include::./create_vue.adoc[leveloffset=+1]
 
 == Vite
 
-https://vitejs.dev/guide/
-
-[source,bash]
-----
-pnpm create vite-app PRJ_NAME
-
-cd PRJ_NAME
-pnpm install
-pnpm run dev
-----
+See separate doc

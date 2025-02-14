@@ -7,6 +7,19 @@
 {url-website}[[website\]]
 {url-repo}[[repo\]]
 
+== Project
+
+https://vitejs.dev/guide/
+
+[source,bash]
+----
+pnpm create vite-app PATH_TO_PRJ
+
+cd PATH_TO_PRJ
+pnpm install
+pnpm run dev
+----
+
 == Aliases
 
 `@` path alias to map to the project `src` directory in `vite.config.js`.
