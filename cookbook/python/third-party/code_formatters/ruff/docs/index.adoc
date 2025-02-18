@@ -19,3 +19,35 @@ https://pragmaticdatadev.substack.com/p/replacing-black-flake8-isort-and
 -- https://pragmaticdatadev.substack.com/p/replacing-black-flake8-isort-and
 
 == Installation
+
+[,bash]
+----
+# Install Ruff globally
+uv tool install ruff@latest
+
+# Or add Ruff to your project.
+uv add --dev ruff
+
+# With pip.
+pip install ruff
+
+# With pipx.
+pipx install ruff
+----
+
+== Usage
+
+Format all files in the current directory: 
+
+[,bash]
+----
+ruff format [FILENAME]
+----
+
+Lint all files in the current directory: 
+
+[,bash]
+----
+ruff check
+----
+

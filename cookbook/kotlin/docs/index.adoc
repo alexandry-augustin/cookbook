@@ -1,0 +1,13 @@
+= Kotlin
+:toc: left
+:url-website: https://kotlinlang.org/
+:url-docs: https://kotlinlang.org/docs/home.html
+:url-repo: https://github.com/JetBrains/kotlin
+:url-wiki: https://en.wikipedia.org/wiki/Kotlin_(programming_language)
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+
+https://news.ycombinator.com/item?id=2419879[Using Kotlin without IntelliJ tooling is a pain.]
