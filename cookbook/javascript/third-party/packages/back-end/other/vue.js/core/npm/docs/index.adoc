@@ -24,6 +24,8 @@ include::./sections/forms/index.adoc[leveloffset=+1]
 
 include::./sections/components/index.adoc[leveloffset=+1]
 
+include::./sections/built-in_components/index.adoc[leveloffset=+1]
+
 include::./sections/composable/index.adoc[leveloffset=+1]
 
 include::./sections/lifecycle_hooks/index.adoc[leveloffset=+1]

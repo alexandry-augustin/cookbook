@@ -1,0 +1,33 @@
+= VueUse
+:toc: left
+:url-website: https://vueuse.org
+:url-docs: https://vueuse.org/guide/
+:url-repo: https://github.com/vueuse/vueuse
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[source,bash]
+----
+pnpm install @vueuse/core
+----
+
+== `useBreakpoints`
+
+[,vue,title="MyComponent.vue"]
+----
+<script setup>
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
+
+const breakpoints = useBreakpoints(breakpointsTailwind);
+
+const isDesktop = breakpoints.greater('md');
+</script>
+
+<template>
+  {{ isDesktop }}
+</template>
+----

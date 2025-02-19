@@ -33,6 +33,4 @@ include::./sections/typescript.adoc[leveloffset=+1]
 * Ionic
 * Nativescript
 
-include::./sections/vueuse/index.adoc[leveloffset=+1]
-
 include::./sections/vapor/index.adoc[leveloffset=+1]
