@@ -10,8 +10,14 @@ COMPONENT_NAME=$1
 # Main
 
 mkdir -p $COMPONENT_NAME/modules/ROOT/pages
-echo "** xref:index.adoc[]" > $COMPONENT_NAME/modules/ROOT/nav.adoc
+echo "* xref:index.adoc[]" > $COMPONENT_NAME/modules/ROOT/nav.adoc
 echo "= Home" > $COMPONENT_NAME/modules/ROOT/pages/index.adoc
+
+echo "name: $COMPONENT_NAME" >> $COMPONENT_NAME/antora.yml
+echo "version: ~"  >> $COMPONENT_NAME/antora.yml
+echo "title: $COMPONENT_NAME"  >> $COMPONENT_NAME/antora.yml
+echo "nav:"  >> $COMPONENT_NAME/antora.yml
+echo "- modules/ROOT/nav.adoc"  >> $COMPONENT_NAME/antora.yml
 
 # Git
 

@@ -17,17 +17,17 @@ pnpm install @vueuse/core
 
 == `useBreakpoints`
 
+https://vueuse.org/core/useBreakpoints/[[docs\]]
+
 [,vue,title="MyComponent.vue"]
 ----
 <script setup>
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
 
 const breakpoints = useBreakpoints(breakpointsTailwind);
-
-const isDesktop = breakpoints.greater('md');
 </script>
 
 <template>
-  {{ isDesktop }}
+  {{ breakpoints.greater('md') }}
 </template>
 ----
