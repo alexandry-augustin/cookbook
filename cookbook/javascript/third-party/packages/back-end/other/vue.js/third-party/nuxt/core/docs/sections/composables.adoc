@@ -17,3 +17,60 @@ export default function () {
   return useState('foo', () => 'bar')
 }
 ----
+
+== Sub-directory
+
+https://nuxt.com/docs/guide/directory-structure/composables#how-files-are-scanned[[docs\]]
+
+[,https://nuxt.com/docs/guide/directory-structure/composables]
+____
+Nuxt only scans files at the top level of the `composables/` directory [...]
+____
+
+....
+./
+├── composables/
+│   ├── ...
+│   ├── index.ts          // scanned
+│   ├── useFct.ts         // scanned
+│   └── subdir/
+│       ├── ...
+│       └── useFct.ts     // not scanned
+├── pages/
+│   └── index.vue
+├── ...
+....
+
+[,https://nuxt.com/docs/guide/directory-structure/composables]
+____
+To get auto imports working for nested modules, you could either 
+re-export them (recommended) or 
+configure the scanner to include nested directories
+____
+
+=== Re-export
+
+[,javascript,title="composables/index.vue"]
+----
+export { useFct } from './subdir/useFct.ts';
+----
+
+=== Configure Scanner
+
+Add sub-directory to scanner:
+
+[,json,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  imports: {
+    dirs: [
+      // Scan top-level modules
+      'composables',
+      // ... or scan modules nested one level deep with a specific name and file extension
+      'composables/*/index.{ts,js,mjs,mts}',
+      // ... or scan all modules within given directory
+      'composables/**'
+    ]
+  }
+})
+----

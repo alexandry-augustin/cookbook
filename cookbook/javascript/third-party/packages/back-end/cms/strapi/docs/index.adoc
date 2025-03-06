@@ -10,7 +10,7 @@
 
 https://forum.strapi.io/t/nuxt-frontend-with-django-rest-framework-backend-and-strapi-for-cms/25959/4[Nuxt frontend with Django Rest Framework backend and Strapi for CMS]
 
-Supported databases
+Supported databases:
 
 * MySQL
 * MariaDB

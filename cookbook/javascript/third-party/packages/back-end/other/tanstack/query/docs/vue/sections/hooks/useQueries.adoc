@@ -110,15 +110,20 @@ const results = useQueries(params);
 </script>
 
 <template>
-  <div v-if="!results.pending">
+
+  <template v-if="results.pending">
+    Loading...
+  </template>
+  <template v-else>
     {{ results.data }}
-  </div>
+  </template>
+
 </template>
 ----
 
 [quote,https://tanstack.com/query/latest/docs/framework/vue/reference/useQueries]
 ____
-In the above example, `combinedQueries` will be an object with a `data` and a `pending` property. 
+In the above example, [`results`] will be an object with a `data` and a `pending` property. 
 Note that all other properties of the Query results will be lost.
 ____
 

@@ -38,6 +38,8 @@ NOTE: Axios returns a promise.
 
 == `enabled`
 
+Disable the query from automatically running if `false`.
+
 
 == `networkMode`
 

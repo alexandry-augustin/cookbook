@@ -21,3 +21,18 @@ pnpm install zod
 ----
 import { z } from 'zod';
 ----
+
+== `preprocess()`
+
+https://zodjs.netlify.app/guide/preprocess[[docs\]]
+
+== `coerce`
+
+[,javascript]
+----
+z.coerce.string(); // String(input)
+z.coerce.number(); // Number(input)
+z.coerce.boolean(); // Boolean(input)
+z.coerce.bigint(); // BigInt(input)
+z.coerce.date(); // new Date(input)
+----
