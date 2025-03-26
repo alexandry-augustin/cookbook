@@ -1,21 +1,21 @@
-function test_optional_chaining()
+function test_double_bang()
 {
-    // The optional chaining (?.) operator accesses an object's property or calls a function. 
-    // If the object is undefined or null, it returns undefined instead of throwing an error.
+    // https://stackoverflow.com/questions/29312123/how-does-the-double-exclamation-work-in-javascript
 
-    let user = {
-        "name": "alice", 
-        "address": {
-            "street": "5th Avenue"
-        }
-    };
-
-    console.assert(user.address?.street === "5th Avenue");
-    console.assert(user.pet?.cat === undefined);
-    // console.log(user.pet.cat); // would throw an error
+    console.assert(!!false === false);
+    console.assert(!!true === true);
+    console.assert(!!null === false);
+    console.assert(!!undefined === false);
+    console.assert(!!0 === false);
+    console.assert(!!0 === false);
+    console.assert(!!1 === true);
+    console.assert(!!-5 === true);
+    console.assert(!!NaN === false);
+    console.assert(!!'' === false);
+    console.assert(!!'hello' === true);
 }
 
 if(require.main === module)
 {
-    test_optional_chaining();
+    test_double_bang();
 }

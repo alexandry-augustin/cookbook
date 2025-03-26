@@ -14,9 +14,12 @@ https://vitejs.dev/guide/
 [source,bash]
 ----
 pnpm create vite-app PATH_TO_PRJ
-
 cd PATH_TO_PRJ
 pnpm install
+----
+
+[source,bash]
+----
 pnpm run dev
 ----
 

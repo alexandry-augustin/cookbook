@@ -28,3 +28,19 @@
 == `.bson`
 
 [B]inary J[SON]
+
+== Conventions
+
+[,https://stackoverflow.com/questions/9619852/what-is-the-convention-in-json-for-empty-vs-null]
+____
+It is good programming practice to return an empty array `[]` if the expected return type is an array. 
+This makes sure that the receiver of the json can treat the value as an array immediately without having to first check for null. 
+It's the same way with empty objects using open-closed braces `{}`.
+
+`Strings`, `Booleans` and `integers` do not have an 'empty' form, so there it is okay to use `null` values.
+
+This is also addressed in Joshua Blochs excellent book "Effective Java". There he describes some very good generic programming practices (often applicable to other programming langages as well). Returning empty collections instead of nulls is one of them.
+
+http://jtechies.blogspot.nl/2012/07/item-43-return-empty-arrays-or.html[Here's a link to that part of his book]
+____
+

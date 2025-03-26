@@ -31,3 +31,7 @@ git init && git commit --allow-empty -m "Initial commit"
 
 ln -s ../../$COMPONENT_NAME/antora.yml .
 ln -s ../../$COMPONENT_NAME/modules/ .
+
+echo "Remember to:"
+echo "    * add '$COMPONENT_NAME' to 'sources' in ./site/playbook.yml"
+echo "    * edit 'title' in ./$COMPONENT_NAME/antora.yml"

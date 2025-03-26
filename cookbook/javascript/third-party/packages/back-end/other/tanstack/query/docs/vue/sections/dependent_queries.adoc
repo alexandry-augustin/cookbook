@@ -3,3 +3,10 @@
 https://tanstack.com/query/latest/docs/framework/react/guides/dependent-queries[[ref\]]
 https://vue-query-next-gen.vercel.app/guide/dependent-queries.html[[ref\]]
 
+[,https://vue-query-next-gen.vercel.app/guide/dependent-queries.html]
+____
+Enabling the `enabled` option is a simple way to indicate a query's readiness to execute.
+____
+
+== Example
+

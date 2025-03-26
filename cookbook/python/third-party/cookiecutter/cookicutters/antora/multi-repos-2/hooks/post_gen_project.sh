@@ -5,6 +5,7 @@
 git init
 git config user.name {{cookiecutter.git_username}}
 git config user.email {{cookiecutter.git_email}}
+# git add *
 
 # Component "{{cookiecutter.component_name}}" repo
 

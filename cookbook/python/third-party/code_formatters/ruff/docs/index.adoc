@@ -20,22 +20,25 @@ https://pragmaticdatadev.substack.com/p/replacing-black-flake8-isort-and
 
 == Installation
 
+Global
+
 [,bash]
 ----
-# Install Ruff globally
 uv tool install ruff@latest
+----
 
-# Or add Ruff to your project.
+Local
+
+[,bash]
+----
 uv add --dev ruff
-
-# With pip.
 pip install ruff
-
-# With pipx.
 pipx install ruff
 ----
 
 == Usage
+
+=== `format`
 
 Format all files in the current directory: 
 
@@ -43,6 +46,19 @@ Format all files in the current directory:
 ----
 ruff format [FILENAME]
 ----
+
+[IMPORTANT]
+====
+The `format` command will overwrite files by default.
+====
+
+`--check`::
+Avoid writing any formatted files back; instead, exit with a non-zero status code if any files would have been modified, and zero otherwise.
+
+`--diff`::
+Avoid writing any formatted files back; instead, exit with a non-zero status code and the difference between the current file and how the formatted file would look like.
+
+=== `check`
 
 Lint all files in the current directory: 
 

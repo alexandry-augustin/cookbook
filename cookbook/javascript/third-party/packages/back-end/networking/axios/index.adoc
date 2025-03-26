@@ -9,10 +9,19 @@
 
 == Installation
 
+=== NPM
+
 [source,bash]
 ----
 pnpm install axios
 ----
+
+[,javascript]
+----
+import axios from 'axios';
+----
+
+=== CDN
 
 [source,html]
 ----

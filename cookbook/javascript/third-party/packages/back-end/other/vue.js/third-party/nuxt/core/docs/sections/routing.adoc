@@ -6,7 +6,13 @@
 [,]
 ----
 <NuxtLink to="/path"></NuxtLink>
-<NuxtLink :to="{ path: '/path', query: { paramName: 'value' } }"></NuxtLink>
+<NuxtLink :to="{ 
+    path: '/path', 
+    query: { 
+        paramName: 'paramValue', 
+        //...
+    } 
+}"></NuxtLink>
 ----
 
 Button as Link https://stackoverflow.com/questions/45638239/enclosing-a-router-link-tag-in-a-button-in-vuejs[[ref\]]: 
@@ -14,7 +20,12 @@ Button as Link https://stackoverflow.com/questions/45638239/enclosing-a-router-l
 [source,html]
 ----
 <button @click="$router.push('path')"></button>
-<button @click="$router.push('{ path, query: { paramName: 'value' } }')"></button>
+<button @click="$router.push('{ 
+    path, 
+    query: { 
+        paramName: 'value' 
+    } 
+}')"></button>
 ----
 
 == ???
@@ -79,5 +90,55 @@ const { id } = useRoute().params;
 
 <template>
     <h1>Item {{ id }}</h1>
+</template>
+----
+
+== Search Page Example
+
+See https://stackoverflow.com/questions/68124868/nuxt-going-to-search-page-by-this-router-push-clears-url-query-parameters[here].
+
+[,vue,title="pages/index.vue"]
+----
+<script setup>
+let query = ref('');
+</script>
+
+<template>
+    <Input type="text" v-model="query" />
+
+    <Button @click="$router.push({ path: '/search', query: { query: query } })">Go</Button>
+    Or
+    <NuxtLink :to="{ path: '/search', query: { query: query } }">Rechercher</NuxtLink>
+</template>
+----
+
+Or
+
+----
+<script setup>
+const router = useRouter();
+
+let query = ref('');
+const onSubmit = event => {
+    router.replace({ path: '/search', query: { query: query.value } });
+};
+</script>
+
+<template>
+    <form @submit.prevent="onSubmit">
+        <Input type="text" v-model="query" />
+        <Button type="submit">Rechercher</Button>
+    </form>
+</template>
+----
+
+[,vue,title="pages/search.vue"]
+----
+<script setup lang="ts">
+const { query } = useRoute();
+</script>
+
+<template>
+  {{ query.query }}
 </template>
 ----
