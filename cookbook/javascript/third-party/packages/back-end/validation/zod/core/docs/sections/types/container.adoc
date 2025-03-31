@@ -1,0 +1,63 @@
+= Container
+
+== `z.object()`
+
+[,javascript]
+----
+const MySchema = z.object({
+    ...
+});
+
+MySchema.shape
+MySchema.partial().parse(...) // Make all fields optional
+MySchema.deepPartial
+MySchema.pick({ ... })
+MySchema.omit({ ... })
+MySchema.extend({ ... })
+MySchema.merge(OtherSchema)
+
+MySchema.passthrough()
+MySchema.strict()
+----
+
+== `z.array()`
+
+[,javascript]
+----
+MyArray = z.array(...);
+
+MyArray.nonempty()
+MyArray.len()
+MyArray.min()
+MyArray.max()
+----
+
+== `z.tuple()`
+
+[,javascript]
+----
+MyTuple = z.tuple([
+        TYPE, 
+        TYPE, 
+        ...
+    ]
+);
+
+MyTuple.nonempty()
+MyTuple.len()
+MyTuple.rest()
+MyTuple.min()
+MyTuple.max()
+----
+
+== `z.set()`
+
+[,javascript]
+----
+MyTuple = z.set([
+        TYPE, 
+        TYPE, 
+        ...
+    ]
+);
+----

@@ -1,0 +1,16 @@
+=  `ErrorMessage`
+
+[,html]
+----
+<script setup>
+import { ErrorMessage } from 'vee-validate';
+</script>
+
+<template>
+    <ErrorMessage name="field" />
+</template>
+----
+
+Displays an error message for a field
+
+NOTE: you don’t have to use it as there are many ways to render error messages.

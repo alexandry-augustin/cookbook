@@ -1,0 +1,14 @@
+= `Field`
+
+A single form input and can be used to render any kind of HTML elements or Vue components.
+
+[,html]
+----
+<script setup>
+import { Field } from 'vee-validate';
+</script>
+
+<template>
+    <Field name="field" :rules="isRequired" />
+</template>
+----

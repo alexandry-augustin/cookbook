@@ -1,0 +1,75 @@
+= Types
+
+include::./primitive.adoc[leveloffset=+1]
+
+include::./container.adoc[leveloffset=+1]
+
+== `promise()`
+
+[,javascript]
+----
+MyPromise = z.promise(TYPE);
+
+const p = Promise.resolve(VALUE);
+
+// VALUE must be of type TYPE
+MyPromise.parse(p);
+----
+
+== Validation
+
+[,javascript]
+----
+.optional()
+.nullable() // null only
+.nullish() // null and undefined
+
+.default(VALUE)
+
+.min(3)
+.email()
+.url()
+.gt(0)
+----
+
+== `preprocess()`
+
+https://zodjs.netlify.app/guide/preprocess[[docs\]]
+
+== `z.coerce`
+
+[,javascript]
+----
+z.coerce.string(); // String(input)
+z.coerce.number(); // Number(input)
+z.coerce.boolean(); // Boolean(input)
+z.coerce.bigint(); // BigInt(input)
+z.coerce.date(); // new Date(input)
+----
+
+== `z.infer<>`
+
+[,javascript]
+----
+type MyType = z.infer<typeof MySchema>
+----
+
+== `parse()` and `safeParse()`
+
+[,javascript]
+----
+const MySchema = z.object({
+    myField: z.string(),
+});
+
+const myData = {
+    myField: "test"
+};
+
+// MySchema.parse(myData);
+MySchema.safeParse(myData);
+----
+
+== `refine()` and `superRefine()`
+
+For custom validation

@@ -1,13 +1,24 @@
 = zod
 :url-docs: https://vee-validate.logaretm.com/v4/integrations/zod-schema-validation/
+:url-repo: https://github.com/logaretm/vee-validate
 
 {url-docs}[[docs\]]
+{url-repo}[[repo\]]
 
 == Installation
 
 [,bash]
 ----
 pnpm add vee-validate zod @vee-validate/zod
+----
+
+== `toTypedSchema()`
+
+[,vue]
+----
+import { toTypedSchema } from '@vee-validate/zod';
+
+const fieldSchema = toTypedSchema(...)
 ----
 
 == Example

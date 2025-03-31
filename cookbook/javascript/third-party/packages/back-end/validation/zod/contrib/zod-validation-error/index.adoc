@@ -1,0 +1,25 @@
+= `zod-validation-error`
+:toc: left
+// :url-website: 
+// :url-docs: 
+:url-repo: https://github.com/causaly/zod-validation-error
+
+// {url-website}[[website\]]
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install zod-validation-error
+----
+
+== Usage
+
+[,javascript]
+----
+import { fromZodError } from 'zod-validation-error';
+
+console.log(fromZodError(...));
+----

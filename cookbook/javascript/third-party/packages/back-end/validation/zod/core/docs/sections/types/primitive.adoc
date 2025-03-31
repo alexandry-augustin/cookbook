@@ -1,0 +1,33 @@
+= Primitive Types
+
+[,javascript]
+----
+z.string();
+z.number();
+z.boolean();
+z.bigint();
+z.date();
+
+z.literal(VALUE)
+z.record(TYPE[, TYPE])
+z.map(TYPE, TYPE)
+
+z.union([ TYPE, TYPE, ... ])
+z.discriminatedUnion([ TYPE, TYPE, ... ])
+z.enum([ VALUE, VALUE, ... ])
+z.nativeEnum()
+
+z.undefined();
+z.null();
+z.void();
+z.any();
+z.unknown();
+z.never();
+----
+
+IMPORTANT: They are all `required` by default. Use `z.TYPE().optional()` to make them optional.
+
+[,javascript]
+----
+.TYPE().or.TYPE()
+----

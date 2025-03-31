@@ -93,6 +93,18 @@ const { id } = useRoute().params;
 </template>
 ----
 
+== Previous Page
+
+https://www.lamadly.com/articles/how-to-get-the-path-of-previous-url-in-nuxtjs[How to get the path of previous url in NuxtJs]
+
+https://github.com/nuxt/website-v2/issues/54[Redirect to previous page #54]
+
+[,vue,title="index.vue"]
+----
+<Button @click="$router.back()">Previous</Button>
+<Button @click="$router.go(-1)">Previous</Button>
+----
+
 == Search Page Example
 
 See https://stackoverflow.com/questions/68124868/nuxt-going-to-search-page-by-this-router-push-clears-url-query-parameters[here].

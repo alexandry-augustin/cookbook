@@ -1,0 +1,26 @@
+= zod
+:toc: left
+:toclevels: 8
+:url-docs: https://zod.dev/
+:url-repo: https://github.com/colinhacks/zod
+
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+No dependency
+
+== Installation
+
+[,bash]
+----
+pnpm install zod
+----
+
+== Usage
+
+[,typescript]
+----
+import { z } from 'zod';
+----
+
+include::./sections/types/index.adoc[leveloffset=+1]

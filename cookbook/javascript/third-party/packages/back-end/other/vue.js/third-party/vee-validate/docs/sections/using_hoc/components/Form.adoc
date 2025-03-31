@@ -1,0 +1,18 @@
+= `Form`
+
+[,html]
+----
+<script setup>
+import { Form } from 'vee-validate';
+</script>
+
+<template>
+    <Form 
+        :validation-schema="validationSchema" 
+        @submit="onSubmit">
+        <!-- ... -->
+    </Form>
+</template>
+----
+
+NOTE: Not to be confused with the HTML `<form>` tag.

@@ -1,5 +1,30 @@
 = Examples
 
+== Enabled
+
+[source,javascript,title="App.vue"]
+----
+<script setup>
+import { ref } from 'vue';
+import axios from 'axios';
+import { useQuery } from "@tanstack/vue-query";
+
+function useItemQuery(enabled) {
+  return useQuery({
+    queryKey: [ 'item' ],
+      queryFn: () => {
+        return axios.get('http://127.0.0.1:8000/api/item?format=json');
+      }, 
+      select: (response) => response.data,
+      enabled: !!enabled
+  });
+}
+
+let enabled = ref(false);
+const result = ref(useItemQuery(enabled));
+</script>
+----
+
 == Using Local Data
 
 [source,vue]
