@@ -3,10 +3,17 @@
 [source,html]
 ----
 <template v-for="i in 5" :key="page">
-
+  {{ i }}
 </template>
+----
 
-<li v-for="(value, key) in myObject">
+[source,html]
+----
+<script setup lang="ts">
+const items = [];
+</script>
+
+<template v-for="(value, key) in items">
   {{ key }}: {{ value }}
-</li>
+</template>
 ----

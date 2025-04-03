@@ -1,0 +1,16 @@
+= Ionic
+:toc: left
+:url-website: https://ionic.nuxtjs.org/
+:url-docs: https://ionic.nuxtjs.org/get-started/introduction
+:url-repo: https://github.com/nuxt-modules/ionic
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpx nuxi@latest module add ionic
+----

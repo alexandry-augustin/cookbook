@@ -1,0 +1,16 @@
+= Pinia Colada
+:toc: left
+:url-website: https://pinia-colada.esm.dev/
+:url-docs: https://pinia-colada.esm.dev/guide/installation.html
+:url-repo: https://github.com/posva/pinia-colada
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install pinia @pinia/colada
+----

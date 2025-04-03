@@ -2,13 +2,25 @@
 
 https://nuxt.com/docs/guide/directory-structure/layouts[[docs\]]
 
+[,Sébastien Chopin,https://github.com/nuxt/nuxt/issues/190#issuecomment-403131698]
+____
+[...] after long thoughts I don’t think layouts was a great idea but instead rely on a `App.vue`
+____
+
+[,https://nuxt.com/docs/guide/directory-structure/layouts]
+____
+Unlike other components, your layouts must have a single root element to allow Nuxt to apply transitions between layout changes -- and this root element cannot be a `<slot />`.
+____
+
 ....
 ./
 ├── ...
 ├── layouts/
 │   ├── ...
 │   ├── custom.vue
-│   └── default.vue
+│   ├── default.vue
+│   └── subdir/
+│       └── custom.vue
 ├── pages/
 │   ├── ...
 │   └── index.vue
@@ -40,6 +52,8 @@ ____
 <script setup lang="ts">
 definePageMeta({
   layout: 'custom'
+  // or 
+  layout: 'subdir-custom'
 });
 </script>
 ----
@@ -71,7 +85,7 @@ definePageMeta({
 
 <template>
   <div>
-    <NuxtLayout name="custom">
+    <NuxtLayout name="custom"> or <NuxtLayout name="subdir-custom"> ???
       <template #header> Some header template content. </template>
 
       The rest of the page
@@ -115,9 +129,23 @@ https://github.com/nuxt/nuxt/issues/190[support the use of slot in layout files 
 </template>
 ----
 
+[,vue,title="pages/index.vue"]
+----
+<template>
+  <NuxtLayout name="custom">
+    <template #top>
+      ...
+    </template>
+    <template #bottom>
+      ...
+    </template>
+  </NuxtLayout>
+</template>
+----
+
 [NOTE]
 ====
-Not working with the below ?
+Not working with this ?
 
 [,vue,title="pages/index.vue"]
 ----
@@ -135,26 +163,13 @@ definePageMeta({
 ----
 ====
 
-[,vue,title="pages/index.vue"]
-----
-<template>
-  <NuxtLayout name="custom">
-    <template #top>
-      ...
-    </template>
-    <template #bottom>
-      ...
-    </template>
-  </NuxtLayout>
-</template>
-----
-
-== Default Redirect
+== Nested Layout
+// == Default Redirect
 
 [,vue,title="layouts/default.vue"]
 ----
 <template>
-    <NuxtLayout name="with-sidebar">
+    <NuxtLayout name="nested-layout">
         <template v-slot:default>
             <slot />
         </template>
@@ -162,7 +177,7 @@ definePageMeta({
 </template>
 ----
 
-[,vue,title="layouts/custom.vue"]
+[,vue,title="layouts/nested-layout.vue"]
 ----
 <template>
   <div>

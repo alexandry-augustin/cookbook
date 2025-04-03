@@ -8,6 +8,8 @@ ____
 `app.vue` acts as the main component of your Nuxt application. Anything you add to it (JS and CSS) will be global and included in every page.
 ____
 
+NOTE: Can be safely deleted if not used.
+
 [,vue,title="app.vue"]
 ----
 <template>
