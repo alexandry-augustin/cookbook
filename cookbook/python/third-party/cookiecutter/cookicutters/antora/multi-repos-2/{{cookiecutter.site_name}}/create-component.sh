@@ -35,3 +35,4 @@ ln -s ../../$COMPONENT_NAME/modules/ .
 echo "Remember to:"
 echo "    * add '$COMPONENT_NAME' to 'sources' in ./site/playbook.yml"
 echo "    * edit 'title' in ./$COMPONENT_NAME/antora.yml"
+echo "    * run 'git add ./'$COMPONENT_NAME'''"

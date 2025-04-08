@@ -8,6 +8,8 @@
 {url-docs}[[docs\]]
 {url-repo}[[url-repo\]]
 
+NOTE: Difference with `.strftime("%d/%m/%Y")` ?
+
 == Installation
 
 [source,bash]
@@ -65,3 +67,7 @@ console.log(format(date, 'MMM-dd-yyyy, mm:HH:ss'));
 == Format
 
 https://date-fns.org/docs/format[[docs\]]
+
+== Locals
+
+https://date-fns.org/v4.1.0/docs/I18n[[docs\]]

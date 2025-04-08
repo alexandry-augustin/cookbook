@@ -1,0 +1,10 @@
+= Nuxt Image
+:toc: left
+:url-website: https://image.nuxt.com/
+:url-docs: https://image.nuxt.com/get-started/installation
+:url-repo: https://github.com/nuxt/image
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+

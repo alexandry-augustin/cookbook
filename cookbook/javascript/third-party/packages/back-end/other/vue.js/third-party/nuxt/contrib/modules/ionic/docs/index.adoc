@@ -1,4 +1,4 @@
-= Ionic
+= Nuxt: Ionic
 :toc: left
 :url-website: https://ionic.nuxtjs.org/
 :url-docs: https://ionic.nuxtjs.org/get-started/introduction
@@ -8,9 +8,81 @@
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
 
+[,https://ionic.nuxtjs.org/get-started/introduction]
+____
+This module attempts to get you going with Nuxt + Ionic quickly, providing sane defaults for ionic and helpful components and utilities. 
+The configuration file can still customize and override its default behaviors and provide full customisation of ionic.
+
+* Ionic router integration: continue defining routes based on the structure of your `~/pages` directory and using page-level utilities such as `definePageMeta()`.
+* Auto-imports: Ionic components, composables and icons are all https://nuxt.com/docs/guide/concepts/auto-imports[auto-imported] for ease of use.
+* Helpful components and utilities: This module provides components and utilities to accomplish common tasks more easily.
+* Pre-render routes
+* Mobile meta tags
+* Capacitor integration: works out-of-the-box with https://capacitorjs.com/[Capacitor] for shipping to native platforms like iOS and Android.
+
+NOTE: Read more about https://ionic.nuxtjs.org/overview[our features].
+____
+
 == Installation
+
+https://ionic.nuxtjs.org/get-started/installation[[docs\]]
 
 [,bash]
 ----
 pnpx nuxi@latest module add ionic
 ----
+
+[,javascript,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/ionic'],
+  ssr: false,
+})
+----
+
+[,https://ionic.nuxtjs.org/get-started/installation]
+____
+If deploying to iOS or Android, be aware the app must be able to run completely client-side. 
+We recommend setting `ssr: false` in your nuxt config. 
+Find out more in https://ionic.nuxtjs.org/cookbook/web-and-device[deploying to both web and device].
+____
+
+Either remove your `app.vue` file or replace it with a https://ionic.nuxtjs.org/cookbook/customising-app-vue[custom one].
+
+[,vue,title="app.vue"]
+----
+<template>
+  <ion-app>
+    <ion-router-outlet />
+  </ion-app>
+</template>
+----
+
+[,https://ionic.nuxtjs.org/cookbook/customising-app-vue]
+____
+`<ion-app>` is the container element of Ionic - there should be only one per project - and is required for certain behaviours to work. [...]
+
+Equally, `<ion-router-outlet>` provides a mounting point for the route component. 
+In regular Nuxt applications, this would be `<NuxtPage />`, but as Ionic Router is handling our routing we must use the `<ion-router-outlet>`.
+____
+
+[NOTE]
+====
+____
+The first time you start a Nuxt project with `@nuxtjs/ionic` enabled, a `ionic.config.json` file will be created if it doesn't already exist.
+____
+====
+
+== Watchouts
+
+https://ionic.nuxtjs.org/get-started/watch-outs[[docs\]]
+
+Use 
+`<ion-router-outlet>`, `useIonRouter()` `router-link` property on any ion-component to change page
+instead of
+`<NuxtPage>`, `<NuxtLayout>`, `<NuxtLink>`.
+
+The application code cannot contain any serverside rendering 
+(https://ionic.nuxtjs.org/cookbook/web-and-device[Solutions for both web and device tagets].)
+
+include::./sections/pages.adoc[leveloffset=+1]
