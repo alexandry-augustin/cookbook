@@ -18,6 +18,7 @@ pnpm install @vueuse/core
 == `useBreakpoints`
 
 https://vueuse.org/core/useBreakpoints/[[docs\]]
+https://github.com/vueuse/vueuse/blob/main/packages/core/useBreakpoints/demo.vue[[demo\]]
 
 [,vue,title="MyComponent.vue"]
 ----
@@ -28,6 +29,11 @@ const breakpoints = useBreakpoints(breakpointsTailwind);
 </script>
 
 <template>
-  {{ breakpoints.greater('md') }}
+  <template v-if="breakpoints.greater('sm').value">
+    <!-- ... -->
+  </template>
+  <template v-else>
+    <!-- ... -->
+  </template>
 </template>
 ----

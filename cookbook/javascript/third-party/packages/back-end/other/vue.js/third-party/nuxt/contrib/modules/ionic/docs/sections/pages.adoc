@@ -5,13 +5,8 @@ IMPORTANT: The root element of every page must always be `<ion-page>`.
 [,vue,title="~/pages/page.vue"]
 ----
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Title</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">Content</ion-content>
+  <ion-page>   
+    <!-- ... -->
   </ion-page>
 </template>
 ----

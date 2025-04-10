@@ -2,14 +2,13 @@
 
 [source,html]
 ----
-<div v-if="...">
-    <!-- ... -->
-</div>
-<div v-else-if="...">
+<template v-if="...">
   <!-- ... -->
-</div>
-<!-- ... -->
-<div v-else>
+</template>
+<template v-else-if="...">
   <!-- ... -->
-</div>
+</template>
+<template v-else>
+  <!-- ... -->
+</template>
 ----

@@ -23,6 +23,27 @@ The configuration file can still customize and override its default behaviors an
 NOTE: Read more about https://ionic.nuxtjs.org/overview[our features].
 ____
 
+.Project Structure
+....
+./
+├── assets/
+│   └── css
+├── pages/
+│   └── index.vue
+├── public/
+│   ├── favicon.ico
+│   └── robots.txt
+├── server/
+│   └── tsconfig.json
+├── app.vue
+├── nuxt.config.ts
+├── package.json
+├── pnpm-lock.yaml
+├── ionic.config.json
+└── tsconfig.json
+....
+
+
 == Installation
 
 https://ionic.nuxtjs.org/get-started/installation[[docs\]]
@@ -73,6 +94,46 @@ The first time you start a Nuxt project with `@nuxtjs/ionic` enabled, a `ionic.c
 ____
 ====
 
+== Configuration
+
+https://ionic.nuxtjs.org/get-started/configuration[[docs\]]
+
+[,javascript,title="nuxt.config.ts"]
+----
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/ionic'],
+  ionic: {
+    integrations: {
+      //
+    },
+    css: {
+      //
+    },
+    config: {
+      //
+    }
+  },
+})
+----
+
+`css`:: 
+`core` (Default: `true`):::
+Disable to import these CSS files manually:
+    @ionic/vue/css/core.css
+`basic` (Default: `true`):::
+Disable to import these CSS files manually:
+* `@ionic/vue/css/normalize.css`
+* `@ionic/vue/css/structure.css`
+* `@ionic/vue/css/typography.css`
+`utilities` (Default: `false`):::
+Enable to add extra Ionic CSS utilities:
+* `@ionic/vue/css/padding.css`
+* `@ionic/vue/css/float-elements.css`
+* `@ionic/vue/css/text-alignment.css`
+* `@ionic/vue/css/text-transformation.css`
+* `@ionic/vue/css/flex-utils.css`
+* `@ionic/vue/css/display.css`
+
 == Watchouts
 
 https://ionic.nuxtjs.org/get-started/watch-outs[[docs\]]
@@ -86,3 +147,7 @@ The application code cannot contain any serverside rendering
 (https://ionic.nuxtjs.org/cookbook/web-and-device[Solutions for both web and device tagets].)
 
 include::./sections/pages.adoc[leveloffset=+1]
+
+include::./sections/android.adoc[leveloffset=+1]
+
+include::./sections/tabs.adoc[leveloffset=+1]
