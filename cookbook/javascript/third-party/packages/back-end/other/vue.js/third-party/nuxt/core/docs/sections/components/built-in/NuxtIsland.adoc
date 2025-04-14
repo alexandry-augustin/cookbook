@@ -1,0 +1,4 @@
+= `NuxtIsland`
+:url-docs: https://nuxt.com/docs/api/components/nuxt-island
+
+{url-docs}[[docs\]]

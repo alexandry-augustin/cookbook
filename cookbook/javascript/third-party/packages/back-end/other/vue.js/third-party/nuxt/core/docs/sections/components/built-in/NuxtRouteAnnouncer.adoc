@@ -1,0 +1,4 @@
+= `NuxtRouteAnnouncer`
+:url-docs: https://nuxt.com/docs/api/components/nuxt-route-announcer
+
+{url-docs}[[docs\]]

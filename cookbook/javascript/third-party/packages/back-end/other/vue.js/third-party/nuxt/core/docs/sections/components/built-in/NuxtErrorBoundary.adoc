@@ -1,0 +1,4 @@
+= `NuxtErrorBoundary`
+:url-docs: https://nuxt.com/docs/api/components/nuxt-error-boundary
+
+{url-docs}[[docs\]]

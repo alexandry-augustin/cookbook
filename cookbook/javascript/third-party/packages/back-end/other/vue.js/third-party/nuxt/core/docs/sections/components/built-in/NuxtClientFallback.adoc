@@ -1,0 +1,4 @@
+= `NuxtClientFallback`
+:url-docs: https://nuxt.com/docs/api/components/nuxt-client-fallback
+
+{url-docs}[[docs\]]

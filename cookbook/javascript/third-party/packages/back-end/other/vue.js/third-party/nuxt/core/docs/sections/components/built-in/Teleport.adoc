@@ -1,0 +1,4 @@
+= `Teleport`
+:url-docs: https://nuxt.com/docs/api/components/teleports
+
+{url-docs}[[docs\]]

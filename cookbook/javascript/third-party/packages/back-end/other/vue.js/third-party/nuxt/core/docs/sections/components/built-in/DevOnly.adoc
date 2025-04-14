@@ -1,0 +1,4 @@
+= `DevOnly`
+:url-docs: https://nuxt.com/docs/api/components/dev-only
+
+{url-docs}[[docs\]]

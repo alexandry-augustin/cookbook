@@ -151,3 +151,7 @@ include::./sections/pages.adoc[leveloffset=+1]
 include::./sections/android.adoc[leveloffset=+1]
 
 include::./sections/tabs.adoc[leveloffset=+1]
+
+include::./sections/routing.adoc[leveloffset=+1]
+
+include::./sections/deployment.adoc[leveloffset=+1]

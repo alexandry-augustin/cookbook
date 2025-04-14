@@ -1,0 +1,4 @@
+= `NuxtPicture`
+:url-docs: https://nuxt.com/docs/api/components/nuxt-picture
+
+{url-docs}[[docs\]]

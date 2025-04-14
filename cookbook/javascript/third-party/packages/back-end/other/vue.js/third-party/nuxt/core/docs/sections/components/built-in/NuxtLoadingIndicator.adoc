@@ -1,0 +1,14 @@
+= `NuxtLoadingIndicator`
+:url-docs: https://nuxt.com/docs/api/components/nuxt-loading-indicator
+
+{url-docs}[[docs\]]
+
+[,vue,title="app.vue"]
+----
+<template>
+  <NuxtLayout>
+    <NuxtLoadingIndicator />
+    <NuxtPage />
+  <NuxtLayout>
+</template>
+----

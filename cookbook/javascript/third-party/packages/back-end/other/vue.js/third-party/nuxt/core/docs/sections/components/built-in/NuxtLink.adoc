@@ -1,0 +1,4 @@
+= `NuxtLink`
+:url-docs: https://nuxt.com/docs/api/components/nuxt-link
+
+{url-docs}[[docs\]]

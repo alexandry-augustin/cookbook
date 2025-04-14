@@ -49,14 +49,13 @@ https://learnvue.co/articles/vue-emit-guide
 [,vue,title="ChildComponent.vue"]
 ----
 <script setup>  
-import {ref } from "vue";  
-</script>  
+</script>
   
-<template>  
-  <input  
-      type="text"  
-      @keydown="$emit('someEvent', $event.target.value)" />
-</template>  
+<template>
+  <input 
+      type="text" 
+      @input="$emit('someEvent', $event.target.value)" />
+</template>
 ----
 
 // [,vue,title="ParentComponent.vue"]
@@ -81,10 +80,10 @@ import {ref } from "vue";
 import { ref } from "vue";
 import ChildComponent from "./ChildComponent.vue";
 
-const childText = ref('');
+const childValue = ref('');
 </script>
 
 <template>
-  <ChildComponent @some-event="(value) => childText=value" />  
+  <ChildComponent @some-event="(value) => childValue=value" />  
 </template>
 ----

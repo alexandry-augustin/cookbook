@@ -1,0 +1,4 @@
+= `NuxtLayout`
+:url-docs: https://nuxt.com/docs/api/components/nuxt-layout
+
+{url-docs}[[docs\]]

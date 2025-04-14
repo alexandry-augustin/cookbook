@@ -1,0 +1,4 @@
+= `ClientOnly`
+:url-docs: https://nuxt.com/docs/api/components/client-only
+
+{url-docs}[[docs\]]

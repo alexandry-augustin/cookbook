@@ -46,3 +46,5 @@ Must come last if you have overrides you wish to apply to sub-directories of `~/
 ====
 
 include::./dynamic_components.adoc[leveloffset=+1]
+
+include::./built-in/index.adoc[leveloffset=+1]
