@@ -13,7 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="myDiv"><div>
+  <div ref="myDiv"></div>
 </template>
 ----
 

@@ -39,7 +39,7 @@ https://learnvue.co/articles/vue-emit-guide
 // <template>  
 //   <input  
 //       type="text"  
-//       v-model="search"  
+//       v-model="search"
 //       @keydown="$emit('someEvent', value)" />
 // </template>  
 // ----
