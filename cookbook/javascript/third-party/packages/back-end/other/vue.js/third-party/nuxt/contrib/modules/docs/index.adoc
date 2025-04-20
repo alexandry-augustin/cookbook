@@ -23,3 +23,7 @@ include::./sections/vee-validate.adoc[leveloffset=+1]
 include::./sections/i18n.adoc[leveloffset=+1]
 
 include::./sections/daisyui.adoc[leveloffset=+1]
+
+== Nuxt: Ionic
+
+See separate repo
