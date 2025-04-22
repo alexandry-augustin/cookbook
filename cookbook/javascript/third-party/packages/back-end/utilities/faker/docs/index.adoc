@@ -42,7 +42,33 @@ import { fakerFR as faker } from '@faker-js/faker';
 === Company
 === Database
 === Datatype
-=== Date
+
+=== `date`
+
+https://fakerjs.dev/api/date[[docs\]]
+
+.Past
+* `recent()` last day 
+* `past()` last year
+
+.Future
+* `soon()` next day
+* `future()` next year
+
+[,javascript]
+----
+faker.date.soon({ days: 31 })
+----
+
+.Misc
+* `birthdate()` generate realistic birthdate for an adult
+* `anytime()`
+* `weekday()` Returns a random day of the week.
+
+.Range
+* `between()` generate a single date between two dates
+* `betweens()` generate multiple dates between two dates
+
 === Finance
 === Food
 === Git

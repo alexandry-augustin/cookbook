@@ -1,6 +1,9 @@
 = Examples
 
+[#sec:examples-enabled]
 == Enabled
+
+See <<sec:params-enabled>>
 
 [source,javascript,title="App.vue"]
 ----
@@ -23,6 +26,42 @@ function useItemQuery(enabled) {
 let enabled = ref(false);
 const result = ref(useItemQuery(enabled));
 </script>
+----
+
+[,https://stackoverflow.com/questions/77894073/how-to-call-tanstacks-vue-query-get-request-inside-a-method]
+____
+To refetch the query, use the `refetch` method returned from the `useQuery` instance.
+____
+
+[,javascript,title="useMyQuery.js"]
+----
+export const useMyQuery = () => useQuery({
+    // ...
+    enabled: false
+})
+----
+
+[,vue,title="component.vue"]
+----
+<script setup>
+const myQuery = ref(useMyQuery())
+
+const handleClick = async () => {
+    const result = await myQuery.value.refetch();
+    
+    console.log(result.data);
+    
+    return result.data;
+}
+// Or
+const handleClick = () => {
+  myQuery.value.refetch();
+};
+</script>
+
+<template>
+    <button @click="handleClick">Click Here</button>
+</template>
 ----
 
 == Using Local Data

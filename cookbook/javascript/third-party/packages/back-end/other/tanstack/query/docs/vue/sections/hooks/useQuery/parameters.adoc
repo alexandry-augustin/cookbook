@@ -35,10 +35,12 @@ NOTE: Axios returns a promise.
 
 == `cacheTime`
 
-
+[#sec:params-enabled]
 == `enabled`
 
 Disable the query from automatically running if `false`.
+// See <<sec:examples-enabled>>.
+See xref:sec:examples-enabled[example].
 
 
 == `networkMode`

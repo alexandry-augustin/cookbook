@@ -1,1 +1,14 @@
 = Middleware
+
+== Redirect
+
+https://nuxt.com/docs/api/utils/navigate-to#within-route-middleware[[docs\]]
+
+----
+export default defineNuxtRouteMiddleware((to, from) => {
+  if (to.path !== '/path/to/page') {
+    // setting the redirect code to '301 Moved Permanently'
+    return navigateTo('/path/to/page', { redirectCode: 301 })
+  }
+})
+----
