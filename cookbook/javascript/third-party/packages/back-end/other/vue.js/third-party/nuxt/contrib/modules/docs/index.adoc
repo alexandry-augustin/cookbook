@@ -10,8 +10,6 @@ include::./sections/tailwindcss.adoc[leveloffset=+1]
 
 include::./sections/shadcn.adoc[leveloffset=+1]
 
-include::./sections/leaflet.adoc[leveloffset=+1]
-
 include::./sections/nuxt-device.adoc[leveloffset=+1]
 
 include::./sections/pinia.adoc[leveloffset=+1]
@@ -25,5 +23,9 @@ include::./sections/i18n.adoc[leveloffset=+1]
 include::./sections/daisyui.adoc[leveloffset=+1]
 
 == Nuxt: Ionic
+
+See separate repo
+
+== Leaflet
 
 See separate repo
