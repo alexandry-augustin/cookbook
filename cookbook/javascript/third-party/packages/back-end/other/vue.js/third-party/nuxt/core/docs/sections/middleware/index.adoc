@@ -12,6 +12,6 @@ The *route middleware* executed in the *vue* part of your application.
 The normal middleware executed in the *nitro* part of the application.
 ____
 
-include::./route-middleware.adoc[leveloffset=+1]
+include::./route-middleware/index.adoc[leveloffset=+1]
 
 include::./middleware.adoc[leveloffset=+1]

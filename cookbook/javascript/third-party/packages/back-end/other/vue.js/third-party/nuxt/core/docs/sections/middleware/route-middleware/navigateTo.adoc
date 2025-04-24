@@ -1,0 +1,9 @@
+= `navigateTo()`
+
+[,javascript]
+----
+navigateTo({ 
+  path: '/path',
+  query: { paramName: 'value' },
+});
+----

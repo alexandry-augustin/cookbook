@@ -1,0 +1,15 @@
+= `abortNavigation()`
+
+[,javascript]
+----
+abortNavigation();
+----
+
+[,javascript]
+----
+let error = createError({
+    statusCode: 404,
+    message: 'The route could not be found :(',
+}
+abortNavigation(error);
+----

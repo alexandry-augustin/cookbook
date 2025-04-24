@@ -2,26 +2,31 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Alpine.js Filtered Search</title>
+        <script type='text/javascript'>
+			function setup() {
+				return {
+                    searchPattern: '',
+            
+                    items: ['foo', 'bar', 'baz'],
+            
+                    get filteredItems() {
+                        return this.items.filter(
+                            i => i.startsWith(this.searchPattern)
+                        );
+                    }
+                };
+			  }
+		</script>
 	</head>
 
 	<body>
         
-    	<div
-            x-data="{
-                search: '',
-         
-                items: ['foo', 'bar', 'baz'],
-         
-                get filteredItems() {
-                    return this.items.filter(
-                        i => i.startsWith(this.search)
-                    )
-                }
-            }">
-            <input x-model="search" placeholder="Search...">
+    	<div x-data="setup()">
+            <input x-model="searchPattern" placeholder="Search...">
          
             <ul>
                 <template x-for="item in filteredItems" :key="item">
+                    <!-- <template x-for="(item, index) in filteredItems" :key="index"> -->
                     <li x-text="item"></li>
                 </template>
             </ul>

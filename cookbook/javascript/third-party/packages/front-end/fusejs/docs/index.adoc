@@ -1,4 +1,5 @@
 = Fuse.js
+:toc: left
 :url-website: https://www.fusejs.io/
 // :url-docs: 
 :url-repo: https://github.com/krisk/fuse
@@ -6,3 +7,37 @@
 {url-website}[[website\]]
 // {url-docs}[[docs\]]
 {url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install fuse.js
+----
+
+CDN: 
+
+[,html]
+----
+<!-- For prototyping -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+
+<!-- For production -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+
+<!-- If you are using native ES Modules, there is also an ES Modules compatible build: -->
+<script type="module">
+  import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@7.1.0/dist/fuse.mjs'
+</script>
+----
+
+== Usage
+
+[,javascript]
+----
+// ES6 module syntax:
+import Fuse from 'fuse.js'
+
+// CommonJS
+const Fuse = require('fuse.js')
+----

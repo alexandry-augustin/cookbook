@@ -99,6 +99,13 @@ That `<template>` element MUST contain only one root element.
 </template>
 ----
 
+[source,html]
+----
+<template x-for="(item, index) in items">
+    <!-- ... -->
+</template>
+----
+
 == Events
 
 === `x-on:event_name` or `@event_name`

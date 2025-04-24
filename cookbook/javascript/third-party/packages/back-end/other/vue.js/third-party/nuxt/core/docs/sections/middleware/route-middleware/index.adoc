@@ -1,0 +1,49 @@
+= Route Middleware
+
+[,https://medium.com/@llama_/understanding-nuxt-3s-route-middlewares-c314e48eb508]
+____
+route middlewares [...] allow you to perform operations before switching from one route to another. 
+These route middlewares are commonly use to ensure that the user is authenticated before accessing certain routes [navigation guards] or to perform cookie-based authentication checks.
+____
+
+[,https://masteringnuxt.com/blog/how-to-create-navigation-guards-in-nuxt-with-definenuxtroutemiddleware]
+____
+In web development, navigation guards allow you to control access to certain routes. These guards are especially useful for:
+
+* Protecting routes that require authentication.
+* Redirecting users based on their roles.
+* Running specific logic before navigating to a page (like fetching data).
+____
+
+> "Route middleware are navigation guards that receive the current route and the next route as arguments."
+-- https://nuxt.com/docs/guide/directory-structure/middleware
+
+[,https://www.the-koi.com/projects/nuxt3-middlewares-everything-you-need-to-know/]
+____
+The most popular use case is the authentication guard
+____
+
+[,https://blog.logrocket.com/navigation-guards-nuxt-3-definenuxtroutemiddleware/]
+____
+middleware can also be async functions, which allow you to await asynchronous requests if you need to.
+____
+
+include::./from-to.adoc[leveloffset=+1]
+
+include::./navigateTo.adoc[leveloffset=+1]
+
+include::./abortNavigation.adoc[leveloffset=+1]
+
+include::./types.adoc[leveloffset=+1]
+
+== Ordering
+
+[,https://blog.logrocket.com/navigation-guards-nuxt-3-definenuxtroutemiddleware/]
+____
+On any given route, middleware executes in this order:
+
+* Global middleware
+* Middleware defined in the `middleware` array of `definePageMeta`, in the order of appearance
+
+Global middleware executes in alphabetical order based on the filename, but if you need to run middleware in a specific order, you can prefix it with a number, like so: `middleware/01.isAdmin.global.js`.
+____

@@ -1,11 +1,84 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
-		<title>Fuse.js</title>
+		<title>Filtered Search (Alpine.js + Fuse.js)</title>
+		<script type='text/javascript'>
+			function setup() {
+
+                const items = [
+                    {
+                        "title": "Old Man's War",
+                        "author": {
+                            "firstName": "John",
+                            "lastName": "Scalzi"
+                        }
+                    },
+                    {
+                        "title": "The Lock Artist",
+                        "author": {
+                            "firstName": "Steve",
+                            "lastName": "Hamilton"
+                        }
+                    },
+                ];
+
+                const fuseOptions = {
+                    // isCaseSensitive: false,
+                    // includeScore: false,
+                    // ignoreDiacritics: false,
+                    // shouldSort: true,
+                    // includeMatches: false,
+                    // findAllMatches: false,
+                    // minMatchCharLength: 1,
+                    // location: 0,
+                    // threshold: 0.6,
+                    // distance: 100,
+                    // useExtendedSearch: false,
+                    // ignoreLocation: false,
+                    // ignoreFieldNorm: false,
+                    // fieldNormWeight: 1,
+                    keys: [
+                        "title",
+                        "author.firstName"
+                    ]
+                };
+
+                const fuse = new Fuse(items, fuseOptions);
+                
+				return {
+                    searchPattern: '',
+            
+                    items: items,
+            
+                    get filteredItems() {
+                        // return this.items.filter(
+                        //     i => i.title.startsWith(this.searchPattern)
+                        // );
+
+                        let searchResults = fuse.search(this.searchPattern);
+                        searchResults = searchResults.map((item) => item.item);
+                        
+                        // console.log(searchResults);
+                        return searchResults;
+                    }
+                };
+			  }
+		</script>
 	</head>
 
 	<body>
-		
+        
+        <div x-data="setup()">
+            <input x-model="searchPattern" placeholder="Search...">
+         
+            <ul>
+                <template x-for="(item, index) in filteredItems" :key="index">
+                    <li x-text="`${item.title} (${item.author.firstName} ${item.author.lastName})`"></li>
+                </template>
+            </ul>
+        </div>
+    	
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+	    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	</body>
 </html> 

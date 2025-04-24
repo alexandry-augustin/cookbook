@@ -1,0 +1,85 @@
+= Types
+
+
+There are three types of route middlewares
+
+== Inline Middleware
+
+// * defined directly within the page
+
+....
+./
+├── pages/
+│   └── index.vue
+├── ...
+....
+
+[,vue, title="pages/index.vue"]
+----
+<script setup lang="ts">
+definePageMeta({
+  middleware: [
+    function (to, from) {
+      // ...
+    },
+    'my-middleware', // Optional
+  ],
+});
+</script>
+----
+
+[NOTE]
+====
+[,https://blog.logrocket.com/navigation-guards-nuxt-3-definenuxtroutemiddleware/]
+____
+you can define multiple anonymous middleware on one page, and they’ll be executed in the order they appear in the middleware array.
+____
+====
+
+== Named Middleware
+
+* automatically loaded via asynchronous import when used on a page
+// * placed in the `middleware/` 
+
+....
+./
+├── middleware/
+│   ├── ...
+│   └── my-middleware.js
+├── pages/
+│   └── index.vue
+├── ...
+....
+
+== Global Middleware
+
+[,https://blog.logrocket.com/navigation-guards-nuxt-3-definenuxtroutemiddleware/]
+____
+Writing global middleware works the same way as writing named middleware, with one difference: the name of the middleware file has to be suffixed with `.global`. 
+So, the file will be named `middleware/isAdmin.global.js` instead of `middleware/isAdmin.js`, and then it'll run on every route, without needing to be specified in `definePageMeta`.
+____
+
+* executed before routing to *any* page
+* executed in alphabetical order
+// * placed in the `middleware/`
+// * with suffix `.global`
+
+[NOTE]
+====
+[,https://blog.logrocket.com/navigation-guards-nuxt-3-definenuxtroutemiddleware/]
+____
+Note that it's not possible to define exceptions for global middleware -- they always run on every route.
+If you want the global middleware to skip over a certain route, you have to write the check inside the middleware itself.
+____
+====
+
+....
+./
+├── middleware/
+│   ├── 01.name.global.ts
+│   ├── 02.name.global.ts
+│   └── ...
+├── pages/
+│   └── index.vue
+├── ...
+....
