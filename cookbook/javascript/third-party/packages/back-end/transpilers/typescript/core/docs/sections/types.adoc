@@ -1,0 +1,15 @@
+= Types
+
+== Explicit Type
+
+[,javascript]
+----
+let myString: string = "value";
+----
+
+== Implicit Type
+
+[,javascript]
+----
+let myString = "value";
+----

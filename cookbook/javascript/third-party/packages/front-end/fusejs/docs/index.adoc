@@ -1,5 +1,6 @@
 = Fuse.js
 :toc: left
+:toclevels: 8
 :url-website: https://www.fusejs.io/
 // :url-docs: 
 :url-repo: https://github.com/krisk/fuse
@@ -36,8 +37,42 @@ CDN:
 [,javascript]
 ----
 // ES6 module syntax:
-import Fuse from 'fuse.js'
+import Fuse from 'fuse.js';
 
 // CommonJS
-const Fuse = require('fuse.js')
+const Fuse = require('fuse.js');
+
+const data = [
+  {
+    key1: ...
+
+  }
+]
+
+const fuseOptions = {
+    // isCaseSensitive: false,
+    // includeScore: false,
+    // ignoreDiacritics: false,
+    // shouldSort: true,
+    // includeMatches: false,
+    // findAllMatches: false,
+    // minMatchCharLength: 1,
+    // location: 0,
+    // threshold: 0.6,
+    // distance: 100,
+    // useExtendedSearch: false,
+    // ignoreLocation: false,
+    // ignoreFieldNorm: false,
+    // fieldNormWeight: 1,
+    keys: [
+        "key1",
+    ]
+};
+
+const fuse = new Fuse(data, fuseOptions);
+
+let searchResults = fuse.search("search pattern");
+// searchResults = searchResults.map((item) => item.item);
 ----
+
+include::./sections/options.adoc[leveloffset=+1]
