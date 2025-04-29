@@ -1,0 +1,34 @@
+= FAQ
+
+https://stackoverflow.com/questions/73109752/search-multiple-words-while-ignoring-the-word-order-in-fuse-javascript-fuzzy-se[Search multiple words while ignoring the word order]
+
+== Exact Match
+
+https://stackoverflow.com/questions/62124091/fuse-js-exact-name-match[Exact name match]
+
+[,https://stackoverflow.com/questions/62124091/fuse-js-exact-name-match]
+____
+I discovered that I could set the `threshold` to a negative number, and that would give an exact match.
+____
+
+== Exact Match, Ignore Location
+
+https://stackoverflow.com/questions/76378442/how-to-do-exact-match-but-ignore-location-with-fusejs[How to do exact-match but ignore location with Fusejs?]
+
+[,https://stackoverflow.com/questions/76378442/how-to-do-exact-match-but-ignore-location-with-fusejs]
+____
+I have decided to use another logic than using Fuse.js to handle this issue:
+
+[,javascript]
+----
+if (isStrictSearch) {
+    const results = data.filter(function (datum) {
+        return datum.name.toLowerCase().includes(query.toLowerCase());
+    });
+    return results;
+} else {
+    const results = fuse.search(query);
+    return results.map((i) => i.item);
+}
+----
+____

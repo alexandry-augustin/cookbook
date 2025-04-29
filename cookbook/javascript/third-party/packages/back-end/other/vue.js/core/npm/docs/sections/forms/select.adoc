@@ -1,0 +1,147 @@
+= `<select>`
+
+[,https://rathoreaparna678.medium.com/how-to-get-the-selected-option-on-change-with-vue-js-d980a4352f6e]
+____
+you can get the selected option when it changes using the `v-model` directive and the `@change` event. 
+The `v-model` directive allows you to bind a variable to the select element, and the `@change` event allows you to execute a method when the selected option changes. 
+____
+
+[,vue]
+----
+<script setup>
+import { ref } from "vue";
+
+let selectedOption = ref(null);
+
+let options = [
+    { label: 'Option 1', value: 'option1' },
+    { label: 'Option 2', value: 'option2' },
+    { label: 'Option 3', value: 'option3' },
+];
+
+function handleOptionChange() {
+    // Perform the action you want with the selected option
+    console.log('Selected option:', selectedOption);
+}
+</script>
+
+<template>
+    <label for="items">Choose an item:</label>
+    <select 
+        id="items"
+        v-model="selectedOption"
+        @change="handleOptionChange" >
+        <option 
+            v-for="option in options" 
+            :value="option.value" 
+            :key="option.value">
+            {{ option.label }}
+        </option>
+    </select>
+
+    {{ selectedOption }}
+</template>
+----
+
+// [,vue]
+// ----
+// <template>
+//     <select 
+//         name="items" 
+//         id="items">
+//       <option value="item-1">Item 1</option>
+//       <option value="item-2">Item 2</option>
+//       <option value="item-3">Item 3</option>
+//     </select>
+// </template>
+// ----
+
+== Custom Event
+
+[IMPORTANT]
+====
+> "Select" does not support the `onload` event."
+-- https://stackoverflow.com/questions/30890250/onload-event-not-working-in-select-box-dropdown-list-box
+====
+
+[,vue,title="ChildComponent.vue"]
+----
+<script setup>
+let options = [
+    { label: 'Option 1', value: 'option1' },
+    { label: 'Option 2', value: 'option2' },
+    { label: 'Option 3', value: 'option3' },
+];
+</script>
+
+<template>
+    <label for="items">Choose an item:</label>
+    <select 
+        id="items"
+        @change="$emit('selectedOption', $event.target.value)" >
+        <option 
+            v-for="option in options" 
+            :value="option.value" 
+            :key="option.value">
+            {{ option.label }}
+        </option>
+    </select>
+</template>
+----
+
+[,vue,title="ParentComponent.vue"]
+----
+import { ref } from "vue";
+import ChildComponent from "./ChildComponent.vue";
+
+// IMPORTANT Can't be called `selectedOption`
+const childValue = ref(null);
+</script>
+
+<template>
+    <ChildComponent @selected-option="(value) => childValue=value" />
+    {{ childValue }}
+</template>
+----
+
+=== Default Value
+
+[,https://stackoverflow.com/questions/41122028/set-default-value-to-option-select-menu]
+____
+You can just use `v-model` for selecting a default value on a select box
+____
+
+Or
+
+[,vue,title="ChildComponent.vue"]
+----
+<script setup>
+defineProps(['defaultOption']);
+</script>
+
+<template>
+    <select 
+        :value="defaultOption"
+        @change="$emit('selectedOption', $event.target.value)" >
+        <!-- ... -->
+    </select>
+</template>
+----
+
+[,vue,title="ParentComponent.vue"]
+----
+import { ref } from "vue";
+import ChildComponent from "./ChildComponent.vue";
+
+const defaultOption = "...";
+
+// IMPORTANT Can't be called `selectedOption`
+const childValue = ref(null);
+</script>
+
+<template>
+    <ChildComponent 
+        :defaultOption="defaultOption"
+        @selected-option="(value) => childValue=value" />
+</template>
+----

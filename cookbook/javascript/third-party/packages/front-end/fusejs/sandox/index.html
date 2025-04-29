@@ -33,7 +33,7 @@
                     // location: 0,
                     // threshold: 0.6,
                     // distance: 100,
-                    // useExtendedSearch: false,
+                    useExtendedSearch: true,
                     // ignoreLocation: false,
                     // ignoreFieldNorm: false,
                     // fieldNormWeight: 1,
@@ -51,11 +51,15 @@
                     items: items,
             
                     get filteredItems() {
+                        if(!this.searchPattern.trim().length)
+                            return this.items;
+
                         // return this.items.filter(
                         //     i => i.title.startsWith(this.searchPattern)
                         // );
 
-                        let searchResults = fuse.search(this.searchPattern);
+                        const adaptedSearchPattern = this.searchPattern.split(' ').reduce((previousValue, currentValue) => previousValue + ` '${currentValue}`, '');
+                        let searchResults = fuse.search(adaptedSearchPattern);
                         searchResults = searchResults.map((item) => item.item);
                         
                         // console.log(searchResults);

@@ -8,7 +8,24 @@ https://vuejs.org/guide/components/events.html[[docs\]]
 </script>
 
 <template>
-    <button @click="$emit('myEventName')">Send</button>
+    <button @click="$emit('myEvent')">Send</button>
+</template>
+----
+
+Or
+
+[source,vue,title="ChildComponent.vue"]
+----
+<script setup>
+const emit = defineEmits([ 'myEvent' ]);
+
+function onClick() {
+  emit('myEvent');
+}
+</script>
+
+<template>
+    <button @click="onClick">Send</button>
 </template>
 ----
 
@@ -17,12 +34,59 @@ https://vuejs.org/guide/components/events.html[[docs\]]
 <script setup>
 import ChildComponent from '@/components/ChildComponent';
 
-const f = () => {
-   alert('test');
+const onMyEvent = () => {
+   alert('MyEvent received');
 }
 </script>
 
 <template>
-    <ChildComponent @my-event-name="f"></ChildComponent>
+    <ChildComponent @my-event-name="onMyEvent" />
+</template>
+----
+
+== Events with Arguments
+
+
+[source,vue,title="ChildComponent.vue"]
+----
+<script setup>
+</script>
+
+<template>
+    <button @click="$emit('myEvent', 'myArg')">Send</button>
+</template>
+----
+
+Or
+
+[source,vue,title="ChildComponent.vue"]
+----
+<script setup>
+const emit = defineEmits([ 'myEvent' ]);
+
+function onClick() {
+  emit('myEvent', 'myArg');
+}
+</script>
+
+<template>
+    <button @click="onClick">Send</button>
+</template>
+----
+
+[source,vue,title="ParentComponent.vue"]
+----
+<script setup>
+import ChildComponent from '@/components/ChildComponent';
+
+const onMyEvent = (myArg) => {
+   alert(`MyEvent received with arg ${myArg}`);
+}
+</script>
+
+<template>
+    <ChildComponent @my-event-name="onMyEvent" />
+    <!-- Or -->
+    <ChildComponent @my-event-name="(myArg) => ..." />
 </template>
 ----

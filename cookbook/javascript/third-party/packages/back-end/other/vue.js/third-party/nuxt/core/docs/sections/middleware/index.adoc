@@ -3,6 +3,8 @@
 
 {url-docs}[[docs\]]
 
+https://github.com/nuxt/nuxt/discussions/25061[Nuxt Global Middleware #25061]
+
 [,https://www.the-koi.com/projects/nuxt3-middlewares-everything-you-need-to-know/]
 ____
 Within nuxt there are two types of middlewares. 

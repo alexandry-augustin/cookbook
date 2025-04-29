@@ -1,0 +1,18 @@
+= Scoring Theory
+
+https://www.fusejs.io/concepts/scoring-theory.html[[docs\]]
+
+[,https://www.fusejs.io/concepts/scoring-theory.html]
+____
+Once we have a list of matching items, they need to be ranked by a relevance score. 
+This score is determined by three factors:
+
+* Fuzziness score
+* Key weight
+* Field-length norm
+____
+
+[,https://www.fusejs.io/concepts/scoring-theory.html]
+____
+The fuzziness score is internally calculated via a modified implementation of the https://en.wikipedia.org/wiki/Bitap_algorithm[Bitap algorithm].
+____

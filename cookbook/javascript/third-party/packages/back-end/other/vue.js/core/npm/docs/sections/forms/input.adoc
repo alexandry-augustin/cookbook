@@ -1,0 +1,43 @@
+= `<input>`
+
+[,vue,title="ChildComponent.vue"]
+----
+<script setup>  
+import { ref } from "vue";
+
+let text = ref('');
+</script>  
+  
+<template>  
+  <input type="text" v-model="text" />
+  {{ text }}
+</template>  
+----
+
+== Custom Event
+
+[,vue,title="ChildComponent.vue"]
+----
+<script setup>  
+</script>
+  
+<template>
+  <input 
+      type="text" 
+      @input="$emit('someEvent', $event.target.value)" />
+</template>
+----
+
+[,vue,title="ParentComponent.vue"]
+----
+<script setup>  
+import { ref } from "vue";
+import ChildComponent from "./ChildComponent.vue";
+
+const childValue = ref('');
+</script>
+
+<template>
+  <ChildComponent @some-event="(value) => childValue=value" />  
+</template>
+----

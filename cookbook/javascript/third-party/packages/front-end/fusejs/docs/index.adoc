@@ -76,3 +76,9 @@ let searchResults = fuse.search("search pattern");
 ----
 
 include::./sections/options.adoc[leveloffset=+1]
+
+include::./sections/extended_search.adoc[leveloffset=+1]
+
+include::./sections/faq.adoc[leveloffset=+1]
+
+include::./sections/scoring_theory.adoc[leveloffset=+1]
