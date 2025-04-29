@@ -1,0 +1,19 @@
+= `create-react-app`
+:url-website: https://create-react-app.dev/
+:url-github: https://github.com/facebook/create-react-app
+
+== Installation
+
+Create a new react app (`./PRJ_NAME/` will be created):
+
+[,bash]
+----
+pnpx create-react-app PRJ_NAME
+----
+
+== Running
+
+[,bash]
+----
+pnpm start
+----

@@ -1,0 +1,38 @@
+= FAQ
+
+== Disable Browser Opening
+
+[,https://stackoverflow.com/questions/61927814/how-to-disable-open-browser-in-cra]
+____
+Create `.env` file in the root directory where your `package.json` file resides. 
+And add the following:
+
+----
+BROWSER=none
+----
+____
+
+[,bash]
+----
+echo "BROWSER=none" >> .env
+----
+// [,bash,title=".env"]
+// ----
+// BROWSER=none
+// ----
+
+== Deployment
+
+https://github.com/facebook/create-react-app/issues/12304
+
+[,bash,title=".env"]
+----
+DANGEROUSLY_DISABLE_HOST_CHECK=true
+----
+
+== Global Variables
+
+[,bash,title=".env"]
+----
+REACT_APP_VARIABLE_NAME = VARIABLE_VALUE
+----

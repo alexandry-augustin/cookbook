@@ -1,0 +1,24 @@
+= Core
+:url-wiki: https://en.wikipedia.org/wiki/React_(JavaScript_library)
+:url-website: https://reactjs.org/
+:url-github: https://github.com/facebook/react/
+
+[quote,https://www.makeuseof.com/react-vs-angular-popular/]
+____
+Many social media companies use React, including Facebook, Instagram, and Skype. Other companies that have built apps using React include Uber, AirBnB, Netflix, and Amazon.
+____
+
+Default port: 3000 (used by express?)
+
+== Proxy
+
+https://create-react-app.dev/docs/proxying-api-requests-in-development/
+
+[,json,title="package.json"]
+----
+{
+    // ...
+    "proxy": "http://localhost:4000",
+    // ...
+}
+----

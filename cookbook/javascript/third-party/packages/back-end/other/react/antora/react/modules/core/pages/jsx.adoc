@@ -1,0 +1,82 @@
+= JSX
+
+https://reactjs.org/docs/introducing-jsx.html
+
+Babel transpiles JSX into regular javascript.
+
+== Fragment
+
+[,jsx,title='fragment']
+----
+<>
+    {/* This is a fragment */}
+</>
+----
+
+or 
+
+[,jsx,title='fragment']
+----
+<Fragment>
+    {/* This is a fragment */}
+</Fragment>
+----
+
+== Tags
+
+|===
+|HTML |React |Remarks
+|class
+|className
+|
+
+|maxlength
+|maxLength
+|
+
+|tabindex
+|tabIndex
+|
+
+|for
+|htmlFor
+|
+|===
+
+== Props
+
+Props are like attributes in HTML
+
+[,jsx]
+----
+
+function ... {
+    return (
+        <MyComponent my_prop_name={ my_prop_value } />
+    )
+}
+// ...
+
+function MyComponent({ my_prop_name }) {
+    // ...
+    return (
+        { my_prop_name }
+    )
+}
+----
+
+
+== Comments
+
+https://wesbos.com/react-jsx-comments
+
+[,jsx]
+----
+{/* A JSX comment */}
+
+{/* 
+  Multi
+  line
+  comment
+*/}
+----

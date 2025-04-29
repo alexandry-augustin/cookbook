@@ -1,7 +1,0 @@
-= react-fetch-hook
-:url-github: https://github.com/ilyalesik/react-fetch-hook
-
-[source,bash]
-----
-npm install react-fetch-hook
-----

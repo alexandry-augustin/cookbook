@@ -1,0 +1,8 @@
+= `react-dom`
+
+== Installation
+
+[,bash]
+----
+pnpm install react-dom
+----

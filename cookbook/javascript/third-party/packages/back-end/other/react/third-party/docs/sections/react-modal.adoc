@@ -1,6 +1,0 @@
-= React Modal
-
-[source,javascript]
-....
-import Modal from "react-modal";
-....

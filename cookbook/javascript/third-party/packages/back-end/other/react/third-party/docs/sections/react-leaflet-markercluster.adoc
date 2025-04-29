@@ -1,4 +1,0 @@
-
-https://github.com/changey/react-leaflet-markercluster
-
-npm i @changey/react-leaflet-markercluster

@@ -1,0 +1,8 @@
+= `react`
+
+== Installation
+
+[,bash]
+----
+pnpm install react
+----
