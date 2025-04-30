@@ -2,6 +2,9 @@
 :url-website: https://create-react-app.dev/
 :url-github: https://github.com/facebook/create-react-app
 
+{url-website}[[website\]]
+{url-github}[[github\]]
+
 == Installation
 
 Create a new react app (`./PRJ_NAME/` will be created):

@@ -8,17 +8,13 @@ ____
 Many social media companies use React, including Facebook, Instagram, and Skype. Other companies that have built apps using React include Uber, AirBnB, Netflix, and Amazon.
 ____
 
+== Installation
+
+[,bash]
+----
+pnpm install react
+----
+
+== Usage
+
 Default port: 3000 (used by express?)
-
-== Proxy
-
-https://create-react-app.dev/docs/proxying-api-requests-in-development/
-
-[,json,title="package.json"]
-----
-{
-    // ...
-    "proxy": "http://localhost:4000",
-    // ...
-}
-----

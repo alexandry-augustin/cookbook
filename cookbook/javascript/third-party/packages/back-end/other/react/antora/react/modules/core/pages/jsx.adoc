@@ -1,6 +1,6 @@
 = JSX
 
-https://reactjs.org/docs/introducing-jsx.html
+https://reactjs.org/docs/introducing-jsx.html[[docs\]]
 
 Babel transpiles JSX into regular javascript.
 
@@ -8,18 +8,18 @@ Babel transpiles JSX into regular javascript.
 
 [,jsx,title='fragment']
 ----
-<>
+<Fragment>
     {/* This is a fragment */}
-</>
+</Fragment>
 ----
 
 or 
 
 [,jsx,title='fragment']
 ----
-<Fragment>
+<>
     {/* This is a fragment */}
-</Fragment>
+</>
 ----
 
 == Tags
@@ -64,7 +64,6 @@ function MyComponent({ my_prop_name }) {
     )
 }
 ----
-
 
 == Comments
 

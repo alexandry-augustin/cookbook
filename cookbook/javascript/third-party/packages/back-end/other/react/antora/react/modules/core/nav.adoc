@@ -1,6 +1,4 @@
 * xref:index.adoc[]
-** xref:create-react-app.adoc[]
-** xref:react.adoc[]
 ** xref:react-dom.adoc[]
 ** xref:hooks.adoc[]
 ** xref:jsx.adoc[]
