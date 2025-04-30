@@ -1,5 +1,10 @@
 * xref:index.adoc[]
 ** xref:react-dom.adoc[]
+** xref:props.adoc[]
 ** xref:hooks.adoc[]
 ** xref:jsx.adoc[]
 ** xref:faq.adoc[]
+** Examples
+*** xref:examples/counter.adoc[]
+*** xref:examples/todos.adoc[]
+*** xref:examples/useRef.adoc[]

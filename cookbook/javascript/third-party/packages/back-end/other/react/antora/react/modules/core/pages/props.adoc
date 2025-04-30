@@ -1,0 +1,51 @@
+= Props
+
+Props are like attributes in HTML
+
+[,jsx]
+----
+
+function ... {
+    return (
+        <MyComponent my_prop_name={ my_prop_value } />
+    )
+}
+// ...
+
+function MyComponent({ my_prop_name }) {
+    // ...
+    return (
+        { my_prop_name }
+    )
+}
+----
+
+[,tsx,title="Parent.tsx"]
+----
+import Button from './Child.tsx';
+
+function App() {
+    return (
+        <>
+            <Child bkg_colour="white" text="Text" onClick={ handlerFct }/>
+        </>
+    );
+}
+
+export default App;
+----
+
+[,tsx,title="Child.tsx"]
+----
+function Child(props) {
+    return (
+        <div  
+            style={{ backgroundColor: props.bkg_colour }} 
+            onClick={ props.handlerFct } >
+            { props.text }
+        </div>
+    );
+}
+
+export default Child;
+----

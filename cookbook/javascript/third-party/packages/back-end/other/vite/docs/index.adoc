@@ -2,26 +2,35 @@
 :toc: left
 :toclevels: 8
 :url-website: https://vite.dev/
+:url-docs: https://vite.dev/guide/
 :url-repo: https://github.com/vitejs/vite
 
 {url-website}[[website\]]
+{url-docs}[[docs\]]
 {url-repo}[[repo\]]
 
-== Project
-
-https://vitejs.dev/guide/
+== Installation
 
 [source,bash]
 ----
-pnpm create vite-app PATH_TO_PRJ
-cd PATH_TO_PRJ
-pnpm install
+pnpm create vite
 ----
+
+// [source,bash]
+// ----
+// pnpm create vite-app PATH_TO_PRJ
+// ----
+
+Run
 
 [source,bash]
 ----
 pnpm run dev
 ----
+
+== `vite.config.ts`
+
+https://vite.dev/config/[[docs\]]
 
 == Aliases
 
@@ -43,7 +52,8 @@ ____
 
 [quote,https://jasonwatmore.com/post/2022/05/28/vue-3-vite-access-environment-variables-from-dotenv-env]
 ____
-to access environment variables from the client app they must be prefixed with VITE_. Otherwise they will only be accessible on the server side.
+to access environment variables from the client app they must be prefixed with `VITE_`. 
+Otherwise they will only be accessible on the server side.
 ____
 
 [source,javascript]
@@ -62,4 +72,31 @@ const myVar = import.meta.env.VITE_MY_VAR;
 VITE_MY_VAR='MY_VALUE'
 ----
 
+== Minimal Project
 
+=== React
+
+....
+react-project/
+├── src/
+│   ├── App.tsx
+│   └── main.tsx
+├── index.html
+└── ...
+....
+
+[,html,title="index.html"]
+----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimal React Project</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+----

@@ -42,10 +42,3 @@ https://create-react-app.dev/docs/proxying-api-requests-in-development/
     // ...
 }
 ----
-
-== Global Variables
-
-[,bash,title=".env"]
-----
-REACT_APP_VARIABLE_NAME = VARIABLE_VALUE
-----

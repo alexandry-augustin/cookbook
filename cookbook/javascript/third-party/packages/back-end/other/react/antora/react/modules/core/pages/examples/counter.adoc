@@ -1,0 +1,33 @@
+= Counter
+
+[,tsx,title="App.tsx"]
+----
+import { useState } from 'react'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  const onAdd = () => {
+    setCount(count + 1);
+  }
+
+  const onSub = () => {
+    setCount(count - 1);
+  }
+
+  const onReset = () => {
+    setCount(0);
+  }
+
+  return (
+    <>
+      <button onClick={ onAdd }>+</button>
+      <div>{ count }</div>
+      <button onClick={ onSub }>-</button>
+      <button onClick={ onReset }>Reset</button>
+    </>
+  )
+}
+
+export default App
+----

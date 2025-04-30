@@ -1,0 +1,10 @@
+= Speedy Web Compiler (SWC)
+:toc: left
+:url-website: https://swc.rs/
+:url-docs: https://swc.rs/docs/getting-started
+:url-repo: https://github.com/swc-project/swc
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+

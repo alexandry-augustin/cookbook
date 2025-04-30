@@ -1,2 +1,3 @@
 * xref:index.adoc[]
 ** xref:create-react-app.adoc[]
+** xref:react-devtools.adoc[]

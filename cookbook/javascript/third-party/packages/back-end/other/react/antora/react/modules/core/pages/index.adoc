@@ -18,3 +18,30 @@ pnpm install react
 == Usage
 
 Default port: 3000 (used by express?)
+
+[,tsx,title="main.tsx"]
+----
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.tsx'
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+----
+
+Or
+
+[,tsx,title="main.tsx"]
+----
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.js';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+// ReactDOM.render(<App />, document.getElementById('root'));
+----

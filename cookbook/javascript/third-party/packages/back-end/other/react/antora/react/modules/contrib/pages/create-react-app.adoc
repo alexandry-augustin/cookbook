@@ -20,3 +20,17 @@ pnpx create-react-app PRJ_NAME
 ----
 pnpm start
 ----
+
+== Global Variables
+
+[,https://dev.to/shriharimurali/leveraging-environment-variables-in-react-a-safe-effective-guide-1p4j]
+____
+If you've initialized your React project using Create React App (CRA), integrating environment variables is simple. [...]
+
+Note: CRA mandates that custom environment variables start with REACT_APP_ to ensure they are safe to expose in your JS code.
+____
+
+[,bash,title=".env"]
+----
+REACT_APP_VARIABLE_NAME = VARIABLE_VALUE
+----

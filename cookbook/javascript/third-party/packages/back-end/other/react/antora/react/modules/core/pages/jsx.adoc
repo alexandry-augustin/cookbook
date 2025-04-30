@@ -1,4 +1,4 @@
-= JSX
+= JSX / TSX
 
 https://reactjs.org/docs/introducing-jsx.html[[docs\]]
 
@@ -42,28 +42,6 @@ or
 |htmlFor
 |
 |===
-
-== Props
-
-Props are like attributes in HTML
-
-[,jsx]
-----
-
-function ... {
-    return (
-        <MyComponent my_prop_name={ my_prop_value } />
-    )
-}
-// ...
-
-function MyComponent({ my_prop_name }) {
-    // ...
-    return (
-        { my_prop_name }
-    )
-}
-----
 
 == Comments
 
