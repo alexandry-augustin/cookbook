@@ -1,0 +1,26 @@
+= For
+
+[,tsx,title="MyComponent.tsx"]
+----
+function MyComponent(...) {
+
+    const data = [
+        { value: "..." },
+        { value: "..." },
+    ];
+
+    return (
+        <>
+            <ul>
+                {
+                    data.map((item, idx) => {
+                        return (
+                            <li key={ idx }>{ item.value }</li>
+                        )
+                    })
+                }
+            </ul>
+        </>
+    );
+}
+----

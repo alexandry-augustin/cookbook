@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 import RenderCount from './RenderCount.tsx';
 
-function App() {
+export default function App() {
     
     const [value, setValue] = useState('');
 
@@ -18,15 +18,13 @@ function App() {
       </>
     );
 }
-  
-export default App;
 ----
 
 [,tsx,title="RenderCount.tsx"]
 ----
 import { useEffect, useRef } from 'react';
 
-function RenderCount() {
+export default function RenderCount() {
     
     const count = useRef(1);
 
@@ -40,6 +38,4 @@ function RenderCount() {
       </>
     );
 }
-  
-export default RenderCount;
 ----

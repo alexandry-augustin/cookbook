@@ -1,0 +1,46 @@
+= Components
+
+[,tsx,title="MyComponent.tsx"]
+----
+function MyComponent(...) {
+    return (
+        <>
+            {/* ... */}
+        </>
+    );
+}
+
+export default MyComponent;
+----
+
+Or
+
+[,tsx,title="MyComponent.tsx"]
+----
+function MyChildComponent(...) { ... }
+
+export default function MyComponent(...) {
+    return (
+        <>
+            <MyChildComponent />
+            {/* ... */}
+        </>
+    );
+}
+----
+
+[NOTE]
+====
+Return `null` to prevent the component from rendering.
+
+[,https://react.dev/learn/conditional-rendering]
+____
+In practice, returning `null` from a component isn't common because it might surprise a developer trying to render it. 
+More often, you would conditionally include or exclude the component in the parent component's JSX. 
+____
+
+[,https://react.dev/learn/conditional-rendering]
+____
+React considers `false` as a "hole" in the JSX tree, just like `null` or `undefined`, and doesn't render anything in its place.
+____
+====

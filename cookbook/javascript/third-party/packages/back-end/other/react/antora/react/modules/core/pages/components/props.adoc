@@ -12,17 +12,17 @@ function ParentComponent() {
     )
 }
 
-function ChildComponent(props) {
+function ChildComponent({ prop_name }) {
     return (
-        <>{ props.prop_name }</>
+        <>{ prop_name }</>
     )
 }
 
 // Or
 
-function ChildComponent({ prop_name }) {
+function ChildComponent(props) {
     return (
-        <>{ prop_name }</>
+        <>{ props.prop_name }</>
     )
 }
 ----
@@ -33,20 +33,19 @@ function ChildComponent({ prop_name }) {
 ----
 import Button from './Child.tsx';
 
-function App() {
+export default function App() {
     return (
         <>
             <Child bkg_colour="white" text="Text" onClick={ handlerFct }/>
         </>
     );
 }
-
-export default App;
 ----
 
 [,tsx,title="Child.tsx"]
 ----
-function Child(props) {
+
+export default function Child(props) {
     return (
         <div  
             style={{ backgroundColor: props.bkg_colour }} 
@@ -55,7 +54,33 @@ function Child(props) {
         </div>
     );
 }
-
-export default Child;
 ----
 --
+
+== Default Values
+
+[,jsx]
+----
+function MyComponent({ prop_name="default_value" }) {
+    return (
+        <>{ prop_name }</>
+    )
+}
+----
+
+=== `defaultProps` [DEPRECATED]
+
+https://sophiabits.com/blog/stop-using-defaultprops[Stop using `defaultProps`!]
+
+[,jsx]
+----
+default export function MyComponent(props) {
+    return (
+        <>{ props.id }</>
+    )
+}
+
+MyComponent.defaultProps = {
+    id: "123"
+};
+----
