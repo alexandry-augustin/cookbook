@@ -6,3 +6,4 @@ nav:
 - modules/core/nav.adoc
 - modules/contrib/nav.adoc
 - modules/third-party/nav.adoc
+- modules/nextjs/nav.adoc

@@ -8,6 +8,5 @@
 ** xref:dnd-kit.adoc[]
 ** xref:dockview.adoc[]
 ** xref:react-mosaic.adoc[]
-** xref:nextjs.adoc[]
 ** xref:remix.adoc[]
 ** xref:waku.adoc[]

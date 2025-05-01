@@ -1,0 +1,10 @@
+= `useId`
+:url-doc: https://react.dev/reference/react/useId
+
+{url-doc}[[doc\]]
+
+----
+import { useId } from 'react';
+
+const id = useId();
+----

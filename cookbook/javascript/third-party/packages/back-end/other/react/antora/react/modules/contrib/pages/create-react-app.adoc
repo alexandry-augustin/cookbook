@@ -21,6 +21,13 @@ pnpx create-react-app PRJ_NAME
 pnpm start
 ----
 
+[NOTE]
+====
+By default the application run on port `3000`.
+
+See: https://stackoverflow.com/questions/40714583/how-to-specify-a-port-to-run-a-create-react-app-based-project[How to specify a port to run a create-react-app based project?]
+====
+
 == Global Variables
 
 [,https://dev.to/shriharimurali/leveraging-environment-variables-in-react-a-safe-effective-guide-1p4j]

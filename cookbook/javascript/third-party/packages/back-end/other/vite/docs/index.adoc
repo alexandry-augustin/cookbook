@@ -21,6 +21,18 @@ pnpm create vite
 // pnpm create vite-app PATH_TO_PRJ
 // ----
 
+[source,bash]
+----
+# Create Vite + React app using npm
+npm create vite@latest vite-react-app -- --template react-ts
+
+# Create Vite + React app using yarn
+yarn create vite --template react-ts
+
+# Create Vite + React app using pnpm
+pnpm create vite --template react-ts
+----
+
 Run
 
 [source,bash]

@@ -1,25 +1,34 @@
 = Props
 
-Props are like attributes in HTML
+Props are like attributes in HTML.
 
 [,jsx]
 ----
-
-function ... {
+function ParentComponent() {
     return (
-        <MyComponent my_prop_name={ my_prop_value } />
+        <>
+            <ChildComponent prop_name={ prop_value } />
+        </>
     )
 }
-// ...
 
-function MyComponent({ my_prop_name }) {
-    // ...
+function ChildComponent(props) {
     return (
-        { my_prop_name }
+        <>{ props.prop_name }</>
+    )
+}
+
+// Or
+
+function ChildComponent({ prop_name }) {
+    return (
+        <>{ prop_name }</>
     )
 }
 ----
 
+[comment]
+--
 [,tsx,title="Parent.tsx"]
 ----
 import Button from './Child.tsx';
@@ -49,3 +58,4 @@ function Child(props) {
 
 export default Child;
 ----
+--

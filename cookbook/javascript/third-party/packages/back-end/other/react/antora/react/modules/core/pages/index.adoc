@@ -21,15 +21,11 @@ Default port: 3000 (used by express?)
 
 [,tsx,title="main.tsx"]
 ----
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+import { createRoot } from 'react-dom/client';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import App from './App.tsx';
+
+createRoot(document.getElementById('root') as HTMLElement ).render(<App />)
 ----
 
 Or
@@ -38,10 +34,13 @@ Or
 ----
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.js';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from './App.tsx';
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(<App />);
 
+// NOTE Deprecation notice: ReactDOM.render is no longer supported in React 18
+// https://stackoverflow.com/questions/71668256/deprecation-notice-reactdom-render-is-no-longer-supported-in-react-18
 // ReactDOM.render(<App />, document.getElementById('root'));
 ----

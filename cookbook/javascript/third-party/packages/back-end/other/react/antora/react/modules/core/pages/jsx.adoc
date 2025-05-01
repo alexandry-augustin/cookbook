@@ -4,6 +4,17 @@ https://reactjs.org/docs/introducing-jsx.html[[docs\]]
 
 Babel transpiles JSX into regular javascript.
 
+Use `return` with parenthesis to spread the code on multiple lines: 
+
+[,jsx,title='fragment']
+----
+return (
+  <>
+      {/* ... */}
+  </>
+)
+----
+
 == Fragment
 
 [,jsx,title='fragment']
@@ -24,8 +35,10 @@ or
 
 == Tags
 
+[cols="m,m,1"]
 |===
 |HTML |React |Remarks
+
 |class
 |className
 |
@@ -52,8 +65,7 @@ https://wesbos.com/react-jsx-comments
 {/* A JSX comment */}
 
 {/* 
-  Multi
-  line
-  comment
+  A multi-line
+  JSX comment
 */}
 ----
