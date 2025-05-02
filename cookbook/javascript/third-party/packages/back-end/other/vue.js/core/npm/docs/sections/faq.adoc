@@ -1,0 +1,39 @@
+= FAQs
+
+== `ref` vs `reactive`
+
+// === `ref`
+// === `reactive`
+
+docs: 
+https://vuejs.org/guide/essentials/reactivity-fundamentals.html#ref[[`ref`\]]
+https://vuejs.org/guide/essentials/reactivity-fundamentals.html#reactive[[`reactive`\]]
+
+https://stackoverflow.com/questions/61452458/ref-vs-reactive-in-vue-3[ref vs reactive in Vue 3?]
+
+[,https://vuejs.org/guide/essentials/reactivity-fundamentals.html]
+____
+[no] need to append `.value` when using the `ref` in the template. 
+For convenience, `ref` 's are automatically unwrapped when used inside templates (with a few https://vuejs.org/guide/essentials/reactivity-fundamentals.html#caveat-when-unwrapping-in-templates[caveats]).
+____
+
+[,https://vuejs.org/guide/essentials/reactivity-fundamentals.html]
+____
+Non-primitive values are turned into reactive proxies [by `ref`] via `reactive()`
+____
+
+[,https://vuejs.org/guide/essentials/reactivity-fundamentals.html#reactive]
+____
+Unlike a `ref` which wraps the inner value in a special object, `reactive()` makes an object itself reactive
+____
+
+[,https://vuejs.org/guide/essentials/reactivity-fundamentals.html#reactive]
+____
+the returned value from `reactive()` is a Proxy of the original object, which is not equal to the original object [...]
+Only the proxy is reactive - mutating the original object will not trigger updates. 
+____
+
+* `ref()` takes the argument and returns it wrapped within a ref object with a `.value` property
+* `ref()` is calling `reactive()` behind the scenes
+* `reactive()` only takes objects, *NOT* JS primitives
+* `ref()` has a `.value` property for reassigning, `reactive()` does not have this and therefore CANNOT be reassigned

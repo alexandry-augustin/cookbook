@@ -12,6 +12,12 @@
 > "The React Framework for Production" 
 -- https://nextjs.org/
 
+[,https://www.geeksforgeeks.org/getting-started-with-next-js/]
+____
+Next.js [...] doesn't come with built-in state management solutions. 
+Developers can use libraries like Redux or React Context for state management.
+____
+
 == Installation
 
 https://nextjs.org/docs/app/getting-started/installation[[docs\]]
@@ -28,16 +34,66 @@ Start the development server
 pnpm run dev
 ----
 
-[,https://nextjs.org/docs#app-router-vs-pages-router]
-____
-App Router vs Pages Router
+== Minimal Project
 
-Next.js has two different routers: the App Router and the Pages Router. 
-The App Router is a newer router that allows you to use React's latest features, such as Server Components and Streaming. 
-The Pages Router is the original Next.js router, which allowed you to build server-rendered React applications and continues to be supported for older Next.js applications.
+....
+./
+├── public/
+│   └── ...
+├── app/
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.mjs
+└── tsconfig.json
+....
 
-At the top of the sidebar, you'll notice a dropdown menu that allows you to switch between the App Router and the Pages Router features. 
-Since there are features that are unique to each directory, it's important to keep track of which tab is selected.
+[,javascript,title="next.config.ts"]
+----
+import type { NextConfig } from "next";
 
-The breadcrumbs at the top of the page will also indicate whether you're viewing App Router docs or Pages Router docs.
-____
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default nextConfig;
+----
+
+[,css,title="globals.css"]
+----
+----
+
+[,javascript,title="layout.tsx"]
+----
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "My Title",
+  description: "My description",
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
+  return (
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
+  );
+}
+----
+
+[,javascript,title="page.tsx"]
+----
+export default function Home() {
+  return (
+    <div>Home</div>
+  );
+}
+----

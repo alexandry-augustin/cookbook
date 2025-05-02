@@ -1,0 +1,72 @@
+= App Router
+
+https://medium.com/@ankitsingh80741/ultimate-guide-to-routing-with-the-app-router-in-next-js-14-0a19ecb67150[[tutorial\]]
+
+[,https://medium.com/@ankitsingh80741/ultimate-guide-to-routing-with-the-app-router-in-next-js-14-0a19ecb67150]
+____
+The App Router, based on the` app/` directory, allows developers to create better page layouts, handle parallel rendering, and seamlessly integrate with React 18 features such as Suspense and Streaming.
+
+This new approach is much more scalable than the legacy pages/ directory and is optimized for both client-side rendering (CSR) and server-side rendering (SSR).
+____
+
+[,https://medium.com/@ankitsingh80741/ultimate-guide-to-routing-with-the-app-router-in-next-js-14-0a19ecb67150]
+____
+Each folder represents a new route, and the `page.js` file within the folder serves as the content for that route.
+____
+
+....
+app/
+├── about/
+│   ├── ...
+│   └── page.tsx
+├── contact/
+│   ├── ...
+│   └── page.tsx
+├── layout.tsx
+├── loading.tsx
+├── error.tsx
+└── page.tsx
+....
+
+[,https://medium.com/@ankitsingh80741/ultimate-guide-to-routing-with-the-app-router-in-next-js-14-0a19ecb67150]
+____
+The App Router uses the app/ directory to handle routing, layouts, error pages, and more. Here’s the key structure of the app/ directory:
+
+`app/layout.js`:: Shared layout across all routes.
+`app/page.js`:: Main page file for a route.
+`app/loading.js`:: Displays a loading indicator while fetching data.
+`app/error.js`:: Custom error handling for routes.
+____
+
+[,tsx,title="layout.tsx"]
+----
+export default function Layout({ children }: Readonly<{ children: React.ReactNode; }>) {
+    return (
+      <div>
+        <header>Header</header>
+        <main>{children}</main>
+        <footer>Footer</footer>
+      </div>
+    );
+}
+----
+
+[,https://medium.com/@ankitsingh80741/ultimate-guide-to-routing-with-the-app-router-in-next-js-14-0a19ecb67150]
+____
+This layout would be applied to all the pages under the directory where it’s placed, ensuring consistent structure and reducing repetition.
+____
+
+== Dynamic Routes
+
+....
+app/
+├── items/
+│   └── page.tsx
+│       └── [id]
+│           └── page.tsx
+└── ...
+....
+
+== Route Groups
+
+`app/(items)`

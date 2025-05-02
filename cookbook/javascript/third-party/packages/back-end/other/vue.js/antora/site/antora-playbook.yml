@@ -1,5 +1,5 @@
 site:
-  title: vue
+  title: Vue
   start_page: vue::index.adoc
 content:
   sources:

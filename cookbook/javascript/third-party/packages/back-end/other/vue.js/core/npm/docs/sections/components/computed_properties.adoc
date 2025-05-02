@@ -5,16 +5,23 @@ https://vuejs.org/guide/essentials/computed.html[[docs\]]
 [,vue]
 ----
 <script setup>
-import { reactive, computed } from 'vue';
+import { 
+  ref, 
+  computed 
+} from 'vue';
 
-const value = reactive(0);
+const value = ref(1);
 
 const isPositive = computed(() => {
-  return value > 0 ? true : false;
+  return value.value > 0 ? true : false;
 });
+// const isPositive = () => {
+//   return value.value > 0 ? true : false;
+// };
 </script>
 
 <template>
+  <button @click="value = -1*value">Toggle</button>
   {{ isPositive }}
 </template>
 ----
