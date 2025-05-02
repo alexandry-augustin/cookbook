@@ -2,6 +2,8 @@
 
 Props are like attributes in HTML.
 
+See "Prop Drilling".
+
 [,jsx]
 ----
 function ParentComponent() {

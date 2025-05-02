@@ -1,1 +1,42 @@
 = `useContext`
+:url-docs: https://react.dev/reference/react/useContext
+
+{url-docs}[[docs\]]
+
+[,tsx,title="ParentComponent.tsx"]
+----
+import { useState, createContext } from 'react';
+
+import ChildComponent from './ChildComponent';
+
+export const MyContext = createContext(0);
+
+export default function ParentComponent() {
+
+    const myVar = useState(0);
+
+    return (
+        <MyContext.Provider value={ myVar }>
+            <ChildComponent />
+        </MyContext.Provider>
+    );
+}
+----
+
+[,tsx,title="ChildComponent.tsx"]
+----
+import { useContext } from 'react';
+
+import { MyContext } from './ParentComponent';
+
+export default function ChildComponent() {
+
+    const myVar = useContext(MyContext);
+
+    return (
+        <>
+            { myVar }
+        </>
+    );
+}
+----

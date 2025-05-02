@@ -11,7 +11,7 @@ import {
 
 export default function MyComponent() {
 
-    const [ myVar, setMyVar ] = useState([]);
+    const [ myVar, setMyVar ] = useState(null);
 
     useEffect(() => {
         // ...
