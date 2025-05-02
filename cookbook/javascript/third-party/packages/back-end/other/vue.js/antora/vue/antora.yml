@@ -1,0 +1,5 @@
+name: vue
+version: ~
+title: Vue
+nav:
+- modules/ROOT/nav.adoc

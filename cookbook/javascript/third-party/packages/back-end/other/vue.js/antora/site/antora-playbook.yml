@@ -1,0 +1,12 @@
+site:
+  title: vue
+  start_page: vue::index.adoc
+content:
+  sources:
+  - url: ../git/vue/
+    branches: HEAD
+ui:
+  bundle:
+    # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: ./ui-bundle.zip
+    snapshot: true
