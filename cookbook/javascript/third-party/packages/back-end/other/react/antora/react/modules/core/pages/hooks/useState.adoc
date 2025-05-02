@@ -1,3 +1,19 @@
 = `useState`
 
-Return a stateful value and a function to update it
+Return a stateful value and a function to update it.
+
+[,tsx,title="MyComponent.tsx"]
+----
+import { useState } from 'react';
+
+export default function MyComponent() {
+
+    const [ myVar, setMyVar ] = useState([]);
+
+    return (
+        <>
+            {/* ... */}
+        </>
+    );
+}
+----

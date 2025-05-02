@@ -1,3 +1,26 @@
 = `useEffect`
 
-Perform side effects in function components
+If `[ myVar ]` is `[]`, the function will run once on initialisation.
+
+[,tsx,title="MyComponent.tsx"]
+----
+import { 
+    useState, 
+    useEffect 
+} from 'react';
+
+export default function MyComponent() {
+
+    const [ myVar, setMyVar ] = useState([]);
+
+    useEffect(() => {
+        // ...
+    }, [ myVar ]);
+
+    return (
+        <>
+            {/* ... */}
+        </>
+    );
+}
+----

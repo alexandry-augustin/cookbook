@@ -1,1 +1,19 @@
 = `useRef`
+
+[,tsx,title="MyComponent.tsx"]
+----
+import { useRef } from 'react';
+
+export default function MyComponent() {
+    const inputNameRef = useRef(null);
+
+    // FIXME
+    inputNameRef.current.value = "placeholder";
+
+    return (
+        <>
+            <input type="text" ref={inputNameRef} />
+        </>
+    );
+}
+----

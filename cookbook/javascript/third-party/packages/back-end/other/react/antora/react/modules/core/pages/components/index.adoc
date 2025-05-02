@@ -1,4 +1,7 @@
 = Components
+// :url-docs: 
+
+// {url-docs}[[docs\]]
 
 [,tsx,title="MyComponent.tsx"]
 ----
@@ -44,3 +47,36 @@ ____
 React considers `false` as a "hole" in the JSX tree, just like `null` or `undefined`, and doesn't render anything in its place.
 ____
 ====
+
+[comment]
+--
+= Component Class
+:url-docs: https://react.dev/reference/react/Component
+
+{url-docs}[[docs\]]
+
+* https://react.dev/reference/react/Component#component[`Component`]
+* https://react.dev/reference/react/Component#context[`context`]
+* https://react.dev/reference/react/Component#props[`props`]
+* https://react.dev/reference/react/Component#state[`state`]
+* https://react.dev/reference/react/Component#constructor[`constructor(props)`]
+* https://react.dev/reference/react/Component#componentdidcatch[`componentDidCatch(error, info)`]
+* https://react.dev/reference/react/Component#componentdidmount[`componentDidMount()`]
+* https://react.dev/reference/react/Component#componentdidupdate[`componentDidUpdate(prevProps, prevState, snapshot?)`]
+* https://react.dev/reference/react/Component#componentwillmount[`componentWillMount()`]
+* https://react.dev/reference/react/Component#componentwillreceiveprops[`componentWillReceiveProps(nextProps)`]
+* https://react.dev/reference/react/Component#componentwillupdate[`componentWillUpdate(nextProps, nextState)`]
+* https://react.dev/reference/react/Component#componentwillunmount[`componentWillUnmount()`]
+* https://react.dev/reference/react/Component#forceupdate[`forceUpdate(callback?)`]
+* https://react.dev/reference/react/Component#getsnapshotbeforeupdate[`getSnapshotBeforeUpdate(prevProps, prevState)`]
+* https://react.dev/reference/react/Component#render[`render()`]
+* https://react.dev/reference/react/Component#setstate[`setState(nextState, callback?)`]
+* https://react.dev/reference/react/Component#shouldcomponentupdate[`shouldComponentUpdate(nextProps, nextState, nextContext)`]
+* https://react.dev/reference/react/Component#unsafe_componentwillmount[`UNSAFE_componentWillMount()`]
+* https://react.dev/reference/react/Component#unsafe_componentwillreceiveprops[`UNSAFE_componentWillReceiveProps(nextProps, nextContext)`]
+* https://react.dev/reference/react/Component#unsafe_componentwillupdate[`UNSAFE_componentWillUpdate(nextProps, nextState)`]
+* https://react.dev/reference/react/Component#static-contexttype[`static contextType`]
+* https://react.dev/reference/react/Component#static-defaultprops[`static defaultProps`]
+* https://react.dev/reference/react/Component#static-getderivedstatefromerror[`static getDerivedStateFromError(error)`]
+* https://react.dev/reference/react/Component#static-getderivedstatefromprops[`static getDerivedStateFromProps(props, state)`]
+--

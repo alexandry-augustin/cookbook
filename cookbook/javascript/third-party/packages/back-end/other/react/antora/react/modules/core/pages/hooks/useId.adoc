@@ -3,8 +3,20 @@
 
 {url-doc}[[doc\]]
 
+[,tsx,title="MyComponent.tsx"]
 ----
 import { useId } from 'react';
 
-const id = useId();
+export default function MyComponent() {
+
+    const id = useId();
+
+    return (
+        <>
+            {/* ... */}
+        </>
+    );
+}
 ----
+
+    
