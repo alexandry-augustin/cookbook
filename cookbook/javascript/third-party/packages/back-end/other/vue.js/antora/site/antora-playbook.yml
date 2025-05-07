@@ -1,9 +1,15 @@
 site:
   title: Vue
-  start_page: vue::index.adoc
+  start_page: ROOT::index.adoc
 content:
   sources:
-  - url: ../git/vue/
+  - url: ../git/ROOT/
+    branches: HEAD
+  - url: ../git/core/
+    branches: HEAD
+  - url: ../git/contrib/
+    branches: HEAD
+  - url: ../git/third-party/
     branches: HEAD
 ui:
   bundle:

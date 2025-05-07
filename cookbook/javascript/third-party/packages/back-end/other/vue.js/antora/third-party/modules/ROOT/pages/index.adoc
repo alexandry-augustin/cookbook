@@ -1,6 +1,4 @@
 = Third-party
-:toc: left
-:toclevels: 8
 
 https://vuetifyjs.com/en/
 
@@ -18,19 +16,8 @@ https://www.npmjs.com/package/mosha-vue-toastify[[npm\]]
 
 For displaying alerts
 
-== `zod`
-
-https://zod.dev/[[website\]]
-https://github.com/colinhacks/zod[[repo\]]
-
-A schema declaration and validation library
-
-include::./sections/typescript.adoc[leveloffset=+1]
-
 == Mobile Apps
 
 * Vue Native [DEPRECATED] https://vue-native.io/[[website\]]
-* Ionic
-* Nativescript
-
-include::./sections/vapor/index.adoc[leveloffset=+1]
+// * Ionic
+// * Nativescript

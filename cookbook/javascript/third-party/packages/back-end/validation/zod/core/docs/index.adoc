@@ -1,4 +1,4 @@
-= zod
+= `zod`
 :toc: left
 :toclevels: 8
 :url-docs: https://zod.dev/
@@ -6,6 +6,8 @@
 
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
+
+A schema declaration and validation library
 
 No dependency
 

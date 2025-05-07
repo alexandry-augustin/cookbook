@@ -1,15 +1,41 @@
 = Input
 
-[,tsx,title="MyInput.tsx"]
+== Controller
+
+[,tsx,title="MyCompoonent.tsx"]
 ----
 import { useState } from 'react';
 
 export default function MyInput() {
     const [value, setValue] = useState('');
+    
     return (
         <>
-            <input type="text" value={ value } onChange={ e => setValue(e.target.value) }/>
+            <input 
+                type="text" 
+                value={ value } 
+                onChange={ e => setValue(e.target.value) }/>
             <div>Value: { value }</div>
+        </>
+    );
+}
+----
+
+== Uncontroller
+
+[,tsx,title="MyCompoonent.tsx"]
+----
+import { useRef } from 'react';
+
+export default function MyInput() {
+    const inputRef = useRef<HTMLInputElement>(null)
+
+    return (
+        <>
+            <input
+                type="text"
+                ref={ inputRef } />
+            <div>Value: { inputRef.current?.value }</div>
         </>
     );
 }

@@ -3,6 +3,10 @@
 :url-website: https://reactjs.org/
 :url-github: https://github.com/facebook/react/
 
+{url-wiki}[[wiki\]]
+{url-website}[[website\]]
+{url-github}[[github\]]
+
 [quote,https://www.makeuseof.com/react-vs-angular-popular/]
 ____
 Many social media companies use React, including Facebook, Instagram, and Skype. Other companies that have built apps using React include Uber, AirBnB, Netflix, and Amazon.

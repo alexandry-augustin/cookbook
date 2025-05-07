@@ -1,10 +1,38 @@
 = Examples
 
+== Counter
+
+[,vue,title="Counter.jsx"]
+----
+import {
+    ref, 
+    computed, 
+    defineComponent
+} from 'vue';
+
+export const Counter = defineComponent({
+    setup() {
+        const count = ref(0);
+        const inc = () => count.value++;
+        const dec = () => count.value--;
+        const count2 = computed(() => count.value * 2);
+
+        return () => (
+            <>
+                <div>{count.value} x 2 = {count2.value}</div>
+                <button onClick={inc}>+</button>
+                <button onClick={dec}>-</button>
+            </>
+        )
+    }
+})
+----
+
 == WindowSize
 
 https://www.webmound.com/get-screen-size-check-resize-vue/[[ref\]]
 
-[source,'vue']
+[,vue]
 ----
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
@@ -34,7 +62,7 @@ onUnmounted(() => {
 </template>
 ----
 
-[source,'vue']
+[,vue]
 ----
 <script setup>
 import { ref } from 'vue';

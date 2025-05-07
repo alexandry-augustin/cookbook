@@ -1,5 +1,5 @@
-name: vue
+name: ROOT
 version: ~
-title: Vue
+title: ROOT
 nav:
 - modules/ROOT/nav.adoc

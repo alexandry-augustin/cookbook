@@ -1,5 +1,0 @@
-= Vue: Contrib
-:toc: left
-:toclevels: 8
-
-include::./sections/project_scaffolding/index.adoc[leveloffset=+1]

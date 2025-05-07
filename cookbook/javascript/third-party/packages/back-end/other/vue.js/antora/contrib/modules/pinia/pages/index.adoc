@@ -1,5 +1,4 @@
 = Pinia
-:toc: left
 :url-website: https://pinia.vuejs.org/
 
 {url-website}[[website\]]
@@ -42,5 +41,3 @@ app.mount('#app');
     {{ n }}
 </template>
 ----
-
-include::./sections/examples.adoc[leveloffset=+1]

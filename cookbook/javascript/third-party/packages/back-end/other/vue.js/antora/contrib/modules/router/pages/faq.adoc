@@ -1,0 +1,10 @@
+= FAQs
+
+== Button as Link
+
+https://stackoverflow.com/questions/45638239/enclosing-a-router-link-tag-in-a-button-in-vuejs[[ref\]]
+
+[source,html]
+----
+<button @click="$router.push('about')">Click to Navigate</button>
+----
