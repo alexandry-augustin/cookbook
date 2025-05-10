@@ -4,7 +4,7 @@
 
 Two-way data-binding
 
-[,tsx,title="MyCompoonent.tsx"]
+[,tsx,title="MyComponent.tsx"]
 ----
 import { useState } from 'react';
 
@@ -25,7 +25,7 @@ export default function MyInput() {
 
 == Uncontrolled
 
-[,tsx,title="MyCompoonent.tsx"]
+[,tsx,title="MyComponent.tsx"]
 ----
 import { useRef } from 'react';
 

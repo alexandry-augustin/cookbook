@@ -20,3 +20,4 @@
 *** xref:examples/counter.adoc[]
 *** xref:examples/todos.adoc[]
 *** xref:examples/rendering-counter.adoc[]
+*** xref:examples/force-rerender.adoc[]

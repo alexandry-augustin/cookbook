@@ -1,0 +1,16 @@
+= Force Re-render
+
+NOTE: See https://stackoverflow.com/questions/46240647/react-how-to-force-to-re-render-a-functional-component[How to (force to) re-render a functional component?].
+
+[,tsx,title="MyComponent.tsx"]
+----
+import { useRef, useReducer } from 'react';
+
+export default function MyComponent() {
+  const [, forceUpdate] = useReducer(x => x + 1, 0);
+
+  return (
+    <div onClick={forceUpdate}>Refresh</div>
+  );
+}
+----

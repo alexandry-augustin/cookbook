@@ -15,6 +15,11 @@ The idea for tsx came about during a time when the Node.js ecosystem was getting
 Back then, ts-node was the go-to tool for running TypeScript in Node.js, but it lacked ESM support and was quite complicated to use.
 ____
 
+[,https://tsx.is/typescript]
+____
+`tsx` does not type check your code on its own and expects it to be handled separately. 
+____
+
 == Installation
 
 [,bash]
@@ -26,7 +31,7 @@ pnpm add -D tsx
 ----
 {
     "scripts": {
-        "start": "tsx ./file.ts"
+        "start": "tsc --noEmit && tsx ./file.ts"
     }
 }
 ----

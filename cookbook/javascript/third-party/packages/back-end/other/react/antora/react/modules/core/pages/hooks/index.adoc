@@ -1,1 +1,4 @@
 = Hooks
+:url-docs: https://react.dev/reference/react/hooks
+
+{url-docs}[[docs\]]
