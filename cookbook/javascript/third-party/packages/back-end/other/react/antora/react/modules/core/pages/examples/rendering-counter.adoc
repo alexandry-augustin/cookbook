@@ -1,4 +1,4 @@
-= useRef
+= Rendering Counter
 
 [,tsx,title="App.tsx"]
 ----

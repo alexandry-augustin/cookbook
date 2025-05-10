@@ -1,1 +1,1 @@
-= Pages Router
+= Pages Router [Legacy]

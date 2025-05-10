@@ -19,4 +19,4 @@
 *** xref:examples/input.adoc[]
 *** xref:examples/counter.adoc[]
 *** xref:examples/todos.adoc[]
-*** xref:examples/useRef.adoc[]
+*** xref:examples/rendering-counter.adoc[]

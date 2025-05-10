@@ -1,4 +1,5 @@
 * xref:index.adoc[]
+** xref:minimal-project.adoc[]
 ** xref:next.config.ts.adoc[]
 ** xref:routing/index.adoc[]
 *** xref:routing/app-router/index.adoc[]

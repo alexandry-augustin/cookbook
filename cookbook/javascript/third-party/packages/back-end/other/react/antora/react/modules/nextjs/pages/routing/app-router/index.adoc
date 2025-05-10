@@ -6,7 +6,7 @@ https://medium.com/@ankitsingh80741/ultimate-guide-to-routing-with-the-app-route
 ____
 The App Router, based on the` app/` directory, allows developers to create better page layouts, handle parallel rendering, and seamlessly integrate with React 18 features such as Suspense and Streaming.
 
-This new approach is much more scalable than the legacy pages/ directory and is optimized for both client-side rendering (CSR) and server-side rendering (SSR).
+This new approach is much more scalable than the legacy `pages/` directory and is optimized for both client-side rendering (CSR) and server-side rendering (SSR).
 ____
 
 [,https://medium.com/@ankitsingh80741/ultimate-guide-to-routing-with-the-app-router-in-next-js-14-0a19ecb67150]

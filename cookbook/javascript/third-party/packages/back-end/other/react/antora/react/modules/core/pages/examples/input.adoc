@@ -1,6 +1,8 @@
 = Input
 
-== Controller
+== Controlled
+
+Two-way data-binding
 
 [,tsx,title="MyCompoonent.tsx"]
 ----
@@ -21,7 +23,7 @@ export default function MyInput() {
 }
 ----
 
-== Uncontroller
+== Uncontrolled
 
 [,tsx,title="MyCompoonent.tsx"]
 ----

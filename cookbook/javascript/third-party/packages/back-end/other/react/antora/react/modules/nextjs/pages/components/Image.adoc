@@ -1,19 +1,44 @@
 = `Image`
+:url-docs: https://nextjs.org/docs/pages/api-reference/components/image
 
-[,javascript,title="MyComponent.tsx"]
+{url-docs}[[docs\]]
+
+....
+./
+├── app/
+│   ├── ....
+│   └── index.tsx
+├── assets/
+│   ├── ....
+│   └── my-image.png
+└── ...
+....
+
+[,tsx,title="index.tsx"]
 ----
-import Image from "next/image";
-
-export default function MyComponent() {
+import Image from 'next/image'
+import myImage from '../assets/my-image.png'
+ 
+export default function Home() {
   return (
-    <Image
-        className="dark:invert"
-        src="/next.svg"
-        alt="Next.js logo"
+    <div>
+      <Image 
+        src={myImage}
         width={180}
         height={38}
-        priority />
+        alt="My Image" />
+    </div>
   );
 }
+----
 
+== `priority`
+
+A boolean that indicates if the image should be preloaded.
+
+Default: `false`
+
+[,tsx,title="index.tsx"]
+----
+<Image priority={false} />
 ----

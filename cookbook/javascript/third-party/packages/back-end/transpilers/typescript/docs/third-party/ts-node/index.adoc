@@ -1,0 +1,56 @@
+= `ts-node`
+:toc: left
+:url-website: https://typestrong.org/ts-node/
+:url-docs: https://typestrong.org/ts-node/docs/
+:url-repo: https://github.com/TypeStrong/ts-node
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+https://github.com/TypeStrong/ts-node/issues/2140[Seeking sponsorship to restart development #2140]
+
+[,https://github.com/TypeStrong/ts-node/issues/2140]
+____
+If you are seeking an alternative to `ts-node`, I would recommend `tsx`.
+____
+
+[,https://typestrong.org/ts-node/docs/]
+____
+ts-node is a TypeScript execution engine and REPL for Node.js.
+
+It JIT transforms TypeScript into JavaScript, enabling you to directly execute TypeScript on Node.js without precompiling. This is accomplished by hooking node's module loading APIs, enabling it to be used seamlessly alongside other Node.js tools and libraries.
+____
+
+== Installation
+
+[,bash]
+----
+pnpm install --save-dev typescript
+pnpm install --save-dev ts-node
+
+# Depending on configuration, you may also need these
+pnpm install -D tslib @types/node
+----
+
+== Usage
+
+[,bash]
+----
+pnpx ts-node index.ts
+----
+
+=== ESM
+
+[,json,title="package.json"]
+----
+{
+	"type": "module",
+}
+----
+
+[,bash]
+----
+pnpx ts-node --esm index.ts
+----
+
