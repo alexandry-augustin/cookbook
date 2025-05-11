@@ -1,10 +1,12 @@
 = Counter
 
-[,tsx,title="App.tsx"]
+== `useState`
+
+[,tsx,title="MyComponent.tsx"]
 ----
 import { useState } from 'react'
 
-export default function App() {
+export default function MyComponent() {
   const [count, setCount] = useState(0);
 
   const onAdd = () => {
@@ -27,5 +29,72 @@ export default function App() {
       <button onClick={ onReset }>Reset</button>
     </>
   )
+}
+----
+
+== `useReducer`
+
+https://www.youtube.com/watch?v=rgp_iCVS8ys[[ref\]]
+
+[,tsx,title="MyComponent.tsx"]
+----
+import { useReducer } from 'react';
+
+interface State {
+    count: number,
+    isOdd: boolean
+}
+
+interface Action {
+    type: 'add' | 'sub' | 'reset'
+}
+
+const reducer = (state: State,  action: Action) => {
+
+    const { type } = action;
+
+    switch(type) {
+        case 'add': {
+            return { 
+                ...state, 
+                count: state.count + 1, 
+                isOdd: state.count % 2 == 0
+            };
+        }
+        case 'sub': {
+            return { 
+                ...state, 
+                count: state.count - 1, 
+                isOdd: state.count % 2 == 0
+            };
+        }
+        case 'reset': {
+            return { 
+                ...state, 
+                count: 0, 
+                isOdd: true
+            };
+        }
+        default:
+            return state;
+    }
+}
+
+export default function MyUseReducer() {
+
+    const [state, dispatch] = useReducer(reducer, { 
+        count: 0, 
+        isOdd: true
+    });
+
+    return (
+        <>New
+            <button onClick={ () => dispatch({ type: 'add'}) }>+</button>
+            <div>{ state.count }</div>
+            { state.isOdd ? <div>Odd</div> : <div>Even</div> }
+            <button onClick={ () => dispatch({ type: 'sub'}) }>-</button>
+            <button onClick={ () => dispatch({ type: 'reset'}) }>Reset</button>
+      </>
+    );
 }
 ----

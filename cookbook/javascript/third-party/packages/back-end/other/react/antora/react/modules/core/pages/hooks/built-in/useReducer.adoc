@@ -11,7 +11,7 @@ const reducer = (state,  action) => {
 }
 
 export default function MyComponent() {
-  const [state, dispatch] = useReducer(reducer, { age: 42 });
+  const [state, dispatch] = useReducer(reducer, { ... });
 
   return (
 

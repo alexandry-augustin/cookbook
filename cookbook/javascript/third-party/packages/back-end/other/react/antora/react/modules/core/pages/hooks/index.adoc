@@ -2,3 +2,9 @@
 :url-docs: https://react.dev/reference/react/hooks
 
 {url-docs}[[docs\]]
+
+[,https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component]
+____
+React applications are built from components. 
+Components are built from Hooks, whether built-in or custom.
+____

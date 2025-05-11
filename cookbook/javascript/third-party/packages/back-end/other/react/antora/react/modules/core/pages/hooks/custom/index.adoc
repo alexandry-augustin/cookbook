@@ -1,0 +1,33 @@
+= Custom
+:url-docs: https://react.dev/learn/reusing-logic-with-custom-hooks
+
+{url-docs}[[docs\]]
+
+[,https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component]
+____
+Hooks may return arbitrary values.
+____
+
+[,https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component]
+____
+Only Hooks and components can call other Hooks!
+____
+
+[,https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component]
+____
+Functions that don’t call Hooks don’t need to be Hooks.
+
+If your function doesn’t call any Hooks, avoid the `use` prefix. 
+____
+
+[,https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component]
+____
+You should give `use` prefix to a function (and thus make it a Hook) if it uses at least one Hook inside of it [...]
+
+Technically, this isn’t enforced by React.
+____
+
+[,https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component]
+____
+Custom Hooks let you share stateful logic, not state itself 
+____
