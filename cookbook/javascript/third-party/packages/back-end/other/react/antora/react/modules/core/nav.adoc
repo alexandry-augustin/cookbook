@@ -1,10 +1,17 @@
 * xref:index.adoc[]
+
+** xref:vue-migration.adoc[]
+
 ** xref:react-dom.adoc[]
+
 ** xref:components/index.adoc[]
 *** xref:components/props.adoc[]
+*** xref:components/dynamic_component.adoc[]
+
 ** xref:control_flow/index.adoc[]
 *** xref:control_flow/if.adoc[]
 *** xref:control_flow/for.adoc[]
+
 ** xref:StrictMode.adoc[]
 
 ** xref:hooks/index.adoc[]
@@ -29,6 +36,7 @@
 
 ** xref:jsx.adoc[]
 ** xref:faq.adoc[]
+
 ** Examples
 *** xref:examples/input.adoc[]
 *** xref:examples/counter.adoc[]

@@ -1,0 +1,20 @@
+= Dynamic Component
+
+[,tsx,MyComponent.tsx]
+----
+import React from "react";
+
+import ChildComponentA from "./ChildComponentA";
+import ChildComponentB from "./ChildComponentB";
+
+const components = {
+  first: ChildComponentA,  
+  second: ChildComponentb
+};
+
+export default function MyComponent() {
+  const CurrentComponent = components.first;
+
+  return <CurrentComponent />;
+}
+----
