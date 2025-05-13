@@ -21,8 +21,6 @@ pnpm install react
 
 == Usage
 
-Default port: 3000 (used by express?)
-
 [,tsx,title="main.tsx"]
 ----
 import { createRoot } from 'react-dom/client';

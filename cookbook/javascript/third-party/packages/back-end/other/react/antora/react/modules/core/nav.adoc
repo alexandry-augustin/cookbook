@@ -2,9 +2,9 @@
 ** xref:react-dom.adoc[]
 ** xref:components/index.adoc[]
 *** xref:components/props.adoc[]
-*** xref:components/control_flow/index.adoc[]
-**** xref:components/control_flow/if.adoc[]
-**** xref:components/control_flow/for.adoc[]
+** xref:control_flow/index.adoc[]
+*** xref:control_flow/if.adoc[]
+*** xref:control_flow/for.adoc[]
 ** xref:StrictMode.adoc[]
 
 ** xref:hooks/index.adoc[]

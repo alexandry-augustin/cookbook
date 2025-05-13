@@ -9,6 +9,8 @@
 {url-repo}[[repo\]]
 {url-wiki}[[wiki\]]
 
+https://www.reddit.com/r/nextjs/comments/14okgfu/how_easy_is_it_to_move_from_nuxt_to_nextjs/[How easy is it to move from Nuxt to NextJS?]
+
 > "The React Framework for Production" 
 -- https://nextjs.org/
 
@@ -40,4 +42,14 @@ Start the development server
 [,bash]
 ----
 pnpm run dev
+----
+
+Set the port https://stackoverflow.com/questions/60147499/how-to-set-port-in-next-js[[ref\]]:
+
+[,json,title="package.json"]
+----
+"scripts": { 
+    "dev": "next dev -p 8080",
+    "start": "next start -p 8080",
+},
 ----

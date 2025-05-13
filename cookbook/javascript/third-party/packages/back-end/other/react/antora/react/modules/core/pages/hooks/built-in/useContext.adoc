@@ -3,35 +3,38 @@
 
 {url-docs}[[docs\]]
 
-[,tsx,title="ParentComponent.tsx"]
+[,tsx,title="MyProvider.tsx"]
 ----
-import { useState, createContext } from 'react';
+import { 
+    useState, 
+    createContext 
+} from 'react';
 
-import ChildComponent from './ChildComponent';
+import MyConsumer from './MyConsumer';
 
 export const MyContext = createContext(0);
 
-export default function ParentComponent() {
+export default function MyProvider() {
 
-    const myVar = useState(0);
+    const [ myVar, setMyVar ] = useState(0);
 
     return (
-        <MyContext.Provider value={ myVar }>
-            <ChildComponent />
+        <MyContext.Provider value={ [ myVar, setMyVar ] }>
+            <MyConsumer />
         </MyContext.Provider>
     );
 }
 ----
 
-[,tsx,title="ChildComponent.tsx"]
+[,tsx,title="MyConsumer.tsx"]
 ----
 import { useContext } from 'react';
 
-import { MyContext } from './ParentComponent';
+import { MyContext } from './MyProvider';
 
-export default function ChildComponent() {
+export default function MyConsumer() {
 
-    const myVar = useContext(MyContext);
+    const [ myVar, setMyVar ] = useContext(MyContext);
 
     return (
         <>

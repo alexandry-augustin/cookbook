@@ -54,7 +54,7 @@ ____
 == Logical AND Operator (`&&`)
 // == Boolean Operators (`&&`)
 
-Render some JSX when the condition is true, or render nothing otherwise. 
+Render some JSX when the condition is `true`, or render nothing otherwise. 
 
 [,tsx,title="MyComponent.tsx"]
 ----

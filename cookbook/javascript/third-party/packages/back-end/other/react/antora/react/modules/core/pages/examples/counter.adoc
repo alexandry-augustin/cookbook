@@ -1,6 +1,6 @@
 = Counter
 
-== `useState`
+== Using `useState`
 
 [,tsx,title="MyComponent.tsx"]
 ----
@@ -32,7 +32,7 @@ export default function MyComponent() {
 }
 ----
 
-== `useReducer`
+== Using `useReducer`
 
 https://www.youtube.com/watch?v=rgp_iCVS8ys[[ref\]]
 
@@ -96,5 +96,62 @@ export default function MyUseReducer() {
             <button onClick={ () => dispatch({ type: 'reset'}) }>Reset</button>
       </>
     );
+}
+----
+
+== Using `useContext`
+
+https://www.freecodecamp.org/news/react-context-api-explained-with-examples/[[ref\]]
+
+[,tsx,title="CounterProvider.tsx"]
+----
+import { 
+    useState, 
+    createContext 
+} from 'react';
+
+import DisplayCount from './DisplayCount';
+import SetCount from './SetCount';
+
+export const CounterContext = createContext(0);
+
+export default function CounterProvider() {
+
+    const [ count, setCount ] = useState(0);
+
+    return (
+        <CounterContext.Provider value={ [ count, setCount ] }>
+            <DisplayCount />
+            <SetCount />
+        </CounterContext.Provider>
+    );
+}
+----
+
+[,tsx,title="DisplayCount.tsx"]
+----
+import { useContext } from 'react';
+
+import { CounterContext } from './CounterProvider';
+
+export default function DisplayCount() {
+
+    const [ count, setCount ] = useContext(CounterContext);
+
+    return <button onClick={() => setCount(() => count + 1)}>+</button>;
+}
+----
+
+[,tsx,title="SetCount.tsx"]
+----
+import { useContext } from 'react';
+
+import { CounterContext } from './CounterProvider';
+
+export default function SetCount() {
+
+    const [ count, setCount ] = useContext(CounterContext);
+
+    return <div>{ count }</div>;
 }
 ----
