@@ -1,28 +1,5 @@
 = If
 
-== `if()`
-
-https://react.dev/learn/conditional-rendering[[docs\]]
-
-[,tsx,title="MyComponent.tsx"]
-----
-function MyComponent(...) {
-    if (isTrue) {
-        return (
-            <>
-                {/* ... */}
-            </>
-        )
-    }
-
-    return (
-        <>
-            {/* ... */}
-        </>
-    )
-}
-----
-
 == Ternary Operator (`?`)
 
 [,tsx,title="MyComponent.tsx"]
@@ -44,12 +21,15 @@ function MyComponent(...) {
 }
 ----
 
+[NOTE]
+====
 [,https://react.dev/learn/conditional-rendering]
 ____
 This style works well for simple conditions, but use it in moderation. 
 If your components get messy with too much nested conditional markup, consider extracting child components to clean things up. 
 In React, markup is a part of your code, so you can use tools like variables and functions to tidy up complex expressions.
 ____
+====
 
 == Logical AND Operator (`&&`)
 // == Boolean Operators (`&&`)
@@ -74,13 +54,38 @@ function MyComponent(...) {
 function MyComponent(...) {
 
     let content = null;
-    if (isTrue)
+
+    if (isTrue) {
         content = (
           <div>
             {/* ... */}
           </div>
         )
+    }
 
     return content
+}
+----
+
+== `if()`
+
+https://react.dev/learn/conditional-rendering[[docs\]]
+
+[,tsx,title="MyComponent.tsx"]
+----
+function MyComponent(...) {
+    if (isTrue) {
+        return (
+            <>
+                {/* ... */}
+            </>
+        )
+    }
+
+    return (
+        <>
+            {/* ... */}
+        </>
+    )
 }
 ----

@@ -72,6 +72,8 @@ https://wesbos.com/react-jsx-comments
 
 == `React.createElement()`
 
+https://react.dev/reference/react/createElement[[docs\]]
+
 [,https://legacy.reactjs.org/docs/react-without-jsx.html]
 ____
 JSX is not a requirement for using React. 
@@ -104,3 +106,21 @@ const h = React.createElement;
 h('div', null, 'Hello World');
 ----
 ____
+
+[,javascript]
+----
+const element = createElement(type, props, ...children);
+----
+
+[,tsx]
+----
+import { createElement } from 'react';
+
+function Greeting({ name }) {
+  return createElement(
+    'h1',
+    { className: 'greeting' },
+    'Hello'
+  );
+}
+----

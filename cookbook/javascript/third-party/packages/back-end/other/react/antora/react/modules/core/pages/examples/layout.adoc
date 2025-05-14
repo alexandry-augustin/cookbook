@@ -1,0 +1,47 @@
+= Layout
+
+[,tsx,title="App.tsx"]
+----
+import Layout from './Layout.tsx';
+import Header from './Header.tsx';
+import Content from './Content.tsx';
+import Footer from './Footer.tsx';
+ 
+export default function App() {
+
+    return (
+        <Layout 
+            header={<Header />}
+            content={<Content />}
+            footer={<Footer />} />
+    );
+}
+----
+
+[,tsx,title="Layout.tsx"]
+----
+export default function Layout({
+    header, 
+    content, 
+    footer
+}) {
+
+    return (
+        <>
+            <div>{header}</div>
+            <div>{content}</div>
+            <div>{footer}</div>
+        </>
+    );
+}
+----
+
+[,tsx,title="Header|Content|Footer.tsx"]
+----
+export default function Header|Content|Footer() {
+
+    return (
+        <div>Header|Content|Footer</div>
+    );
+}
+----

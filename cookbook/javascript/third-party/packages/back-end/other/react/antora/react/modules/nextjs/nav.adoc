@@ -1,4 +1,5 @@
 * xref:index.adoc[]
+** xref:opennext.adoc[]
 ** xref:minimal-project.adoc[]
 ** xref:next.config.ts.adoc[]
 ** xref:routing/index.adoc[]

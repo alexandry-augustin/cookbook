@@ -1,0 +1,5 @@
+= Compound Component Pattern
+
+https://www.youtube.com/watch?v=mT4RNrKoMRU[[ref\]]
+
+TODO

@@ -16,5 +16,7 @@ export default function MyComponent() {
   const CurrentComponent = components.first;
 
   return <CurrentComponent />;
+  // Or
+  // return React.createElement(CurrentComponent);
 }
 ----

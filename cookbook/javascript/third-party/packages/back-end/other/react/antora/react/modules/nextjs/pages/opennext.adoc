@@ -1,0 +1,12 @@
+= OpenNext
+:url-website: https://opennext.js.org/
+:url-repo: https://github.com/opennextjs
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+[,https://opennext.js.org/]
+____
+Next.js, unlike Remix, Astro, or the other modern frontends, doesn't have a way to self-host across different platforms. 
+You can run it as a Node.js application, but this doesn't work the same way as it does on Vercel.
+____

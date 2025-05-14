@@ -40,6 +40,8 @@
 ** Examples
 *** xref:examples/input.adoc[]
 *** xref:examples/counter.adoc[]
+*** xref:examples/layout.adoc[]
+*** xref:examples/compound_component_pattern.adoc[]
 *** xref:examples/todos.adoc[]
 *** xref:examples/rendering-counter.adoc[]
 *** xref:examples/force-rerender.adoc[]
