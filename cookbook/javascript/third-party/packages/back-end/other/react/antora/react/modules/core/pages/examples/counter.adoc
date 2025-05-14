@@ -110,8 +110,8 @@ import {
     createContext 
 } from 'react';
 
-import DisplayCount from './DisplayCount';
-import SetCount from './SetCount';
+import DisplayCount from './DisplayCount.tsx';
+import SetCount from './SetCount.tsx';
 
 export const CounterContext = createContext(0);
 
@@ -134,11 +134,11 @@ import { useContext } from 'react';
 
 import { CounterContext } from './CounterProvider';
 
-export default function DisplayCount() {
+export default function SetCount() {
 
     const [ count, setCount ] = useContext(CounterContext);
 
-    return <button onClick={() => setCount(() => count + 1)}>+</button>;
+    return <div>{ count }</div>;
 }
 ----
 
@@ -148,10 +148,10 @@ import { useContext } from 'react';
 
 import { CounterContext } from './CounterProvider';
 
-export default function SetCount() {
+export default function DisplayCount() {
 
     const [ count, setCount ] = useContext(CounterContext);
 
-    return <div>{ count }</div>;
+    return <button onClick={() => setCount(() => count + 1)}>+</button>;
 }
 ----

@@ -69,3 +69,38 @@ https://wesbos.com/react-jsx-comments
   JSX comment
 */}
 ----
+
+== `React.createElement()`
+
+[,https://legacy.reactjs.org/docs/react-without-jsx.html]
+____
+JSX is not a requirement for using React. 
+Using React without JSX is especially convenient when you don’t want to set up compilation in your build environment.
+
+Each JSX element is just syntactic sugar for calling `React.createElement(component, props, ...children)`. 
+So, anything you can do with JSX can also be done with just plain JavaScript.
+
+For example, this code written with JSX:
+
+----
+return <div>Hello {this.props.toWhat}</div>;
+----
+
+can be compiled to this code that does not use JSX:
+
+----
+return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+----
+
+\[...]
+
+The component can either be provided as a string, as a subclass of `React.Component`, or a plain function.
+
+If you get tired of typing `React.createElement` so much, one common pattern is to assign a shorthand:
+
+----
+const h = React.createElement;
+
+h('div', null, 'Hello World');
+----
+____
