@@ -1,0 +1,8 @@
+= Middleware
+:url-docs: https://nextjs.org/docs/app/building-your-application/routing/middleware
+
+{url-docs}[[docs\]]
+
+[,tsx,title="middleware.ts"]
+----
+----

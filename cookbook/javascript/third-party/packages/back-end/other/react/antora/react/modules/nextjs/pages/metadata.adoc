@@ -1,0 +1,13 @@
+= Metadata
+
+== `robots.txt`
+
+https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots[[docs\]]
+
+....
+./
+├── app/
+│   ├── ...
+│   └── robots.txt
+└── ...
+....

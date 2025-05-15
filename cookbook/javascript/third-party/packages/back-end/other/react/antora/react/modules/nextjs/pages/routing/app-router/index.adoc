@@ -4,7 +4,7 @@ https://medium.com/@ankitsingh80741/ultimate-guide-to-routing-with-the-app-route
 
 [,https://medium.com/@ankitsingh80741/ultimate-guide-to-routing-with-the-app-router-in-next-js-14-0a19ecb67150]
 ____
-The App Router, based on the` app/` directory, allows developers to create better page layouts, handle parallel rendering, and seamlessly integrate with React 18 features such as Suspense and Streaming.
+The App Router, based on the `app/` directory, allows developers to create better page layouts, handle parallel rendering, and seamlessly integrate with React 18 features such as Suspense and Streaming.
 
 This new approach is much more scalable than the legacy `pages/` directory and is optimized for both client-side rendering (CSR) and server-side rendering (SSR).
 ____
@@ -70,3 +70,28 @@ app/
 == Route Groups
 
 `app/(items)`
+
+== Button Link
+
+[,tsx,title=".tsx"]
+----
+"use client"
+import { useRouter } from 'next/navigation'
+ 
+export default function Page() {
+  const router = useRouter();
+ 
+  return (
+    <button 
+      type="button" 
+      onClick={() => router.push('/my-other-page')}
+      >
+      Link
+    </button>
+  )
+}
+----
+
+== Redirect
+
+https://nextjs.org/docs/pages/building-your-application/routing/redirecting[[docs\]]

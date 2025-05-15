@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default MyComponent = () => (
     <>
-        <Link href="/my-page">My Page</Link>
+        <Link href="/my-page">Link</Link>
     </>
 );
 ----

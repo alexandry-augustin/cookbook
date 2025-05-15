@@ -17,6 +17,7 @@
 [,tsx,title="index.tsx"]
 ----
 import Image from 'next/image'
+
 import myImage from '../assets/my-image.png'
  
 export default function Home() {

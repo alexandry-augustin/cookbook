@@ -124,3 +124,8 @@ function Greeting({ name }) {
   );
 }
 ----
+
+== Namespace Tags
+
+https://bobbyhadz.com/blog/namespace-tags-are-not-supported-by-default-in-react[[ref\]]
+https://heymanishjain.medium.com/rendering-namespace-attributes-like-xmlns-inkscape-in-react-54d901ae6642[[ref\]]

@@ -10,3 +10,4 @@
 ** xref:react-mosaic.adoc[]
 ** xref:remix.adoc[]
 ** xref:waku.adoc[]
+** xref:redwoodjs.adoc[]
