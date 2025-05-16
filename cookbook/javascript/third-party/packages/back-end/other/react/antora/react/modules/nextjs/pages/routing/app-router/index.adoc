@@ -14,6 +14,9 @@ ____
 Each folder represents a new route, and the `page.js` file within the folder serves as the content for that route.
 ____
 
+> "Route files must be named either `page.js` or `page.tsx`"
+-- https://www.youtube.com/watch?v=7DC3ZrxvUUU
+
 ....
 app/
 ├── about/
@@ -56,16 +59,95 @@ ____
 This layout would be applied to all the pages under the directory where it’s placed, ensuring consistent structure and reducing repetition.
 ____
 
+== Nested Routes
+
+....
+./
+├── app/
+│   └── item/
+│       ├── edit/
+│       │   └── page.tsx
+│       ├── view/
+│       │   └── page.tsx
+│       └── page.tsx
+└── ...
+....
+
+[,tsx,title="item/page.tsx"]
+----
+export default function Item() {
+  return <div>Item</div>;
+}
+----
+
+[,tsx,title="item/edit/page.tsx"]
+----
+export default function ItemEdit() {
+  return <div>Edit Item</div>;
+}
+----
+
+[,tsx,title="item/view/page.tsx"]
+----
+export default function ItemView() {
+  return <div>View Item</div>;
+}
+----
+
 == Dynamic Routes
 
 ....
 app/
-├── items/
-│   └── page.tsx
-│       └── [id]
-│           └── page.tsx
+├── item/
+│   ├── page.tsx
+│   └── [itemId]
+│       └── page.tsx
 └── ...
 ....
+
+[,tsx,title="item/page.tsx"]
+----
+export default function ItemList() {
+  return <div>Item List</div>;
+}
+----
+
+// [,tsx,title="item/[itemId]/page.tsx"]
+// ----
+// export default function ItemDetail() {
+//   return <div>Item Detail</div>;
+// }
+// ----
+// 
+// Or
+
+[,tsx,title="item/[itemId]/page.tsx"]
+----
+export default async function ItemDetail({ params }): { params: Promise<{ itemId: string }> } {
+
+  const itemId = (await params).itemId;
+
+  return (
+    <div>
+      Item #{itemId}
+    </div>
+  );
+}
+----
+
+== Nested Dynamic Routes
+
+TODO https://www.youtube.com/watch?v=edrJf0GKfAI
+
+// ....
+// app/
+// ├── item/
+// │   ├── page.tsx
+// │   └── [itemId]
+// │       └── reviews/
+// │           └── page.tsx
+// └── ...
+// ....
 
 == Route Groups
 
@@ -95,3 +177,20 @@ export default function Page() {
 == Redirect
 
 https://nextjs.org/docs/pages/building-your-application/routing/redirecting[[docs\]]
+
+== `404` Page
+
+....
+./
+├── app/
+│   ├── ...
+│   └── not-found.tsx
+└── ...
+....
+
+[,tsx,title="not-found.tsx"]
+---- 
+export default function NotFound() {
+  return <div>Page Not Found</div>;
+}
+----

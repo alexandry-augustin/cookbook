@@ -1,0 +1,16 @@
+= Storybook
+:toc: left
+:url-website: https://storybook.js.org/
+:url-repo: https://github.com/storybookjs/storybook
+// :url-wiki: 
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+
+== Installation
+
+[,bash]
+----
+pnpm create storybook@latest
+----

@@ -129,3 +129,18 @@ function Greeting({ name }) {
 
 https://bobbyhadz.com/blog/namespace-tags-are-not-supported-by-default-in-react[[ref\]]
 https://heymanishjain.medium.com/rendering-namespace-attributes-like-xmlns-inkscape-in-react-54d901ae6642[[ref\]]
+
+== `className`
+
+https://daily-dev-tips.com/posts/passing-classname-to-components-in-react/[[ref\]]
+
+[,tsx,title="MyComponent.tsx"]
+----
+export default MyComponent = ({ className="" }) => {
+  return (
+    <div className={className}>
+      <!-- ... -->
+    </div>
+  );
+};
+----
