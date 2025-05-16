@@ -34,6 +34,7 @@
 **** xref:hooks/built-in/useActionState.adoc[]
 *** xref:hooks/custom/index.adoc[]
 
+** xref:typescript/index.adoc[]
 ** xref:jsx.adoc[]
 ** xref:faq.adoc[]
 

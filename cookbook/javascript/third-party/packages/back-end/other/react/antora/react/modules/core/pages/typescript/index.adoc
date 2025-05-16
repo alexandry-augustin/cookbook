@@ -1,0 +1,12 @@
+= TypeScript
+
+== `React.FC`
+
+https://dev.to/elhamnajeebullah/react-typescript-what-is-reactfc-and-why-should-i-use-it-4029[TODO]
+
+Stands for "Function Component"
+
+[,typescript]
+----
+import { FC } from 'react'
+----

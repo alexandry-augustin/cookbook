@@ -1,0 +1,12 @@
+= SWR
+:toc: left
+:url-website: https://swr.vercel.app/
+:url-docs: https://swr.vercel.app/docs/getting-started
+:url-repo: https://github.com/vercel/swr
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+> "React Hooks for Data Fetching"
+-- https://swr.vercel.app/

@@ -32,6 +32,25 @@ export default function MyComponent(...) {
 }
 ----
 
+Or
+
+[,tsx,title="MyComponent.tsx"]
+----
+import { FC } from 'react'
+
+interface MyProps {}
+
+const MyComponent: FC<MyProps> = ({}) => {
+    return (
+        <>
+            {/* ... */}
+        </>
+    );
+}
+
+export default MyComponent
+----
+
 [NOTE]
 ====
 Return `null` to prevent the component from rendering.

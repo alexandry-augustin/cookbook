@@ -1,6 +1,11 @@
 = Redux
 :url-website: https://react-redux.js.org/
-:url-github: https://github.com/reduxjs/react-redux
+:url-docs: https://react-redux.js.org/introduction/getting-started
+:url-repo: https://github.com/reduxjs/react-redux
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
 
 == Installation
 
