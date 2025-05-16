@@ -1,0 +1,39 @@
+= Context Providers
+
+https://stackoverflow.com/questions/77496701/where-do-i-add-context-provider-in-nextjs-13-using-app-router[Where do I add Context Provider in NextJS 13 using app router?]
+
+https://vercel.com/guides/react-context-state-management-nextjs[Using React Context for State Management with Next.js]
+
+
+[,tsx,title="/app/providers.tsx"]
+----
+'use client';
+
+import { MyProvider } from './MyProvider';
+import { MyOtherProvider } from './MyOtherProvider';
+
+export function Providers({ children }) {
+    return (
+        <MyOtherProvider>
+            <MyProvider>
+                {children}
+            </MyProvider>
+        </MyOtherProvider>
+    );
+}
+----
+
+[,tsx,title="/app/layout.tsx"]
+----
+import { Providers } from './providers';
+
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
+}
+----

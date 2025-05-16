@@ -7,6 +7,7 @@
 *** xref:routing/app-router/index.adoc[]
 *** xref:routing/pages-router/index.adoc[]
 ** xref:pages.adoc[]
+** xref:context-providers.adoc[]
 ** xref:middleware/index.adoc[]
 ** xref:components/index.adoc[]
 *** xref:components/Image.adoc[]

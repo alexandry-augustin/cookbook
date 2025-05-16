@@ -155,3 +155,75 @@ export default function DisplayCount() {
     return <button onClick={() => setCount(() => count + 1)}>+</button>;
 }
 ----
+
+== Using `useContext` (Dedicated File)
+
+[,tsx,title="App.tsx"]
+----
+import { 
+    CounterProvider, 
+    CounterContext 
+} from './CounterContext';
+
+import DisplayCount from './DisplayCount.tsx';
+import SetCount from './SetCount.tsx';
+
+export default function App() {
+    return (
+        <CounterProvider>
+            <DisplayCount />
+            <SetCount />
+        </CounterProvider>
+    );
+}
+----
+
+[,tsx,title="CounterContext.tsx"]
+----
+import { 
+    useState, 
+    createContext 
+} from 'react';
+
+const CounterContext = createContext(0);
+
+function CounterProvider({children}) {
+    const [ count, setCount ] = useState(0);
+
+    return (
+        <CounterContext.Provider value={ [ count, setCount ] }>
+            {children}
+        </CounterContext.Provider>
+    )
+}
+
+export { CounterProvider, CounterContext }
+----
+
+[,tsx,title="DisplayCount.tsx"]
+----
+import { useContext } from 'react';
+
+import { CounterContext } from './CounterContext';
+
+export default function SetCount() {
+
+    const [ count, setCount ] = useContext(CounterContext);
+
+    return <div>{ count }</div>;
+}
+----
+
+[,tsx,title="SetCount.tsx"]
+----
+import { useContext } from 'react';
+
+import { CounterContext } from './CounterContext';
+
+export default function DisplayCount() {
+
+    const [ count, setCount ] = useContext(CounterContext);
+
+    return <button onClick={() => setCount(() => count + 1)}>+</button>;
+}
+----
