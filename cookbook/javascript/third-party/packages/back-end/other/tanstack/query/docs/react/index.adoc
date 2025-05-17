@@ -29,68 +29,7 @@ root.render(
 );
 ----
 
-== Hooks
-
-=== `useQuery`
-
-==== Examples
-
-===== Using `axios`
-
-[source,javascript]
-----
-import { useQuery } from "@tanstack/react-query";
-
-function MyComponent() {
-
-   const myQuery = useQuery({
-        queryKey: [ 'myQuery' ], 
-        queryFn: () => {
-            return axios.get(url);
-        }
-    });
-    if(myQuery.isLoading) {
-        return <h1>Loading...</h1>;
-    }
-    if(myQuery.isError) {
-        return <pre>{JSON.stringify(myQuery.error.message)}</pre>;
-    }
-    // {JSON.stringify(myQuery.data)}
-}
-----
-
-==== Pagination
-
-[source,javascript,title=""]
-----
-import { useQuery } from "@tanstack/react-query";
-
-function MyComponent() {
-
-    const [page, setPage] = useState(1);
-
-    const myQuery = useQuery({
-        queryKey: [ 'myQuery', page ], 
-        queryFn: () => {
-            let url = `url?page=${page}`;
-            return axios.get(url);
-        }, 
-        keepPreviousData: true
-    });
-    console.log(myQuery.data);
-    console.log(myQuery.data.hasMore); // is this part of TanStack ?
-}
-----
-
-=== `useMutation`
-
-[source,javascript]
-----
-import { useMutation } from "@tanstack/react-query";
-
-function MyComponent() {
-}
-----
+include::./sections/hooks/index.adoc[leveloffset=+1]
 
 == Devtools
 

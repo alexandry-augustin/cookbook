@@ -1,0 +1,13 @@
+= Hooks
+
+include::./useQuery.adoc[leveloffset=+1]
+
+include::./useMutation.adoc[leveloffset=+1]
+
+// https://tanstack.com/query/latest/docs/framework/react/guides/suspense
+
+include::./useSuspenseQuery.adoc[leveloffset=+1]
+
+include::./useSuspenseInfiniteQuery.adoc[leveloffset=+1]
+
+include::./useSuspenseQueries.adoc[leveloffset=+1]

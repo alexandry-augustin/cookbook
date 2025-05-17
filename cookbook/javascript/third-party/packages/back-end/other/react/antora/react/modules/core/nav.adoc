@@ -5,6 +5,8 @@
 ** xref:react-dom.adoc[]
 
 ** xref:components/index.adoc[]
+*** xref:components/built-in/index.adoc[]
+**** xref:components/built-in/Suspense.adoc[]
 *** xref:components/props.adoc[]
 *** xref:components/dynamic_component.adoc[]
 

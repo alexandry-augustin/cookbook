@@ -11,4 +11,5 @@
 ** xref:middleware/index.adoc[]
 ** xref:components/index.adoc[]
 *** xref:components/Image.adoc[]
+*** xref:components/Form.adoc[]
 *** xref:components/Link.adoc[]

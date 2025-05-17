@@ -144,3 +144,15 @@ export default MyComponent = ({ className="" }) => {
   );
 };
 ----
+
+== Self-closing Tags
+
+[,https://legacy.reactjs.org/docs/introducing-jsx.html#specifying-children-with-jsx]
+____
+If a tag is empty, you may close it immediately with `/>`, like XML:
+
+[,tsx]
+----
+const element = <img src="..." />;
+----
+____
