@@ -4,6 +4,6 @@
 ----
 import { useMutation } from "@tanstack/react-query";
 
-function MyComponent() {
+default export function MyComponent() {
 }
 ----

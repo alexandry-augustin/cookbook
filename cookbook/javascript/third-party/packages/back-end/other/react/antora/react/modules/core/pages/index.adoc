@@ -1,5 +1,6 @@
 = Core
 :url-wiki: https://en.wikipedia.org/wiki/React_(JavaScript_library)
+// :url-wiki: https://en.wikipedia.org/wiki/React_(software)
 :url-website: https://reactjs.org/
 :url-github: https://github.com/facebook/react/
 

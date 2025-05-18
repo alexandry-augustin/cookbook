@@ -1,5 +1,7 @@
-= react-fetch-hook
+= `react-fetch-hook`
 :url-github: https://github.com/ilyalesik/react-fetch-hook
+
+== Installation
 
 [,bash]
 ----

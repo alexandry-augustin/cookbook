@@ -1,0 +1,9 @@
+= `react-i18next`
+:url-website: https://react.i18next.com/
+// :url-docs: 
+:url-repo: https://github.com/i18next/react-i18next
+
+{url-website}[[website\]]
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]
+

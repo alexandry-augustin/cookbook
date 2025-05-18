@@ -162,7 +162,6 @@ export default function DisplayCount() {
 ----
 import { 
     CounterProvider, 
-    CounterContext 
 } from './CounterContext';
 
 import DisplayCount from './DisplayCount.tsx';
@@ -187,7 +186,7 @@ import {
 
 const CounterContext = createContext(0);
 
-function CounterProvider({children}) {
+function CounterProvider({ children }) {
     const [ count, setCount ] = useState(0);
 
     return (

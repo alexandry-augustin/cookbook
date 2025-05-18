@@ -2,47 +2,10 @@
 :toc: left
 :toclevels: 8
 
-== Installation
-
-[source,bash]
-----
-pnpm install @tanstack/react-query
-----
-
-[source,javascript,title="index.js"]
-----
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-const queryClient = new QueryClient();
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <QueryClientProvider client={queryClient}>
-                <App />
-                {/* <ReactQueryDevtools position="bottom-right"/> */}
-            </QueryClientProvider>
-        </BrowserRouter>
-    </React.StrictMode>
-);
-----
+include::./sections/installation.adoc[leveloffset=+1]
 
 include::./sections/hooks/index.adoc[leveloffset=+1]
 
-== Devtools
+include::./sections/nextjs.adoc[leveloffset=+1]
 
-=== Installation
-
-[source,bash]
-----
-pnpm install @tanstack/react-query-devtools
-----
-
-[source,javascript,title="index.js"]
-----
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
-<ReactQueryDevtools position="bottom-right"/>
-----
+include::./sections/devtools.adoc[leveloffset=+1]

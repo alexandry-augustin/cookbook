@@ -8,7 +8,7 @@
 ----
 import { useQuery } from "@tanstack/react-query";
 
-function MyComponent() {
+default export function MyComponent() {
 
    const myQuery = useQuery({
         queryKey: [ 'myQuery' ], 

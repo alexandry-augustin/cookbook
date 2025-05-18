@@ -1,0 +1,8 @@
+= MobX
+:url-website: https://mobx.js.org/README.html
+// :url-docs: 
+:url-repo: https://github.com/mobxjs/mobx
+
+{url-website}[[website\]]
+// {url-docs}[[docs\]]
+{url-repo}[[repo\]]

@@ -1,4 +1,4 @@
-= dnd-kit
+= `dnd-kit`
 :url-website: https://dndkit.com/
 :url-docs: https://docs.dndkit.com/
 :url-repo: https://github.com/clauderic/dnd-kit
@@ -7,3 +7,9 @@
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
 
+== Installation
+
+[,bash]
+----
+pnpm install @dnd-kit/core
+----

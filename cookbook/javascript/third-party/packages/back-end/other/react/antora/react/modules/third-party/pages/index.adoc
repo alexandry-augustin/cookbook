@@ -1,1 +1,16 @@
 = Third-party
+
+== Is there a React framework without a server-side part?
+
+[,https://www.reddit.com/r/reactjs/comments/1anpsvs/is_there_a_react_framework_without_a_serverside/]
+____
+[,bash]
+----
+npm create vite your-app --template react-ts
+cd your-app
+npm install react-router zustand @tanstack/react-query react-i18next
+----
+
+That gives you just about everything you’re looking for. 
+React’s error boundaries for render error handling, React Router for routing, Zustand for global/local state, React Query for network caching/fetching, and React i18next for translations.
+____

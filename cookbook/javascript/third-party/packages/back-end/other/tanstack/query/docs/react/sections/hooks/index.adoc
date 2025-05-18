@@ -4,10 +4,12 @@ include::./useQuery.adoc[leveloffset=+1]
 
 include::./useMutation.adoc[leveloffset=+1]
 
-// https://tanstack.com/query/latest/docs/framework/react/guides/suspense
+== Suspense
 
-include::./useSuspenseQuery.adoc[leveloffset=+1]
+https://tanstack.com/query/latest/docs/framework/react/guides/suspense[[docs\]]
 
-include::./useSuspenseInfiniteQuery.adoc[leveloffset=+1]
+include::./useSuspenseQuery.adoc[leveloffset=+2]
 
-include::./useSuspenseQueries.adoc[leveloffset=+1]
+include::./useSuspenseInfiniteQuery.adoc[leveloffset=+2]
+
+include::./useSuspenseQueries.adoc[leveloffset=+2]

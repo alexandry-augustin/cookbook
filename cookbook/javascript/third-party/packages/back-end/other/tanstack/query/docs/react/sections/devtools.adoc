@@ -1,0 +1,15 @@
+= Devtools
+
+== Installation
+
+[source,bash]
+----
+pnpm install @tanstack/react-query-devtools
+----
+
+[source,javascript,title="index.js"]
+----
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+<ReactQueryDevtools position="bottom-right"/>
+----

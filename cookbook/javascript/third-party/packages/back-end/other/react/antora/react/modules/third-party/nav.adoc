@@ -7,10 +7,12 @@
 ** xref:dnd-kit.adoc[]
 ** xref:dockview.adoc[]
 ** xref:react-mosaic.adoc[]
+** xref:react-i18next.adoc[]
 
 ** State Management
 *** xref:redux.adoc[]
 *** Zustand
+*** xref:mobxjs.adoc[]
 
 ** Frameworks
 *** xref:remix.adoc[]
