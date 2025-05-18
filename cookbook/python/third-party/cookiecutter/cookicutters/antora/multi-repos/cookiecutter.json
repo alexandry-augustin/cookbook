@@ -3,6 +3,6 @@
     "site_name_verbose": "Site Name",
     "component_name": "component-name",
     "component_name_verbose": "Component Name",
-    "git_username": "", 
+    "git_name": "", 
     "git_email": ""
 }
