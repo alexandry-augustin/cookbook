@@ -11,6 +11,8 @@
 
 https://www.reddit.com/r/nextjs/comments/14okgfu/how_easy_is_it_to_move_from_nuxt_to_nextjs/[How easy is it to move from Nuxt to NextJS?]
 
+https://github.com/vercel/next.js/discussions/77740[RFC: Deployment Adapters API #77740]
+
 > "The React Framework for Production" 
 -- https://nextjs.org/
 
@@ -27,29 +29,3 @@ It’s designed to replace Webpack as the default bundler for Next.js apps, offe
 Built with Rust, Turbopack’s main goal is to optimize build times and enable better performance in development environments. [...]
 Turbopack was introduced in Next.js 13.4, which was released in 2023.
 ____
-
-== Installation
-
-https://nextjs.org/docs/app/getting-started/installation[[docs\]]
-
-[,bash]
-----
-pnpx create-next-app@latest
-----
-
-Start the development server
-
-[,bash]
-----
-pnpm run dev
-----
-
-Set the port https://stackoverflow.com/questions/60147499/how-to-set-port-in-next-js[[ref\]]:
-
-[,json,title="package.json"]
-----
-"scripts": { 
-    "dev": "next dev -p 8080",
-    "start": "next start -p 8080",
-},
-----
