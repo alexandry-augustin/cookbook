@@ -1,9 +1,0 @@
-= Return Properties
-
-The `result` object contains the following.
-
-include::./data.adoc[leveloffset=+1]
-
-include::./requests_for_status.adoc[leveloffset=+1]
-
-include::./stats.adoc[leveloffset=+1]

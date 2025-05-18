@@ -1,3 +1,0 @@
-= `useInfiniteQuery`
-
-include::./infinite_scrolling.adoc[leveloffset=+1]

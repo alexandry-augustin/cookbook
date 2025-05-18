@@ -1,9 +1,0 @@
-= `useMutation`
-
-[source,javascript]
-----
-import { useMutation } from "@tanstack/react-query";
-
-default export function MyComponent() {
-}
-----

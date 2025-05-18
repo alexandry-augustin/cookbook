@@ -1,3 +1,0 @@
-= TanStack
-:toc: left
-:toclevels: 8
