@@ -2,11 +2,11 @@
 :url-wiki: https://en.wikipedia.org/wiki/React_(JavaScript_library)
 // :url-wiki: https://en.wikipedia.org/wiki/React_(software)
 :url-website: https://reactjs.org/
-:url-github: https://github.com/facebook/react/
+:url-repo: https://github.com/facebook/react/
 
 {url-wiki}[[wiki\]]
 {url-website}[[website\]]
-{url-github}[[github\]]
+{url-repo}[[repo\]]
 
 [quote,https://www.makeuseof.com/react-vs-angular-popular/]
 ____

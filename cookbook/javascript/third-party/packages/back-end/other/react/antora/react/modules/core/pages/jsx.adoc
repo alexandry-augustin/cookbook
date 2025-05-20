@@ -156,3 +156,19 @@ If a tag is empty, you may close it immediately with `/>`, like XML:
 const element = <img src="..." />;
 ----
 ____
+
+== `dangerouslySetInnerHTML`
+
+> `dangerouslySetInnerHTML` is React’s replacement for using `innerHTML` in the browser DOM. 
+-- https://legacy.reactjs.org/docs/dom-elements.html
+
+[,tsx,title="MyComponent.tsx"]
+----
+const markup = `<h1>Hello World<h1>`;
+
+export default function MyComponent() {
+  return (
+      <div dangerouslySetInnerHTML={ { __html: markup } }></div>
+  )
+}
+----

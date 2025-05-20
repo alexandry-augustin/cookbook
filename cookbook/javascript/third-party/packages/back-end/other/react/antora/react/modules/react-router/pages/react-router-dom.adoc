@@ -1,9 +1,4 @@
-= React Router
-:url-website: https://reactrouter.com/en/main/start/tutorial
-:url-repo: https://github.com/remix-run/react-router
-
-{url-website}[[website\]]
-{url-repo}[[repo\]]
+= `react-router-dom`
 
 Client side routing
 
@@ -31,7 +26,11 @@ root.render(
 
 [,jsx,title='App.js']
 ----
-import { Link, Routes, Route } from "react-router-dom";
+import { 
+  Link, 
+  Routes, 
+  Route 
+} from "react-router-dom";
 
 function App()
 {

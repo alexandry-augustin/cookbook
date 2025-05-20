@@ -1,5 +1,7 @@
 = `react-fetch-hook`
-:url-github: https://github.com/ilyalesik/react-fetch-hook
+:url-repo: https://github.com/ilyalesik/react-fetch-hook
+
+{url-repo}[[repo\]]
 
 == Installation
 

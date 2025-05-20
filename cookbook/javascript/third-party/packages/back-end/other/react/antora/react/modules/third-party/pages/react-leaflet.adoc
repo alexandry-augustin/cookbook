@@ -1,7 +1,10 @@
 = `react-leaflet`
 // = React Leaflet
 :url-website: https://react-leaflet.js.org/
-:url-github: https://github.com/PaulLeCam/react-leaflet
+:url-repo: https://github.com/PaulLeCam/react-leaflet
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
 
 == Installation
 

@@ -1,5 +1,7 @@
 = React Modal
 
+== Usage
+
 [,javascript]
 ----
 import Modal from "react-modal";

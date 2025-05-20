@@ -1,9 +1,9 @@
 = `create-react-app` [Legacy]
 :url-website: https://create-react-app.dev/
-:url-github: https://github.com/facebook/create-react-app
+:url-repo: https://github.com/facebook/create-react-app
 
 {url-website}[[website\]]
-{url-github}[[github\]]
+{url-repo}[[github\]]
 
 == Installation
 

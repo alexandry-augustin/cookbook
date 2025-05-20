@@ -1,4 +1,11 @@
+= `react-leaflet-markercluster`
+:url-repo: https://github.com/changey/react-leaflet-markercluster
 
-https://github.com/changey/react-leaflet-markercluster
+{url-repo}[[repo\]]
 
-pnpm i @changey/react-leaflet-markercluster
+== Installation
+
+[,bash]
+----
+pnpm install @changey/react-leaflet-markercluster
+----

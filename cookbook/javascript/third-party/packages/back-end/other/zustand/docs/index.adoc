@@ -16,5 +16,31 @@ https://medium.com/@funti009/how-to-use-zustand-in-vue-84e1ab2ebf75[How to use Z
 
 [,bash]
 ----
+pnpm install zustand
+----
+
+[,bash]
+----
 pnpm create vite zu-app
 ----
+
+== Usage
+
+[,ts,title="stores/counter.ts"]
+----
+import { create } from 'zustand'
+
+export const counterStore = create((set) => ({
+    count: 0
+}))
+----
+
+[,ts,title="MyComponent.tsx"]
+----
+import { counterStore } from 'stores/counter'
+
+export default function MyComponent() {
+    const settings = counterStore((state) => state.count);
+}
+----
+
