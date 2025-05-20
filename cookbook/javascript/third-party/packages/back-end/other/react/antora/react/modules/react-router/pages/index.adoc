@@ -4,3 +4,20 @@
 
 {url-website}[[website\]]
 {url-repo}[[repo\]]
+
+// Client side routing
+
+[,https://reactrouter.com/]
+____
+Upgrading from v6 to v7 is a non-breaking upgrade.
+____
+
+[,https://reactrouter.com/home]
+____
+There are three primary ways, or "modes", to use it in your app [...]
+
+* Declarative
+* Data
+* Framework
+____
+

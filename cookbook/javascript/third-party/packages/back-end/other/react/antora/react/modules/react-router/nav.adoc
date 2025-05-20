@@ -1,5 +1,7 @@
 * xref:index.adoc[]
-** xref:react-router-dom.adoc[]
+** xref:declarative.adoc[]
+** xref:data.adoc[]
+** xref:framework.adoc[]
 ** xref:components/index.adoc[]
 *** xref:components/Link.adoc[]
 *** xref:components/Routes.adoc[]
