@@ -1,3 +1,0 @@
-= [Deprecated] CommonJS
-
-https://en.wikipedia.org/wiki/CommonJS[[wiki\]]
