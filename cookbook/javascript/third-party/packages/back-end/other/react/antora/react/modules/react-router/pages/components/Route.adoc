@@ -1,1 +1,9 @@
 = `Route`
+
+[,jsx,title='App.js']
+----
+import { Route } from "react-router";
+
+<Route path="/my-page" element={<MyPage />} />
+<Route path="*" element={<NotFound />} />
+----

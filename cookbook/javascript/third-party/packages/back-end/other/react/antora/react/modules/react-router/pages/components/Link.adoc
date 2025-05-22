@@ -1,1 +1,8 @@
 = `Link`
+
+[,jsx,title='App.js']
+----
+import { Link } from "react-router";
+
+<Link to="/">Home</Link>
+----

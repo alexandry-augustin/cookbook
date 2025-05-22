@@ -7,6 +7,8 @@
 ** xref:components/index.adoc[]
 *** xref:components/built-in/index.adoc[]
 **** xref:components/built-in/Suspense.adoc[]
+**** xref:components/built-in/StrictMode.adoc[]
+**** xref:components/built-in/Profiler.adoc[]
 *** xref:components/props.adoc[]
 *** xref:components/dynamic_component.adoc[]
 
@@ -14,7 +16,7 @@
 *** xref:control_flow/if.adoc[]
 *** xref:control_flow/for.adoc[]
 
-** xref:StrictMode.adoc[]
+
 
 ** xref:hooks/index.adoc[]
 *** xref:hooks/built-in/index.adoc[]

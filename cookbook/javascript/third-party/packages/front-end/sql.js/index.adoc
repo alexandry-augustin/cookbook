@@ -1,0 +1,6 @@
+= `sql.js`
+:url-repo: https://github.com/sql-js/sql.js/
+
+{url-repo}[[repo\]]
+
+Light wrapper around SQLite compiled with EMScripten for use in the browser (client-side).

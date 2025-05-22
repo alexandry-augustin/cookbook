@@ -1,1 +1,10 @@
 = `Routes`
+
+[,jsx,title='App.js']
+----
+import { Routes } from "react-router";
+
+<Routes>
+    {/* ... */}
+</Routes>
+----
