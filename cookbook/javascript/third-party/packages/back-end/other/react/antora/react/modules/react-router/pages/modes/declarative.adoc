@@ -51,3 +51,16 @@ export default function App()
   );
 }
 ----
+
+[,jsx,title='Home.js']
+----
+import { useLocation } from 'react-router'
+
+export default function Home() {
+  const location = useLocation();
+
+  return (
+    <div>{location.pathname}</div>
+  )
+}
+----

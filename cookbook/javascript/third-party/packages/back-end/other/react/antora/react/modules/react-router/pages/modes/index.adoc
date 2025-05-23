@@ -1,0 +1,10 @@
+= Modes
+
+[,https://reactrouter.com/home]
+____
+There are three primary ways, or "modes", to use it in your app [...]
+
+* Declarative
+* Data
+* Framework
+____

@@ -1,7 +1,10 @@
 * xref:index.adoc[]
-** xref:declarative.adoc[]
-** xref:data.adoc[]
-** xref:framework.adoc[]
+
+** xref:modes/index.adoc[]
+*** xref:modes/declarative.adoc[]
+*** xref:modes/data.adoc[]
+*** xref:modes/framework.adoc[]
+
 ** xref:components/index.adoc[]
 *** xref:components/Link.adoc[]
 *** xref:components/Routes.adoc[]
