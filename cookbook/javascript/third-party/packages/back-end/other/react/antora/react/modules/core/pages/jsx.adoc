@@ -172,3 +172,12 @@ export default function MyComponent() {
   )
 }
 ----
+
+== `htmlFor`
+
+`for` -> `htmlFor`
+
+[,jsx]
+----
+<Label htmlFor="..."></Label>
+----

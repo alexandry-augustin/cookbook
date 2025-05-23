@@ -1,0 +1,174 @@
+= Forms
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+React Hook Form or Final Form might be the best choices if you prioritize performance and simplicity, while Formik or Redux Form could be more suitable for complex forms with extensive validation requirements.
+
+If you need a comprehensive UI suite with built-in form components, KendoReact Form is a strong contender. 
+For survey-based applications, Survey React provides specialized tools and components.
+____
+
+https://blog.croct.com/post/best-react-form-libraries[[table source\]]
+
+|===
+| Library | Repository | Package | GitHub stars | npm downloads
+
+| React Hook Form
+| https://github.com/react-hook-form/react-hook-form[GitHub]
+| https://www.npmjs.com/package/react-hook-form[npm]
+| 42.7k
+| 8.1M
+
+| Formik
+| https://github.com/jaredpalmer/formik[GitHub]
+| https://www.npmjs.com/package/formik[npm]
+| 34.2k
+| 2.9M
+
+| RC Field Form
+| https://github.com/react-component/field-form[GitHub]
+| https://www.npmjs.com/package/rc-field-form[npm]
+| 1k
+| 1.6M
+
+| Final Form
+| https://github.com/final-form/final-form[GitHub]
+| https://www.npmjs.com/package/final-form[npm]
+| 3k
+| 430k
+
+| Redux Form
+| https://github.com/redux-form/redux-form[GitHub]
+| https://www.npmjs.com/package/redux-form[npm]
+| 12.6k
+| 366k
+
+| React Final Form
+| https://github.com/final-form/react-final-form[GitHub]
+| https://www.npmjs.com/package/react-final-form[npm]
+| 7.4k
+| 361k
+
+| TanStack Form
+| https://github.com/TanStack/form[GitHub]
+| https://www.npmjs.com/package/@tanstack/react-form[npm]
+| 5k
+| 115k
+
+| KendoReact Form
+| https://github.com/telerik/kendo-react[GitHub]
+| https://www.npmjs.com/package/@progress/kendo-react-form[npm]
+| 220
+| 61.5k
+
+| Formsy React
+| https://github.com/formsy/formsy-react[GitHub]
+| https://www.npmjs.com/package/formsy-react[npm]
+| 763
+| 22.8k
+
+| Survey React
+| https://github.com/surveyjs/survey-library[GitHub]
+| https://www.npmjs.com/package/survey-react[npm]
+| 4.4k
+| 15.4k
+
+| React Form
+| https://github.com/TanStack/form[GitHub]
+| https://www.npmjs.com/package/react-form[npm]
+| 5k
+| 12.6k
+
+| Typescript React Form
+| https://github.com/iway1/react-ts-form[GitHub]
+| https://www.npmjs.com/package/@ts-react/form[npm]
+| 2.1k
+| 8.1k
+
+| React Form Elements
+| https://github.com/kevnz/react-form-elements[GitHub]
+| https://www.npmjs.com/package/react-form-elements[npm]
+| 10
+| 6.4k
+|===
+
+== Formik
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+Formik is one of the most popular form libraries in the React ecosystem. It simplifies form state management, validation, and submission and supports both controlled and uncontrolled components. Formik's key differentiators are its extensive documentation, large community, and ease of use. It is particularly useful for handling complex forms with multiple validation rules and dependencies.
+____
+
+== RC Field Form
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+RC Field Form is a controlled component form management library that is simple and flexible, offering a great way to create and validate forms in React. RC It is designed to be highly flexible, allowing developers to implement custom validation and formatting logic quickly.
+____
+
+== Final Form
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+Final Form is a small, performant subscription-based form state management library. It is framework-agnostic but has excellent support for React through react-final-form. Final Form stands out for its minimal bundle size, flexibility, and focus on performance. It provides the essential tools for form management without imposing a specific structure, making it adaptable to various project requirements.
+____
+
+== Redux Form
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+Redux Form is a library that integrates form state management with Redux. It is designed for complex applications that already use Redux for state management. Redux Form's primary advantage is its seamless integration with Redux, allowing you to manage form state alongside your application's global state. It supports synchronous and asynchronous validation and provides many features for handling complex form scenarios. While it's still used, it might be considered a legacy option compared to newer libraries.
+____
+
+== React Final Form
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+React Final Form is a wrapper for Final Form that uses React components to manage form state. It is designed to be highly performant and flexible, making it a good choice for complex forms. This library works seamlessly with Final Form, offering a straightforward way to connect your forms to React components.
+____
+
+== TanStack Form
+
+== KendoReact Form
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+Its seamless integration with the KendoReact ecosystem is the central differential, offering consistent styling, theming, and support. 
+It is particularly well-suited for enterprise applications requiring a unified UI toolkit.
+____
+
+== Formsy React
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+Formsy React is a library that focuses on controlled components and declarative validation. It allows you to define validation rules directly within your components. Formsy React distinguishes itself with its declarative approach to validation, making it easy to define and manage validation rules directly within your form components. It provides a clean and organized way to handle complex validation scenarios, making it a good choice for projects that require precise control over validation logic.
+____
+
+== Survey React
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+Survey React is a specialized library for building surveys and quizzes. It provides a drag-and-drop designer, multiple question types, and survey analytics. Survey React is tailored to create survey-based applications. It includes a wide range of customizable question types, theming options, and integrations with backend services for data analysis. It simplifies building complex surveys, making it a valuable tool for market research, feedback collection, and educational assessments.
+____
+
+== React Form
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+React Form is a simple, unopinionated form library that gives you complete control over your form state. 
+It is designed to be flexible and composable.
+____
+
+== Typescript React Form
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+Typescript React Form is a form library that focuses on providing excellent TypeScript support. It uses generics to provide type safety for your form values. The main differential is providing type safety and auto-completion for form values, which helps to avoid common errors and improves the developer experience.
+____
+
+== React Form Elements
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+React Form Elements provides a set of pre-built form elements with built-in validation and styling. It is designed to be easy to use and customize.
+____
