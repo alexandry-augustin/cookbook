@@ -1,0 +1,13 @@
+= Formik
+:url-website: https://formik.org/
+:url-docs: https://formik.org/docs/overview
+:url-repo: https://github.com/jaredpalmer/formik
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+[,https://blog.croct.com/post/best-react-form-libraries]
+____
+Formik is one of the most popular form libraries in the React ecosystem. It simplifies form state management, validation, and submission and supports both controlled and uncontrolled components. Formik's key differentiators are its extensive documentation, large community, and ease of use. It is particularly useful for handling complex forms with multiple validation rules and dependencies.
+____

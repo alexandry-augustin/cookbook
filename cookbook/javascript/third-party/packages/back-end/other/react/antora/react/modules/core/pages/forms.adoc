@@ -4,6 +4,8 @@
 ----
 export default function MyComponent() {
     function handleSubmit(e) {
+        e.preventDefault();
+        e.stopPropagation();
         // ...
     }
 

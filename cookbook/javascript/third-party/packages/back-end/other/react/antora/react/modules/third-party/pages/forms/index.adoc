@@ -92,13 +92,6 @@ https://blog.croct.com/post/best-react-form-libraries[[table source\]]
 | 6.4k
 |===
 
-== Formik
-
-[,https://blog.croct.com/post/best-react-form-libraries]
-____
-Formik is one of the most popular form libraries in the React ecosystem. It simplifies form state management, validation, and submission and supports both controlled and uncontrolled components. Formik's key differentiators are its extensive documentation, large community, and ease of use. It is particularly useful for handling complex forms with multiple validation rules and dependencies.
-____
-
 == RC Field Form
 
 [,https://blog.croct.com/post/best-react-form-libraries]
@@ -107,6 +100,9 @@ RC Field Form is a controlled component form management library that is simple a
 ____
 
 == Final Form
+
+https://final-form.org/react[[website\]]
+https://github.com/final-form/react-final-form[[repo\]]
 
 [,https://blog.croct.com/post/best-react-form-libraries]
 ____
