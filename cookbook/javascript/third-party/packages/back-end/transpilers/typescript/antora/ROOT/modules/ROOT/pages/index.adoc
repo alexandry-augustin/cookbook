@@ -1,6 +1,4 @@
 = TypeScript
-:toc: left
-:toclevels: 8
 :url-website: https://www.typescriptlang.org/
 :url-repo: https://github.com/microsoft/TypeScript
 :url-wiki: https://en.wikipedia.org/wiki/TypeScript
@@ -99,5 +97,3 @@ Create `tsconfig.json`:
 ----
 tsc --init
 ----
-
-include::./sections/types.adoc[leveloffset=+1]

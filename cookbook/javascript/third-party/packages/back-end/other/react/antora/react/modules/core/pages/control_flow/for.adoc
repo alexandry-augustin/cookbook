@@ -25,3 +25,50 @@ function MyComponent(...) {
     );
 }
 ----
+
+== `key` in Nested Childrens
+
+The `key` needs to go on the outermost returned element, i.e.:
+
+[,tsx,title="MyComponent.tsx"]
+----
+data.map((item, idx) => {
+    return (
+        <div key={ idx }>
+            <MyOtherComponent />
+        </div>
+    )
+})
+----
+
+and *NOT* (see https://stackoverflow.com/questions/55153873/warning-each-child-in-a-list-should-have-a-unique-key-prop[here]): 
+
+[,tsx,title="MyComponent.tsx"]
+----
+data.map((item, idx) => {
+    return (
+        <div>
+            <MyOtherComponent key={ idx } />
+        </div>
+    )
+})
+----
+
+== `key` in `Fragment`
+
+[,https://stackoverflow.com/questions/59390955/can-i-add-a-key-prop-to-a-react-fragment]
+____
+To add a key to a fragment you need to use full Fragment syntax:
+____
+
+[,tsx,title="MyComponent.tsx"]
+----
+data.map((item, idx) => {
+    return (
+        <Fragment key={idx}>
+            <MyOtherComponent />
+            <MyOtherComponent />
+        </Fragment>
+    )
+})
+----
