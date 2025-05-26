@@ -52,6 +52,8 @@ export default function App()
 }
 ----
 
+== Get URL
+
 [,jsx,title='Home.js']
 ----
 import { useLocation } from 'react-router'
@@ -62,5 +64,24 @@ export default function Home() {
   return (
     <div>{location.pathname}</div>
   )
+}
+----
+
+== Button Link
+
+https://stackoverflow.com/questions/31079081/how-to-programmatically-navigate-using-react-router[How to programmatically navigate using React Router?]
+
+[,jsx,title='Home.js']
+----
+import { useNavigate } from "react-router";
+
+function Home() {
+  const navigate = useNavigate();
+
+  return (
+    <button type="button" onClick={() => navigate("/other-page")}>
+      Link
+    </button>
+  );
 }
 ----

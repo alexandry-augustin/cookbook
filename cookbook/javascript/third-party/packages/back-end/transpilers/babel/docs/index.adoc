@@ -1,8 +1,12 @@
 = Babel
 :toc: left
 :url-website: https://babeljs.io/
+:url-docs: https://babeljs.io/docs/
+:url-repo: https://github.com/babel/babel
 
 {url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
 
 https://ccoenraets.github.io/es6-tutorial/setup-babel/
 

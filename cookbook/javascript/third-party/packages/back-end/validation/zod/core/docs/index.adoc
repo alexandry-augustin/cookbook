@@ -18,14 +18,6 @@ No dependency
 pnpm install zod
 ----
 
-== Usage
-
-[,typescript,title="index.ts"]
-----
-import { z } from 'zod';
-
-const mySchema = z.string();
-console.log(mySchema.parse("Hello World !"));
-----
-
 include::./sections/types/index.adoc[leveloffset=+1]
+
+include::./sections/examples.adoc[leveloffset=+1]

@@ -14,3 +14,4 @@
 *** xref:components/Image.adoc[]
 *** xref:components/Form.adoc[]
 *** xref:components/Link.adoc[]
+** xref:third-party.adoc[]

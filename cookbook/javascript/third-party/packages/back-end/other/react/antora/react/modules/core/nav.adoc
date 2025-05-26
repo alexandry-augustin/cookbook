@@ -16,6 +16,7 @@
 *** xref:control_flow/if.adoc[]
 *** xref:control_flow/for.adoc[]
 
+** xref:event-handlers.adoc[]
 ** xref:forms.adoc[]
 
 ** xref:hooks/index.adoc[]

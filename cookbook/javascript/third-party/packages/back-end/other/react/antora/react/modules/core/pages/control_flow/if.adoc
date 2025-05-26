@@ -8,13 +8,13 @@ function MyComponent(...) {
   return (
     <>
       { isTrue ? (
-        <div>
+        <>
           {/* ... */}
-        </div>
+        </>
       ) : (
-        <div>
+        <>
           {/* ... */}
-        </div>
+        </>
       ) }
     </>
   );
@@ -57,9 +57,9 @@ function MyComponent(...) {
 
     if (isTrue) {
         content = (
-          <div>
+          <>
             {/* ... */}
-          </div>
+          </>
         )
     }
 

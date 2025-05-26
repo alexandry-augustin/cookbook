@@ -1,5 +1,4 @@
-= TypeScript Execute (`tsx`)
-:toc: left
+= `tsx`
 // :url-website: 
 :url-docs: https://tsx.is/
 :url-repo: https://github.com/privatenumber/tsx
@@ -8,11 +7,14 @@
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
 
+TypeScript Execute
+
 [,https://tsx.is/]
 ____
-The idea for tsx came about during a time when the Node.js ecosystem was getting fragmented due to the release of ES Modules (ESM). As packages migrated to ESM, projects struggled to reconcile their CommonJS apps with ESM dependencies.
+The idea for `tsx` came about during a time when the Node.js ecosystem was getting fragmented due to the release of ES Modules (ESM). 
+As packages migrated to ESM, projects struggled to reconcile their CommonJS apps with ESM dependencies.
 
-Back then, ts-node was the go-to tool for running TypeScript in Node.js, but it lacked ESM support and was quite complicated to use.
+Back then, `ts-node` was the go-to tool for running TypeScript in Node.js, but it lacked ESM support and was quite complicated to use.
 ____
 
 [,https://tsx.is/typescript]

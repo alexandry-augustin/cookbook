@@ -1,0 +1,8 @@
+= `tsconfig.json`
+
+Create `tsconfig.json`: 
+
+[source,bash]
+----
+tsc --init
+----

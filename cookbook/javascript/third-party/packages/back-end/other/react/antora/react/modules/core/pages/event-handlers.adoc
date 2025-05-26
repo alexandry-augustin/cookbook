@@ -1,0 +1,18 @@
+= Event Handlers
+
+https://react.dev/learn/responding-to-events[[docs\]]
+
+[,tsx]
+----
+<button onClick={handleClick} />
+----
+
+[,tsx]
+----
+<input onChange={handleChange} />
+----
+
+[,tsx]
+----
+<form onSubmit={handleSubmit} />
+----

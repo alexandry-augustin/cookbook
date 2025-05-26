@@ -1,0 +1,13 @@
+= ESLint
+:toc: left
+:url-website: https://eslint.org/
+:url-docs: https://eslint.org/docs/latest/use/getting-started
+:url-repo: https://github.com/eslint/eslint
+:url-wiki: https://en.wikipedia.org/wiki/ESLint
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+
+static code analysis tool

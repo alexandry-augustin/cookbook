@@ -1,5 +1,4 @@
-= `ts-node`
-:toc: left
+= `ts-node` [DEPRECATED]
 :url-website: https://typestrong.org/ts-node/
 :url-docs: https://typestrong.org/ts-node/docs/
 :url-repo: https://github.com/TypeStrong/ts-node

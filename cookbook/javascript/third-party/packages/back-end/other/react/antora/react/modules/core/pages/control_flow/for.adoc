@@ -16,7 +16,9 @@ function MyComponent(...) {
                     // data.filter((item, idx) => {
                     data.map((item, idx) => {
                         return (
-                            <li key={ idx }>{ item.value }</li>
+                            <li key={idx}>
+                                {item.value}
+                            </li>
                         )
                     })
                 }
@@ -48,7 +50,7 @@ and *NOT* (see https://stackoverflow.com/questions/55153873/warning-each-child-i
 data.map((item, idx) => {
     return (
         <div>
-            <MyOtherComponent key={ idx } />
+            <MyOtherComponent key={idx} />
         </div>
     )
 })
@@ -63,6 +65,8 @@ ____
 
 [,tsx,title="MyComponent.tsx"]
 ----
+import { Fragment } from "react/jsx-runtime";
+
 data.map((item, idx) => {
     return (
         <Fragment key={idx}>
@@ -72,3 +76,36 @@ data.map((item, idx) => {
     )
 })
 ----
+
+== Using `randomUUID()`
+
+// {...item, id: crypto.randomUUID()} // add id property to item object
+// [,tsx,title="MyComponent.tsx"]
+// ----
+// data.map(item => {
+//     return (
+//         <li key={}>
+//             {item.value}
+//         </li>
+//     )
+// })
+// ----
+
+[IMPORTANT]
+====
+Don't do this: 
+
+[,tsx,title="MyComponent.tsx"]
+----
+data.map((item, idx) => {
+    return (
+        <li key={crypto.randomUUID()}>
+            {item.value}
+        </li>
+    )
+})
+----
+
+This will creates new ids on each render.
+
+====

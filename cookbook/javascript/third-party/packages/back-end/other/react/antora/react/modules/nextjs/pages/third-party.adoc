@@ -1,0 +1,6 @@
+= Third-party
+
+== Blitz
+
+https://blitzjs.com/[[website\]]
+https://github.com/blitz-js/blitz[[repo\]]

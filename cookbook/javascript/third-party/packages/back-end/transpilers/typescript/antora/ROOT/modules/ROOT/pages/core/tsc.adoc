@@ -1,0 +1,16 @@
+= `tsc`
+
+TypeScript Compiler
+
+Transpile `.ts` files into `.js` files:
+
+[source,bash]
+----
+tsc filename.ts
+----
+
+[,https://stackoverflow.com/questions/52468096/typescript-compiler-cannot-find-name-map]
+____
+When you run `tsc main.ts`, your `tsconfig.json` file is not being used. 
+Instead run `tsc -p .` or simply `tsc`, and if necessary, restrict the input files to the compilation using the `files`, `include`, and `exclude` options in `tsconfig.json`.
+____
