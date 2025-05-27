@@ -1,0 +1,11 @@
+= Flux Design Pattern
+
+[,https://www.freecodecamp.org/news/an-introduction-to-the-flux-architectural-pattern-674ea74775c9/]
+____
+Flux is an architectural pattern proposed by Facebook for building SPAs. It suggests to split the application into the following parts:
+
+* Stores
+* Dispatcher
+* Views
+* Action / Action Creators
+____
