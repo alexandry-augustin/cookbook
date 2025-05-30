@@ -4,3 +4,4 @@ title: ROOT
 nav:
 - modules/ROOT/nav.adoc
 - modules/core/nav.adoc
+- modules/stdlib/nav.adoc
