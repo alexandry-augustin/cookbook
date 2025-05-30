@@ -1,0 +1,13 @@
+= FAQ
+
+== Python Script
+
+[,bash]
+----
+chmod a+x script.py
+----
+
+[,python]
+----
+#!/usr/bin/env python3
+----

@@ -1,0 +1,13 @@
+= `commands`
+
+[,https://stackoverflow.com/questions/55913881/i-can-not-import-commands-in-my-project-now]
+____
+Deprecated since version 2.6: The commands module has been removed in Python 3. Use the `subprocess` module instead.
+____
+
+See https://docs.python.org/2/library/commands.html
+
+[,python]
+----
+import commands
+----

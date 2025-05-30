@@ -17,6 +17,7 @@ import shlex
 #----------------------------------------------------------
 # subprocess.call(args, *, stdin=None, stdout=None, stderr=None, shell=False)
 #----------------------------------------------------------
+subprocess.call('echo -n "test"', shell=True)
 subprocess.call("echo -n \"test\"", shell=True)
 subprocess.call('ls | wc -l', shell=True)
 subprocess.call(['ls', '-l'])

@@ -12,6 +12,6 @@ ____
 
 == Functional Programming
 
-* `filter()`:
-* `map()`:
-* `reduce()`:
+`filter()`:: {empty}
+`map()`:: {empty}
+`reduce()`:: {empty}
