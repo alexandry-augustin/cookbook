@@ -1,8 +1,0 @@
-= Python
-:toc: left
-
-include::./sections/interpreter.adoc[leveloffset=+1]
-
-include::./sections/core/index.adoc[leveloffset=+1]
-
-include::./sections/implementations/index.adoc[leveloffset=+1]

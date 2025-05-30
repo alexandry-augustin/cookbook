@@ -1,0 +1,6 @@
+git/
+*.code-workspace
+.env.*
+.venv
+.venv/
+**/.venv/

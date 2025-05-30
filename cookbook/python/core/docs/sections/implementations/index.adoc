@@ -1,7 +1,0 @@
-= Implementations
-
-include::./cpython.adoc[leveloffset=+1]
-
-include::./pypy.adoc[leveloffset=+1]
-
-include::./micropython.adoc[leveloffset=+1]

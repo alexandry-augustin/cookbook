@@ -8,6 +8,7 @@
 ** xref:react-mosaic.adoc[]
 ** xref:react-i18next.adoc[]
 ** xref:contentlayer.adoc[]
+** xref:svgr.adoc[]
 
 ** Styling
 *** xref:bootstrap.adoc[]

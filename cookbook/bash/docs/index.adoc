@@ -1,4 +1,5 @@
 = Bash
+:toc: left
 :url-wiki: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
 :url-docs: https://www.gnu.org/doc/doc.html
 :url-website: https://www.gnu.org/software/bash/
@@ -91,3 +92,5 @@ NOTE: `printf` does not automatically adds a new line character.
 === `ulimit`
 
 === `unalias`
+
+include::./section/faq.adoc[leveloffset=+1]
