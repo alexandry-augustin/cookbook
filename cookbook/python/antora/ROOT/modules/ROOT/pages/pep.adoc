@@ -1,5 +1,7 @@
-= Python Enhancement Proposals (PEPs)
+= PEPs
 :url-website: https://peps.python.org/
+
+Python Enhancement Proposals
 
 {url-website}[[website\]]
 

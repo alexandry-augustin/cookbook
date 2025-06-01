@@ -1,0 +1,24 @@
+= `requests`
+:url-docs: https://docs.python-requests.org/en/master/
+
+{url-docs}[[docs\]]
+
+https://stackoverflow.com/questions/10588644/how-can-i-see-the-entire-http-request-thats-being-sent-by-my-python-application
+
+== Raise on HTTP Error
+
+https://stackoverflow.com/questions/54087303/python-requests-how-to-check-for-200-ok
+
+https://requests.readthedocs.io/en/latest/api/#requests.Response.raise_for_status
+
+[source,python]
+----
+try:
+    resp = requests.post(url, headers=headers, data=data, timeout=timeout)
+    resp.raise_for_status()
+except requests.HTTPError as ex:
+    # possibly check response for a message
+    raise ex  # let the caller handle it
+except requests.Timeout:
+    # request took too long
+----

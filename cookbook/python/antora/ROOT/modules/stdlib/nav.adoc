@@ -1,1 +1,7 @@
 * xref:index.adoc[]
+** xref:commands.adoc[]
+** xref:logging.adoc[]
+** xref:requests.adoc[]
+** xref:http.adoc[]
+** xref:unittest.adoc[]
+** xref:sqlite3.adoc[]

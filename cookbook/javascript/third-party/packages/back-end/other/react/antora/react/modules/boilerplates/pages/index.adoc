@@ -1,0 +1,10 @@
+= Boilerplates
+
+[,bash]
+----
+pnpm create vite@latest
+----
+
+* react-router
+* tailwind
+* shadcn

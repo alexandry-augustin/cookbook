@@ -1,8 +1,21 @@
 = `Link`
 
-[,jsx,title='App.js']
+[,jsx,title='MyComponent.js']
 ----
 import { Link } from "react-router";
 
 <Link to="/">Home</Link>
+----
+
+== Button Link
+
+[,jsx,title='MyComponent.js']
+----
+import { Link } from "react-router";
+
+<Link to="/other-page">
+    <button type="button">
+        Link
+    </button>
+</Link>
 ----
