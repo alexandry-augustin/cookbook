@@ -9,6 +9,7 @@
 ** xref:react-i18next.adoc[]
 ** xref:contentlayer.adoc[]
 ** xref:svgr.adoc[]
+** xref:react-use.adoc[]
 
 ** Styling
 *** xref:bootstrap.adoc[]

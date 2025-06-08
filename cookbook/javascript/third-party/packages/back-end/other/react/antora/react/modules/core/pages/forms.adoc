@@ -65,3 +65,24 @@ export default function MyComponent() {
     );
 }
 ----
+
+== Checkbox
+
+https://stackoverflow.com/questions/56356900/way-to-determine-checkbox-checked-in-react-usestate[[ref\]]
+
+[,tsx]
+----
+import { useState } from 'react';
+
+function MyComponent() {
+    const [checked, setChecked] = useState(false);
+
+    return (
+        <input 
+            type="checkbox" 
+            onClick={() => setSelected(!isSelected)}
+            checked={isSelected} 
+        />
+    )
+}
+----

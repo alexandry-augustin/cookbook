@@ -4,6 +4,7 @@
 
 ** xref:vue-migration/index.adoc[]
 *** xref:vue-migration/vue-composition-api-vs-react-hooks-the-core-difference.adoc[]
+*** xref:vue-migration/reactivue.adoc[]
 
 ** xref:react-dom.adoc[]
 

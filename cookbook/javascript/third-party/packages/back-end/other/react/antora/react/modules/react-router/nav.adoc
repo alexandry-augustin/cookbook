@@ -7,5 +7,6 @@
 
 ** xref:components/index.adoc[]
 *** xref:components/Link.adoc[]
+*** xref:components/Navigate.adoc[]
 *** xref:components/Routes.adoc[]
 *** xref:components/Route.adoc[]

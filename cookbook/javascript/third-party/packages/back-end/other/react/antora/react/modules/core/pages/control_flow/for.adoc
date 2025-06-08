@@ -28,6 +28,11 @@ function MyComponent(...) {
 }
 ----
 
+[,tsx,title="MyComponent.tsx"]
+----
+{ [...Array(5).keys()].map((i) => {return <>{i}</>}) }
+----
+
 == `key` in Nested Childrens
 
 The `key` needs to go on the outermost returned element, i.e.:

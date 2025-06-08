@@ -1,0 +1,11 @@
+= reactivue
+:url-repo: https://github.com/antfu/reactivue
+
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install reactivue
+----

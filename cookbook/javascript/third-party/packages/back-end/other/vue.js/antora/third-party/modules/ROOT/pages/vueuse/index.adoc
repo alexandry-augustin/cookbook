@@ -1,5 +1,4 @@
 = VueUse
-:toc: left
 :url-website: https://vueuse.org
 :url-docs: https://vueuse.org/guide/
 :url-repo: https://github.com/vueuse/vueuse

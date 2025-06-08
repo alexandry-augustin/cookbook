@@ -8,3 +8,52 @@
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
 
+[,https://stackoverflow.com/questions/79111563/what-is-the-difference-of-typescript-vs-typescript-swc-when-creating-a-vite-pr]
+____
+**SWC**
+
+Advantages:
+
+* *Performance*: Faster than Babel, ideal for short build times.
+* *Written in Rust*: Leverages efficiency and concurrency.
+* *Simplicity*: Requires less initial configuration.
+
+Disadvantages:
+
+* *Limited Ecosystem*: Fewer plugins and preset availables, at moment.
+* *Compatibility*: Some features may not be fully implemented yet.
+* *Less Maturity*: Smaller community (growing) and documentation compared to Babel.
+
+Project Types:
+
+* New projects prioritizing speed.
+* Medium to large applications.
+* Situations where simplicity is key.
+
+**Babel**
+
+Advantages:
+
+* *Robust Ecosystem*: A fast array of plugins and presets.
+* *Customization*: Detailed configuration for specific needs.
+* *Maturity and Support*: Extensive documentation and active community.
+
+Disadvantages:
+
+* *Performance*: Generally slower compared to SWC.
+* *Complex Configuration*: Can be complicated for less experienced developers.
+
+Project Types:
+
+* Large and complex projects requiring custom transformations.
+* Applucations relying on various libraries and tools.
+* Situtations where compatibility with the latest javascript features is critical.
+
+A resume of differences between Babel and SWC according to my point of view and what I understood.
+
+**Sources:**
+
+* https://swc.rs/docs/getting-started
+* https://github.com/vitejs/vite-plugin-react-swc?tab=readme-ov-file
+* https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react
+____
