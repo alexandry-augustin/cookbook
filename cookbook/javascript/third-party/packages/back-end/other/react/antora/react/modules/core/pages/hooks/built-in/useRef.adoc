@@ -5,7 +5,7 @@
 import { useRef } from 'react';
 
 export default function MyComponent() {
-    const inputNameRef = useRef(null);
+    const inputNameRef = useRef<HTMLDivElement>(null);
 
     // FIXME
     inputNameRef.current.value = "placeholder";

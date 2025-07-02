@@ -74,15 +74,25 @@ https://stackoverflow.com/questions/56356900/way-to-determine-checkbox-checked-i
 ----
 import { useState } from 'react';
 
-function MyComponent() {
+export function MyComponent() {
     const [checked, setChecked] = useState(false);
 
     return (
-        <input 
-            type="checkbox" 
-            onClick={() => setSelected(!isSelected)}
-            checked={isSelected} 
-        />
+        <>
+            <input
+                type="checkbox"
+                onChange={() => setChecked((checked) => !checked)}
+                checked={checked}
+            />
+            {String(checked)}
+        </>
     )
 }
 ----
+
+[IMPORTANT]
+====
+> "Error: You provided 'checked' prop to a form field without onChange handler"
+
+See https://bobbyhadz.com/blog/react-you-provided-value-prop-to-form-field-without-onchange[here]
+====

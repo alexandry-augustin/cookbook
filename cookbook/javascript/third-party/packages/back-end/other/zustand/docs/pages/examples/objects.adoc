@@ -1,0 +1,63 @@
+= Objects
+
+https://refine.dev/blog/zustand-react-state/#managing-state-structures[[ref\]]
+
+[,ts,title="stores/useStore.tsx"]
+----
+import { create } from 'zustand'
+
+export const useStore = create((set) => ({
+    user: {
+        name: "",
+        age: 0,
+        address: {
+          street: "",
+          city: "",
+        },
+    },
+    
+    updateUser: (newUser) =>
+      set((state) => ({ user: { ...state.user, ...newUser } })),
+
+    updateAddress: (newAddress) =>
+      set((state) => ({
+          user: {
+              ...state.user,
+              address: { ...state.user.address, ...newAddress },
+          },
+        })
+      ),
+}));
+----
+
+[,ts,title="components/MyComponent.tsx"]
+----
+import { useEffect } from 'react';
+import { useStore } from '@/stores/my-store'
+
+export function MyComponent() {
+  const { user, updateUser, updateAddress } = useStore();
+
+  useEffect(() => {
+    updateUser({
+      name: "new name",
+      age: 0,
+      address: {
+        street: "",
+        city: "",
+      }
+    });
+
+    updateAddress({
+      street: "new street",
+      city: "new city",
+    });
+  }, [])
+
+  return (
+    <>
+      {JSON.stringify(user)}
+    </>
+  )
+}
+----

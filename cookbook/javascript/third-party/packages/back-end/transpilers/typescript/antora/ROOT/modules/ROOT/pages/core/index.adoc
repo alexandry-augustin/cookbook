@@ -60,3 +60,24 @@ node index.js
 }
 ----
 ====
+
+== `type`
+
+[,typescript]
+----
+type
+----
+
+== `interface`
+
+[,Gemini]
+____
+Use `interface` when defining object shapes that might need to be augmented later (e.g., by plugins, third-party libraries, or through declaration merging).
+
+Use `type` for everything else: aliasing primitive types, creating union or intersection types, defining tuple types, or when you specifically don't want declaration merging.
+____
+
+[,typescript]
+----
+interface
+----

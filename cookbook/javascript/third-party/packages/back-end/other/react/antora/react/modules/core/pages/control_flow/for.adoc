@@ -30,6 +30,13 @@ function MyComponent(...) {
 
 [,tsx,title="MyComponent.tsx"]
 ----
+{ data.map((item, idx) => (
+        <div key={idx}>{item}</li>
+))}
+----
+
+[,tsx,title="MyComponent.tsx"]
+----
 { [...Array(5).keys()].map((i) => {return <>{i}</>}) }
 ----
 

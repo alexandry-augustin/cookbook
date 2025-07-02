@@ -10,6 +10,8 @@
 {url-repo}[[repo\]]
 // {url-wiki}[[wiki\]]
 
+https://refine.dev/blog/zustand-react-state/[How to use Zustand]
+
 https://medium.com/@funti009/how-to-use-zustand-in-vue-84e1ab2ebf75[How to use Zustand in Vue]
 
 == Installation
@@ -24,23 +26,4 @@ pnpm install zustand
 pnpm create vite zu-app
 ----
 
-== Usage
-
-[,ts,title="stores/counter.ts"]
-----
-import { create } from 'zustand'
-
-export const counterStore = create((set) => ({
-    count: 0
-}))
-----
-
-[,ts,title="MyComponent.tsx"]
-----
-import { counterStore } from 'stores/counter'
-
-export default function MyComponent() {
-    const settings = counterStore((state) => state.count);
-}
-----
-
+include::pages/examples/index.adoc[leveloffset=+1]

@@ -1,0 +1,16 @@
+= NestJS
+:toc: left
+:url-website: https://nestjs.com/
+:url-docs: https://docs.nestjs.com/
+:url-repo: https://github.com/nestjs/nest
+:url-wiki: https://en.wikipedia.org/wiki/NestJS
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+
+[,Gemini]
+____
+Many consider NestJS to be one of the closest equivalents to Django in the Node.js ecosystem
+____
