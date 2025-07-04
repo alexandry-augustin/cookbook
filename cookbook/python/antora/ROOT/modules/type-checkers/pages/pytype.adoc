@@ -1,0 +1,9 @@
+= Pytype
+
+[,Gemini]
+____
+Google's Type Checker:: Pytype is developed by Google and is notable for its ability to infer types even in code _without_ explicit type annotations. This makes it useful for adding type safety to legacy codebases that haven't been fully annotated yet.
+Features:: Its strong type inference is a key differentiator. It can also generate stub files (.pyi) for unannotated code.
+Integration:: Primarily a CLI tool.
+Considerations:: While powerful for inference, it might have a steeper learning curve compared to MyPy or Pyright for some users, and its approach to type inference can sometimes lead to different results than other checkers.
+____

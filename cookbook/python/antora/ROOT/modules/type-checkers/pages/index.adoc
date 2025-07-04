@@ -11,37 +11,3 @@ For legacy codebases with minimal annotations:: *Pytype* can be very helpful for
 
 Many teams also combine these tools. For example, they might use Pylance for immediate feedback in the IDE and run MyPy in their CI/CD pipeline for a more rigorous, complete check.
 ____
-
-== MyPy
-
-The King of Type Checkers:: MyPy is by far the most widely used and influential static type checker for Python. It was one of the first to fully implement PEP 484 (the standard for type hints) and has a strong community backing.
-Features:: It performs comprehensive static analysis, catching type errors in functions, variables, and complex data structures. It's highly configurable and supports gradual typing, allowing you to add type hints to your codebase incrementally.
-Integration:: MyPy can be run as a command-line tool, integrated into CI/CD pipelines, and many IDEs (though some might use Pyright for their built-in checks).
-Considerations:: While powerful, MyPy can sometimes be slower on very large codebases, and its error messages can be verbose for newcomers.
-
-== Pyright (and Pylance)
-
-Microsoft's Offering:: Pyright is a fast, robust type checker developed by Microsoft. It's particularly well-known because it powers *Pylance*, the default language server for Python in Visual Studio Code.
-Features:: Pyright is known for its speed and its ability to perform fast incremental checks, which is crucial for a smooth in-IDE experience. It has excellent support for the latest typing features and often provides more precise type inference than MyPy in certain scenarios.
-Integration:: Primarily used via Pylance in VS Code, but Pyright can also be run as a standalone CLI tool.
-Considerations:: While open-source, its close ties to Microsoft and VS Code might make it feel less "community-driven" to some, although its development is very active.
-
-== Pyre
-
-Meta's Type Checker:: Pyre is developed and used internally at Meta (Facebook). It's designed for performance and scalability, particularly for very large Python monorepos.
-Features:: Pyre focuses on speed and has a strong type inference engine. It also includes features like taint analysis for security checks.
-Integration:: Can be used as a standalone CLI tool.
-Considerations:: While open-source, it historically has been more tailored to Meta's internal needs, which sometimes meant less immediate focus on general community use cases. However, Meta is developing a new Rust-based type checker called *Pyrefly* that aims to be more open-source friendly.
-
-== Pytype
-
-Google's Type Checker:: Pytype is developed by Google and is notable for its ability to infer types even in code _without_ explicit type annotations. This makes it useful for adding type safety to legacy codebases that haven't been fully annotated yet.
-Features:: Its strong type inference is a key differentiator. It can also generate stub files (.pyi) for unannotated code.
-Integration:: Primarily a CLI tool.
-Considerations:: While powerful for inference, it might have a steeper learning curve compared to MyPy or Pyright for some users, and its approach to type inference can sometimes lead to different results than other checkers.
-
-== Ty (from Astral)
-
-Emerging / Honorable Mentions
-
-This is a very exciting, new Rust-based type checker being developed by Astral (the creators of ruff and uv). It promises dramatically faster and more powerful type analysis. While still in alpha/early development, it's definitely one to watch.
