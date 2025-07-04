@@ -1,4 +1,11 @@
 = MyPy
+:url-website: https://www.mypy-lang.org/
+:url-docs: https://mypy.readthedocs.io/en/stable/getting_started.html
+:url-repo: https://github.com/python/mypy
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
 
 [,Gemini]
 ____

@@ -1,4 +1,4 @@
-= Type Checkers
+= Static Type Checkers
 
 [,Gemini]
 ____
