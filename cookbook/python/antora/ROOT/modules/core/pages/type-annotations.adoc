@@ -4,21 +4,24 @@
 
 [,python]
 ----
+name: str = "John"
+age: int = 18
+is_active: bool = True
+height: float = 1.75    
+----
+
+== Functions
+
+[,python]
+----
 def add(a: int, b: int) -> int:
     return a+b
 
 def average(values: list[float]) -> float:
     return sum(values) / len(values) if values else 0.0
 
-if __name__ == "__main__":
-
-    name: str = "John"
-    age: int = 18
-    is_active: bool = True
-    height: float = 1.75
-    
-    assert(add(1,2) == 3)
-    assert(average([2, 2]) == 2)
+assert(add(1,2) == 3)
+assert(average([2, 2]) == 2)
 ----
 
 == Pipe Operator (`|`)
@@ -27,8 +30,7 @@ Starting with Python 3.10, you can alternatively use the pipe operator (`|`) as 
 
 [,python]
 ----
-def add(a: float | int, b: float | int) -> float:
-    # ...
+my_var: float | int = 0
 ----
 
 [NOTE]
@@ -39,7 +41,6 @@ Equivalent to:
 ----
 from typing import Union
 
-def add(a: Union[float, int], b: Union[float, int]) -> float:
-    # ...
+my_var: Union[float, int] = 0
 ----
 ====
