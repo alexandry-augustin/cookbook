@@ -1,4 +1,4 @@
-= Yet Another Python Code Formatter (yapf)
+= yapf
 // :url-website: 
 // :url-docs: 
 :url-repo: https://github.com/google/yapf
@@ -6,5 +6,7 @@
 // {url-website}[[website\]]
 // {url-docs}[[docs\]]
 {url-repo}[[repo\]]
+
+Yet Another Python Code Formatter
 
 == Installation
