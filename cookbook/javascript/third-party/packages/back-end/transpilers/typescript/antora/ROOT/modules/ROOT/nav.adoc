@@ -1,8 +1,0 @@
-* xref:core/index.adoc[]
-** xref:core/tsconfig.json.adoc[]
-** xref:core/tsc.adoc[]
-** xref:core/types.adoc[]
-
-* Third-party
-** xref:third-party/ts-node/index.adoc[]
-** xref:third-party/tsx/index.adoc[]
