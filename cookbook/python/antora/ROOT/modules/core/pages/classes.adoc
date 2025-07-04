@@ -5,9 +5,9 @@ https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object
 
 https://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python
 
-== Old-style (Classic) class
+== Old-style (Classic) Class
 
-Up to Python 2.1
+Up to Python `2.1`
 
 [source,python]
 ----
@@ -17,7 +17,7 @@ class OldStyleClass():
 
 == New-style Class
 
-Introduced in Python 2.2
+Introduced in Python `2.2`
 
 New-style classes inherit from `object`
 
@@ -27,7 +27,7 @@ class NewStyleClass(object):
     pass
 ----
 
-Python 3 doesn't support old style classes
+Python `3` doesn't support old style classes
 
-"No matter if you subclass from `object` or not, classes are new-style in Python 3."
+"No matter if you subclass from `object` or not, classes are new-style in Python `3`."
 -- https://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python

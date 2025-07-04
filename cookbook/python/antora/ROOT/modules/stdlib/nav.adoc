@@ -5,3 +5,4 @@
 ** xref:http.adoc[]
 ** xref:unittest.adoc[]
 ** xref:sqlite3.adoc[]
+** xref:typing.adoc[]

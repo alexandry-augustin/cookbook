@@ -1,0 +1,16 @@
+= `typing`
+:url-docs: https://docs.python.org/3/library/typing.html
+
+{url-docs}[[docs\]]
+
+[,Gemini]
+____
+The `typing` module provides more universal compatibility for older Python versions (3.5+).
+____
+
+[,python]
+----
+from typing import Any, Dict, Tuple
+
+l: Dict[str, Tuple[int, str]] = None
+----

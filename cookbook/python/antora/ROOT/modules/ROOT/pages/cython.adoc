@@ -1,0 +1,20 @@
+= Cython
+:url-website: https://cython.org/
+:url-wiki: https://en.wikipedia.org/wiki/Cython
+:url-repo: https://github.com/cython/cython
+
+{url-website}[[website\]]
+{url-wiki}[[wiki\]]
+{url-repo}[[repo\]]
+
+[,https://en.wikipedia.org/wiki/Cython]
+_____
+Cython is a superset of the programming language Python, which allows developers to write Python code (with optional, C-inspired syntax extensions) that yields performance comparable to that of C.
+_____
+
+== Installation
+
+[,bash]
+----
+python -m pip install cython
+----

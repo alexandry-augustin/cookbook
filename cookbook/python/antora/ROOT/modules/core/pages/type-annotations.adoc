@@ -1,4 +1,4 @@
-= Annotations
+= Type Annotations
 
 // https://realpython.com/python-type-checking/
 
@@ -12,12 +12,12 @@ def add(a: Union[float, int], b: Union[float, int]) -> float:
 
 [NOTE]
 ====
-Starting with Python 3.10, you can alternatively use the pipe operator (|) as a type union alias:
+Starting with Python 3.10, you can alternatively use the pipe operator (`|`) as a type union alias:
 
 [source,python]
 ----
 def add(a: float | int, b: float | int) -> float:
-....
+    # ...
 ----
 ====
 
