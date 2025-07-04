@@ -14,3 +14,18 @@ Features:: It performs comprehensive static analysis, catching type errors in fu
 Integration:: MyPy can be run as a command-line tool, integrated into CI/CD pipelines, and many IDEs (though some might use Pyright for their built-in checks).
 Considerations:: While powerful, MyPy can sometimes be slower on very large codebases, and its error messages can be verbose for newcomers.
 ____
+
+== Installation
+
+[,bash]
+----
+uv add mypy
+# python3 -m pip install mypy
+----
+
+== Usage
+
+[,bash]
+----
+uv run mypy main.py
+----

@@ -12,5 +12,26 @@ ____
 ----
 from typing import Any, Dict, Tuple
 
-l: Dict[str, Tuple[int, str]] = None
+my_list: Dict[str, Tuple[int, str]] = None
 ----
+
+== `Union`
+
+[,python]
+----
+from typing import Union
+
+def add(a: Union[float, int], b: Union[float, int]) -> float:
+    # ...
+----
+
+[NOTE]
+====
+Equivalent to:
+
+[,python]
+----
+def add(a: float | int, b: float | int) -> float:
+    # ...
+----
+====

@@ -2,23 +2,44 @@
 
 // https://realpython.com/python-type-checking/
 
-[source,python]
+[,python]
 ----
-from typing import Union
+def add(a: int, b: int) -> int:
+    return a+b
 
-def add(a: Union[float, int], b: Union[float, int]) -> float:
-...
+def average(values: list[float]) -> float:
+    return sum(values) / len(values) if values else 0.0
+
+if __name__ == "__main__":
+
+    name: str = "John"
+    age: int = 18
+    is_active: bool = True
+    height: float = 1.75
+    
+    assert(add(1,2) == 3)
+    assert(average([2, 2]) == 2)
 ----
 
-[NOTE]
-====
+== Pipe Operator (`|`)
+
 Starting with Python 3.10, you can alternatively use the pipe operator (`|`) as a type union alias:
 
-[source,python]
+[,python]
 ----
 def add(a: float | int, b: float | int) -> float:
     # ...
 ----
-====
 
-// `Union`:: {empty}
+[NOTE]
+====
+Equivalent to:
+
+[,python]
+----
+from typing import Union
+
+def add(a: Union[float, int], b: Union[float, int]) -> float:
+    # ...
+----
+====
