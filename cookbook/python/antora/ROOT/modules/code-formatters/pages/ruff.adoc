@@ -1,5 +1,4 @@
 = ruff
-:toc: left
 // :url-website: 
 :url-docs: https://docs.astral.sh/ruff/
 :url-repo: https://github.com/astral-sh/ruff

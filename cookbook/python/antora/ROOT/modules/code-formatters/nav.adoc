@@ -1,0 +1,5 @@
+* xref:index.adoc[]
+** xref:autopep8.adoc[]
+** xref:black.adoc[]
+** xref:ruff.adoc[]
+** xref:yapf.adoc[]

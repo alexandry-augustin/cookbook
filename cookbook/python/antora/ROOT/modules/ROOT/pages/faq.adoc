@@ -11,3 +11,14 @@ chmod a+x script.py
 ----
 #!/usr/bin/env python3
 ----
+
+== Makefile
+
+[,makefile,title="makefile"]
+----
+PYTHON=python
+sources = $(wildcard *.py)
+
+run: main.py
+	$(PYTHON) main.py
+----

@@ -1,5 +1,4 @@
 = autopep8
-:toc: left
 // :url-website: 
 // :url-docs: 
 :url-repo: https://github.com/hhatto/autopep8

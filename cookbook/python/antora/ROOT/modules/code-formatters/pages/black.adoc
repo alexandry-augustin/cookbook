@@ -1,5 +1,4 @@
 = Black
-:toc: left
 // :url-website: 
 :url-docs: https://black.readthedocs.io/en/stable/
 :url-repo: https://github.com/psf/black

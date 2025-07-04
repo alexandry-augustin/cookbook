@@ -1,5 +1,4 @@
 = Yet Another Python Code Formatter (yapf)
-:toc: left
 // :url-website: 
 // :url-docs: 
 :url-repo: https://github.com/google/yapf

@@ -5,3 +5,5 @@ nav:
 - modules/ROOT/nav.adoc
 - modules/core/nav.adoc
 - modules/stdlib/nav.adoc
+- modules/code-formatters/nav.adoc
+- modules/type-checkers/nav.adoc
