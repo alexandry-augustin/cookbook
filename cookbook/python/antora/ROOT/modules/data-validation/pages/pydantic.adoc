@@ -1,0 +1,6 @@
+= Pydantic
+:url-docs: https://docs.pydantic.dev/latest/
+:url-repo: https://github.com/pydantic/pydantic
+
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
