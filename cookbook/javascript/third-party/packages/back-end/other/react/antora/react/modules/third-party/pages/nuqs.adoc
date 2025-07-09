@@ -1,0 +1,24 @@
+= nuqs
+:url-website: https://nuqs.47ng.com/
+:url-docs: https://nuqs.47ng.com/docs/
+:url-repo: https://github.com/47ng/nuqs
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+https://freedium.cfd/https://medium.com/@tahakotwal54/the-power-of-nuqs-modern-search-parameter-management-in-react-ce5d7dff5602[[tutorial\]]
+
+== Installation
+
+[,bash]
+----
+# Using npm
+npm install nuqs
+
+# Using yarn
+yarn add nuqs
+
+# Using pnpm
+pnpm add nuqs
+----

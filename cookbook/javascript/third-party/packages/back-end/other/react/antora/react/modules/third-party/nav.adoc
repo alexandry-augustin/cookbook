@@ -10,6 +10,7 @@
 ** xref:contentlayer.adoc[]
 ** xref:svgr.adoc[]
 ** xref:react-use.adoc[]
+** xref:nuqs.adoc[]
 
 ** Styling
 *** xref:bootstrap.adoc[]
