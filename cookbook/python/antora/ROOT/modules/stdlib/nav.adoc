@@ -8,7 +8,6 @@
 ** xref:unittest.adoc[]
 ** xref:sqlite3.adoc[]
 ** xref:typing.adoc[]
-
 ** xref:enum.adoc[]
 ** xref:argparse.adoc[]
 ** xref:asyncio.adoc[]
@@ -25,7 +24,6 @@
 ** xref:image.adoc[]
 ** xref:itertools.adoc[]
 ** xref:json.adoc[]
-** xref:logging.adoc[]
 ** xref:math.adoc[]
 ** xref:multiprocessing.adoc[]
 ** xref:optparse.adoc[]
@@ -43,7 +41,6 @@
 ** xref:signal.adoc[]
 ** xref:smtplib.adoc[]
 ** xref:socket.adoc[]
-** xref:sqlite3.adoc[]
 ** xref:stringio.adoc[]
 ** xref:subprocess.adoc[]
 ** xref:sys.adoc[]
@@ -51,11 +48,7 @@
 ** xref:textwrap.adoc[]
 ** xref:thread.adoc[]
 ** xref:threading.adoc[]
-** xref:unittest.adoc[]
 ** xref:urllib.adoc[]
 ** xref:websocket.adoc[]
 ** xref:xml.adoc[]
 ** xref:zipfile.adoc[]
-
-
-touch enum.adoc argparse.adoc asyncio.adoc codecs.adoc collections.adoc copy.adoc csv.adoc date_time.adoc decorators.adoc difflib.adoc fileinput.adoc functools.adoc hashlib.adoc image.adoc itertools.adoc json.adoc logging.adoc math.adoc multiprocessing.adoc optparse.adoc os.adoc pathlib.adoc pdb.adoc pickle.adoc pil.adoc pprint.adoc random.adoc re.adoc rpy2.adoc secret.adoc shutil.adoc signal.adoc smtplib.adoc socket.adoc sqlite3.adoc stringio.adoc subprocess.adoc sys.adoc tempfile.adoc textwrap.adoc thread.adoc threading.adoc unittest.adoc urllib.adoc websocket.adoc xml.adoc zipfile.adoc 
