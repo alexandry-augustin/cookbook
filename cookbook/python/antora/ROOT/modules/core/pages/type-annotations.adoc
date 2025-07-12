@@ -2,6 +2,8 @@
 
 // https://realpython.com/python-type-checking/
 
+IMPORTANT: See also `typing` module.
+
 [,python]
 ----
 name: str = "John"

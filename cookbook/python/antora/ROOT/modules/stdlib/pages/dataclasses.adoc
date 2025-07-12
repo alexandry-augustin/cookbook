@@ -1,3 +1,7 @@
+= `dataclasses`
+
+[,python]
+----
 from dataclasses import dataclass
 from dataclasses import field
 
@@ -17,3 +21,4 @@ if __name__ == '__main__':
     assert(p.x == 1)
     assert(p.z == 0)
     assert(p.data == [])
+----

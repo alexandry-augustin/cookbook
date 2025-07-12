@@ -3,6 +3,8 @@
 
 {url-docs}[[docs\]]
 
+IMPORTANT: See also built-in type annotations.
+
 [,Gemini]
 ____
 The `typing` module provides more universal compatibility for older Python versions (3.5+).
