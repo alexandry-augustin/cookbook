@@ -7,3 +7,112 @@
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
 
+== `i18next`
+
+// :url-docs: 
+https://www.i18next.com/[[docs\]]
+
+[,https://www.i18next.com/]
+____
+The i18next-community created integrations for frontend-frameworks such as React, Angular, Vue.js and many more.
+____
+
+== Installation
+
+[,bash]
+----
+pnpm install --save react-i18next i18next
+----
+
+== Example
+
+.Vite app
+....
+./
+├── src/
+│   ├── App.tsx
+│   ├── i18n.ts
+│   ├── main.tsx
+│   ├── MyComponent.tsx
+│   └── vite-env.d.ts
+└── ...
+....
+
+[,ts,title="src/i18n.ts"]
+----
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+
+// the translations
+// (tip move them in a JSON file and import them,
+// or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
+const resources = {
+  en: {
+    translation: {
+      "Welcome to React": "Welcome to React and react-i18next"
+    }
+  },
+  fr: {
+    translation: {
+      "Welcome to React": "Bienvenue à React et react-i18next"
+    }
+  }
+};
+
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+    resources,
+    lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+    // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
+    // if you're using a language detector, do not define the lng option
+
+    interpolation: {
+      escapeValue: false // react already safes from xss
+    }
+  });
+
+  export default i18n;
+----
+
+[,ts,title="src/main.tsx"]
+----
+// ...
+import './i18n'
+// ...
+----
+
+[,ts,title="src/MyComponent.tsx"]
+----
+import { useTranslation } from 'react-i18next'
+
+export function MyComponent () {
+  const { t, i18n } = useTranslation();
+
+  return (
+    <>{t('Welcome to React')}</>
+  )
+}
+----
+
+// [,ts,title="src/App.tsx"]
+// ----
+// import { MyComponent } from './MyComponent'
+// 
+// export default function App() {
+//   const [count, setCount] = useState(0)
+// 
+//   return (
+//     <MyComponent />
+//   )
+// }
+// ----
+
+== `t()`
+
+https://www.i18next.com/translation-function/essentials[[docs\]]
+
+[,https://react.i18next.com/guides/quick-start]
+____
+The `t` function is the main function in i18next to translate content. 
+____

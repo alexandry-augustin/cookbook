@@ -1,0 +1,16 @@
+= Countable.js
+:toc: left
+:url-website: https://sacha.me/Countable/
+:url-docs: https://sacha.me/Countable/docs/
+:url-repo: https://github.com/RadLikeWhoa/Countable
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install --save-dev countable
+----
