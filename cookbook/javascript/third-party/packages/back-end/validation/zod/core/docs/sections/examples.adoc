@@ -1,9 +1,0 @@
-= Examples
-
-[,typescript,title="index.ts"]
-----
-import { z } from 'zod';
-
-const mySchema = z.string();
-console.log(mySchema.parse("Hello World !"));
-----

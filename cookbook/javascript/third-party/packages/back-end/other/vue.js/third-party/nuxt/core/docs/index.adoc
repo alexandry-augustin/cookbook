@@ -25,6 +25,11 @@ ____
 Nuxt3 is using Vite by default, but you can opt-in for a Webpack5 build too.
 ____
 
+// [,https://nuxt.com/docs/migration/overview#migrate-from-nuxt-2-to-nuxt-3]
+// ____
+// Nuxt3 is using Vite by default
+// ____
+
 == Installation
 
 [,bash]

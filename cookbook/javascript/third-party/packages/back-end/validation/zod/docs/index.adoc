@@ -18,6 +18,6 @@ No dependency
 pnpm install zod
 ----
 
-include::./sections/types/index.adoc[leveloffset=+1]
+include::./sections/core/index.adoc[leveloffset=+1]
 
-include::./sections/examples.adoc[leveloffset=+1]
+include::./sections/contrib/index.adoc[leveloffset=+1]

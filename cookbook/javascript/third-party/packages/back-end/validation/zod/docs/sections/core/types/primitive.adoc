@@ -3,6 +3,7 @@
 [,javascript]
 ----
 z.string();
+z.email(); // New in v4 (replaces `z.string().email()` which is now deprecated)
 z.number();
 z.boolean();
 z.bigint();
