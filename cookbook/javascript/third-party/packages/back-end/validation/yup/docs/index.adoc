@@ -1,8 +1,0 @@
-= yup
-:toc: left
-:url-docs: https://yup-docs.vercel.app/docs/intro
-:url-repo: https://github.com/jquense/yup
-
-{url-docs}[[docs\]]
-{url-repo}[[repo\]]
-

@@ -31,7 +31,7 @@ pnpm install --save react-i18next i18next
 ./
 ├── src/
 │   ├── App.tsx
-│   ├── i18n.ts
+│   ├── i18n.ts         <-- New
 │   ├── main.tsx
 │   ├── MyComponent.tsx
 │   └── vite-env.d.ts
@@ -78,7 +78,7 @@ i18n
 [,ts,title="src/main.tsx"]
 ----
 // ...
-import './i18n'
+import '@/i18n'
 // ...
 ----
 

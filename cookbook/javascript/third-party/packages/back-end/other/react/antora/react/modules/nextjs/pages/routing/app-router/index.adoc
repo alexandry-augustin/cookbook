@@ -14,8 +14,10 @@ ____
 Each folder represents a new route, and the `page.js` file within the folder serves as the content for that route.
 ____
 
-> "Route files must be named either `page.js` or `page.tsx`"
--- https://www.youtube.com/watch?v=7DC3ZrxvUUU
+[,https://www.youtube.com/watch?v=7DC3ZrxvUUU]
+____
+Route files must be named either `page.js` or `page.tsx`
+____
 
 ....
 app/

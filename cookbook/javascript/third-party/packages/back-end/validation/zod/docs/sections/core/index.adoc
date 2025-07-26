@@ -1,5 +1,0 @@
-= Core
-
-include::./types/index.adoc[leveloffset=+1]
-
-include::./examples.adoc[leveloffset=+1]
