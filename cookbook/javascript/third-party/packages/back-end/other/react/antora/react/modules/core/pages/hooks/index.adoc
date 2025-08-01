@@ -8,3 +8,17 @@ ____
 React applications are built from components. 
 Components are built from Hooks, whether built-in or custom.
 ____
+
+[,Gemini]
+____
+Key Syntactic Characteristics:
+
+* It is a JavaScript function.
+* Must start with the prefix use (e.g., `useState`, `useEffect`, `useContext`, `useMyCustomHook`). 
+This is a convention that allows React to enforce the "Rules of Hooks" (e.g., call them only at the top level of a functional component or another custom Hook, not inside loops, conditions, or nested functions).
+* Called directly inside functional components (or other custom Hooks).
+* Does not return JSX. Instead, built-in Hooks typically return an array (like `useState`) or a value (like `useContext`), or nothing (like `useEffect`). 
+Custom Hooks can return whatever data or functions are useful.
+* Relies on the order of calls. 
+React associates state and effects with the component based on the order in which Hooks are called.
+____

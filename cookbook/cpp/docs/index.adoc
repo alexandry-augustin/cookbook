@@ -20,19 +20,27 @@
 Includes only one new language feature (value initialisation).
 
 |2011
-|`{cpp}11`, `{cpp}0x`
-|
+|`{cpp}11`
+|`{cpp}0x`
 
 |2014
-|`{cpp}14`, `{cpp}1y`
-|
+|`{cpp}14`
+|`{cpp}1y`
 
 |2017
-|`{cpp}17`, `{cpp}1z`
-|
+|`{cpp}17`
+|`{cpp}1z`
 
 |2020
-|`{cpp}20`, `{cpp}2a`
+|`{cpp}20`
+|`{cpp}2a`
+
+|2023
+|`{cpp}23`
+|
+
+|2026
+|`{cpp}26`
 |
 |===
 

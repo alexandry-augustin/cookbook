@@ -3,32 +3,27 @@
 
 // {url-docs}[[docs\]]
 
-[,tsx,title="MyComponent.tsx"]
+[,Gemini,Functional Component]
+____
+A functional component is a function that returns React elements.
+
+Key Syntactic Characteristics:
+
+* It is a JavaScript function.
+* Must start with a capital letter (e.g., MyComponent, AnotherComponent). This is how React distinguishes components from regular HTML elements.
+* Returns JSX (JavaScript XML), which is a syntax extension for JavaScript that looks like HTML. JSX elements are transformed into React.createElement() calls.
+* Receives props (properties) as its first argument (an object).
+* Can utilize React Hooks to manage state, side effects, etc.
+____
+
+[,tsx,title="MyComponent.jsx"]
 ----
-function MyComponent(...) {
-    return (
-        <>
-            {/* ... */}
-        </>
-    );
-}
-
-export default MyComponent;
-----
-
-Or
-
-[,tsx,title="MyComponent.tsx"]
-----
-function MyChildComponent(...) { ... }
-
-export default function MyComponent(...) {
-    return (
-        <>
-            <MyChildComponent />
-            {/* ... */}
-        </>
-    );
+function MyComponent(props) {
+  return (
+    <>
+      {/* ... */}
+    </>
+  );
 }
 ----
 
@@ -47,8 +42,22 @@ const MyComponent: FC<MyProps> = ({}) => {
         </>
     );
 }
+----
 
-export default MyComponent
+Nesting:
+
+[,tsx,title="MyComponent.tsx"]
+----
+function MyChildComponent(...) { ... }
+
+export default function MyComponent(...) {
+    return (
+        <>
+            <MyChildComponent />
+            {/* ... */}
+        </>
+    );
+}
 ----
 
 [NOTE]
