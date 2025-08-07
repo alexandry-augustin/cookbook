@@ -1,0 +1,28 @@
+= Middleware
+:url-docs: 
+
+{url-docs}[[docs\]]
+
+== `persist`
+
+https://zustand.docs.pmnd.rs/middlewares/persist[[docs\]]
+
+[,ts,title="store/useMyStore.tsx"]
+----
+import create from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
+
+const useStore = create(
+  persist(
+    (set) => ({
+      count: 0,
+      increment: () => set((state) => ({ count: state.count + 1 })),
+      decrement: () => set((state) => ({ count: state.count - 1 })),
+    }),
+    {
+      name: 'my-storage', // name of the item in the storage (must be unique)
+      storage: createJSONStorage(() => localStorage), // or sessionStorage
+    }
+  )
+);
+----

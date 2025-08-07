@@ -1,5 +1,8 @@
 * xref:index.adoc[]
 
+** Articles
+*** xref:articles/react-router-private-routes.adoc[]
+
 ** xref:modes/index.adoc[]
 *** xref:modes/declarative.adoc[]
 *** xref:modes/data.adoc[]
@@ -10,3 +13,5 @@
 *** xref:components/Navigate.adoc[]
 *** xref:components/Routes.adoc[]
 *** xref:components/Route.adoc[]
+
+** xref:protected-route.adoc[]

@@ -1,0 +1,129 @@
+= Protected Routes
+
+[,tsx,title="ProtectedRoute.tsx"]
+----
+import React from 'react';
+import { Navigate } from 'react-router';
+
+type ProtectedRouteProps = {
+  isAllowed: boolean;
+  children: React.ReactNode;
+  redirectPath?: string;
+};
+
+const ProtectedRoute = ({ 
+    isAllowed, 
+    children, 
+    redirectPath = "/",
+ }: ProtectedRouteProps) => {
+  if (!isAllowed) {
+    return <Navigate to={redirectPath} replace />;
+  }
+
+  return children;
+};
+
+export default ProtectedRoute;
+----
+
+[,tsx,title="App.tsx"]
+----
+import {
+  Routes,
+  Route
+} from "react-router";
+
+import ProtectedRoute from "@/components/ProtectedRoute"
+
+import HomePage from "@/pages/HomePage"
+
+export default function App() {
+  return (
+    <Routes>
+      {/* ... */}
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute isAllowed={false}>
+            <HomePage />
+          </ProtectedRoute>
+        }
+      />
+      {/* ... */}
+    </Routes>
+  )
+}
+----
+
+== Using Layout Route
+
+[,tsx,title="ProtectedRoute.tsx"]
+----
+import React from 'react';
+import { Navigate, Outlet } from 'react-router';
+
+type ProtectedRouteProps = {
+  isAllowed: boolean;
+  redirectPath?: string;
+};
+
+const ProtectedRoute = ({ 
+    isAllowed, 
+    redirectPath = "/not-allowed",
+ }: ProtectedRouteProps) => {
+  return isAllowed ? <Outlet /> : <Navigate to={redirectPath} replace />;
+};
+
+export default ProtectedRoute;
+----
+
+[NOTE]
+====
+Optionally render the children when the `ProtectedRoute` is not used as Layout component:
+
+[,tsx,title="ProtectedRoute.tsx"]
+----
+type ProtectedRouteProps = {
+  isAllowed: boolean;
+  redirectPath?: string;
+  children?: React.ReactNode;
+};
+
+const ProtectedRoute = ({
+  isAllowed,
+  redirectPath = "/",
+  children,
+}: ProtectedRouteProps) => {
+  if (!isAllowed) {
+    return <Navigate to={redirectPath} replace />;
+  }
+
+  return children ? children : <Outlet />;
+};
+----
+====
+
+[,tsx,title="App.tsx"]
+----
+import {
+  Routes,
+  Route
+} from "react-router";
+
+import ProtectedRoute from "@/components/ProtectedRoute"
+
+import HomePage from "@/pages/HomePage"
+
+export default function App() {
+  return (
+    <Routes>
+      {/* ... */}
+        <Route element={<ProtectedRoute isAllowed={false} />}>
+            <Route path="/" element={<HomePage />} />
+            {/* ... */}
+        </Route>
+      {/* ... */}
+    </Routes>
+  )
+}
+----
