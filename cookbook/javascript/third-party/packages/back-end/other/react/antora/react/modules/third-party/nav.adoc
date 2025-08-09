@@ -6,7 +6,7 @@
 ** xref:dnd-kit.adoc[]
 ** xref:dockview.adoc[]
 ** xref:react-mosaic.adoc[]
-** xref:react-i18next.adoc[]
+** xref:react-i18next/index.adoc[]
 ** xref:contentlayer.adoc[]
 ** xref:svgr.adoc[]
 ** xref:react-use.adoc[]

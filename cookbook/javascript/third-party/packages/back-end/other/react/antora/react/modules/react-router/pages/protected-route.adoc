@@ -1,5 +1,7 @@
 = Protected Routes
 
+== Using `children` Prop
+
 [,tsx,title="ProtectedRoute.tsx"]
 ----
 import React from 'react';

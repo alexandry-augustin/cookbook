@@ -24,6 +24,38 @@ ____
 pnpm install --save react-i18next i18next
 ----
 
+== `t()`
+
+https://www.i18next.com/translation-function/essentials[[docs\]]
+
+[,https://react.i18next.com/guides/quick-start]
+____
+The `t` function is the main function in i18next to translate content. 
+____
+
+== Placeholders
+
+[,ts,title="src/i18n.ts"]
+----
+{
+  "greeting": "Hello, {{name}}!",
+}
+----
+
+[,ts,title="src/MyComponent.tsx"]
+----
+import { useTranslation } from 'react-i18next'
+
+export function MyComponent () {
+  const { t, i18n } = useTranslation();
+  const userName = 'Bob';
+
+  return (
+    <>{t('greeting', { name: userName })}</>
+  )
+}
+----
+
 == Example
 
 .Vite app
@@ -107,12 +139,3 @@ export function MyComponent () {
 //   )
 // }
 // ----
-
-== `t()`
-
-https://www.i18next.com/translation-function/essentials[[docs\]]
-
-[,https://react.i18next.com/guides/quick-start]
-____
-The `t` function is the main function in i18next to translate content. 
-____
