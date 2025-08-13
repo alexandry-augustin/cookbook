@@ -1,0 +1,17 @@
+= `uuid`
+
+[,Gemini]
+____
+The `uuid` module supports several versions of UUIDs, each with a different method of generation:
+
+`uuid.uuid1()`:: Generates a UUID based on the host's MAC address and the current time. This is a very common way to generate UUIDs but can be a privacy concern since it uses the MAC address.
+`uuid.uuid4()`:: Generates a random UUID. This is the most common and recommended method for general use cases since it doesn't leak any identifiable information.
+`uuid.uuid3()` and `uuid.uuid5()`:: These generate UUIDs from the hash of a namespace identifier and a name. They are "deterministic," meaning the same namespace and name will always produce the same UUID. This is useful for creating a consistent UUID for a given resource.
+____
+
+[,bash]
+----
+import uuid
+
+uuid.uuid4()
+----

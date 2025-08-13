@@ -49,6 +49,7 @@
 ** xref:typing.adoc[]
 ** xref:unittest.adoc[]
 ** xref:urllib.adoc[]
+** xref:uuid.adoc[]
 ** xref:websocket.adoc[]
 ** xref:xml.adoc[]
 ** xref:zipfile.adoc[]
