@@ -1,4 +1,5 @@
 * xref:index.adoc[]
+** xref:conventions.adoc[]
 
 ** Articles
 *** xref:articles/react-router-private-routes.adoc[]
