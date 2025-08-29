@@ -14,3 +14,27 @@ npm install react-router zustand @tanstack/react-query react-i18next
 That gives you just about everything you’re looking for. 
 React’s error boundaries for render error handling, React Router for routing, Zustand for global/local state, React Query for network caching/fetching, and React i18next for translations.
 ____
+
+== WebSockets
+
+[,Gemini]
+____
+there are libraries that provide a higher-level, more "React-like" wrapper for WebSockets, similar to how React Query simplifies REST requests. While they don't have the exact same caching and invalidation model as React Query (because WebSockets are a different paradigm), they handle the same core problems: managing connection state, sending and receiving messages, and integrating with the React lifecycle.
+
+*Recommended Libraries*
+
+Here are some popular choices for using WebSockets in React:
+
+react-use-websocket:: This is a great choice for a direct, hook-based approach. It provides a useWebSocket hook that handles the connection lifecycle, including open, message, and close events. It also provides a state for the connection's ready state (connecting, open, closed), which is very useful for showing UI feedback.  
+[,javascript]
+----
+import useWebSocket, { ReadyState } from 'react-use-websocket';
+
+const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
+
+// readyState will be a number, e.g., ReadyState.OPEN
+----
+Socket.IO-client:: If your backend is using the Socket.IO library (common in Node.js, but also available for Python), this client library is the way to go. It handles connection management and provides an event-driven API that's easy to work with. It's often used with its own React hook library to integrate smoothly into your components.  
+SWR with useSWRSubscription:: The SWR data-fetching library (an alternative to React Query) has a built-in hook, useSWRSubscription, designed specifically for real-time data sources like WebSockets and Server-Sent Events (SSE). It allows you to subscribe to a real-time data stream and update your cache in response to new data.  
+TanStack Query (React Query) with Custom Logic:: While TanStack Query doesn't have a dedicated WebSocket hook, it's designed to be flexible. Many developers use a useEffect hook to set up the WebSocket connection and then use the queryClient instance to manually invalidate or update the cache when a new message is received. This approach lets you leverage all of TanStack Query's powerful caching, deduplication, and background refetching features for your real-time data.
+____

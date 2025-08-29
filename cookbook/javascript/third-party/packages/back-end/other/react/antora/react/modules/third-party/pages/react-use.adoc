@@ -57,3 +57,7 @@ export default function MyComponent() {
   else return <div>Other</div>;
 };
 ----
+
+=== `useWindowSize`
+
+Tracks the dimensions of the browser window.
