@@ -11,6 +11,7 @@
 ** xref:svgr.adoc[]
 ** xref:react-use.adoc[]
 ** xref:nuqs.adoc[]
+** xref:react-dropzone.adoc[]
 
 ** Styling
 *** xref:bootstrap.adoc[]

@@ -1,0 +1,51 @@
+= `react-dropzone`
+:url-docs: https://react-dropzone.js.org/
+:url-repo: https://github.com/react-dropzone/react-dropzone
+
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+[IMPORTANT]
+====
+[,Gemini]
+____
+`react-dropzone` is not available in the React Native environment.
+It's a library designed for React.js web applications to handle file drag-and-drop functionality using the HTML5 drag-and-drop API. 
+____
+====
+
+[,Gemini]
+____
+The most popular and feature-rich library for handling multiple image uploads with previews in React is **React-Dropzone**. 
+It's a widely used library that provides a simple and flexible API for building custom drag-and-drop file upload components.
+
+*Why use React-Dropzone?*
+
+React-Dropzone isn't a pre-styled component, but rather a "headless" hook (`useDropzone`) that gives you the core functionality for drag-and-drop file handling. This gives you the freedom to build a completely custom UI to match your application's design.
+
+Here's why it's a top choice:
+
+Drag-and-Drop functionality:: It handles all the browser events for you, making it easy to create a drag-and-drop zone.
+Previews:: The `onDrop` callback provides an array of file objects. You can use the `URL.createObjectURL()` method on these files to create a temporary URL for displaying previews, which is a common and recommended approach. The library's documentation even provides a clear example of this.
+Multiple File Uploads:: It's specifically designed to handle single or multiple file uploads, and you can easily configure this behavior with a prop.
+File Filtering:: You can restrict accepted file types (e.g., `image/*` to only accept images) and set size limits.
+Customization:: Since it's a hook, you get complete control over the UI, allowing you to use your own CSS, styled-components, or a UI library like Tailwind CSS or Material-UI to style the component and the previews.
+
+*How it works*
+
+The core concept is simple: you use the `useDropzone` hook, which returns a set of props and functions. 
+You apply these to your JSX elements.
+
+`getRootProps()`:: You spread these props on the main container of your dropzone. This enables the drag-and-drop behavior.
+`getInputProps()`:: You spread these props on a hidden file input element. This allows users to click the dropzone to open the file selection dialog.
+`onDrop` callback:: This is the most important part. The `useDropzone` hook provides a callback (`onDrop`) that is triggered when files are dropped or selected. Inside this callback, you receive an array of accepted files. You then use `URL.createObjectURL()` to generate a preview URL for each file and save it in your component's state to display them.
+
+You would also need a `useEffect` hook to clean up the temporary URLs created by `URL.createObjectURL()` to prevent memory leaks, which is also a common practice and is often included in the library's examples.
+____
+
+== Installation
+
+[,bash]
+----
+pnpm install --save react-dropzone
+----
