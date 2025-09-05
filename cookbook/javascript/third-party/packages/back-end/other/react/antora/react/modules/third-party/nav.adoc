@@ -11,7 +11,12 @@
 ** xref:svgr.adoc[]
 ** xref:react-use.adoc[]
 ** xref:nuqs.adoc[]
-** xref:react-dropzone.adoc[]
+
+** xref:react-dropzone/index.adoc[]
+*** xref:react-dropzone/examples/index.adoc[]
+**** xref:react-dropzone/examples/basic_with_previews.adoc[]
+**** xref:react-dropzone/examples/number_files_limit.adoc[]
+*** xref:react-dropzone/faq.adoc[]
 
 ** Styling
 *** xref:bootstrap.adoc[]

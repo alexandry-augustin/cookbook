@@ -5,6 +5,10 @@
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
 
+.TODO https://react-dropzone.org/#!/Examples: 
+* Forms
+* Custom validation (Limiting file size)
+
 [IMPORTANT]
 ====
 [,Gemini]
@@ -41,6 +45,19 @@ You apply these to your JSX elements.
 `onDrop` callback:: This is the most important part. The `useDropzone` hook provides a callback (`onDrop`) that is triggered when files are dropped or selected. Inside this callback, you receive an array of accepted files. You then use `URL.createObjectURL()` to generate a preview URL for each file and save it in your component's state to display them.
 
 You would also need a `useEffect` hook to clean up the temporary URLs created by `URL.createObjectURL()` to prevent memory leaks, which is also a common practice and is often included in the library's examples.
+____
+
+[,Gemini]
+____
+It can still be useful to use **React Dropzone** even if you don't need the drag-and-drop functionality. Its primary advantage in this case is providing a streamlined way to handle file selection from a user's local file system.
+
+*Why Use It Without Drag and Drop?*
+
+React Dropzone simplifies a few key aspects of file input that you'd otherwise have to manage manually:
+
+File Picker Integration:: It provides a simple way to trigger the native file selection dialog when a user clicks a button or another element. This is a common UI pattern that React Dropzone handles out of the box.
+Event Handling:: It standardizes how you access the selected files. The library's `onDrop` callback, even when triggered by a click, provides an array of `File` objects. This consistent data structure makes it easy to work with the files, whether for uploading or local processing.
+Validation:: You can use its built-in props to easily validate files based on their type (`accept`), size (`minSize`, `maxSize`), and number (`multiple`). This saves you from writing custom validation logic.
 ____
 
 == Installation

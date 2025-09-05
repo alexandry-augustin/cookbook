@@ -1,0 +1,176 @@
+= Basic with Previews
+
+https://www.digitalocean.com/community/tutorials/react-react-dropzone[[source\]]
+
+[,typescript,title="DropzoneComponent.tsx"]
+----
+import { useEffect, useState } from 'react';
+
+import { Dropzone } from './Dropzone';
+import { DropzoneThumbs } from './DropzoneThumbs';
+
+export default function DropzoneComponent() {
+  const [files, setFiles] = useState([]);
+
+  useEffect(() => {
+    // Clean up
+    return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
+  }, [files]);
+
+  return (
+    <>
+      <Dropzone setFiles={setFiles} />
+      <DropzoneThumbs files={files} />
+    </>
+  );
+}
+----
+
+[,typescript,title="Dropzone.tsx"]
+----
+import { useCallback } from 'react';
+import { cva } from 'class-variance-authority';
+import { useDropzone } from 'react-dropzone';
+
+// Define the class variants for the dropzone's different states
+const dropzoneVariants = cva(
+    'flex flex-col items-center p-5 border-2 border-dashed rounded-md bg-gray-50 transition-colors cursor-pointer',
+    {
+        variants: {
+            isDragActive: {
+                true: 'border-blue-500',
+                false: 'border-gray-300',
+            },
+            isDragAccept: {
+                true: 'border-green-500',
+            },
+            isDragReject: {
+                true: 'border-red-500',
+            },
+        },
+        // The base class is always applied, but we can have default variants
+        defaultVariants: {
+            isDragActive: false,
+            isDragAccept: false,
+            isDragReject: false,
+        },
+    },
+);
+
+export function Dropzone({ setFiles }) {
+    const onDrop = useCallback((acceptedFiles) => {
+        setFiles(
+            acceptedFiles.map((file) =>
+                Object.assign(file, {
+                    preview: URL.createObjectURL(file),
+                }),
+            ),
+        );
+    }, []);
+
+    const {
+        getRootProps,
+        getInputProps,
+        isDragActive,
+        isDragAccept,
+        isDragReject,
+    } = useDropzone({
+        onDrop,
+        accept: {
+            'image/jpeg': [],
+            'image/png': [],
+        },
+    });
+
+    return (
+        <div
+            {...getRootProps({
+                className: dropzoneVariants({ isDragActive, isDragAccept, isDragReject }),
+            })}
+        >
+            <input {...getInputProps()} />
+            <div className="text-gray-500">
+                Drag and drop your images here, or click to select files.
+            </div>
+        </div>
+    )
+}
+----
+
+[NOTE]
+====
+Append new files instead of replacing existing ones:
+
+[,typescript,title="Dropzone.tsx"]
+----
+  const onDrop = useCallback((acceptedFiles) => {
+    setFiles((prevFiles) => {
+      // Create a preview URL for each new file.
+      const newFiles = acceptedFiles.map((file) =>
+        Object.assign(file, {
+          preview: URL.createObjectURL(file),
+        })
+      );
+
+      // Create a Set of existing file identifiers for quick lookup.
+      // A combination of file name and size is used for uniqueness.
+      // A file can be uniquely identified by its name and size. 
+      // While react-dropzone provides a path property on the file object 
+      // which can also be used, it's not always guaranteed to be unique or 
+      // available across all browsers and scenarios. 
+      // Using a combination of name and size is a more robust approach.
+      const existingFileNames = new Set(prevFiles.map(f => `${f.name}-${f.size}`));
+
+      // Filter out any new files that already exist in the previous state.
+      const uniqueNewFiles = newFiles.filter(
+        (file) => !existingFileNames.has(`${file.name}-${file.size}`)
+      );
+
+      // Return the new state by combining previous files with the unique new ones.
+      return [...prevFiles, ...uniqueNewFiles];
+    });
+  }, []);
+----
+====
+
+[,typescript,title="DropzoneThumbs.tsx"]
+----
+export function DropzoneThumbs({ files }) {
+    return (
+        <div className="mt-4 flex flex-wrap gap-4">
+            {files.map((file) => (
+                <div 
+                  key={`${file.name}-${file.size}`} 
+                  className="flex flex-col items-center">
+                    <img
+                        src={file.preview}
+                        alt={file.name}
+                        className="mt-4 max-h-48 rounded-md object-cover shadow-lg"
+                    />
+                </div>
+            ))}
+        </div>
+    )
+}
+----
+
+[NOTE]
+====
+[,https://www.digitalocean.com/community/tutorials/react-react-dropzone]
+____
+Previews were removed in version 7.0.0, however, the documentation provides an alternative for readding it with a combination of `Object.assign()` and `URL.createObjectURL()`.
+____
+====
+
+// [,typescript,title="DropzoneComponent.ts"]
+// ----
+// import DropzoneComponent from './DropzoneComponent';
+// 
+// export default function App() {
+//   return (
+//     <>
+//       <DropzoneComponent />
+//     </>
+//   );
+// }
+// ----
