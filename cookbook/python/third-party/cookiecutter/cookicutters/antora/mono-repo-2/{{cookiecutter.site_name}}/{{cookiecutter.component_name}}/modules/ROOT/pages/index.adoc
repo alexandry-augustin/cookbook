@@ -1,1 +1,1 @@
-= Home
+= {{cookiecutter.component_name_verbose}}
