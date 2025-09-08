@@ -1,0 +1,30 @@
+= `useMedia`
+
+[,Gemini]
+____
+For the specific purpose of checking breakpoints, you should *useMedia*.
+
+*useMedia*
+
+useMedia is designed specifically to work with CSS media queries, which is exactly what Tailwind CSS breakpoints are built on. It's the most efficient and semantically correct way to determine if a media query is active. It uses the window.matchMedia() API internally, which only triggers a re-render when the media query's state actually changes (e.g., when the screen crosses the md or lg breakpoint). This avoids unnecessary re-renders and is the most performant approach for this use case.
+
+*useWindowSize*
+
+useWindowSize is a more general-purpose hook that listens to every single resize event. It returns the current width and height of the viewport. This can cause the component to re-render constantly as the user resizes the window, which is highly inefficient if all you need to know is if a breakpoint has been crossed. You would then have to manually write logic like if (width > 768) { ... }, which is exactly the kind of work that useMedia abstracts away.
+
+*Summary*
+
+|===
+| Hook | Best for | Efficiency
+
+| useMedia
+| Checking if a specific media query is active (e.g., a breakpoint).
+| *High*; only re-renders on breakpoint changes.
+
+| useWindowSize
+| Getting the exact pixel dimensions of the window.
+| *Low*; re-renders on every resize event.
+|===
+
+In short, useMedia is the right tool for the job. It's more performant and aligns perfectly with the concept of breakpoints.
+____

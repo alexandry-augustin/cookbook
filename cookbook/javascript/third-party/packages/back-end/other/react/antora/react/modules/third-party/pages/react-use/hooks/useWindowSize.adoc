@@ -1,0 +1,3 @@
+= `useWindowSize`
+
+Tracks the dimensions of the browser window.

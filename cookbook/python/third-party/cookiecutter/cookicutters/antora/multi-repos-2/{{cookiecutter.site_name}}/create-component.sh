@@ -35,5 +35,5 @@ ln -s ../../$COMPONENT_SLUG/modules/ .
 
 echo "Remember to:"
 echo "    * add '$COMPONENT_SLUG' to 'sources' in ./site/antora-playbook.yml"
-echo "    * edit 'title' in ./$COMPONENT_SLUG/antora.yml"
+echo "    * edit ./$COMPONENT_SLUG/antora.yml: 'title: $COMPONENT_VERBOSE_NAME'"
 echo "    * run 'git add ./'$COMPONENT_SLUG'"

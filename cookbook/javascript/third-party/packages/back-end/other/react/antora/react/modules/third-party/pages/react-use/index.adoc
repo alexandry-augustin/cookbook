@@ -1,0 +1,11 @@
+= react-use
+:url-repo: https://github.com/streamich/react-use
+
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+pnpm install react-use
+----

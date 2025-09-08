@@ -1,0 +1,63 @@
+= `createBreakpoint`
+
+[,Gemini]
+____
+If you create a custom `useBreakpoint` hook in React to programmatically handle Tailwind breakpoints, you **do need to define them manually** within your hook's logic. This is because **Tailwind's breakpoints are defined in CSS and aren't directly accessible in your React JavaScript code at runtime**.
+
+*Why Manual Definition Is Necessary*
+
+CSS vs. JavaScript:: Tailwind's utility classes (`md:`, `lg:`, etc.) work by generating CSS media queries. This logic is compiled into your final stylesheet. When your React component renders, it's a JavaScript process that doesn't have a built-in way to read those CSS values.
+Decoupling:: Your React component needs to know the exact pixel values to compare against `window.innerWidth`. The custom hook serves as the bridge, translating a JavaScript-based window size to a conceptual Tailwind breakpoint name.
+
+*How to Keep Breakpoints in Sync*
+
+Manually defining the breakpoints in your hook can be a maintenance issue if you later customize your `tailwind.config.js`. To keep your definitions in sync, you have a few options:
+
+Manual Syncing:: Simply copy the values from your `tailwind.config.js` into your hook. This is the most straightforward approach but requires you to remember to update it if you change the config.
+Importing `tailwind.config.js`:: You can use a build tool like Vite or Webpack to import your `tailwind.config.js` file directly into your JavaScript. This allows you to reference the `theme.screens` object and avoid manual copying. However, this can sometimes increase your bundle size as it might include the entire Tailwind configuration. 
+Third-Party Libraries:: A more robust solution is to use a library like `use-tailwind-breakpoint`. These libraries are designed to handle this exact problem, often providing helper functions to access your `tailwind.config.js` values safely and efficiently.
+____
+
+== Default Breakpoints
+
+* laptopL: 1440
+* laptop: 1024
+* tablet: 768
+
+[,tsx]
+----
+import { createBreakpoint } from "react-use";
+
+const useBreakpoint = createBreakpoint();
+
+export default function MyComponent() {
+  const breakpoint = useBreakpoint();
+
+  if (breakpoint === "laptopL") return <div> This is very big Laptop </div>;
+  else if (breakpoint == "laptop") return <div> This is Laptop</div>;
+  else if (breakpoint == "tablet") return <div> This is Tablet</div>;
+  else return <div> Too small!</div>;
+};
+----
+
+== Custom Breakpoints
+
+[,tsx]
+----
+import { createBreakpoint } from "react-use";
+
+const useBreakpoint = createBreakpoint({ 
+    XL: 1280, 
+    L: 768, 
+    S: 350 
+});
+
+export default function MyComponent() {
+  const breakpoint = useBreakpoint();
+
+  if (breakpoint === "XL") return <div>XL</div>;
+  else if (breakpoint == "L") return <div>L</div>;
+  else if (breakpoint == "S") return <div>S</div>;
+  else return <div>Other</div>;
+};
+----
