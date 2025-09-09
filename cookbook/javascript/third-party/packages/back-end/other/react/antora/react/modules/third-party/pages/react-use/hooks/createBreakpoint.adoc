@@ -61,3 +61,111 @@ export default function MyComponent() {
   else return <div>Other</div>;
 };
 ----
+
+== Full Example
+
+[,tsx,title="useBreakpointStore.ts"]
+----
+import { create } from 'zustand';
+
+export const useBreakpointStore = create((set) => ({
+  breakpoint: null, // Initial state, will be a string like 'xs', 'sm', etc.
+  setBreakpoint: (newBreakpoint) => set({ breakpoint: newBreakpoint }),
+}));
+----
+
+[,tsx,title="useSyncBreakpointWithStore.ts"]
+----
+import { useEffect } from 'react';
+import { createBreakpoint } from "react-use";
+import { useBreakpointStore } from '@/stores/useBreakpointStore';
+
+const useBreakpoint = createBreakpoint({
+  xs: 0,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+});
+
+export const useSyncBreakpointWithStore = () => {
+  const breakpoint = useBreakpoint();
+  const setStoreBreakpoint = useBreakpointStore((state) => state.setBreakpoint);
+
+  useEffect(() => {
+    // The breakpoint from react-use will be one of the keys from the object above, or 'xs' by default if none match.
+    // It will update on resize, triggering this effect.
+    setStoreBreakpoint(breakpoint);
+  }, [breakpoint, setStoreBreakpoint]);
+};
+----
+
+[,tsx,title="App.ts"]
+----
+import { useSyncBreakpointWithStore } from '@/hooks/useSyncBreakpointWithStore';
+
+export default function App() {
+  useSyncBreakpointWithStore();
+
+  return (
+    <>
+      {/* ... */}
+      <MyComponent />
+    </>
+  );
+}
+----
+
+[,tsx,title="App.ts"]
+----
+import { useBreakpointStore } from '@/stores/useBreakpointStore';
+
+export default function MyComponent() {
+    const breakpoint = useBreakpointStore((state) => state.breakpoint);
+
+    return (
+      <div>
+        <p>Current breakpoint is: {breakpoint}</p>
+        {breakpoint === 'md' && (
+          <p>Only visible on medium screens.</p>)
+        }
+      </div>
+    )
+}
+----
+
+[,Gemini,Step-by-Step Explanation]
+____
+
+`useSyncBreakpointWithStore` is a clever custom hook that acts as a bridge between the `react-use` library and your Zustand state management store.
+
+Here's a breakdown of `useSyncBreakpointWithStore` functionality.
+
+1. Creating the Breakpoint Hook:
+
+* The hook starts by calling `createBreakpoint` from the `react-use` library.
+* It passes an object that defines your application's breakpoints. The keys (xs, sm, md, etc.) are the names of your breakpoints, and the values (0, 576, 768, etc.) are the minimum screen widths in pixels for that breakpoint to be active.
+* `createBreakpoint` returns a new hook, which is conveniently named useBreakpoint. This new hook is now tailored to your specific screen sizes.
+
+2. Getting the Current Breakpoint:
+
+* Inside useSyncBreakpointWithStore, it calls the useBreakpoint() hook we just created.
+* This useBreakpoint() hook is reactive. It listens for window resize events and automatically returns the key of the currently active breakpoint as a string (e.g., "xs", "md", "xl"). When the window size changes enough to cross a breakpoint threshold, this hook will provide a new string value, causing the component that uses it to re-render.
+
+3. Accessing the Zustand Store:
+
+* It then uses useBreakpointStore to get access to your Zustand store.
+* Specifically, it selects only the setBreakpoint function. This is a performance optimization in Zustand; the component will only re-render if setBreakpoint itself changes (which it won't), not when the breakpoint value in the store changes.
+
+4. Synchronizing with useEffect:
+
+* The core logic is inside a useEffect hook. This effect is designed to run whenever the breakpoint value from useBreakpoint() changes.
+* The dependency array `[breakpoint, setStoreBreakpoint]` ensures that the effect is triggered on the initial render and then again only when the breakpoint string changes.
+* When the effect runs, it calls setStoreBreakpoint(breakpoint), updating the global Zustand store with the new, current breakpoint string.
+
+In your main App.tsx file, you simply call this hook once.
+
+By placing `useSyncBreakpointWithStore()` at the top level of your application, you ensure that it's always active. It will continuously monitor the window size and keep your useBreakpointStore perfectly in sync. Any other component in your app can then subscribe to this store to get the current breakpoint without needing to handle resize events itself, as seen in SandboxPage.tsx.
+
+In essence, `useSyncBreakpointWithStore` is a clean and efficient "write-only" hook that connects a browser event (resizing) to your global state.
+____
