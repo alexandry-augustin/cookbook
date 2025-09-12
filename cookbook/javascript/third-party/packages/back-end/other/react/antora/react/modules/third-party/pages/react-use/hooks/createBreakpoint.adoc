@@ -116,7 +116,7 @@ export default function App() {
 }
 ----
 
-[,tsx,title="App.ts"]
+[,tsx,title="MyComponent.ts"]
 ----
 import { useBreakpointStore } from '@/stores/useBreakpointStore';
 
@@ -133,6 +133,44 @@ export default function MyComponent() {
     )
 }
 ----
+
+[comment]
+--
+[,tsx,title="MyComponent.ts"]
+----
+import { useState, useEffect } from 'react';
+
+type LayoutType = 'cards' | 'grid';
+
+export function MyComponent() {
+  const breakpoint = useBreakpointStore((state) => state.breakpoint);
+  const [layout, setLayout] = useState<LayoutType>('grid');
+
+  // This hook will run after the initial render and whenever the breakpoint value from your Zustand store changes. 
+  // It ensures that the layout state is always correctly synchronized with the current breakpoint. 
+  useEffect(() => {
+    setLayout(breakpoint === 'xs' || breakpoint === 'sm' ? 'cards' : 'grid');
+  }, [breakpoint]);
+
+  // This effect runs only once when the component mounts.
+  // It waits for the breakpoint value to be available and then sets the initial layout.
+  // The effect will re-run if breakpoint changes, but the logic inside will only set the layout once it's not null.
+  useEffect(() => {
+    if (breakpoint) {
+      setLayout(breakpoint === 'xs' || breakpoint === 'sm' ? 'cards' : 'grid');
+    }
+  }, [breakpoint]);
+
+
+  return (
+    <>
+      {layout}
+      {breakpoint}
+    </>
+  )
+}
+----
+--
 
 [,Gemini,Step-by-Step Explanation]
 ____

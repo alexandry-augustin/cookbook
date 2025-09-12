@@ -1,6 +1,7 @@
 * xref:index.adoc[]
 
 ** xref:flux-pattern.adoc[]
+** xref:strict-mode.adoc[]
 
 ** xref:vue-migration/index.adoc[]
 *** xref:vue-migration/vue-composition-api-vs-react-hooks-the-core-difference.adoc[]

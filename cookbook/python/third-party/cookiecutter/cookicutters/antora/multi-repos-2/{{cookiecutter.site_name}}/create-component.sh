@@ -16,7 +16,7 @@ echo "= "$COMPONENT_VERBOSE_NAME > $COMPONENT_SLUG/modules/ROOT/pages/index.adoc
 
 echo "name: $COMPONENT_SLUG" >> $COMPONENT_SLUG/antora.yml
 echo "version: ~"  >> $COMPONENT_SLUG/antora.yml
-echo "title: $COMPONENT_SLUG"  >> $COMPONENT_SLUG/antora.yml
+echo "title: $COMPONENT_VERBOSE_NAME"  >> $COMPONENT_SLUG/antora.yml
 echo "nav:"  >> $COMPONENT_SLUG/antora.yml
 echo "- modules/ROOT/nav.adoc"  >> $COMPONENT_SLUG/antora.yml
 
@@ -35,5 +35,4 @@ ln -s ../../$COMPONENT_SLUG/modules/ .
 
 echo "Remember to:"
 echo "    * add '$COMPONENT_SLUG' to 'sources' in ./site/antora-playbook.yml"
-echo "    * edit ./$COMPONENT_SLUG/antora.yml: 'title: $COMPONENT_VERBOSE_NAME'"
 echo "    * run 'git add ./'$COMPONENT_SLUG'"

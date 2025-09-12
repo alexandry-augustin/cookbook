@@ -6,8 +6,7 @@ Return a stateful value and a function to update it.
 ----
 import { useState } from 'react';
 
-export default function MyComponent() {
-
+function MyComponent() {
     const [ myVar, setMyVar ] = useState(null);
 
     return (
@@ -17,3 +16,88 @@ export default function MyComponent() {
     );
 }
 ----
+
+== State Ordering (TODO)
+
+[,tsx,title="MyComponent.tsx"]
+----
+import { useState } from 'react';
+
+function MyComponent() {
+    const [ myVar1, setMyVar1 ] = useState(null);
+    const [ myVar2, setMyVar2 ] = useState('value');
+
+    return (
+        <>
+            {/* ... */}
+        </>
+    );
+}
+----
+
+[,Gemini]
+____
+React doesn't identify state by the variable names you assign (myVar1, myVar2, etc.). 
+Instead, it relies on the *order in which hooks are called* during each render of a component.
+
+Internally, React maintains an array of state "slots" for each component.
+
+1. First Render:
+* The first time `useState` is called, React creates a state slot, initializes it with `null`, and gives you back `[null, setMyVar1]`.
+* The second `useState` call creates another slot, initializes it with `'value'`, and gives you `['value', setMyVar2]`.
+
+2. Subsequent Renders:
+* When your component re-renders, React just goes through its array of state slots in order.
+* The first `useState` call gets the value from the first slot.
+* The second `useState` call gets the value from the second slot.
+____
+
+[,Gemini]
+____
+> " how can the array of state slots be confused"
+
+The "array of state slot" can be confused when a developer breaks one of the fundamental **Rules of Hooks**: you must only call hooks at the **top level** of your component.
+
+*How it Works (The Mental Model)*
+
+React relies on a consistent order of hook calls to manage state. Internally, React maintains a simple, ordered list (often thought of as an array) of "state slots" for each component.
+
+  * When a component renders for the first time, React walks through the function and assigns a new state slot to each `useState` call in the order it's encountered.
+  * The first `useState` call gets slot `0`.
+  * The second `useState` call gets slot `1`.
+  * And so on.
+
+On subsequent re-renders, React expects the same sequence of hook calls. It retrieves the state value from the corresponding slot for each call. This process is how React knows that `setMyVar1` should update the value in slot `0` and `setMyVar2` should update the value in slot `1`, even though the variable names (`myVar1`, `myVar2`) are not part of the internal mechanism.
+
+*How Confusion Occurs*
+
+This internal mechanism breaks down when the number or order of hook calls changes between renders. This happens when you call a hook conditionally.
+
+For example, consider this code:
+
+[,tsx,title="MyComponent.tsx"]
+----
+function MyComponent() {
+    const [ myVar1, setMyVar1 ] = useState(null);
+
+    if (someCondition) {
+        const [ myVar2, setMyVar2 ] = useState('value');
+    }
+    // ...
+}
+----
+
+**First Render (if `someCondition` is `true`):**
+
+. `useState(null)` is called. React assigns it to state slot `0`.
+. `useState('value')` is called. React assigns it to state slot `1`.
+
+**Second Render (if `someCondition` is now `false`):**
+
+. `useState(null)` is called. React expects it to be in slot `0`, which is correct.
+. The `if` block is skipped, so `useState('value')` is **never called**.
+
+The next time React expects a hook, there isn't one, and it becomes "confused" because the internal state array doesn't match the number of hooks being called. This leads to unpredictable behavior and is why React throws a warning or error, telling you that the order of your hooks has changed.
+
+This is a key reason why all hooks must be called at the top level of your component, before any early returns or conditional logic.
+____
