@@ -1,2 +1,86 @@
 = FAQs
 
+== Replace Individual Image
+
+____
+> when using react-dropzone with image previews, is it possible to replace an image by clicking on it 
+
+You can replace an image in React-Dropzone by clicking on it, but it's not a built-in feature. You'll need to **implement custom logic** to achieve this functionality.
+
+*How to Implement It*
+
+To make an image replaceable, you'll need to handle the click event on the image preview itself. This event should trigger the file input dialog again, allowing the user to select a new file. Here's a general approach:
+
+1.Wrap the Image in a Clickable Component:: Render the image preview inside a `div` or similar element that has an `onClick` handler.
+2.Access the File Input Programmatically:: React-Dropzone provides a `fileInputRef` or similar method to access the underlying file input element.
+3.Trigger the Click:: Inside your `onClick` handler for the image, you'll call a function that programmatically triggers a click on the hidden file input element.
+
+This custom logic essentially re-opens the file selection dialog when the user clicks on an existing image preview.
+
+*Example Logic*
+
+Here's a simplified conceptual outline of the code:
+
+[,jsx]
+----
+import React, { useCallback, useRef, useState } from 'react';
+import { useDropzone } from 'react-dropzone';
+
+function MyDropzone() {
+  const fileInputRef = useRef(null);
+  const [file, setFile] = useState(null);
+
+  const onDrop = useCallback(acceptedFiles => {
+    // We only care about the first file for replacement
+    setFile(acceptedFiles[0]);
+  }, []);
+
+  const { getRootProps, getInputProps } = useDropzone({ onDrop });
+
+  const handleImageClick = () => {
+    // Programmatically click the hidden file input
+    fileInputRef.current.click();
+  };
+
+  return (
+    <div {...getRootProps()}>
+      <input {...getInputProps()} ref={fileInputRef} />
+      {file ? (
+        <div onClick={handleImageClick} style={{ cursor: 'pointer' }}>
+          <img src={URL.createObjectURL(file)} alt="preview" style={{ width: 100, height: 100 }} />
+          <p>Click to replace</p>
+        </div>
+      ) : (
+        <p>Drag and drop or click to upload</p>
+      )}
+    </div>
+  );
+}
+----
+
+In this example, the `handleImageClick` function is what makes the magic happen. By calling `fileInputRef.current.click()`, you're telling the browser to open the file dialog just as if the user had clicked the dropzone area.
+____
+
+[,Gemini]
+____
+> in dropzone, i want to have each image preview to be replaceable by drag and drop individually, do I need mutliple dropzone 
+
+No, you don't need multiple Dropzone instances to make each image preview individually replaceable by drag and drop.
+
+*How to Achieve This*
+
+You can achieve this functionality with a **single Dropzone instance** by using its API and events. The key is to handle the drag and drop events for the individual preview elements, not for the entire dropzone area.
+
+1. Disable Dropzone's default behavior:: Initially, configure Dropzone to not handle file drops on the main element. This can be done by setting the `disable-element---drop` option (or a similar one, depending on the exact version/configuration) to the main dropzone container.
+2. Add `draggable` attribute:: When an image is successfully uploaded and a preview is created, dynamically add the `draggable="true"` attribute to each individual preview element (`.dz-preview`).  This makes the preview elements themselves draggable.
+3. Handle drag and drop events:: Use JavaScript to handle the `dragstart`, `dragenter`, `dragover`, and `drop` events on the preview elements.
+* `dragstart`: Store the data of the dragged item (e.g., its ID or a reference to the DOM element).
+* `dragover`: Prevent the default behavior to allow a drop. This is crucial for enabling the drop.
+* `drop`: When an item is dropped on a preview element, get the data of both the dragged item and the drop target. Then, you can use the Dropzone API to:
+** Remove the original file associated with the drop target preview.
+** Add the new file (the one that was dragged) to the dropzone. You can use methods like `Dropzone.forElement().addFile(file)` to programmatically add the new file.
+
+4. Listen for the `addedfile` event:: After a file is added to Dropzone (either via the main drop area or your custom logic), the `addedfile` event is fired. Use this event to generate the custom preview element with the `draggable` attribute and set up the drag and drop event listeners on it.
+
+By implementing this, you'll have a single Dropzone instance that manages all the files, but the user will be able to replace individual images by dragging and dropping new files directly onto their previews.
+____

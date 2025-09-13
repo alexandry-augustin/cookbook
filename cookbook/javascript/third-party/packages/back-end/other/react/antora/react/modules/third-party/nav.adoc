@@ -21,6 +21,7 @@
 *** xref:react-dropzone/examples/index.adoc[]
 **** xref:react-dropzone/examples/basic_with_previews.adoc[]
 **** xref:react-dropzone/examples/number_files_limit.adoc[]
+*** xref:react-dropzone/tanstack-form.adoc[]
 *** xref:react-dropzone/faq.adoc[]
 
 ** Styling
