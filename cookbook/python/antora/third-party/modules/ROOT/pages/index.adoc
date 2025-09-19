@@ -16,8 +16,34 @@
 .Data Validation
 * Pydantic
 
+.Code Formatters
+* autopep8
+* black
+* ruff
+* yapf
+
 .Signal / Slot
 * signaling https://pythonhosted.org/signaling/#[[website\]]
 * PySignal https://github.com/dgovil/PySignal[[repo\]]
 * pyslot https://pypi.org/project/pyslot/[[pypi\]]
 * signalslot https://github.com/Numergy/signalslot/tree/master/signalslot[[repo\]]
+
+== Static Type Checkers
+
+* mypy
+* pyre
+* pyright
+* pytype
+* ty
+
+[,Gemini]
+____
+Which one should you use?
+
+For most projects, especially new ones:: *MyPy* is generally the safest and most widely adopted choice. It has excellent documentation, a large community, and integrates well into almost any Python workflow.
+If you're primarily a VS Code user:: *Pyright/Pylance* is probably already providing you with excellent real-time type checking in your editor.
+For very large monorepos or specific performance needs:: *Pyre* (or its successor Pyrefly) might be a good fit, particularly if you have a strong engineering team to support its integration.
+For legacy codebases with minimal annotations:: *Pytype* can be very helpful for getting initial type coverage.
+
+Many teams also combine these tools. For example, they might use Pylance for immediate feedback in the IDE and run MyPy in their CI/CD pipeline for a more rigorous, complete check.
+____

@@ -3,5 +3,3 @@ version: ~
 title: Third-party
 nav:
 - modules/ROOT/nav.adoc
-- modules/code-formatters/nav.adoc
-- modules/type-checkers/nav.adoc

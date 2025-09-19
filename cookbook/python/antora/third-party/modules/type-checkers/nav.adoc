@@ -1,6 +1,0 @@
-* xref:index.adoc[]
-** xref:mypy.adoc[]
-** xref:pyre.adoc[]
-** xref:pyright.adoc[]
-** xref:pytype.adoc[]
-** xref:ty.adoc[]
