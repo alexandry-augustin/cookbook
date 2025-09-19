@@ -16,3 +16,4 @@
 *** xref:components/Route.adoc[]
 
 ** xref:protected-route.adoc[]
+** xref:query-parameters.adoc[]

@@ -1,0 +1,46 @@
+= Query Parameters
+
+Retrieve query parameters: 
+
+[,tsx]
+----
+import { useSearchParams } from 'react-router';
+
+function MyPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Get a specific query parameter
+  const my_param1 = searchParams.get('my_param1');
+
+  // Set a new query parameter
+  const handleSortChange = (newSort) => {
+    setSearchParams({ ...Object.fromEntries(searchParams), sort: newSort });
+  };
+
+  return (...);
+}
+----
+
+Add query parameters to a navigation: 
+
+[,tsx]
+----
+import { useNavigate, createSearchParams } from 'react-router-dom';
+
+function MyComponent() {
+  const navigate = useNavigate();
+
+  const params = {
+    q: query,
+    page: 1,
+    sort: 'relevance'
+  };
+
+  navigate({
+    pathname: '/results',
+    search: createSearchParams(params).toString()
+  });
+
+  return (...);
+}
+----
