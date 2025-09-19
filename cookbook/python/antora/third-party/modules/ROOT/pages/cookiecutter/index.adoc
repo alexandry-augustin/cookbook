@@ -57,13 +57,9 @@ print('{{cookiecutter.content}}')
 cookiecutter ./my_cookiecutter_template
 ----
 
-include::./sections/hooks.adoc[leveloffset=+1]
-
 == Git Intergration
 
 [NOTE]
 ====
 Cookiecutter has its own storage area for cookiecutters, which is in your home directory in a subdirectory called `.cookiecutters`
 ====
-
-include::./sections/faq.adoc[leveloffset=+1]

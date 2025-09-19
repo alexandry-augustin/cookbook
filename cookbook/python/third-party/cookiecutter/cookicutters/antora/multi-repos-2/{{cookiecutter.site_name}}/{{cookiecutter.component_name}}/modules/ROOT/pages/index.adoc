@@ -1,1 +1,0 @@
-= {{cookiecutter.site_name_verbose}}

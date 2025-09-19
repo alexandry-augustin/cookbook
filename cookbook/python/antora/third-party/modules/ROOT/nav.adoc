@@ -23,3 +23,7 @@
 * xref:pyright.adoc[]
 * xref:pytype.adoc[]
 * xref:ty.adoc[]
+
+* xref:cookiecutter/index.adoc[]
+** xref:cookiecutter/hooks.adoc[]
+** xref:cookiecutter/faq.adoc[]
