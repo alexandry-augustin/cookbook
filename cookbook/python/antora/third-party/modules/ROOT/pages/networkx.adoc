@@ -1,0 +1,14 @@
+= NetworkX
+:url-website: https://networkx.org/
+:url-repo: https://github.com/networkx/networkx
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+conda install networkx
+----
+

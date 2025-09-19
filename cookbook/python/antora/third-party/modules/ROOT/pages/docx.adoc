@@ -1,5 +1,4 @@
 = docx
-:toc: left
 :url-website: https://python-docx.readthedocs.io/en/latest/
 :url-repo: https://github.com/python-openxml/python-docx
 

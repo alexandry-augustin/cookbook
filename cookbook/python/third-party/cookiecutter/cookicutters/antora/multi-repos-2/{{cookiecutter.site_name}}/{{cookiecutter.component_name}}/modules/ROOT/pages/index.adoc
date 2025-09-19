@@ -1,1 +1,1 @@
-= {{cookiecutter.component_name_verbose}}
+= {{cookiecutter.site_name_verbose}}

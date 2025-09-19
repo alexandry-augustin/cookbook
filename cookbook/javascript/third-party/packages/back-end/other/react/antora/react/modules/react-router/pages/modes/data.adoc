@@ -26,12 +26,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 ----
 import { createBrowserRouter } from "react-router";
 
-import App from '@/App';
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
     children: [
       {
         index: true,
@@ -122,7 +119,7 @@ export async function postsLoader() {
 
 [,tsx,title='src/components/Posts.tsx']
 ----
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router";
 
 export default function Posts() {
   const posts = useLoaderData();
@@ -139,3 +136,29 @@ export default function Posts() {
   );
 }
 ----
+
+
+== `loaders`
+
+[,Gemini]
+____
+When a component uses `useLoader` Data, it doesn't need to manage loading states (`isLoading`, `isError`) or `useEffect` dependencies. Its sole purpose becomes to render the data it receives, making the component code cleaner and more focused on the UI.
+____
+
+== `actions`
+
+[,Gemini]
+____
+Actions are functions that handle data mutations, such as form submissions. 
+They provide a standardized way to handle data-driven events directly within your route definitions, separating data logic from your UI components. 
+
+When a `<Form>` component is submitted, React Router intercepts the request and calls the `action` function associated with the current route. 
+The function then handles the data and can perform operations like updating a database, making an API call, or redirecting the user to a different page.
+
+*Key Features and Benefits*
+
+Server-Side and Client-Side Handling:: Actions can be defined as either `action` (for server-side execution) or `clientAction` (for browser-only execution). This allows for flexible architecture, where server actions are removed from client bundles, reducing overall bundle size. Client actions take precedence if both are defined.
+Automatic Revalidation:: After an action completes, React Router **automatically revalidates** all the loader data on the page. This ensures that the UI stays in sync with the latest data without you having to write additional code to fetch and update the state.
+Improved Form Handling:: Actions streamline form handling by providing a declarative, centralized way to manage form submissions and data mutations. You no longer need to rely solely on `useState` and `useEffect` for these tasks, leading to cleaner, more maintainable code.
+Built-in APIs:: React Router provides hooks like `useActionData` to access the data returned by an action and `useNavigation` to track the state of a form submission (e.g., "submitting", "idle") which allows you to build sophisticated UIs with loading states and optimistic updates. 
+____

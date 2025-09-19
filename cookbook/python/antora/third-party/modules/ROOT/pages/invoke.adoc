@@ -1,5 +1,4 @@
 = invoke
-:toc: left
 :url-website: https://www.pyinvoke.org/
 :url-repo: https://github.com/pyinvoke/invoke
 

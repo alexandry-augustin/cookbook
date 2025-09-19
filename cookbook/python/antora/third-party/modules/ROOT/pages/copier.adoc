@@ -1,0 +1,11 @@
+= Copier
+// :url-website: 
+:url-docs: https://copier.readthedocs.io/en/stable/
+:url-repo: https://github.com/copier-org/copier
+// :url-wiki: 
+
+// {url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+

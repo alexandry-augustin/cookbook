@@ -1,3 +1,9 @@
+= Python Imaging Library (PIL)
+
+== Sandox
+
+[,python]
+----
 import numpy as np
 from PIL import Image
 
@@ -26,3 +32,4 @@ if __name__ == '__main__':
     # img = Image.fromarray(data)
 
     # img.show()
+----
