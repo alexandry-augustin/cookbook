@@ -4,3 +4,40 @@
 
 {url-docs}[[docs\]]
 {url-repo}[[repo\]]
+
+
+[[website]](https://docs.pydantic.dev/) [[repo]](https://github.com/pydantic/pydantic)
+
+parsing and validation
+
+== Sandbox
+
+[,python]
+----
+from typing import Optional
+
+from pydantic import BaseModel
+# from pydantic import Field
+
+class Item(BaseModel):
+    id: int
+
+class Model(BaseModel):
+    id: int
+    name: Optional[str]
+    data: list[Item]
+
+if __name__ == '__main__':
+
+    mode = Model(
+        id=0, 
+        name='John', 
+        data=[
+            { 'id': 0 }, 
+            { 'id': 1 }
+        ]
+    )
+
+    print('dict:', mode.dict())
+    print('json:', mode.json())
+----

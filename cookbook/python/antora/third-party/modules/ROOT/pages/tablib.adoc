@@ -1,5 +1,4 @@
 = tablib
-:toc: left
 :url-docs: https://tablib.readthedocs.io/en/stable/
 :url-repo: https://github.com/jazzband/tablib
 :url-pypi: https://pypi.org/project/tablib/

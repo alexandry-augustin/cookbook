@@ -22,6 +22,10 @@
 * ruff
 * yapf
 
+.Object Serialisation
+* marshmallow
+* pydantic
+
 .Signal / Slot
 * signaling https://pythonhosted.org/signaling/#[[website\]]
 * PySignal https://github.com/dgovil/PySignal[[repo\]]

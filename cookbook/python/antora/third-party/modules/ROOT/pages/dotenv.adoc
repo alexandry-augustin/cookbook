@@ -1,5 +1,4 @@
 = dotenv
-:toc: left
 :url-repo: https://github.com/theskumar/python-dotenv
 
 {url-repo}[[repo\]]

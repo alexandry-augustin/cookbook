@@ -1,0 +1,14 @@
+= treelib
+:url-website: https://treelib.readthedocs.io/en/latest/index.html
+:url-repo: https://github.com/caesar0301/treelib
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+conda install treelib
+----
+

@@ -1,5 +1,4 @@
 = pyjs
-:toc: left
 :url-website: http://pyjs.org/
 // :url-docs: 
 :url-repo: https://github.com/pyjs/pyjs/

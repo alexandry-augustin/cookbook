@@ -1,5 +1,4 @@
 = Cookiecutter
-:toc: left
 :url-website: https://www.cookiecutter.io/
 :url-docs: https://cookiecutter.readthedocs.io/en/2.0.2/
 :url-repo: https://github.com/cookiecutter/cookiecutter
