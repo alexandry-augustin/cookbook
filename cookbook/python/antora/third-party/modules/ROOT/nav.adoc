@@ -9,6 +9,7 @@
 * xref:peewee.adoc[]
 * xref:pil.adoc[]
 * xref:polar.adoc[]
+* xref:pydantic.adoc[]
 * xref:pyquery.adoc[]
 * xref:scrapy.adoc[]
 * xref:selenium.adoc[]

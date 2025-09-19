@@ -8,6 +8,14 @@
 * black
 * ruff
 
+.Linters
+* ruff
+* Flake8
+* Pylint
+
+.Data Validation
+* Pydantic
+
 .Signal / Slot
 * signaling https://pythonhosted.org/signaling/#[[website\]]
 * PySignal https://github.com/dgovil/PySignal[[repo\]]

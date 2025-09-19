@@ -3,7 +3,3 @@ version: ~
 title: ROOT
 nav:
 - modules/ROOT/nav.adoc
-- modules/linters/nav.adoc
-- modules/code-formatters/nav.adoc
-- modules/type-checkers/nav.adoc
-- modules/data-validation/nav.adoc

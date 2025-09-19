@@ -1,5 +1,0 @@
-= Linters
-
-* ruff
-* Flake8
-* Pylint
