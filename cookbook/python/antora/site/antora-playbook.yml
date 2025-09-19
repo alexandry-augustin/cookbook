@@ -5,6 +5,10 @@ content:
   sources:
   - url: ../git/ROOT/
     branches: HEAD
+  - url: ../git/core/
+    branches: HEAD
+  - url: ../git/stdlib/
+    branches: HEAD
   - url: ../git/third-party/
     branches: HEAD
 ui:

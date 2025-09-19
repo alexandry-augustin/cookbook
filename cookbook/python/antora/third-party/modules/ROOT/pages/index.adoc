@@ -3,3 +3,13 @@
 .Project Template Generators
 * Copier
 * Cookiecutter
+
+.Code Formatters
+* black
+* ruff
+
+.Signal / Slot
+* signaling https://pythonhosted.org/signaling/#[[website\]]
+* PySignal https://github.com/dgovil/PySignal[[repo\]]
+* pyslot https://pypi.org/project/pyslot/[[pypi\]]
+* signalslot https://github.com/Numergy/signalslot/tree/master/signalslot[[repo\]]

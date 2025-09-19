@@ -1,4 +1,6 @@
 // * xref:index.adoc[]
+* xref:anytree.adoc[]
+* xref:beautiful_soup.adoc[]
 * xref:copier.adoc[]
 * xref:docx.adoc[]
 * xref:invoke.adoc[]
