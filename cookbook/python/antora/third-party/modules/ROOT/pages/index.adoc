@@ -32,6 +32,16 @@
 * pyslot https://pypi.org/project/pyslot/[[pypi\]]
 * signalslot https://github.com/Numergy/signalslot/tree/master/signalslot[[repo\]]
 
+.SciPy
+* matplotlib
+* numpy
+* pandas
+* seaborn
+
+.DB
+* alembic
+* sqlalchemy
+
 == Static Type Checkers
 
 * mypy

@@ -1,11 +1,11 @@
 = SQLAlchemy
 :url-wiki: https://en.wikipedia.org/wiki/SQLAlchemy
 :url-website: https://www.sqlalchemy.org/
-:url-github: https://github.com/sqlalchemy/sqlalchemy
+:url-repo: https://github.com/sqlalchemy/sqlalchemy
 
 {url-wiki}[[wiki\]]
 {url-website}[[website\]]
-{url-github}[[github\]]
+{url-repo}[[repo\]]
 
 == Installation
 

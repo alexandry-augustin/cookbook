@@ -1,5 +1,4 @@
 = Alembic
-:toc: left
 // :url-website: 
 :url-docs: https://alembic.sqlalchemy.org/en/latest/
 :url-repo: https://github.com/sqlalchemy/alembic

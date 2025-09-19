@@ -1,0 +1,15 @@
+= paramiko
+:url-website: https://www.paramiko.org/
+:url-repo: https://github.com/paramiko/paramiko
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
+SSHv2 protocol library
+
+== Installation
+
+[,bash]
+----
+conda install scp paramiko=2.7.2
+----
