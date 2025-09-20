@@ -7,6 +7,7 @@
 * xref:dotenv.adoc[]
 * xref:faker.adoc[]
 * xref:invoke.adoc[]
+* xref:libsass.adoc[]
 * xref:jspy.adoc[]
 * xref:networkx.adoc[]
 * xref:numba.adoc[]

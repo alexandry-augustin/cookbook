@@ -1,5 +1,16 @@
 = Query Parameters
 
+[,Gemini]
+____
+In React Router v7, you don't need to change the Route component to handle query parameters.
+
+The `Route` component in React Router is primarily used to match the path of a URL. Query parameters, which appear after the `?` in a URL (e.g., `/products?category=electronics`), are not considered part of the path for routing purposes. Therefore, React Router's path matching mechanism ignores them.
+
+This design allows for greater flexibility, as the same route can handle multiple variations of query parameters without needing a separate route definition for each one.
+____
+
+== Page Component
+
 Retrieve query parameters: 
 
 [,tsx]
@@ -20,6 +31,69 @@ function MyPage() {
   return (...);
 }
 ----
+
+=== Enforcing Query Parameters
+
+[,Gemini]
+____
+There isn't a built-in mechanism in React Router to *enforce* query parameters in the same way you enforce path parameters. However, you can achieve this by checking for the presence of the required query parameters within your component and then redirecting or displaying an error message if they're missing.
+
+The most common approach is to use the **`useSearchParams`** hook from React Router to read the query parameters and then use the **`useNavigate`** hook to redirect the user if a required parameter isn't present.
+
+Here's a step-by-step example:
+
+1.  **Read the query parameters**: Use `useSearchParams` to get the current search params object.
+2.  **Check for required parameters**: Check if the necessary key-value pairs exist.
+3.  **Redirect if missing**: If a required parameter is missing, use `useNavigate` to redirect the user to a different page, like an error page, or a page where they can properly set the parameters.
+
+*Example Implementation*
+
+Let's say you have a `ProductDetails` page that *requires* a `productId` query parameter.
+
+[,jsx]
+----
+import React, { useEffect } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
+
+function ProductDetails() {
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+
+  const productId = searchParams.get('productId');
+
+  useEffect(() => {
+    // Check if the productId is missing or is not a valid ID
+    if (!productId) {
+      // Redirect to a "not found" or "error" page
+      // Or you could redirect to the products list page
+      navigate('/products', { replace: true });
+    }
+  }, [productId, navigate]);
+
+  if (!productId) {
+    // This is a failsafe. The redirect in useEffect should handle this,
+    // but this prevents rendering until the redirect happens.
+    return null;
+  }
+
+  // If productId exists, render the component content
+  return (
+    <div>
+      <h1>Product Details for ID: {productId}</h1>
+      <p>This page requires a product ID to display correctly.</p>
+    </div>
+  );
+}
+
+export default ProductDetails;
+----
+
+In this example, the `useEffect` hook runs whenever `productId` or `Maps` changes. If `!productId` is true, the `Maps` function redirects the user away from the page, preventing it from rendering in an incomplete state. The `{ replace: true }` option is often used to prevent the user from being able to navigate back to the invalid URL using the browser's back button.
+
+This approach gives you fine-grained control over how to handle missing data and provides a more robust user experience.
+____
+
+== Navigation Component
 
 Add query parameters to a navigation: 
 
