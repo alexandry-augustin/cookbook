@@ -1,0 +1,113 @@
+= Examples
+
+== Basic
+
+[,tsx,title='src/router.tsx']
+----
+import { createBrowserRouter } from "react-router";
+
+import { itemsLoader } from '@//loaders/itemsLoader';
+import ItemsPage from '@/pages/ItemsPage';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    children: [
+      {
+        path: "items",
+        element: <ItemsPage />,
+        loader: itemsLoader,
+      }
+    ],
+  },
+]);
+
+export default router;
+----
+
+[,ts,title='src/loaders/itemsLoader.ts']
+----
+export async function itemsLoader() {
+  // Fetch items from an API
+
+  return items;
+}
+----
+
+[,tsx,title='src/components/pages/ItemsPage.tsx']
+----
+import { useLoaderData } from "react-router";
+
+export default function ItemsPage() {
+  const items = useLoaderData();
+
+  return ...;
+}
+----
+
+== Fetching with Pagination
+
+[,Gemini]
+____
+There isn't a direct way to use a React state variable like `currentPage` within a **React Router v7** `loader` function. This is because **loaders run on the server before the component renders**, and React state only exists on the client-side after the component has been rendered.
+
+Here's how to properly handle this common scenario:
+
+*Use URL Search Parameters*
+
+The correct approach is to use **URL search parameters** to manage the current page number. This keeps the state in sync with the URL, allowing the `loader` to access it and also making the page shareable.
+
+*Update the URL*
+
+Instead of a state variable, you'll use the `useSearchParams` hook to get and set the `page` parameter in the URL.
+
+[,jsx]
+----
+import { useSearchParams, useNavigate } from 'react-router-dom';
+
+function MyComponent() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const currentPage = parseInt(searchParams.get('page')) || 1;
+
+  const handleNextPage = () => {
+    setSearchParams({ page: currentPage + 1 });
+  };
+
+  return (
+    <div>
+      <h1>Current Page: {currentPage}</h1>
+      <button onClick={handleNextPage}>Next Page</button>
+      {/* Render your data here */}
+    </div>
+  );
+}
+----
+
+*Access the URL in the Loader*
+
+In your `loader` function, you can access the URL's search parameters via the `request` object.
+
+[,jsx]
+----
+import { json } from 'react-router-dom';
+
+export async function loader({ request }) {
+  const url = new URL(request.url);
+  const page = url.searchParams.get("page") || "1";
+
+  try {
+    const res = await fetch(`https://api.example.com/data?page=${page}`);
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    const data = await res.json();
+    return json({ data });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return json({ data: null, error: error.message }, { status: 500 });
+  }
+}
+----
+
+This method ensures that the `loader` has access to the correct page number before your component even renders, aligning with the core principle of **React Router**'s data fetching. The `loader` is triggered whenever the URL changes, including when the `page` parameter is updated.
+____

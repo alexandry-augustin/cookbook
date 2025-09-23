@@ -5,9 +5,16 @@
 *** xref:articles/react-router-private-routes.adoc[]
 
 ** xref:modes/index.adoc[]
-*** xref:modes/declarative.adoc[]
-*** xref:modes/data.adoc[]
-*** xref:modes/framework.adoc[]
+
+*** xref:modes/declarative/index.adoc[]
+
+*** xref:modes/data/index.adoc[]
+**** xref:modes/data/installation.adoc[]
+**** xref:modes/data/loaders/index.adoc[]
+***** xref:modes/data/loaders/examples.adoc[]
+**** xref:modes/data/actions.adoc[]
+
+*** xref:modes/framework/index.adoc[]
 
 ** xref:components/index.adoc[]
 *** xref:components/Link.adoc[]

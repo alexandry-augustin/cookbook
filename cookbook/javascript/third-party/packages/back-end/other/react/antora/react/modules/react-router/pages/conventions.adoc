@@ -1,5 +1,33 @@
 = Conventions
 
+== Data Fetching
+
+[,Gemini]
+____
+When using React Router v7, the recommended approach is for the **page component to fetch its data**.
+This approach centralizes data logic and is often called "lifting state up".
+
+*Data Fetching with React Router v7*
+
+In React Router v7, the concept of **route loaders** is the preferred method for fetching data. This shifts the responsibility of data fetching from individual components to the route definition itself.
+
+*How it Works*
+
+Route Loader:: You define a `loader` function on your route object. This function is an asynchronous function that fetches the data needed for the page.
+Data Awaited:: Before the component is rendered, the `loader` function is called and the router waits for the data to be fetched. This prevents a "loading" state flash on the client.
+Accessing Data:: Once the data is loaded, you can access it in your page component using the `useLoaderData` hook.
+
+*Why this is the Better Approach*
+
+Improved Performance:: The data is fetched in parallel with the code for the next page, leading to faster initial rendering.
+Simplified Component Logic:: Your components don't need to manage loading states, error handling, or fetching logic. They just receive the data they need and render it.
+Better User Experience:: No more "waterfall" of data requests. The data is ready before the page even appears.
+Declarative Data Dependencies:: The route definition clearly states what data is required for that page, making your application's data flow more explicit and easier to understand.
+Server-Side Rendering (SSR) & Pre-fetching:: This pattern works seamlessly with SSR and enables React Router to pre-fetch data for a link when a user hovers over it, making navigation feel instantaneous. 
+
+In short, while you could technically have each component fetch its own data, it's less efficient and can lead to a more complex component hierarchy. The `loader` pattern in React Router v7 is designed to solve these problems and provides a more robust and performant way to manage data dependencies.
+____
+
 == Imports
 
 ....
