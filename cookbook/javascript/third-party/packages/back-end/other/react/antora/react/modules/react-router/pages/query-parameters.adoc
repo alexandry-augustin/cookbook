@@ -169,13 +169,13 @@ The most idiomatic React way to centralize this logic is by creating a custom ho
 
 *Example Concept*
 
-[,]
+[,ts,title="useQueryParams.ts"]
 ----
-// A conceptual example of a custom hook
-function useQueryParams() {
-  const [searchParams, setSearchParams] = useSearchParams(); // using react-router-dom v6 hook
+import { useSearchParams } from 'react-router';
 
-  // Function to update the params
+export function useQueryParams() {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const updateParams = (newParams) => {
     // 1. Get the current params
     const currentParams = Object.fromEntries(searchParams.entries());
@@ -199,16 +199,50 @@ function useQueryParams() {
 }
 ----
 
+The returned value from this custom hook or function is an array containing two elements:
+
+* An object representing the current URL search parameters like `{ key1: 'value1', key2: 'value2' }`
+* A function to update those search parameters.
+
 Component Usage:
 
-[,]
+[,tsx,title="MyComponent.tsx"]
 ----
-// In a component
-const [params, setParams] = useQueryParams();
+import { useQueryParams } from './useQueryParams';
 
-const handleFilterChange = (event) => {
-  // Call the centralized function to update a single parameter 'category'
-  setParams({ category: event.target.value }); 
-};
+function MyComponent() {
+  const [searchParams, updateParams] = useQueryParams();
+
+  updateParams({ key1: 'value1' });
+  // updateParams(new URLSearchParams({ key1: 'value1' })); ???
+  const key1 = searchParams.key1 || 'default';
+
+  return (...);
+}
 ----
 ____
+
+[comment]
+--
+[,ts,title="useAddQueryParam.ts"]
+----
+import { useSearchParams } from 'react-router';
+
+export const useAddQueryParam = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const addQueryParam = (key, value) => {
+    // Create a new URLSearchParams object from the current one to preserve existing params
+    const newSearchParams = new URLSearchParams(searchParams);
+    
+    // Set or update the new query parameter
+    newSearchParams.set(key, value);
+    
+    // Update the URL with the new search parameters
+    setSearchParams(newSearchParams);
+  };
+
+  return { searchParams, setSearchParams, addQueryParam };
+};
+----
+--
