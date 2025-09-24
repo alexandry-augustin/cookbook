@@ -118,3 +118,97 @@ function MyComponent() {
   return (...);
 }
 ----
+
+== Adding a Single Query Parameters
+
+[,tsx,title="useAddQueryParam.tsx"]
+----
+import { useSearchParams } from 'react-router-dom';
+
+export const useAddQueryParam = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const addQueryParam = (key, value) => {
+    // Create a new URLSearchParams object from the current one to preserve existing params
+    const newSearchParams = new URLSearchParams(searchParams);
+    
+    // Set or update the new query parameter
+    newSearchParams.set(key, value);
+    
+    // Update the URL with the new search parameters
+    setSearchParams(newSearchParams);
+  };
+
+  return { searchParams, addQueryParam };
+};
+----
+
+[,tsx,title="MyComponent.tsx"]
+----
+import { useAddQueryParam } from './useAddQueryParam';
+
+function MyComponent() {
+  // Use the custom hook to get the search params and the update function
+  const { searchParams, addQueryParam } = useAddQueryParam();
+
+  const handleAddParam = () => {
+    addQueryParam('paramName', 'paramValue');
+  };
+
+  return (...);
+}
+----
+
+== Centralised Query Parameters Management
+
+[,Gemini]
+____
+In a React application, it's generally a good practice to have a common, centralized function or hook in charge of updating query parameters.
+
+The most idiomatic React way to centralize this logic is by creating a custom hook, often named something like `useQueryParams` or `useUrlState`.
+
+*Example Concept*
+
+[,]
+----
+// A conceptual example of a custom hook
+function useQueryParams() {
+  const [searchParams, setSearchParams] = useSearchParams(); // using react-router-dom v6 hook
+
+  // Function to update the params
+  const updateParams = (newParams) => {
+    // 1. Get the current params
+    const currentParams = Object.fromEntries(searchParams.entries());
+
+    // 2. Merge with the new params
+    const mergedParams = { ...currentParams, ...newParams };
+
+    // 3. Filter out null/undefined/empty string values if desired
+    const cleanedParams = Object.entries(mergedParams).reduce((acc, [key, value]) => {
+      if (value) { // simple check to omit empty values
+        acc[key] = value;
+      }
+      return acc;
+    }, {});
+
+    // 4. Update the URL
+    setSearchParams(cleanedParams);
+  };
+
+  return [Object.fromEntries(searchParams.entries()), updateParams];
+}
+----
+
+Component Usage:
+
+[,]
+----
+// In a component
+const [params, setParams] = useQueryParams();
+
+const handleFilterChange = (event) => {
+  // Call the centralized function to update a single parameter 'category'
+  setParams({ category: event.target.value }); 
+};
+----
+____

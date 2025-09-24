@@ -61,23 +61,32 @@ The correct approach is to use **URL search parameters** to manage the current p
 
 Instead of a state variable, you'll use the `useSearchParams` hook to get and set the `page` parameter in the URL.
 
-[,jsx]
+[,jsx,title="components/MyComponent.jsx"]
 ----
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useLoaderData, useSearchParams } from "react-router";
 
-function MyComponent() {
+export default function MyComponent() {
+  const { data } = useLoaderData();
   const [searchParams, setSearchParams] = useSearchParams();
-  const currentPage = parseInt(searchParams.get('page')) || 1;
+  const currentPage = parseInt(searchParams.get("page")) || 1;
 
   const handleNextPage = () => {
     setSearchParams({ page: currentPage + 1 });
   };
 
+  if (!data) {
+    return <div>No data available.</div>;
+  }
+
   return (
     <div>
       <h1>Current Page: {currentPage}</h1>
+      <ul>
+        {data.map((item) => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ul>
       <button onClick={handleNextPage}>Next Page</button>
-      {/* Render your data here */}
     </div>
   );
 }
@@ -89,23 +98,16 @@ In your `loader` function, you can access the URL's search parameters via the `r
 
 [,jsx]
 ----
-import { json } from 'react-router-dom';
+import { json } from 'react-router';
 
 export async function loader({ request }) {
   const url = new URL(request.url);
   const page = url.searchParams.get("page") || "1";
 
-  try {
-    const res = await fetch(`https://api.example.com/data?page=${page}`);
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-    const data = await res.json();
-    return json({ data });
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return json({ data: null, error: error.message }, { status: 500 });
-  }
+  // Fetch data for the specified page
+  
+  // return json(error); 
+  return json(data);
 }
 ----
 
