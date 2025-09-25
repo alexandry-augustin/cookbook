@@ -1,9 +1,5 @@
 = Third-party
 
-.Project Template Generators
-* Copier
-* Cookiecutter
-
 .Code Formatters
 * black
 * ruff

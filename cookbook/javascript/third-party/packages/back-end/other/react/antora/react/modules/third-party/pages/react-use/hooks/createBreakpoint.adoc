@@ -64,7 +64,9 @@ export default function MyComponent() {
 
 == Full Example
 
-[,tsx,title="useBreakpointStore.ts"]
+=== Setup
+
+[,tsx,title="stores/useBreakpointStore.ts"]
 ----
 import { create } from 'zustand';
 
@@ -74,7 +76,7 @@ export const useBreakpointStore = create((set) => ({
 }));
 ----
 
-[,tsx,title="useSyncBreakpointWithStore.ts"]
+[,tsx,title="hooks/useSyncBreakpointWithStore.ts"]
 ----
 import { useEffect } from 'react';
 import { createBreakpoint } from "react-use";
@@ -116,21 +118,47 @@ export default function App() {
 }
 ----
 
+Or
+
+[,tsx,title="router.ts"]
+----
+import {
+  createBrowserRouter,
+  Outlet
+} from "react-router";
+
+import { useSyncBreakpointWithStore } from '@/hooks/useSyncBreakpointWithStore';
+
+function Root() {
+  useSyncBreakpointWithStore();
+
+  return <Outlet />;
+}
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      // ...
+    ],
+  },
+]);
+----
+
+=== Usage
+
 [,tsx,title="MyComponent.ts"]
 ----
 import { useBreakpointStore } from '@/stores/useBreakpointStore';
 
 export default function MyComponent() {
-    const breakpoint = useBreakpointStore((state) => state.breakpoint);
+  const breakpoint = useBreakpointStore((state) => state.breakpoint);
 
-    return (
-      <div>
-        <p>Current breakpoint is: {breakpoint}</p>
-        {breakpoint === 'md' && (
-          <p>Only visible on medium screens.</p>)
-        }
-      </div>
-    )
+  console.log("Current breakpoint is", breakpoint);
+  console.log(breakpoint === 'md'); // `true` only on medium screens
+
+  return (...)
 }
 ----
 
@@ -171,6 +199,8 @@ export function MyComponent() {
 }
 ----
 --
+
+=== Explanations
 
 [,Gemini,Step-by-Step Explanation]
 ____
