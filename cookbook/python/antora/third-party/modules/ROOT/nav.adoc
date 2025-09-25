@@ -2,7 +2,6 @@
 * xref:alembic.adoc[]
 * xref:anytree.adoc[]
 * xref:beautiful_soup.adoc[]
-* xref:copier.adoc[]
 * xref:docx.adoc[]
 * xref:dotenv.adoc[]
 * xref:faker.adoc[]
@@ -36,7 +35,3 @@
 * xref:pyjs.adoc[]
 * xref:marimo.adoc[]
 * xref:marshmallow.adoc[]
-
-* xref:cookiecutter/index.adoc[]
-** xref:cookiecutter/hooks.adoc[]
-** xref:cookiecutter/faq.adoc[]
