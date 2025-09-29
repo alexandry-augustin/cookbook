@@ -113,3 +113,10 @@ export async function loader({ request }) {
 
 This method ensures that the `loader` has access to the correct page number before your component even renders, aligning with the core principle of **React Router**'s data fetching. The `loader` is triggered whenever the URL changes, including when the `page` parameter is updated.
 ____
+
+== With Tanstack Query
+
+[,Gemini]
+____
+Since React Router loaders execute outside the React component tree, you cannot use React Hooks (like `useQuery`) directly within them. Instead, you'll need direct access to the `QueryClient` instance.
+____

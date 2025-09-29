@@ -9,9 +9,7 @@ The `Route` component in React Router is primarily used to match the path of a U
 This design allows for greater flexibility, as the same route can handle multiple variations of query parameters without needing a separate route definition for each one.
 ____
 
-== Page Component
-
-Retrieve query parameters: 
+== Retrieve Query Parameters
 
 [,tsx]
 ----
@@ -93,9 +91,7 @@ In this example, the `useEffect` hook runs whenever `productId` or `Maps` change
 This approach gives you fine-grained control over how to handle missing data and provides a more robust user experience.
 ____
 
-== Navigation Component
-
-Add query parameters to a navigation: 
+== `navigate()` with Query Parameters
 
 [,tsx]
 ----
@@ -114,46 +110,6 @@ function MyComponent() {
     pathname: '/results',
     search: createSearchParams(params).toString()
   });
-
-  return (...);
-}
-----
-
-== Adding a Single Query Parameters
-
-[,tsx,title="useAddQueryParam.tsx"]
-----
-import { useSearchParams } from 'react-router-dom';
-
-export const useAddQueryParam = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const addQueryParam = (key, value) => {
-    // Create a new URLSearchParams object from the current one to preserve existing params
-    const newSearchParams = new URLSearchParams(searchParams);
-    
-    // Set or update the new query parameter
-    newSearchParams.set(key, value);
-    
-    // Update the URL with the new search parameters
-    setSearchParams(newSearchParams);
-  };
-
-  return { searchParams, addQueryParam };
-};
-----
-
-[,tsx,title="MyComponent.tsx"]
-----
-import { useAddQueryParam } from './useAddQueryParam';
-
-function MyComponent() {
-  // Use the custom hook to get the search params and the update function
-  const { searchParams, addQueryParam } = useAddQueryParam();
-
-  const handleAddParam = () => {
-    addQueryParam('paramName', 'paramValue');
-  };
 
   return (...);
 }
@@ -246,3 +202,45 @@ export const useAddQueryParam = () => {
 };
 ----
 --
+
+=== Adding Query Parameters
+
+Add a single query parameter:
+
+[,tsx,title="useAddQueryParam.tsx"]
+----
+import { useSearchParams } from 'react-router-dom';
+
+export const useAddQueryParam = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const addQueryParam = (key, value) => {
+    // Create a new URLSearchParams object from the current one to preserve existing params
+    const newSearchParams = new URLSearchParams(searchParams);
+    
+    // Set or update the new query parameter
+    newSearchParams.set(key, value);
+    
+    // Update the URL with the new search parameters
+    setSearchParams(newSearchParams);
+  };
+
+  return { searchParams, addQueryParam };
+};
+----
+
+[,tsx,title="MyComponent.tsx"]
+----
+import { useAddQueryParam } from './useAddQueryParam';
+
+function MyComponent() {
+  // Use the custom hook to get the search params and the update function
+  const { searchParams, addQueryParam } = useAddQueryParam();
+
+  const handleAddParam = () => {
+    addQueryParam('paramName', 'paramValue');
+  };
+
+  return (...);
+}
+----
