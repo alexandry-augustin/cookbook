@@ -56,6 +56,31 @@ export function MyComponent () {
 }
 ----
 
+== Nested Keys
+
+[,ts,title="src/i18n.ts"]
+----
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+}
+----
+
+[,ts,title="src/MyComponent.tsx"]
+----
+import { useTranslation } from 'react-i18next'
+
+export function MyComponent () {
+  const { t } = useTranslation();
+  
+  t('common.save');
+
+  return (...)
+}
+----
+
 == Example
 
 .Vite app

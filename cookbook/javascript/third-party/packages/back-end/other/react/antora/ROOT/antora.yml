@@ -1,12 +1,10 @@
-name: react
+name: ROOT
 version: ~
-title: React
+title: ROOT
 nav:
 - modules/ROOT/nav.adoc
 - modules/articles/nav.adoc
-- modules/core/nav.adoc
 - modules/boilerplates/nav.adoc
 - modules/contrib/nav.adoc
-- modules/third-party/nav.adoc
 - modules/nextjs/nav.adoc
 - modules/react-router/nav.adoc

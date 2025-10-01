@@ -1,9 +1,13 @@
 site:
   title: React
-  start_page: react::index.adoc
+  start_page: ROOT::index.adoc
 content:
   sources:
-  - url: ../git/react/
+  - url: ../git/ROOT/
+    branches: HEAD
+  - url: ../git/core/
+    branches: HEAD
+  - url: ../git/third-party/
     branches: HEAD
 ui:
   bundle:
