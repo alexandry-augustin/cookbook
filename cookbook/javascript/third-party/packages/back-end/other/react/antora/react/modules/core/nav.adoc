@@ -22,7 +22,9 @@
 *** xref:control_flow/for.adoc[]
 
 ** xref:event-handlers.adoc[]
-** xref:forms.adoc[]
+
+** xref:forms/index.adoc[]
+*** xref:forms/async-uploads.adoc[]
 
 ** xref:hooks/index.adoc[]
 *** xref:hooks/built-in/index.adoc[]
