@@ -1,4 +1,0 @@
-= `useCallback`
-:url-docs: https://react.dev/reference/react/useCallback
-
-{url-docs}[[docs\]]

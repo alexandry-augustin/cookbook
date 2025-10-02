@@ -1,2 +1,0 @@
-* Articles
-** xref:react-slots.adoc[]

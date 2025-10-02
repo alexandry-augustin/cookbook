@@ -1,8 +1,0 @@
-= Components
-
-[,https://www.youtube.com/watch?v=7DC3ZrxvUUU]
-____
-By default, Next.js treats all components as Server components. [...]
-
-To create a Client component, you'll need to add the `"use client"` directive at the top of your component file.
-____

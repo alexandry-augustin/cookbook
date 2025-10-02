@@ -1,6 +1,0 @@
-= `loaders`
-
-[,Gemini]
-____
-When a component uses `useLoader` Data, it doesn't need to manage loading states (`isLoading`, `isError`) or `useEffect` dependencies. Its sole purpose becomes to render the data it receives, making the component code cleaner and more focused on the UI.
-____

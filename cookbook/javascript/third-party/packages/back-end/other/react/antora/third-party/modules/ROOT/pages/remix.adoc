@@ -1,8 +1,0 @@
-= Remix
-:url-website: https://remix.run/
-:url-repo: https://github.com/remix-run/remix
-:url-wiki: https://en.m.wikipedia.org/wiki/Remix_(web_framework)
-
-{url-website}[[website\]]
-{url-repo}[[repo\]]
-{url-wiki}[[wiki\]]

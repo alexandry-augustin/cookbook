@@ -1,3 +1,0 @@
-= `Profiler`
-
-measure rendering performance of a React tree programmatically.

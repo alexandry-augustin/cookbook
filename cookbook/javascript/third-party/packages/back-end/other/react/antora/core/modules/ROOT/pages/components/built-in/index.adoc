@@ -1,4 +1,0 @@
-= Built-in
-:url-docs: https://react.dev/reference/react/components
-
-{url-docs}[[docs\]]

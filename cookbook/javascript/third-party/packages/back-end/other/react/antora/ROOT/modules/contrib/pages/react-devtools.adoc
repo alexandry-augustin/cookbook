@@ -1,4 +1,0 @@
-= React Developer Tools (DevTools)
-:url-docs: https://react.dev/link/react-devtools
-
-{url-docs}[[docs\]]

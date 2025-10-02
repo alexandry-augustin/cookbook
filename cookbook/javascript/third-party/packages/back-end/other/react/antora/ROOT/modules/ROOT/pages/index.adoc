@@ -1,3 +1,0 @@
-= React
-
-https://github.com/airbnb/javascript/tree/master/react[Airbnb React/JSX Style Guide]

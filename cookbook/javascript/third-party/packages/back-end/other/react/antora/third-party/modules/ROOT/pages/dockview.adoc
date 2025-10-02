@@ -1,9 +1,0 @@
-= Dockview
-:url-website: https://dockview.dev/
-// :url-docs: 
-:url-repo: https://github.com/mathuo/dockview
-
-{url-website}[[website\]]
-// {url-docs}[[docs\]]
-{url-repo}[[repo\]]
-
