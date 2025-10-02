@@ -33,5 +33,15 @@
 * xref:treelib.adoc[]
 * xref:ty.adoc[]
 * xref:pyjs.adoc[]
-* xref:marimo.adoc[]
 * xref:marshmallow.adoc[]
+
+* Jupyter
+** xref:jupyter/index.adoc[]
+*** xref:jupyter/jupyter_lab.adoc[]
+*** xref:jupyter/jupyter_notebook.adoc[]
+*** xref:jupyter/nbconvert.adoc[]
+*** xref:jupyter/voila.adoc[]
+** xref:ipython.adoc[]
+
+* Notebooks
+** xref:marimo.adoc[]

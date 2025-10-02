@@ -1,0 +1,35 @@
+= Voilà
+:url-repo: https://github.com/voila-dashboards/voila
+:url-docs: https://voila.readthedocs.io/en/stable/
+
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+
+[,Gemini]
+____
+**Voilà** is an official **subproject** of **Project Jupyter**.
+
+Voilà's purpose is to take Jupyter Notebooks and turn them into secure, standalone, interactive web applications and dashboards that you can share with others, hiding the underlying code cells.
+
+It's one of the core tools in the larger Jupyter ecosystem, alongside projects like:
+
+* JupyterLab
+* Jupyter Notebook
+* JupyterHub
+* Binder
+* Widgets
+____
+
+== Installation
+
+[source,bash]
+----
+python -m pip install voila
+----
+
+== Usage
+
+[source,bash]
+----
+voila
+----

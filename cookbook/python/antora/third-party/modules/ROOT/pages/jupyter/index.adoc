@@ -1,0 +1,9 @@
+= Jupyter
+:url-wiki: https://en.wikipedia.org/wiki/Project_Jupyter
+:url-website: https://jupyter.org/
+:url-repo: https://github.com/jupyter
+
+{url-wiki}[[wiki\]]
+{url-website}[[website\]]
+{url-repo}[[repo\]]
+
