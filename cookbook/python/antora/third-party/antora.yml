@@ -1,5 +1,0 @@
-name: third-party
-version: ~
-title: Third-party
-nav:
-- modules/ROOT/nav.adoc

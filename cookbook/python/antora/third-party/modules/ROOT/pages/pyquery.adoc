@@ -1,8 +1,0 @@
-= pyquery
-:url-repo: https://github.com/gawel/pyquery
-
-{url-repo}[[repo\]]
-
-
-
-

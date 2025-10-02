@@ -1,7 +1,0 @@
-= Selenium
-:url-website: https://selenium-python.readthedocs.io/index.html
-:url-repo: https://github.com/SeleniumHQ/selenium
-
-{url-website}[[website\]]
-{url-repo}[[repo\]]
-

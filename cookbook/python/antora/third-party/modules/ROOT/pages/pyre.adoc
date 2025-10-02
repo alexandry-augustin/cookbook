@@ -1,9 +1,0 @@
-= Pyre
-
-[,Gemini]
-____
-Meta's Type Checker:: Pyre is developed and used internally at Meta (Facebook). It's designed for performance and scalability, particularly for very large Python monorepos.
-Features:: Pyre focuses on speed and has a strong type inference engine. It also includes features like taint analysis for security checks.
-Integration:: Can be used as a standalone CLI tool.
-Considerations:: While open-source, it historically has been more tailored to Meta's internal needs, which sometimes meant less immediate focus on general community use cases. However, Meta is developing a new Rust-based type checker called *Pyrefly* that aims to be more open-source friendly.
-____

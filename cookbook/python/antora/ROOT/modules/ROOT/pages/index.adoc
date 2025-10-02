@@ -1,4 +1,0 @@
-= Python
-
-> Python was also in a part built as an alternative to Perl.
--- Guido van Rossum

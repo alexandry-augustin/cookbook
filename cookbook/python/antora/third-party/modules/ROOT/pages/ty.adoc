@@ -1,8 +1,0 @@
-= Ty (from Astral)
-
-[,Gemini]
-____
-Emerging / Honorable Mentions
-
-This is a very exciting, new Rust-based type checker being developed by Astral (the creators of ruff and uv). It promises dramatically faster and more powerful type analysis. While still in alpha/early development, it's definitely one to watch.
-____

@@ -1,9 +1,0 @@
-= Pyright (and Pylance)
-
-[,Gemini]
-____
-Microsoft's Offering:: Pyright is a fast, robust type checker developed by Microsoft. It's particularly well-known because it powers *Pylance*, the default language server for Python in Visual Studio Code.
-Features:: Pyright is known for its speed and its ability to perform fast incremental checks, which is crucial for a smooth in-IDE experience. It has excellent support for the latest typing features and often provides more precise type inference than MyPy in certain scenarios.
-Integration:: Primarily used via Pylance in VS Code, but Pyright can also be run as a standalone CLI tool.
-Considerations:: While open-source, its close ties to Microsoft and VS Code might make it feel less "community-driven" to some, although its development is very active.
-____

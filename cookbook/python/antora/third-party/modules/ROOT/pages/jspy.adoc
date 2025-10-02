@@ -1,9 +1,0 @@
-= Js2Py
-:toc: left
-:url-repo: https://github.com/PiotrDabkowski/Js2Py
-
-{url-repo}[[repo\]]
-
-See also https://github.com/Distributive-Network/PythonMonkey[[PythonMonkey\]]
-
-== Installation

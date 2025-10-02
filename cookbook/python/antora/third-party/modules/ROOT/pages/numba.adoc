@@ -1,8 +1,0 @@
-= Numba
-:url-wiki: https://en.wikipedia.org/wiki/Numba
-:url-website: http://numba.pydata.org/
-:url-repo: https://github.com/numba/numba
-
-{url-website}[[website\]]
-{url-repo}[[repo\]]
-{url-wiki}[[wiki\]]

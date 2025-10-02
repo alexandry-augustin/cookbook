@@ -1,8 +1,0 @@
-= Scrapy
-:url-website: https://scrapy.org/
-:url-repo: https://github.com/scrapy/scrapy
-
-{url-website}[[website\]]
-{url-repo}[[repo\]]
-
-== Installation
