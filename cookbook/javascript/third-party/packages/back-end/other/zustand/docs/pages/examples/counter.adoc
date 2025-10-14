@@ -4,18 +4,18 @@
 ./
 ├── src
 │   ├── components/
-│   │    └── Counter.tsx
+│   │    └── MyCounter.tsx
 │   ├── stores/
-│   │    └── counter.ts
+│   │    └── useCounterStore.ts
 │   └── ...
 └── ...
 ....
 
-[,ts,title="stores/counter.ts"]
+[,ts,title="stores/useCounterStore.ts"]
 ----
 import { create } from 'zustand'
 
-export const counterStore = create((set) => ({
+export const useCounterStore = create((set) => ({
     count: 0,
     add: () => set((state) => ({ count: state.count + 1 })),
     sub: () => set((state) => ({ count: state.count - 1 })),
@@ -26,7 +26,7 @@ export const counterStore = create((set) => ({
 
 Or 
 
-[,ts,title="stores/counter.ts"]
+[,ts,title="stores/useCounterStore.ts"]
 ----
 import { create } from 'zustand'
 
@@ -38,7 +38,7 @@ type Store = {
     set: (value: number) => void;
 };
 
-export const myStore = create<Store>((set) => ({
+export const useCounterStore = create<Store>((set) => ({
     count: 0,
     add: () => set((state) => ({ count: state.count + 1 })),
     sub: () => set((state) => ({ count: state.count - 1 })),
@@ -47,17 +47,17 @@ export const myStore = create<Store>((set) => ({
 }));
 ----
 
-[,ts,title="components/Counter.tsx"]
+[,ts,title="components/MyCounter.tsx"]
 ----
 import { useEffect } from 'react';
-import { counterStore } from 'stores/counter'
+import { useCounterStore } from 'stores/useCounterStore'
 
-export function Counter() {
-  const count = counterStore((state) => state.count);
-  const add = counterStore((state) => state.add);
-  const sub = counterStore((state) => state.sub);
-  const reset = counterStore((state) => state.reset);
-  const set = myStore((state) => state.set);
+export function MyCounter() {
+  const count = useCounterStore((state) => state.count);
+  const add = useCounterStore((state) => state.add);
+  const sub = useCounterStore((state) => state.sub);
+  const reset = useCounterStore((state) => state.reset);
+  const set = useCounterStore((state) => state.set);
 
   useEffect(() => {
     set(99)
@@ -75,13 +75,13 @@ export function Counter() {
 
 Or
 
-[,ts,title="components/Counter.tsx"]
+[,ts,title="components/MyCounter.tsx"]
 ----
 import { useEffect } from 'react';
-import { counterStore } from 'stores/counter'
+import { useCounterStore } from 'stores/useCounterStore'
 
-export function Counter() {
-  const { count, add, sub, reset, set } = myStore();
+export function MyCounter() {
+  const { count, add, sub, reset, set } = useCounterStore();
 
   useEffect(() => {
     set(99)

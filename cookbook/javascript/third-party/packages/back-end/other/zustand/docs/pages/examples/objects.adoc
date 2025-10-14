@@ -33,7 +33,7 @@ export const useStore = create((set) => ({
 [,ts,title="components/MyComponent.tsx"]
 ----
 import { useEffect } from 'react';
-import { useStore } from '@/stores/my-store'
+import { useStore } from '@/stores/useStore'
 
 export function MyComponent() {
   const { user, updateUser, updateAddress } = useStore();
@@ -54,10 +54,8 @@ export function MyComponent() {
     });
   }, [])
 
-  return (
-    <>
-      {JSON.stringify(user)}
-    </>
-  )
+  console.log(user)
+
+  return (...)
 }
 ----
