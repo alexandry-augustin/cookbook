@@ -1,4 +1,6 @@
 // * xref:index.adoc[]
+* xref:SCRAPS.adoc[]
 * xref:core.adoc[]
 * xref:libc.adoc[]
-* xref:SCRAPS.adoc[]
+* xref:emscripten.adoc[]
+* xref:sdl.adoc[]

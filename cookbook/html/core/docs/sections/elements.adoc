@@ -18,7 +18,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
 == Semantic Elements
 
-> "A semantic Web allows data to be shared and reused across applications, enterprises, and communities." -- W3C
+> "A semantic Web allows data to be shared and reused across applications, enterprises, and communities."
+-- W3C
 
 Examples:
 

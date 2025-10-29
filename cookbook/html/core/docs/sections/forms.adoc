@@ -60,6 +60,36 @@ NOTE: If the action attribute is omitted, the action is set to the current page.
 ** `"url"`: 
 ** `"week"`: 
 
+==== `file`
+
+[,Gemini]
+____
+An **HTML `<input>` element** can accept multiple files.
+
+
+*How to Enable Multiple File Selection*
+
+To allow a file input to accept more than one file, you need to add the **`multiple`** attribute to the `<input type="file">` tag.
+
+[,html]
+----
+<input type="file" multiple>
+----
+
+When this attribute is present, the user can select **multiple files** from their operating system's file dialog box, usually by holding down the **Shift** or **Ctrl** (or **Command** on Mac) key while selecting the files.
+
+*Restricting File Types (Optional)*
+
+You can also use the **`accept`** attribute along with `multiple` to restrict the types of files the user can select:
+
+[,html]
+----
+<input type="file" multiple accept="image/*">
+----
+
+This would allow the user to select **multiple images** at once.
+____
+
 === `<textarea>`
 
 === `<button>`

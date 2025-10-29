@@ -1,0 +1,11 @@
+= Simple DirectMedia Layer (SDL)
+:navtitle: SDL
+
+[,Gemini]
+____
+SDL is arguably the most recognized cross-platform C library for handling low-level multimedia access, including graphics, audio, input, and window management.
+
+Primary Use:: Excellent for 2D game development, emulators, and multimedia applications.  
+Abstraction Level:: Provides a simple abstraction layer over underlying operating system graphics and input APIs.
+Key Feature:: It can be used to set up the necessary window and context for rendering with more powerful, low-level APIs like OpenGL or Vulkan. It's used in many popular games.  
+____

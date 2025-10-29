@@ -15,3 +15,13 @@ ____
 ____
 After the World Wide Web Consortium (W3C) named it as a web standard in 2019, it has thus become the fourth web standard with HTML, CSS and JavaScript. 
 ____
+
+[,Gemini]
+____
+WebAssembly (Wasm) is designed to be a portable binary instruction format for executable programs. A key feature of Wasm is its ability to run consistently across different environments, notably:
+
+* In the Browser (Client-side): Wasm modules are executed within a sandboxed environment provided by the JavaScript engine in modern web browsers, offering near-native performance for computationally intensive tasks.
+* On the Server (Server-side): Wasm can run outside the browser, typically embedded within a host environment (often written in languages like Rust, Go, or Node.js) that implements the WebAssembly System Interface (WASI). This allows Wasm to be used for serverless functions, microservices, and containerization alternatives, leveraging its security and startup speed benefits.
+
+This ubiquity is one of Wasm's major strengths.
+____

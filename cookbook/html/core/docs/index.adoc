@@ -2,7 +2,7 @@
 :toc: left
 
 .Examplar HTML Element
-image::./res/element.svg[width=350]
+image::./res/element.svg[width=640]
 
 include::./sections/elements.adoc[leveloffset=+1]
 
