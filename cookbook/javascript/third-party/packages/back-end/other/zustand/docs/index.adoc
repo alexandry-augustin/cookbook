@@ -30,4 +30,8 @@ include::pages/conventions.adoc[leveloffset=+1]
 
 include::pages/middleware/index.adoc[leveloffset=+1]
 
+include::pages/actions.adoc[leveloffset=+1]
+
+include::pages/combined-stores.adoc[leveloffset=+1]
+
 include::pages/examples/index.adoc[leveloffset=+1]

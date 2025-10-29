@@ -1,4 +1,4 @@
-= Core C
+= Core
 
 == C89
 

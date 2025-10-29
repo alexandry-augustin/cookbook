@@ -1,0 +1,81 @@
+=  Combined Stores
+
+[,Gemini]
+____
+Zustand stores can be combined, and there are a couple of common patterns for this, depending on your needs: 
+
+* Use the **Slices Pattern** to combine logic into one store for highly related state or a single global state model.
+* Use **multiple independent stores** for completely separate concerns. You can still have one store's action call another store's action if needed (by using the `get` function inside an action, or simply importing and using the other store's API).
+____
+
+== Slices Pattern 
+
+[,Gemini]
+____
+Recommended for a single main store
+
+This is the most common way to handle large state in Zustand. You define separate "slices" (functions that define a part of the state and its actions) and then combine them into a single main store using the `create` function. This results in one hook to use for all your global state.
+
+.Example:
+[,javascript]
+----
+// bearSlice.js
+export const createBearSlice = (set) => ({
+    bears: 0,
+    addBear: () => set(state => ({ bears: state.bears + 1 })),
+});
+
+// fishSlice.js
+export const createFishSlice = (set) => ({
+    fishes: 0,
+    addFish: () => set(state => ({ fishes: state.fishes + 1 })),
+});
+
+// useBoundStore.js
+import { create } from 'zustand';
+import { createBearSlice } from './bearSlice';
+import { createFishSlice } from './fishSlice';
+
+export const useBoundStore = create((set, get, api) => ({
+    ...createBearSlice(set, get, api),
+    ...createFishSlice(set, get, api),
+}));
+----
+
+You would then use `useBoundStore` to access all state and actions.
+____
+
+== Multiple Independent Stores
+
+[,Gemini]
+____
+Zustand is unopinionated, so you can simply create multiple, separate stores using the `create` function. You can then use the hooks for each store independently in your components. This is often preferred when the different parts of the state are completely unrelated.
+
+.Example:
+[,javascript]
+----
+// useUserStore.js
+import { create } from 'zustand';
+export const useUserStore = create(set => ({
+    user: null,
+    login: (data) => set({ user: data }),
+}));
+
+// useThemeStore.js
+import { create } from 'zustand';
+export const useThemeStore = create(set => ({
+    theme: 'light',
+    toggleTheme: () => set(state => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
+}));
+
+// In a component
+import { useUserStore } from './useUserStore';
+import { useThemeStore } from './useThemeStore';
+
+function Component() {
+    const user = useUserStore(state => state.user);
+    const theme = useThemeStore(state => state.theme);
+    // ...
+}
+----
+____

@@ -1,5 +1,4 @@
 = Core C & Standard Library
-:toc: left
 
 > "C was originally developed at Bell Labs by [Dennis] Ritchie between 1972 and 1973 to construct utilities running on Unix." 
 -- https://en.wikipedia.org/wiki/C_(programming_language)#K&R_C
@@ -34,10 +33,6 @@
 |`C23`
 |
 |===
-
-include::./sections/core.adoc[leveloffset=+1]
-
-include::./sections/libc.adoc[leveloffset=+1]
 
 == References
 
