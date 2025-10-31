@@ -1,4 +1,5 @@
 = Standard Library (libc)
+:navtitle: libc
 :url-wiki: https://en.wikipedia.org/wiki/C_standard_library
 
 {url-wiki}[[wiki\]]

@@ -1,0 +1,5 @@
+name: core
+version: ~
+title: Core
+nav:
+- modules/ROOT/nav.adoc
