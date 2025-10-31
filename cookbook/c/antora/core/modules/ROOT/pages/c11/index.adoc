@@ -1,0 +1,9 @@
+= C11
+
+`_Alignas`:: {empty}
+`_Alignof`:: {empty}
+`_Atomic`:: {empty}
+`_Generic`:: {empty}
+`_Noreturn`:: {empty}
+`_Static_assert`:: {empty}
+`_Thread_local`:: {empty}

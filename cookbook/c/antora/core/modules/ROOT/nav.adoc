@@ -1,1 +1,5 @@
-* xref:index.adoc[]
+// * xref:index.adoc[]
+* xref:c89/index.adoc[]
+* xref:c99/index.adoc[]
+* xref:c11/index.adoc[]
+* xref:operators/index.adoc[]

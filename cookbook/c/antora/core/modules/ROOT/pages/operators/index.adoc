@@ -1,0 +1,19 @@
+= Operators
+
+arithmetic:: `+`, `-`, `*`, `/`, `%`
+assignment:: `=`
+augmented assignment:: `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`
+bitwise logic:: `~`, `&`, `|`, `^`
+bitwise shifts:: `<<`, `>>`
+boolean logic:: `!`, `&&`, `||`
+conditional evaluation:: `? ::`
+equality testing:: `==`, `!=`
+calling functions:: `( )`
+increment and decrement:: `++`, `--`
+member selection:: `.`, `->`
+object size:: `sizeof`
+order relations:: `<`, `<=`, `>`, `>=`
+reference and dereference:: `&`, `*`, `[ ]`
+sequencing:: `,`
+subexpression grouping:: `( )`
+type conversion:: `(*typename*)`

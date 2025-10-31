@@ -1,0 +1,7 @@
+= C99
+
+`_Bool`:: {empty}
+`_Complex`:: {empty}
+`_Imaginary`:: {empty}
+`inline`:: {empty}
+`restrict`:: {empty}
