@@ -1,6 +1,6 @@
 = Standard Template Library (STL)
 
-image:./res/stl/uml_diagram.png[]
+image:stl/uml_diagram.png[]
 
 == STL 98
 

@@ -1,0 +1,7 @@
+git/
+site/build/
+*.code-workspace
+.env.*
+.venv
+.venv/
+**/.venv/

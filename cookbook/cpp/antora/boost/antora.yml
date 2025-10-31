@@ -1,0 +1,5 @@
+name: boost
+version: ~
+title: Boost
+nav:
+- modules/ROOT/nav.adoc

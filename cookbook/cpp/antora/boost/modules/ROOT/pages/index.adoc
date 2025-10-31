@@ -1,0 +1,14 @@
+= Boost
+
+.Deprecated
+* `Boost.Coroutine` is deprecated. Use `Boost.Coroutine2`. 
+* `Boost.Signals` is deprecated. Use `Boost.Signals2`.
+
+== Boost Beast
+
+https://www.boost.org/doc/libs/1_80_0/libs/beast/doc/html/index.html
+
+== Boost Python
+
+https://www.boost.org/library/latest/python/[[website\]]
+http://boostorg.github.io/python/doc/html/index.html[[docs\]]

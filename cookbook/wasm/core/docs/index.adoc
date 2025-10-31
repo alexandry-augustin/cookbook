@@ -25,3 +25,26 @@ WebAssembly (Wasm) is designed to be a portable binary instruction format for ex
 
 This ubiquity is one of Wasm's major strengths.
 ____
+
+[,Gemini]
+____
+Wasm continues to be a crucial technology for demanding browser-based applications:
+
+Complex Tools:: Major applications like Figma (interface design), Google Earth, and AutoCAD use Wasm to run complex, computation-heavy code at near-native speed directly in the browser.  
+Gaming:: Game engines like Unity and Unreal Engine support Wasm, allowing high-performance 3D games to be deployed directly on the web.  
+Media Processing:: It enables in-browser video and audio editing, encoding (like FFmpeg-Wasm), and advanced features (like background blur in video calls) without needing to send the data to a server.  
+____
+
+[,Gemini]
+____
+The overall developer experience is rapidly improving as major features reach standardization:
+
+WASI (WebAssembly System Interface):: This standard is growing, providing Wasm with non-web capabilities like accessing the filesystem, networking, and environment variables, which is crucial for server-side use.  
+Garbage Collection (GC):: The GC proposal has reached standardization, which significantly opens the door for efficiently compiling managed languages (like Java, C#, Go, and even standard Python/TypeScript) to Wasm, further boosting its target audience.
+Tooling:: Development tools, compilers, and debugging support are constantly improving, making it easier for new developers to adopt Wasm into their projects.  
+____
+
+[,Gemini]
+____
+the WebAssembly (Wasm) Garbage Collection (WasmGC) feature is optional
+____

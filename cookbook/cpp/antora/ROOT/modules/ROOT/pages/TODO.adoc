@@ -1,0 +1,13 @@
+= TODOS
+
+Pimpl Idiom
+
+
+== `rvalues` and `lvalues`
+
+[quote, Scott Meyers, Effective modern C++: 42 specific ways to improve your use of C++11 and C++14]
+____
+In concept (though not always in practice), rvalues correspond to temporary objects returned from functions, while lvalues correspond to objects you can refer to, either by name or by following a pointer or lvalue reference.
+
+A useful heuristic to determine whether an expression is an lvalue is to ask if you can take its address. If you can, it typically is. If you can't, it's usually an rvalue. A nice feature of this heuristic is that it helps you remember that the type of an expression is independent of whether the expression is an lvalue or an rvalue. That is, given a type T, you can have lvalues of type T as well as rvalues of type T. It's especially important to remember this when dealing with a parameter of rvalue reference type, because the parameter itself is an lvalue
+____

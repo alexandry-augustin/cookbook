@@ -3,4 +3,5 @@
 * xref:core.adoc[]
 * xref:libc.adoc[]
 * xref:emscripten.adoc[]
+* xref:embind.adoc[]
 * xref:sdl.adoc[]
