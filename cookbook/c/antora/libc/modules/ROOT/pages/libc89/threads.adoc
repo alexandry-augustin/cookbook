@@ -1,0 +1,5 @@
+= `<threads.h>`
+
+C11
+
+Defines functions for managing multiple Threads as well as mutexes and condition variables.

@@ -1,0 +1,5 @@
+= `<stdint.h>`
+
+C99
+
+Defines exact width integer types.

@@ -1,0 +1,5 @@
+= `<stdnoreturn.h>`
+
+C11
+
+For specifying non-returning functions.

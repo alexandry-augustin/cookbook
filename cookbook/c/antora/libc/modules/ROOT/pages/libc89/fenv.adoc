@@ -1,0 +1,5 @@
+= `<fenv.h>`
+
+C99
+
+Defines a set of functions for controlling floating-point environment.

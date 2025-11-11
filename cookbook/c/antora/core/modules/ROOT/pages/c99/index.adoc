@@ -4,4 +4,4 @@
 `_Complex`:: {empty}
 `_Imaginary`:: {empty}
 `inline`:: {empty}
-`restrict`:: {empty}
+`restrict`:: The restrict keyword is a declaration of intent given by the programmer to the compiler. 

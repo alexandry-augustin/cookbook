@@ -1,0 +1,15 @@
+= `<string.h>`
+
+Defines string handling functions.
+
+* `memcpy`: copy a string (`strcpy` stops at NULL (`'\0'`), `memcpy` does not)
+* `strdup`: 
+* `strcat`: concatenate two strings
+** `strncat`: concatenate one string with part of another
+* `strchr`: string scanning operation
+** `strrchr`: string scanning operation
+* `strcmp`: compare two strings
+** `strncmp`: compare parts of two strings
+* `strcpy`: copy a string
+** `strncpy`: copy part of a string
+* `strlen`: get string length

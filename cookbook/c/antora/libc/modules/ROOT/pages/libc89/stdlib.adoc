@@ -1,0 +1,5 @@
+= `<stdlib.h>`
+
+Defines numeric conversion functions, pseudo-random numbers generation functions, memory allocation, process control functions
+
+`malloc`, `rand`, `atoi`, `NULL`, `EXIT_SUCCESS`, `EXIT_FAILURE`

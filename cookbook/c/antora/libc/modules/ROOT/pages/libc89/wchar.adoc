@@ -1,0 +1,3 @@
+= `<wchar.h>`
+
+Defines wide string handling functions.

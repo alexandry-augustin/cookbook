@@ -1,0 +1,5 @@
+= `<stdbool.h>`
+
+C99
+
+Defines a boolean data type.

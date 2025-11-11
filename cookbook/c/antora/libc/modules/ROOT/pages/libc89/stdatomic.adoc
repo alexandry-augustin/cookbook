@@ -1,0 +1,5 @@
+= `<stdatomic.h>`
+
+C11
+
+For atomic operations on data shared between threads.

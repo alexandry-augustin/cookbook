@@ -1,0 +1,5 @@
+= `<uchar.h>`
+
+C11
+
+Types and functions for manipulating Unicode characters.

@@ -1,0 +1,3 @@
+= `<signal.h>`
+
+Defines signal handling functions.

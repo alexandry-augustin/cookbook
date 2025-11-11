@@ -1,0 +1,5 @@
+= `<stdio.h>`
+
+Defines core input and output functions
+
+`printf`, `sprintf`, `fopen`, `gets`, `puts`

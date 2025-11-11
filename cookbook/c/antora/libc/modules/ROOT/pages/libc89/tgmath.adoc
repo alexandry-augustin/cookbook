@@ -1,0 +1,5 @@
+= `<tgmath.h>`
+
+C99
+
+Defines type-generic mathematical functions.

@@ -1,5 +1,7 @@
 = `main`
 
+== Signatures
+
 [,Gemini]
 ____
 The two function signatures for `main`:
@@ -76,7 +78,14 @@ Most C codebases (including the C standard examples) use:
 int main(int argc, char* argv[])
 ----
 
-because it’s conventional, clear, and universally accepted.
+because it's conventional, clear, and universally accepted.
 
-But if you’re writing modern, const-correct C code and want to enforce immutability, the `const` version is absolutely fine -- and arguably better.
+But if you're writing modern, const-correct C code and want to enforce immutability, the `const` version is absolutely fine -- and arguably better.
 ____
+
+== Arguments
+
+[,c]
+----
+printf("%d %s\n", argc, argv[1]);
+----

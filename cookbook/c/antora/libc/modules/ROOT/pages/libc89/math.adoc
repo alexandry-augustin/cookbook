@@ -1,0 +1,5 @@
+= `<math.h>`
+
+Defines common mathematical functions.
+
+`pow`, `sqrt`, `acos`, `M`, `PI`
