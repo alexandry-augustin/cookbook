@@ -2,3 +2,5 @@
 * xref:emscripten.adoc[]
 * xref:embind.adoc[]
 * xref:sdl.adoc[]
+* xref:posix/index.adoc[]
+* xref:arduino/index.adoc[]

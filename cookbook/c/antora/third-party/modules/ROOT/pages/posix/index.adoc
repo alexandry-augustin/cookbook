@@ -1,0 +1,60 @@
+= Portable Operating System Interface (POSIX)
+:navtitle: POSIX
+:url-wiki: https://en.wikipedia.org/wiki/POSIX
+
+{url-wiki}[[wiki\]]
+
+> "POSIX defines both the system- and user-level application programming interfaces (API), along with command line shells and utility interfaces, for software compatibility (portability) with variants of Unix and other operating systems." 
+-- https://en.wikipedia.org/wiki/POSIX
+
+In general the GNU C library supports the ISO C and POSIX standards.
+
+== System Calls
+
+http://stackoverflow.com/questions/11548779/function-calls-from-fork-to-do-fork
+
+http://en.wikipedia.org/wiki/System_call
+
+A system call does not require a context switch to another process, it is processed in the context of whichever process invoked it.
+
+popular system calls:
+
+* `open`
+* `read`
+* `write`
+* `close`
+* `wait`
+* `execve`
+* `fork`
+* `exit`
+* `kill`
+
+System calls can be roughly grouped into five major categories:
+
+* Process Control
+** load
+** execute
+** create process (for example, fork on Unix-like systems or NtCreateProcess in the Windows NT Native API)
+** terminate process
+** get/set process attributes
+** wait for time, wait event, signal event
+** allocate, free memory
+* File management
+** create file, delete file
+** open, close
+** read, write, reposition
+** get/set file attributes
+* Device Management
+** request device, release device
+** read, write, reposition
+** get/set device attributes
+** logically attach or detach devices
+* Information Maintenance
+** get/set time or date
+** get/set system data
+** get/set process, file, or device attributes
+* Communication
+** create, delete communication connection
+** send, receive messages
+** transfer status information
+** attach or detach remote devices
