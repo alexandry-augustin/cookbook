@@ -30,8 +30,3 @@ It's important to distinguish between the *simplicity of the language* and the *
 
 In summary, C's *deliberate simplicity* is a major strength, allowing it to be fast, portable, and suitable for low-level systems programming.
 ____
-
-== References
-
-1. Ritchie, Dennis M., Stephen C. Johnson, M. E. Lesk, and B. W. Kernighan. "The C programming language." *Bell Sys. Tech. J* 57, no. 6 (1978): 1991-2019.
-2. 

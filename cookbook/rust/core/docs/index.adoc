@@ -10,14 +10,10 @@
 {url-repo}[[repo\]]
 {url-wiki}[[wiki\]]
 
-== Hello World
+[,Gemini]
+____
+The question of whether Rust is "more difficult" than C++ is complex, with different interpretations and experiences. [...]
+C++ is a much older and larger language with decades of evolution, resulting in many features, paradigms, and historical baggage. 
+Rust is a newer language, designed with modern principles, and is generally more concise and consistent.
+____
 
-[,zig]
-----
-const std = @import("std");
-const File = std.fs.File;
-
-pub fn main() !void {
-    _ = try File.stdout().write("Hello, World!\n");
-}
-----

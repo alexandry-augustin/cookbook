@@ -6,11 +6,15 @@
 |Year |Informal Name |Remarks
 
 |1978
-|`K&R C` (`C78`)
+|`C78` (`K&R C`)
+|Named after the year the first edition of The C Programming Language was published (1978).
+
+|1989
+|`C89` (`ANSI C`)
 |
 
-|1989/1990
-|`ANSI C` and `ISO C` (`C89`/`C90`)
+|1990
+|`C90` (`ISO C`)
 |
 
 |1999
@@ -29,3 +33,17 @@
 |`C23`
 |
 |===
+
+[,Gemini]
+____
+**ANSI C** (C89) and **ISO C (C89/C90)** refer to essentially the **same standard** for the C programming language.
+
+*Origins and Naming*
+
+* **ANSI C (C89):** The American National Standards Institute (ANSI) published the first official standard for C in **1989**, designated as ANSI X3.159-1989. This is why it is often called **C89** or "ANSI C."
+* **ISO C (C90):** The following year, the standard was adopted by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) and published as **ISO/IEC 9899:1990**. This version is referred to as **C90**.
+
+The ISO/IEC C90 standard had only minor editorial changes from the ANSI C89 standard. Therefore, **C89** and **C90** (and colloquially, "ANSI C") describe the **identical language specification**.
+
+Since the adoption of this first standard, ISO/IEC has taken the lead in developing and publishing subsequent revisions (like C99, C11, C17/C18, and C23), which ANSI generally adopts. However, the term "ANSI C" is still widely used to refer to this original 1989/1990 version.
+____

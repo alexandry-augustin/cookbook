@@ -1,0 +1,20 @@
+= References
+
+1. Ritchie, Dennis M., Stephen C. Johnson, M. E. Lesk, and B. W. Kernighan. "The C programming language." *Bell Sys. Tech. J* 57, no. 6 (1978): 1991-2019.
+2. 
+
+[,Gemini]
+____
+The classic book **"The C Programming Language"** by Brian W. Kernighan and Dennis M. Ritchie (often affectionately called **K&R**) has been published in **two** major editions:
+
+First Edition (1978)::
+* This edition documented the C language *before* it was officially standardized.
+* It served as the **de facto standard** for what is known as **K&R C** or **C78**.
+
+Second Edition (1988)::
+* This edition was published to cover the changes resulting from the **ANSI C standard** (C89/C90).
+* It describes C as defined by the ANSI standard.
+* As of the current date (2025), the Second Edition is still the **most recent** major edition of the book. No subsequent edition has been released to cover C99, C11, C17, or C23.
+
+So, while there have been many printings, translations, and formats (hardcover, paperback, eBook) published over the years, there are **two core, distinct editions** that reflect different versions of the C language.
+____
