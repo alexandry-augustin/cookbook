@@ -1,0 +1,16 @@
+= Poco
+:url-wiki: https://en.wikipedia.org/wiki/POCO_C%2B%2B_Libraries
+:url-repo: https://github.com/pocoproject/poco
+
+{url-wiki}[[wiki\]]
+{url-repo}[[repo\]]
+
+== Installation
+
+[,bash]
+----
+sudo dnf install poco-devel
+----
+
+* `.h`: `/usr/include/Poco/`
+* `\*.so`:  `/usr/lib64/libPoco*` 

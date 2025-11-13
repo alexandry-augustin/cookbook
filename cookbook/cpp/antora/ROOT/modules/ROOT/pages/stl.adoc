@@ -1,4 +1,5 @@
 = Standard Template Library (STL)
+:navtitle: STL
 
 image:stl/uml_diagram.png[]
 

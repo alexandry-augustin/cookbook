@@ -1,0 +1,6 @@
+= JSON
+:url-website: https://json.nlohmann.me/
+:url-repo: https://github.com/nlohmann/json
+
+{url-website}[[website\]]
+{url-repo}[[repo\]]

@@ -1,0 +1,6 @@
+project_name:
+    type: str
+    help: What is your project name?
+
+# Template for the output directory name
+# _copier_name_template: "{{ project_name.lower().replace('-', '_') }}"
