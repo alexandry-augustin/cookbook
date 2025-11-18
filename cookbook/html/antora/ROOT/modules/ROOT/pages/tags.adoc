@@ -1,4 +1,0 @@
-= Tags
-
-> "Tags are used to delimit the start and end of elements in the markup."
--- https://en.wikipedia.org/wiki/HTML_element
