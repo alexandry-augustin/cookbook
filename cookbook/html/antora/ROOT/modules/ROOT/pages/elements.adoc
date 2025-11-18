@@ -26,7 +26,7 @@ Examples:
 non-semantic elements:: `<div>` or `<span>`
 semantic elements:: `<form>`, `<table>`, or `<article>`
 
-image:./res/semantic_elts.png[]
+image:semantic_elts.png[]
 
 `<article>`:: {empty}
 `<aside>`:: {empty}
@@ -45,5 +45,5 @@ image:./res/semantic_elts.png[]
 .Elements
 [%header,separator=,,cols="<m,<m,<,<"]
 ,===
-include::../res/elements.csv[]
+include::partial$elements.csv[]
 ,===
