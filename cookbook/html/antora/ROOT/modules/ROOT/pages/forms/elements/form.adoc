@@ -1,0 +1,18 @@
+= `<form>`
+
+`action`:: action to be performed when the form is submitted. (e.g. `"/action_page.php"`, `"javascript:handleClick()"`)
+NOTE: If the action attribute is omitted, the action is set to the current page.
+
+`method`:: {empty}
+
+`"POST"`::: {empty}
+
+`"GET"`::: appends data to url via query string (default)
+
+`target`:: {empty}
+
+`_blank`::: The response is displayed in a new window or tab
+`_self`::: The response is displayed in the current window
+`_parent`::: The response is displayed in the parent frame
+`_top`::: The response is displayed in the full body of the window
+`framename`::: The response is displayed in a named iframe

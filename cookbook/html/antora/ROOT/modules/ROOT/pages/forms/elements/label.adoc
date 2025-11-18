@@ -1,0 +1,3 @@
+= `<label>`
+
+* `for="id"`: The id of the element the label is bound to
