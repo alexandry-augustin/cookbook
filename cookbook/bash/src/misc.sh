@@ -1,1 +1,0 @@
-echo $(ls) #same as ``
