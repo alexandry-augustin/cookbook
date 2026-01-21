@@ -1,0 +1,11 @@
+= Vala
+// :url-website: 
+// :url-docs: 
+// :url-repo: 
+:url-wiki: https://en.wikipedia.org/wiki/Vala_(programming_language)
+
+// {url-website}[[website\]]
+// {url-docs}[[docs\]]
+// {url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+

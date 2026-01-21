@@ -1,5 +1,4 @@
 = Brainfuck
-:toc: left
 :url-website: https://brainfuck.org/
 // :url-docs: 
 // :url-repo: 
@@ -10,3 +9,29 @@
 // {url-repo}[[repo\]]
 {url-wiki}[[wiki\]]
 
+
+[,Gemini]
+____
+Created in 1993, its goal was to be the smallest possible language that can still technically compute anything a "real" language like Python or C++ can (this is called being Turing-complete).
+
+It is famous for being incredibly difficult for humans to read, but very easy for computers to process.
+
+While Brainfuck only has 8 commands, there are even more "stripped-down" [Turing-complete] systems.
+
+Here is how Brainfuck compares to other ultra-minimalist languages:
+
+|===
+| Language | Commands | How it works
+
+| Brainfuck | 8 | Moves a pointer on a tape and changes values.
+| P'' | 6 | The formal math language Brainfuck was based on. It drops the "Input/Output" commands.
+| Iota | 2 | Uses only two symbols. It’s based on a logic system called "Combinators."
+| OISC | 1 | Stands for "One Instruction Set Computer." It does everything using just one command (usually "subtract and jump").
+|===
+____
+
+."Hello World"
+[,brainfuck]
+----
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.
+----

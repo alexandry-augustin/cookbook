@@ -1,0 +1,15 @@
+= Preact
+:url-website: https://preactjs.com/
+:url-docs: https://preactjs.com/guide/v10/getting-started
+:url-repo: https://github.com/preactjs/preact
+// :url-wiki: 
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+
+[,Gemini]
+____
+A lightweight alternative to React that offers a nearly identical API and React compatibility but in a much smaller package size, making it ideal for Progressive Web Apps (PWAs) or low-powered devices.  
+____

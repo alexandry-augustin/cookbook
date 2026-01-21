@@ -1,0 +1,11 @@
+= Qwik
+:url-website: https://qwik.dev/
+:url-docs: https://qwik.dev/docs/
+:url-repo: https://github.com/QwikDev/qwik
+// :url-wiki: 
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+// {url-wiki}[[wiki\]]
+
