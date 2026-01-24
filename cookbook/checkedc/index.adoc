@@ -1,0 +1,11 @@
+= Title
+:url-website: https://www.checkedc.org/
+:url-docs: 
+:url-repo: https://github.com/checkedc/checkedc
+:url-wiki: 
+
+{url-website}[[website\]]
+{url-docs}[[docs\]]
+{url-repo}[[repo\]]
+{url-wiki}[[wiki\]]
+
